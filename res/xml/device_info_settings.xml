@@ -144,6 +144,12 @@
                 android:title="@string/liquid_version_title"
                 android:summary="@string/liquid_version_default"/>
 
+        <!-- Build date -->
+        <Preference android:key="build_date"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/build_date"
+                android:summary="@string/build_date_default" />
+
         <!-- Detailed build version -->
         <Preference android:key="build_number"
                 style="?android:preferenceInformationStyle"
