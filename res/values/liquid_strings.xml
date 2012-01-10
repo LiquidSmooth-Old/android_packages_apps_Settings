@@ -29,6 +29,10 @@
     <string name="mod_version">LiquidSmooth version</string>
     <string name="mod_version_default">Unknown</string>
 
+    <!-- Build date -->
+    <string name="build_date">Build date</string>
+    <string name="build_date_default">2012-01-01-0000</string>
+
     <!-- Advanced titles -->
     <string name="advanced_category_title">Advanced</string>
     <string name="advanced_options_title">Advanced options</string>
