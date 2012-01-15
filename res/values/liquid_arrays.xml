@@ -16,7 +16,7 @@
 -->
 <resources>
 
-    <!--- Navigation bar height -->
+   <!--- Navigation bar height -->
     <string-array name="navigation_bar_height_entries" translatable="false">
         <item>@string/navigation_bar_height_48</item>
         <item>@string/navigation_bar_height_44</item>
@@ -74,6 +74,21 @@
         <item>11</item>
         <item>12</item>
         <item>13</item>
+    </string-array>
+
+    <!-- Arrays for root access capability -->
+    <string-array name="root_access_entries">
+        <item>@string/root_access_none</item>
+        <item>@string/root_access_apps</item>
+        <item>@string/root_access_adb</item>
+        <item>@string/root_access_all</item>
+    </string-array>
+
+    <string-array name="root_access_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
 
 </resources>
