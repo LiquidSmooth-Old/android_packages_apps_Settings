@@ -68,6 +68,8 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.search.SearchIndexableRaw;
 
+import com.android.settings.slim.SystemSettingSwitchPreference;
+
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -88,6 +90,9 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private static final String KEY_INPUT_METHOD_SELECTOR = "input_method_selector";
     private static final String KEY_USER_DICTIONARY_SETTINGS = "key_user_dictionary_settings";
     private static final String KEY_PREVIOUSLY_ENABLED_SUBTYPES = "previously_enabled_subtypes";
+    private static final String KEY_STYLUS_GESTURES = "stylus_gestures";
+    private static final String KEY_TRACKPAD_SETTINGS = "gesture_pad_settings";
+
     // false: on ICS or later
     private static final boolean SHOW_INPUT_METHOD_SWITCHER_SETTINGS = false;
 
@@ -97,6 +102,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private PreferenceCategory mHardKeyboardCategory;
     private PreferenceCategory mGameControllerCategory;
     private Preference mLanguagePref;
+    private PreferenceScreen mStylusGestures;
     private final ArrayList<InputMethodPreference> mInputMethodPreferenceList = new ArrayList<>();
     private final ArrayList<PreferenceScreen> mHardKeyboardPreferenceList = new ArrayList<>();
     private InputManager mIm;
@@ -164,6 +170,17 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
         // Build hard keyboard and game controller preference categories.
         mIm = (InputManager)activity.getSystemService(Context.INPUT_SERVICE);
         updateInputDevices();
+
+            Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
+                            pointerSettingsCategory, KEY_TRACKPAD_SETTINGS);
+
+        mStylusGestures = (PreferenceScreen) findPreference(KEY_STYLUS_GESTURES);
+
+        if (pointerSettingsCategory != null) {
+            if (!getResources().getBoolean(com.android.internal.R.bool.config_stylusGestures)) {
+                pointerSettingsCategory.removePreference(mStylusGestures);
+            }
+        }
 
         // Spell Checker
         final Preference spellChecker = findPreference(KEY_SPELL_CHECKERS);
