@@ -94,6 +94,8 @@
             android:usesCleartextTraffic="true">
 
         <!-- Settings -->
+        <uses-library android:name="org.cyanogenmod.hardware"
+                android:required="false" />
 
         <activity android:name="Settings"
                 android:taskAffinity="com.android.settings"
@@ -2606,6 +2608,12 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.android.settings.applications.WriteSettingsDetails" />
         </activity>
+
+        <receiver android:name=".cyanogenmod.BootReceiver" android:enabled="true">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
     </application>
 </manifest>
