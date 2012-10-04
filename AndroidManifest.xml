@@ -1800,6 +1800,9 @@
 
         <activity android:name=".liquid.WakeLockBlocker" />
 
+        <activity android:name=".util.ShowBuildProp" />
+
+
         <!-- Pseudo-activity used to provide an intent-filter entry point to rotation settings -->
         <activity android:name="Settings$DisplayRotationSettingsActivity"
                 android:label="@string/display_rotation_title"
@@ -2007,7 +2010,7 @@
                 <action android:name="android.provider.Contacts.PROFILE_CHANGED" />
             </intent-filter>
         </receiver>
-		
+
         <receiver
             android:name="com.android.settings.liquid.batterysaver.BootReceiver">
             <intent-filter>

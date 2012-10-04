@@ -89,19 +89,19 @@
     <!-- Animation controls -->
     <string name="animation_controls_title">Animation controls</string>
     <string name="animation_controls_summary">Change direction of the system animations</string>
-    <string name="activity_open_title">Activity open</string>	
-    <string name="activity_close_title">Activity close</string>	
-    <string name="task_open_title">Task open</string>	
-    <string name="task_close_title">Task close</string>	
-    <string name="task_move_to_front_title">Move to front</string>	
-    <string name="task_move_to_back_title">Move to back</string>	
-    <string name="wallpaper_open_title">Wallpaper open</string>	
-    <string name="wallpaper_close_title">Wallpaper close</string>	
-    <string name="wallpaper_intra_open_title">Wallpaper intra open</string>	
-    <string name="wallpaper_intra_close_title">Wallpaper intra close</string>	
-    <string name="animation_duration_title">Animation duration</string>	
-    <string name="title_animation_no_override">Prevent app overrides</string>	
-    <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>	
+    <string name="activity_open_title">Activity open</string>
+    <string name="activity_close_title">Activity close</string>
+    <string name="task_open_title">Task open</string>
+    <string name="task_close_title">Task close</string>
+    <string name="task_move_to_front_title">Move to front</string>
+    <string name="task_move_to_back_title">Move to back</string>
+    <string name="wallpaper_open_title">Wallpaper open</string>
+    <string name="wallpaper_close_title">Wallpaper close</string>
+    <string name="wallpaper_intra_open_title">Wallpaper intra open</string>
+    <string name="wallpaper_intra_close_title">Wallpaper intra close</string>
+    <string name="animation_duration_title">Animation duration</string>
+    <string name="title_animation_no_override">Prevent app overrides</string>
+    <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>
     <string name="animation_duration_default">Default</string>
     <string name="header_summary_animation">@null</string>
 
@@ -209,7 +209,7 @@
 
     <!-- Power menu -->
     <string name="power_menu_title">Power menu</string>
-    <string name="power_menu_summary">Change or view order of global power menu</string>      
+    <string name="power_menu_summary">Change or view order of global power menu</string>
     <string name="power_menu_style_summary">Customize power menu icon and text colors</string>
 
 	<!-- Progress bar -->
@@ -262,7 +262,7 @@
     <!-- Show on the left edge -->
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
     <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left</string>
-            
+
     <!-- Recent clear all button -->
     <string name="recent_clear_all_button">Recent clear all button</string>
     <string name="show_recent_clear_all_button_title">Show clear all button</string>
@@ -1172,7 +1172,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="display_rotation_90_title">90 degrees</string>
     <string name="display_rotation_180_title">180 degrees</string>
     <string name="display_rotation_270_title">270 degrees</string>
-   
+
     <!-- Swap volume buttons -->
     <string name="swap_volume_buttons_title">Swap volume buttons</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
@@ -1361,7 +1361,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="theme_auto_mode_lightsensor">On light condition change</string>
     <string name="theme_auto_mode_twilight">On daytime</string>
     <string name="theme_auto_switch_mode_error">Automatic light condition change mode is enabled. Manual switching is not possible.</string>
-	
+
     <!-- Title for PreferenceScreen to change encryption password [CHAR LIMIT=22] -->
     <string name="change_crypt_password_title">Change password</string>
     <!-- Summary for PreferenceScreen to change encryption password [CHAR LIMIT=45] -->
@@ -1583,10 +1583,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="sms_security_check_limit_title">SMS message limit</string>
     <string name="sms_security_check_limit_summary">Display an alert dialog to prevent applications from sending SMS messages too frequently. Current limit: %d messages in 15 minutes</string>
     <string name="sms_security_check_limit_default">30 (Default)</string>
-                               
+
     <!-- Toggle switch title for enabling battery saver connections. [CHAR LIMIT=32] -->
     <string name="data_usage_enable_batterysaver">Battery saver</string>
-    
+
     <!-- Battery saver mode -->
     <string name="unit_sec">sec</string>
     <string name="network_lte">LTE (recommended)</string>
@@ -1845,7 +1845,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Double-tap to sleep -->
     <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
-    <string name="status_bar_double_tap_to_sleep_summary">Double-tap the status bar to goto sleep</string>                            
+    <string name="status_bar_double_tap_to_sleep_summary">Double-tap the status bar to goto sleep</string>
 
     <!-- Status bar notification count -->
     <string name="status_bar_notification_count_title">Notification count</string>
@@ -1934,5 +1934,57 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="app_moving_reboot_disabled_desc">Successfully disabled application moving.\n\nThe device needs to be rebooted for the setting to take effect.</string>
     <string name="app_moving_reboot_now_button">Reboot now</string>
     <string name="app_moving_reboot_later_button">Reboot later</string>
+
+    <!-- Performance Settings | Warning dialog -->
+    <string name="performance_settings_warning_header">Warning</string>
+    <string name="performance_settings_warning_title">Proceed with Caution</string>
+
+    <!-- PropModder -->
+    <string name="propmodder_title">Build.prop Mods</string>
+    <string name="propmodder_switches">Switches</string>
+    <string name="buildprop_title">build.prop mods (reboot required)</string>
+    <string name="buildprop_settings_warning">These settings are included for experimentation and any changes made to them have the potential to cause instability, crashes, data loss or hardware failures.\n\nWe request you do not file bug reports if any of these settings have been changed from the defaults.</string>
+    <string name="nonprop_cat_title">Mods involving init.d script</string>
+    <string name="pref_wifi_scan_interval_title">Wifi scan interval</string>
+    <string name="pref_wifi_scan_interval_summary">The time between wifi scans when no stored access points are available</string>
+    <string name="pref_wifi_scan_alt_summary">Time between wifi scans: %s</string>
+    <string name="pref_max_events_title">Windows Manager\'s max events per second</string>
+    <string name="pref_max_events_summary">This is a runtime value that controls the number of events the system will allow in a second</string>
+    <string name="pref_max_events_alt_summary">Max number of system events: %s</string>
+    <string name="pref_ring_delay_title">Telephone ringer delay</string>
+    <string name="pref_ring_delay_summary">The amount of time from when the system registers an incoming phone call until the ringer</string>
+    <string name="pref_ring_delay_alt_summary">Incoming call Delay: %s</string>
+    <string name="pref_vm_heapsize_title">Dalvik cache heapsize</string>
+    <string name="pref_vm_heapsize_summary">This controls the size of the cache the Dalvik VM has access to</string>
+    <string name="pref_vm_heapsize_alt_summary">Dalvik VM cache size: %s</string>
+    <string name="showbuild_title">Show The Build.Prop</string>
+    <string name="buildprop_summary">Find out whats in there</string>
+    <string name="showbuild_dialog">Displaying /system/Build.Prop</string>
+    <string name="showbuild_loading">Loading build.prop\u2026</string>
+    <string name="showbuild_error">Error loading build.prop\u2026</string>
+    <string name="showbuild_unknown">Unknown</string>
+    <string name="showbuild_version">Version</string>
+    <string name="showbuild_label">We should look because knowing is half the battle</string>
+    <string name="pref_fast_up_title">HSUPA upload speed hack</string>
+    <string name="pref_fast_up_summary">*WARNING* if you change this value it will add the needed values to your build.prop if they are not already present</string>
+    <string name="pref_fast_up_alt_summary">Fast up found active: %s</string>
+    <string name="pref_prox_delay_title">Proximity sensor delay</string>
+    <string name="pref_prox_delay_summary">When you are in-call screen is off when the device moves away from your face this delay value controls how long before screen turns on</string>
+    <string name="pref_prox_delay_alt_summary">Proximity sensor set to: %s</string>
+    <string name="pref_mod_version_title">Change your Build Number</string>
+    <string name="pref_mod_version_summary">This is astetic and doesn\'t improve the system</string>
+    <string name="pref_mod_version_alt_summary">Build Number: %s</string>
+    <string name="pref_mod_version_default"></string>
+    <string name="pref_sleep_title">PM Sleep mode</string>
+    <string name="pref_sleep_summary">Modify Nighttime sleep policy</string>
+    <string name="pref_sleep_alt_summary">Current Sleep Mode: %s</string>
+    <string name="pref_jit_title">Just In Time Complier</string>
+    <string name="pref_jit_summary">Enables/Disables JIT complier</string>
+    <string name="pref_tcp_stack_title">Optimize TCP Stack</string>
+    <string name="pref_tcp_stack_summary">Modify the buffer-size for better performance</string>
+    <string name="pref_g_speed_title">3G Speed Hack</string>
+    <string name="pref_g_speed_summary">Uncap 3g speed</string>
+    <string name="pref_gpu_title">GPU Acceleration</string>
+    <string name="pref_gpu_summary">Enable hardware acceleration where the GPU controls the UI instead of the CPU</string>
 
 </resources>

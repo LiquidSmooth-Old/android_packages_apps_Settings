@@ -34,6 +34,11 @@
             android:entries="@array/media_scanner_on_boot_entries"
             android:entryValues="@array/media_scanner_on_boot_values" />
 
+        <PreferenceScreen
+            android:key="buildprop_modder"
+            android:title="@string/propmodder_title"
+            android:fragment="com.android.settings.liquid.PropModder"/>
+
     </PreferenceCategory>
 
     <PreferenceScreen
