@@ -19,27 +19,26 @@
     android:title="@string/advanced_options_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <ListPreference
+        android:key="media_scanner_on_boot"
+        android:title="@string/media_scanner_on_boot_title"
+        android:persistent="false"
+        android:entries="@array/media_scanner_on_boot_entries"
+        android:entryValues="@array/media_scanner_on_boot_values" />
+
+    <PreferenceScreen
+        android:key="prop_modder"
+        android:title="@string/prop_modder_title"
+        android:fragment="com.android.settings.liquid.PropModder"/>
+
     <PreferenceScreen
         android:title="@string/superuser_settings_title"
         android:fragment="com.koushikdutta.superuser.PolicyNativeFragment" />
 
-    <PreferenceCategory
-        android:key="advanced_category"
-        android:title="@string/advanced_category_title">
-
-        <ListPreference
-            android:key="media_scanner_on_boot"
-            android:title="@string/media_scanner_on_boot_title"
-            android:persistent="false"
-            android:entries="@array/media_scanner_on_boot_entries"
-            android:entryValues="@array/media_scanner_on_boot_values" />
-
-        <PreferenceScreen
-            android:id="@+id/wakelock_blocker"
-            android:title="@string/wakelock_blocker"
-            android:fragment="com.android.settings.liquid.WakeLockBlocker" />
-
-    </PreferenceCategory>
+    <PreferenceScreen
+        android:id="@+id/wakelock_blocker"
+        android:title="@string/wakelock_blocker"
+        android:fragment="com.android.settings.liquid.WakeLockBlocker" />
 
     <PreferenceScreen
         android:key="devicesettings_app"
