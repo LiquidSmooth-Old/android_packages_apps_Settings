@@ -60,6 +60,9 @@
     <!-- Superuser title -->
     <string name="superuser_settings_title">Superuser</string>
 
+    <!-- Theme chooser -->
+    <string name="theme_chooser_title">Theme chooser</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>

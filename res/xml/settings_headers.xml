@@ -108,7 +108,7 @@
         android:icon="@drawable/ic_menu_save"
         android:layout="@layout/preference_wakelockblocker" />
 
-    <!-- Themes settings -->
+    <!-- Theme settings -->
     <header
         android:id="@+id/theme_settings"
 		android:title="@string/theme_settings_title"
@@ -213,6 +213,17 @@
         android:icon="@drawable/ic_settings_backup"
         android:title="@string/privacy_settings"
         android:id="@+id/privacy_settings" />
+
+    <!-- Theme chooser -->
+    <header
+        android:id="@+id/theme_chooser"
+        android:icon="@drawable/ic_settings_themes"
+        android:title="@string/theme_chooser_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.tmobile.themechooser"
+            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
+    </header>
 
     <!--  ACCOUNTS section -->
     <header
