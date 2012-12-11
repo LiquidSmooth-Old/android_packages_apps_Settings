@@ -24,6 +24,12 @@
         android:title="@string/general_category_title">
 
         <PreferenceScreen
+            android:key="lockscreen_buttons"
+            android:title="@string/lockscreen_buttons_title"
+            android:summary="@string/lockscreen_buttons_summary"
+            android:fragment="com.android.settings.liquid.LockscreenButtons" />
+
+        <PreferenceScreen
             android:key="lockscreen_interface"
             android:title="@string/lockscreen_interface_title"
             android:summary="@string/lockscreen_interface_summary"

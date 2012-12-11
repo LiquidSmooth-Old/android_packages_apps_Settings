@@ -44,6 +44,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment
 
     private static final String TAG = "LockscreenSettings";
 
+    private static final String KEY_LOCKSCREEN_BUTTONS = "lockscreen_buttons";
     private static final String KEY_INTERFACE_SETTINGS = "lockscreen_interface";
     private static final String KEY_TARGET_SETTINGS = "lockscreen_targets";
     private static final String KEY_WIDGETS_SETTINGS = "lockscreen_widgets";
@@ -174,6 +175,14 @@ public class LockscreenSettings extends SettingsPreferenceFragment
                 mMenuUnlock.setChecked(settingsEnabled);
                 mMenuUnlock.setOnPreferenceChangeListener(this);
             }
+        }
+
+        PreferenceScreen lockButtons = (PreferenceScreen) prefs
+                .findPreference(KEY_LOCKSCREEN_BUTTONS);
+        boolean hasButtons = (getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys) > 0);
+        if (!hasButtons) {
+            generalCategory.removePreference(lockButtons);
         }
     }
 
