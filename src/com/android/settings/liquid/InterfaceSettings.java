@@ -33,8 +33,10 @@ import android.os.ServiceManager;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.provider.Settings;
+import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.text.Editable;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -59,16 +61,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Properties;
 
-public class InterfaceSettings extends SettingsPreferenceFragment {
+public class InterfaceSettings extends SettingsPreferenceFragment implements
+        OnPreferenceChangeListener {
 
     private static final String TAG = "InterfaceSettings";
 
+    private static final String KEY_USE_ALT_RESOLVER = "use_alt_resolver";
     private static final String KEY_LCD_DENSITY = "lcd_density";
 
     private static final int DIALOG_CUSTOM_DENSITY = 101;
 
     private static final String DENSITY_PROP = "persist.sys.lcd_density";
 
+    private CheckBoxPreference mUseAltResolver;
     private static Preference mLcdDensity;
 
     private static int mMaxDensity = DisplayMetrics.getDeviceDensity();
@@ -91,6 +96,11 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
     private void updateSettings() {
         setPreferenceScreen(null);
         addPreferencesFromResource(R.xml.liquid_interface_settings);
+
+        mUseAltResolver = (CheckBoxPreference) findPreference(KEY_USE_ALT_RESOLVER);
+        mUseAltResolver.setChecked(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.ACTIVITY_RESOLVER_USE_ALT, 0) == 1);
+        mUseAltResolver.setOnPreferenceChangeListener(this);
 
         mLcdDensity = (Preference) findPreference(KEY_LCD_DENSITY);
         String current = SystemProperties.get(DENSITY_PROP,
@@ -119,6 +129,21 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
+    }
+	
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
+     }
+
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mUseAltResolver) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.ACTIVITY_RESOLVER_USE_ALT,
+                    (Boolean) newValue ? 1 : 0);
+            return true;
+        }
+        return false;
     }
 
     private static void setDensity(int density) {

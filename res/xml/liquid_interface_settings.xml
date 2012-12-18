@@ -19,14 +19,20 @@
     android:title="@string/interface_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <Preference
-        android:key="lcd_density"
-        android:title="@string/custom_density_title" />
-
     <PreferenceScreen
         android:key="gesture_anywhere"
         android:title="@string/gesture_anywhere_title"
         android:summary="@string/gesture_anywhere_summary"
         android:fragment="com.android.settings.liquid.gestureanywhere.GestureAnywhereSettings" />
+
+    <CheckBoxPreference
+        android:key="use_alt_resolver"
+        android:title="@string/alt_resolver"
+        android:summary="@string/alt_resolver_summary"
+        android:defaultValue="false" />
+
+    <Preference
+        android:key="lcd_density"
+        android:title="@string/custom_density_title" />
 
 </PreferenceScreen>

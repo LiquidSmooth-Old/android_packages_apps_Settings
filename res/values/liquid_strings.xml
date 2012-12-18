@@ -1072,6 +1072,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="listview_overshoot_interpolator">Overshoot</string>
     <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
     <string name="listview_bounce_interpolator">Bounce</string>
+	
+    <!-- Alternate Default App Picker -->
+    <string name="alt_resolver">Default App Grid</string>
+    <string name="alt_resolver_summary">Use alternate default app picker</string>
 
     <!-- Advanced reboot options -->
     <string name="advanced_reboot_title">Advanced reboot</string>
