@@ -54,6 +54,8 @@
                 android:persistent="false"/>
 
         <SwitchPreference
+
+        <CheckBoxPreference
                 android:key="toggle_lock_screen_rotation_preference"
                 android:title="@string/accelerometer_title"
                 android:persistent="false"/>
