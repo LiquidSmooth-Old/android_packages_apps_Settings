@@ -185,6 +185,10 @@
     <string name="wifi_setting_countrycode_disabled">Enable Wi-Fi to change this option.</string>
     <!-- WiFi forget all networks -->
     <string name="wifi_menu_forget_all">Forget all networks</string>
+    <!-- Wi-Fi settings screen, advanced, title of the item to set the Wi-Fi priority. -->
+    <string name="wifi_setting_priority_title">Wi-Fi priority</string>
+    <!-- Wi-Fi settings screen, setting summary for setting the Wi-Fi priority-->
+    <string name="wifi_setting_priority_summary">Specify the priority of the Wi-Fi networks</string>
 
     <!-- Status bar -->
     <string name="status_bar_title">Status bar</string>
