@@ -2246,5 +2246,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Power Menu User Switcher -->
     <string name="power_menu_user_title">Power menu user switcher</string>
     <string name="power_menu_user_summary">Show a list of all users in power menu</string>
+	
+    <!-- Wi-Fi settings screen, advanced, title of the item to set the Wi-Fi priority. -->
+    <string name="wifi_setting_priority_title">Wi-Fi priority</string>
+    <!-- Wi-Fi settings screen, setting summary for setting the Wi-Fi priority-->
+    <string name="wifi_setting_priority_summary">Specify the priority of the Wi-Fi networks</string
 
 </resources>
