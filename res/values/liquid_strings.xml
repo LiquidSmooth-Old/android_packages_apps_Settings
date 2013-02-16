@@ -1512,4 +1512,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="dynamic_width_summary">Sets the width of notifications</string>
     <string name="notification_color">Notification background color</string>
 
+    <!-- Swap volume buttons -->
+    <string name="swap_volume_buttons_title">Swap volume buttons</string>
+    <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
+
 </resources>
