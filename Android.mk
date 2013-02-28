@@ -32,6 +32,7 @@ include frameworks/opt/setupwizard/navigationbar/common.mk
 
 LOCAL_JAVA_LIBRARIES += org.cyanogenmod.hardware
 
+include frameworks/opt/setupwizard/navigationbar/common.mk
 include $(BUILD_PACKAGE)
 
 # Use the following include to make our test apk.
