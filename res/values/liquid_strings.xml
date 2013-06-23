@@ -1228,9 +1228,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="tile_choose_title">Choose a tile</string>
     <string name="title_tile_airplane">Airplane mode</string>
     <string name="title_tile_battery">Battery</string>
-    <string name="title_tile_batterysaver">BatterySaver mode</string>
+    <string name="title_tile_batterysaver">Battery saver</string>
     <string name="title_tile_bluetooth">Bluetooth</string>
     <string name="title_tile_brightness">Brightness</string>
+    <string name="title_tile_camera">Camera</string>
     <string name="title_tile_contact">Contact</string>
     <string name="title_tile_custom">Custom</string>
     <string name="title_tile_sleep">Go to sleep</string>
@@ -1249,7 +1250,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="title_tile_networkmode">Network mode</string>
     <string name="title_tile_nfc">NFC</string>
     <string name="title_tile_screen_timeout">Screen timeout</string>
-    <string name="title_tile_quick_record">Quick Record</string>
+    <string name="title_tile_quick_record">Quick record</string>
     <string name="title_tile_quiet_hours">Quiet hours</string>
     <string name="title_tile_volume">Volume</string>
     <string name="title_tile_expanded_desktop">Expanded desktop</string>
