@@ -32,6 +32,11 @@
         android:fragment="com.android.settings.liquid.PropModder"/>
 
     <PreferenceScreen
+        android:key="startup_tweaks"
+        android:title="@string/startup_tweaks_title"
+        android:fragment="com.android.settings.liquid.StartupTweaks" />
+
+    <PreferenceScreen
         android:title="@string/superuser_settings_title"
         android:fragment="com.koushikdutta.superuser.PolicyNativeFragment" />
 
