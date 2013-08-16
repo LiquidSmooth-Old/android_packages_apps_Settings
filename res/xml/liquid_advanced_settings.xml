@@ -35,6 +35,12 @@
             android:entryValues="@array/media_scanner_on_boot_values" />
 
         <PreferenceScreen
+            android:id="@+id/initD"
+            android:fragment="com.android.settings.liquid.InitD"
+            android:title="@string/init_d_title"
+            android:summary="@string/header_summary_init_d" />
+
+        <PreferenceScreen
             android:key="buildprop_modder"
             android:title="@string/propmodder_title"
             android:fragment="com.android.settings.liquid.PropModder"/>

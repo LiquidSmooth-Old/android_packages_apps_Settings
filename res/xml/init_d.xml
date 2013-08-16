@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/pt_general" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="zipalign_apks"
+            android:summary="@string/ps_zipalign_apks"
+            android:title="@string/pt_zipalign_apks" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="fix_permissions"
+            android:summary="@string/ps_fix_permissions"
+            android:title="@string/pt_fix_permissions" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enable_sysctl"
+            android:summary="@string/ps_enable_sysctl"
+            android:title="@string/pt_enable_sysctl" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="clear_data_cache"
+            android:summary="@string/ps_clear_data_cache"
+            android:title="@string/pt_clear_data_cache" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enable_cron"
+            android:summary="@string/ps_enable_cron"
+            android:title="@string/pt_enable_cron" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="sd_boost"
+            android:summary="@string/ps_sd_boost"
+            android:title="@string/pt_sd_boost" />
+        <EditTextPreference
+            android:defaultValue="2048"
+            android:dialogTitle="@string/pt_read_ahead_kb"
+            android:key="read_ahead_kb"
+            android:title="@string/pt_read_ahead_kb" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="file_system_speedups"
+            android:summary="@string/ps_file_system_speedups"
+            android:title="@string/pt_file_system_speedups" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="battery"
+            android:summary="@string/ps_battery"
+            android:title="@string/pt_battery" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="touch"
+            android:summary="@string/ps_touch"
+            android:title="@string/pt_touch" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="minfree"
+            android:summary="@string/ps_minfree"
+            android:title="@string/pt_minfree" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="gpurender"
+            android:summary="@string/ps_gpurender"
+            android:title="@string/pt_gpurender" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="sleepers"
+            android:summary="@string/ps_sleepers"
+            android:title="@string/pt_sleepers" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="journalism"
+            android:summary="@string/ps_journalism"
+            android:title="@string/pt_journalism" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="sqlite3"
+            android:summary="@string/ps_sqlite3"
+            android:title="@string/pt_sqlite3" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="wifisleep"
+            android:summary="@string/ps_wifisleep"
+            android:title="@string/pt_wifisleep" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="iostats"
+            android:summary="@string/ps_iostats"
+            android:title="@string/pt_iostats" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="setrenice"
+            android:summary="@string/ps_setrenice"
+            android:title="@string/pt_setrenice" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="tweaks"
+            android:summary="@string/ps_tweaks"
+            android:title="@string/pt_tweaks" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="speedy_modified"
+            android:summary="@string/ps_speedy_modified"
+            android:title="@string/pt_speedy_modified" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="loopy_smoothness_tweak"
+            android:summary="@string/ps_loopy_smoothness_tweak"
+            android:title="@string/pt_loopy_smoothness_tweak" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
