@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.provider.Settings;
+import com.android.settings.DisplaySettings;
 
 public class BootReceiver extends BroadcastReceiver {
 
@@ -43,5 +44,6 @@ public class BootReceiver extends BroadcastReceiver {
         }
 
         QuietHoursController.getInstance(context).scheduleService();
+        DisplaySettings.restore(context);
     }
 }

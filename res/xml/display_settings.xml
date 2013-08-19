@@ -123,7 +123,11 @@
                 android:entries="@array/screen_timeout_entries"
                 android:entryValues="@array/screen_timeout_values" />
 
-        </PreferenceCategory>
+        <CheckBoxPreference
+                android:key="adaptive_backlight"
+                android:title="@string/adaptive_backlight_title"
+                android:summary="@string/adaptive_backlight_summary"
+                android:defaultValue="true" />
 
         <!-- DeviceHandler device specific screen off gesture settings -->
         <Preference
@@ -134,6 +138,8 @@
                 android:targetPackage="com.slim.device"
                 android:targetClass="com.slim.device.settings.ScreenOffGestureSettings" />
         </Preference>
+
+        </PreferenceCategory>
 
     <PreferenceCategory
         android:key="category_animation_options"
