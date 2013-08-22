@@ -69,50 +69,6 @@
          </PreferenceScreen>
 
     </PreferenceCategory>
-    
-    <PreferenceCategory
-        android:key="advanced_category"
-        android:title="@string/advanced_category_title">
-
-        <PreferenceScreen
-            android:key="quicksettings_tiles_style"
-            android:fragment="com.android.settings.liquid.quicksettings.QuickSettingsTilesStyle"
-            android:title="@string/quicksettings_tiles_style"
-            android:summary="@string/summary_quicksettings_tiles_style" />
-
-        <PreferenceScreen
-            android:key="tile_picker"
-            android:title="@string/tile_picker_title"
-            android:summary="@string/tile_picker_summary"
-            android:fragment="com.android.settings.liquid.quicksettings.QuickSettingsTiles" />
-
-        <ListPreference
-            android:key="quick_pulldown"
-            android:title="@string/title_quick_pulldown"
-            android:entries="@array/quick_pulldown_entries"
-            android:entryValues="@array/quick_pulldown_values"
-            android:persistent="false" />
-
-        <ListPreference
-            android:key="smart_pulldown"
-            android:title="@string/smart_pulldown_title"
-            android:entries="@array/smart_pulldown_entries"
-            android:entryValues="@array/smart_pulldown_values"
-            android:persistent="false" />
-
-        <CheckBoxPreference
-            android:key="collapse_panel"
-            android:title="@string/title_collapse_panel"
-            android:summary="@string/summary_collapse_panel"
-            android:defaultValue="false" />
-
-        <com.android.settings.liquid.SystemCheckBoxPreference
-            android:key="quick_settings_tiles_vibrate"
-            android:title="@string/haptic_qs_tiles_title"
-            android:summary="@string/haptic_qs_tiles_summary"
-            android:defaultValue="false" />
-
-    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/noti_reminder_category">
@@ -146,6 +102,82 @@
             android:ringtoneType="all"
             android:showSilent="false"
             android:dependency="noti_reminder_enabled" />
+
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="@string/category_quick_access" >
+
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="qs_quick_access"
+            android:title="@string/title_quick_access"
+            android:defaultValue="false" />
+
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="qs_quick_access_linked"
+            android:title="@string/title_quick_access_linked"
+            android:summary="@string/summary_quick_access_linked"
+            android:defaultValue="true"
+            android:dependency="qs_quick_access"
+            android:disableDependentsState="true" />
+
+        <PreferenceScreen
+            android:key="tile_picker"
+            android:title="@string/ribbon_picker_title"
+            android:summary="@string/ribbon_picker_summary"
+            android:dependency="qs_quick_access_linked"
+            android:fragment="com.android.settings.liquid.quicksettings.QuickSettingsTiles" >
+            <extra android:name="config_ribbon" android:value="true" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/quick_settings_title" >
+
+        <PreferenceScreen
+            android:key="tile_picker"
+            android:title="@string/tile_picker_title"
+            android:summary="@string/tile_picker_summary"
+            android:fragment="com.android.settings.liquid.quicksettings.QuickSettingsTiles" />
+
+        <PreferenceScreen
+            android:key="quicksettings_tiles_style"
+            android:fragment="com.android.settings.liquid.quicksettings.QuickSettingsTilesStyle"
+            android:title="@string/quicksettings_tiles_style"
+            android:summary="@string/summary_quicksettings_tiles_style" />
+
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="quick_settings_tiles_vibrate"
+            android:title="@string/haptic_qs_tiles_title"
+            android:summary="@string/haptic_qs_tiles_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="advanced_category"
+        android:title="@string/advanced_category_title">
+
+        <CheckBoxPreference
+            android:key="collapse_panel"
+            android:title="@string/title_collapse_panel"
+            android:summary="@string/summary_collapse_panel"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="quick_pulldown"
+            android:title="@string/title_quick_pulldown"
+            android:entries="@array/quick_pulldown_entries"
+            android:entryValues="@array/quick_pulldown_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="smart_pulldown"
+            android:title="@string/smart_pulldown_title"
+            android:entries="@array/smart_pulldown_entries"
+            android:entryValues="@array/smart_pulldown_values"
+            android:persistent="false" />
 
     </PreferenceCategory>
 
