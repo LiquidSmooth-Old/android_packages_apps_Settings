@@ -98,6 +98,33 @@
             android:dependency="noti_reminder_enabled" />
 
     </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="@string/category_quick_access" >
+
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="qs_quick_access"
+            android:title="@string/title_quick_access"
+            android:defaultValue="false" />
+
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="qs_quick_access_linked"
+            android:title="@string/title_quick_access_linked"
+            android:summary="@string/summary_quick_access_linked"
+            android:defaultValue="true"
+            android:dependency="qs_quick_access"
+            android:disableDependentsState="true" />
+
+        <PreferenceScreen
+            android:key="tile_picker"
+            android:title="@string/ribbon_picker_title"
+            android:summary="@string/ribbon_picker_summary"
+            android:dependency="qs_quick_access_linked"
+            android:fragment="com.android.settings.liquid.quicksettings.QuickSettingsTiles" >
+            <extra android:name="config_ribbon" android:value="true" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/quick_settings_title" >

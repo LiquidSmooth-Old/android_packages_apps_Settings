@@ -1892,4 +1892,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="halo_color_title">Circle color</string>
     <string name="halo_color_summary">Define the background shading color</string>
 
+    <!-- Quick ribbon -->
+    <string name="category_quick_access">Quick ribbon</string>
+    <string name="title_quick_access">Show in drawer</string>
+    <string name="title_quick_access_linked">Linked layout</string>
+    <string name="summary_quick_access_linked">Use the select tiles from quick settings</string>
+    <string name="ribbon_picker_title">Ribbon and layout</string>
+    <string name="ribbon_picker_summary">View, select or change the ribbon widgets</string>
+
 </resources>
