@@ -86,6 +86,13 @@
     <header android:id="@+id/advanced_section"
         android:title="@string/advanced_category_title" />
 
+    <!-- Active display -->
+    <header
+        android:id="@+id/active_display"
+        android:title="@string/active_display_title"
+        android:fragment="com.android.settings.liquid.ActiveDisplaySettings"
+        android:icon="@drawable/ic_liquid_active_display" />
+
     <!-- Notification drawer -->
     <header
         android:id="@+id/notification_drawer"
