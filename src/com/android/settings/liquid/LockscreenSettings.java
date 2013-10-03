@@ -49,6 +49,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment
     private static final String KEY_TARGET_SETTINGS = "lockscreen_targets";
     private static final String KEY_WIDGETS_SETTINGS = "lockscreen_widgets";
     private static final String KEY_GENERAL_CATEGORY = "general_category";
+    private static final String KEY_BATTERY_AROUND_RING = "battery_around_ring";
     private static final String KEY_ALWAYS_BATTERY_PREF = "lockscreen_battery_status";
     private static final String KEY_LOCKSCREEN_ROTATION = "lockscreen_rotation";
     private static final String KEY_LOCK_BEFORE_UNLOCK = "lock_before_unlock";
@@ -59,6 +60,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment
     private DevicePolicyManager mDPM;
     private Preference mLockscreenWidgets;
 
+    private CheckBoxPreference mLockRingBattery;
     private CheckBoxPreference mBatteryStatus;
     private ListPreference mLockscreenRotation;
     private CheckBoxPreference mLockBeforeUnlock;
@@ -77,6 +79,13 @@ public class LockscreenSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.liquid_lockscreen_settings);
 
         PreferenceScreen prefs = getPreferenceScreen();
+
+        mLockRingBattery = (CheckBoxPreference) prefs
+                .findPreference(KEY_BATTERY_AROUND_RING);
+        if (mLockRingBattery != null) {
+            mLockRingBattery.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.BATTERY_AROUND_LOCKSCREEN_RING, 0) == 1);
+        }
 
         mLockBeforeUnlock = (CheckBoxPreference) prefs
                 .findPreference(KEY_LOCK_BEFORE_UNLOCK);
@@ -223,6 +232,11 @@ public class LockscreenSettings extends SettingsPreferenceFragment
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL,
                     mLockQuickUnlock.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mLockRingBattery) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.BATTERY_AROUND_LOCKSCREEN_RING,
+                    mLockRingBattery.isChecked() ? 1 : 0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
