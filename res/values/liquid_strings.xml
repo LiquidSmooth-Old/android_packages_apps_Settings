@@ -817,6 +817,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="shake_secure_timeout_10min">10 minutes after screen turned off</string>
     <string name="shake_secure_timeout_30min">30 minutes after screen turned off</string>
 
+    <!-- Lock before unlock -->
+    <string name="lock_before_unlock_title">Show slider before secure unlock</string>
+    <string name="lock_before_unlock_summary">Show slider lockscreen before secure unlock mechanism</string>
+
     <!-- Sizes for pattern lockscreen -->
     <string name="lock_pattern_size_3">3x3</string>
     <string name="lock_pattern_size_4">4x4</string>
@@ -826,13 +830,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Lock screen battery ring -->
     <string name="battery_around_ring_title">Battery around ring</string>
     <string name="battery_around_ring_summary">Display battery level around unlock ring</string>
-
-    <!--Lock screen see through-->
-    <string name="see_through_title">See through</string>
-    <string name="see_through_summary">Shows the content behind lock screen</string>
-
-    <!--Lock screen blur radius -->
-    <string name="blur_radius_title">Blur radius</string>
 
     <!-- Notification drawer background -->
     <string name="notification_style_title">Background style</string>
@@ -1220,10 +1217,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="progressbar_reset">Reset</string>
     <string name="progressbar_button_reset">Reset colors</string>
     <string name="progressbar_reset_message">Reset progress bar style to default?</string>
-
-    <!-- Lockscreen wallpaper -->
-    <string name="lockscreen_wallpaper">Custom wallpaper</string>
-    <string name="select_wallpaper">Select wallpaper</string>
 
     <!-- Notification reminder -->
     <string name="noti_reminder_category">Reminders</string>
