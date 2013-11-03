@@ -341,9 +341,15 @@ public class SecuritySettings extends SettingsPreferenceFragment
         // Side loading of apps.
         // Disable for restricted profiles. For others, check if policy disallows it.
         mToggleAppInstallation.setEnabled(!um.getUserInfo(UserHandle.myUserId()).isRestricted());
+
         if (um.hasUserRestriction(UserManager.DISALLOW_INSTALL_UNKNOWN_SOURCES)
                 || um.hasUserRestriction(UserManager.DISALLOW_INSTALL_APPS)) {
             mToggleAppInstallation.setEnabled(false);
+        }
+
+        if (mIsPrimary) {
+            // App security settings
+            addPreferencesFromResource(R.xml.security_settings_app_slim);
         }
 
         // Advanced Security features
