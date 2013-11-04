@@ -19,4 +19,8 @@
     <string name="lsextrainfo">Extra information</string>
     <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
 
+    <!-- About phone screen, liquid version -->
+    <string name="liquid_version_title">Liquid version</string>
+    <string name="liquid_version_default">Unknown</string>
+
 </resources>
