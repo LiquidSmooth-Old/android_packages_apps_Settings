@@ -16,7 +16,9 @@
 
 package com.android.settings;
 
+import android.app.FragmentManager;
 import android.util.Log;
+import android.view.MenuItem;
 
 /**
  * Stub class for showing sub-settings; we can't use the main Settings class
@@ -26,7 +28,9 @@ public class SubSettings extends SettingsActivity {
 
     @Override
     public boolean onNavigateUp() {
-        finish();
+        if (!popFragment()) {
+            finish();
+        }
         return true;
     }
 
@@ -34,5 +38,14 @@ public class SubSettings extends SettingsActivity {
     protected boolean isValidFragment(String fragmentName) {
         Log.d("SubSettings", "Launching fragment " + fragmentName);
         return true;
+    }
+
+    private boolean popFragment() {
+        FragmentManager fm = getFragmentManager();
+        if (fm.getBackStackEntryCount() > 0) {
+            fm.popBackStack();
+            return true;
+        }
+        return false;
     }
 }
