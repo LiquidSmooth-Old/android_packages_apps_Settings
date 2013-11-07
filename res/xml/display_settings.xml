@@ -107,11 +107,11 @@
                     android:summary="@string/doze_timeout_summary"
                     android:dependency="doze" />
 
-         </PreferenceCategory>
+        </PreferenceCategory>
 
-         <PreferenceCategory
-             android:key="category_wakeup_options"
-             android:title="@string/display_category_wakeup_options_title" >
+        <PreferenceCategory
+            android:key="category_wakeup_options"
+            android:title="@string/display_category_wakeup_options_title" >
 
             <SwitchPreference
                 android:key="pref_volume_wake"
@@ -128,11 +128,48 @@
                 android:persistent="false" />
 
             <com.android.settings.slim.SystemSettingSwitchPreference
-                    android:key="proximity_on_wake"
-                    android:title="@string/proximity_wake_title"
-                    android:summary="@string/proximity_wake_summary"
-                    android:defaultValue="true" />
+                android:key="proximity_on_wake"
+                android:title="@string/proximity_wake_title"
+                android:summary="@string/proximity_wake_summary"
+                android:defaultValue="true" />
+        </PreferenceCategory>
 
-         </PreferenceCategory>
+        <PreferenceCategory
+                android:key="advanced_display_prefs"
+                android:title="@string/advanced_settings">	
+
+            <SwitchPreference
+                android:key="adaptive_backlight"
+                android:title="@string/adaptive_backlight_title"
+                android:summary="@string/adaptive_backlight_summary"
+                android:defaultValue="true" />
+
+            <SwitchPreference
+                android:key="sunlight_enhancement"
+                android:title="@string/sunlight_enhancement_title"
+                android:summary="@string/sunlight_enhancement_summary"
+                android:defaultValue="true" />
+
+            <SwitchPreference
+                android:key="color_enhancement"
+                android:title="@string/color_enhancement_title"
+                android:summary="@string/color_enhancement_summary"
+                android:defaultValue="true" />
+
+
+            <com.android.settings.hardware.DisplayColor
+                android:key="color_calibration"
+                android:title="@string/color_calibration_title"
+                android:dialogTitle="@string/color_calibration_title"
+                android:summary="@string/color_calibration_summary"
+                android:persistent="false" />
+
+            <com.android.settings.hardware.DisplayGamma
+                android:key="gamma_tuning"
+                android:title="@string/gamma_tuning_title_head"
+                android:dialogTitle="@string/gamma_tuning_title_head"
+                android:summary="@string/gamma_tuning_summary_head"
+                android:persistent="false" />
+        </PreferenceCategory>
 
 </PreferenceScreen>
