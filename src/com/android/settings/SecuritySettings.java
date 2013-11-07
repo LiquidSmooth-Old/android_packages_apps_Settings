@@ -48,12 +48,14 @@ import android.telephony.SubscriptionInfo;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.android.internal.telephony.util.BlacklistUtils;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.TrustAgentUtils.TrustAgentComponentInfo;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Index;
 import com.android.settings.search.Indexable;
 import com.android.settings.search.SearchIndexableRaw;
+import com.android.settings.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -114,6 +116,10 @@ public class SecuritySettings extends SettingsPreferenceFragment
     // Only allow one trust agent on the platform.
     private static final boolean ONLY_ONE_TRUST_AGENT = true;
 
+    // Blacklist
+    private static final String KEY_APP_SECURITY_CATEGORY = "app_security";
+    private static final String KEY_BLACKLIST = "blacklist";
+
     private DevicePolicyManager mDPM;
     private SubscriptionManager mSubscriptionManager;
 
@@ -140,6 +146,9 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private boolean mIsPrimary;
 
     private Intent mTrustAgentClickIntent;
+
+    // Blacklist
+    private PreferenceScreen mBlacklist;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -211,6 +220,9 @@ public class SecuritySettings extends SettingsPreferenceFragment
         }
         addPreferencesFromResource(R.xml.security_settings);
         root = getPreferenceScreen();
+
+        // Add package manager to check if features are available
+        PackageManager pm = getPackageManager();
 
         // Add options for device encryption
         mIsPrimary = UserHandle.myUserId() == UserHandle.USER_OWNER;
@@ -400,6 +412,17 @@ public class SecuritySettings extends SettingsPreferenceFragment
             deviceAdminCategory.removePreference(mAdvancedReboot);
         }
 
+        // App security settings
+        addPreferencesFromResource(R.xml.security_settings_app_slim);
+        mBlacklist = (PreferenceScreen) root.findPreference(KEY_BLACKLIST);
+
+        // Determine options based on device telephony support
+        if (!pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
+            // No telephony, remove dependent options
+            PreferenceGroup appCategory = (PreferenceGroup)
+                    root.findPreference(KEY_APP_SECURITY_CATEGORY);
+            appCategory.removePreference(mBlacklist);
+        }
 
         // Advanced Security features
         PreferenceGroup advancedCategory =
@@ -637,6 +660,8 @@ public class SecuritySettings extends SettingsPreferenceFragment
         if (mResetCredentials != null) {
             mResetCredentials.setEnabled(!mKeyStore.isEmpty());
         }
+
+        updateBlacklistSummary();
     }
 
     @Override
@@ -933,4 +958,13 @@ public class SecuritySettings extends SettingsPreferenceFragment
         }
     }
 
+    private void updateBlacklistSummary() {
+        if (mBlacklist != null) {
+            if (BlacklistUtils.isBlacklistEnabled(getActivity())) {
+                mBlacklist.setSummary(R.string.blacklist_summary);
+            } else {
+                mBlacklist.setSummary(R.string.blacklist_summary_disabled);
+            }
+        }
+    }
 }
