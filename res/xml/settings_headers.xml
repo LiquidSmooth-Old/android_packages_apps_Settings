@@ -132,7 +132,7 @@
         android:fragment="com.android.settings.liquid.PieControl"
         android:icon="@drawable/ic_liquid_pie_control" />
 
-    <!-- Themes settings -->
+    <!-- Total blackout -->
     <header
         android:id="@+id/theme_settings"
 		android:title="@string/theme_settings_title"
@@ -209,6 +209,13 @@
     <!-- PERSONAL -->
     <header android:id="@+id/personal_section"
         android:title="@string/header_category_personal" />
+
+    <!-- Profiles -->
+    <header
+        android:id="@+id/profiles_settings"
+        android:icon="@drawable/ic_settings_profiles"
+        android:fragment="com.android.settings.profiles.ProfilesSettings"
+        android:title="@string/profiles_settings_title" />
 
     <!-- Location -->
     <header
