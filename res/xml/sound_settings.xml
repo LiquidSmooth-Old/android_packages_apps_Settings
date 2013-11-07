@@ -115,6 +115,12 @@
             android:summary="@string/volume_adjust_sounds_enable_summary"
             android:defaultValue="true" />
 
+    <com.android.settings.hardware.VibratorIntensity
+            android:key="vibration_intensity"
+            android:title="@string/vibrator_intensity_title"
+            android:dialogTitle="@string/vibrator_intensity_title"
+            android:persistent="false" />
+
     <ListPreference
             android:key="vibrator_multiplier"
             android:persistent="false"
