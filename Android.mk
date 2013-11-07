@@ -32,6 +32,8 @@ LOCAL_AAPT_FLAGS += --auto-add-overlay
 
 include frameworks/opt/setupwizard/navigationbar/common.mk
 
+LOCAL_JAVA_LIBRARIES += org.cyanogenmod.hardware
+
 include $(BUILD_PACKAGE)
 
 # Use the following include to make our test apk.
