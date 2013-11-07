@@ -17,6 +17,7 @@
 -keep class com.android.settings.notificationlight.*
 -keep class com.android.settings.slim.**
 -keep class android.romstats.**
+-keep class com.android.settings.cyanogenmod.MoreDeviceSettings
 
 # Keep click responders
 -keepclassmembers class com.android.settings.inputmethod.UserDictionaryAddWordActivity {
