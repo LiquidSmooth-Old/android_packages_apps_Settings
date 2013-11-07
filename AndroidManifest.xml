@@ -109,6 +109,8 @@
             android:requiredForAllUsers="true"
             android:supportsRtl="true">
 
+        <uses-library android:name="org.cyanogenmod.hardware" required="false" />
+
         <receiver
             android:name=".cyanogenmod.ProtectedAppsReceiver"
             android:permission="cyanogenmod.permission.PROTECTED_APP">

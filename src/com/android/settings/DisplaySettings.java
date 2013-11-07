@@ -46,6 +46,8 @@ import android.widget.Toast;
 import com.android.internal.view.RotationPolicy;
 import com.android.settings.DreamSettings;
 import com.android.settings.liquid.DisplayRotation;
+import com.android.settings.hardware.DisplayColor;
+import com.android.settings.hardware.DisplayGamma;
 
 import java.util.ArrayList;
 
@@ -75,6 +77,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
     private static final String KEY_SCREEN_OFF_GESTURE_SETTINGS = "screen_off_gesture_settings";
     private static final String KEY_SCREEN_COLOR_SETTINGS = "screencolor_settings";
+    private static final String KEY_DISPLAY_COLOR = "color_calibration";
+    private static final String KEY_DISPLAY_GAMMA = "gamma_tuning";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
@@ -195,6 +199,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                         Settings.System.VOLUME_WAKE_SCREEN, 0) == 1);
                 mVolumeWake.setOnPreferenceChangeListener(this);
             }
+        }
+
+        if (!DisplayColor.isSupported()) {
+            getPreferenceScreen().removePreference(findPreference(KEY_DISPLAY_COLOR));
+        }
+        if (!DisplayGamma.isSupported()) {
+            getPreferenceScreen().removePreference(findPreference(KEY_DISPLAY_GAMMA));
         }
 
         if (!isPostProcessingSupported()) {
