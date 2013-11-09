@@ -116,7 +116,6 @@
     <string name="root_access_adb">ADB only</string>
     <string name="root_access_all">Apps and ADB</string>
 
-<<<<<<< HEAD
     <string name="button_pref_title">Buttons</string>
     <string name="hardware_keys_home_key_title">Home button</string>
     <string name="hardware_keys_menu_key_title">Menu button</string>
@@ -131,7 +130,6 @@
     <string name="hardware_keys_action_in_app_search">In-app search</string>
     <string name="hardware_keys_action_launch_camera">Launch camera</string>
     <string name="hardware_keys_action_sleep">Turn screen off</string>
-
     <string name="app_security_title">App security</string>
 
     <!-- Blacklist preferences -->
@@ -252,5 +250,22 @@
     <string name="display_category_wakeup_options_title">Wakeup options</string>
     <string name="wakeup_when_plugged_unplugged_title">Wake up on charge</string>
     <string name="wakeup_when_plugged_unplugged_summary">Wake up device if charger is plugged/unplugged.</string>
+
+    <!-- Keyboard and Input ASS methods  -->
+    <string name="title_keyboard_input">Advanced options</string>
+    <string name="disable_fullscreen_keyboard_title">Disable fullscreen keyboard</string>
+    <string name="disable_fullscreen_keyboard_summary">Landscape keyboard will never take up entire screen</string>
+    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
+    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
+    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
+    <string name="keyboard_rotation_toggle_title">Auto keyboard rotation</string>
+    <string name="keyboard_rotation_toggle_summary">Force auto-rotate when keyboard is shown</string>
+    <string name="keyboard_rotation_timeout_title">Auto-rotate timeout</string>
+    <string name="keyboard_rotation_timeout_summary">Disables auto-rotate sensor <xliff:g id="rotate_timeout">%1$s</xliff:g> seconds after keyboard is hidden</string>
+    <string name="keyboard_rotation_dialog">This feature forces auto-rotate to turn on temporarily while the keyboard is shown.  It has no effect when auto-rotate is already enabled.</string>
+    <string name="show_enter_key_title">Show enter key</string>
+    <string name="show_enter_key_summary">Force keyboard to show enter instead of emoticon key</string>
+    <string name="ime_switcher_notify">Selector notification</string>
+    <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
 </resources>
