@@ -99,6 +99,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private static final String KEYS_APP_SWITCH_LONG_PRESS = "keys_app_switch_long_press";
     private static final String KEYS_APP_SWITCH_DOUBLE_TAP = "keys_app_switch_double_tap";
     private static final String DISABLE_NAV_KEYS = "disable_nav_keys";
+    private static final String KEY_BLUETOOTH_INPUT_SETTINGS = "bluetooth_input_settings";
 
     private static final int DLG_SHOW_WARNING_DIALOG = 0;
     private static final int DLG_SHOW_ACTION_DIALOG  = 1;
@@ -187,6 +188,9 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         if (!backlight.isButtonSupported() && !backlight.isKeyboardSupported()) {
             prefScreen.removePreference(backlight);
         }
+
+        Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
+                getPreferenceScreen(), KEY_BLUETOOTH_INPUT_SETTINGS);
     }
 
     public static void restoreKeyDisabler(Context context) {
