@@ -30,7 +30,11 @@
     <integer name="maximum_user_dictionary_word_length" translatable="false">48</integer>
 
     <!-- Volume Rocker Wake Support. Some devices do not support (PMU) this.
-        Setting to false will disable Volume Rocker Wake support -->
+         Setting to false will disable Volume Rocker Wake support -->
     <bool name="config_show_volumeRockerWake">true</bool>
+
+    <!-- Custom density -->
+    <integer name="lcd_density_max" translatable="false">160</integer>
+    <integer name="lcd_density_min" translatable="false">480</integer>
 
 </resources>
