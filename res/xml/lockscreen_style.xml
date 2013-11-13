@@ -19,6 +19,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <CheckBoxPreference
+        android:key="see_through"
+        android:title="@string/see_through_title"
+        android:summary="@string/see_through_summary" />
+
     <PreferenceCategory
         android:key="advanced_category"
         android:title="@string/advanced_category_title">
