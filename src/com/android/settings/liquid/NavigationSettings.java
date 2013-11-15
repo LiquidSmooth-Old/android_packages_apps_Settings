@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/com/android/settings/liquid/NavigationSettings.java
 /*
  * Copyright (C) 2015 The LiquidSmooth Project
  *
@@ -16,7 +17,9 @@
 
 package com.android.settings.liquid;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.ServiceManager;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -25,6 +28,7 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.view.IWindowManager;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -32,12 +36,22 @@ import com.android.settings.Utils;
 
 public class NavigationSettings extends SettingsPreferenceFragment {
 
+    private static final String KEY_HARDWARE_KEYS = "hardwarekeys_settings";
+    private static final String KEY_PIE_SETTINGS = "pie_settings";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.liquid_navigation_settings);
+
+        // Hide Hardware Keys menu if device doesn't have any
+        PreferenceScreen hardwareKeys = (PreferenceScreen) findPreference(KEY_HARDWARE_KEYS);
+        int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        if (deviceKeys == 0 && hardwareKeys != null) {
+            getPreferenceScreen().removePreference(hardwareKeys);
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
