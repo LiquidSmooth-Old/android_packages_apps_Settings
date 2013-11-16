@@ -366,7 +366,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         pref.setSummary(String.format(res.getString(R.string.summary_font_size),
                 fontSizeNames[index]));
     }
-    
+
     @Override
     public void onResume() {
         super.onResume();
