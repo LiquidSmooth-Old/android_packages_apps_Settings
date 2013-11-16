@@ -326,7 +326,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
         screenTimeoutPreference.setEnabled(revisedEntries.size() > 0);
     }
-    
+
     @Override
     public void onResume() {
         super.onResume();
