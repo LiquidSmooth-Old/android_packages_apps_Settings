@@ -24,6 +24,9 @@
             <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
         </PreferenceScreen>
 
+        <PreferenceScreen android:key="liquid_logo"
+                          android:enabled="false"
+                          android:layout="@layout/liquid_logo_row" />
 
         <PreferenceScreen android:key="additional_system_update_settings"
                           android:title="@string/additional_system_update_settings_list_item_title">
@@ -31,8 +34,6 @@
                     android:targetPackage="@string/additional_system_update"
                     android:targetClass="@string/additional_system_update_menu" />
         </PreferenceScreen>
-
-        <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status"
                 android:summary="@string/device_status_summary">
