@@ -111,6 +111,13 @@
         android:fragment="com.android.settings.liquid.ActiveDisplaySettings"
         android:icon="@drawable/ic_liquid_active_display" />
 
+    <!-- Halo options -->
+    <header
+        android:id="@+id/halo_options"
+		android:title="@string/halo_options_title"
+        android:fragment="com.android.settings.liquid.HaloOptions"
+        android:icon="@drawable/ic_liquid_halo_options" />
+
     <!-- Notification drawer -->
     <header
         android:id="@+id/notification_drawer"
