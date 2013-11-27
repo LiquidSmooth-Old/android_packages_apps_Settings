@@ -66,6 +66,8 @@ public class NotificationDrawer extends SettingsPreferenceFragment
             "quicksettings_tiles_style";
     private static final String PREF_TILE_PICKER =
             "tile_picker";
+    private static final String STATUS_BAR_CUSTOM_HEADER = 
+            "custom_status_bar_header";
 
     ListPreference mHideLabels;
     SeekBarPreference mNotificationAlpha;
@@ -76,6 +78,7 @@ public class NotificationDrawer extends SettingsPreferenceFragment
     ListPreference mQuickPulldown;
     ListPreference mSmartPulldown;
     CheckBoxPreference mCollapsePanel;
+    CheckBoxPreference mStatusBarCustomHeader;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -91,6 +94,11 @@ public class NotificationDrawer extends SettingsPreferenceFragment
         mHideLabels.setValue(String.valueOf(hideCarrier));
         mHideLabels.setOnPreferenceChangeListener(this);
         updateHideNotificationLabelsSummary(hideCarrier);
+		
+        mStatusBarCustomHeader = (CheckBoxPreference) findPreference(STATUS_BAR_CUSTOM_HEADER);
+        mStatusBarCustomHeader.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_CUSTOM_HEADER, 0) == 1);
+        mStatusBarCustomHeader.setOnPreferenceChangeListener(this);
 
         PackageManager pm = getPackageManager();
         boolean isMobileData = pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY);
@@ -230,6 +238,11 @@ public class NotificationDrawer extends SettingsPreferenceFragment
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.QS_COLLAPSE_PANEL,
                     (Boolean) newValue ? 1 : 0, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mStatusBarCustomHeader) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.STATUS_BAR_CUSTOM_HEADER, value ? 1 : 0);
             return true;
         } else if (preference == mReminder) {
             Settings.System.putIntForUser(getContentResolver(),
