@@ -166,6 +166,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
 
+    private static final String DEVELOPMENT_SHORTCUT_KEY = "development_shortcut";
+
     private static final int RESULT_DEBUG_APP = 1000;
 
     private static final String PERSISTENT_DATA_BLOCK_PROP = "ro.frp.pst";
@@ -243,6 +245,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private ListPreference mRootAccess;
     private Object mSelectedRootValue;
 
+    private CheckBoxPreference mDevelopmentShortcut;
+
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
     private final ArrayList<SwitchPreference> mResetSpPrefs
@@ -284,12 +288,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         final PreferenceGroup debugDebuggingCategory = (PreferenceGroup)
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
 
-<<<<<<< HEAD
-        mEnableAdb = findAndInitCheckboxPref(ENABLE_ADB);
-        mAdbNotify = findAndInitCheckboxPref(ADB_NOTIFY);
-=======
         mEnableAdb = findAndInitSwitchPref(ENABLE_ADB);
->>>>>>> 0a89fc4... Settings: Developer Settings - We want consistence...change from CheckBox…
+        mAdbNotify = findAndInitCheckboxPref(ADB_NOTIFY);
         mClearAdbKeys = findPreference(CLEAR_ADB_KEYS);
         if (!SystemProperties.getBoolean("ro.adb.secure", false)) {
             if (debugDebuggingCategory != null) {
@@ -303,31 +303,20 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             mEnableTerminal = null;
         }
 
-<<<<<<< HEAD
         mKeepScreenOn = findAndInitCheckboxPref(KEEP_SCREEN_ON);
         mBtHciSnoopLog = findAndInitCheckboxPref(BT_HCI_SNOOP_LOG);
         mEnableOemUnlock = findAndInitCheckboxPref(ENABLE_OEM_UNLOCK);
-=======
-        mBugreport = findPreference(BUGREPORT);
-        mBugreportInPower = findAndInitSwitchPref(BUGREPORT_IN_POWER_KEY);
-        mKeepScreenOn = findAndInitSwitchPref(KEEP_SCREEN_ON);
-        mBtHciSnoopLog = findAndInitSwitchPref(BT_HCI_SNOOP_LOG);
-        mEnableOemUnlock = findAndInitSwitchPref(ENABLE_OEM_UNLOCK);
->>>>>>> 0a89fc4... Settings: Developer Settings - We want consistence...change from CheckBox…
+
         if (!showEnableOemUnlockPreference()) {
             removePreference(mEnableOemUnlock);
             mEnableOemUnlock = null;
         }
-<<<<<<< HEAD
         mQuickBoot= findAndInitCheckboxPref(ENABLE_QUICKBOOT);
         mAllowMockLocation = findAndInitCheckboxPref(ALLOW_MOCK_LOCATION);
         mDebugViewAttributes = findAndInitCheckboxPref(DEBUG_VIEW_ATTRIBUTES);
-=======
-        mAllowMockLocation = findAndInitSwitchPref(ALLOW_MOCK_LOCATION);
-        mDebugViewAttributes = findAndInitSwitchPref(DEBUG_VIEW_ATTRIBUTES);
->>>>>>> 0a89fc4... Settings: Developer Settings - We want consistence...change from CheckBox…
         mPassword = (PreferenceScreen) findPreference(LOCAL_BACKUP_PASSWORD);
         mAllPrefs.add(mPassword);
+        mDevelopmentShortcut = findAndInitCheckboxPref(DEVELOPMENT_SHORTCUT_KEY);
 
 
         if (!android.os.Process.myUserHandle().equals(UserHandle.OWNER)) {
@@ -335,6 +324,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             disableForUser(mClearAdbKeys);
             disableForUser(mEnableTerminal);
             disableForUser(mPassword);
+            disableForUser(mDevelopmentShortcut);
         }
 
         mDebugAppPref = findPreference(DEBUG_APP_KEY);
@@ -603,6 +593,23 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         updateUseNuplayerOptions();
         updateUSBAudioOptions();
         updateRootAccessOptions();
+        updateDevelopmentShortcutOptions();
+    }
+
+    private void resetDevelopmentShortcutOptions() {
+        Settings.Secure.putInt(getActivity().getContentResolver(),
+                Settings.Secure.DEVELOPMENT_SHORTCUT, 0);
+    }
+
+    private void writeDevelopmentShortcutOptions() {
+        Settings.Secure.putInt(getActivity().getContentResolver(),
+                Settings.Secure.DEVELOPMENT_SHORTCUT,
+                mDevelopmentShortcut.isChecked() ? 1 : 0);
+    }
+
+    private void updateDevelopmentShortcutOptions() {
+        mAdvancedReboot.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
+                Settings.Secure.DEVELOPMENT_SHORTCUT, 0) != 0);
     }
 
     private void resetDangerousOptions() {
@@ -617,6 +624,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         resetDebuggerOptions();
         writeLogdSizeOption(null);
         resetRootAccessOptions();
+        resetDevelopmentShortcutOptions();
         writeAnimationScaleOption(0, mWindowAnimationScale, null);
         writeAnimationScaleOption(1, mTransitionAnimationScale, null);
         writeAnimationScaleOption(2, mAnimatorDurationScale, null);
@@ -1508,6 +1516,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             writeUseNuplayerOptions();
         } else if (preference == mUSBAudio) {
             writeUSBAudioOptions();
+        } else if (preference == mDevelopmentShortcut) {
+            writeDevelopmentShortcutOptions();
         } else if (preference == mKillAppLongpressBack) {
             writeKillAppLongpressBackOptions();
         } else {
