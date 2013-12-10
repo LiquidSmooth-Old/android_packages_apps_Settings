@@ -1562,4 +1562,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="custom_recent_title">Switch recent styles</string>
     <string name="custom_recent_summary">Tick to slim recent or untick for stock recent</string>
 
+	<!-- LiquidSmooth Anonymous Stats -->
+    <string name="rominfo_settings_list_item_title">LiquidSmooth Statistics</string>
+    <string name="rominfo_settings_list_item_summary">Help make LiquidSmooth better by opting into anonymous statistics reporting</string>
+
 </resources>

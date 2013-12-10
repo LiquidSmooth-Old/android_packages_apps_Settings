@@ -20,6 +20,15 @@
         <PreferenceScreen android:key="liquid_logo"
                           android:layout="@layout/liquid_logo_row" />
 
+        <!-- Liquid Anonymous Stats -->
+       <PreferenceScreen android:key="rominfo_settings"
+            android:title="@string/rominfo_settings_list_item_title"
+            android:summary="@string/rominfo_settings_list_item_summary">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="android.romstats"
+                    android:targetClass="android.romstats.AnonymousStats" />
+        </PreferenceScreen>
+        
         <!-- OTA -->
         <PreferenceScreen android:key="ota_app"
                 android:title="@string/ota_app"
@@ -29,7 +38,7 @@
                     android:targetClass="com.otaupdater.OTAUpdaterActivity" />
         </PreferenceScreen>
 
-        <!-- Device status - launches activity -->
+        <!-- Device status -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status"
                 android:summary="@string/device_status_summary">
