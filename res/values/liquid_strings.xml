@@ -28,4 +28,8 @@
     <string name="share_message">Check out what #LiquidSmooth is all about @ http://goo.gl/Cuwv18</string>
     <string name="share_chooser_title">Share LiquidSmooth</string>
 
+	<!-- LiquidSmooth Anonymous Stats -->
+    <string name="rominfo_settings_list_item_title">LiquidSmooth Statistics</string>
+    <string name="rominfo_settings_list_item_summary">Help make LiquidSmooth better by opting into anonymous statistics reporting</string>
+
 </resources>
