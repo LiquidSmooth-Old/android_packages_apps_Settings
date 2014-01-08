@@ -72,6 +72,12 @@
             android:entryValues="@array/listview_interpolator_values"
             android:defaultValue="0" />
 
+        <PreferenceScreen
+            android:key="animation_controls"
+            android:title="@string/animation_controls_title"
+            android:summary="@string/animation_controls_summary"
+            android:fragment="com.android.settings.liquid.AnimationControls" />
+
     </PreferenceCategory>
 
         <PreferenceCategory

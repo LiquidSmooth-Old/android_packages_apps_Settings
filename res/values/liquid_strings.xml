@@ -1516,4 +1516,23 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="swap_volume_buttons_title">Swap volume buttons</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
 
+    <!-- Animation controls -->
+    <string name="animation_controls_title">Animation controls</string>
+    <string name="animation_controls_summary">Change direction of the system animations</string>
+    <string name="activity_open_title">Activity open</string>
+    <string name="activity_close_title">Activity close</string>
+    <string name="task_open_title">Task open</string>
+    <string name="task_close_title">Task close</string>
+    <string name="task_move_to_front_title">Move to front</string>
+    <string name="task_move_to_back_title">Move to back</string>
+    <string name="wallpaper_open_title">Wallpaper open</string>
+    <string name="wallpaper_close_title">Wallpaper close</string>
+    <string name="wallpaper_intra_open_title">Wallpaper intra open</string>
+    <string name="wallpaper_intra_close_title">Wallpaper intra close</string>
+    <string name="animation_duration_title">Animation duration</string>
+    <string name="title_animation_no_override">Prevent app overrides</string>
+    <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>
+    <string name="animation_duration_default">Default</string>
+    <string name="header_summary_animation">@null</string>
+
 </resources>
