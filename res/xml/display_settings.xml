@@ -43,7 +43,7 @@
                 android:fragment="com.android.settings.liquid.notificationlight.NotificationLightSettings" />
 
         </PreferenceCategory>
-		
+
         <PreferenceCategory
             android:key="category_screen_options"
             android:title="@string/display_category_screen_options_title" >
@@ -58,7 +58,7 @@
                 android:key="screensaver"
                 android:title="@string/screensaver_settings_title"
                 android:fragment="com.android.settings.DreamSettings" />
-				
+
         <CheckBoxPreference
                 android:key="disable_immersive_message"
                 android:title="@string/disable_immersive_message_title"
@@ -75,6 +75,17 @@
                 android:key="display_rotation"
                 android:fragment="com.android.settings.liquid.DisplayRotation"
                 android:title="@string/display_rotation_title" />
+
+        <PreferenceScreen
+            android:persistent="false"
+            android:key="screencolor_settings"
+            android:title="@string/display_color_title"
+            android:summary="@string/display_color_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.ScreenColorSettings" />
+        </PreferenceScreen>
 
         <PreferenceScreen
                 android:key="screen_recorder"
