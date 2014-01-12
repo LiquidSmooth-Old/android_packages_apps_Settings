@@ -1674,4 +1674,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Allow Multiuser -->
     <string name="multiuser_preference_title">Multiuser support</string>
 
+    <!-- Fast charge QS tile -->
+    <string name="title_tile_fcharge">Fast charge</string>
+
 </resources>
