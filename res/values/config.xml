@@ -37,4 +37,8 @@
     <integer name="lcd_density_max" translatable="false">160</integer>
     <integer name="lcd_density_min" translatable="false">480</integer>
 
+    <!-- Whether or not the app is meant to be run as a system app,
+         bypassing the need of busybox/su -->
+    <bool name="config_isSystemApp">true</bool>
+
 </resources>
