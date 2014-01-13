@@ -1069,6 +1069,29 @@
         <item>2</item>
     </string-array>
 
+    <!-- Active display -->
+    <string-array name="ad_redisplay_entries" translatable="false">
+        <item>@string/ad_redisplay_never</item>
+        <item>@string/ad_redisplay_1m</item>
+        <item>@string/ad_redisplay_5m</item>
+        <item>@string/ad_redisplay_15m</item>
+        <item>@string/ad_redisplay_30m</item>
+        <item>@string/ad_redisplay_1h</item>
+        <item>@string/ad_redisplay_2h</item>
+        <item>@string/ad_redisplay_5h</item>
+    </string-array>
+
+    <string-array name="ad_redisplay_values" translatable="false">
+        <item>0</item>
+        <item>60000</item>
+        <item>300000</item>
+        <item>900000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+        <item>7200000</item>
+        <item>18000000</item>
+    </string-array>
+
     <!-- Listview animation -->
     <string-array name="listview_animation_entries">
         <item>@string/listview_off</item>
@@ -1261,6 +1284,94 @@
         <item>400</item>
         <item>450</item>
         <item>500</item>
+    </string-array>
+
+    <!-- Battery saver mode -->
+    <string-array name="enabled_networks_gsm_choices" translatable="false">
+        <item>@string/network_3G</item>
+        <item>@string/network_3G_auto</item>
+        <item>@string/network_3G_only</item>
+        <item>@string/network_2G</item>
+    </string-array>
+
+    <string-array name="enabled_networks_gsm_values" translatable="false">
+        <item>0</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="enabled_networks_cdma_choices" translatable="false">
+        <item>@string/network_3G</item>
+        <item>@string/network_1x</item>
+        <item>@string/network_global</item>
+    </string-array>
+
+    <string-array name="enabled_networks_cdma_values" translatable="false">
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="enabled_networks_lte_choices" translatable="false">
+        <item>@string/network_lte</item>
+        <item>@string/network_3G</item>
+        <item>@string/network_3G_auto</item>
+        <item>@string/network_3G_only</item>
+        <item>@string/network_2G</item>
+    </string-array>
+
+    <string-array name="enabled_networks_4g_choices" translatable="false">
+        <item>@string/network_4G</item>
+        <item>@string/network_3G</item>
+        <item>@string/network_3G_auto</item>
+        <item>@string/network_3G_only</item>
+        <item>@string/network_2G</item>
+    </string-array>
+
+    <string-array name="enabled_networks_4g_lte_values" translatable="false">
+        <item>9</item>
+        <item>0</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="enabled_networks_except_gsm_lte_choices" translatable="false">
+        <item>@string/network_3G</item>
+    </string-array>
+
+    <string-array name="enabled_networks_except_gsm_lte_values" translatable="false">
+        <item>0</item>
+    </string-array>
+
+    <string-array name="enabled_networks_except_gsm_choices" translatable="false">
+        <item>@string/network_lte</item>
+        <item>@string/network_3G</item>
+    </string-array>
+
+    <string-array name="enabled_networks_except_gsm_4g_choices" translatable="false">
+        <item>@string/network_4G</item>
+        <item>@string/network_3G</item>
+    </string-array>
+
+    <string-array name="enabled_networks_except_gsm_values" translatable="false">
+        <item>9</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="enabled_networks_cdma_lte_choices" translatable="false">
+        <item>@string/network_lte</item>
+        <item>@string/network_3G</item>
+        <item>@string/network_1x</item>
+        <item>@string/network_global</item>
+    </string-array>
+
+    <string-array name="enabled_networks_cdma_lte_values" translatable="false">
+        <item>8</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
     </string-array>
 
 </resources>

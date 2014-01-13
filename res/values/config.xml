@@ -30,7 +30,18 @@
     <integer name="maximum_user_dictionary_word_length" translatable="false">48</integer>
 
     <!-- Volume Rocker Wake Support. Some devices do not support (PMU) this.
-        Setting to false will disable Volume Rocker Wake support -->
+         Setting to false will disable Volume Rocker Wake support -->
     <bool name="config_show_volumeRockerWake">true</bool>
+
+    <!-- Show Expanded Desktop preference -->
+    <bool name="config_show_expandedDesktop">true</bool>
+
+    <!-- Custom LCD density -->
+    <integer name="lcd_density_max" translatable="false">160</integer>
+    <integer name="lcd_density_min" translatable="false">480</integer>
+
+    <!-- Whether or not the app is meant to be run as a system app,
+         bypassing the need of busybox/su -->
+    <bool name="config_isSystemApp">true</bool>
 
 </resources>

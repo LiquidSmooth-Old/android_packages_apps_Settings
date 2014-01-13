@@ -1963,6 +1963,24 @@
                 <action android:name="android.provider.Contacts.PROFILE_CHANGED" />
             </intent-filter>
         </receiver>
+		
+        <receiver
+            android:name="com.android.settings.liquid.batterysaver.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.android.settings.liquid.batterysaver.BatterySaverReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"></action>
+                <action android:name="android.intent.action.TIME_CHANGED"></action>
+                <action android:name="android.intent.action.DATE_CHANGED"></action>
+                <action android:name="android.intent.action.BATTERY_SERVICES"></action>
+                <action android:name="com.android.settings.liquid.batterysaver.SCHEDULE_BATTERY_SAVER"/>
+            </intent-filter>
+        </receiver>
 
         <provider
             android:name="android.support.v4.content.FileProvider"
