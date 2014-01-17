@@ -19,4 +19,7 @@
     <string name="liquid_version_title">Liquid version</string>
     <string name="liquid_version_default">Unknown</string>
 
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
 </resources>
