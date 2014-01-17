@@ -1395,4 +1395,7 @@
     <string name="position_centered_title">Centered</string>
     <string name="hidden_title">Hidden</string>
 
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
 </resources>
