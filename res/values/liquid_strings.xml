@@ -1887,5 +1887,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="halo_msgbox_animation_flip">Flip</string>
     <string name="app_halo_label_black">Blacklist from Halo</string>
     <string name="app_halo_label_white">Whitelist from Halo</string>
+    <string name="halo_color_title">Circle color</string>
+    <string name="halo_color_summary">Define the background shading color</string>
 
 </resources>

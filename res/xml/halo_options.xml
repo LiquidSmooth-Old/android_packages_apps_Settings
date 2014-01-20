@@ -30,6 +30,12 @@
             android:summary="@string/halo_state_summary"
             android:entries="@array/entries_halo_state"
             android:entryValues="@array/values_halo_state" />
+    		
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="halo_color"
+            android:title="@string/halo_color_title"
+            android:summary="@string/halo_color_summary"
+            android:defaultValue="#66ffffff" />
 
          <ListPreference
             android:key="halo_size"
