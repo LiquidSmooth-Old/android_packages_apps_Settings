@@ -32,13 +32,23 @@ import com.android.settings.Utils;
 
 public class NavigationSettings extends SettingsPreferenceFragment {
 
+    private static final String KEY_HARDWARE_KEYS = "hardwarekeys_settings";
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.liquid_navigation_settings);
-    }
+
+        // Hide Hardware Keys menu if device doesn't have any
+        PreferenceScreen hardwareKeys = (PreferenceScreen) findPreference(KEY_HARDWARE_KEYS);
+        int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        if (deviceKeys == 0 && hardwareKeys != null) {
+            getPreferenceScreen().removePreference(hardwareKeys);
+        }
+	}
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
 
