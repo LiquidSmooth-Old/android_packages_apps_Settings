@@ -1571,4 +1571,15 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="recent_panel_title">Recent panel</string>
     <string name="recent_panel_summary">Enables and customize recent apps display</string>
 
+    <!-- Recent clear all button -->
+    <string name="recent_clear_all_button">Recent clear all button</string>
+    <string name="show_recent_clear_all_button_title">Show clear all button</string>
+    <string name="show_recent_clear_all_button_summary">Choose to show or hide clear all recent</string>
+    <string name="recent_clear_all_button_location_title">Clear all button position</string>
+    <string name="recent_clear_all_button_location_summary">Which corner shows the clear all recent button</string>
+    <string name="recent_clear_all_button_location_top_left">Top left</string>
+    <string name="recent_clear_all_button_location_top_right">Top right</string>
+    <string name="recent_clear_all_button_location_bottom_left">Bottom left</string>
+    <string name="recent_clear_all_button_location_bottom_right">Bottom right</string>
+
 </resources>

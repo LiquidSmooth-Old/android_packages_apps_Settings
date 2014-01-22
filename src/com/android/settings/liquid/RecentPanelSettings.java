@@ -49,11 +49,15 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
     private static final String TAG = "RecentPanelSettings";
+    private static final String RECENT_MENU_CLEAR_ALL = "recent_menu_clear_all";
+    private static final String RECENT_MENU_CLEAR_ALL_LOCATION = "recent_menu_clear_all_location";
     private static final String RECENT_PANEL_LEFTY_MODE = "recent_panel_lefty_mode";
     private static final String RECENT_PANEL_SCALE = "recent_panel_scale";
     private static final String RECENT_PANEL_EXPANDED_MODE = "recent_panel_expanded_mode";
     private static final String RECENT_PANEL_SHOW_TOPMOST = "recent_panel_show_topmost";
 
+    private CheckBoxPreference mRecentClearAll;
+    private ListPreference mRecentClearAllPosition;
     private CheckBoxPreference mRecentPanelLeftyMode;
     private ListPreference mRecentPanelScale;
     private ListPreference mRecentPanelExpandedMode;
@@ -66,6 +70,18 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.recent_panel_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        mRecentClearAll = (CheckBoxPreference) prefSet.findPreference(RECENT_MENU_CLEAR_ALL);
+        mRecentClearAll.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+            Settings.System.SHOW_CLEAR_RECENTS_BUTTON, 1) == 1);
+        mRecentClearAll.setOnPreferenceChangeListener(this);
+        mRecentClearAllPosition = (ListPreference) prefSet.findPreference(RECENT_MENU_CLEAR_ALL_LOCATION);
+        String recentClearAllPosition = Settings.System.getString(getActivity().getContentResolver(), 
+            Settings.System.CLEAR_RECENTS_BUTTON_LOCATION);
+        if (recentClearAllPosition != null) {
+             mRecentClearAllPosition.setValue(recentClearAllPosition);
+        }
+        mRecentClearAllPosition.setOnPreferenceChangeListener(this);
 
         mRecentPanelLeftyMode = (CheckBoxPreference) findPreference(RECENT_PANEL_LEFTY_MODE);
         mRecentPanelLeftyMode.setOnPreferenceChangeListener(this);
@@ -89,7 +105,17 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mRecentPanelScale) {
+        if (preference == mRecentClearAll) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(), 
+                 Settings.System.SHOW_CLEAR_RECENTS_BUTTON, value ? 1 : 0);
+            return true;
+        } else if (preference == mRecentClearAllPosition) {
+            String value = (String) newValue;
+            Settings.System.putString(getActivity().getContentResolver(), 
+                 Settings.System.CLEAR_RECENTS_BUTTON_LOCATION, value);
+            return true;
+        } else if (preference == mRecentPanelScale) {
             int value = Integer.parseInt((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.RECENT_PANEL_SCALE_FACTOR, value);
