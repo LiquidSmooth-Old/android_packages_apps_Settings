@@ -382,7 +382,43 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="battery_prefs_title">Options</string>
     <string name="battery_stats_title">Statistics</string>
 
-    <!-- Button shorcut actions -->
+    <!-- Lock Gesture settings -->
+    <string name="lockgesture_change_lock_pattern_label">Change unlock gesture</string>
+    <string name="lockgesture_change_lock_pin_label">Change unlock PIN</string>
+    <string name="lockgesture_need_to_unlock">Confirm saved gesture</string>
+    <!-- Do not translate. -->
+    <string name="lockgesture_need_to_unlock_footer" />
+    <string name="lockgesture_need_to_unlock_wrong">Try again:</string>
+    <!-- Do not translate. -->
+    <string name="lockgesture_need_to_unlock_wrong_footer" />
+    <string name="lockgesture_recording_intro_header">Draw an unlock gesture:</string>
+    <string name="lockgesture_recording_intro_footer">Press Menu for help.</string>
+    <string name="lockgesture_recording_inprogress">Release finger when done.</string>
+    <string name="lockgesture_pattern_entered_header">Gesture recorded.</string>
+    <string name="lockgesture_need_to_confirm">Draw gesture again to confirm:</string>
+    <string name="lockgesture_pattern_confirmed_header">Your new unlock gesture:</string>
+    <string name="lockgesture_confirm_button_text">Confirm</string>
+    <string name="lockgesture_restart_button_text">Redraw</string>
+    <string name="lockgesture_retry_button_text">Retry</string>
+    <string name="lockgesture_continue_button_text">Continue</string>
+    <string name="lockgesture_settings_title">Unlock gesture</string>
+    <string name="lockgesture_settings_enable_title">Require gesture</string>
+    <string name="lockgesture_settings_enable_summary">Must draw gesture to unlock screen</string>
+    <string name="lockgesture_settings_enable_visible_pattern_title">Make gesture visible</string>
+    <string name="lockgesture_settings_enable_power_button_instantly_locks">Power button instantly locks</string>
+    <string name="lockgesture_settings_choose_lock_pattern">Set unlock gesture</string>
+    <string name="lockgesture_settings_change_lock_pattern">Change unlock gesture</string>
+    <string name="lockgesture_settings_help_how_to_record">How to draw an unlock gesture</string>
+    <string name="lockgesture_too_many_failed_confirmation_attempts_header">Too many incorrect attempts!</string>
+    <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Try again in <xliff:g id="number">%d</xliff:g> seconds.</string>
+    <string name="lockpassword_gesture_set_toast">Gesture has been set</string>
+    <string name="lockpassword_confirm_your_gesture_header">Confirm your gesture</string>
+    <string name="lockpassword_choose_your_gesture_header">Draw your gesture</string>
+    <string name="unlock_set_unlock_gesture_title">Gesture</string>
+    <string name="unlock_set_unlock_gesture_summary">Low security, experimental</string>
+    <string name="unlock_set_unlock_mode_gesture">Gesture</string>
+
+    <!-- Button shortcut actions -->
     <string name="shortcut_action_navbar">Navigation bar</string>
     <string name="shortcut_action_pie">Pie controls</string>
     <string name="shortcut_action_airplane">Airplane mode</string>
