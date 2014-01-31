@@ -24,6 +24,14 @@
         android:title="@string/general_category_title">
 
         <CheckBoxPreference
+            android:key="lockscreen_wallpaper"
+            android:title="@string/lockscreen_wallpaper" />
+
+        <Preference
+            android:key="select_lockscreen_wallpaper"
+            android:title="@string/select_wallpaper" />
+
+        <CheckBoxPreference
             android:key="lockscreen_eight_targets"
             android:title="@string/lockscreen_eight_targets_title"
             android:summary="@string/lockscreen_eight_targets_summary" />

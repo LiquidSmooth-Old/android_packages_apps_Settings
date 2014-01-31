@@ -839,6 +839,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="blur_radius_title">Blur radius</string>
     <string name="blur_radius_summary">Set lock screen blur intensity effect</string>
 
+    <!-- Lockscreen wallpaper -->
+    <string name="lockscreen_wallpaper">Custom wallpaper</string>
+    <string name="select_wallpaper">Select wallpaper</string>
+
     <!-- Notification drawer background -->
     <string name="notification_style_title">Background style</string>
     <string name="notification_style_summary">View or change your notification drawer and quicksettings background</string>
