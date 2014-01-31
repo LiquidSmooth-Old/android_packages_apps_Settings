@@ -21,27 +21,18 @@ import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.ActivityNotFoundException;
-import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.ServiceConnection;
-import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Point;
-import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.os.IBinder;
-import android.os.RemoteException;
-import android.os.UserHandle;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.preference.CheckBoxPreference;
@@ -53,13 +44,11 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.SeekBarPreference;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.view.Display;
 import android.view.Window;
 import android.widget.Toast;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.policy.IKeyguardService;
 import com.android.internal.util.liquid.DeviceUtils;
 
 import java.io.File;
@@ -71,7 +60,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment
     private static final String TAG = "LockscreenInterface";
 
     private static final int DLG_ENABLE_EIGHT_TARGETS = 0;
-    private static final int REQUEST_CODE_BG_WALLPAPER = 1024;
 
     private static final String LOCKSCREEN_GENERAL_CATEGORY = "general_category";
     private static final String PREF_LOCKSCREEN_EIGHT_TARGETS = "lockscreen_eight_targets";
@@ -83,20 +71,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment
     private Preference mShortcuts;
 
     private boolean mCheckPreferences;
-
-    private IKeyguardService mKeyguardService;
-
-    private final ServiceConnection mKeyguardConnection = new ServiceConnection() {
-        @Override
-        public void onServiceConnected(ComponentName name, IBinder service) {
-            mKeyguardService = IKeyguardService.Stub.asInterface(service);
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName name) {
-            mKeyguardService = null;
-        }
-    };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -136,13 +110,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment
         mShortcuts = (Preference) findPreference(PREF_LOCKSCREEN_SHORTCUTS);
         mShortcuts.setEnabled(!mLockscreenEightTargets.isChecked());
 
-        Intent intent = new Intent();
-        intent.setClassName("com.android.keyguard", "com.android.keyguard.KeyguardService");
-        if (!mContext.bindServiceAsUser(intent, mKeyguardConnection,
-                Context.BIND_AUTO_CREATE, UserHandle.OWNER)) {
-            Log.e(TAG, "*** Keyguard: can't bind to keyguard");
-        }
-
         mCheckPreferences = true;
         return prefs;
     }
@@ -173,6 +140,11 @@ public class LockscreenInterface extends SettingsPreferenceFragment
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     private void showDialogInner(int id, boolean state) {

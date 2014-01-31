@@ -409,6 +409,10 @@
     <string name="blur_radius_title">Blur radius</string>
     <string name="blur_radius_summary">Set lock screen blur intensity effect</string>
 
+    <!-- Lockscreen wallpaper -->
+    <string name="lockscreen_wallpaper">Custom wallpaper</string>
+    <string name="select_wallpaper">Select wallpaper</string>
+
     <!-- Lock screen style -->
     <string name="lockscreen_style_title">Style</string>
     <string name="lockscreen_style_reset_message">Reset all lock screen colors?</string>
