@@ -1189,6 +1189,30 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_disable_ime_triggers_title">Reduce trigger size on keyboard</string>
     <string name="pie_disable_ime_triggers_summary">Reduces left and right trigger size if keyboard is active</string>
 
+	<!-- Progress bar -->
+    <string name="progressbar_title">Progress bar</string>
+    <string name="progressbar_summary">Customize color and size of progress bar</string>
+    <string name="progressbar_mirror_title">Mirror mode</string>
+    <string name="progressbar_reverse_title">Reversed</string>
+    <string name="progressbar_speed_title">Speed</string>
+    <string name="progressbar_width_title">Stroke width</string>
+    <string name="progressbar_length_title">Separator length</string>
+    <string name="progressbar_count_title">Sections count</string>
+    <string name="progressbar_color_1_title">Color1</string>
+    <string name="progressbar_color_2_title">Color2</string>
+    <string name="progressbar_color_3_title">Color3</string>
+    <string name="progressbar_color_4_title">Color4</string>
+    <string name="sample_progressbar_text">ProgressBar : Preview</string>
+    <string name="progressbar_interpolator">Interpolator</string>
+    <string name="progressbar_none">None</string>
+    <string name="progressbar_acclerate">Accelerate</string>
+    <string name="progressbar_linear">Linear</string>
+    <string name="progressbar_acceleratedecelerate">AccelerateDecelerate</string>
+    <string name="progressbar_decelerate">Decelerate</string>
+    <string name="progressbar_reset">Reset</string>
+    <string name="progressbar_button_reset">Reset colors</string>
+    <string name="progressbar_reset_message">Reset progress bar style to default?</string>
+
     <!-- Notification reminder -->
     <string name="noti_reminder_category">Reminders</string>
     <string name="noti_reminder_enable_title">Enable notification reminder</string>
