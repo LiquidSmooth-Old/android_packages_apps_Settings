@@ -54,4 +54,10 @@
             <extra android:name="fragment" android:value="com.android.settings.liquid.fragments.PowerMenuFragment" />
     </PreferenceScreen>
 
+    <PreferenceScreen
+        android:key="progressbar_settings"
+        android:title="@string/progressbar_title"
+        android:summary="@string/progressbar_summary"
+        android:fragment="com.android.settings.liquid.ProgressBar" />
+
 </PreferenceScreen>
