@@ -34,6 +34,11 @@
             android:entries="@array/media_scanner_on_boot_entries"
             android:entryValues="@array/media_scanner_on_boot_values" />
 
+        <PreferenceScreen
+            android:id="@+id/wakelock_blocker"
+            android:title="@string/wakelock_blocker"
+            android:fragment="com.android.settings.liquid.WakeLockBlocker" />
+
     </PreferenceCategory>
 
     <PreferenceScreen
