@@ -329,10 +329,1020 @@
     <string name="disable_navkeys_title">Enable on-screen nav bar</string>
     <string name="disable_navkeys_summary">Enable on-screen navigation bar and disable hardware buttons</string>
 
+<<<<<<< HEAD
     <!-- Device settings -->
     <string name="device_settings_title">Device</string>
     <string name="devicesettings_app_summary">Configure device specific options</string>
 
+=======
+    <!-- Bluetooth accept all Filestypes -->
+    <string name="bluetooth_accept_all_files">Accept all file types</string>
+
+    <!-- Sms security limit -->
+    <string name="sms_security_check_limit_title">SMS message limit</string>
+    <string name="sms_security_check_limit_summary">Display an alert dialog to prevent applications from sending SMS messages too frequently. Current limit: %d messages in 15 minutes</string>
+    <string name="sms_security_check_limit_default">50 (Default)</string>
+
+    <!-- Custom density -->
+    <string name="custom_density_title">Custom density</string>
+    <string name="custom_density">Custom</string>
+    <string name="set_custom_density_title">Set custom density</string>
+    <string name="set_custom_density_set">Set</string>
+    <string name="custom_density_summary_invalid">"INVALID DENSITY!"</string>
+    <string name="current_lcd_density">"Current density: "</string>
+    <string name="dpi">DPI</string>
+
+    <!-- Toggle switch title for enabling battery saver connections. [CHAR LIMIT=32] -->
+    <string name="data_usage_enable_batterysaver">Battery saver</string>
+
+    <!-- Battery saver mode -->
+    <string name="unit_sec">sec</string>
+    <string name="network_lte">LTE (recommended)</string>
+    <string name="network_4G">4G (recommended)</string>
+    <string name="network_3G_only">3G Only</string>
+    <string name="network_3G_auto">2G/3G Auto</string>
+    <string name="network_3G">2G/3G Preferred</string>
+    <string name="network_2G">2G Only</string>
+    <string name="network_1x">1x</string>
+    <string name="network_global">Global</string>
+    <string name="battery_saver_action_undefined">Undefined</string>
+    <string name="battery_saver_title">Battery saver</string>
+    <string name="pref_battery_saver_enable_title">Battery saver</string>
+    <string name="pref_battery_saver_enable_summary">This will automatically manage your device battery usage and switch your network to user-defined power saving mode or normal mode depending on mobile data and Wi-Fi connection states</string>
+    <string name="pref_battery_saver_enable_no_mobiledata_summary">This will automatically manage your device battery usage to user-defined</string>
+    <string name="pref_battery_saver_normal_mode_title">Normal network mode</string>
+    <string name="pref_battery_saver_power_saving_mode_title">Power saving network mode</string>
+    <string name="pref_battery_saver_screen_off_title">When screen turns off</string>
+    <string name="pref_battery_saver_screen_off_summary">Activate power saving mode when screen turns off</string>
+    <string name="pref_battery_saver_ignore_locked_title">Ignore while locked</string>
+    <string name="pref_battery_saver_ignore_locked_summary">When screen turns on, power saving mode won\'t be deactivated until keyguard is unlocked</string>
+    <string name="pref_battery_saver_mode_change_delay_title">Change mode delay</string>
+    <string name="pref_battery_saver_mode_change_delay_summary">Delays changing of power saving mode</string>
+    <string name="pref_battery_saver_battery_title">When battery low</string>
+    <string name="pref_battery_saver_battery_summary">Activate power saving mode when battery low</string>
+    <string name="pref_battery_saver_mode_battery_level_title">Battery level</string>
+    <string name="pref_battery_saver_mode_battery_level_summary">Activate power saving mode or changing screen brightness by specified battery level</string>
+    <string name="pref_battery_saver_bluetooth_title">Disable bluetooth</string>
+    <string name="pref_battery_saver_bluetooth_summary">Disable bluetooth connection when power saving activated</string>
+    <string name="pref_battery_saver_data_title">Disable mobile data</string>
+    <string name="pref_battery_saver_data_summary">Disable mobile data connection when power saving activated</string>
+    <string name="pref_battery_saver_location_title">Disable gps</string>
+    <string name="pref_battery_saver_location_summary">Disable gps connection when power saving activated</string>
+    <string name="pref_battery_saver_wifi_title">Disable Wi-Fi</string>
+    <string name="pref_battery_saver_wifi_summary">Disable Wi-Fi connection when power saving activated</string>
+    <string name="pref_battery_saver_led_title">Disable LED</string>
+    <string name="pref_battery_saver_led_summary">Disable LED notification when power saving activated</string>
+    <string name="pref_battery_saver_vibrate_title">Disable vibrate</string>
+    <string name="pref_battery_saver_vibrate_summary">Disable vibration when power saving activated</string>
+    <string name="pref_battery_saver_brightness_title">Brightness mode</string>
+    <string name="pref_battery_saver_brightness_summary">Activates brightness level change when battery low</string>
+    <string name="pref_battery_saver_mode_brightness_level_title">Brightness level</string>
+    <string name="pref_battery_saver_mode_brightness_level_summary">Changing brightness level when power saver activated</string>
+    <string name="pref_battery_saver_cpu_title">CPU power saving mode</string>
+    <string name="pref_battery_saver_cpu_summary">This will automatically switch your maximum cpu frequency to user-defined power saving mode</string>
+    <string name="battery_saver_mode_current_speed">Current Speed</string>
+    <string name="battery_saver_mode_current_max">Maximum speed: </string>
+    <string name="battery_saver_mode_cpu_info_list_header">Core Status</string>
+    <string name="battery_saver_mode_cpu_speed_header">Core Limits</string>
+    <string name="battery_saver_mode_core_offline">Offline</string>
+    <string name="battery_saver_mode_core">Core</string>
+    <string name="battery_saver_cpu_mode_title">Activate CPU power saving mode</string>
+    <string name="pref_battery_saver_cpu_warning_title">Attention:</string>
+    <string name="pref_battery_saver_cpu_warning_summary">we never can guarantee this will work on device</string>
+    <string name="pref_battery_saver_network_title">Smart network change</string>
+    <string name="pref_battery_saver_network_summary">Allow changing network to normal mode with specific interval time after screen turn off and power saving mode enabled</string>
+    <string name="pref_battery_saver_nosignal_title">Smart network signal</string>
+    <string name="pref_battery_saver_nosignal_summary">Activate power saving mode when no network signal after 5 minutes</string>
+    <string name="pref_battery_saver_sync_title">Disable sync</string>
+    <string name="pref_battery_saver_sync_summary">Disable sync connection when power saving activated</string>
+    <string name="pref_battery_saver_killall_title">Kill all task</string>
+    <string name="pref_battery_saver_killall_summary">Allow to kill all task when power saving activated</string>
+    <string name="pref_battery_saver_toast_title">Show toast</string>
+    <string name="pref_battery_saver_toast_summary">Allow to showing toast message when battery saver changing device configuration</string>
+    <string name="battery_saver_battery_title">Battery options</string>
+    <string name="battery_saver_radio_title">Radio options</string>
+    <string name="battery_saver_network_title">Other Network options</string>
+    <string name="battery_saver_network_gsm_title">GSM Networks</string>
+    <string name="battery_saver_network_cdma_title">CDMA Networks</string>
+    <string name="battery_saver_system_title">System options</string>
+
+    <!-- Development shortcut -->
+    <string name="development_shortcut_title">Development shortcut</string>
+    <string name="development_shortcut_summary">Enable \'wipe data\' and \'force close\' options in notification area and recent apps list</string>
+
+    <!-- Message of dialog confirming that user wants to restart their device with a new runtime -->
+    <string name="custom_runtime_warning_title">Warning</string>
+    <string name="custom_runtime_warning_message">ART is not supported by LiquidSmooth. This setting is included for experimentation only and has the potential to cause instability, crashes, data loss or prevent the proper boot of your device. Visit &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; for more information.&lt;br/&gt;&lt;br/&gt;We request you do not file bug reports if you have enabled ART as your runtime.&lt;br/&gt;&lt;br/&gt;Are you sure you want to reboot to change runtime from <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> to <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
+
+    <!-- LiquidSmooth Anonymous Stats -->
+    <string name="rominfo_settings_list_item_title">LiquidSmooth Statistics</string>
+    <string name="rominfo_settings_list_item_summary">Help make LiquidSmooth better by opting into anonymous statistics reporting</string>
+
+    <!-- Changelog -->
+    <string name="changelog_title">Liquid Changelog</string>
+    <string name="changelog_title_summary">View recent changes to LiquidSmooth</string>
+    <string name="changelog_loading">Loading changelog\u2026</string>
+    <string name="changelog_error">Unable to load changelog</string>
+    <string name="changelog_unknown">Unknown</string>
+    <string name="changelog_version">Version</string>
+
+    <!-- LiquidSmooth Updater -->
+    <string name="liquidsmoothupdate_settings_title">LiquidSmooth Updates</string>
+    <string name="liquidsmoothupdate_settings_summary">Check for, view or install updates</string>
+
+    <!-- Vibration multiplier -->
+    <string name="vibrator_multiplier_title">Vibration multiplier</string>
+
+    <!-- Lock screen notifications -->
+    <string name="lockscreen_notification_title">Enable notifications</string>
+    <string name="lockscreen_notification_summary">Show current pending notifications</string>
+    <string name="pocket_mode">Pocket mode</string>
+    <string name="pocket_mode_summary">Screen on and show notifications</string>
+    <string name="pocket_mode_disabled_summary">Pocket mode is currently disabled, to re-enable turn off Active Display and Peek</string>
+    <string name="show_always">Show always</string>
+    <string name="show_always_summary">Screen on when removed from pocket</string>
+    <string name="hide_low_priority">Hide low priority</string>
+    <string name="hide_low_priority_summary">Hides low priority notifications</string>
+    <string name="hide_non_clearable">Hide non clearable</string>
+    <string name="hide_non_clearable_summary">Hide all non clearable notifications</string>
+    <string name="dismiss_all">Allow dismissing all</string>
+    <string name="dismiss_all_summary">Ability to dismiss notifications</string>
+    <string name="expanded_view">Expanded notification view</string>
+    <string name="expanded_view_summary">Switch between normal and expanded</string>
+    <string name="force_expanded_view">Force expanded view</string>
+    <string name="force_expanded_view_summary">Show notification view as expanded</string>
+    <string name="wake_on_notification">Wake on notification</string>
+    <string name="wake_on_notification_summary">Wake when notification is received</string>
+    <string name="notifications_height">Notification count</string>
+    <string name="notifications_height_summary">Number of notifications displayed</string>
+    <string name="offset_top">Offset value to top of screen</string>
+    <string name="privacy_mode">Privacy mode</string>
+    <string name="privacy_mode_summary">Only shows icons for notifications</string>
+    <string name="excluded_apps_title">Excluded applications</string>
+    <string name="excluded_apps_summary">Excluded applications will not show</string>
+    <string name="dynamic_width">Dynamic width</string>
+    <string name="dynamic_width_summary">Sets the width of notifications</string>
+    <string name="notification_color">Notification background color</string>
+
+    <!-- Swap volume buttons -->
+    <string name="swap_volume_buttons_title">Swap volume buttons</string>
+    <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
+
+    <!-- Animation controls -->
+    <string name="animation_controls_title">Animation controls</string>
+    <string name="animation_controls_summary">Change direction of the system animations</string>
+    <string name="activity_open_title">Activity open</string>
+    <string name="activity_close_title">Activity close</string>
+    <string name="task_open_title">Task open</string>
+    <string name="task_close_title">Task close</string>
+    <string name="task_move_to_front_title">Move to front</string>
+    <string name="task_move_to_back_title">Move to back</string>
+    <string name="wallpaper_open_title">Wallpaper open</string>
+    <string name="wallpaper_close_title">Wallpaper close</string>
+    <string name="wallpaper_intra_open_title">Wallpaper intra open</string>
+    <string name="wallpaper_intra_close_title">Wallpaper intra close</string>
+    <string name="animation_duration_title">Animation duration</string>
+    <string name="title_animation_no_override">Prevent app overrides</string>
+    <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>
+    <string name="animation_duration_default">Default</string>
+    <string name="header_summary_animation">@null</string>
+
+    <!-- Clock widget -->
+    <string name="lock_clock_title">Clock widget</string>
+    <string name="lock_clock_summary">Change home or lock screen widget display</string>
+
+    <!-- Progress bar -->
+    <string name="progressbar_title">Progress bar</string>
+    <string name="progressbar_summary">Customize appearance of the progress bars</string>
+    <string name="progressbar_mirror_title">Mirror mode</string>
+    <string name="progressbar_reverse_title">Reversed</string>
+    <string name="progressbar_speed_title">Speed</string>
+    <string name="progressbar_width_title">Stroke width</string>
+    <string name="progressbar_length_title">Separator length</string>
+    <string name="progressbar_count_title">Sections count</string>
+    <string name="progressbar_color_1_title">Color1</string>
+    <string name="progressbar_color_2_title">Color2</string>
+    <string name="progressbar_color_3_title">Color3</string>
+    <string name="progressbar_color_4_title">Color4</string>
+    <string name="sample_progressbar_text">ProgressBar : Preview</string>
+    <string name="progressbar_interpolator">Interpolator</string>
+    <string name="progressbar_none">None</string>
+    <string name="progressbar_acclerate">Accelerate</string>
+    <string name="progressbar_linear">Linear</string>
+    <string name="progressbar_acceleratedecelerate">AccelerateDecelerate</string>
+    <string name="progressbar_decelerate">Decelerate</string>
+    <string name="progressbar_reset">Reset</string>
+    <string name="progressbar_button_reset">Reset colors</string>
+    <string name="progressbar_reset_message">Reset progress bar to default?</string>
+
+    <!-- Recent panel -->
+    <string name="recent_panel_title">Recent panel</string>
+    <string name="recent_panel_summary">Enables and customize recent apps display</string>
+
+    <!-- Recent clear all button -->
+    <string name="recent_clear_all_button">Recent clear all button</string>
+    <string name="show_recent_clear_all_button_title">Show clear all button</string>
+    <string name="show_recent_clear_all_button_summary">Choose to show or hide clear all recent</string>
+    <string name="recent_clear_all_button_location_title">Clear all button position</string>
+    <string name="recent_clear_all_button_location_summary">Which corner shows the clear all recent button</string>
+    <string name="recent_clear_all_button_location_top_left">Top left</string>
+    <string name="recent_clear_all_button_location_top_right">Top right</string>
+    <string name="recent_clear_all_button_location_bottom_left">Bottom left</string>
+    <string name="recent_clear_all_button_location_bottom_right">Bottom right</string>
+
+    <!-- Recent RAM bar -->
+    <string name="ram_bar">Recent RAM bar</string>
+    <string name="ram_bar_note_title">Note</string>
+    <string name="ram_bar_note_summary">This RAM bar shows the actual android memory (RAM) utilization. Please note that having cached apps helps open apps faster.</string>
+    <string name="ram_bar_mode_title">Recent RAM bar mode</string>
+    <string name="ram_bar_mode_dialog_title">Show on recent RAM bar</string>
+    <string name="ram_bar_none">None</string>
+    <string name="ram_bar_apps">Applications</string>
+    <string name="ram_bar_cache">Applications and cache</string>
+    <string name="ram_bar_other">Applications, cache and other</string>
+    <string name="ram_bar_style_cat">Recent RAM bar style</string>
+    <string name="ram_bar_color_app_mem_color">Applications RAM color</string>
+    <string name="ram_bar_color_cache_mem_color">Cache RAM color</string>
+    <string name="ram_bar_color_total_mem_color">Other RAM color</string>
+    <string name="ram_bar_color_enabled">Enabled</string>
+    <string name="ram_bar_color_disabled">Disabled</string>
+    <string name="ram_bar_button_help">Help</string>
+    <string name="ram_bar_button_reset">Reset colors</string>
+    <string name="ram_bar_reset">Reset</string>
+    <string name="ram_bar_reset_message">Reset RAM bar to default?</string>
+
+    <!-- Custom recent styles -->
+    <string name="custom_recent_title">Custom recent styles</string>
+    <string name="custom_recent_summary">Enable slim recent or disable for stock</string>
+
+    <!-- Screen recorder -->
+    <string name="screen_recorder_title">Screen recorder</string>
+    <string name="screen_recorder_summary">Adjust screen recorder settings</string>
+    <string name="screen_recorder_summary2">Power + Volume Up</string>
+    <string name="screen_recorder_video_dimensions_title">Video size</string>
+    <string name="screen_recorder_video_bitrate_title">Bitrate</string>
+
+    <!-- video sizes -->
+    <string name="screen_recorder_size_240x400">240x400</string>
+    <string name="screen_recorder_size_360x640">360x640</string>
+    <string name="screen_recorder_size_480x800">480x800</string>
+    <string name="screen_recorder_size_480x854">480x854</string>
+    <string name="screen_recorder_size_540x960">540x960</string>
+    <string name="screen_recorder_size_600x1024">600x1024</string>
+    <string name="screen_recorder_size_720x1280">720x1280</string>
+
+    <!-- frame rates -->
+    <string name="screen_recorder_bitrate_title_100000">100 kB/s</string>
+    <string name="screen_recorder_bitrate_title_250000">250 kB/s</string>
+    <string name="screen_recorder_bitrate_title_500000">500 kB/s</string>
+    <string name="screen_recorder_bitrate_title_1000000">1 MB/s</string>
+    <string name="screen_recorder_bitrate_title_2000000">2 MB/s</string>
+    <string name="screen_recorder_bitrate_title_3000000">3 MB/s</string>
+    <string name="screen_recorder_bitrate_title_4000000">4 MB/s</string>
+    <string name="screen_recorder_bitrate_title_5000000">5 MB/s</string>
+    <string name="screen_recorder_bitrate_title_10000000">10 MB/s</string>
+    <string name="screen_recorder_bitrate_title_20000000">20 MB/s</string>
+    <string name="screen_recorder_bitrate_title_50000000">50 MB/s</string>
+    <string name="screen_recorder_bitrate_title_100000000">100 MB/s</string>
+    <string name="screen_recorder_bitrate_100000">100000</string>
+    <string name="screen_recorder_bitrate_250000">250000</string>
+    <string name="screen_recorder_bitrate_500000">500000</string>
+    <string name="screen_recorder_bitrate_1000000">1000000</string>
+    <string name="screen_recorder_bitrate_2000000">2000000</string>
+    <string name="screen_recorder_bitrate_3000000">3000000</string>
+    <string name="screen_recorder_bitrate_4000000">4000000</string>
+    <string name="screen_recorder_bitrate_5000000">5000000</string>
+    <string name="screen_recorder_bitrate_10000000">10000000</string>
+    <string name="screen_recorder_bitrate_20000000">20000000</string>
+    <string name="screen_recorder_bitrate_50000000">50000000</string>
+    <string name="screen_recorder_bitrate_100000000">100000000</string>
+
+    <!-- Toast animations -->
+    <string name="toast_animation_title">Toast animations</string>
+    <string name="toast_animation_summary">Select and preview system toast animation</string>
+    <string name="toast_none_animation">None</string>
+    <string name="toast_default_animation">Default</string>
+    <string name="toast_fade_animation">Fade animation</string>
+    <string name="toast_SlideRight_animation">Slide right</string>
+    <string name="toast_SlideLeft_animation">Slide left</string>
+    <string name="toast_Xylon_animation">Xylon animation</string>
+    <string name="toast_Toko_animation">Toko animation</string>
+    <string name="toast_Tn_animation">Tn animation</string>
+    <string name="toast_Honami_animation">Honami animation</string>
+    <string name="toast_FastFade_animation">Fast fade</string>
+    <string name="toast_GrowFade_animation">Grow fade</string>
+    <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
+    <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
+    <string name="toast_Translucent_animation">Translucent animation</string>
+
+    <!-- IME animations -->
+    <string name="ime_animation_title">IME animations</string>
+    <string name="ime_animation_summary">Set custom animations for system keyboard</string>
+    <string name="animation_settings_reset_message">Reset animations to default?</string>
+    <string name="animation_default">Default</string>
+    <string name="animation_fade">Fade</string>
+    <string name="animation_slide_right">Slide in right</string>
+    <string name="animation_slide_left">Slide in left</string>
+    <string name="animation_slide_right_no_fade">Slide in right (no fade)</string>
+    <string name="animation_slide_left_no_fade">Slide in left (no fade)</string>
+    <string name="animation_slide_up">Slide in bottom</string>
+    <string name="animation_slide_down">Slide in top</string>
+    <string name="animation_translucent">Translucent</string>
+    <string name="animation_grow_shrink">Grow in (top)</string>
+    <string name="animation_grow_shrink_center">Grow in (center)</string>
+    <string name="animation_grow_shrink_bottom">Grow in (bottom)</string>
+    <string name="animation_grow_shrink_left">Grow in (left)</string>
+    <string name="animation_grow_shrink_right">Grow in (right)</string>
+    <string name="animation_random">Random</string>
+    <string name="ime_animation_test_title">Test IME animation</string>
+    <string name="ime_enter_animation_title">Enter animation</string>
+    <string name="ime_exit_animation_title">Exit animation</string>
+    <string name="ime_interpolator_title">Interpolator</string>
+    <string name="ime_duration_title">IME duration</string>
+
+    <!-- Scrolling animations -->
+    <string name="scrolling_title">Scrolling animations</string>
+    <string name="scrolling_summary">Customize system animations for scrolling</string>
+    <string name="animation_fling_velocity_title">Fling velocity</string>
+    <string name="animation_scroll_friction_title">Scroll friction</string>
+    <string name="animation_overscroll_distance_title">Overscroll distance</string>
+    <string name="animation_overfling_distance_title">Overfling distance</string>
+    <string name="animation_duration_summary">Set duration</string>
+    <string name="animation_no_scroll_title">Scrolling modifiers</string>
+    <string name="animation_no_scroll_summary_on">Enabled</string>
+    <string name="animation_no_scroll_summary_off">Disabled</string>
+    <string name="scroll_disclaimer_summary">Note: Most apps need to be restarted for custom values to take effect</string>
+
+    <!-- Allow Multiuser -->
+    <string name="multiuser_preference_title">Multiuser support</string>
+
+    <!-- Battery Bar -->
+    <string name="status_bar_battery_cat_title">Battery</string>
+    <string name="battery_bar_title">Battery Bar</string>
+    <string name="battery_bar">Battery bar location</string>
+    <string name="battery_bar_color">Battery bar color</string>
+    <string name="battery_bar_cat">Battery bar style</string>
+    <string name="battery_bar_style_title">Battery bar alignment</string>
+    <string name="battery_bar_thickness_title">Battery bar thickness</string>
+    <string name="battery_bar_animate_title">Charging animation</string>
+    <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
+
+    <!-- Sound themes -->
+    <string name="sound_packages_title">Sound packs</string>
+    <string name="install_sound_pack_title">Install sound pack</string>
+    <string name="install_sound_pack_summary">Install new sound packs added in SoundPacks folder on the internal storage</string>
+    <string name="select_sound_pack_title">Select sound pack</string>
+    <string name="select_sound_pack_summary">Select the active sound pack</string>
+    <string name="default_sound_pack">Default (System)</string>
+    <string name="error_pack_install">Error while installing the sound pack</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_title">Network traffic</string>
+    <string name="show_network_traffic_state">Status bar traffic monitor</string>
+    <string name="show_network_traffic_unit">Display unit</string>
+    <string name="show_network_traffic_frequency">Update interval</string>
+    <string name="show_network_traffic_disable">Disabled</string>
+    <string name="show_network_traffic_up">Outgoing</string>
+    <string name="show_network_traffic_down">Incoming</string>
+    <string name="show_network_traffic_all">Outgoing and incoming</string>
+    <string name="show_network_traffic_bit">Bits per second</string>
+    <string name="show_network_traffic_byte">Bytes per second</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+
+    <!-- Double-tap to sleep -->
+    <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Double-tap the status bar to goto sleep</string>
+
+    <!-- Status bar notification count -->
+    <string name="status_bar_notification_count_title">Notification count</string>
+    <string name="status_bar_notification_count_summary">Display number of similar notifications</string>
+
+    <!-- Status bar signal text style -->
+    <string name="status_bar_style_hidden">Hidden</string>
+    <string name="status_bar_style_icon">Signal icon</string>
+    <string name="status_bar_signal_text_title">Signal display</string>
+    <string name="status_bar_signal_text_show_text">Signal text</string>
+
+    <!-- Lock screen settings -->
+    <string name="lockscreen_buttons_title">Buttons</string>
+    <string name="lockscreen_buttons_summary">View or change lock screen button actions</string>
+    <string name="lockscreen_interface_title">Interface</string>
+    <string name="lockscreen_interface_summary">Customize lock screen sliders or shortcuts</string>
+    <string name="lockscreen_notifications_title">Lock screen notifications</string>
+    <string name="lockscreen_notifications_summary">Configure lock screen notification settings</string>
+    <string name="lockscreen_style_title">Style</string>
+    <string name="lockscreen_style_summary">Change appearance of lock screen or colors</string>
+    <string name="lockscreen_widgets_title">Widgets</string>
+    <string name="lockscreen_widgets_summary">Customize functions of lock screen widgets</string>
+
+    <!-- Lock screen buttons -->
+    <string name="lockscreen_long_press_back_title">Long press back</string>
+    <string name="lockscreen_long_press_home_title">Long press home</string>
+    <string name="lockscreen_long_press_menu_title">Long press menu</string>
+    <string name="lockscreen_buttons_no_action">No action</string>
+    <string name="lockscreen_buttons_flashlight">Flashlight</string>
+    <string name="lockscreen_buttons_next">Next song</string>
+    <string name="lockscreen_buttons_previous">Previous song</string>
+    <string name="lockscreen_buttons_playpause">Play or pause music</string>
+    <string name="lockscreen_buttons_toggle_sound">Toggle sound</string>
+    <string name="lockscreen_buttons_sleep">Go to sleep</string>
+
+    <!-- Battery around ring -->
+    <string name="battery_around_ring_title">Battery around ring</string>
+    <string name="battery_around_ring_summary">Display battery level around unlock ring</string>
+
+    <!--Notification peek-->
+    <string name="notification_peek_title">Notification peek</string>
+    <string name="notification_peek_summary">Show notifications by picking up device</string>
+    <string name="peek_pickup_timeout_title">Peek pickup timeout</string>
+    <string name="peek_pickup_10seconds">10 seconds (default)</string>
+    <string name="peek_pickup_30seconds">30 seconds</string>
+    <string name="peek_pickup_45seconds">45 seconds</string>
+    <string name="peek_pickup_60seconds">1 minute</string>
+    <string name="peek_pickup_120seconds">2 minutes</string>
+    <string name="notification_peek_time_title">Peek time</string>
+    <string name="notification_peek_time_summary">How long to display peeked notification</string>
+    <string name="notification_peek_disabled_summary">Peek is currently disabled, to re-enable turn off Active Display and Lockscreen Notification pocket mode</string>
+
+    <!-- Lock screen gestures -->
+    <string name="lockgesture_change_lock_pattern_label">Change unlock gesture</string>
+    <string name="lockgesture_change_lock_pin_label">Change unlock PIN</string>
+    <string name="lockgesture_need_to_unlock">Confirm saved gesture</string>
+    <string name="lockgesture_need_to_unlock_footer" />
+    <string name="lockgesture_need_to_unlock_wrong">Try again:</string>
+    <string name="lockgesture_need_to_unlock_wrong_footer" />
+    <string name="lockgesture_recording_intro_header">Draw an unlock gesture:</string>
+    <string name="lockgesture_recording_intro_footer">Press Menu for help.</string>
+    <string name="lockgesture_recording_inprogress">Release finger when done.</string>
+    <string name="lockgesture_pattern_entered_header">Gesture recorded.</string>
+    <string name="lockgesture_need_to_confirm">Draw gesture again to confirm:</string>
+    <string name="lockgesture_pattern_confirmed_header">Your new unlock gesture:</string>
+    <string name="lockgesture_confirm_button_text">Confirm</string>
+    <string name="lockgesture_restart_button_text">Redraw</string>
+    <string name="lockgesture_retry_button_text">Retry</string>
+    <string name="lockgesture_continue_button_text">Continue</string>
+    <string name="lockgesture_settings_title">Unlock gesture</string>
+    <string name="lockgesture_settings_enable_title">Require gesture</string>
+    <string name="lockgesture_settings_enable_summary">Must draw gesture to unlock screen</string>
+    <string name="lockgesture_settings_enable_visible_pattern_title">Make gesture visible</string>
+    <string name="lockgesture_settings_enable_power_button_instantly_locks">Power button instantly locks</string>
+    <string name="lockgesture_settings_choose_lock_pattern">Set unlock gesture</string>
+    <string name="lockgesture_settings_change_lock_pattern">Change unlock gesture</string>
+    <string name="lockgesture_settings_help_how_to_record">How to draw an unlock gesture</string>
+    <string name="lockgesture_too_many_failed_confirmation_attempts_header">Too many incorrect attempts!</string>
+    <string name="lockgesture_too_many_failed_confirmation_attempts_footer">Try again in <xliff:g id="number">%d</xliff:g> seconds.</string>
+    <string name="lockpassword_gesture_set_toast">Gesture has been set</string>
+    <string name="lockpassword_confirm_your_gesture_header">Confirm your gesture</string>
+    <string name="lockpassword_choose_your_gesture_header">Draw your gesture</string>
+    <string name="unlock_set_unlock_gesture_title">Gesture</string>
+    <string name="unlock_set_unlock_gesture_summary">Low security, experimental</string>
+    <string name="unlock_set_unlock_mode_gesture">Gesture</string>
+
+    <!-- Disable FC Notifications -->
+    <string name="disable_fc_notifications_title">Disable FC Notifications</string>
+    <string name="disable_fc_notifications_summary">This will hide all force close notifications</string>
+
+    <!-- Halo options -->
+    <string name="halo_enabled_title">Enable Halo</string>
+    <string name="halo_summary">Configure or view current halo settings</string>
+    <string name="halo_enabled_summary">When checked the bubble is activated</string>
+    <string name="halo_hide_title">Hide after activity</string>
+    <string name="halo_hide_summary">Appears then scrolls out of the way</string>
+    <string name="halo_reversed_title">Reverse gestures</string>
+    <string name="halo_reversed_summary">Drag using double tap swipe gestures</string>
+    <string name="halo_state_title">Current policy</string>
+    <string name="halo_state_summary">Black or white listing notifications</string>
+    <string name="halo_state_black">Blacklist</string>
+    <string name="halo_state_white">Whitelist</string>
+    <string name="halo_pause_title">Pause active app</string>
+    <string name="halo_pause_summary">Open while the underlying app pauses</string>
+    <string name="halo_ninja_title">Ninja mode</string>
+    <string name="halo_ninja_summary">Will vanish completely when empty</string>
+    <string name="halo_notification_msgbox_title">Enable message pop-up</string>
+    <string name="halo_notification_msgbox_summary">Show message box for incoming</string>
+    <string name="halo_unlock_ping_title">Ping on unlock</string>
+    <string name="halo_unlock_ping_summary">Ping bubble when device is unlocked</string>
+    <string name="halo_size_title">Halo size</string>
+    <string name="halo_size_summary">How big the bubble is going to be</string>
+    <string name="halo_size_miniscule">Miniscule</string>
+    <string name="halo_size_small">Small</string>
+    <string name="halo_size_default">Normal (default)</string>
+    <string name="halo_size_large">Large</string>
+    <string name="halo_size_gigantic">Gigantic</string>
+    <string name="halo_size_monster">Monster</string>
+    <string name="halo_notification_count_title">Notification count</string>
+    <string name="halo_notification_count_summary">Display current notification counts</string>
+    <string name="halo_notification_count_none">None</string>
+    <string name="halo_notification_count_total">Total</string>
+    <string name="halo_notification_count_individual">Per app</string>
+    <string name="halo_notification_count_both">Both</string>
+    <string name="halo_msgbox_animation_title">Message box animation</string>
+    <string name="halo_msgbox_animation_summary">Message box animations for incoming</string>
+    <string name="halo_msgbox_animation_none">None</string>
+    <string name="halo_msgbox_animation_flip">Flip</string>
+    <string name="app_halo_label_black">Blacklist from Halo</string>
+    <string name="app_halo_label_white">Whitelist from Halo</string>
+    <string name="halo_color_title">Circle color</string>
+    <string name="halo_color_summary">Define the background shading color</string>
+
+    <!-- Quick ribbon -->
+    <string name="category_quick_access">Quick ribbon</string>
+    <string name="title_quick_access">Show in drawer</string>
+    <string name="title_quick_access_linked">Linked layout</string>
+    <string name="summary_quick_access_linked">Use the select tiles from quick settings</string>
+    <string name="ribbon_picker_title">Ribbon and layout</string>
+    <string name="ribbon_picker_summary">View, select or change the ribbon widgets</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="haptic_qs_tiles_title">Vibrate on touch</string>
+    <string name="haptic_qs_tiles_summary">Vibrate when touching tiles</string>
+
+    <!-- App circle sidebar -->
+    <string name="app_circle_bar_title">App circle sidebar</string>
+    <string name="app_circle_bar_summary">Display circular app sidebar launcher</string>
+    <string name="app_circle_bar_enable_summary">Enable circular app sidebar launcher</string>
+    <string name="app_circle_bar_included_apps_title">Included apps</string>
+    <string name="app_circle_bar_included_apps_summary">Apps that show in app circle sidebar</string>
+    <string name="trigger_width_title">Trigger width</string>
+    <string name="trigger_width_summary">Adjust the width of trigger area</string>
+    <string name="trigger_top_title">Trigger position</string>
+    <string name="trigger_top_summary">Adjust the position of trigger area</string>
+    <string name="trigger_bottom_title">Trigger height</string>
+    <string name="trigger_bottom_summary">Adjust the height of trigger area</string>
+
+    <!-- Performance Settings | Warning dialog -->
+    <string name="performance_settings_warning_header">Warning</string>
+    <string name="performance_settings_warning_title">Proceed with Caution</string>
+
+    <!-- Prop modder -->
+    <string name="prop_modder_title">Prop modder</string>
+    <string name="prop_modder_switches">Switches</string>
+    <string name="buildprop_title">build.prop mods (reboot required)</string>
+    <string name="buildprop_settings_warning">These settings are included for experimentation and any changes made to them have the potential to cause instability, crashes, data loss or hardware failures.\n\nWe request you do not file bug reports if any of these settings have been changed from the defaults.</string>
+    <string name="nonprop_cat_title">Mods involving startup scripts</string>
+    <string name="pref_disable_bootanimation_title">Disable bootanimation</string>
+    <string name="pref_wifi_scan_interval_title">Wifi scan interval</string>
+    <string name="pref_wifi_scan_interval_summary">The time between wifi scans when no stored access points are available</string>
+    <string name="pref_wifi_scan_alt_summary">Time between wifi scans: %s</string>
+    <string name="pref_max_events_title">Windows Manager\'s max events per second</string>
+    <string name="pref_max_events_summary">This is a runtime value that controls the number of events the system will allow in a second</string>
+    <string name="pref_max_events_alt_summary">Max number of system events: %s</string>
+    <string name="pref_ring_delay_title">Telephone ringer delay</string>
+    <string name="pref_ring_delay_summary">The amount of time from when the system registers an incoming phone call until the ringer</string>
+    <string name="pref_ring_delay_alt_summary">Incoming call Delay: %s</string>
+    <string name="pref_vm_heapsize_title">Dalvik cache heapsize</string>
+    <string name="pref_vm_heapsize_summary">This controls the size of the cache the Dalvik VM has access to</string>
+    <string name="pref_vm_heapsize_alt_summary">Dalvik VM cache size: %s</string>
+    <string name="showbuild_title">Show The Build.Prop</string>
+    <string name="buildprop_summary">Find out whats in there</string>
+    <string name="showbuild_dialog">Displaying /system/Build.Prop</string>
+    <string name="showbuild_loading">Loading build.prop\u2026</string>
+    <string name="showbuild_error">Error loading build.prop\u2026</string>
+    <string name="showbuild_unknown">Unknown</string>
+    <string name="showbuild_version">Version</string>
+    <string name="showbuild_label">We should look because knowing is half the battle</string>
+    <string name="pref_fast_up_title">HSUPA upload speed hack</string>
+    <string name="pref_fast_up_summary">*WARNING* if you change this value it will add the needed values to your build.prop if they are not already present</string>
+    <string name="pref_fast_up_alt_summary">Fast up found active: %s</string>
+    <string name="pref_prox_delay_title">Proximity sensor delay</string>
+    <string name="pref_prox_delay_summary">When you are in-call screen is off when the device moves away from your face this delay value controls how long before screen turns on</string>
+    <string name="pref_prox_delay_alt_summary">Proximity sensor set to: %s</string>
+    <string name="pref_mod_version_title">Change your Build Number</string>
+    <string name="pref_mod_version_summary">This is astetic and doesn\'t improve the system</string>
+    <string name="pref_mod_version_alt_summary">Build Number: %s</string>
+    <string name="pref_mod_version_default"></string>
+    <string name="pref_sleep_title">PM Sleep mode</string>
+    <string name="pref_sleep_summary">Modify Nighttime sleep policy</string>
+    <string name="pref_sleep_alt_summary">Current Sleep Mode: %s</string>
+    <string name="pref_jit_title">Just In Time Complier</string>
+    <string name="pref_jit_summary">Enables/Disables JIT complier</string>
+    <string name="pref_tcp_stack_title">Optimize TCP Stack</string>
+    <string name="pref_tcp_stack_summary">Modify the buffer-size for better performance</string>
+    <string name="pref_g_speed_title">3G Speed Hack</string>
+    <string name="pref_g_speed_summary">Uncap 3g speed</string>
+    <string name="pref_gpu_title">GPU Acceleration</string>
+    <string name="pref_gpu_summary">Enable hardware acceleration where the GPU controls the UI instead of the CPU</string>
+
+    <!-- Startup tweaks -->
+    <string name="startup_tweaks_title">Startup tweaks</string>
+    <string name="pt_zipalign_apks">Zipalign apps</string>
+    <string name="ps_zipalign_apks">Zipalign any unaligned apps on each boot</string>
+    <string name="pt_fix_permissions">Fix permissions</string>
+    <string name="ps_fix_permissions">Fix permissions on apps and data on each boot</string>
+    <string name="pt_enable_sysctl">Enable sysctl</string>
+    <string name="ps_enable_sysctl">Enable sysctl tweaks at boot</string>
+    <string name="pt_free_mem">Free memory</string>
+    <string name="ps_free_mem">Set minfree values at boot</string>
+    <string name="pt_clear_data_cache">Clear cache</string>
+    <string name="ps_clear_data_cache">Clear application cache files each boot</string>
+    <string name="pt_enable_cron">Enable scheduled tasks</string>
+    <string name="ps_enable_cron">Enable scheduled cron jobs</string>
+    <string name="pt_sd_boost">Enable SD boost</string>
+    <string name="ps_sd_boost">Enable/disable SD card speed boost</string>
+    <string name="pt_file_system_speedups">File system speedup</string>
+    <string name="ps_file_system_speedups">Speed up file systems at boot</string>
+    <string name="pt_foreground_app_mem">Foreground app mem</string>
+    <string name="pt_visible_app_mem">Visible app mem</string>
+    <string name="pt_perceptible_app_mem">Perceptible app mem</string>
+    <string name="pt_heavy_weight_app_mem">Heavy weight app mem</string>
+    <string name="pt_secondary_server_mem">Secondary server app mem</string>
+    <string name="pt_backup_app_mem">Backup app mem</string>
+    <string name="pt_home_app_mem">Home app mem</string>
+    <string name="pt_hidden_app_mem">Hidden app mem</string>
+    <string name="pt_empty_app_mem">Empty app mem</string>
+    <string name="pt_read_ahead_kb">Read ahead value</string>
+    <string name="pt_minfree_values">Minfree values</string>
+    <string name="pt_battery">Enable battery tweaks</string>
+    <string name="ps_battery">Enable/disable battery saving tweaks</string>
+    <string name="pt_touch">Enable touch tweaks</string>
+    <string name="ps_touch">Enable/disable touchscreen tweaks</string>
+    <string name="pt_minfree">Enable minfree values</string>
+    <string name="ps_minfree">Enable/disable minfree tweaks</string>
+    <string name="pt_gpurender">Enable gpu render</string>
+    <string name="ps_gpurender">Enable/disable gpu rendering tweaks</string>
+    <string name="pt_sleepers">Enable sleeping</string>
+    <string name="ps_sleepers">Enable/disable sleeping tweaks</string>
+    <string name="pt_journalism">Enable journalism</string>
+    <string name="ps_journalism">Enable/disable journalism tweaks</string>
+    <string name="pt_sqlite3">Enable sqlite3</string>
+    <string name="ps_sqlite3">Enable/disable sqlite3 tweaks</string>
+    <string name="pt_wifisleep">Enable wifi sleep</string>
+    <string name="ps_wifisleep">Enable/disable wifi sleep tweaks</string>
+    <string name="pt_iostats">Enable iostats</string>
+    <string name="ps_iostats">Enable/disable iostats</string>
+    <string name="pt_setrenice">Enable setrenice</string>
+    <string name="ps_setrenice">Enable/disable setrenice</string>
+    <string name="pt_tweaks">Enable super tweaks</string>
+    <string name="ps_tweaks">Enable/disable super tweaks</string>
+    <string name="pt_speedy_modified">Enable speedy modified</string>
+    <string name="ps_speedy_modified">Enable/disable Speedy modified tweaks</string>
+    <string name="pt_loopy_smoothness_tweak">Enable loopy smoothness</string>
+    <string name="ps_loopy_smoothness_tweak">Enable/disable loopy smoothness tweaks</string>
+    <string name="pt_init_d_credits">Developed by:</string>
+    <string name="ps_init_d_credits">Jared Rummler (JRummy16)</string>
+    <string name="dt_tweaks_error">Startup tweaks error</string>
+    <string name="dm_tweaks_error">It looks like startup tweaks isn\'t setup properly. Please contact your ROM developer.</string>
+    <string name="db_exit">Exit</string>
+
+    <!--User preferences settings-->
+    <string name="personalization">Personalization</string>
+    <string name="reset_user_preferences_title">Reset Swipe left to float</string>
+    <string name="reset_user_preferences_summary">Restores user interface preferences to default values</string>
+    <string name="reset_user_preferences_dialog">Are you sure you want to reset your preference?</string>
+
+    <!-- Expanded desktop -->
+    <string name="expanded_desktop_style">Expanded desktop style</string>
+    <string name="expanded_desktop_disabled">Disabled</string>
+    <string name="expanded_desktop_status_bar">Status bar visible</string>
+    <string name="expanded_desktop_no_status_bar">Status bar hidden</string>
+
+    <!--Blacklist-->
+    <string name="blacklist_button_title">Blacklist</string>
+    <string name="floating_blacklist_label">Blacklist from Floating Mode</string>
+    <string name="halo_blacklist_label">Blacklist from Halo</string>
+    <string name="hover_blacklist_label">Blacklist from Hover</string>
+    <string name="peek_blacklist_label">Blacklist from Peek</string>
+
+    <!-- Hover settings -->
+    <string name="hover_title">Hover settings</string>
+    <string name="hover_summary">Enables and customize hover notifications</string>
+    <string name="hover_hide_button_title">Hide button</string>
+    <string name="hover_hide_button_summary">Hide the hover button in status bar</string>
+    <string name="hover_active_title">Activate Hover</string>
+    <string name="hover_active_summary">Use hover and hide status bar button</string>
+    <string name="hover_exclude_low_priority_title">Exclude low priority</string>
+    <string name="hover_exclude_low_priority_summary">Notifications marked as low priority</string>
+    <string name="hover_exclude_non_clearable_title">Exclude non-clearable</string>
+    <string name="hover_exclude_non_clearable_summary">Notifications marked as non clearable</string>
+    <string name="hover_require_fullscreen_mode_title">Require expanded desktop</string>
+    <string name="hover_require_fullscreen_mode_summary">Only show when status bar is hidden</string>
+    <string name="hover_exclude_topmost_title">Exclude topmost app</string>
+    <string name="hover_exclude_topmost_summary">Exclude from the foreground app</string>
+    <string name="hover_long_fadeout_title">Hover notification time</string>
+    <string name="hover_long_fadeout_3seconds">3 seconds</string>
+    <string name="hover_long_fadeout_5seconds">5 seconds (default)</string>
+    <string name="hover_long_fadeout_7seconds">7 seconds</string>
+    <string name="hover_long_fadeout_10seconds">10 seconds</string>
+    <string name="hover_long_fadeout_15seconds">15 seconds</string>
+
+    <!-- Liquid Extra Info -->
+    <string name="lsextrainfo">Extra information</string>
+    <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
+
+    <!-- Sound settings screen -->
+    <string name="ring_mode_title">Ring mode</string>
+    <string name="ring_mode_normal">Normal</string>
+    <string name="ring_mode_vibrate">Vibrate</string>
+    <string name="ring_mode_mute">Mute</string>
+
+    <!-- Profiles settings -->
+    <string name="profiles_settings_title">Profiles</string>
+    <string name="profiles_add">Add</string>
+    <string name="profile_menu_delete">Delete</string>
+    <string name="profile_settings_title">Profile</string>
+    <string name="profile_empty_list_profiles_off">To configure and use system profiles, turn profiles on.</string>
+    <string name="profile_trigger_configure">Configure trigger</string>
+    <string name="profile_triggers">Triggers</string>
+    <string name="profile_trigger_filter_all">All triggers</string>
+    <string name="profile_trigger_filter_wifi">Wi-Fi triggers</string>
+    <string name="profile_trigger_filter_bluetooth">Bluetooth triggers</string>
+    <string name="profile_write_nfc_tag">Write to NFC tag</string>
+    <string name="profile_write_touch_tag">Touch tag to write</string>
+    <string name="profile_write_success">Tag successfully written</string>
+    <string name="profile_write_failed">Tag writing failed!</string>
+    <string name="profile_selected">Profile selected: %1$s</string>
+    <string name="profile_nfc_text">Writing a profile to a NFC tag allows for tapping the tag to select the profile. Tapping a second time will select the previously selected profile.</string>
+    <string name="profile_unknown_nfc_tag">Unknown profile</string>
+    <string name="profile_add_nfc_text">This NFC tag refers to an unknown profile. Attaching this NFC tag to an existing profile will allow for selecting the profile in the future.</string>
+    <string name="profile_select">Select profile</string>
+
+    <!-- Add Profile -->
+    <string name="add_profile_dialog_title">Create new profile</string>
+    <string name="profile_name_title">Name</string>
+    <string name="profile_profile_name_prompt">Enter a name for the new profile</string>
+    <string name="menu_new_profile">New profile</string>
+    <string name="new_profile_name">&lt;new profile&gt;</string>
+
+    <!-- Rename Dialog -->
+    <string name="rename_dialog_title">Rename</string>
+    <string name="rename_dialog_message">Enter a new name</string>
+    <string name="duplicate_profile_name">Duplicate profile name!</string>
+    <string name="duplicate_appgroup_name">Duplicate app group name!</string>
+
+    <!-- Reset Profiles -->
+    <string name="profile_reset_title">Reset</string>
+    <string name="profile_reset_message">Delete all user created profiles and app groups and restore them to default?</string>
+
+    <!-- Delete confimation messages -->
+    <string name="profile_delete_confirm">Delete this profile?</string>
+    <string name="profile_app_delete_confirm">Remove this app?</string>
+    <string name="profile_cannot_delete">An active profile cannot be deleted</string>
+
+    <!-- Profile network mode -->
+    <string name="profile_networkmode_2g">2G</string>
+    <string name="profile_networkmode_3g">3G</string>
+    <string name="profile_networkmode_2g3g">2G/3G</string>
+
+    <!-- Profile Config screen PreferenceGroup titles -->
+    <string name="profile_connectionoverrides_title">Connection overrides</string>
+    <string name="profile_volumeoverrides_title">Volume overrides</string>
+    <string name="connection_state_disabled">Disable</string>
+    <string name="connection_state_enabled">Enable</string>
+    <string name="volume_override_summary">Set to</string>
+
+    <!-- Menu item for managing profiles -->
+    <string name="profile_profiles_manage">Profiles</string>
+    <string name="profile_profile_manage">Manage profile</string>
+    <string name="profile_appgroups_manage">App groups</string>
+    <string name="profile_appgroup_manage">Manage app group</string>
+
+    <!-- Profile settings screen, section header for settings related to notification profiles -->
+    <string name="profile_settings">Profile settings</string>
+    <string name="profile_trigger_connect">On connect</string>
+    <string name="profile_trigger_disconnect">On disconnect</string>
+    <string name="profile_trigger_notrigger">No trigger</string>
+
+    <!-- Profile Settings sound modes labels -->
+    <string name="sound_mode">Notification mode</string>
+    <string name="ringer_mode">Ring mode</string>
+    <string name="lights_mode">Lights mode</string>
+    <string name="vibrate_mode">Vibrate mode</string>
+    <string name="choose_soundtone">Choose notification tone</string>
+    <string name="choose_ringtone">Choose ringtone</string>
+
+    <!-- Sound settings screen, setting option name to pick ringtone (a list dialog comes up)-->
+    <string name="soundtone_title">Notification tone</string>
+    <string name="soundtone_summary" translatable="false">""</string>
+
+    <!-- Title for application group setting screen -->
+    <string name="profile_appgroups_title">App groups</string>
+    <string name="profile_applist_title">Apps</string>
+    <string name="profile_new_appgroup">New app group</string>
+    <string name="profile_delete_appgroup">Delete this app group?</string>
+    <string name="profile_appgroup_name_prompt">Enter a name for the new app group</string>
+    <string name="profile_appgroup_name_title">Name</string>
+
+    <!-- Add application dialog box title -->
+    <string name="profile_choose_app">Choose app</string>
+
+    <!-- Profile mode options. -->
+    <string name="profile_on">On</string>
+    <string name="profile_off">Off</string>
+    <string name="profile_no_override">No override</string>
+    <string name="profile_connection_disable">Disable</string>
+    <string name="profile_connection_enable">Enable</string>
+
+    <!-- Profiles - system settings -->
+    <string name="profile_system_settings_title">System settings</string>
+    <string name="profile_lockmode_title">Lock screen mode</string>
+    <string name="profile_lockmode_default">Default</string>
+    <string name="profile_lockmode_insecure">Insecure</string>
+    <string name="profile_lockmode_disabled">Disabled</string>
+    <string name="profile_lockmode_default_summary">Use system default</string>
+    <string name="profile_lockmode_insecure_summary">Use insecure lock screen</string>
+    <string name="profile_lockmode_disabled_summary">Lock screen is disabled</string>
+    <string name="profile_airplanemode_title">Airplane mode</string>
+
+    <!-- Connection override toggles (not all are used at this time ) -->
+    <string name="toggleWifi">Wi-Fi</string>
+    <string name="toggleWifiAp">Portable Wi-Fi hotspot</string>
+    <string name="toggleBluetooth">Bluetooth</string>
+    <string name="toggleGPS">GPS</string>
+    <string name="toggleData">Mobile Data</string>
+    <string name="toggleSync">Data Sync</string>
+    <string name="toggle2g3g">2G/3G</string>
+    <string name="toggleNfc">NFC</string>
+
+    <!-- Protected Apps -->
+    <string name="menu_hidden_apps_delete">Reset</string>
+    <string name="menu_hidden_apps_reset_lock">Reset pattern lock</string>
+    <string name="protected_apps">Protected apps</string>
+    <string name="saving_protected_components">Saving component state</string>
+
+    <!-- Flip Tiles -->
+    <string name="flip_qs_tiles_title">Flip tiles</string>
+    <string name="flip_qs_tiles_summary">Flips the tiles on touch</string>
+
+    <!-- Power Menu User Switcher -->
+    <string name="power_menu_user_title">Power menu user switcher</string>
+    <string name="power_menu_user_summary">Show a list of all users in power menu</string>
+
+    <!-- Host File Manager -->
+    <string name="hfm_disable_ads_title">Disable ads</string>
+    <string name="hfm_disable_ads_summary">Change hosts file to disable ads</string>
+    <string name="hfm_pref_screen_title">Ad blocker</string>
+    <string name="hfm_update_hosts">Update hosts file</string>
+    <string name="hfm_update_hosts_summary">Download and apply fresh hosts</string>
+    <string name="hfm_dialog_wait">Working, please wait...</string>
+    <string name="hfm_dialog_failed">Updating hosts file failed. Please try again.</string>
+    <string name="hfm_dialog_success">/4 hosts sources successfully applied!</string>
+    <string name="hfm_dialog_conn_error">Error: No network connectivity</string>
+
+    <!-- Search -->
+    <string name="settings_search_action_bar_button">Search</string>
+    <string name="settings_search_autocompleteview_hint">Search settings</string>
+    <string name="settings_search_loading_text">Loading search data\u2026</string>
+
+    <!-- Lock screen background -->
+    <string name="lockscreen_background">Background</string>
+    <string name="lockscreen_background_style_title">Lock screen background</string>
+    <string name="background_default">Default background</string>
+    <string name="background_wallpaper">Custom wallpaper</string>
+    <string name="background_result_successful">Background changed</string>
+    <string name="background_result_not_successful">Background not changed</string>
+    <string name="setting_lockscreen_background">Applying background</string>
+
+    <!-- Theme chooser -->
+    <string name="themes_settings_title">Themes</string>
+    <string name="themepacks_settings_title">Theme Packs</string>
+    <string name="styles_settings_title">Styles</string>
+    <string name="icons_settings_title">Icons</string>
+    <string name="fonts_settings_title">Fonts</string>
+    <string name="wallpaper_settings_title">Wallpapers</string>
+    <string name="lockscreen_wallpaper_settings_title">Lock screen Wallpapers</string>
+    <string name="bootanim_settings_title">Boot Animations</string>
+    <string name="soundpack_settings_title">Sound Packs</string>
+
+    <!-- Identicons -->
+    <string name="identicons_title">Identicons</string>
+    <string name="identicons_summary">New default contact picture</string>
+    <string name="identicons_enabled_title">Identicons</string>
+    <string name="identicons_enabled_summary">Use identicon as default contact picture when creating new contacts</string>
+    <string name="identicons_style_title">Identicon style</string>
+    <string name="identicons_style_summary">Choose an identicon style to use</string>
+    <string name="identicons_create_title">Create identicons</string>
+    <string name="identicons_create_summary">Create identicons for existing contacts without a contact photo</string>
+    <string name="identicons_creation_service_running_title">Creating identicons</string>
+    <string name="identicons_creation_service_running_summary"></string>
+    <string name="identicons_creation_service_contact_summary">Processing %s</string>
+    <string name="identicons_creation_service_contact_summary_finishing">Tying up loose ends...</string>
+    <string name="identicons_remove_title">Remove identicons</string>
+    <string name="identicons_remove_summary">Remove identicon from contacts that have one set</string>
+    <string name="identicons_remove_service_running_title">Removing identicons</string>
+    <string name="identicons_remove_service_running_summary"></string>
+    <string name="identicons_remove_service_contact_summary">Processing photo %1$d/%2$d</string>
+    <string name="identicons_remove_service_contact_summary_finishing">Tying up loose ends...</string>
+    <string name="identicons_style_retro">Retro</string>
+    <string name="identicons_style_contemporary">Contemporary</string>
+    <string name="identicons_style_spirograph">Spirograph</string>
+    <string name="identicons_style_dotmatrix">Dot matrix</string>
+
+    <!-- Driving mode -->
+    <string name="voice_tts_title">Driving mode</string>
+    <string name="voice_tts_summary">Configure or view driving mode settings</string>
+    <string name="tts_settings_reset_message">Reset all settings to default?</string>
+    <string name="voice_tts_notification_title">Drive mode</string>
+    <string name="voice_tts_notification_summary_on">Enable driving mode</string>
+    <string name="voice_tts_notification_summary_off">Disable driving mode</string>
+    <string name="voice_tts_volume_title">Volume</string>
+    <string name="voice_tts_volume_summary">Set volume for speak</string>
+    <string name="voice_tts_call_title">Incoming call</string>
+    <string name="voice_tts_call_summary">Enable/disable speak for Incoming calls</string>
+    <string name="voice_tts_sms_title">New message</string>
+    <string name="voice_tts_sms_summary">Enable/disable speak for New messages</string>
+    <string name="voice_tts_sms_read_title">Read new message</string>
+    <string name="voice_tts_sms_read_summary">Enable/disable speak for Read New messages</string>
+    <string name="voice_tts_charge_full_title">Battery full indicator</string>
+    <string name="voice_tts_charge_full_summary">Enable/disable speak for battery fully charged</string>
+    <string name="voice_tts_charge_on_title">Connect charger</string>
+    <string name="voice_tts_charge_on_summary">Enable/disable speak for charging connected</string>
+    <string name="voice_tts_charge_off_title">Disconnect charger</string>
+    <string name="voice_tts_charge_off_summary">Enable/disable speak for charging disconnected</string>
+    <string name="voice_tts_clock_title">Clock</string>
+    <string name="voice_tts_clock_summary">Enable/disable speak for clock after screen turn on</string>
+    <string name="voice_tts_date_title">Date</string>
+    <string name="voice_tts_date_summary">Enable/disable speak for date after screen turn on</string>
+    <string name="voice_tts_notif_title">Notification</string>
+    <string name="voice_tts_notif_summary">Enable/disable speak for new notification</string>
+    <string name="voice_tts_notif_read_title">Read new notifications</string>
+    <string name="voice_tts_notif_read_summary">Enable/disable speak for Read New messages from notifications</string>
+    <string name="voice_tts_whitelist_title">Included applications</string>
+    <string name="voice_tts_whitelist_summary">Which apps allowed to speak for new notifications</string>
+    <string name="voice_tts_music_title">Music track</string>
+    <string name="voice_tts_music_summary">Enable/disable speak for song name</string>
+    <string name="voice_tts_annoy_notif_title">Less frequent speak notification</string>
+    <string name="voice_tts_annoy_notif_summary">Limit the speak notification of each app to only play once per set time period</string>
+    <string name="voice_tts_annoy_notif_default">Default Behaviour</string>
+    <string name="voice_tts_annoy_notif_3s">3 seconds</string>
+    <string name="voice_tts_annoy_notif_5s">5 seconds</string>
+    <string name="voice_tts_annoy_notif_10s">10 seconds</string>
+    <string name="voice_tts_annoy_notif_15s">15 seconds</string>
+    <string name="voice_tts_annoy_notif_30s">30 seconds</string>
+    <string name="voice_tts_annoy_notif_45s">45 seconds</string>
+    <string name="voice_tts_annoy_notif_1m">1 minute</string>
+    <string name="voice_tts_annoy_notif_2m">2 minutes</string>
+    <string name="voice_tts_annoy_notif_5m">5 minutes</string>
+
+    <!-- require add space in the end of string -->
+    <string name="voice_tts_new_call">Incoming call from </string>
+    <!-- require add space in the end of string -->
+    <string name="voice_tts_new_sms">New text message from </string>
+    <!-- require add space in the end of string -->
+    <string name="voice_tts_new_notif">New notification from </string>
+
+    <string name="voice_tts_charge_full">Battery fully charged</string>
+    <string name="voice_tts_charge_on">Charging Start</string>
+    <string name="voice_tts_charge_off">Charging Stop</string>
+    <string name="voice_tts_time">Time is</string>
+    <string name="voice_tts_date">Date is</string>
+    <string name="voice_tts_music">Now playing</string>
+    <string name="voice_tts_engine_started">Drive Mode Ready</string>
+    <string name="unknown_tts">Unknown</string>
+    <string name="unknown_number_tts">Unknown number</string>
+    <string name="time_one">One</string>
+    <string name="time_two">Two</string>
+    <string name="time_three">Three</string>
+    <string name="time_four">Four</string>
+    <string name="time_five">Five</string>
+    <string name="time_six">Six</string>
+    <string name="time_seven">Seven</string>
+    <string name="time_eight">Eight</string>
+    <string name="time_nine">Nine</string>
+    <string name="time_ten">Ten</string>
+    <string name="time_eleven">Eleven</string>
+    <string name="time_twelve">Twelve</string>
+    <string name="time_oclock">o Clock</string>
+    <string name="time_five_past">Five after</string>
+    <string name="time_ten_past">Ten after</string>
+    <string name="time_quarter_past">Quarter after</string>
+    <string name="time_twenty_past">Twenty</string>
+    <string name="time_twenty_five_past">TwentyFive after</string>
+    <string name="time_half_past">Half past</string>
+    <string name="time_twenty_five_to">TwentyFive till</string>
+    <string name="time_twenty_to">Twenty till</string>
+    <string name="time_quarter_to">Quarter till</string>
+    <string name="time_ten_to">Ten till</string>
+    <string name="time_five_to">Five till</string>
+
+    <!-- Heads up -->
+    <string name="heads_up_title">Heads up settings</string>
+    <string name="heads_up_summary">Configure or view current headsup settings</string>
+    <string name="heads_up_expanded_title">Always expanded</string>
+    <string name="heads_up_expanded_summary">Show notification always expanded</string>
+    <string name="heads_up_show_updates_title">Show updates</string>
+    <string name="heads_up_show_updates_summary">Show pending notifications updates</string>
+    <string name="heads_up_snooze_title">Snooze timer</string>
+    <string name="heads_up_snooze_summary"><xliff:g id="number">%d</xliff:g> minutes</string>
+    <string name="heads_up_snooze_disabled_summary">Snooze timer is disabled</string>
+    <string name="heads_up_snooze_3min">3 minutes</string>
+    <string name="heads_up_snooze_5min">5 minutes</string>
+    <string name="heads_up_snooze_10min">10 minutes</string>
+    <string name="heads_up_snooze_15min">15 minutes</string>
+    <string name="heads_up_snooze_20min">20 minutes</string>
+    <string name="heads_up_time_out_title">Time out</string>
+    <string name="heads_up_time_out_summary"><xliff:g id="number">%d</xliff:g> seconds</string>
+    <string name="heads_up_time_out_never_summary">Notifications show till dismissed</string>
+    <string name="heads_up_time_out_4sec">4 seconds</string>
+    <string name="heads_up_time_out_6sec">6 seconds</string>
+    <string name="heads_up_time_out_8sec">8 seconds</string>
+    <string name="heads_up_time_out_10sec">10 seconds</string>
+    <string name="heads_up_time_out_never">Never</string>
+    <string name="heads_up_switch_label">Enable heads up notifications</string>
+	
+>>>>>>> 4ba0921... Slim's System app remover
     <!-- SlimSizer  -->
     <string name="listsystem">list</string>
     <string name="sizer_title">System App Remover</string>
@@ -351,6 +1361,7 @@
     <string name="sizer_message_filesuccess">Created profile.</string>
     <string name="sizer_message_filefail">Failed to create profile.</string>
     <string name="sizer_message_noselect">Nothing selected.</string>
+<<<<<<< HEAD
 
     <!-- Advanced Settings -->
     <string name="advanced_category_title">Advanced</string>
@@ -362,5 +1373,7 @@
     <string name="advanced_superuser_summary">Configure or view current superuser settings</string>
     <string name="advanced_systemapp_summary">Search for and remove system apps</string>
     <string name="advanced_wakelock_summary">Configure or view current wakelock blocker settings</string>
+=======
+>>>>>>> 4ba0921... Slim's System app remover
 
 </resources>
