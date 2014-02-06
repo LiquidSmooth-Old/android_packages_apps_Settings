@@ -46,10 +46,10 @@
         android:fragment="com.koushikdutta.superuser.PolicyNativeFragment"
         android:summary="@string/advanced_superuser_summary" /> -->
 
-    <!--<PreferenceScreen
+    <PreferenceScreen
         android:id="@+id/system_app_remover"
         android:title="@string/sizer_title"
         android:fragment="com.android.settings.liquid.SystemappRemover"
-        android:summary="@string/advanced_systemapp_summary" /> -->
+        android:summary="@string/advanced_systemapp_summary" />
 
 </PreferenceScreen>
