@@ -100,7 +100,15 @@
         android:fragment="com.android.settings.liquid.PieControl"
         android:icon="@drawable/ic_liquid_pie_control" />
 
-    <!-- Theme settings -->
+    <!-- Wakelock blocker -->
+    <header
+        android:id="@+id/wakelock_blocker"
+        android:title="@string/wakelock_blocker"
+        android:fragment="com.android.settings.liquid.WakeLockBlocker"
+        android:icon="@drawable/ic_menu_save"
+        android:layout="@layout/preference_wakelockblocker" />
+
+    <!-- Themes settings -->
     <header
         android:id="@+id/theme_settings"
 		android:title="@string/theme_settings_title"
