@@ -98,6 +98,14 @@
             android:key="vibration_duration"
             android:title="@string/minimum_vibration_duration" />
 
+    <ListPreference
+            android:key="vibrator_multiplier"
+            android:persistent="false"
+            android:title="@string/vibrator_multiplier_title"
+            android:dialogTitle="@string/vibrator_multiplier_title"
+            android:entries="@array/vibration_multiplier_values"
+            android:entryValues="@array/vibration_multiplier_values" />
+
     <CheckBoxPreference
             android:key="volume_adjust_sounds"
             android:title="@string/volume_adjust_sounds_enable_title"

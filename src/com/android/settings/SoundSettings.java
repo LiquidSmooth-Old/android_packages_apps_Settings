@@ -69,6 +69,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_SOUND_EFFECTS = "sound_effects";
     private static final String KEY_HAPTIC_FEEDBACK = "haptic_feedback";
     private static final String KEY_VIBRATION_DURATION = "vibration_duration";
+    private static final String KEY_VIBRATION_MULTIPLIER = "vibrator_multiplier";
     private static final String KEY_EMERGENCY_TONE = "emergency_tone";
     private static final String KEY_SOUND_SETTINGS = "sound_settings";
     private static final String KEY_LOCK_SOUNDS = "lock_sounds";
@@ -94,6 +95,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mDtmfTone;
     private CheckBoxPreference mSoundEffects;
     private CheckBoxPreference mHapticFeedback;
+    private ListPreference mVibrationMultiplier;
     private SlimSeekBarPreference mVibrationDuration;
     private Preference mMusicFx;
     private CheckBoxPreference mLockSounds;
@@ -190,6 +192,14 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mVibrationDuration.isMilliseconds(true);
         mVibrationDuration.setInitValue(userMillis);
         mVibrationDuration.setOnPreferenceChangeListener(this);
+
+        mVibrationMultiplier = (ListPreference) findPreference(KEY_VIBRATION_MULTIPLIER);
+        String currentValue = Float.toString(Settings.System.getFloat(getActivity()
+                .getContentResolver(), Settings.System.VIBRATION_MULTIPLIER, 1));
+        mVibrationMultiplier.setValue(currentValue);
+        mVibrationMultiplier.setSummary(currentValue);
+        mVibrationMultiplier.setOnPreferenceChangeListener(this);
+
         mLockSounds = (CheckBoxPreference) findPreference(KEY_LOCK_SOUNDS);
         mLockSounds.setPersistent(false);
         mLockSounds.setChecked(Settings.System.getInt(resolver,
@@ -406,6 +416,12 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                 mVib.vibrate(1);
             }
             mFirstVibration = true;
+        } else if (preference == mVibrationMultiplier) {
+            String currentValue = (String) objValue;
+            float val = Float.parseFloat(currentValue);
+            Settings.System.putFloat(getActivity().getContentResolver(),
+                    Settings.System.VIBRATION_MULTIPLIER, val);
+            mVibrationMultiplier.setSummary(currentValue);
         }
         return true;
     }
