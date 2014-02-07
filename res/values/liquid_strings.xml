@@ -2219,4 +2219,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="power_menu_user_title">Power menu user switcher</string>
     <string name="power_menu_user_summary">Show a list of all users in power menu</string>
 
+    <!-- Host File Manager -->
+    <string name="misc_tweaks_hfm">Hosts File Manager</string>
+    <string name="hfm_disable_ads_title">Disable Ads</string>
+    <string name="hfm_disable_ads_summary">Change hosts file to disable ads</string>
+
 </resources>
