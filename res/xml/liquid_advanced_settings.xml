@@ -44,6 +44,17 @@
             android:id="@+id/wakelock_blocker"
             android:title="@string/wakelock_blocker"
             android:fragment="com.android.settings.liquid.WakeLockBlocker" />
+			
+        <PreferenceCategory
+            android:key="misc_tweaks_hfm"
+            android:title="@string/misc_tweaks_hfm">
+        </PreferenceCategory>
+
+        <CheckBoxPreference
+           android:key="hfm_disable_ads"
+           android:title="@string/hfm_disable_ads_title"
+           android:summary="@string/hfm_disable_ads_summary"
+           android:persistent="false" />
 
     <PreferenceScreen
         android:key="devicesettings_app"
