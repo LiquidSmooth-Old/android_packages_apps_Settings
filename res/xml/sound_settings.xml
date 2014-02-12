@@ -25,6 +25,11 @@
             android:dialogTitle="@string/all_volume_title"
             android:persistent="false"
             android:streamType="ring" />
+            
+    <PreferenceScreen
+        android:key="volume_steps_settings"
+        android:fragment="com.android.settings.liquid.VolumeSteps"
+        android:title="@string/volume_steps_title" />
 
     <Preference
             android:key="musicfx"
