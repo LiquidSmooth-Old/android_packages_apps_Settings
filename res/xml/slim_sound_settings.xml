@@ -39,6 +39,11 @@
         android:persistent="false"
         android:defaultValue="true" />
 
+    <PreferenceScreen
+        android:key="volume_steps"
+        android:fragment="com.android.settings.liquid.VolumeSteps"
+        android:title="@string/volume_steps_title" />
+
     <PreferenceCategory
         android:title="@string/notifications_category_title" />
 
