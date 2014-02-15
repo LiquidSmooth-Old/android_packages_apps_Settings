@@ -1553,7 +1553,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="noti_reminder_interval_3dot5s">3.5 second</string>
     <string name="noti_reminder_interval_4s">4 seconds</string>
 
-	<!-- Wakelock blocker -->
+    <!-- Wakelock blocker -->
     <string name="wakelock_blocker">Wakelock blocker</string>
     <string name="wakelock_blocker_title">Enable</string>
     <string name="wakelock_blocker_summary">Block system wakelocks</string>
@@ -1987,4 +1987,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pref_gpu_title">GPU Acceleration</string>
     <string name="pref_gpu_summary">Enable hardware acceleration where the GPU controls the UI instead of the CPU</string>
 
+    <!-- Diable BootAnimation -->
+    <string name="pref_disable_bootanimation_title">Disable Boot Animation</string>
 </resources>

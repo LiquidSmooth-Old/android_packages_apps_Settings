@@ -133,6 +133,9 @@ public class PropModder extends PreferenceFragment implements
     private static final String GPU_PREF = "pref_gpu";
     private static final String GPU_PERSIST_PROP = "persist_gpu";
     private static final String GPU_PROP = "debug.sf.hw";
+    private static final String DISABLE_BOOTANIMATION_PREF = "pref_disable_bootanimation";
+    private static final String DISABLE_BOOTANIMATION_PERSIST_PROP = "debug.sf.nobootanimation";
+    private static final String DISABLE_BOOTANIMATION_DEFAULT = "0";
 
     private String placeholder;
     private String tcpstack0;
@@ -160,6 +163,7 @@ public class PropModder extends PreferenceFragment implements
     private CheckBoxPreference mGpuPref;
     private AlertDialog mAlertDialog;
     private NotificationManager mNotificationManager;
+    private CheckBoxPreference mDisableBootanimPref;
 
     private File tmpDir = new File("/system/tmp");
     private File init_d = new File("/system/etc/init.d");
@@ -217,6 +221,8 @@ public class PropModder extends PreferenceFragment implements
 
         m3gSpeedPref = (CheckBoxPreference) prefSet.findPreference(THREE_G_PREF);
 
+        mDisableBootanimPref = (CheckBoxPreference) prefSet.findPreference(DISABLE_BOOTANIMATION_PREF);
+
         mGpuPref = (CheckBoxPreference) prefSet.findPreference(GPU_PREF);
 
         updateScreen();
@@ -248,6 +254,9 @@ public class PropModder extends PreferenceFragment implements
             Log.d(TAG, "mJitPref.onPreferenceTreeClick()");
             value = mJitPref.isChecked();
             return doMod(JIT_PERSIST_PROP, JIT_PROP, String.valueOf(value ? "int:fast" : "int:jit"));
+        } else if (preference == mDisableBootanimPref) {
+            value = mDisableBootanimPref.isChecked();
+            return doMod(DISABLE_BOOTANIMATION_PREF, DISABLE_BOOTANIMATION_PERSIST_PROP, String.valueOf(value ? 1 : DISABLE));
         } else if (preference == m3gSpeedPref) {
             value = m3gSpeedPref.isChecked();
             return doMod(THREE_G_PERSIST_PROP, THREE_G_PROP_0, String.valueOf(value ? 1 : DISABLE))

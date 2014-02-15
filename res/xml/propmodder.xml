@@ -53,6 +53,10 @@
             android:entryValues="@array/entries_vm_heapsize"
             android:persistent="true" />
 
+        <CheckBoxPreference
+            android:key="pref_disable_bootanimation"
+            android:title="@string/pref_disable_bootanimation_title" />
+
         <ListPreference android:key="pref_max_events"
             android:dialogTitle="@string/pref_max_events_title"
             android:title="@string/pref_max_events_title"
