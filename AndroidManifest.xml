@@ -1831,6 +1831,8 @@
 		
         <activity android:name=".liquid.NotificationSettings" />
 
+        <activity android:name=".liquid.Download" />
+
         <activity android:name=".util.ShowBuildProp" />
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to rotation settings -->

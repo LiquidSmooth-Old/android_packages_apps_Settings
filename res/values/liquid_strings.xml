@@ -1551,7 +1551,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="rominfo_settings_list_item_summary">Help make LiquidSmooth better by opting into anonymous statistics reporting</string>
 
     <!-- Changelog -->
-    <string name="changelog_title">Liquid Changelog</string>
+    <string name="changelog_title">LiquidSmooth Changelog</string>
     <string name="changelog_title_summary">View recent changes to LiquidSmooth</string>
     <string name="changelog_loading">Loading changelog\u2026</string>
     <string name="changelog_error">Unable to load changelog</string>
@@ -2486,5 +2486,25 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="lock_pattern_size_8">8x8</string>
     <string name="lock_pattern_size_9">9x9</string>
     <string name="lock_pattern_size_10">10x10</string>
+	
+    <!-- Download Center -->
+    <string name="download_category">LiquidSmooth Downloads</string>
+    <string name="download_category_summary">Find all of your support needs inside</string>
+    <string name="rom_category">Rom Download</string>
+    <string name="gapps_category">GAPPS Packages</string>
+    <string name="xposed_category">Xposed Framework</string>
+    <string name="lsgapps_title">LiquidSmooth Gapps</string>
+    <string name="lsgapps_summary">LiquidSmooth Gapps are generally recommended gapps for use on LiquidSmooth</string>
+    <string name="ls_official_title">LiquidSmooth Release Builds</string>
+    <string name="ls_official_summary">Link for stable release builds of LiquidSmooth</string>
+    <string name="ls_nightly_title">LiquidSmooth Nightly Builds</string>
+    <string name="ls_nightly_summary">Link for possibly unstable builds</string>
+    <string name="pagapps_title">PA Gapps</string>
+    <string name="pagapps_summary">Fully packed with the majority of GAPPS, these are commonly used by users that do not want to download/install them later</string>
+    <string name="xposed_warning">WARNING</string>
+    <string name="xposed_title">Xposed Installer</string>
+    <string name="xposed_summary">While Xposed is proven to be a very useful tool, some modules may cause issues/bugs in custom ROMs. Please uninstall all modules before reporting any bugs that you may come across while using Xposed.</string>
+    <string name="xposed_mod_title">Module Repository</string>
+    <string name="xposed_mod_summary">Browse and install modules to be used with Xposed Framework</string>
 
 </resources>
