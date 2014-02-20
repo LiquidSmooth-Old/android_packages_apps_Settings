@@ -1482,4 +1482,34 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Vibration multiplier -->
     <string name="vibrator_multiplier_title">Vibration multiplier</string>
 
+    <!-- Lock screen notifications -->
+    <string name="lockscreen_notification_title">Enable notifications</string>
+    <string name="lockscreen_notification_summary">Show current pending notifications</string>
+    <string name="pocket_mode">Pocket mode</string>
+    <string name="pocket_mode_summary">Screen on and show notifications</string>
+    <string name="show_always">Show always</string>
+    <string name="show_always_summary">Screen on when removed from pocket</string>
+    <string name="hide_low_priority">Hide low priority</string>
+    <string name="hide_low_priority_summary">Hides low priority notifications</string>
+    <string name="hide_non_clearable">Hide non clearable</string>
+    <string name="hide_non_clearable_summary">Hide all non clearable notifications</string>
+    <string name="dismiss_all">Allow dismissing all</string>
+    <string name="dismiss_all_summary">Ability to dismiss notifications</string>
+    <string name="expanded_view">Expanded notification view</string>
+    <string name="expanded_view_summary">Switch between normal and expanded</string>
+    <string name="force_expanded_view">Force expanded view</string>
+    <string name="force_expanded_view_summary">Show notification view as expanded</string>
+    <string name="wake_on_notification">Wake on notification</string>
+    <string name="wake_on_notification_summary">Wake when notification is received</string>
+    <string name="notifications_height">Notification count</string>
+    <string name="notifications_height_summary">Number of notifications displayed</string>
+    <string name="offset_top">Offset value to top of screen</string>
+    <string name="privacy_mode">Privacy mode</string>
+    <string name="privacy_mode_summary">Only shows icons for notifications</string>
+    <string name="excluded_apps_title">Excluded applications</string>
+    <string name="excluded_apps_summary">Excluded applications will not show</string>
+    <string name="dynamic_width">Dynamic width</string>
+    <string name="dynamic_width_summary">Sets the width of notifications</string>
+    <string name="notification_color">Notification background color</string>
+
 </resources>
