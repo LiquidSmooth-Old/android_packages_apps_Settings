@@ -49,12 +49,18 @@ public class SettingsPreferenceFragment extends PreferenceFragment implements Di
 
     private String mHelpUrl;
 
+    // Needed for Lockscreen Notifications
+    protected Context mContext;
+
     // Cache the content resolver for async callbacks
     private ContentResolver mContentResolver;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+
+        // Needed to use lockscreen notifications
+	    mContext = getActivity().getApplicationContext();
 
         // Prepare help url and enable menu if necessary
         int helpResource = getHelpResource();
