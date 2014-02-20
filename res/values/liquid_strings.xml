@@ -1705,4 +1705,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="animation_no_scroll_summary_off">Disabled</string>
     <string name="scroll_disclaimer_summary">Note: Most apps need to be restarted for custom values to take effect</string>
 
+    <!-- Allow Multiuser -->
+    <string name="multiuser_preference_title">Multiuser support</string>
+
 </resources>

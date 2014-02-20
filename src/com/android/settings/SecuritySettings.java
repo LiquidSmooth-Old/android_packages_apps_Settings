@@ -113,6 +113,9 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final String KEY_BLACKLIST = "blacklist";
     private static final String KEY_SMS_SECURITY_CHECK_PREF = "sms_security_check_limit";
 
+    // MULTIUSER
+    public static final String ALLOW_MULTIUSER = "allow_multiuser";
+
     private PackageManager mPM;
     private DevicePolicyManager mDPM;
 
@@ -130,6 +133,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private KeyStore mKeyStore;
     private Preference mResetCredentials;
 
+    private CheckBoxPreference mAllowMultiuserPreference;
     private CheckBoxPreference mToggleAppInstallation;
     private DialogInterface mWarnInstallApps;
     private CheckBoxPreference mToggleVerifyApps;
@@ -270,6 +274,14 @@ public class SecuritySettings extends RestrictedSettingsFragment
         if (mLockAfter != null) {
             setupLockAfterPreference();
             updateLockAfterPreferenceSummary();
+        }
+
+        mAllowMultiuserPreference = (CheckBoxPreference) root.findPreference(ALLOW_MULTIUSER);
+        mAllowMultiuserPreference.setEnabled(UserHandle.myUserId() == UserHandle.USER_OWNER);
+        mAllowMultiuserPreference.setChecked(Settings.System.getIntForUser(getContentResolver(),
+            Settings.System.ALLOW_MULTIUSER, 0, UserHandle.USER_OWNER) == 1);
+        if (DeviceUtils.isTablet(getActivity())) {
+            root.removePreference(mAllowMultiuserPreference);
         }
 
         // biometric weak liveliness
@@ -451,7 +463,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
                 mKeyStore.isHardwareBacked() ? R.string.credential_storage_type_hardware
                         : R.string.credential_storage_type_software;
             credentialStorageType.setSummary(storageSummaryRes);
-
         } else {
             removePreference(KEY_CREDENTIALS_MANAGER);
         }
@@ -739,12 +750,10 @@ public class SecuritySettings extends RestrictedSettingsFragment
         if (mPowerButtonInstantlyLocks != null) {
             mPowerButtonInstantlyLocks.setChecked(lockPatternUtils.getPowerButtonInstantlyLocks());
         }
-
         if (mShowPassword != null) {
             mShowPassword.setChecked(Settings.System.getInt(getContentResolver(),
                     Settings.System.TEXT_SHOW_PASSWORD, 1) != 0);
         }
-
         if (mResetCredentials != null) {
             mResetCredentials.setEnabled(!mKeyStore.isEmpty());
         }
@@ -818,6 +827,8 @@ public class SecuritySettings extends RestrictedSettingsFragment
         } else if (preference == mShowPassword) {
             Settings.System.putInt(getContentResolver(), Settings.System.TEXT_SHOW_PASSWORD,
                     mShowPassword.isChecked() ? 1 : 0);
+        } else if (mAllowMultiuserPreference == preference) {
+            handleMultiUserClick();
         } else if (preference == mToggleAppInstallation) {
             if (mToggleAppInstallation.isChecked()) {
                 mToggleAppInstallation.setChecked(false);
@@ -836,7 +847,6 @@ public class SecuritySettings extends RestrictedSettingsFragment
             // If we didn't handle it, let preferences handle it.
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
-
         return true;
     }
 
@@ -861,6 +871,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
             // Setting the mBiometricWeakLiveliness checked value to false is handled when onResume
             // is called by grabbing the value from lockPatternUtils.  We can't set it here
             // because mBiometricWeakLiveliness could be null
+            return;
         } else if (requestCode == CONFIRM_EXISTING_FOR_TEMPORARY_INSECURE &&
                 resultCode == Activity.RESULT_OK) {
             // Enable shake to secure
@@ -959,6 +970,11 @@ public class SecuritySettings extends RestrictedSettingsFragment
     @Override
     protected int getHelpResource() {
         return R.string.help_url_security;
+    }
+
+    private void handleMultiUserClick() {
+        Settings.System.putIntForUser(getContentResolver(),
+                Settings.System.ALLOW_MULTIUSER, (mAllowMultiuserPreference.isChecked() ? 1 : 0), UserHandle.USER_OWNER);
     }
 
     public void startBiometricWeakImprove(){
