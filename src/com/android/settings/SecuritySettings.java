@@ -112,6 +112,9 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final String KEY_BLACKLIST = "blacklist";
     private static final String KEY_SMS_SECURITY_CHECK_PREF = "sms_security_check_limit";
 
+    // MULTIUSER
+    public static final String ALLOW_MULTIUSER = "allow_multiuser";
+
     private PackageManager mPM;
     private DevicePolicyManager mDPM;
 
@@ -129,6 +132,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private KeyStore mKeyStore;
     private Preference mResetCredentials;
 
+    private CheckBoxPreference mAllowMultiuserPreference;
     private CheckBoxPreference mToggleAppInstallation;
     private DialogInterface mWarnInstallApps;
     private CheckBoxPreference mToggleVerifyApps;
@@ -272,7 +276,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
         mAllowMultiuserPreference.setEnabled(UserHandle.myUserId() == UserHandle.USER_OWNER);
         mAllowMultiuserPreference.setChecked(Settings.System.getIntForUser(getContentResolver(),
             Settings.System.ALLOW_MULTIUSER, 0, UserHandle.USER_OWNER) == 1);
-        if (Utils.isTablet(getActivity())) {
+        if (DeviceUtils.isTablet(getActivity())) {
             root.removePreference(mAllowMultiuserPreference);
         }
 
@@ -486,7 +490,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
 
         mAdvancedReboot = (ListPreference) root.findPreference(KEY_ADVANCED_REBOOT);
         mAdvancedReboot.setValue(String.valueOf(Settings.Secure.getInt(
-                getContentResolver(), Settings.Secure.ADVANCED_REBOOT, 0)));
+                getContentResolver(), Settings.Secure.ADVANCED_REBOOT, 2)));
         mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
         mAdvancedReboot.setOnPreferenceChangeListener(this);
 
@@ -817,6 +821,8 @@ public class SecuritySettings extends RestrictedSettingsFragment
         } else if (preference == mShowPassword) {
             Settings.System.putInt(getContentResolver(), Settings.System.TEXT_SHOW_PASSWORD,
                     mShowPassword.isChecked() ? 1 : 0);
+        } else if (mAllowMultiuserPreference == preference) {
+            handleMultiUserClick();
         } else if (preference == mToggleAppInstallation) {
             if (mToggleAppInstallation.isChecked()) {
                 mToggleAppInstallation.setChecked(false);
@@ -952,6 +958,11 @@ public class SecuritySettings extends RestrictedSettingsFragment
     @Override
     protected int getHelpResource() {
         return R.string.help_url_security;
+    }
+
+    private void handleMultiUserClick() {
+        Settings.System.putIntForUser(getContentResolver(),
+                Settings.System.ALLOW_MULTIUSER, (mAllowMultiuserPreference.isChecked() ? 1 : 0), UserHandle.USER_OWNER);
     }
 
     public void startBiometricWeakImprove(){
