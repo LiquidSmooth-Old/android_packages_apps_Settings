@@ -1615,4 +1615,21 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="screen_recorder_bitrate_50000000">50000000</string>
     <string name="screen_recorder_bitrate_100000000">100000000</string>
 
+   <!-- Toast Animations -->
+    <string name="toast_animation_title">Toast Animations</string>
+    <string name="toast_none_animation">None</string>
+    <string name="toast_default_animation">Default</string>
+    <string name="toast_fade_animation">Fade Animation</string>
+    <string name="toast_SlideRight_animation">SlideRight Animation</string>
+    <string name="toast_SlideLeft_animation">SlideLeft Animation</string>
+    <string name="toast_Xylon_animation">Xylon Animation</string>
+    <string name="toast_Toko_animation">Toko Animation</string>
+    <string name="toast_Tn_animation">Tn Animation</string>
+    <string name="toast_Honami_animation">Honami Animation</string>
+    <string name="toast_FastFade_animation">FastFade Animation</string>
+    <string name="toast_GrowFade_animation">GrowFade Animation</string>
+    <string name="toast_GrowFadeCenter_animation">GrowFadeCenter Animation</string>
+    <string name="toast_GrowFadeBottom_animation">GrowFadeBottom Animation</string>
+    <string name="toast_Translucent_animation">Translucent Animation</string>
+
 </resources>

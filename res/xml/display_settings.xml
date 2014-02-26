@@ -84,6 +84,13 @@
             android:summary="@string/animation_controls_summary"
             android:fragment="com.android.settings.liquid.AnimationControls" />
 
+        <ListPreference
+            android:key="toast_animation"
+            android:title="@string/toast_animation_title"
+            android:entries="@array/toast_animation_entries"
+            android:entryValues="@array/toast_animation_values"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
         <PreferenceCategory
