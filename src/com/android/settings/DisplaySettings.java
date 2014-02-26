@@ -52,6 +52,7 @@ import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,6 +73,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_AUTO_ROTATE = "auto_rotate";
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
     private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
+    private static final String KEY_TOAST_ANIMATION = "toast_animation";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
@@ -86,6 +88,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mAutoBrightnessPreference;
     private ListPreference mNavigationBarHeight;
     private CheckBoxPreference mDisableIM;
+    private ListPreference mToastAnimation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -117,6 +120,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Settings.System.NAVIGATION_BAR_HEIGHT, 48);
         mNavigationBarHeight.setValue(String.valueOf(statusNavigationBarHeight));
         mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntry());
+
+        mToastAnimation = (ListPreference) prefSet.findPreference(KEY_TOAST_ANIMATION);
+        mToastAnimation.setSummary(mToastAnimation.getEntry());
+        int CurrentToastAnimation = Settings.System.getInt(
+                getContentResolver(),Settings.System.TOAST_ANIMATION, 1);
+        mToastAnimation.setValueIndex(CurrentToastAnimation);
+        mToastAnimation.setOnPreferenceChangeListener(this);
 
         mDisableIM = (CheckBoxPreference) findPreference(DISABLE_IMMERSIVE_MESSAGE);
         mDisableIM.setChecked((Settings.System.getInt(resolver,
@@ -409,6 +419,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.NAVIGATION_BAR_HEIGHT, statusNavigationBarHeight);
             mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntries()[index]);
+        }
+        if (KEY_TOAST_ANIMATION.equals(key)) {
+            int index = mToastAnimation.findIndexOfValue((String) objValue);
+            Settings.System.putString(getContentResolver(),
+                    Settings.System.TOAST_ANIMATION, (String) objValue);
+            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
+            Toast.makeText(getActivity(), "Toast animation test!!!",
+                    Toast.LENGTH_SHORT).show();
         }
         return true;
     }

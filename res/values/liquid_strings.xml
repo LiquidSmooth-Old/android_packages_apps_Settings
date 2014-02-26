@@ -15,6 +15,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+     <!-- Liquid Settings Strings -->
+    <string name="display_category_liquid_options_title">LiquidSmooth Options</string>
+	<string name="category_general_title">General Options</string>
+
     <!-- Liquid Extra Info -->
     <string name="lsextrainfo">Extra information</string>
     <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
@@ -68,5 +72,23 @@
     <!-- Text for disabling immersive mode messages -->
     <string name="disable_immersive_message_title">Diable Immersive Mode Messages</string>
     <string name="disable_immersive_message_summary">This will hide all Immersive Mode Messages</string>
+
+    <!-- Toast animations -->
+    <string name="toast_animation_title">Toast animations</string>
+    <string name="toast_animation_summary">Select and preview system toast animation</string>
+    <string name="toast_none_animation">None</string>
+    <string name="toast_default_animation">Default</string>
+    <string name="toast_fade_animation">Fade animation</string>
+    <string name="toast_SlideRight_animation">Slide right</string>
+    <string name="toast_SlideLeft_animation">Slide left</string>
+    <string name="toast_Xylon_animation">Xylon animation</string>
+    <string name="toast_Toko_animation">Toko animation</string>
+    <string name="toast_Tn_animation">Tn animation</string>
+    <string name="toast_Honami_animation">Honami animation</string>
+    <string name="toast_FastFade_animation">Fast fade</string>
+    <string name="toast_GrowFade_animation">Grow fade</string>
+    <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
+    <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
+    <string name="toast_Translucent_animation">Translucent animation</string>
 
 </resources>
