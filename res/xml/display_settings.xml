@@ -23,6 +23,12 @@
                 android:persistent="false"/>
 
         <PreferenceScreen
+                android:key="screen_recorder"
+                android:title="@string/screen_recorder_title"
+                android:summary="@string/screen_recorder_summary2"
+                android:fragment="com.android.settings.liquid.ScreenRecorderSettings" />
+
+        <PreferenceScreen
                 android:key="display_rotation"
                 android:fragment="com.android.settings.liquid.DisplayRotation"
                 android:title="@string/display_rotation_title" />

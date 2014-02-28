@@ -16,7 +16,6 @@
 
 package com.android.settings;
 
-
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 
 import android.app.Activity;
@@ -156,7 +155,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
 
     private boolean mIsPrimary;
 
-    // CyanogenMod Additions
+    // LiquidSmooth Additions
     private PreferenceScreen mBlacklist;
     private ListPreference mSmsSecurityCheck;
 
@@ -267,6 +266,14 @@ public class SecuritySettings extends RestrictedSettingsFragment
         if (mLockAfter != null) {
             setupLockAfterPreference();
             updateLockAfterPreferenceSummary();
+        }
+
+        mAllowMultiuserPreference = (CheckBoxPreference) root.findPreference(ALLOW_MULTIUSER);
+        mAllowMultiuserPreference.setEnabled(UserHandle.myUserId() == UserHandle.USER_OWNER);
+        mAllowMultiuserPreference.setChecked(Settings.System.getIntForUser(getContentResolver(),
+            Settings.System.ALLOW_MULTIUSER, 0, UserHandle.USER_OWNER) == 1);
+        if (Utils.isTablet(getActivity())) {
+            root.removePreference(mAllowMultiuserPreference);
         }
 
         // biometric weak liveliness
@@ -439,6 +446,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
         mKeyStore = KeyStore.getInstance(); // needs to be initialized for onResume()
         if (!um.hasUserRestriction(UserManager.DISALLOW_CONFIG_CREDENTIALS)) {
             Preference credentialStorageType = root.findPreference(KEY_CREDENTIAL_STORAGE_TYPE);
+
 
             final int storageSummaryRes =
                 mKeyStore.isHardwareBacked() ? R.string.credential_storage_type_hardware
@@ -824,10 +832,8 @@ public class SecuritySettings extends RestrictedSettingsFragment
                     Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL,
                     isToggled(preference) ? 1 : 0);
         } else {
-            // If we didn't handle it, let preferences handle it.
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
-
         return true;
     }
 
