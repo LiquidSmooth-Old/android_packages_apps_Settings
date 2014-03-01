@@ -84,6 +84,12 @@
             android:summary="@string/animation_controls_summary"
             android:fragment="com.android.settings.liquid.AnimationControls" />
 
+        <PreferenceScreen
+            android:key="interface_animation_scroll"
+            android:fragment="com.android.settings.liquid.KeyboardAnimationInterfaceSettings"
+            android:title="@string/ime_animation_title"
+            android:summary="@string/ime_animation_summary" />
+
         <ListPreference
             android:key="toast_animation"
             android:title="@string/toast_animation_title"
