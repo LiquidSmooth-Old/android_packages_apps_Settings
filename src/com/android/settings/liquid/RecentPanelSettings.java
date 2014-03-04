@@ -49,6 +49,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
     private static final String TAG = "RecentPanelSettings";
+    private static final String CUSTOM_RECENT_MODE = "custom_recent_mode";
     private static final String RECENT_MENU_CLEAR_ALL = "recent_menu_clear_all";
     private static final String RECENT_MENU_CLEAR_ALL_LOCATION = "recent_menu_clear_all_location";
     private static final String RAM_BAR_MODE = "ram_bar_mode";
@@ -67,6 +68,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     static final int DEFAULT_CACHE_COLOR = 0xff00aa00;
     static final int DEFAULT_ACTIVE_APPS_COLOR = 0xff33b5e5;
 
+    private CheckBoxPreference mRecentsCustom;
     private CheckBoxPreference mRecentClearAll;
     private ListPreference mRecentClearAllPosition;
     private ListPreference mRamBarMode;
@@ -88,6 +90,12 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.recent_panel_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        boolean enableRecentsCustom = Settings.System.getBoolean(getContentResolver(),
+                                      Settings.System.CUSTOM_RECENT_TOGGLE, false);
+        mRecentsCustom = (CheckBoxPreference) findPreference(CUSTOM_RECENT_MODE);
+        mRecentsCustom.setChecked(enableRecentsCustom);
+        mRecentsCustom.setOnPreferenceChangeListener(this);
 
         mRecentClearAll = (CheckBoxPreference) prefSet.findPreference(RECENT_MENU_CLEAR_ALL);
         mRecentClearAll.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
@@ -149,7 +157,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         mRecentsShowTopmost.setChecked(enableRecentsShowTopmost);
         mRecentsShowTopmost.setOnPreferenceChangeListener(this);
 
-        updateRamBarOptions();
+        updateRecentsOptions();
         setHasOptionsMenu(true);
     }
 
@@ -185,13 +193,20 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     } 
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mRamBarMode) {
+        if (preference == mRecentsCustom) { // Enable||disbale Slim Recent
+            Settings.System.putBoolean(getActivity().getContentResolver(),
+                    Settings.System.CUSTOM_RECENT_TOGGLE,
+                    ((Boolean) newValue) ? true : false);
+            updateRecentsOptions();
+            Helpers.restartSystemUI();
+            return true;
+        } else if (preference == mRamBarMode) {
             int ramBarMode = Integer.valueOf((String) newValue);
             int index = mRamBarMode.findIndexOfValue((String) newValue);
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.RECENTS_RAM_BAR_MODE, ramBarMode);
             mRamBarMode.setSummary(mRamBarMode.getEntries()[index]);
-            updateRamBarOptions();
+            updateRecentsOptions();
             return true;
         } else if (preference == mRamBarAppMemColor) {
             String hex = ColorPickerPreference.convertToARGB(Integer
@@ -273,9 +288,11 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         mRamBarTotalMemColor.setSummary(hexColor);
     }
 
-    private void updateRamBarOptions() {
+    private void updateRecentsOptions() {
         int ramBarMode = Settings.System.getInt(getActivity().getContentResolver(),
                Settings.System.RECENTS_RAM_BAR_MODE, 0);
+        boolean recentsStyle = Settings.System.getBoolean(getActivity().getContentResolver(),
+               Settings.System.CUSTOM_RECENT_TOGGLE, false);
         final boolean recentLeftyMode = Settings.System.getInt(getContentResolver(),
                 Settings.System.RECENT_PANEL_GRAVITY, Gravity.RIGHT) == Gravity.LEFT;
         mRecentPanelLeftyMode.setChecked(recentLeftyMode);
@@ -283,22 +300,32 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
                 Settings.System.RECENT_PANEL_SCALE_FACTOR, 100);
         mRecentPanelScale.setValue(recentScale + "");
 
-        if (ramBarMode == 0) {
+        if (recentsStyle) {
+            mRecentClearAll.setEnabled(false);
+            mRamBarMode.setEnabled(false);
             mRamBarAppMemColor.setEnabled(false);
             mRamBarCacheMemColor.setEnabled(false);
             mRamBarTotalMemColor.setEnabled(false);
-        } else if (ramBarMode == 1) {
-            mRamBarAppMemColor.setEnabled(true);
-            mRamBarCacheMemColor.setEnabled(false);
-            mRamBarTotalMemColor.setEnabled(false);
-        } else if (ramBarMode == 2) {
-            mRamBarAppMemColor.setEnabled(true);
-            mRamBarCacheMemColor.setEnabled(true);
-            mRamBarTotalMemColor.setEnabled(false);
         } else {
-            mRamBarAppMemColor.setEnabled(true);
-            mRamBarCacheMemColor.setEnabled(true);
-            mRamBarTotalMemColor.setEnabled(true);
+            mRecentClearAll.setEnabled(true);
+            mRamBarMode.setEnabled(true);
+            if (ramBarMode == 0) {
+                mRamBarAppMemColor.setEnabled(false);
+                mRamBarCacheMemColor.setEnabled(false);
+                mRamBarTotalMemColor.setEnabled(false);
+            } else if (ramBarMode == 1) {
+                mRamBarAppMemColor.setEnabled(true);
+                mRamBarCacheMemColor.setEnabled(false);
+                mRamBarTotalMemColor.setEnabled(false);
+            } else if (ramBarMode == 2) {
+                mRamBarAppMemColor.setEnabled(true);
+                mRamBarCacheMemColor.setEnabled(true);
+                mRamBarTotalMemColor.setEnabled(false);
+            } else {
+                mRamBarAppMemColor.setEnabled(true);
+                mRamBarCacheMemColor.setEnabled(true);
+                mRamBarTotalMemColor.setEnabled(true);
+            }
         }
     }
 }
