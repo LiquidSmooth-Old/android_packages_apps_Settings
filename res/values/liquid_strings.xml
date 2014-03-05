@@ -530,4 +530,10 @@
     <string name="qs_tile_reboot">Reboot</string>
     <string name="qs_tile_usb_tether">USB tethering</string>
 
+    <!-- BitSyko Layers -->
+    <string name="bitsyko_layers">Layers</string>
+
+    <string name="usb_charging_title">Charging</string>
+    <string name="usb_charging_summary">Lets you disable all data and file transfer connection with computer and put device in charging only mode.</string>
+
 </resources>
