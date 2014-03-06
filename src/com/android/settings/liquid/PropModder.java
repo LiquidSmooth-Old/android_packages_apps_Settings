@@ -63,14 +63,14 @@ public class PropModder extends PreferenceFragment implements
     private static final String TAG = "PropModder";
     private static final String APPEND_CMD = "echo \"%s=%s\" >> /system/build.prop";
     private static final String KILL_PROP_CMD = "busybox sed -i \"/%s/D\" /system/build.prop";
-    private static final String REPLACE_CMD = "busybox sed -i \"/%s/ c %<s=%s\" /system/build.prop";
+    private static final String REPLACE_CMD = "busybox sed -i \"/%s/ c %s=%s\" /system/build.prop";
     private static final String LOGCAT_CMD = "busybox sed -i \"/log/ c %s\" /system/etc/init.d/72propmodder_script";
     private static final String FIND_CMD = "grep -q \"%s\" /system/build.prop";
-    private static final String REMOUNT_CMD = "busybox mount -o %s,remount -t yaffs2 /dev/block/mtdblock1 /system";
+    private static final String REMOUNT_CMD = "mount -o remount,%s /system";
     private static final String PROP_EXISTS_CMD = "grep -q %s /system/build.prop";
     private static final String DISABLE = "disable";
-    private static final String SHOWBUILD_PATH = "/system/tmp/showbuild";
-    private static final String INIT_SCRIPT_TEMP_PATH = "/system/tmp/init_script";
+    private static final String SHOWBUILD_PATH = "/cache/showbuild";
+    private static final String INIT_SCRIPT_TEMP_PATH = "/cache/init_script";
     private static final String WIFI_SCAN_PREF = "pref_wifi_scan_interval";
     private static final String WIFI_SCAN_PROP = "wifi.supplicant_scan_interval";
     private static final String WIFI_SCAN_PERSIST_PROP = "persist.wifi_scan_interval";
@@ -165,7 +165,7 @@ public class PropModder extends PreferenceFragment implements
     private NotificationManager mNotificationManager;
     private CheckBoxPreference mDisableBootanimPref;
 
-    private File tmpDir = new File("/system/tmp");
+    private File tmpDir = new File("/cache");
     private File init_d = new File("/system/etc/init.d");
 
     //handler for command processor
@@ -253,7 +253,7 @@ public class PropModder extends PreferenceFragment implements
         } else if (preference == mJitPref) {
             Log.d(TAG, "mJitPref.onPreferenceTreeClick()");
             value = mJitPref.isChecked();
-            return doMod(JIT_PERSIST_PROP, JIT_PROP, String.valueOf(value ? "int:fast" : "int:jit"));
+            return doMod(JIT_PERSIST_PROP, JIT_PROP, String.valueOf(value ? "int:jit" : "int:fast" ));
         } else if (preference == mDisableBootanimPref) {
             value = mDisableBootanimPref.isChecked();
             return doMod(DISABLE_BOOTANIMATION_PREF, DISABLE_BOOTANIMATION_PERSIST_PROP, String.valueOf(value ? 1 : DISABLE));
@@ -320,7 +320,7 @@ public class PropModder extends PreferenceFragment implements
         if (!mount("rw")) {
             throw new RuntimeException("Could not remount /system rw");
         }
-        boolean success = false;
+        boolean success = true;
         try {
             if (!propExists(key) && value.equals(DISABLE)) {
                 Log.d(TAG, String.format("We want {%s} DISABLED however it doesn't exist so we do nothing and move on", key));
@@ -330,13 +330,13 @@ public class PropModder extends PreferenceFragment implements
                     success = cmd.su.runWaitFor(String.format(KILL_PROP_CMD, key)).success();
                 } else {
                     Log.d(TAG, String.format("value != %s", DISABLE));
-                    success = cmd.su.runWaitFor(String.format(REPLACE_CMD, key, value)).success();
+                    success = cmd.su.runWaitFor(String.format(REPLACE_CMD, key, key, value)).success();
                 }
             } else {
                 Log.d(TAG, "append command starting");
                 success = cmd.su.runWaitFor(String.format(APPEND_CMD, key, value)).success();
             }
-            if (!success) {
+            if (success) {
                 restoreBuildProp();
             } else {
                 updateScreen();
@@ -359,7 +359,7 @@ public class PropModder extends PreferenceFragment implements
     }
 
     public void updateShowBuild() {
-        Log.d(TAG, "Setting up /system/tmp/showbuild");
+        Log.d(TAG, "Setting up /cache/showbuild");
         try {
             mount("rw");
             cmd.su.runWaitFor("cp -f /system/build.prop " + SHOWBUILD_PATH).success();
@@ -370,13 +370,13 @@ public class PropModder extends PreferenceFragment implements
     }
 
     public boolean backupBuildProp() {
-        Log.d(TAG, "Backing up build.prop to /system/tmp/pm_build.prop");
-        return cmd.su.runWaitFor("cp /system/build.prop /system/tmp/pm_build.prop").success();
+        Log.d(TAG, "Backing up build.prop to /cache/pm_build.prop");
+        return cmd.su.runWaitFor("cp /system/build.prop /cache/pm_build.prop").success();
     }
 
     public boolean restoreBuildProp() {
-        Log.d(TAG, "Restoring build.prop from /system/tmp/pm_build.prop");
-        return cmd.su.runWaitFor("cp /system/tmp/pm_build.prop /system/build.prop").success();
+        Log.d(TAG, "Restoring build.prop from /cache/pm_build.prop");
+        return cmd.su.runWaitFor("cp /cache/pm_build.prop /cache/build.prop").success();
     }
 
     public void updateScreen() {
