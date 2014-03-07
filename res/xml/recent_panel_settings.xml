@@ -19,6 +19,12 @@
     android:title="@string/recent_panel_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <CheckBoxPreference
+        android:key="custom_recent_mode"
+        android:title="@string/custom_recent_title"
+        android:summary="@string/custom_recent_summary"
+        android:persistent="false" />
+
     <ListPreference
         android:key="recent_panel_expanded_mode"
         android:entries="@array/recent_panel_expanded_mode_entries"
