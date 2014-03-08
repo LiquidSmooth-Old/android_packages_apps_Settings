@@ -57,6 +57,7 @@ public class LockscreenNotifications extends SettingsPreferenceFragment
     private static final String KEY_CATEGORY_GENERAL = "category_general";
     private static final String KEY_EXCLUDED_APPS = "excluded_apps";
     private static final String KEY_NOTIFICATION_COLOR = "notification_color";
+    private static final String KEY_DYNAMIC_WIDTH = "dynamic_width";
 
     private CheckBoxPreference mLockscreenNotifications;
     private CheckBoxPreference mPocketMode;
@@ -72,6 +73,7 @@ public class LockscreenNotifications extends SettingsPreferenceFragment
     private SeekBarPreference mOffsetTop;
     private AppMultiSelectListPreference mExcludedAppsPref;
     private ColorPickerPreference mNotificationColor;
+    private CheckBoxPreference mDynamicWidth;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -166,6 +168,11 @@ public class LockscreenNotifications extends SettingsPreferenceFragment
         if (excludedApps != null) mExcludedAppsPref.setValues(excludedApps);
         mExcludedAppsPref.setOnPreferenceChangeListener(this);
 
+        mDynamicWidth = (CheckBoxPreference) prefs.findPreference(KEY_DYNAMIC_WIDTH);
+        mDynamicWidth.setChecked(Settings.System.getInt(cr,
+                    Settings.System.LOCKSCREEN_NOTIFICATIONS_DYNAMIC_WIDTH, 1) == 1);
+        mDynamicWidth.setEnabled(mLockscreenNotifications.isChecked());
+
         boolean hasProximitySensor = getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_PROXIMITY);
         if (!hasProximitySensor) {
             PreferenceCategory general = (PreferenceCategory) prefs.findPreference(KEY_CATEGORY_GENERAL);
@@ -224,6 +231,9 @@ public class LockscreenNotifications extends SettingsPreferenceFragment
             mForceExpandedView.setEnabled(mLockscreenNotifications.isChecked() && mExpandedView.isChecked()
                         && !mPrivacyMode.isChecked());
             mExpandedView.setEnabled(mLockscreenNotifications.isChecked() && !mPrivacyMode.isChecked());
+        } else if (preference == mDynamicWidth) {
+            Settings.System.putInt(cr, Settings.System.LOCKSCREEN_NOTIFICATIONS_DYNAMIC_WIDTH,
+                    mDynamicWidth.isChecked() ? 1 : 0);
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
