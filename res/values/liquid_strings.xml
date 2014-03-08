@@ -835,6 +835,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="see_through_title">See through</string>
     <string name="see_through_summary">Shows the content behind lock screen</string>
 
+    <!--Lock screen blur radius -->
+    <string name="blur_radius_title">Blur radius</string>
+    <string name="blur_radius_summary">Set lock screen blur intensity effect</string>
+
     <!-- Notification drawer background -->
     <string name="notification_style_title">Background style</string>
     <string name="notification_style_summary">View or change your notification drawer and quicksettings background</string>
