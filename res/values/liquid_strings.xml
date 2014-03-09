@@ -261,7 +261,7 @@
     <string name="root_access_adb">ADB only</string>
     <string name="root_access_all">Apps and ADB</string>
 
-    <!-- Automatic brightness customization -->
+    <!-- Automatic brightness -->
     <string name="auto_brightness_setup_title">Automatic brightness</string>
     <string name="auto_brightness_adjustment_title">Brightness adjustment</string>
     <string name="auto_brightness_twilight_adjustment">Adjust to sunrise and sunset</string>
@@ -978,8 +978,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="device_hostname">Device hostname</string>
 
     <!-- Chamber of Secrets -->
-    <string name="chamber_title">Chamber of secrets</string>
-    <string name="chamber_toast">The chamber of secrets has opened</string>
+    <string name="chamber_title">Liquid Dungeon</string>
+    <string name="chamber_toast">The Dungeon has opened</string>
 
     <!-- Volume Keys Media Control -->
     <string name="volume_keys_control_media_stream">Media control</string>
@@ -1052,6 +1052,25 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="advanced_reboot_disabled">Disable</string>
     <string name="advanced_reboot_hide_on_keyguard">Hide on lock screen</string>
     <string name="advanced_reboot_show_always">Show always</string>
+
+    <!-- Recent apps panel -->
+    <string name="recent_panel_category">Recent apps panel</string>
+    <string name="recent_panel_scale_title">Size</string>
+    <string name="recent_panel_scale_summary">Recent apps panel size in percent</string>
+    <string name="recent_panel_100">100% (default)</string>
+    <string name="recent_panel_85">85%</string>
+    <string name="recent_panel_70">70%</string>
+
+    <!-- Recent apps mode -->
+    <string name="recent_panel_expanded_mode_title">Expanded mode</string>
+    <string name="recent_panel_expanded_mode_summary">Recent tasks expanded preview mode</string>
+    <string name="recent_panel_expanded_mode_auto">Auto (default)</string>
+    <string name="recent_panel_expanded_mode_always">Always</string>
+    <string name="recent_panel_expanded_mode_never">Never</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
+    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge.</string>
 
     <!-- Keyguard allow rotation -->
     <string name="lockscreen_rotation_title">Lockscreen rotation</string>
@@ -1132,8 +1151,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_disable_ime_triggers_title">Reduce trigger size on keyboard</string>
     <string name="pie_disable_ime_triggers_summary">Reduces left and right trigger size if keyboard is active</string>
 
-    <!-- Notification Reminders -->
-    <string name="noti_reminder_category">Notification reminder</string>
+    <!-- Notification reminder -->
+    <string name="noti_reminder_category">Reminders</string>
     <string name="noti_reminder_enable_title">Enable notification reminder</string>
     <string name="noti_reminder_sound_title">Notify sound</string>
     <string name="noti_reminder_sound_looping">Until dismissed</string>
@@ -1147,31 +1166,69 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="noti_reminder_interval_3dot5s">3.5 second</string>
     <string name="noti_reminder_interval_4s">4 seconds</string>
 
-    <!-- Recent panel -->
-    <string name="recent_panel_category">Recent apps panel</string>
-    <string name="recent_panel_scale_title">Size</string>
-    <string name="recent_panel_scale_summary">Recent apps panel size in percent.</string>
-    <string name="recent_panel_100">100% (default)</string>
-    <string name="recent_panel_85">85%</string>
-    <string name="recent_panel_70">70%</string>
-    <string name="recent_panel_expanded_mode_title">Expanded mode</string>
-    <string name="recent_panel_expanded_mode_summary">Recent tasks expanded preview mode</string>
-    <string name="recent_panel_expanded_mode_auto">Auto (default)</string>
-    <string name="recent_panel_expanded_mode_always">Always</string>
-    <string name="recent_panel_expanded_mode_never">Never</string>
-
-    <!-- ATTENTION: RTL languages need to replace left with right -->
-    <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
-    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge.</string>
+    <!-- Gesture anywhere -->
+    <string name="gesture_anywhere_title">Gesture anywhere</string>
+    <string name="gesture_anywhere_summary">Custom screen gestures to execute actions</string>
+    <string name="gesture_anywhere_enabled_title">Gesture anywhere</string>
+    <string name="gesture_anywhere_enabled_summary">Enable the Gesture anywhere feature</string>
+    <string name="gesture_anywhere_position_title">Loction</string>
+    <string name="gesture_anywhere_position_left">Left edge</string>
+    <string name="gesture_anywhere_position_right">Right edge</string>
+    <string name="gesture_anywhere_gestures_title">Gestures</string>
+    <string name="gesture_anywhere_gestures_summary">Add, remove, and edit gestures</string>
+    <string name="trigger_category">Trigger region</string>
+    <string name="trigger_width_title">Trigger width</string>
+    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
+    <string name="trigger_top_title">Trigger position</string>
+    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
+    <string name="trigger_bottom_title">Trigger height</string>
+    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
+    <!-- Label, button used to add a gesture -->
+    <string name="ga_button_add">Add gesture</string>
+    <!-- Label, button used to reload all gestures -->
+    <string name="ga_button_reload">Reload</string>
+    <!-- Label, button used to cancel the operation of adding a gesture -->
+    <string name="ga_button_discard">Discard</string>
+    <!-- Label, button used to save a gesture newly created -->
+    <string name="ga_button_done">Done</string>
+    <!-- Label, prompt asking the user to enter the name of the gesture -->
+    <string name="ga_prompt_gesture_name">Name</string>
+    <!-- Error message, informs the user he needs to enter a name before saving a gesture -->
+    <string name="ga_error_missing_name">You must enter a name</string>
+    <!-- success message, tells the user where the gesture was saved -->
+    <string name="ga_save_success">Gesture saved in %s</string>
+    <!-- Buttons in Rename gesture dialog box -->
+    <string name="ga_rename_action">OK</string>
+    <!-- Buttons in Rename gesture dialog box -->
+    <string name="ga_cancel_action">Cancel</string>
+    <!-- Message displayed when the user opens the gestures settings screen -->
+    <string name="ga_gestures_loading">Loading gestures...</string>
+    <!-- Message displayed when the user has no gestures -->
+    <string name="ga_gestures_empty">No gestures</string>
+    <!-- Title of the screen used to view/manage gestures -->
+    <string name="ga_gestures_activity">Gestures</string>
+    <!-- Noun, menu item used to edit a gesture -->
+    <string name="ga_gestures_edit">Edit</string>
+    <!-- Noun, menu item used to remove a gesture -->
+    <string name="ga_gestures_delete">Delete</string>
+    <!-- Message displayed when a gesture is successfully deleted -->
+    <string name="ga_gestures_delete_success">Gesture deleted</string>
+    <!-- Title of dialog box -->
+    <string name="ga_gestures_rename_title">Rename gesture</string>
+    <!-- Label of gesture name field in Rename gesture dialog box -->
+    <string name="ga_gestures_rename_label">Gesture name</string>
+    <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
+    <string name="ga_gestures_error_loading">Could not load %s. Make sure you have storage available.</string>
+    <string name="profile_applist_title">Apps</string>
 
 	<!-- Wakelock blocker -->
     <string name="wakelock_blocker">Wakelock blocker</string>
     <string name="wakelock_blocker_title">Enable</string>
-    <string name="wakelock_blocker_summary">Activate blocking for checked wakelocks</string>
+    <string name="wakelock_blocker_summary">Activate blocking for wakelocks</string>
     <string name="wakelock_blocker_save">Save</string>
     <string name="wakelock_list_header">Available wakelocks</string>
     <string name="wakelock_blocker_reload">Reload</string>
-    <string name="wakelock_blocker_warning_title">Proceed with Caution</string>
+    <string name="wakelock_blocker_warning_title">Proceed with caution</string>
     <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>
 
 </resources>

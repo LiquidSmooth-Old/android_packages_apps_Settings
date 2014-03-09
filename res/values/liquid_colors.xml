@@ -13,16 +13,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<resources>
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/interface_settings_title"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <!-- Gesture anywhere -->
+    <color name="ga_gesture_color">@android:color/white</color>
 
-    <PreferenceScreen
-        android:key="gesture_anywhere"
-        android:title="@string/gesture_anywhere_title"
-        android:summary="@string/gesture_anywhere_summary"
-        android:fragment="com.android.settings.liquid.gestureanywhere.GestureAnywhereSettings" />
-
-</PreferenceScreen>
+</resources>
