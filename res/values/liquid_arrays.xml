@@ -241,7 +241,7 @@
         <item>5</item>
     </string-array>
 
-    <!--- Volume key cursor control -->
+    <!-- Volume key cursor control -->
     <string-array name="volume_key_cursor_control_entries">
         <item>@string/disabled</item>
         <item>@string/volume_key_cursor_control_on</item>
@@ -1295,6 +1295,17 @@
         <item>300000</item>
         <item>600000</item>
         <item>1800000</item>
+    </string-array>
+
+    <!-- Gesture anywhere -->
+    <string-array name="gesture_anywhere_position_entries" translatable="false">
+        <item>@string/gesture_anywhere_position_left</item>
+        <item>@string/gesture_anywhere_position_right</item>
+    </string-array>
+
+    <string-array name="gesture_anywhere_position_values" translatable="false">
+        <item>3</item>
+        <item>5</item>
     </string-array>
 
 </resources>

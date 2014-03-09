@@ -174,7 +174,7 @@
             android:name="CreateLiquidShortcut"
             android:label="@string/shortcut_picker_title"
             android:icon="@drawable/ic_liquid_theme_settings"
-            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar"
+            android:theme="@style/Theme.DialogWhenLarge"
             android:excludeFromRecents="true"
             android:configChanges="orientation|keyboardHidden|screenSize" >
             <intent-filter>
@@ -1722,6 +1722,10 @@
         <activity android:name=".liquid.AutoBrightnessSetup"
                 android:excludeFromRecents="true"
                 android:theme="@*android:style/Theme.Holo.Dialog.Alert" />
+
+        <activity android:name=".liquid.gestureanywhere.GestureAnywhereBuilderActivity" />
+
+        <activity android:name=".liquid.gestureanywhere.GestureAnywhereCreateGestureActivity" />
 
         <activity android:name=".ApnEditor" />
 
