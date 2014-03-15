@@ -1807,4 +1807,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="battery_around_ring_title">Battery around ring</string>
     <string name="battery_around_ring_summary">Display battery level around unlock ring</string>
 
+	<!-- Notification peek -->
+    <string name="notification_peek_title">Notification peek</string>
+    <string name="notification_peek_summary">Show notifications by picking up device</string>
+
 </resources>

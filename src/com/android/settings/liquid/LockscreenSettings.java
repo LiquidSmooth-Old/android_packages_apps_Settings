@@ -55,6 +55,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment
     private static final String KEY_LOCK_BEFORE_UNLOCK = "lock_before_unlock";
     private static final String KEY_QUICK_UNLOCK_CONTROL = "quick_unlock_control";
     private static final String KEY_MENU_UNLOCK_PREF = "menu_unlock";
+    private static final String KEY_NOTIFICATION_PEEK = "notification_peek";
 
     private PackageManager mPM;
     private DevicePolicyManager mDPM;
@@ -66,6 +67,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment
     private CheckBoxPreference mLockBeforeUnlock;
     private CheckBoxPreference mLockQuickUnlock;
     private CheckBoxPreference mMenuUnlock;
+    private CheckBoxPreference mNotificationPeek;
 
     // needed for menu unlock
     private Resources keyguardResource;
@@ -193,6 +195,18 @@ public class LockscreenSettings extends SettingsPreferenceFragment
         if (!hasButtons) {
             generalCategory.removePreference(lockButtons);
         }
+
+        mNotificationPeek = (CheckBoxPreference) prefs
+                .findPreference(KEY_NOTIFICATION_PEEK);
+        mNotificationPeek.setPersistent(false);
+
+        updatePeekCheckbox();
+    }
+
+    private void updatePeekCheckbox() {
+        boolean enabled = Settings.System.getInt(getContentResolver(),
+                Settings.System.PEEK_STATE, 0) == 1;
+        mNotificationPeek.setChecked(enabled);
     }
 
     @Override
@@ -237,6 +251,10 @@ public class LockscreenSettings extends SettingsPreferenceFragment
             Settings.System.putInt(getContentResolver(),
                     Settings.System.BATTERY_AROUND_LOCKSCREEN_RING,
                     mLockRingBattery.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mNotificationPeek) {
+            Settings.System.putInt(getContentResolver(), Settings.System.PEEK_STATE,
+                    mNotificationPeek.isChecked() ? 1 : 0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);

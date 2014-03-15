@@ -86,6 +86,11 @@
             android:summary="@string/unlock_menu_unlock_summary" />
 
         <CheckBoxPreference
+            android:key="notification_peek"
+            android:title="@string/notification_peek_title"
+            android:summary="@string/notification_peek_summary" />
+
+        <CheckBoxPreference
             android:key="quick_unlock_control"
             android:title="@string/unlock_quick_unlock_control_title"
             android:summary="@string/unlock_quick_unlock_control_summary" />
