@@ -1677,4 +1677,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Fast charge QS tile -->
     <string name="title_tile_fcharge">Fast charge</string>
 
+    <!-- On-the-Go -->
+    <string name="power_menu_onthego_title">On-The-Go Mode</string>
+    <string name="title_tile_onthego">On-The-Go</string>
 </resources>
