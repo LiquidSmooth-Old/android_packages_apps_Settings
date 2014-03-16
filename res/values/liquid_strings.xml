@@ -1009,6 +1009,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="keys_app_switch_press_title">App switch key</string>
     <string name="keys_app_switch_long_press_title">App switch key (long press)</string>
     <string name="keys_app_switch_double_tap_title">App switch key (double tap)</string>
+    <string name="keys_camera_title">Camera key</string>
+    <string name="camera_wake_summary">Pressing the camera button will wake your device</string>
+    <string name="keys_camera_peak_title">Screen peek</string>
+    <string name="camera_sleep_on_release_summary">A half press will keep the screen on only while the button is held down</string>
+    <string name="keys_camera_music_title">Playback control</string>
+    <string name="camera_music_controls_summary">When the screen is off, long pressing the camera key will play/pause current music track</string>
     <string name="keys_action_normal">Normal press</string>
     <string name="keys_action_long">Long press</string>
     <string name="keys_action_double">Double tap</string>
@@ -1112,7 +1118,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memory</string>
 
-    <!-- security settings menu unlock -->
+    <!-- Lock screen menu unlock -->
     <string name="unlock_menu_unlock_title">Menu unlock</string>
     <string name="unlock_menu_unlock_summary">Pressing the menu button unlocks the device</string>
 
