@@ -64,6 +64,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private static final String CATEGORY_MENU = "button_keys_menu";
     private static final String CATEGORY_ASSIST = "button_keys_assist";
     private static final String CATEGORY_APPSWITCH = "button_keys_appSwitch";
+    private static final String CATEGORY_CAMERA = "button_keys_camera";
 
     private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
     private static final String KEYS_CATEGORY_BINDINGS = "keys_bindings";
@@ -83,6 +84,9 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private static final String KEYS_APP_SWITCH_PRESS = "keys_app_switch_press";
     private static final String KEYS_APP_SWITCH_LONG_PRESS = "keys_app_switch_long_press";
     private static final String KEYS_APP_SWITCH_DOUBLE_TAP = "keys_app_switch_double_tap";
+    private static final String KEYS_CAMERA_WAKE = "keys_camera_press";
+    private static final String KEYS_CAMERA_PEAK = "keys_camera_peak";
+    private static final String KEYS_CAMERA_MUSIC = "keys_camera_music";
 
     private static final int DLG_SHOW_WARNING_DIALOG = 0;
     private static final int DLG_SHOW_ACTION_DIALOG  = 1;
@@ -97,6 +101,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private static final int KEY_MASK_MENU       = 0x04;
     private static final int KEY_MASK_ASSIST     = 0x08;
     private static final int KEY_MASK_APP_SWITCH = 0x10;
+    private static final int KEY_MASK_CAMERA     = 0x20;
 
     private CheckBoxPreference mEnableCustomBindings;
     private Preference mBackPressAction;
@@ -114,6 +119,9 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private Preference mAppSwitchPressAction;
     private Preference mAppSwitchLongPressAction;
     private Preference mAppSwitchDoubleTapAction;
+    private CheckBoxPreference mCameraWake;
+    private CheckBoxPreference mCameraSleepOnRelease;
+    private CheckBoxPreference mCameraMusicControls;
 
     private boolean mCheckPreferences;
     private Map<String, String> mKeySettings = new HashMap<String, String>();
@@ -163,6 +171,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
         boolean hasAssistKey = (deviceKeys & KEY_MASK_ASSIST) != 0;
         boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
+        boolean hasCameraKey = (deviceKeys & KEY_MASK_CAMERA) != 0;
 
         PreferenceCategory keysCategory =
                 (PreferenceCategory) prefs.findPreference(CATEGORY_KEYS);
@@ -176,6 +185,8 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
                 (PreferenceCategory) prefs.findPreference(CATEGORY_ASSIST);
         PreferenceCategory keysAppSwitchCategory =
                 (PreferenceCategory) prefs.findPreference(CATEGORY_APPSWITCH);
+        PreferenceCategory keysCameraCategory =
+                (PreferenceCategory) prefs.findPreference(CATEGORY_CAMERA);
 
         mEnableCustomBindings = (CheckBoxPreference) prefs.findPreference(
                 KEYS_ENABLE_CUSTOM);
@@ -209,6 +220,12 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
                 KEYS_APP_SWITCH_LONG_PRESS);
         mAppSwitchDoubleTapAction = (Preference) prefs.findPreference(
                 KEYS_APP_SWITCH_DOUBLE_TAP);
+        mCameraWake = (CheckBoxPreference) prefs.findPreference(
+                KEYS_CAMERA_WAKE);
+        mCameraSleepOnRelease = (CheckBoxPreference) prefs.findPreference(
+                KEYS_CAMERA_PEAK);
+        mCameraMusicControls = (CheckBoxPreference) prefs.findPreference(
+                KEYS_CAMERA_MUSIC);
 
         if (hasBackKey) {
             // Back key
@@ -303,6 +320,24 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
                     Settings.System.KEY_APP_SWITCH_DOUBLE_TAP_ACTION);
         } else {
             prefs.removePreference(keysAppSwitchCategory);
+        }
+
+        if (hasCameraKey) {
+            mCameraWake = (CheckBoxPreference)
+                prefs.findPreference(Settings.System.CAMERA_WAKE_SCREEN);
+            mCameraSleepOnRelease = (CheckBoxPreference)
+                prefs.findPreference(Settings.System.CAMERA_SLEEP_ON_RELEASE);
+            mCameraMusicControls = (CheckBoxPreference)
+                prefs.findPreference(Settings.System.CAMERA_MUSIC_CONTROLS);
+            boolean value = mCameraWake.isChecked();
+            mCameraMusicControls.setEnabled(!value);
+            mCameraSleepOnRelease.setEnabled(value);
+            if (getResources().getBoolean(
+                com.android.internal.R.bool.config_singleStageCameraKey)) {
+                keysCameraCategory.removePreference(mCameraSleepOnRelease);
+            }
+        } else {
+            prefs.removePreference(keysCameraCategory);
         }
 
         boolean enableHardwareRebind = Settings.System.getInt(getContentResolver(),
@@ -412,6 +447,12 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         } else if (preference == mAppSwitchDoubleTapAction) {
             settingsKey = Settings.System.KEY_APP_SWITCH_DOUBLE_TAP_ACTION;
             dialogTitle = R.string.keys_app_switch_double_tap_title;
+        } else if (preference == mCameraWake) {
+            // Disable camera music controls if camera wake is enabled
+            boolean isCameraWakeEnabled = mCameraWake.isChecked();
+            mCameraMusicControls.setEnabled(!isCameraWakeEnabled);
+            mCameraSleepOnRelease.setEnabled(isCameraWakeEnabled);
+            return true;
         }
 
         if (settingsKey != null) {
