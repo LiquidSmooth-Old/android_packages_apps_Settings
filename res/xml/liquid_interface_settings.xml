@@ -19,17 +19,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <com.android.settings.liquid.SystemCheckBoxPreference
+        android:key="enable_app_circle_bar"
+        android:title="@string/app_circle_bar_title"
+        android:summary="@string/app_circle_bar_summary" />
+
+    <com.android.settings.liquid.AppMultiSelectListPreference
+        android:key="app_circle_bar_included_apps"
+        android:persistent="false"
+        android:title="@string/app_circle_bar_included_apps_title"
+        android:summary="@string/app_circle_bar_included_apps_summary"
+        android:dependency="enable_app_circle_bar" />
+
     <CheckBoxPreference
         android:key="use_alt_resolver"
         android:title="@string/alt_resolver_title"
         android:summary="@string/alt_resolver_summary"
         android:defaultValue="false" />
-
-    <ListPreference
-        android:key="lcd_density"
-        android:title="@string/custom_density_title"
-        android:entries="@array/lcd_density_entries"
-        android:entryValues="@array/lcd_density_entries" />
 
     <PreferenceScreen
         android:key="lock_clock"
@@ -39,6 +45,12 @@
             android:targetPackage="com.cyanogenmod.lockclock"
             android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
     </PreferenceScreen>
+
+    <ListPreference
+        android:key="lcd_density"
+        android:title="@string/custom_density_title"
+        android:entries="@array/lcd_density_entries"
+        android:entryValues="@array/lcd_density_entries" />
 
     <PreferenceScreen
         android:key="gesture_anywhere"
