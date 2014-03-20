@@ -38,6 +38,11 @@
             android:fragment="com.android.settings.liquid.SoundSettings"
             android:title="@string/advanced_sound_title" />
 
+    <PreferenceScreen
+            android:key="sound_packages"
+            android:fragment="com.android.settings.sounds.SoundPackageSettings"
+            android:title="@string/sound_packages_title" />
+
     <PreferenceCategory
             android:key="category_calls_and_notification"
             android:title="@string/sound_category_call_ringtone_vibrate_title"/>
