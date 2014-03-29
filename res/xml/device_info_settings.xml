@@ -37,6 +37,13 @@
                     android:targetPackage="com.otaupdater"
                     android:targetClass="com.otaupdater.OTAUpdaterActivity" />
         </PreferenceScreen>
+        
+        <!-- Change Log -->
+        <PreferenceScreen android:key="changelog"
+            android:title="@string/changelog_title"
+            android:summary="@string/changelog_title_summary"
+            android:fragment="com.android.settings.liquid.ChangeLog" >
+        </PreferenceScreen>
 
         <!-- Device status -->
         <PreferenceScreen android:key="status_info"
