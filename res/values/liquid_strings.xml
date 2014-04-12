@@ -472,4 +472,8 @@
     <string name="expanded_desktop_state">Expanded state</string>
     <string name="expanded_enabled_for_all">Enabled for all</string>
     <string name="expanded_user_configurable">User configurable</string>
+
+    <!-- Themes Settings -->
+    <!-- Settings main menu entry -->
+    <string name="themes_settings_title">Themes</string>
 </resources>
