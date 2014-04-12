@@ -1648,4 +1648,7 @@
     <string name="zen_mode_none_category">No interruptions</string>
     <string name="allow_lights_title">Allow notification lights</string>
 
+    <!-- Themes Settings -->
+    <!-- Settings main menu entry -->
+    <string name="themes_settings_title">Themes</string>
 </resources>
