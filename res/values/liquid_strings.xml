@@ -1768,4 +1768,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="show_network_traffic_1500">1500 ms</string>
     <string name="show_network_traffic_2000">2000 ms</string>
 
+    <!-- Double-tap to sleep -->
+    <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Double-tap the status bar to goto sleep</string>
+
 </resources>
