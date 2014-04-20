@@ -32,7 +32,6 @@ import android.os.RemoteException;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
@@ -46,7 +45,7 @@ import com.android.settings.liquid.DisplayRotation;
 import java.util.ArrayList;
 
 public class DisplaySettings extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener, OnPreferenceClickListener {
+        Preference.OnPreferenceChangeListener {
     private static final String TAG = "DisplaySettings";
 
     /** If there is no setting in the provider, use this. */
@@ -54,7 +53,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_DISPLAY_ROTATION = "display_rotation";
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
-    private static final String KEY_FONT_SIZE = "font_size";
     private static final String KEY_LIGHT_OPTIONS = "category_light_options";
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
     private static final String KEY_NOTIFICATION_LIGHT = "notification_light";
@@ -68,15 +66,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
 
-    private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
-
     private static final String ROTATION_ANGLE_0 = "0";
     private static final String ROTATION_ANGLE_90 = "90";
     private static final String ROTATION_ANGLE_180 = "180";
     private static final String ROTATION_ANGLE_270 = "270";
 
     private PreferenceScreen mDisplayRotationPreference;
-    private WarnedListPreference mFontSizePref;
     private CheckBoxPreference mNotificationPulse;
     private PreferenceCategory mLightOptions;
     private PreferenceScreen mNotificationLight;
@@ -129,10 +124,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mScreenTimeoutPreference.setOnPreferenceChangeListener(this);
         disableUnusableTimeouts(mScreenTimeoutPreference);
         updateTimeoutPreferenceDescription(currentTimeout);
-
-        mFontSizePref = (WarnedListPreference) findPreference(KEY_FONT_SIZE);
-        mFontSizePref.setOnPreferenceChangeListener(this);
-        mFontSizePref.setOnPreferenceClickListener(this);
 
         mLightOptions = (PreferenceCategory) prefSet.findPreference(KEY_LIGHT_OPTIONS);
         mNotificationPulse = (CheckBoxPreference) findPreference(KEY_NOTIFICATION_PULSE);
@@ -304,37 +295,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
         screenTimeoutPreference.setEnabled(revisedEntries.size() > 0);
     }
-
-    int floatToIndex(float val) {
-        String[] indices = getResources().getStringArray(R.array.entryvalues_font_size);
-        float lastVal = Float.parseFloat(indices[0]);
-        for (int i=1; i<indices.length; i++) {
-            float thisVal = Float.parseFloat(indices[i]);
-            if (val < (lastVal + (thisVal-lastVal)*.5f)) {
-                return i-1;
-            }
-            lastVal = thisVal;
-        }
-        return indices.length-1;
-    }
-    
-    public void readFontSizePreference(ListPreference pref) {
-        try {
-            mCurConfig.updateFrom(ActivityManagerNative.getDefault().getConfiguration());
-        } catch (RemoteException e) {
-            Log.w(TAG, "Unable to retrieve font size");
-        }
-
-        // mark the appropriate item in the preferences list
-        int index = floatToIndex(mCurConfig.fontScale);
-        pref.setValueIndex(index);
-
-        // report the current size in the summary text
-        final Resources res = getResources();
-        String[] fontSizeNames = res.getStringArray(R.array.entries_font_size);
-        pref.setSummary(String.format(res.getString(R.string.summary_font_size),
-                fontSizeNames[index]));
-    }
     
     @Override
     public void onResume() {
@@ -356,22 +316,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         getContentResolver().unregisterContentObserver(mAccelerometerRotationObserver);
     }
 
-    @Override
-    public Dialog onCreateDialog(int dialogId) {
-        if (dialogId == DLG_GLOBAL_CHANGE_WARNING) {
-            return Utils.buildGlobalChangeWarningDialog(getActivity(),
-                    R.string.global_font_change_title,
-                    new Runnable() {
-                        public void run() {
-                            mFontSizePref.click();
-                        }
-                    });
-        }
-        return null;
-    }
-
     private void updateState() {
-        readFontSizePreference(mFontSizePref);
         updateScreenSaverSummary();
     }
 
@@ -379,15 +324,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (mScreenSaverPreference != null) {
             mScreenSaverPreference.setSummary(
                     DreamSettings.getSummaryTextWithDreamName(getActivity()));
-        }
-    }
-
-    public void writeFontSizePreference(Object objValue) {
-        try {
-            mCurConfig.fontScale = Float.parseFloat(objValue.toString());
-            ActivityManagerNative.getDefault().updatePersistentConfiguration(mCurConfig);
-        } catch (RemoteException e) {
-            Log.w(TAG, "Unable to save font size");
         }
     }
 
@@ -480,9 +416,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, "could not persist screen timeout setting", e);
             }
         }
-        if (KEY_FONT_SIZE.equals(key)) {
-            writeFontSizePreference(objValue);
-        }
         if (KEY_VOLUME_WAKE.equals(key)) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.VOLUME_WAKE_SCREEN,
@@ -520,18 +453,5 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
 
         return true;
-    }
-
-    @Override
-    public boolean onPreferenceClick(Preference preference) {
-        if (preference == mFontSizePref) {
-            if (Utils.hasMultipleUsers(getActivity())) {
-                showDialog(DLG_GLOBAL_CHANGE_WARNING);
-                return true;
-            } else {
-                mFontSizePref.click();
-            }
-        }
-        return false;
     }
 }
