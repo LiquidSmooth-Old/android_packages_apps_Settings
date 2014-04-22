@@ -918,6 +918,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="tile_choose_title">Choose a tile</string>
     <string name="title_tile_airplane">Airplane mode</string>
     <string name="title_tile_battery">Battery</string>
+    <string name="title_tile_batterysaver">Battery saver</string>
     <string name="title_tile_bluetooth">Bluetooth</string>
     <string name="title_tile_brightness">Brightness</string>
     <string name="title_tile_contact">Contact</string>

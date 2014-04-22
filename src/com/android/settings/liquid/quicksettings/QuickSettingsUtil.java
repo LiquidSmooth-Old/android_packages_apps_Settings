@@ -23,6 +23,7 @@ import static com.android.internal.util.liquid.QSConstants.TILE_AIRPLANE;
 import static com.android.internal.util.liquid.QSConstants.TILE_ALARM;
 import static com.android.internal.util.liquid.QSConstants.TILE_AUTOROTATE;
 import static com.android.internal.util.liquid.QSConstants.TILE_BATTERY;
+import static com.android.internal.util.liquid.QSConstants.TILE_BATTERYSAVER;
 import static com.android.internal.util.liquid.QSConstants.TILE_BLUETOOTH;
 import static com.android.internal.util.liquid.QSConstants.TILE_BRIGHTNESS;
 import static com.android.internal.util.liquid.QSConstants.TILE_BUGREPORT;
@@ -182,6 +183,9 @@ public class QuickSettingsUtil {
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_ONTHEGO, R.string.title_tile_onthego,
                 "com.android.systemui:drawable/ic_qs_onthego"));
+        registerTile(new QuickSettingsUtil.TileInfo(
+                TILE_BATTERYSAVER, R.string.title_tile_batterysaver,
+                "com.android.systemui:drawable/ic_qs_battery_saver_on"));
     }
 
     private static void registerTile(QuickSettingsUtil.TileInfo info) {
