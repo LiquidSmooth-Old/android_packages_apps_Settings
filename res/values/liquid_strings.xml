@@ -1231,6 +1231,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="tile_choose_title">Choose a tile</string>
     <string name="title_tile_airplane">Airplane mode</string>
     <string name="title_tile_battery">Battery</string>
+    <string name="title_tile_batterysaver">BatterySaver mode</string>
     <string name="title_tile_bluetooth">Bluetooth</string>
     <string name="title_tile_brightness">Brightness</string>
     <string name="title_tile_contact">Contact</string>
@@ -1259,6 +1260,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="title_tile_reboot">Reboot</string>
     <string name="title_tile_theme">Theme switcher</string>
     <string name="title_tile_shake">Shake events</string>
+    <string name="title_tile_fcharge">Fast charge</string>
+    <string name="title_tile_onthego">On-The-Go</string>
     <string name="dynamic_tile_ime_switcher">IME switcher</string>
     <string name="dynamic_tile_usb_tether">USB tether</string>
     <string name="dynamic_tile_alarm">Alarm</string>
@@ -1812,12 +1815,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Allow Multiuser -->
     <string name="multiuser_preference_title">Multiuser support</string>
 
-    <!-- Fast charge QS tile -->
-    <string name="title_tile_fcharge">Fast charge</string>
-
     <!-- On-the-Go -->
     <string name="power_menu_onthego_title">On-The-Go Mode</string>
-    <string name="title_tile_onthego">On-The-Go</string>
 
     <!-- Battery Bar -->
     <string name="status_bar_battery_cat_title">Battery</string>
