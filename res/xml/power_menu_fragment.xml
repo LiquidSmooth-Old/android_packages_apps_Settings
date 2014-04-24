@@ -17,7 +17,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceScreen
-        android:fragment="com.android.settings.slim.PowerMenuStyle"
+        android:fragment="com.android.settings.liquid.PowerMenuStyle"
         android:key="power_menu_style"
         android:title="@string/style_title"
         android:summary="@string/power_menu_style_summary" />

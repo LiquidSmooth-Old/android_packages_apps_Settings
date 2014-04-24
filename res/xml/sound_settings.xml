@@ -35,7 +35,7 @@
 
     <PreferenceScreen
             android:key="advanced_sound_settings"
-            android:fragment="com.android.settings.slim.SoundSettings"
+            android:fragment="com.android.settings.liquid.SoundSettings"
             android:title="@string/advanced_sound_title" />
 
     <PreferenceCategory
@@ -50,7 +50,7 @@
             android:persistent="false"
             android:ringtoneType="ringtone" />
 
-    <com.android.settings.slim.IncreasingRingPreference
+    <com.android.settings.liquid.IncreasingRingPreference
             android:key="increasing_ring"
             android:title="@string/increasing_ring_title"
             android:dialogTitle="@string/increasing_ring_title"

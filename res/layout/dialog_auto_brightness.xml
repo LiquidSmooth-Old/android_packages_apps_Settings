@@ -36,7 +36,7 @@
                 android:layout_marginRight="20dip"
                 android:text="@string/auto_brightness_adjustment_title" />
 
-        <com.android.settings.slim.MagneticCenterSeekBar android:id="@+id/adjustment"
+        <com.android.settings.liquid.MagneticCenterSeekBar android:id="@+id/adjustment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dip"

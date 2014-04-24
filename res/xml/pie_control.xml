@@ -22,32 +22,31 @@
         android:title="@string/pie_control_title"
         android:summary="@string/pie_control_summary" />
 
-    <PreferenceScreen
-            android:key="pie_button"
-            android:fragment="com.android.settings.slim.dslv.ButtonsListViewSettings"
-            android:title="@string/pie_button"
-            android:dependency="pie_control">
-        <extra android:name="buttonMode" android:value="1" />
-        <extra android:name="maxAllowedButtons" android:value="5" />
-        <extra android:name="disableDeleteLastEntry" android:value="true" />
-        <extra android:name="fragment" android:value="com.android.settings.slim.fragments.PieButtonFragment" />
-    </PreferenceScreen>
+        <PreferenceScreen
+                android:key="pie_button"
+                android:fragment="com.android.settings.liquid.dslv.ButtonsListViewSettings"
+                android:title="@string/pie_button"
+                android:dependency="pie_control">
+            <extra android:name="buttonMode" android:value="1" />
+            <extra android:name="maxAllowedButtons" android:value="5" />
+            <extra android:name="disableDeleteLastEntry" android:value="true" />
+            <extra android:name="fragment" android:value="com.android.settings.liquid.fragments.PieButtonFragment" />
+        </PreferenceScreen>
 
+        <PreferenceScreen
+            android:key="pie_style"
+            android:fragment="com.android.settings.liquid.PieStyleSettings"
+            android:title="@string/pie_style"
+            android:dependency="pie_control" />
 
-    <PreferenceScreen
-        android:key="pie_style"
-        android:fragment="com.android.settings.slim.PieStyleSettings"
-        android:title="@string/pie_style"
-        android:dependency="pie_control" />
-
-    <PreferenceScreen
-        android:key="pie_trigger"
-        android:fragment="com.android.settings.slim.PieTriggerSettings"
-        android:title="@string/pie_control_trigger_positions"
-        android:dependency="pie_control" />
+        <PreferenceScreen
+            android:key="pie_trigger"
+            android:fragment="com.android.settings.liquid.PieTriggerSettings"
+            android:title="@string/pie_control_trigger_positions"
+            android:dependency="pie_control" />
 
     <PreferenceCategory
-        android:title="@string/additional_options_title">
+        android:title="@string/additional_category_title">
 
         <ListPreference
             android:key="pie_menu"

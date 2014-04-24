@@ -47,7 +47,7 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import com.android.internal.telephony.util.BlacklistUtils;
-import com.android.internal.util.slim.DeviceUtils;
+import com.android.internal.util.liquid.DeviceUtils;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.R;
 
@@ -108,7 +108,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
     private static final String KEY_NOTIFICATION_ACCESS = "manage_notification_access";
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
 
-    // Slim Additions
+    // LiquidSmooth Additions
     private static final String KEY_APP_SECURITY_CATEGORY = "app_security";
     private static final String KEY_BLACKLIST = "blacklist";
 
@@ -196,7 +196,7 @@ public class SecuritySettings extends RestrictedSettingsFragment
         PackageManager pm = getPackageManager();
 
         // App security settings
-        addPreferencesFromResource(R.xml.security_settings_app_slim);
+        addPreferencesFromResource(R.xml.security_settings_app_liquid);
         mBlacklist = (PreferenceScreen) root.findPreference(KEY_BLACKLIST);
 
         // Add options for lock/unlock screen

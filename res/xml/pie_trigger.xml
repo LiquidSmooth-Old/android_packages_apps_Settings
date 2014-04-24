@@ -51,7 +51,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/additional_options_title">
+        android:title="@string/additional_category_title">
 
         <CheckBoxPreference
             android:key="pie_disable_ime_triggers"

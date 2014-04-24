@@ -29,7 +29,7 @@
 
         <PreferenceScreen
                 android:key="display_rotation"
-                android:fragment="com.android.settings.slim.DisplayRotation"
+                android:fragment="com.android.settings.liquid.DisplayRotation"
                 android:title="@string/display_rotation_title" />
 
         <ListPreference
@@ -94,7 +94,7 @@
             <PreferenceScreen
                 android:key="battery_light"
                 android:title="@string/battery_light_title"
-                android:fragment="com.android.settings.slim.notificationlight.BatteryLightSettings" />
+                android:fragment="com.android.settings.liquid.notificationlight.BatteryLightSettings" />
 
             <CheckBoxPreference
                 android:key="notification_pulse"
@@ -104,7 +104,7 @@
             <PreferenceScreen
                 android:key="notification_light"
                 android:title="@string/notification_light_title"
-                android:fragment="com.android.settings.slim.notificationlight.NotificationLightSettings" />
+                android:fragment="com.android.settings.liquid.notificationlight.NotificationLightSettings" />
 
         </PreferenceCategory>
 

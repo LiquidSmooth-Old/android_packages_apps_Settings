@@ -18,8 +18,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
         <PreferenceCategory
-                android:key="keys_cat"
-                android:title="@string/keys_bindings_title" >
+            android:key="keys_cat"
+            android:title="@string/keys_bindings_title" >
 
             <CheckBoxPreference
                 android:key="enable_hardware_rebind"

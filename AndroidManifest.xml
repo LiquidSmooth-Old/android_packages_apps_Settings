@@ -93,7 +93,6 @@
         android:permissionGroup="android.permission-group.SUPERUSER"
         android:protectionLevel="dangerous" />
 
-
     <application android:label="@string/settings_label"
             android:icon="@mipmap/ic_launcher_settings"
             android:taskAffinity=""
@@ -170,11 +169,11 @@
             </intent-filter>
         </activity>
 
-        <!-- Slim Shortcuts -->
+        <!-- Action shortcuts -->
         <activity
-            android:name="CreateSlimShortcut"
-            android:label="@string/slim_shortcut_picker"
-            android:icon="@drawable/slim_lock"
+            android:name="CreateLiquidShortcut"
+            android:label="@string/shortcut_picker_title"
+            android:icon="@drawable/ic_liquid_theme_settings"
             android:theme="@android:style/Theme.Holo.Dialog.NoActionBar"
             android:excludeFromRecents="true"
             android:configChanges="orientation|keyboardHidden|screenSize" >
@@ -185,9 +184,9 @@
         </activity>
 
         <activity
-            android:name=".slim.SlimActionShortcut"
+            android:name=".liquid.LiquidActionShortcut"
             android:theme="@android:style/Theme.NoDisplay"
-            android:icon="@drawable/slim_lock"
+            android:icon="@drawable/liquid_lock"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance" >
             <intent-filter>
@@ -197,33 +196,33 @@
 
         <!-- QuietHours SmsCall Service -->
 
-        <service android:name=".slim.service.SmsCallService"/>
-        <service android:name=".slim.service.AlarmService"/>
+        <service android:name=".liquid.service.SmsCallService"/>
+        <service android:name=".liquid.service.AlarmService"/>
 
         <receiver
-            android:name=".slim.service.AlarmReceiver">
+            android:name=".liquid.service.AlarmReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.TIMEZONE_CHANGED"></action>
                 <action android:name="android.intent.action.TIME_CHANGED"></action>
                 <action android:name="android.intent.action.DATE_CHANGED"></action>
-                <action android:name="com.android.settings.slim.service.SCHEDULE_SERVICE_COMMAND"/>
+                <action android:name="com.android.settings.liquid.service.SCHEDULE_SERVICE_COMMAND"/>
             </intent-filter>
         </receiver>
 
         <receiver
-            android:name=".slim.service.BootReceiver">
+            android:name=".liquid.service.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
 
         <activity
-            android:name=".slim.service.BypassAlarm"
+            android:name=".liquid.service.BypassAlarm"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
-            android:taskAffinity="com.android.settings.slim.service.BypassAlarm"
+            android:taskAffinity="com.android.settings.liquid.service.BypassAlarm"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <!-- Wireless Controls -->
@@ -1727,7 +1726,7 @@
             android:theme="@style/CryptKeeperBlankTheme"
         />
 
-        <activity android:name=".slim.AutoBrightnessSetup"
+        <activity android:name=".liquid.AutoBrightnessSetup"
                 android:excludeFromRecents="true"
                 android:theme="@*android:style/Theme.Holo.Dialog.Alert" />
 
@@ -1745,12 +1744,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.slim.blacklist.BlacklistSettings" />
+                android:value="com.android.settings.liquid.blacklist.BlacklistSettings" />
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
                 android:resource="@id/security_settings" />
         </activity>
 
-        <!-- Pseudo-activity used to provide an intent-filter entry point to quite hours settings -->
+        <!-- Pseudo-activity used to provide an intent-filter entry point to quiet hours settings -->
         <activity android:name="Settings$QuietHoursSettingsActivity"
                 android:label="@string/quiet_hours_title"
                 android:taskAffinity=""
@@ -1760,7 +1759,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.slim.QuietHours" />
+                android:value="com.android.settings.liquid.QuietHours" />
         </activity>
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to quick tiles settings -->
@@ -1773,7 +1772,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.slim.quicksettings.QuickSettingsTiles" />
+                android:value="com.android.settings.liquid.quicksettings.QuickSettingsTiles" />
         </activity>
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to battery icon settings -->
@@ -1786,7 +1785,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.slim.BatteryIconStyle" />
+                android:value="com.android.settings.liquid.BatteryIconStyle" />
         </activity>
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to rotation settings -->
@@ -1799,7 +1798,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.android.settings.slim.DisplayRotation" />
+                android:value="com.android.settings.liquid.DisplayRotation" />
         </activity>
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
