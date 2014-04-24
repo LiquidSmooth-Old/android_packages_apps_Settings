@@ -28,7 +28,7 @@
 
         <PreferenceScreen
             android:key="keyguard_style"
-            android:fragment="com.android.settings.slim.LockscreenStyle"
+            android:fragment="com.android.settings.liquid.LockscreenStyle"
             android:title="@string/lockscreen_style_title"/>
 
         <ListPreference
@@ -44,7 +44,7 @@
 
         <PreferenceScreen
             android:key="keyguard_enable_widgets"
-            android:fragment="com.android.settings.slim.LockscreenWidgets"
+            android:fragment="com.android.settings.liquid.LockscreenWidgets"
             android:title="@string/lockscreen_widgets_title"/>
 
         <PreferenceScreen

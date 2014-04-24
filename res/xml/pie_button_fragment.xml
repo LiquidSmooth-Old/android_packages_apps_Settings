@@ -19,13 +19,13 @@
 
     <PreferenceScreen
         android:key="pie_button_style"
-        android:fragment="com.android.settings.slim.PieButtonStyleSettings"
+        android:fragment="com.android.settings.liquid.PieButtonStyleSettings"
         android:title="@string/pie_button_style"
         android:summary="@string/pie_button_style_summary" />
 
     <PreferenceScreen
             android:key="pie_button_second_layer"
-            android:fragment="com.android.settings.slim.dslv.ButtonsListViewSettings"
+            android:fragment="com.android.settings.liquid.dslv.ButtonsListViewSettings"
             android:title="@string/pie_button_second_layer"
             android:summary="@string/pie_button_second_layer_summary">
         <extra android:name="buttonMode" android:value="2" />

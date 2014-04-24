@@ -17,7 +17,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceScreen
-        android:fragment="com.android.settings.slim.NavBarButtonStyle"
+        android:fragment="com.android.settings.liquid.NavBarButtonStyle"
         android:key="nav_bar_button_style"
         android:title="@string/style_title"
         android:summary="@string/nav_bar_button_style_summary" />

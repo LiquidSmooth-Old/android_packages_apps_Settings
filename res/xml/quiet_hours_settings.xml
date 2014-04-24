@@ -33,7 +33,7 @@
         android:key="quiet_hours_auto"
         android:title="@string/quiet_hours_auto_title" />
 
-    <com.android.settings.slim.TimeRangePreference
+    <com.android.settings.liquid.TimeRangePreference
         android:key="quiet_hours_timerange"
         android:dependency="quiet_hours_enabled" />
 

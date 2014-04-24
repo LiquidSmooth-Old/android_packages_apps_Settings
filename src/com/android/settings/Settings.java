@@ -85,13 +85,15 @@ import com.android.settings.nfc.PaymentSettings;
 import com.android.settings.print.PrintJobSettingsFragment;
 import com.android.settings.print.PrintServiceSettingsFragment;
 import com.android.settings.print.PrintSettingsFragment;
-import com.android.settings.slim.BatteryIconStyle;
-import com.android.settings.slim.blacklist.BlacklistSettings;
-import com.android.settings.slim.DisplayRotation;
-import com.android.settings.slim.quicksettings.QuickSettingsTiles;
-import com.android.settings.slim.ShakeEvents;
-import com.android.settings.slim.QuietHours;
-import com.android.settings.slim.themes.ThemeEnabler;
+
+import com.android.settings.liquid.BatteryIconStyle;
+import com.android.settings.liquid.blacklist.BlacklistSettings;
+import com.android.settings.liquid.DisplayRotation;
+import com.android.settings.liquid.quicksettings.QuickSettingsTiles;
+import com.android.settings.liquid.ShakeEvents;
+import com.android.settings.liquid.QuietHours;
+import com.android.settings.liquid.themes.ThemeEnabler;
+
 import com.android.settings.tts.TextToSpeechSettings;
 import com.android.settings.users.UserSettings;
 import com.android.settings.vpn2.VpnSettings;
@@ -647,13 +649,11 @@ public class Settings extends PreferenceActivity
                     target.remove(i);
                 }
             }
-
             if (i < target.size() && target.get(i) == header
                     && UserHandle.MU_ENABLED && UserHandle.myUserId() != 0
                     && !ArrayUtils.contains(SETTINGS_FOR_RESTRICTED, id)) {
                 target.remove(i);
             }
-
             // Increment if the current one wasn't removed by the Utils code.
             if (i < target.size() && target.get(i) == header) {
                 // Hold on to the first header, when we need to reset to the top-level

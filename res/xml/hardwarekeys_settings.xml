@@ -18,19 +18,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
         <PreferenceCategory
-                android:key="keys_cat"
-                android:title="@string/keys_bindings_title" >
+            android:key="keys_cat"
+            android:title="@string/keys_bindings_title" >
 
             <CheckBoxPreference
                 android:key="enable_hardware_rebind"
                 android:title="@string/keys_enable_custom_title"
                 android:summary="@string/keys_enable_custom_summary" />
 
-            <com.android.settings.slim.ButtonBacklightBrightness
+            <com.android.settings.liquid.ButtonBacklightBrightness
                 android:key="button_backlight"
                 android:title="@string/button_backlight_title"
                 android:dialogTitle="@string/button_backlight_title"
                 android:persistent="false" />
+
         </PreferenceCategory>
 
         <PreferenceCategory

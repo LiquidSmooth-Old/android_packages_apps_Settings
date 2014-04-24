@@ -403,7 +403,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         return pref;
     }
 
-
     private boolean removeRootOptionsIfRequired() {
         // user builds don't get root, and eng always gets root
         if (!Build.IS_DEBUGGABLE || "eng".equals(Build.TYPE)) {

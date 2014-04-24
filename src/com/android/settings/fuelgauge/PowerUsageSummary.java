@@ -242,7 +242,6 @@ public class PowerUsageSummary extends PreferenceFragment implements
         mAppListGroup.addPreference(mLowBatteryWarning);
         mBatteryStatsCat.setOrder(-3);
         mAppListGroup.addPreference(mBatteryStatsCat);
-
         mBatteryStatusPref.setOrder(-2);
         mAppListGroup.addPreference(mBatteryStatusPref);
         BatteryHistoryPreference hist = new BatteryHistoryPreference(

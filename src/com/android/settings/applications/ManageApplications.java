@@ -78,7 +78,7 @@ import com.android.settings.Settings.StorageUseActivity;
 import com.android.settings.applications.ApplicationsState.AppEntry;
 import com.android.settings.deviceinfo.StorageMeasurement;
 import com.android.settings.Utils;
-import com.android.internal.util.slim.AppMoving;
+import com.android.internal.util.liquid.AppMoving;
 
 import java.util.ArrayList;
 import java.util.Comparator;

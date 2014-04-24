@@ -41,7 +41,7 @@ import android.util.Log;
 
 import com.android.internal.view.RotationPolicy;
 import com.android.settings.DreamSettings;
-import com.android.settings.slim.DisplayRotation;
+import com.android.settings.liquid.DisplayRotation;
 
 import java.util.ArrayList;
 
