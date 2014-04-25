@@ -95,19 +95,6 @@
             android:title="@string/unlock_quick_unlock_control_title"
             android:summary="@string/unlock_quick_unlock_control_summary" />
 
-        <CheckBoxPreference
-            android:key="shake_to_secure"
-            android:title="@string/shake_to_secure_title"
-            android:summary="@string/shake_to_secure_summary" />
-
-        <ListPreference
-            android:key="shake_auto_timeout"
-            android:title="@string/shake_secure_timeout_title"
-            android:dependency="shake_to_secure"
-            android:entries="@array/shake_secure_timeout_entries"
-            android:entryValues="@array/shake_secure_timeout_values"
-            android:persistent="false"/>
-
     </PreferenceCategory>
 
 </PreferenceScreen>
