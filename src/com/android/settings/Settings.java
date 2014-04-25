@@ -87,12 +87,15 @@ import com.android.settings.nfc.PaymentSettings;
 import com.android.settings.print.PrintJobSettingsFragment;
 import com.android.settings.print.PrintServiceSettingsFragment;
 import com.android.settings.print.PrintSettingsFragment;
+
 import com.android.settings.liquid.BatteryIconStyle;
 import com.android.settings.liquid.blacklist.BlacklistSettings;
 import com.android.settings.liquid.DisplayRotation;
 import com.android.settings.liquid.quicksettings.QuickSettingsTiles;
+import com.android.settings.liquid.ShakeEvents;
 import com.android.settings.liquid.QuietHours;
 import com.android.settings.liquid.themes.ThemeEnabler;
+
 import com.android.settings.tts.TextToSpeechSettings;
 import com.android.settings.users.UserSettings;
 import com.android.settings.vpn2.VpnSettings;
@@ -378,7 +381,8 @@ public class Settings extends PreferenceActivity
         BatteryIconStyle.class.getName(),
         DisplayRotation.class.getName(),
         ApnSettings.class.getName(),
-        ThemeSettings.class.getName()
+        ThemeSettings.class.getName(),
+        ShakeEvents.class.getName()
     };
 
     @Override
@@ -1205,4 +1209,5 @@ public class Settings extends PreferenceActivity
     public static class BatteryIconStyleSettingsActivity extends Settings { /* empty */ }
     public static class DisplayRotationSettingsActivity extends Settings { /* empty */ }
     public static class RamBarActivity extends Settings { /* empty */ }
+    public static class ShakeEventsSettingsActivity extends Settings { /* empty */ }
 }
