@@ -44,6 +44,7 @@
     <!-- General settings -->
     <string name="interface_settings_title">Interface</string>
     <string name="navigation_settings_title">Navigation</string>
+    <string name="kernel_tweaker_title">Performance</string>
     <string name="statusbar_settings_title">Status bar</string>
 
     <!-- Advanced settings -->
