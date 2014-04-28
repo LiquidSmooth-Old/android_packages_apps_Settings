@@ -688,6 +688,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="display_rotation_90_title">90 degrees</string>
     <string name="display_rotation_180_title">180 degrees</string>
     <string name="display_rotation_270_title">270 degrees</string>
+   
+    <!-- Swap volume buttons -->
+    <string name="swap_volume_buttons_title">Swap volume buttons</string>
+    <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
 
     <!-- Lock Screen -->
     <string name="lock_screen_title">Slider targets and shortcuts</string>
