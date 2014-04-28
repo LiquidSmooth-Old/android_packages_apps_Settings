@@ -1087,25 +1087,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="advanced_reboot_hide_on_keyguard">Hide on lock screen</string>
     <string name="advanced_reboot_show_always">Show always</string>
 
-    <!-- Recent apps panel -->
-    <string name="recent_panel_category">Recent apps panel</string>
-    <string name="recent_panel_scale_title">Size</string>
-    <string name="recent_panel_scale_summary">Recent apps panel size in percent</string>
-    <string name="recent_panel_100">100% (default)</string>
-    <string name="recent_panel_85">85%</string>
-    <string name="recent_panel_70">70%</string>
-
-    <!-- Recent apps mode -->
-    <string name="recent_panel_expanded_mode_title">Expanded mode</string>
-    <string name="recent_panel_expanded_mode_summary">Recent tasks expanded preview mode</string>
-    <string name="recent_panel_expanded_mode_auto">Auto (default)</string>
-    <string name="recent_panel_expanded_mode_always">Always</string>
-    <string name="recent_panel_expanded_mode_never">Never</string>
-
-    <!-- ATTENTION: RTL languages need to replace left with right -->
-    <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
-    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge.</string>
-
     <!-- Keyguard allow rotation -->
     <string name="lockscreen_rotation_title">Lockscreen rotation</string>
     <string name="lockscreen_rotation_portrait">Portrait only</string>
@@ -1384,22 +1365,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="development_shortcut_title">Development shortcut</string>
     <string name="development_shortcut_summary">Enable \'wipe data\' and \'force close\' options in notification area and recent apps list</string>
 
-    <!-- Sound themes -->
-    <string name="sound_packages_title">Sound packs</string>
-    <string name="install_sound_pack_title">Install sound pack</string>
-    <string name="install_sound_pack_summary">Install new sound packs added in SoundPacks folder on the internal storage</string>
-    <string name="select_sound_pack_title">Select sound pack</string>
-    <string name="select_sound_pack_summary">Select the active sound pack</string>
-    <string name="default_sound_pack">Default (System)</string>
-    <string name="error_pack_install">Error while installing the sound pack</string>
-
-    <!-- Fast charge QS tile -->
-    <string name="title_tile_fcharge">Fast charge</string>
-
-    <!-- On-the-Go -->
-    <string name="power_menu_onthego_title">On-The-Go Mode</string>
-    <string name="title_tile_onthego">On-The-Go</string>
-
     <!-- Message of dialog confirming that user wants to restart their device with a new runtime -->
     <string name="custom_runtime_warning_title">Warning</string>
     <string name="custom_runtime_warning_message">ART is not supported by LiquidSmooth. This setting is included for experimentation only and has the potential to cause instability, crashes, data loss or prevent the proper boot of your device. Visit &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; for more information.&lt;br/&gt;&lt;br/&gt;We request you do not file bug reports if you have enabled ART as your runtime.&lt;br/&gt;&lt;br/&gt;Are you sure you want to reboot to change runtime from <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> to <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
@@ -1537,5 +1502,28 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>	
     <string name="animation_duration_default">Default</string>
     <string name="header_summary_animation">@null</string>
+
+    <!-- Recent panel -->
+    <string name="recent_panel_title">Recent panel</string>
+    <string name="recent_panel_summary">Enables and customize recent apps display</string>
+
+    <!-- Recent apps panel -->
+    <string name="recent_panel_category">Recent apps panel</string>
+    <string name="recent_panel_scale_title">Size</string>
+    <string name="recent_panel_scale_summary">Recent apps panel size in percent</string>
+    <string name="recent_panel_100">100% (default)</string>
+    <string name="recent_panel_85">85%</string>
+    <string name="recent_panel_70">70%</string>
+
+    <!-- Recent apps mode -->
+    <string name="recent_panel_expanded_mode_title">Expanded mode</string>
+    <string name="recent_panel_expanded_mode_summary">Recent tasks expanded preview mode</string>
+    <string name="recent_panel_expanded_mode_auto">Auto (default)</string>
+    <string name="recent_panel_expanded_mode_always">Always</string>
+    <string name="recent_panel_expanded_mode_never">Never</string>
+
+    <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
+    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge.</string>
 
 </resources>
