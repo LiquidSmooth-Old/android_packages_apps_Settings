@@ -617,7 +617,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="power_menu_title">Global menu</string>
 
     <!-- Power menu -->
-    <string name="power_menu_style_summary">Change global menu colors</string>
+    <string name="power_menu_title">Power menu</string>
+    <string name="power_menu_summary">Change or view order of global power menu</string>
+    <string name="power_menu_style_summary">Customize power menu icon and text colors</string>
 
     <!-- Navigation bar -->
     <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
