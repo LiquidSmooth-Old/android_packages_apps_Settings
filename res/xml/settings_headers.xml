@@ -75,7 +75,18 @@
         android:fragment="com.android.settings.liquid.NavigationSettings"
         android:icon="@drawable/ic_liquid_navigation" />
 
-    <!-- Statusbar -->
+    <!-- Kernel Tweaker -->
+    <header
+        android:id="@+id/kernel_tweaker"
+        android:title="@string/kernel_tweaker_title"
+        android:icon="@drawable/ic_liquid_performance" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.dsht.kerneltweaker.MainActivity"
+            android:targetPackage="com.dsht.kerneltweaker" />
+	</header>
+
+    <!-- Status bar -->
     <header
         android:id="@+id/statusbar_settings"
         android:title="@string/statusbar_settings_title"
