@@ -1118,6 +1118,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memory</string>
 
+    <!-- Clock widget -->
+    <string name="lock_clock_title">Clock widget</string>
+    <string name="lock_clock_summary">Change home or lock screen widget display</string>
+
     <!-- Lock screen menu unlock -->
     <string name="unlock_menu_unlock_title">Menu unlock</string>
     <string name="unlock_menu_unlock_summary">Pressing the menu button unlocks the device</string>
