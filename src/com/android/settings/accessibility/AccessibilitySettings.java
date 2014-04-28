@@ -44,7 +44,6 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.text.TextUtils.SimpleStringSplitter;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.View;
@@ -104,16 +103,8 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
             "captioning_preference_screen";
     private static final String DISPLAY_MAGNIFICATION_PREFERENCE_SCREEN =
             "screen_magnification_preference_screen";
-    private static final String RECENT_PANEL_SHOW_TOPMOST =
-            "recent_panel_show_topmost";
     private static final String SHAKE_SENSITIVITY =
             "shake_sensitivity";
-    private static final String RECENT_PANEL_LEFTY_MODE =
-            "recent_panel_lefty_mode";
-    private static final String RECENT_PANEL_SCALE =
-            "recent_panel_scale";
-    private static final String RECENT_PANEL_EXPANDED_MODE =
-            "recent_panel_expanded_mode";
 
     // Extras passed to sub-fragments.
     static final String EXTRA_PREFERENCE_KEY = "preference_key";
@@ -210,10 +201,6 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
     private PreferenceScreen mCaptioningPreferenceScreen;
     private PreferenceScreen mDisplayMagnificationPreferenceScreen;
     private PreferenceScreen mGlobalGesturePreferenceScreen;
-    private CheckBoxPreference mRecentsShowTopmost;
-    private CheckBoxPreference mRecentPanelLeftyMode;
-    private ListPreference mRecentPanelScale;
-    private ListPreference mRecentPanelExpandedMode;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -260,26 +247,6 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
             int value = Integer.parseInt((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.SHAKE_SENSITIVITY, value);
-            return true;
-        } else if (preference == mRecentPanelScale) {
-            int value = Integer.parseInt((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.RECENT_PANEL_SCALE_FACTOR, value);
-            return true;
-        } else if (preference == mRecentPanelExpandedMode) {
-            int value = Integer.parseInt((String) newValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.RECENT_PANEL_EXPANDED_MODE, value);
-            return true;
-        } else if (preference == mRecentPanelLeftyMode) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.RECENT_PANEL_GRAVITY,
-                    ((Boolean) newValue) ? Gravity.LEFT : Gravity.RIGHT);
-            return true;
-        } else if (preference == mRecentsShowTopmost) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.RECENT_PANEL_SHOW_TOPMOST,
-                    ((Boolean) newValue) ? 1 : 0);
             return true;
         }
         return false;
@@ -423,25 +390,6 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
             // nor long press power does not show global actions menu.
             mSystemsCategory.removePreference(mGlobalGesturePreferenceScreen);
         }
-
-        boolean enableRecentsShowTopmost = Settings.System.getInt(getContentResolver(),
-                                      Settings.System.RECENT_PANEL_SHOW_TOPMOST, 0) == 1;
-        mRecentsShowTopmost = (CheckBoxPreference) findPreference(RECENT_PANEL_SHOW_TOPMOST);
-        mRecentsShowTopmost.setChecked(enableRecentsShowTopmost);
-        mRecentsShowTopmost.setOnPreferenceChangeListener(this);
-
-        mRecentPanelLeftyMode =
-                (CheckBoxPreference) findPreference(RECENT_PANEL_LEFTY_MODE);
-        mRecentPanelLeftyMode.setOnPreferenceChangeListener(this);
-
-        mRecentPanelScale =
-                (ListPreference) findPreference(RECENT_PANEL_SCALE);
-        mRecentPanelScale.setOnPreferenceChangeListener(this);
-
-        mRecentPanelExpandedMode =
-                (ListPreference) findPreference(RECENT_PANEL_EXPANDED_MODE);
-        mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
-
     }
 
     private void updateAllPreferences() {
@@ -607,19 +555,6 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
             mGlobalGesturePreferenceScreen.setSummary(
                     R.string.accessibility_global_gesture_preference_summary_off);
         }
-
-        final boolean recentLeftyMode = Settings.System.getInt(getContentResolver(),
-                Settings.System.RECENT_PANEL_GRAVITY, Gravity.RIGHT) == Gravity.LEFT;
-        mRecentPanelLeftyMode.setChecked(recentLeftyMode);
-
-        final int recentScale = Settings.System.getInt(getContentResolver(),
-                Settings.System.RECENT_PANEL_SCALE_FACTOR, 100);
-        mRecentPanelScale.setValue(recentScale + "");
-
-        final int recentExpandedMode = Settings.System.getInt(getContentResolver(),
-                Settings.System.RECENT_PANEL_EXPANDED_MODE, 0);
-        mRecentPanelExpandedMode.setValue(recentExpandedMode + "");
-
     }
 
     private void updateLockScreenRotationCheckbox() {
