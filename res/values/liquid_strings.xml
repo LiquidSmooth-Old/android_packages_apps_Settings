@@ -43,6 +43,7 @@
 
     <!-- General settings -->
     <string name="interface_settings_title">Interface</string>
+    <string name="lockscreen_settings_title">Lock screen</string>
     <string name="navigation_settings_title">Navigation</string>
     <string name="kernel_tweaker_title">Performance</string>
     <string name="statusbar_settings_title">Status bar</string>
@@ -702,9 +703,15 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="swap_volume_buttons_title">Swap volume buttons</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
 
-    <!-- Lock Screen -->
-    <string name="lock_screen_title">Slider targets and shortcuts</string>
-    <string name="lock_screen_summary">View or change the slider targets and shortcuts</string>
+    <!-- Lock screen settings -->
+    <string name="lock_screen_interface_title">Interface</string>
+    <string name="lock_screen_interface_summary">Customize lock screen sliders or shortcuts</string>
+    <string name="lock_screen_notifications_title">Notifications</string>
+    <string name="lock_screen_notifications_summary">Configure lock screen notification settings</string>
+    <string name="lock_screen_style_title">Style</string>
+    <string name="lock_screen_style_summary">Change appearance of lock screen or colors</string>
+    <string name="lock_screen_widgets_title">Widgets</string>
+    <string name="lock_screen_widgets_summary">Customize functions of lock screen widgets</string>
 
     <!-- Lock Screen Targets -->
     <string name="lockscreen_target_info">Drag the slider to targets to assign applications</string>
@@ -810,15 +817,22 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="shake_secure_timeout_10min">10 minutes after screen turned off</string>
     <string name="shake_secure_timeout_30min">30 minutes after screen turned off</string>
 
-    <!-- Lock before unlock -->
-    <string name="lock_before_unlock_title">Show slider before secure unlock</string>
-    <string name="lock_before_unlock_summary">Show slider lockscreen before secure unlock mechanism</string>
-
     <!-- Sizes for pattern lockscreen -->
     <string name="lock_pattern_size_3">3x3</string>
     <string name="lock_pattern_size_4">4x4</string>
     <string name="lock_pattern_size_5">5x5</string>
     <string name="lock_pattern_size_6">6x6</string>
+
+    <!-- Lock screen battery ring -->
+    <string name="battery_around_ring_title">Battery around ring</string>
+    <string name="battery_around_ring_summary">Display battery level around unlock ring</string>
+
+    <!--Lock screen see through-->
+    <string name="see_through_title">See through</string>
+    <string name="see_through_summary">Shows the content behind lock screen</string>
+
+    <!--Lock screen blur radius -->
+    <string name="blur_radius_title">Blur radius</string>
 
     <!-- Notification drawer background -->
     <string name="notification_style_title">Background style</string>
@@ -1206,6 +1220,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="progressbar_reset">Reset</string>
     <string name="progressbar_button_reset">Reset colors</string>
     <string name="progressbar_reset_message">Reset progress bar style to default?</string>
+
+    <!-- Lockscreen wallpaper -->
+    <string name="lockscreen_wallpaper">Custom wallpaper</string>
+    <string name="select_wallpaper">Select wallpaper</string>
 
     <!-- Notification reminder -->
     <string name="noti_reminder_category">Reminders</string>
