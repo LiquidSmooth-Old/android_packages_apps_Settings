@@ -72,6 +72,13 @@
             android:entryValues="@array/show_network_traffic_frequency_values"
             android:persistent="false" />
 
+        <CheckBoxPreference
+            android:key="status_bar_notification_count"
+            android:title="@string/status_bar_notification_count_title"
+            android:summary="@string/status_bar_notification_count_summary"
+            android:defaultValue="false" />
+
+
     </PreferenceCategory>
 
 </PreferenceScreen>
