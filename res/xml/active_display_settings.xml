@@ -81,7 +81,7 @@
         android:entryValues="@array/ad_redisplay_values"
         android:dependency="ad_enable"/>
 
-    <com.android.settings.liquid.SeekBarPreferenceCham
+    <com.android.settings.liquid.SeekBarPreference
         android:key="ad_annoying"
         android:persistent="false"
         android:title="@string/ad_annoying_title"
@@ -109,7 +109,7 @@
             android:summary="@string/ad_shake_force_summary"
             android:dependency="active_display_shake_event"/>
 
-        <com.android.settings.liquid.SeekBarPreferenceCham
+        <com.android.settings.liquid.SeekBarPreference
             android:key="ad_shake_threshold"
             android:persistent="false"
             android:title="@string/ad_shake_threshold_title"
@@ -121,7 +121,7 @@
             settings:unitsRight=""
             android:dependency="active_display_shake_event" />
 
-        <com.android.settings.liquid.SeekBarPreferenceCham
+        <com.android.settings.liquid.SeekBarPreference
             android:key="ad_shake_long_threshold"
             android:persistent="false"
             android:title="@string/ad_shake_long_threshold_title"
@@ -133,7 +133,7 @@
             settings:unitsRight="s"
             android:dependency="active_display_shake_event" />
 
-        <com.android.settings.liquid.SeekBarPreferenceCham
+        <com.android.settings.liquid.SeekBarPreference
             android:key="ad_shake_timeout"
             android:persistent="false"
             android:title="@string/ad_shake_timeout_title"
@@ -145,7 +145,7 @@
             settings:unitsRight="s"
             android:dependency="active_display_shake_event" />
 
-        <com.android.settings.liquid.SystemCheckBoxPreference
+        <com.android.settings.liquid.SeekBarPreference
             android:key="active_display_shake_quiet_hours"
             android:title="@string/ad_shake_quiet_hours_title"
             android:summary="@string/ad_shake_quiet_hours_summary"
@@ -215,7 +215,7 @@
             android:entryValues="@array/ad_timeout_values"
             android:dependency="ad_enable"/>
 
-        <com.android.settings.liquid.SeekBarPreferenceCham
+        <com.android.settings.liquid.SeekBarPreference
             android:key="ad_brightness"
             android:persistent="false"
             android:title="@string/ad_brightness_title"

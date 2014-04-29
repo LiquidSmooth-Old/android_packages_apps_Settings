@@ -94,9 +94,6 @@ public class InterfaceSettings extends SettingsPreferenceFragment implements
     }
 
     private void updateSettings() {
-        setPreferenceScreen(null);
-        addPreferencesFromResource(R.xml.liquid_interface_settings);
-
         mUseAltResolver = (CheckBoxPreference) findPreference(KEY_USE_ALT_RESOLVER);
         mUseAltResolver.setChecked(Settings.System.getInt(getActivity()
                 .getContentResolver(), Settings.System.ACTIVITY_RESOLVER_USE_ALT, 0) == 1);
