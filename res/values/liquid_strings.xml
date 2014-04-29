@@ -1772,4 +1772,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="status_bar_double_tap_to_sleep_summary">Double-tap the status bar to goto sleep</string>
 
+    <!-- Status bar notification count -->
+    <string name="status_bar_notification_count_title">Notification count</string>
+    <string name="status_bar_notification_count_summary">Display number of similar notifications</string>
+
 </resources>
