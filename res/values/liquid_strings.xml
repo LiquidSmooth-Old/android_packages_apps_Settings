@@ -1755,4 +1755,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="status_bar_notification_count_title">Notification count</string>
     <string name="status_bar_notification_count_summary">Display number of similar notifications</string>
 
+    <!-- Status bar signal text style -->
+    <string name="status_bar_style_hidden">Hidden</string>
+    <string name="status_bar_style_icon">Signal icon</string>
+    <string name="status_bar_signal_text_title">Signal display</string>
+    <string name="status_bar_signal_text_show_text">Signal text</string>
+
 </resources>
