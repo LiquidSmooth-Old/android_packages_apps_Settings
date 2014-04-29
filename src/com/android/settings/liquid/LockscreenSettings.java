@@ -21,7 +21,10 @@ import android.app.admin.DevicePolicyManager;
 import android.content.pm.PackageManager;
 import android.content.Context;
 import android.content.res.Resources;
+import android.database.ContentObserver;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
@@ -53,6 +56,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment
     private static final String KEY_MENU_UNLOCK_PREF = "menu_unlock";
     private static final String KEY_SHAKE_TO_SECURE = "shake_to_secure";
     private static final String KEY_SHAKE_AUTO_TIMEOUT = "shake_auto_timeout";
+    private static final String KEY_PEEK = "notification_peek";
 
     private PackageManager mPM;
     private DevicePolicyManager mDPM;
@@ -66,6 +70,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment
     private CheckBoxPreference mMenuUnlock;
     private CheckBoxPreference mShakeToSecure;
     private ListPreference mShakeTimer;
+    private CheckBoxPreference mNotificationPeek;
 
     // needed for menu unlock
     private Resources keyguardResource;
@@ -204,6 +209,11 @@ public class LockscreenSettings extends SettingsPreferenceFragment
                 mMenuUnlock.setOnPreferenceChangeListener(this);
             }
         }
+
+        mNotificationPeek = (CheckBoxPreference) findPreference(KEY_PEEK);
+        mNotificationPeek.setPersistent(false);
+
+        updatePeekCheckbox();
     }
 
     private void updateShakeTimerPreferenceSummary() {
@@ -221,6 +231,12 @@ public class LockscreenSettings extends SettingsPreferenceFragment
             }
         }
         mShakeTimer.setSummary(entries[best]);
+    }
+
+    private void updatePeekCheckbox() {
+        boolean enabled = Settings.System.getInt(getContentResolver(),
+                Settings.System.PEEK_STATE, 0) == 1;
+        mNotificationPeek.setChecked(enabled);
     }
 
     @Override
@@ -278,6 +294,9 @@ public class LockscreenSettings extends SettingsPreferenceFragment
                     Settings.System.BATTERY_AROUND_LOCKSCREEN_RING,
                     mLockRingBattery.isChecked() ? 1 : 0);
             return true;
+        } else if (preference == mNotificationPeek) {
+            Settings.System.putInt(getContentResolver(), Settings.System.PEEK_STATE,
+                    mNotificationPeek.isChecked() ? 1 : 0);
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }

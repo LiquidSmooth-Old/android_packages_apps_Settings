@@ -1844,4 +1844,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="unlock_menu_unlock_title">Menu unlock</string>
     <string name="unlock_menu_unlock_summary">Pressing the menu button unlocks the device</string>
 
+	<!--Notification peek-->
+    <string name="notification_peek_title">Notification peek</string>
+    <string name="notification_peek_summary">Show latest notification after picking up your device</string>
+
 </resources>

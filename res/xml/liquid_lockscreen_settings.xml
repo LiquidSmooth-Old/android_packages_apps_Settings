@@ -52,6 +52,11 @@
     <PreferenceCategory
         android:key="advanced_category"
         android:title="@string/advanced_category_title">
+		
+        <CheckBoxPreference
+            android:key="notification_peek"
+            android:title="@string/notification_peek_title"
+            android:summary="@string/notification_peek_summary" />
 
         <CheckBoxPreference
             android:key="battery_around_ring"
