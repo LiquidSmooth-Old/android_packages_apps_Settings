@@ -125,14 +125,6 @@
         android:fragment="com.android.settings.liquid.PieControl"
         android:icon="@drawable/ic_liquid_pie_control" />
 
-    <!-- Wakelock blocker -->
-    <header
-        android:id="@+id/wakelock_blocker"
-        android:title="@string/wakelock_blocker"
-        android:fragment="com.android.settings.liquid.WakeLockBlocker"
-        android:icon="@drawable/ic_menu_save"
-        android:layout="@layout/preference_wakelockblocker" />
-
     <!-- Theme settings -->
     <header
         android:id="@+id/theme_settings"
@@ -249,6 +241,14 @@
             android:targetPackage="com.tmobile.themechooser"
             android:targetClass="com.tmobile.themechooser.ThemeChooser" />
     </header>
+
+    <!-- Wakelock blocker -->
+    <header
+        android:id="@+id/wakelock_blocker"
+        android:title="@string/wakelock_blocker"
+        android:fragment="com.android.settings.liquid.WakeLockBlocker"
+        android:icon="@drawable/ic_menu_save"
+        android:layout="@layout/preference_wakelockblocker" />
 
     <!--  ACCOUNTS section -->
     <header
