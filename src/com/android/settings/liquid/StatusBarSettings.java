@@ -49,6 +49,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String NETWORK_TRAFFIC_UNIT = "network_traffic_unit";
     private static final String NETWORK_TRAFFIC_PERIOD = "network_traffic_period";
     private static final String STATUS_BAR_NOTIFICATION_COUNT = "status_bar_notification_count";
+    private static final String STATUS_BAR_SIGNAL = "status_bar_signal";
 
     private PreferenceScreen mClockStyle;
     private CheckBoxPreference mStatusBarBrightnessControl;
@@ -56,6 +57,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private ListPreference mNetTrafficUnit;
     private ListPreference mNetTrafficPeriod;
     private CheckBoxPreference mStatusBarNotifCount;
+    private ListPreference mStatusBarSignal;
 
     private int mNetTrafficVal;
     private int MASK_UP;
@@ -126,6 +128,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         mStatusBarNotifCount = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_NOTIFICATION_COUNT);
         mStatusBarNotifCount.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_NOTIFICATION_COUNT, 0) == 1));
+
+        mStatusBarSignal = (ListPreference) prefSet.findPreference(STATUS_BAR_SIGNAL);
+        int signalStyle = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_SIGNAL_TEXT, 0);
+        mStatusBarSignal.setValue(String.valueOf(signalStyle));
+        mStatusBarSignal.setSummary(mStatusBarSignal.getEntry());
+        mStatusBarSignal.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -162,6 +171,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             Settings.System.putInt(getContentResolver(), Settings.System.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
             int index = mNetTrafficPeriod.findIndexOfValue((String) newValue);
             mNetTrafficPeriod.setSummary(mNetTrafficPeriod.getEntries()[index]);
+            return true;
+        } else if (preference == mStatusBarSignal) {
+            int signalStyle = Integer.valueOf((String) newValue);
+            int index = mStatusBarSignal.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_SIGNAL_TEXT, signalStyle);
+            mStatusBarSignal.setSummary(mStatusBarSignal.getEntries()[index]);
             return true;
         }
         return false;
