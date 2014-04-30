@@ -1935,4 +1935,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ribbon_picker_title">Ribbon and layout</string>
     <string name="ribbon_picker_summary">View, select or change the ribbon widgets</string>
 
+    <!-- Bluetooth accept all Filestypes -->
+    <string name="bluetooth_accept_all_files">Accept all file types</string>
+
 </resources>
