@@ -1346,4 +1346,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ad_pocket_mode_notifications">Notifications only</string>
     <string name="ad_pocket_mode_always">Always</string>
 
+    <!-- Bluetooth accept all Filestypes -->
+    <string name="bluetooth_accept_all_files">Accept all file types</string>
+
 </resources>
