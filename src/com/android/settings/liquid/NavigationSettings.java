@@ -162,11 +162,11 @@ public class NavigationSettings extends SettingsPreferenceFragment
             mMenuDisplayLocation.setEnabled(mNavBarMenuDisplayValue != 1);
             return true;
         } else if (preference == mEnableNavigationBar) {
-            if (!((Boolean) newValue) && !LiquidActions.isPieEnabled(getActivity())
+            /* if (!((Boolean) newValue) && !LiquidActions.isPieEnabled(getActivity())
                     && LiquidActions.isNavBarDefault(getActivity())) {
                 showDialogInner(DLG_NAVIGATION_WARNING);
                 return true;
-            }
+            } */
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NAVIGATION_BAR_SHOW,
                     ((Boolean) newValue) ? 1 : 0);
