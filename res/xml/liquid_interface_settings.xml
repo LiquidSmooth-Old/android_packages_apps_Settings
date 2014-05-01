@@ -45,6 +45,12 @@
         android:fragment="com.android.settings.liquid.gestureanywhere.GestureAnywhereSettings" />
 
     <PreferenceScreen
+        android:key="hardwarekeys_settings"
+        android:title="@string/button_keys_title"
+        android:summary="@string/button_keys_summary"
+        android:fragment="com.android.settings.liquid.HardwareKeysSettings" />
+
+    <PreferenceScreen
         android:key="navbar_targets_settings"
         android:fragment="com.android.settings.liquid.dslv.ButtonsListViewSettings"
         android:title="@string/power_menu_title"

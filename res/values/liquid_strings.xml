@@ -140,6 +140,7 @@
     <string name="animation_no_scroll_title">Scrolling modifiers</string>
     <string name="animation_no_scroll_summary_on">Enabled</string>
     <string name="animation_no_scroll_summary_off">Disabled</string>
+    <string name="scroll_disclaimer_summary">Note: Most apps need to be restarted for custom values to take effect</string>
 
     <!-- Toast animations -->
     <string name="toast_animation_title">Toast animations</string>
@@ -1354,6 +1355,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Hardware keys -->
     <string name="button_keys_title">Hardware Buttons</string>
+    <string name="button_keys_summary">Enable for devices with physical keys</string>
     <string name="keys_bindings_title">Key actions</string>
     <string name="keys_enable_custom_title">Enable custom actions</string>
     <string name="keys_enable_custom_summary">Enable custom hardware key actions</string>
