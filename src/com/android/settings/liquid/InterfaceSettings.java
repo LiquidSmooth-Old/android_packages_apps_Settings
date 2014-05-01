@@ -53,6 +53,7 @@ public class InterfaceSettings extends SettingsPreferenceFragment
 
     private static final String KEY_LCD_DENSITY = "lcd_density";
     private static final String DENSITY_PROP = "persist.sys.lcd_density";
+    private static final String KEY_HARDWARE_KEYS = "hardwarekeys_settings";
 
     private static final int DIALOG_CUSTOM_DENSITY = 101;
 
@@ -83,6 +84,13 @@ public class InterfaceSettings extends SettingsPreferenceFragment
         }
         mLcdDensity.setSummary(getResources().getString(R.string.current_lcd_density) + current);
         mLcdDensity.setOnPreferenceChangeListener(this);
+
+        PreferenceScreen hardwareKeys = (PreferenceScreen) findPreference(KEY_HARDWARE_KEYS);
+        int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        if (deviceKeys == 0 && hardwareKeys != null) {
+            getPreferenceScreen().removePreference(hardwareKeys);
+        }
     }
 
     @Override
