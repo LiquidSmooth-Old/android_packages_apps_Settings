@@ -378,9 +378,8 @@
     <string name="select_wallpaper">Select wallpaper</string>
 
     <!-- Lock screen notifications -->
-    <string name="lockscreen_notifications_title">Notifications</string>
-    <string name="lockscreen_notifications">Enable notifications</string>
-    <string name="lockscreen_notifications_summary">Show current pending notifications</string>
+    <string name="lockscreen_notification_title">Enable notifications</string>
+    <string name="lockscreen_notification_summary">Show current pending notifications</string>
     <string name="pocket_mode">Pocket mode</string>
     <string name="pocket_mode_summary">Screen on and show notifications</string>
     <string name="show_always">Show always</string>
