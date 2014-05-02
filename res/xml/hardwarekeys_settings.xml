@@ -31,6 +31,7 @@
                 android:title="@string/button_backlight_title"
                 android:dialogTitle="@string/button_backlight_title"
                 android:persistent="false" />
+
         </PreferenceCategory>
 
         <PreferenceCategory
@@ -137,19 +138,19 @@
             android:key="button_keys_camera"
             android:title="@string/keys_camera_title">
 
-            <com.android.settings.liquid.SystemSettingCheckBoxPreference
+            <com.android.settings.liquid.SystemCheckBoxPreference
                 android:key="camera_wake_screen"
                 android:title="@string/keys_camera_title"
                 android:summary="@string/camera_wake_summary"
                 android:defaultValue="false" />
 
-            <com.android.settings.liquid.SystemSettingCheckBoxPreference
+            <com.android.settings.liquid.SystemCheckBoxPreference
                 android:key="camera_sleep_on_release"
                 android:title="@string/keys_camera_peak_title"
                 android:summary="@string/camera_sleep_on_release_summary"
                 android:defaultValue="false" />
 
-            <com.android.settings.liquid.SystemSettingCheckBoxPreference
+            <com.android.settings.liquid.SystemCheckBoxPreference
                 android:key="camera_music_controls"
                 android:title="@string/keys_camera_music_title"
                 android:summary="@string/camera_music_controls_summary"
