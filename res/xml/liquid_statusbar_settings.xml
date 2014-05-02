@@ -45,7 +45,7 @@
             android:summary="@string/status_bar_toggle_brightness_summary"
             android:defaultValue="false" />
 
-        <com.android.settings.liquid.SystemSettingCheckBoxPreference
+        <com.android.settings.liquid.SystemCheckBoxPreference
             android:key="double_tap_sleep_gesture"
             android:title="@string/status_bar_double_tap_to_sleep_title"
             android:summary="@string/status_bar_double_tap_to_sleep_summary"
