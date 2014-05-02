@@ -54,19 +54,10 @@
     <string name="pie_control_title">Pie control</string>
     <string name="theme_settings_title">Theme settings</string>
 
-    <!-- Device settings -->
-    <string name="device_settings_title">Device</string>
-
     <!-- Action shortcuts -->
     <string name="shortcut_picker_title">Action shortcuts</string>
 
-    <!-- Superuser title -->
-    <string name="superuser_settings_title">Superuser</string>
-
-    <!-- Theme chooser -->
-    <string name="theme_chooser_title">Theme chooser</string>
-
-    <!-- Color Picker -->
+    <!-- Color picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
     <string name="arrow_right">→</string>
@@ -74,6 +65,234 @@
     <string name="hex">Hex:</string>
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
+
+    <!-- Device settings -->
+    <string name="device_settings_title">Device</string>
+
+    <!-- Superuser title -->
+    <string name="superuser_settings_title">Superuser</string>
+
+    <!-- Theme chooser -->
+    <string name="theme_chooser_title">Theme chooser</string>
+
+<!-- INTERFACE START -->
+
+    <!-- Alternate resolver -->
+    <string name="alt_resolver_title">Alternate resolver</string>
+    <string name="alt_resolver_summary">Use alternate default app picking grid</string>
+
+    <!-- Clock widget -->
+    <string name="lock_clock_title">Clock widget</string>
+    <string name="lock_clock_summary">Change home or lock screen widget display</string>
+
+    <!-- Animation controls -->
+    <string name="animation_controls_title">Animation controls</string>
+    <string name="animation_controls_summary">Change direction of the system animations</string>
+    <string name="activity_open_title">Activity open</string>	
+    <string name="activity_close_title">Activity close</string>	
+    <string name="task_open_title">Task open</string>	
+    <string name="task_close_title">Task close</string>	
+    <string name="task_move_to_front_title">Move to front</string>	
+    <string name="task_move_to_back_title">Move to back</string>	
+    <string name="wallpaper_open_title">Wallpaper open</string>	
+    <string name="wallpaper_close_title">Wallpaper close</string>	
+    <string name="wallpaper_intra_open_title">Wallpaper intra open</string>	
+    <string name="wallpaper_intra_close_title">Wallpaper intra close</string>	
+    <string name="animation_duration_title">Animation duration</string>	
+    <string name="title_animation_no_override">Prevent app overrides</string>	
+    <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>	
+    <string name="animation_duration_default">Default</string>
+    <string name="header_summary_animation">@null</string>
+
+    <!-- IME animations -->
+    <string name="ime_animation_title">IME animations</string>
+    <string name="ime_animation_summary">Set custom animations for system keyboard</string>
+    <string name="animation_settings_reset_message">Reset animations to default?</string>
+    <string name="animation_default">Default</string>
+    <string name="animation_fade">Fade</string>
+    <string name="animation_slide_right">Slide in right</string>
+    <string name="animation_slide_left">Slide in left</string>
+    <string name="animation_slide_right_no_fade">Slide in right (no fade)</string>
+    <string name="animation_slide_left_no_fade">Slide in left (no fade)</string>
+    <string name="animation_slide_up">Slide in bottom</string>
+    <string name="animation_slide_down">Slide in top</string>
+    <string name="animation_translucent">Translucent</string>
+    <string name="animation_grow_shrink">Grow in (top)</string>
+    <string name="animation_grow_shrink_center">Grow in (center)</string>
+    <string name="animation_grow_shrink_bottom">Grow in (bottom)</string>
+    <string name="animation_grow_shrink_left">Grow in (left)</string>
+    <string name="animation_grow_shrink_right">Grow in (right)</string>
+    <string name="animation_random">Random</string>
+    <string name="ime_animation_test_title">Test IME animation</string>
+    <string name="ime_enter_animation_title">Enter animation</string>
+    <string name="ime_exit_animation_title">Exit animation</string>
+    <string name="ime_interpolator_title">Interpolator</string>
+    <string name="ime_duration_title">IME duration</string>
+
+    <!-- Scrolling animations -->
+    <string name="scrolling_title">Scrolling animations</string>
+    <string name="scrolling_summary">Customize system animations for scrolling</string>
+    <string name="animation_fling_velocity_title">Fling velocity</string>
+    <string name="animation_scroll_friction_title">Scroll friction</string>
+    <string name="animation_overscroll_distance_title">Overscroll distance</string>
+    <string name="animation_overfling_distance_title">Overfling distance</string>
+    <string name="animation_duration_summary">Set duration</string>
+    <string name="animation_no_scroll_title">Scrolling modifiers</string>
+    <string name="animation_no_scroll_summary_on">Enabled</string>
+    <string name="animation_no_scroll_summary_off">Disabled</string>
+
+    <!-- Toast animations -->
+    <string name="toast_animation_title">Toast animations</string>
+    <string name="toast_animation_summary">Select and preview system toast animation</string>
+    <string name="toast_none_animation">None</string>
+    <string name="toast_default_animation">Default</string>
+    <string name="toast_fade_animation">Fade animation</string>
+    <string name="toast_SlideRight_animation">Slide right</string>
+    <string name="toast_SlideLeft_animation">Slide left</string>
+    <string name="toast_Xylon_animation">Xylon animation</string>
+    <string name="toast_Toko_animation">Toko animation</string>
+    <string name="toast_Tn_animation">Tn animation</string>
+    <string name="toast_Honami_animation">Honami animation</string>
+    <string name="toast_FastFade_animation">Fast fade</string>
+    <string name="toast_GrowFade_animation">Grow fade</string>
+    <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
+    <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
+    <string name="toast_Translucent_animation">Translucent animation</string>
+
+    <!-- Custom density -->
+    <string name="custom_density_title">Custom density</string>
+    <string name="set_custom_density_title">Set custom density</string>
+    <string name="set_custom_density_set">Set</string>
+    <string name="current_density">"Current density: "</string>
+    <string name="new_density">"New density: "</string>
+    <string name="density_change_warning">Note: Closes all running apps!</string>
+
+    <!-- Gesture anywhere -->
+    <string name="gesture_anywhere_title">Gesture anywhere</string>
+    <string name="gesture_anywhere_summary">Custom screen gestures to execute actions</string>
+    <string name="gesture_anywhere_enabled_title">Gesture anywhere</string>
+    <string name="gesture_anywhere_enabled_summary">Enables gesture anywhere</string>
+    <string name="gesture_anywhere_position_title">Loction</string>
+    <string name="gesture_anywhere_position_left">Left edge</string>
+    <string name="gesture_anywhere_position_right">Right edge</string>
+    <string name="gesture_anywhere_gestures_title">Gestures</string>
+    <string name="gesture_anywhere_gestures_summary">Add, remove, and edit gestures</string>
+    <string name="trigger_category">Trigger region</string>
+    <string name="trigger_width_title">Trigger width</string>
+    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
+    <string name="trigger_top_title">Trigger position</string>
+    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
+    <string name="trigger_bottom_title">Trigger height</string>
+    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
+    <string name="ga_button_add">Add gesture</string>
+    <string name="ga_button_reload">Reload</string>
+    <string name="ga_button_discard">Discard</string>
+    <string name="ga_button_done">Done</string>
+    <string name="ga_prompt_gesture_name">Name</string>
+    <string name="ga_error_missing_name">You must enter a name</string>
+    <string name="ga_save_success">Gesture saved in %s</string>
+    <string name="ga_rename_action">OK</string>
+    <string name="ga_cancel_action">Cancel</string>
+    <string name="ga_gestures_loading">Loading gestures...</string>
+    <string name="ga_gestures_empty">No gestures</string>
+    <string name="ga_gestures_activity">Gestures</string>
+    <string name="ga_gestures_edit">Edit</string>
+    <string name="ga_gestures_delete">Delete</string>
+    <string name="ga_gestures_delete_success">Gesture deleted</string>
+    <string name="ga_gestures_rename_title">Rename gesture</string>
+    <string name="ga_gestures_rename_label">Gesture name</string>
+    <string name="ga_gestures_error_loading">Could not load %s. Make sure you have storage available.</string>
+    <string name="profile_applist_title">Apps</string>
+
+    <!-- Power menu -->
+    <string name="power_menu_title">Power menu</string>
+    <string name="power_menu_summary">Change or view order of global power menu</string>      
+    <string name="power_menu_style_summary">Customize power menu icon and text colors</string>
+
+	<!-- Progress bar -->
+    <string name="progressbar_title">Progress bar</string>
+    <string name="progressbar_summary">Customize appearance of the progress bars</string>
+    <string name="progressbar_mirror_title">Mirror mode</string>
+    <string name="progressbar_reverse_title">Reversed</string>
+    <string name="progressbar_speed_title">Speed</string>
+    <string name="progressbar_width_title">Stroke width</string>
+    <string name="progressbar_length_title">Separator length</string>
+    <string name="progressbar_count_title">Sections count</string>
+    <string name="progressbar_color_1_title">Color1</string>
+    <string name="progressbar_color_2_title">Color2</string>
+    <string name="progressbar_color_3_title">Color3</string>
+    <string name="progressbar_color_4_title">Color4</string>
+    <string name="sample_progressbar_text">ProgressBar : Preview</string>
+    <string name="progressbar_interpolator">Interpolator</string>
+    <string name="progressbar_none">None</string>
+    <string name="progressbar_acclerate">Accelerate</string>
+    <string name="progressbar_linear">Linear</string>
+    <string name="progressbar_acceleratedecelerate">AccelerateDecelerate</string>
+    <string name="progressbar_decelerate">Decelerate</string>
+    <string name="progressbar_reset">Reset</string>
+    <string name="progressbar_button_reset">Reset colors</string>
+    <string name="progressbar_reset_message">Reset progress bar to default?</string>
+
+    <!-- Recent panel -->
+    <string name="recent_panel_title">Recent panel</string>
+    <string name="recent_panel_summary">Enables and customize recent apps display</string>
+
+    <!-- Custom recent styles -->
+    <string name="custom_recent_title">Custom recent styles</string>
+    <string name="custom_recent_summary">Enable slim recent or disable for stock</string>
+
+    <!-- Expanded mode -->
+    <string name="recent_panel_expanded_mode_title">Expanded mode</string>
+    <string name="recent_panel_expanded_mode_summary">Recent tasks expanded preview mode</string>
+    <string name="recent_panel_expanded_mode_auto">Auto (default)</string>
+    <string name="recent_panel_expanded_mode_always">Always</string>
+    <string name="recent_panel_expanded_mode_never">Never</string>
+
+    <!-- Recent apps panel -->
+    <string name="recent_panel_category">Recent apps panel</string>
+    <string name="recent_panel_scale_title">Size</string>
+    <string name="recent_panel_scale_summary">Recent apps panel size in percent</string>
+    <string name="recent_panel_100">100% (default)</string>
+    <string name="recent_panel_85">85%</string>
+    <string name="recent_panel_70">70%</string>
+
+    <!-- Show on the left edge -->
+    <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
+    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left screen edge</string>
+            
+    <!-- Recent clear all button -->
+    <string name="recent_clear_all_button">Recent clear all button</string>
+    <string name="show_recent_clear_all_button_title">Show clear all button</string>
+    <string name="show_recent_clear_all_button_summary">Choose to show or hide clear all recent</string>
+    <string name="recent_clear_all_button_location_title">Clear all button position</string>
+    <string name="recent_clear_all_button_location_summary">Which corner shows the clear all recent button</string>
+    <string name="recent_clear_all_button_location_top_left">Top left</string>
+    <string name="recent_clear_all_button_location_top_right">Top right</string>
+    <string name="recent_clear_all_button_location_bottom_left">Bottom left</string>
+    <string name="recent_clear_all_button_location_bottom_right">Bottom right</string>
+
+    <!-- Recent RAM bar -->
+    <string name="ram_bar">Recent RAM bar</string>
+    <string name="ram_bar_note_title">Note</string>
+    <string name="ram_bar_note_summary">This RAM bar shows the actual android memory (RAM) utilization. Please note that having cached apps helps open apps faster.</string>
+    <string name="ram_bar_mode_title">Recent RAM bar mode</string>
+    <string name="ram_bar_mode_dialog_title">Show on recent RAM bar</string>
+    <string name="ram_bar_none">None</string>
+    <string name="ram_bar_apps">Applications</string>
+    <string name="ram_bar_cache">Applications and cache</string>
+    <string name="ram_bar_other">Applications, cache and other</string>
+    <string name="ram_bar_style_cat">Recent RAM bar style</string>
+    <string name="ram_bar_color_app_mem_color">Applications RAM color</string>
+    <string name="ram_bar_color_cache_mem_color">Cache RAM color</string>
+    <string name="ram_bar_color_total_mem_color">Other RAM color</string>
+    <string name="ram_bar_color_enabled">Enabled</string>
+    <string name="ram_bar_color_disabled">Disabled</string>
+    <string name="ram_bar_button_help">Help</string>
+    <string name="ram_bar_button_reset">Reset colors</string>
+    <string name="ram_bar_reset">Reset</string>
+    <string name="ram_bar_reset_message">Reset RAM bar to default?</string>
+
+<!-- INTERFACE FINISH -->
 
     <!-- Display settings screen, notification light settings -->
     <string name="display_category_light_options_title">Light options</string>
@@ -595,11 +814,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Navigation settings -->
     <string name="navigation_settings_options_title">Navigation options</string>
     <string name="power_menu_title">Global menu</string>
-
-    <!-- Power menu -->
-    <string name="power_menu_title">Power menu</string>
-    <string name="power_menu_summary">Change or view order of global power menu</string>      
-    <string name="power_menu_style_summary">Customize power menu icon and text colors</string>
 
     <!-- Navigation bar -->
     <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
@@ -1146,10 +1360,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="listview_overshoot_interpolator">Overshoot</string>
     <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
     <string name="listview_bounce_interpolator">Bounce</string>
-	
-    <!-- Alternate Default App Picker -->
-    <string name="alt_resolver">Default App Grid</string>
-    <string name="alt_resolver_summary">Use alternate default app picker</string>
 
     <!-- Advanced reboot options -->
     <string name="advanced_reboot_title">Advanced reboot</string>
@@ -1172,10 +1382,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- About device screen, CPU and RAM info. -->
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memory</string>
-
-    <!-- Clock widget -->
-    <string name="lock_clock_title">Clock widget</string>
-    <string name="lock_clock_summary">Change home or lock screen widget display</string>
 
     <!-- Lock screen menu unlock -->
     <string name="unlock_menu_unlock_title">Menu unlock</string>
@@ -1242,30 +1448,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_disable_ime_triggers_title">Reduce trigger size on keyboard</string>
     <string name="pie_disable_ime_triggers_summary">Reduces left and right trigger size if keyboard is active</string>
 
-	<!-- Progress bar -->
-    <string name="progressbar_title">Progress bar</string>
-    <string name="progressbar_summary">Customize color and size of progress bar</string>
-    <string name="progressbar_mirror_title">Mirror mode</string>
-    <string name="progressbar_reverse_title">Reversed</string>
-    <string name="progressbar_speed_title">Speed</string>
-    <string name="progressbar_width_title">Stroke width</string>
-    <string name="progressbar_length_title">Separator length</string>
-    <string name="progressbar_count_title">Sections count</string>
-    <string name="progressbar_color_1_title">Color1</string>
-    <string name="progressbar_color_2_title">Color2</string>
-    <string name="progressbar_color_3_title">Color3</string>
-    <string name="progressbar_color_4_title">Color4</string>
-    <string name="sample_progressbar_text">ProgressBar : Preview</string>
-    <string name="progressbar_interpolator">Interpolator</string>
-    <string name="progressbar_none">None</string>
-    <string name="progressbar_acclerate">Accelerate</string>
-    <string name="progressbar_linear">Linear</string>
-    <string name="progressbar_acceleratedecelerate">AccelerateDecelerate</string>
-    <string name="progressbar_decelerate">Decelerate</string>
-    <string name="progressbar_reset">Reset</string>
-    <string name="progressbar_button_reset">Reset colors</string>
-    <string name="progressbar_reset_message">Reset progress bar style to default?</string>
-
     <!-- Contextual header -->
     <string name="custom_statusbar_header_title">Contextual header</string>
     <string name="custom_statusbar_header_summary">Sets header based on date and time</string>
@@ -1285,61 +1467,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="noti_reminder_interval_3dot5s">3.5 second</string>
     <string name="noti_reminder_interval_4s">4 seconds</string>
 
-    <!-- Gesture anywhere -->
-    <string name="gesture_anywhere_title">Gesture anywhere</string>
-    <string name="gesture_anywhere_summary">Custom screen gestures to execute actions</string>
-    <string name="gesture_anywhere_enabled_title">Gesture anywhere</string>
-    <string name="gesture_anywhere_enabled_summary">Enable the Gesture anywhere feature</string>
-    <string name="gesture_anywhere_position_title">Loction</string>
-    <string name="gesture_anywhere_position_left">Left edge</string>
-    <string name="gesture_anywhere_position_right">Right edge</string>
-    <string name="gesture_anywhere_gestures_title">Gestures</string>
-    <string name="gesture_anywhere_gestures_summary">Add, remove, and edit gestures</string>
-    <string name="trigger_category">Trigger region</string>
-    <string name="trigger_width_title">Trigger width</string>
-    <string name="trigger_width_summary">Adjust the width of the trigger area</string>
-    <string name="trigger_top_title">Trigger position</string>
-    <string name="trigger_top_summary">Adjust the vertical postion of the trigger area</string>
-    <string name="trigger_bottom_title">Trigger height</string>
-    <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
-    <!-- Label, button used to add a gesture -->
-    <string name="ga_button_add">Add gesture</string>
-    <!-- Label, button used to reload all gestures -->
-    <string name="ga_button_reload">Reload</string>
-    <!-- Label, button used to cancel the operation of adding a gesture -->
-    <string name="ga_button_discard">Discard</string>
-    <!-- Label, button used to save a gesture newly created -->
-    <string name="ga_button_done">Done</string>
-    <!-- Label, prompt asking the user to enter the name of the gesture -->
-    <string name="ga_prompt_gesture_name">Name</string>
-    <!-- Error message, informs the user he needs to enter a name before saving a gesture -->
-    <string name="ga_error_missing_name">You must enter a name</string>
-    <!-- success message, tells the user where the gesture was saved -->
-    <string name="ga_save_success">Gesture saved in %s</string>
-    <!-- Buttons in Rename gesture dialog box -->
-    <string name="ga_rename_action">OK</string>
-    <!-- Buttons in Rename gesture dialog box -->
-    <string name="ga_cancel_action">Cancel</string>
-    <!-- Message displayed when the user opens the gestures settings screen -->
-    <string name="ga_gestures_loading">Loading gestures...</string>
-    <!-- Message displayed when the user has no gestures -->
-    <string name="ga_gestures_empty">No gestures</string>
-    <!-- Title of the screen used to view/manage gestures -->
-    <string name="ga_gestures_activity">Gestures</string>
-    <!-- Noun, menu item used to edit a gesture -->
-    <string name="ga_gestures_edit">Edit</string>
-    <!-- Noun, menu item used to remove a gesture -->
-    <string name="ga_gestures_delete">Delete</string>
-    <!-- Message displayed when a gesture is successfully deleted -->
-    <string name="ga_gestures_delete_success">Gesture deleted</string>
-    <!-- Title of dialog box -->
-    <string name="ga_gestures_rename_title">Rename gesture</string>
-    <!-- Label of gesture name field in Rename gesture dialog box -->
-    <string name="ga_gestures_rename_label">Gesture name</string>
-    <!-- Message, displayed when the sdcard cannot be found, 1st parameter is the name of the file that stores the gestures.  CHAR LIMIT=80 -->
-    <string name="ga_gestures_error_loading">Could not load %s. Make sure you have storage available.</string>
-    <string name="profile_applist_title">Apps</string>
-
 	<!-- Wakelock blocker -->
     <string name="wakelock_blocker">Wakelock blocker</string>
     <string name="wakelock_blocker_title">Enable</string>
@@ -1349,7 +1476,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="wakelock_blocker_reload">Reload</string>
     <string name="wakelock_blocker_warning_title">Proceed with caution</string>
     <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>
-	
+
     <!-- Volume Steps -->
     <string name="volume_steps_title">Volume Steps</string>
     <string name="volume_steps_60">60</string>
@@ -1370,15 +1497,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="sms_security_check_limit_title">SMS message limit</string>
     <string name="sms_security_check_limit_summary">Display an alert dialog to prevent applications from sending SMS messages too frequently. Current limit: %d messages in 15 minutes</string>
     <string name="sms_security_check_limit_default">30 (Default)</string>
-
-    <!-- Density Changer -->
-    <string name="custom_density_title">Custom lcd density</string>
-    <string name="set_custom_density_title">Set custom density</string>
-    <string name="set_custom_density_set">Set</string>
-    <string name="current_density">"Current density: "</string>
-    <string name="new_density">"New density: "</string>
-    <string name="density_change_warning">Note: Changing density will close all running apps!</string>
-
+                               
     <!-- Toggle switch title for enabling battery saver connections. [CHAR LIMIT=32] -->
     <string name="data_usage_enable_batterysaver">Battery saver</string>
 
@@ -1578,84 +1697,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="dynamic_width">Dynamic width</string>
     <string name="dynamic_width_summary">Sets the width of notifications dynamic, so that they only use the space they really need</string>
 
-    <!-- Animation controls -->
-    <string name="animation_controls_title">Animation controls</string>
-    <string name="animation_controls_summary">Change direction of the system animations</string>
-    <string name="activity_open_title">Activity open</string>	
-    <string name="activity_close_title">Activity close</string>	
-    <string name="task_open_title">Task open</string>	
-    <string name="task_close_title">Task close</string>	
-    <string name="task_move_to_front_title">Move to front</string>	
-    <string name="task_move_to_back_title">Move to back</string>	
-    <string name="wallpaper_open_title">Wallpaper open</string>	
-    <string name="wallpaper_close_title">Wallpaper close</string>	
-    <string name="wallpaper_intra_open_title">Wallpaper intra open</string>	
-    <string name="wallpaper_intra_close_title">Wallpaper intra close</string>	
-    <string name="animation_duration_title">Animation duration</string>	
-    <string name="title_animation_no_override">Prevent app overrides</string>	
-    <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>	
-    <string name="animation_duration_default">Default</string>
-    <string name="header_summary_animation">@null</string>
-
-    <!-- Recent panel -->
-    <string name="recent_panel_title">Recent panel</string>
-    <string name="recent_panel_summary">Enables and customize recent apps display</string>
-
-    <!-- Recent apps panel -->
-    <string name="recent_panel_category">Recent apps panel</string>
-    <string name="recent_panel_scale_title">Size</string>
-    <string name="recent_panel_scale_summary">Recent apps panel size in percent</string>
-    <string name="recent_panel_100">100% (default)</string>
-    <string name="recent_panel_85">85%</string>
-    <string name="recent_panel_70">70%</string>
-
-    <!-- Recent apps mode -->
-    <string name="recent_panel_expanded_mode_title">Expanded mode</string>
-    <string name="recent_panel_expanded_mode_summary">Recent tasks expanded preview mode</string>
-    <string name="recent_panel_expanded_mode_auto">Auto (default)</string>
-    <string name="recent_panel_expanded_mode_always">Always</string>
-    <string name="recent_panel_expanded_mode_never">Never</string>
-
-    <!-- ATTENTION: RTL languages need to replace left with right -->
-    <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
-    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge.</string>
-
-    <!--  Recent clear all -->
-    <string name="recent_clear_all_button">Recent clear all button</string>
-    <string name="show_recent_clear_all_button_title">Show clear all button</string>
-    <string name="show_recent_clear_all_button_summary">Tick to show or untick to hide the clear all button within the recent applications screen</string>
-    <string name="recent_clear_all_button_location_title">Clear all button position</string>
-    <string name="recent_clear_all_button_location_summary">Choose in which corner the clear all recent apps button is shown</string>
-    <string name="recent_clear_all_button_location_top_left">Top left</string>
-    <string name="recent_clear_all_button_location_top_right">Top right</string>
-    <string name="recent_clear_all_button_location_bottom_left">Bottom left</string>
-    <string name="recent_clear_all_button_location_bottom_right">Bottom right</string>
-
-    <!-- Recent Ram Bar -->
-    <string name="ram_bar">Recent RAM bar</string>
-    <string name="ram_bar_note_title">Note</string>
-    <string name="ram_bar_note_summary">This RAM bar shows the actual android memory (RAM) utilization. Please note that having cached apps helps your device open apps much faster.</string>
-    <string name="ram_bar_mode_title">Recent RAM bar mode</string>
-    <string name="ram_bar_mode_dialog_title">Show on recent RAM bar</string>
-    <string name="ram_bar_none">None</string>
-    <string name="ram_bar_apps">Applications</string>
-    <string name="ram_bar_cache">Applications and cache</string>
-    <string name="ram_bar_other">Applications, cache and other</string>
-    <string name="ram_bar_style_cat">Recent RAM bar style</string>
-    <string name="ram_bar_color_app_mem_color">Applications RAM color</string>
-    <string name="ram_bar_color_cache_mem_color">Cache RAM color</string>
-    <string name="ram_bar_color_total_mem_color">Other RAM color</string>
-    <string name="ram_bar_color_enabled">Enabled</string>
-    <string name="ram_bar_color_disabled">Disabled</string>
-    <string name="ram_bar_button_help">Help</string>
-    <string name="ram_bar_button_reset">Reset colors</string>
-    <string name="ram_bar_reset">Reset</string>
-    <string name="ram_bar_reset_message">Reset RAM bar style to default?</string>
-
-    <!-- Custom recent settings -->
-    <string name="custom_recent_title">Switch recent styles</string>
-    <string name="custom_recent_summary">Tick to slim recent or untick for stock recent</string>
-
 	<!-- LiquidSmooth Anonymous Stats -->
     <string name="rominfo_settings_list_item_title">LiquidSmooth Statistics</string>
     <string name="rominfo_settings_list_item_summary">Help make LiquidSmooth better by opting into anonymous statistics reporting</string>
@@ -1709,62 +1750,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="screen_recorder_bitrate_20000000">20000000</string>
     <string name="screen_recorder_bitrate_50000000">50000000</string>
     <string name="screen_recorder_bitrate_100000000">100000000</string>
-
-    <!-- Toast Animations -->
-    <string name="toast_animation_title">Toast Animations</string>
-    <string name="toast_none_animation">None</string>
-    <string name="toast_default_animation">Default</string>
-    <string name="toast_fade_animation">Fade Animation</string>
-    <string name="toast_SlideRight_animation">SlideRight Animation</string>
-    <string name="toast_SlideLeft_animation">SlideLeft Animation</string>
-    <string name="toast_Xylon_animation">Xylon Animation</string>
-    <string name="toast_Toko_animation">Toko Animation</string>
-    <string name="toast_Tn_animation">Tn Animation</string>
-    <string name="toast_Honami_animation">Honami Animation</string>
-    <string name="toast_FastFade_animation">FastFade Animation</string>
-    <string name="toast_GrowFade_animation">GrowFade Animation</string>
-    <string name="toast_GrowFadeCenter_animation">GrowFadeCenter Animation</string>
-    <string name="toast_GrowFadeBottom_animation">GrowFadeBottom Animation</string>
-    <string name="toast_Translucent_animation">Translucent Animation</string>
-
-    <!-- IME animations -->
-    <string name="animation_settings_reset_message">Reset all animation settings to default?</string>
-    <string name="animation_duration_summary">Set duration</string>
-    <string name="animation_default">Default</string>
-    <string name="animation_fade">Fade</string>
-    <string name="animation_slide_right">Slide in right</string>
-    <string name="animation_slide_left">Slide in left</string>
-    <string name="animation_slide_right_no_fade">Slide in right (No fade)</string>
-    <string name="animation_slide_left_no_fade">Slide in left (No fade)</string>
-    <string name="animation_slide_up">Slide in bottom</string>
-    <string name="animation_slide_down">Slide in top</string>
-    <string name="animation_translucent">Translucent</string>
-    <string name="animation_grow_shrink">Grow in (Top)</string>
-    <string name="animation_grow_shrink_center">Grow in (Center)</string>
-    <string name="animation_grow_shrink_bottom">Grow in (Bottom)</string>
-    <string name="animation_grow_shrink_left">Grow in (Left)</string>
-    <string name="animation_grow_shrink_right">Grow in (Right)</string>
-    <string name="animation_random">Random</string>
-    <string name="ime_animation_title">IME animations</string>
-    <string name="ime_animation_summary">Set keyboard animations</string>
-    <string name="ime_animation_test_title">Test IME Animation Here</string>
-    <string name="ime_enter_animation_title">Enter Animation</string>
-    <string name="ime_exit_animation_title">Exit Animation</string>
-    <string name="ime_interpolator_title">Interpolator</string>
-    <string name="ime_duration_title">IME Duration</string>
-
-    <!-- Scrolling Animation Controls -->
-    <string name="scrolling_title">Scrolling modifiers</string>
-    <string name="scrolling_summary">View or change scrolling animations</string>
-    <string name="animation_fling_velocity_title">Fling velocity</string>
-    <string name="animation_scroll_friction_title">Scroll friction</string>
-    <string name="animation_overscroll_distance_title">Overscroll distance</string>
-    <string name="animation_overfling_distance_title">Overfling distance</string>
-    <string name="animation_duration_summary">Set duration</string>
-    <string name="animation_no_scroll_title">Customized scrolling modifiers</string>
-    <string name="animation_no_scroll_summary_on">Enabled</string>
-    <string name="animation_no_scroll_summary_off">Disabled</string>
-    <string name="scroll_disclaimer_summary">Note: Most apps need to be restarted for custom values to take effect</string>
 
     <!-- Allow Multiuser -->
     <string name="multiuser_preference_title">Multiuser support</string>

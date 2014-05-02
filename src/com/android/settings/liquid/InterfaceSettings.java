@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 The LiquidSmooth Project
+ * Copyright (C) 2014 The LiquidSmooth Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -135,7 +135,7 @@ public class InterfaceSettings extends SettingsPreferenceFragment implements
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mUseAltResolver) {
-            Settings.System.putInt(getActivity().getContentResolver(),
+            Settings.System.putInt(getContentResolver(),
                     Settings.System.ACTIVITY_RESOLVER_USE_ALT,
                     (Boolean) newValue ? 1 : 0);
             return true;
