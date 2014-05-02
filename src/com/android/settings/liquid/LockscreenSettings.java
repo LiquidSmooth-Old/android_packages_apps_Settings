@@ -44,9 +44,10 @@ public class LockscreenSettings extends SettingsPreferenceFragment
 
     private static final String TAG = "LockscreenSettings";
 
-    private static final String KEY_INTERFACE_SETTINGS = "lock_screen_interface";
-    private static final String KEY_TARGET_SETTINGS = "lock_screen_targets";
-    private static final String KEY_WIDGETS_SETTINGS = "lock_screen_widgets";
+    private static final String KEY_LOCKSCREEN_BUTTONS = "lockscreen_buttons";
+    private static final String KEY_INTERFACE_SETTINGS = "lockscreen_interface";
+    private static final String KEY_TARGET_SETTINGS = "lockscreen_targets";
+    private static final String KEY_WIDGETS_SETTINGS = "lockscreen_widgets";
     private static final String KEY_GENERAL_CATEGORY = "general_category";
     private static final String KEY_BATTERY_AROUND_RING = "battery_around_ring";
     private static final String KEY_ALWAYS_BATTERY_PREF = "lockscreen_battery_status";
@@ -56,7 +57,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment
     private static final String KEY_MENU_UNLOCK_PREF = "menu_unlock";
     private static final String KEY_SHAKE_TO_SECURE = "shake_to_secure";
     private static final String KEY_SHAKE_AUTO_TIMEOUT = "shake_auto_timeout";
-    private static final String KEY_PEEK = "notification_peek";
+    private static final String KEY_NOTIFICATION_PEEK = "notification_peek";
 
     private PackageManager mPM;
     private DevicePolicyManager mDPM;
@@ -210,7 +211,16 @@ public class LockscreenSettings extends SettingsPreferenceFragment
             }
         }
 
-        mNotificationPeek = (CheckBoxPreference) findPreference(KEY_PEEK);
+        PreferenceScreen lockButtons = (PreferenceScreen) prefs
+                .findPreference(KEY_LOCKSCREEN_BUTTONS);
+        boolean hasButtons = (getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys) > 0);
+        if (!hasButtons) {
+            generalCategory.removePreference(lockButtons);
+        }
+
+        mNotificationPeek = (CheckBoxPreference) prefs
+                .findPreference(KEY_NOTIFICATION_PEEK);
         mNotificationPeek.setPersistent(false);
 
         updatePeekCheckbox();

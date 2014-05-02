@@ -15,7 +15,7 @@
 -->
 
 <PreferenceScreen
-    android:title="@string/lock_screen_interface_title"
+    android:title="@string/lockscreen_interface_title"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
@@ -35,12 +35,6 @@
             android:key="lockscreen_eight_targets"
             android:title="@string/lockscreen_eight_targets_title"
             android:summary="@string/lockscreen_eight_targets_summary" />
-
-        <PreferenceScreen
-            android:key="lockscreen_buttons"
-            android:title="@string/lockscreen_buttons_title"
-            android:summary="@string/lockscreen_buttons_summary"
-            android:fragment="com.android.settings.liquid.LockscreenButtons" />
 
         <Preference
             android:key="lockscreen_targets"

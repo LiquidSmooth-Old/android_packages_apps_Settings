@@ -15,7 +15,7 @@
 -->
 
 <PreferenceScreen
-    android:title="@string/lock_screen_widgets_title"
+    android:title="@string/lockscreen_widgets_title"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 

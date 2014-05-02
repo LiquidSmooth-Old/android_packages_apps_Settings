@@ -24,27 +24,33 @@
         android:title="@string/general_category_title">
 
         <PreferenceScreen
-            android:key="lock_screen_interface"
-            android:title="@string/lock_screen_interface_title"
-            android:summary="@string/lock_screen_interface_summary"
+            android:key="lockscreen_buttons"
+            android:title="@string/lockscreen_buttons_title"
+            android:summary="@string/lockscreen_buttons_summary"
+            android:fragment="com.android.settings.liquid.LockscreenButtons" />
+
+        <PreferenceScreen
+            android:key="lockscreen_interface"
+            android:title="@string/lockscreen_interface_title"
+            android:summary="@string/lockscreen_interface_summary"
             android:fragment="com.android.settings.liquid.LockscreenInterface" />
 
         <PreferenceScreen
-            android:key="lock_screen_notifications"
-            android:title="@string/lock_screen_notifications_title"
-            android:summary="@string/lock_screen_notifications_summary"
+            android:key="lockscreen_notifications"
+            android:title="@string/lockscreen_notifications_title"
+            android:summary="@string/lockscreen_notifications_summary"
             android:fragment="com.android.settings.liquid.LockscreenNotifications" />
 
         <PreferenceScreen
-            android:key="lock_screen_style"
-            android:title="@string/lock_screen_style_title"
-            android:summary="@string/lock_screen_style_summary"
+            android:key="lockscreen_style"
+            android:title="@string/lockscreen_style_title"
+            android:summary="@string/lockscreen_style_summary"
             android:fragment="com.android.settings.liquid.LockscreenStyle" />
 
         <PreferenceScreen
-            android:key="lock_screen_widgets"
-            android:title="@string/lock_screen_widgets_title"
-            android:summary="@string/lock_screen_widgets_summary"
+            android:key="lockscreen_widgets"
+            android:title="@string/lockscreen_widgets_title"
+            android:summary="@string/lockscreen_widgets_summary"
             android:fragment="com.android.settings.liquid.LockscreenWidgets" />
 
     </PreferenceCategory>
@@ -52,11 +58,6 @@
     <PreferenceCategory
         android:key="advanced_category"
         android:title="@string/advanced_category_title">
-		
-        <CheckBoxPreference
-            android:key="notification_peek"
-            android:title="@string/notification_peek_title"
-            android:summary="@string/notification_peek_summary" />
 
         <CheckBoxPreference
             android:key="battery_around_ring"
@@ -68,6 +69,11 @@
             android:title="@string/lockscreen_battery_status_title"
             android:summary="@string/lockscreen_battery_status_summary" />
 
+        <CheckBoxPreference
+            android:key="lock_before_unlock"
+            android:title="@string/lock_before_unlock_title"
+            android:summary="@string/lock_before_unlock_summary" />
+
         <ListPreference
             android:key="lockscreen_rotation"
             android:title="@string/lockscreen_rotation_title"
@@ -75,14 +81,19 @@
             android:entryValues="@array/lockscreen_rotation_values" />
 
         <CheckBoxPreference
-            android:key="lock_before_unlock"
-            android:title="@string/lock_before_unlock_title"
-            android:summary="@string/lock_before_unlock_summary" />
-
-        <CheckBoxPreference
             android:key="menu_unlock"
             android:title="@string/unlock_menu_unlock_title"
             android:summary="@string/unlock_menu_unlock_summary" />
+
+        <CheckBoxPreference
+            android:key="notification_peek"
+            android:title="@string/notification_peek_title"
+            android:summary="@string/notification_peek_summary" />
+
+        <CheckBoxPreference
+            android:key="quick_unlock_control"
+            android:title="@string/unlock_quick_unlock_control_title"
+            android:summary="@string/unlock_quick_unlock_control_summary" />
 
         <CheckBoxPreference
             android:key="shake_to_secure"
@@ -96,11 +107,6 @@
             android:entries="@array/shake_secure_timeout_entries"
             android:entryValues="@array/shake_secure_timeout_values"
             android:persistent="false"/>
-
-        <CheckBoxPreference
-            android:key="quick_unlock_control"
-            android:title="@string/unlock_quick_unlock_control_title"
-            android:summary="@string/unlock_quick_unlock_control_summary" />
 
     </PreferenceCategory>
 

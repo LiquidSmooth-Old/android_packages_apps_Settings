@@ -20,7 +20,8 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
-        android:title="@string/general" >
+        android:key="general_category"
+        android:title="@string/general_category_title">
 
         <CheckBoxPreference
             android:key="lockscreen_notifications"
@@ -73,7 +74,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/layout" >
+        android:key="advanced_category"
+        android:title="@string/advanced_category_title">
 
         <SeekBarPreference
             android:key="offset_top"
@@ -99,11 +101,6 @@
             android:key="notification_color"
             android:title="@string/notification_color" />
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/privacy" >
-
         <CheckBoxPreference
             android:key="privacy_mode"
             android:title="@string/privacy_mode"
@@ -121,6 +118,7 @@
             android:title="@string/force_expanded_view"
             android:dependency="lockscreen_notifications"
             android:summary="@string/force_expanded_view_summary" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

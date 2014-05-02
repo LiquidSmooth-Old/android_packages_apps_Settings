@@ -258,7 +258,7 @@
 
     <!-- Show on the left edge -->
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
-    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left screen edge</string>
+    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left</string>
             
     <!-- Recent clear all button -->
     <string name="recent_clear_all_button">Recent clear all button</string>
@@ -293,6 +293,202 @@
     <string name="ram_bar_reset_message">Reset RAM bar to default?</string>
 
 <!-- INTERFACE FINISH -->
+
+<!-- LOCKSCREEN START -->
+
+    <!-- Lock screen settings -->
+    <string name="lockscreen_buttons_title">Buttons</string>
+    <string name="lockscreen_buttons_summary">View or change lock screen button actions</string>
+    <string name="lockscreen_interface_title">Interface</string>
+    <string name="lockscreen_interface_summary">Customize lock screen sliders or shortcuts</string>
+    <string name="lockscreen_notifications_title">Notifications</string>
+    <string name="lockscreen_notifications_summary">Configure lock screen notification settings</string>
+    <string name="lockscreen_style_title">Style</string>
+    <string name="lockscreen_style_summary">Change appearance of lock screen or colors</string>
+    <string name="lockscreen_widgets_title">Widgets</string>
+    <string name="lockscreen_widgets_summary">Customize functions of lock screen widgets</string>
+
+    <!-- Lock screen activities -->
+    <string name="picker_activities">Activities</string>
+    <string name="select_custom_activity_title">Select custom activity</string>
+    <string name="icon_picker_alarm">Alarm</string>
+    <string name="icon_picker_browser">Browser</string>
+    <string name="icon_picker_calendar">Calendar</string>
+    <string name="icon_picker_camera">Camera</string>
+    <string name="icon_picker_email">Email</string>
+    <string name="icon_picker_email2">Email Holo</string>
+    <string name="icon_picker_facebook">Facebook</string>
+    <string name="icon_picker_gallery">Gallery</string>
+    <string name="icon_picker_google_small">Google (small)</string>
+    <string name="icon_picker_googleplus">Google Plus</string>
+    <string name="icon_picker_googletalk">Hangouts</string>
+    <string name="icon_picker_maps">Maps</string>
+    <string name="icon_picker_sms">Messaging</string>
+    <string name="icon_picker_movie">Movie</string>
+    <string name="icon_picker_music">Music</string>
+    <string name="icon_picker_nav_normal">Navigation</string>
+    <string name="icon_picker_phone">Phone</string>
+    <string name="icon_picker_podcast">Podcast</string>
+    <string name="icon_picker_rss">Rss</string>
+    <string name="icon_picker_search">Search</string>
+    <string name="icon_picker_twitter">Twitter</string>
+
+    <!-- Lock screen buttons -->
+    <string name="lockscreen_long_press_back_title">Long press back</string>
+    <string name="lockscreen_long_press_home_title">Long press home</string>
+    <string name="lockscreen_long_press_menu_title">Long press menu</string>
+    <string name="lockscreen_buttons_no_action">No action</string>
+    <string name="lockscreen_buttons_flashlight">Flashlight</string>
+    <string name="lockscreen_buttons_next">Next song</string>
+    <string name="lockscreen_buttons_previous">Previous song</string>
+    <string name="lockscreen_buttons_playpause">Play or pause music</string>
+    <string name="lockscreen_buttons_toggle_sound">Toggle sound</string>
+    <string name="lockscreen_buttons_sleep">Go to sleep</string>
+    <string name="unlock_home_unlock_title">Home unlock</string>
+    <string name="unlock_home_unlock_summary">Press home button to unlock device</string>
+    <string name="unlock_menu_unlock_title">Menu unlock</string>
+    <string name="unlock_menu_unlock_summary">Press menu button to unlock device</string>
+
+    <!-- Lock screen targets -->
+    <string name="lockscreen_target_info">Drag the slider to targets to assign applications</string>
+    <string name="lockscreen_target_title">Slider targets</string>
+    <string name="lockscreen_target_summary">View or change custom lock screen targets</string>
+    <string name="lockscreen_target_color_title">Target icon color</string>
+    <string name="lockscreen_eight_targets_title">Eight slider targets</string>
+    <string name="lockscreen_eight_targets_summary">Enable eight custom lock screen targets.</string>
+    <string name="lockscreen_enable_eight_targets_dialog">Changing this option resets your current lock screen targets setup to default.</string>
+    <string name="lockscreen_enable_eight_targets_enabled_dialog">\n\nWith eight lock screen targets enabled you cannot use your lock screen shortcuts at the same time.</string>
+    <string name="lockscreen_glowpad_torch_title">Slider torch</string>
+    <string name="lockscreen_glowpad_torch_summary">Longpress and hold to start torch</string>
+    <string name="lockscreen_target_reset">Lock screen targets reset to default</string>
+    <string name="lockscreen_target_reset_message">Delete all user created lock screen targets and restore to default?</string>
+    <string name="lockscreen_target_empty">None</string>
+    <string name="lockscreen_target_edit_title">Edit target and icon</string>
+    <string name="lockscreen_target_edit_msg">Select or change the desired application or activity and the associated icon</string>
+
+    <!-- Lock screen shortcuts -->
+    <string name="lockscreen_shortcuts_title">Shortcuts</string>
+    <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
+    <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
+    <string name="lockscreen_shorcuts_longpress_summary">Open custom lock screen shortcuts on longpress</string>
+
+    <!-- Lock screen wallpaper -->
+    <string name="lockscreen_wallpaper">Custom wallpaper</string>
+    <string name="select_wallpaper">Select wallpaper</string>
+
+    <!-- Lock screen notifications -->
+    <string name="lockscreen_notifications_title">Notifications</string>
+    <string name="lockscreen_notifications">Enable notifications</string>
+    <string name="lockscreen_notifications_summary">Show current pending notifications</string>
+    <string name="pocket_mode">Pocket mode</string>
+    <string name="pocket_mode_summary">Screen on and show notifications</string>
+    <string name="show_always">Show always</string>
+    <string name="show_always_summary">Screen on when removed from pocket</string>
+    <string name="hide_low_priority">Hide low priority</string>
+    <string name="hide_low_priority_summary">Hides low priority notifications</string>
+    <string name="hide_non_clearable">Hide non clearable</string>
+    <string name="hide_non_clearable_summary">Hide all non clearable notifications</string>
+    <string name="dismiss_all">Allow dismissing all</string>
+    <string name="dismiss_all_summary">Ability to dismiss notifications</string>
+    <string name="expanded_view">Expanded notification view</string>
+    <string name="expanded_view_summary">Switch between normal and expanded</string>
+    <string name="force_expanded_view">Force expanded view</string>
+    <string name="force_expanded_view_summary">Show notification view as expanded</string>
+    <string name="wake_on_notification">Wake on notification</string>
+    <string name="wake_on_notification_summary">Wake when notification is received</string>
+    <string name="notifications_height">Notification count</string>
+    <string name="notifications_height_summary">Number of notifications displayed</string>
+    <string name="offset_top">Offset value to top of screen</string>
+    <string name="privacy_mode">Privacy mode</string>
+    <string name="privacy_mode_summary">Only shows icons for notifications</string>
+    <string name="excluded_apps_title">Excluded applications</string>
+    <string name="excluded_apps_summary">Excluded applications will not show</string>
+    <string name="dynamic_width">Dynamic width</string>
+    <string name="dynamic_width_summary">Sets the width of notifications</string>
+    <string name="notification_color">Notification background color</string>
+
+    <!-- See through -->
+    <string name="see_through_title">See through</string>
+    <string name="see_through_summary">Shows the content behind lock screen</string>
+
+    <!-- Blur radius -->
+    <string name="blur_radius_title">Blur radius</string>
+    <string name="blur_radius_summary">Set lock screen blur intensity effect</string>
+
+    <!-- Lock screen style -->
+    <string name="lockscreen_style_title">Style</string>
+    <string name="lockscreen_style_reset_message">Reset all lock screen colors?</string>
+    <string name="lockscreen_icon_title">Lock handle icon</string>
+    <string name="lockscreen_lock_icon_custom">Custom icon</string>
+    <string name="lockscreen_lock_icon_liquid">Liquid icon</string>
+    <string name="lockscreen_lock_icon_default">Default icon</string>
+    <string name="lockscreen_colorize_handle_title">Colorize custom handle</string>
+    <string name="lockscreen_colorize_handle_summary">Lock color will be set to the lock handle</string>
+    <string name="lockscreen_frame_color_title">Frame color</string>
+    <string name="lockscreen_frame_color_summary">Color of the unlock frame</string>
+    <string name="lockscreen_lock_color_title">Lock color</string>
+    <string name="lockscreen_lock_color_summary">Color of the lock handles</string>
+    <string name="lockscreen_dots_color_title">Dots color</string>
+    <string name="lockscreen_dots_color_summary">Color of the glowpad dots</string>
+    <string name="lockscreen_targets_color_title">Targets color</string>
+    <string name="lockscreen_targets_color_summary">Color of the challenge targets</string>
+    <string name="lockscreen_misc_color_title">Miscellaneous color</string>
+    <string name="lockscreen_misc_color_summary">Color of the remaining items</string>
+
+    <!-- Lock screen widgets -->
+    <string name="lockscreen_widgets_title">Widgets</string>
+    <string name="lockscreen_camera_widget_title">Enable camera widget</string>
+    <string name="lockscreen_camera_widget_summary">Show camera widget on lock screen</string>
+    <string name="lockscreen_maximize_widgets_title">Start maximized</string>
+    <string name="lockscreen_maximize_widgets_summary">Show lock screen widget maximized</string>
+    <string name="lockscreen_disable_hints_title">Disable page hints</string>
+    <string name="lockscreen_disable_hints_summary">Disables glow around widget pager</string>
+    <string name="lockscreen_use_widget_container_carousel_title">Enable carousel widget</string>
+    <string name="lockscreen_use_widget_container_carousel_summary">Use carousel animation in portrait</string>
+    <string name="lockscreen_widget_frame_title">Disable widget frames</string>
+    <string name="lockscreen_widget_frame_summary">Disable widget background frames</string>
+
+    <!-- Battery around ring -->
+    <string name="battery_around_ring_title">Battery around ring</string>
+    <string name="battery_around_ring_summary">Display battery level around unlock ring</string>
+
+    <!-- Battery status -->
+    <string name="lockscreen_battery_status_title">Battery status</string>
+    <string name="lockscreen_battery_status_summary">Always show battery status on keyguard</string>
+
+    <!-- Lock before unlock -->
+    <string name="lock_before_unlock_title">Lock before unlock</string>
+    <string name="lock_before_unlock_summary">Show slider target before secure unlock</string>
+
+    <!-- Lock screen rotation -->
+    <string name="lockscreen_rotation_title">Lock screen rotation</string>
+    <string name="lockscreen_rotation_portrait">Portrait only</string>
+    <string name="lockscreen_rotation_landscape">Landscape only</string>
+    <string name="lockscreen_rotation_summary_extra">Display rotation dependant</string>
+
+    <!-- Menu unlock -->
+    <string name="unlock_menu_unlock_title">Menu unlock</string>
+    <string name="unlock_menu_unlock_summary">Pressing menu button unlocks device</string>
+
+	<!-- Notification peek -->
+    <string name="notification_peek_title">Notification peek</string>
+    <string name="notification_peek_summary">Show notifications by picking up device</string>
+
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Unlocks using correct pin or password</string>
+
+    <!-- Shake to secure -->
+    <string name="shake_to_secure_title">Shake to secure</string>
+    <string name="shake_to_secure_summary">Security is disabled after each unlock</string>
+    <string name="shake_secure_timeout_title">Automatically resecure</string>
+    <string name="shake_secure_timeout_disabled">Never automatically secure</string>
+    <string name="shake_secure_timeout_1min">1 minute after screen turned off</string>
+    <string name="shake_secure_timeout_5min">5 minutes after screen turned off</string>
+    <string name="shake_secure_timeout_10min">10 minutes after screen turned off</string>
+    <string name="shake_secure_timeout_30min">30 minutes after screen turned off</string>
+
+<!-- LOCKSCREEN FINISH -->
 
     <!-- Display settings screen, notification light settings -->
     <string name="display_category_light_options_title">Light options</string>
@@ -953,145 +1149,18 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="swap_volume_buttons_title">Swap volume buttons</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
 
-    <!-- Lock screen settings -->
-    <string name="lock_screen_interface_title">Interface</string>
-    <string name="lock_screen_interface_summary">Customize lock screen sliders or shortcuts</string>
-    <string name="lock_screen_notifications_title">Notifications</string>
-    <string name="lock_screen_notifications_summary">Configure lock screen notification settings</string>
-    <string name="lock_screen_style_title">Style</string>
-    <string name="lock_screen_style_summary">Change appearance of lock screen or colors</string>
-    <string name="lock_screen_widgets_title">Widgets</string>
-    <string name="lock_screen_widgets_summary">Customize functions of lock screen widgets</string>
-
-    <!-- Lock Screen Targets -->
-    <string name="lockscreen_target_info">Drag the slider to targets to assign applications</string>
-    <string name="lockscreen_target_title">Slider targets</string>
-    <string name="lockscreen_target_summary">View or change custom lock screen targets</string>
-    <string name="lockscreen_target_color_title">Target icon color</string>
-    <string name="lockscreen_eight_targets_title">Eight slider targets</string>
-    <string name="lockscreen_eight_targets_summary">Enable eight custom lock screen targets.</string>
-    <string name="lockscreen_enable_eight_targets_dialog">Changing this option resets your current lockscreen targets setup to default.</string>
-    <string name="lockscreen_enable_eight_targets_enabled_dialog">\n\nWith eight lockscreen targets enabled you cannot use your lockscreen shortcuts at the same time.</string>
-    <string name="lockscreen_glowpad_torch_title">Slider torch</string>
-    <string name="lockscreen_glowpad_torch_summary">Longpress and hold to start torch</string>
-    <string name="lockscreen_target_reset">Lock screen targets reset to default</string>
-    <string name="lockscreen_target_reset_message">Delete all user created lock screen targets and restore to default?</string>
-    <string name="lockscreen_target_empty">None</string>
-    <string name="lockscreen_target_edit_title">Edit target and icon</string>
-    <string name="lockscreen_target_edit_msg">Select or change the desired application or activity and the associated icon</string>
-
-    <!-- Lockscreen Shortcuts -->
-    <string name="lockscreen_shortcuts_title">Shortcuts</string>
-    <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
-    <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
-    <string name="lockscreen_shorcuts_longpress_summary">Open custom lock screen shortcuts on longpress</string>
-
-    <!-- Lock screen targets and shortcuts -->
-    <string name="picker_activities">Activities</string>
-    <string name="select_custom_activity_title">Select custom activity</string>
-    <string name="icon_picker_alarm">Alarm</string>
-    <string name="icon_picker_browser">Browser</string>
-    <string name="icon_picker_calendar">Calendar</string>
-    <string name="icon_picker_camera">Camera</string>
-    <string name="icon_picker_email">Email</string>
-    <string name="icon_picker_email2">Email Holo</string>
-    <string name="icon_picker_facebook">Facebook</string>
-    <string name="icon_picker_gallery">Gallery</string>
-    <string name="icon_picker_google_small">Google (small)</string>
-    <string name="icon_picker_googleplus">Google Plus</string>
-    <string name="icon_picker_googletalk">Hangouts</string>
-    <string name="icon_picker_maps">Maps</string>
-    <string name="icon_picker_sms">Messaging</string>
-    <string name="icon_picker_movie">Movie</string>
-    <string name="icon_picker_music">Music</string>
-    <string name="icon_picker_nav_normal">Navigation</string>
-    <string name="icon_picker_phone">Phone</string>
-    <string name="icon_picker_podcast">Podcast</string>
-    <string name="icon_picker_rss">Rss</string>
-    <string name="icon_picker_search">Search</string>
-    <string name="icon_picker_twitter">Twitter</string>
-
-    <!-- Quick unlock -->
-    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
-    <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
-
-    <!-- Lockscreen style settings -->
-    <string name="lockscreen_style_reset_message">Reset all lockscreen colors?</string>
-    <string name="lockscreen_icon_title">Lock handle icon</string>
-    <string name="lockscreen_lock_icon_custom">Custom icon</string>
-    <string name="lockscreen_lock_icon_liquid">Liquid icon</string>
-    <string name="lockscreen_lock_icon_default">Default icon</string>
-    <string name="lockscreen_colorize_handle_title">Colorize custom handle</string>
-    <string name="lockscreen_colorize_handle_summary">Lock color will be set to the lock handle</string>
-    <string name="lockscreen_style_title">Theme style</string>
-    <string name="lockscreen_frame_color_title">Frame color</string>
-    <string name="lockscreen_frame_color_summary">Color of the widget and unlock frames</string>
-    <string name="lockscreen_lock_color_title">Lock color</string>
-    <string name="lockscreen_lock_color_summary">Color of the lock handles</string>
-    <string name="lockscreen_dots_color_title">Dots color</string>
-    <string name="lockscreen_dots_color_summary">Color of the glowpad dots</string>
-    <string name="lockscreen_targets_color_title">Targets color</string>
-    <string name="lockscreen_targets_color_summary">Color of the challenge targets</string>
-    <string name="lockscreen_misc_color_title">Miscellaneous color</string>
-    <string name="lockscreen_misc_color_summary">Color of the remaining items</string>
-
-    <!-- Lockscreen widget settings -->
-    <string name="lockscreen_widgets_title">Widgets</string>
-    <string name="lockscreen_camera_widget_title">Enable camera widget</string>
-    <string name="lockscreen_camera_widget_summary">Show secure camera widget on the lock screen</string>
-    <string name="lockscreen_maximize_widgets_title">Start maximized</string>
-    <string name="lockscreen_maximize_widgets_summary">Show widget maximized when screen turned on</string>
-    <string name="lockscreen_disable_hints_title">Disable initial page hints</string>
-    <string name="lockscreen_disable_hints_summary">Disables the glow on the edges that surrounds the widget pager on lock screen in portrait mode</string>
-    <string name="lockscreen_use_widget_container_carousel_title">Enable portrait widget carousel</string>
-    <string name="lockscreen_use_widget_container_carousel_summary">Use carousel animation in portrait when switching between lock screen widgets</string>
-    <string name="lockscreen_widget_frame_title">Disable widget frames</string>
-    <string name="lockscreen_widget_frame_summary">Disable widget background frames</string>
-
-    <!-- Lockscreen pin shuffle -->
+    <!-- Lock screen pin shuffle -->
     <string name="lock_numpad_random_title">Change the order of PIN pad numbers</string>
     <string name="lock_numpad_random_dialog_title">PIN pad random order</string>
     <string name="lock_numpad_random_off">Disabled</string>
     <string name="lock_numpad_random_always">Always</string>
     <string name="lock_numpad_random_on_request">On request</string>
 
-    <!-- Shake to secure -->
-    <string name="shake_to_secure_title">Shake the lockscreen to enable security</string>
-    <string name="shake_to_secure_summary">Security will be disabled after each successful unlock</string>
-    <string name="shake_to_secure_dlg_title">Warning:</string>
-    <string name="shake_to_secure_dlg_message">Your device will be insecure until you explicitly shake to enable a temporary secure lock.  Once secure: if your device is successfully unlocked it will become insecure until you shake again.</string>
-    <string name="shake_secure_timeout_title">Automatically resecure</string>
-    <string name="shake_secure_timeout_disabled">Never automatically secure</string>
-    <string name="shake_secure_timeout_1min">1 minute after screen turned off</string>
-    <string name="shake_secure_timeout_5min">5 minutes after screen turned off</string>
-    <string name="shake_secure_timeout_10min">10 minutes after screen turned off</string>
-    <string name="shake_secure_timeout_30min">30 minutes after screen turned off</string>
-
-    <!-- Lock before unlock -->
-    <string name="lock_before_unlock_title">Show slider before secure unlock</string>
-    <string name="lock_before_unlock_summary">Show slider lockscreen before secure unlock mechanism</string>
-
-    <!-- Sizes for pattern lockscreen -->
+    <!-- Sizes for pattern lock screen -->
     <string name="lock_pattern_size_3">3x3</string>
     <string name="lock_pattern_size_4">4x4</string>
     <string name="lock_pattern_size_5">5x5</string>
     <string name="lock_pattern_size_6">6x6</string>
-
-    <!-- Lock screen battery ring -->
-    <string name="battery_around_ring_title">Battery around ring</string>
-    <string name="battery_around_ring_summary">Display battery level around unlock ring</string>
-
-    <!--Lock screen see through-->
-    <string name="see_through_title">See through</string>
-    <string name="see_through_summary">Shows the content behind lock screen</string>
-
-    <!--Lock screen blur radius -->
-    <string name="blur_radius_title">Blur radius</string>
-    <string name="blur_radius_summary">Set lock screen blur intensity effect</string>
-
-    <!-- Lockscreen wallpaper -->
-    <string name="lockscreen_wallpaper">Custom wallpaper</string>
-    <string name="select_wallpaper">Select wallpaper</string>
 
     <!-- Notification drawer background -->
     <string name="notification_style_title">Background style</string>
@@ -1369,23 +1438,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="advanced_reboot_hide_on_keyguard">Hide on lock screen</string>
     <string name="advanced_reboot_show_always">Show always</string>
 
-    <!-- Keyguard allow rotation -->
-    <string name="lockscreen_rotation_title">Lockscreen rotation</string>
-    <string name="lockscreen_rotation_portrait">Portrait only</string>
-    <string name="lockscreen_rotation_landscape">Landscape only</string>
-    <string name="lockscreen_rotation_summary_extra">(display rotation dependant)</string>
-
-    <!-- Keyguard always show battery -->
-    <string name="lockscreen_battery_status_title">Battery status</string>
-    <string name="lockscreen_battery_status_summary">Always show battery status on keyguard</string>
-
     <!-- About device screen, CPU and RAM info. -->
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memory</string>
-
-    <!-- Lock screen menu unlock -->
-    <string name="unlock_menu_unlock_title">Menu unlock</string>
-    <string name="unlock_menu_unlock_summary">Pressing the menu button unlocks the device</string>
 
     <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB over network</string>
@@ -1592,7 +1647,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ad_enable_summary_on">Active display enabled</string>
     <string name="ad_enable_summary_off">Active display disabled</string>
     <string name="ad_bypass_title">Bypass mode</string>
-    <string name="ad_bypass_summary">Pocket mode will launch the lockscreen when no notifications exist and lockscreen secure enabled</string>
+    <string name="ad_bypass_summary">Pocket mode will launch the lock screen when no notifications exist and lock screen secure enabled</string>
     <string name="ad_text_title">Notification text</string>
     <string name="ad_text_summary">Show the notification text around the ring</string>
     <string name="ad_content_title">Custom notification view</string>
@@ -1662,40 +1717,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ad_pocket_mode_off">Off</string>
     <string name="ad_pocket_mode_notifications">Notifications only</string>
     <string name="ad_pocket_mode_always">Always</string>
-
-    <!-- Lockscreen Notifications -->
-    <string name="general">General</string>
-    <string name="layout">Layout</string>
-    <string name="privacy">Privacy</string>
-    <string name="Lockscreen_notifications_header">Lockscreen Notifications</string>
-    <string name="lockscreen_notifications">Lockscreen notifications</string>
-    <string name="lockscreen_notifications_summary">Show pending notifications on lockscreen</string>
-    <string name="pocket_mode">Pocket mode</string>
-    <string name="pocket_mode_summary">Turn screen on and show all notifications when device is pulled out of pocket. Turn screen off when device gets back into pocket.</string>
-    <string name="show_always">Show always</string>
-    <string name="show_always_summary">Always turn screen on when pulled out of pocket, even when there are no notifications pending</string>
-    <string name="hide_low_priority">Hide low priority</string>
-    <string name="hide_low_priority_summary">Hide low priority notifications such as google now weather notifications</string>
-    <string name="hide_non_clearable">Hide non clearable</string>
-    <string name="hide_non_clearable_summary">Hide all non clearable notifications</string>
-    <string name="dismiss_all">Allow dismissing all notifications</string>
-    <string name="dismiss_all_summary">Allow dismissing even non clearable notifications. Of course, they\'re just hidden from lockscreen and not from the notification panel.</string>
-    <string name="expanded_view">Expanded notification view</string>
-    <string name="expanded_view_summary">Show notifications expanded when possible</string>
-    <string name="force_expanded_view">Force expanded view</string>
-    <string name="force_expanded_view_summary">Show notifications expanded by default. You still will be able to toggle between expanded and normal view.</string>
-    <string name="wake_on_notification">Wake on notification</string>
-    <string name="wake_on_notification_summary">Wake device when a new notification is received</string>
-    <string name="notifications_height">Notification count</string>
-    <string name="notifications_height_summary">Number of notifications displayed at once</string>
-    <string name="offset_top">Offset to the top of the screen:</string>
-    <string name="privacy_mode">Privacy Mode</string>
-    <string name="privacy_mode_summary">Disables notifications from beeing shown and dismissed. This way, you just see the icons of your notifications.</string>
-    <string name="excluded_apps_title">Excluded applications</string>
-    <string name="excluded_apps_summary">Excluded applications will not show up as lockscreen notifications</string>
-    <string name="notification_color">Notification background color</string>
-    <string name="dynamic_width">Dynamic width</string>
-    <string name="dynamic_width_summary">Sets the width of notifications dynamic, so that they only use the space they really need</string>
 
 	<!-- LiquidSmooth Anonymous Stats -->
     <string name="rominfo_settings_list_item_title">LiquidSmooth Statistics</string>
@@ -1810,27 +1831,5 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="status_bar_style_icon">Signal icon</string>
     <string name="status_bar_signal_text_title">Signal display</string>
     <string name="status_bar_signal_text_show_text">Signal text</string>
-
-    <!-- Lock screen buttons -->
-    <string name="lockscreen_buttons_title">Button actions</string>
-    <string name="lockscreen_buttons_summary">View or change lock screen button actions</string>
-    <string name="lockscreen_long_press_back_title">Long press Back button</string>
-    <string name="lockscreen_long_press_home_title">Long press Home button</string>
-    <string name="lockscreen_long_press_menu_title">Long press Menu button</string>
-    <string name="lockscreen_buttons_no_action">No action</string>
-    <string name="lockscreen_buttons_flashlight">Flashlight</string>
-    <string name="lockscreen_buttons_next">Next song</string>
-    <string name="lockscreen_buttons_previous">Previous song</string>
-    <string name="lockscreen_buttons_playpause">Play/Pause music</string>
-    <string name="lockscreen_buttons_toggle_sound">Toggle sound</string>
-    <string name="lockscreen_buttons_sleep">Go to sleep</string>
-    <string name="unlock_home_unlock_title">Home unlock</string>
-    <string name="unlock_home_unlock_summary">Pressing the home button unlocks the device</string>
-    <string name="unlock_menu_unlock_title">Menu unlock</string>
-    <string name="unlock_menu_unlock_summary">Pressing the menu button unlocks the device</string>
-
-	<!--Notification peek-->
-    <string name="notification_peek_title">Notification peek</string>
-    <string name="notification_peek_summary">Show latest notification after picking up your device</string>
 
 </resources>
