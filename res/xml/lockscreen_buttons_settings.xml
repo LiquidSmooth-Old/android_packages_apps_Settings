@@ -17,22 +17,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/lockscreen_buttons_title" >
 
-    <com.android.settings.liquid.SystemCheckBoxPreference
-        android:key="home_unlock_screen"
-        android:title="@string/unlock_home_unlock_title"
-        android:summary="@string/unlock_home_unlock_summary" />
-
     <ListPreference
         android:key="lockscreen_long_press_home"
         android:title="@string/lockscreen_long_press_home_title"
         android:persistent="false"
         android:entries="@array/lockscreen_long_key_press_entries"
         android:entryValues="@array/lockscreen_long_key_press_values"/>
-
-    <com.android.settings.liquid.SystemCheckBoxPreference
-        android:key="menu_unlock_screen"
-        android:title="@string/unlock_menu_unlock_title"
-        android:summary="@string/unlock_menu_unlock_summary" />
 
     <ListPreference
         android:key="lockscreen_long_press_menu"
