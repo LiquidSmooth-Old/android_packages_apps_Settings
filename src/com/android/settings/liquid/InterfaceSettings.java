@@ -38,28 +38,19 @@ import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.text.Editable;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Slog;
 import android.view.IWindowManager;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.SeekBar;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.EditText;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
 import java.lang.Thread;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Properties;
 
 public class InterfaceSettings extends SettingsPreferenceFragment
     implements OnPreferenceChangeListener {
@@ -73,12 +64,7 @@ public class InterfaceSettings extends SettingsPreferenceFragment
     private static final int DIALOG_CUSTOM_DENSITY = 101;
 
     private CheckBoxPreference mUseAltResolver;
-    private static Preference mLcdDensity;
-
-    private static int mMaxDensity = DisplayMetrics.getDeviceDensity();
-    private static int mDefaultDensity = getLiquidDefaultDensity();
-    private static int mMinDensity = getMinimumDensity();
-
+    private static ListPreference mLcdDensity;
     private static Activity mActivity;
 
     @Override
@@ -98,17 +84,18 @@ public class InterfaceSettings extends SettingsPreferenceFragment
                 .getContentResolver(), Settings.System.ACTIVITY_RESOLVER_USE_ALT, 0) == 1);
         mUseAltResolver.setOnPreferenceChangeListener(this);
 
-        mLcdDensity = (Preference) findPreference(KEY_LCD_DENSITY);
+        mLcdDensity = (ListPreference) findPreference(KEY_LCD_DENSITY);
         String current = SystemProperties.get(DENSITY_PROP,
                 SystemProperties.get("ro.sf.lcd_density"));
-        mLcdDensity.setSummary(getResources().getString(R.string.current_density) + current);
-        mLcdDensity.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                showDialogInner(DIALOG_CUSTOM_DENSITY);
-                return true;
-            }
-        });
+        final ArrayList<String> array = new ArrayList<String>(
+                Arrays.asList(getResources().getStringArray(R.array.lcd_density_entries)));
+        if (array.contains(current)) {
+            mLcdDensity.setValue(current);
+        } else {
+            mLcdDensity.setValue("custom");
+        }
+        mLcdDensity.setSummary(getResources().getString(R.string.current_lcd_density) + current);
+        mLcdDensity.setOnPreferenceChangeListener(this);
 
         PreferenceScreen hardwareKeys = (PreferenceScreen) findPreference(KEY_HARDWARE_KEYS);
         int deviceKeys = getResources().getInteger(
@@ -116,17 +103,6 @@ public class InterfaceSettings extends SettingsPreferenceFragment
         if (deviceKeys == 0 && hardwareKeys != null) {
             getPreferenceScreen().removePreference(hardwareKeys);
         }
-    }
-
-    private static int getMinimumDensity() {
-        int min = -1;
-        int[] densities = { 91, 121, 161, 241, 321, 481 };
-        for (int density : densities) {
-            if (density < mMaxDensity) {
-                min = density;
-            }
-        }
-        return min;
     }
 
     @Override
@@ -145,22 +121,28 @@ public class InterfaceSettings extends SettingsPreferenceFragment
                     Settings.System.ACTIVITY_RESOLVER_USE_ALT,
                     (Boolean) newValue ? 1 : 0);
             return true;
+        } else if (preference == mLcdDensity) {
+            String density = (String) newValue;
+            if (SystemProperties.get(DENSITY_PROP) != density) {
+                if ((density).equals(getResources().getString(R.string.custom_density))) {
+                    showDialogInner(DIALOG_CUSTOM_DENSITY);
+                } else {
+                    setDensity(Integer.parseInt(density));
+                }
+            }
+            return true;
         }
         return false;
     }
 
     private static void setDensity(int density) {
-        if (density < mMinDensity || density > mMaxDensity) {
-            return;
+        int max = mActivity.getResources().getInteger(R.integer.lcd_density_max);
+        int min = mActivity.getResources().getInteger(R.integer.lcd_density_min);
+        if (density < min || density > max) {
+            mLcdDensity.setSummary(mActivity.getResources().getString(
+                                            R.string.custom_density_summary_invalid));
         }
         SystemProperties.set(DENSITY_PROP, Integer.toString(density));
-        final IWindowManager windowManagerService = IWindowManager.Stub.asInterface(
-                ServiceManager.getService(Context.WINDOW_SERVICE));
-        try {
-            windowManagerService.updateStatusBarNavBarHeight();
-        } catch (RemoteException e) {
-            Slog.w(TAG, "Failure communicating with window manager", e);
-        }
         Configuration configuration = new Configuration();
         configuration.setToDefaults();
         configuration.densityDpi = density;
@@ -169,17 +151,12 @@ public class InterfaceSettings extends SettingsPreferenceFragment
         } catch (RemoteException e) {
             Slog.w(TAG, "Failure communicating with activity manager", e);
         }
-        killRunningApps();
-    }
-
-    private static void killRunningApps() {
-        ActivityManager am = (ActivityManager) mActivity.getSystemService(
-                Context.ACTIVITY_SERVICE);
-        String defaultKeyboard = Settings.Secure.getStringForUser(mActivity.getContentResolver(),
-                Settings.Secure.DEFAULT_INPUT_METHOD, UserHandle.USER_CURRENT);
-        am.forceStopPackage(defaultKeyboard);
-        for (ActivityManager.RunningAppProcessInfo pid : am.getRunningAppProcesses()) {
-            am.killBackgroundProcesses(pid.processName);
+        final IWindowManager windowManagerService = IWindowManager.Stub.asInterface(
+                ServiceManager.getService(Context.WINDOW_SERVICE));
+        try {
+            windowManagerService.updateStatusBarNavBarHeight();
+        } catch (RemoteException e) {
+            Slog.w(TAG, "Failure communicating with window manager", e);
         }
     }
 
@@ -203,64 +180,26 @@ public class InterfaceSettings extends SettingsPreferenceFragment
             return (InterfaceSettings) getTargetFragment();
         }
 
-        private void setTextDPI(TextView tv, String dpi) {
-            tv.setText(getResources().getString(R.string.new_density) + dpi);
-        }
-
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             LayoutInflater factory = LayoutInflater.from(getActivity());
             int id = getArguments().getInt("id");
             switch (id) {
                 case DIALOG_CUSTOM_DENSITY:
-                    final View dialogView = factory.inflate(
-                            R.layout.density_changer_dialog, null);
-                    final TextView currentDPI = (TextView)
-                            dialogView.findViewById(R.id.current_dpi);
-                    final TextView newDPI = (TextView) dialogView.findViewById(R.id.new_dpi);
-                    final SeekBar dpi = (SeekBar) dialogView.findViewById(R.id.dpi_edit);
-                    String current = SystemProperties.get(DENSITY_PROP,
-                            SystemProperties.get("ro.sf.lcd_density"));
-                    setTextDPI(newDPI, current);
-                    currentDPI.setText(getResources().getString(
-                            R.string.current_density) + current);
-                    dpi.setMax(mMaxDensity - mMinDensity);
-                    dpi.setProgress(Integer.parseInt(current) - mMinDensity);
-                    dpi.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                        @Override
-                        public void onProgressChanged(SeekBar seekBar,
-                                int progress, boolean fromUser) {
-                            int value = progress + mMinDensity;
-                            setTextDPI(newDPI, Integer.toString(value));
-                        }
-
-                        @Override
-                        public void onStartTrackingTouch(SeekBar seekBar) {
-                        }
-
-                        @Override
-                        public void onStopTrackingTouch(SeekBar seekBar) {
-                        }
-                    });
-                    ImageView setDefault = (ImageView) dialogView.findViewById(R.id.default_dpi);
-                    setDefault.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            if (mDefaultDensity != -1) {
-                                dpi.setProgress(mDefaultDensity - mMinDensity);
-                                setTextDPI(newDPI, Integer.toString(mDefaultDensity));
-                            }
-                        }
-                    });
+                    final View textEntryView = factory.inflate(
+                            R.layout.alert_dialog_text_entry, null);
                     return new AlertDialog.Builder(getActivity())
                             .setTitle(getResources().getString(R.string.set_custom_density_title))
-                            .setView(dialogView)
+                            .setView(textEntryView)
                             .setPositiveButton(getResources().getString(
                                     R.string.set_custom_density_set),
                                     new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int whichButton) {
+                                    EditText dpi = (EditText)
+                                            textEntryView.findViewById(R.id.dpi_edit);
+                                    Editable text = dpi.getText();
                                     dialog.dismiss();
-                                    setDensity(dpi.getProgress() + mMinDensity);
+                                    setDensity(Integer.parseInt(text.toString()));
                                 }
                             })
                             .setNegativeButton(getResources().getString(R.string.cancel),
@@ -277,24 +216,5 @@ public class InterfaceSettings extends SettingsPreferenceFragment
         @Override
         public void onCancel(DialogInterface dialog) {
         }
-    }
-
-    public static int getLiquidDefaultDensity() {
-        Properties prop = new Properties();
-        FileInputStream fis = null;
-        try {
-            fis = new FileInputStream("/system/build.prop");
-            prop.load(fis);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (fis != null) {
-                    fis.close();
-                }
-            } catch (Exception e) {
-            }
-        }
-        return Integer.parseInt(prop.getProperty(DENSITY_PROP, "-1"));
     }
 }

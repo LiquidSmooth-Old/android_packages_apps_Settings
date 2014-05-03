@@ -162,11 +162,12 @@
 
     <!-- Custom density -->
     <string name="custom_density_title">Custom density</string>
+    <string name="custom_density">Custom</string>
     <string name="set_custom_density_title">Set custom density</string>
     <string name="set_custom_density_set">Set</string>
-    <string name="current_density">"Current density: "</string>
-    <string name="new_density">"New density: "</string>
-    <string name="density_change_warning">Note: Closes all running apps!</string>
+    <string name="custom_density_summary_invalid">"INVALID DENSITY!"</string>
+    <string name="current_lcd_density">"Current density: "</string>
+    <string name="dpi">DPI</string>
 
     <!-- Gesture anywhere -->
     <string name="gesture_anywhere_title">Gesture anywhere</string>
