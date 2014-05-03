@@ -575,7 +575,6 @@
 
     <!-- Status bar | Clock -->
     <string name="status_bar_clock">Clock and date</string>
-    <string name="status_bar_clock_title">Clock and date style</string>
     <string name="clock_title_enable">Alignment</string>
     <string name="clock_color_title">Color</string>
     <string name="status_bar_clock_style_reset">Reset color</string>
@@ -1030,9 +1029,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="navigation_bar">Navigation bar</string>
     <string name="navbar_button_cat">Navigation bar buttons</string>
     <string name="title_pref_menu_location">Menu location</string>
-    <string name="summary_pref_menu_location">Where do you want the menu buttons to appear?</string>
+    <string name="summary_pref_menu_location">Where you want the menu buttons to appear</string>
     <string name="title_pref_menu_display">Menu visibility</string>
-    <string name="summary_pref_menu_display">How and when do you want the menu buttons to appear?</string>
+    <string name="summary_pref_menu_display">When you want the menu buttons to appear</string>
     <string name="navbar_enable_bar">Enable navigation bar</string>
     <string name="navbar_enable_bar_summary">Enable the navigation bar</string>
     <string name="navigation_bar_height_title">Navigation bar height</string>
