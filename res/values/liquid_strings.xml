@@ -1902,4 +1902,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ribbon_picker_title">Ribbon and layout</string>
     <string name="ribbon_picker_summary">View, select or change the ribbon widgets</string>
 
+    <!-- QuickSettings haptic feedback -->
+    <string name="haptic_qs_tiles_title">Vibrate on touch</string>
+    <string name="haptic_qs_tiles_summary">Vibrate when touching tiles</string>
+
 </resources>
