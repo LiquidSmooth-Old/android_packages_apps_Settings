@@ -122,6 +122,12 @@
             android:summary="@string/summary_collapse_panel"
             android:defaultValue="false" />
 
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="quick_settings_tiles_vibrate"
+            android:title="@string/haptic_qs_tiles_title"
+            android:summary="@string/haptic_qs_tiles_summary"
+            android:defaultValue="false" />
+
         <PreferenceScreen
             android:key="quicksettings_tiles_style"
             android:fragment="com.android.settings.liquid.quicksettings.QuickSettingsTilesStyle"
@@ -131,10 +137,10 @@
     <PreferenceCategory
         android:title="@string/additional_category_title" />
 
-     <Preference
-         android:fragment="com.android.settings.liquid.NotificationDrawerStyle"
-         android:key="notification_style"
-         android:title="@string/notification_style_title"
-         android:summary="@string/notification_style_summary" />
+        <Preference
+            android:fragment="com.android.settings.liquid.NotificationDrawerStyle"
+            android:key="notification_style"
+            android:title="@string/notification_style_title"
+            android:summary="@string/notification_style_summary" />
 
 </PreferenceScreen>
