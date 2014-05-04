@@ -1871,6 +1871,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="app_halo_label_white">Whitelist from Halo</string>
     <string name="halo_color_title">Circle color</string>
     <string name="halo_color_summary">Define the background shading color</string>
+    <string name="floating_mode_title">Allow floating windows</string>
+    <string name="floating_mode_summary">View notifications in floating window</string>
 
     <!-- QuickSettings haptic feedback -->
     <string name="haptic_qs_tiles_title">Vibrate on touch</string>

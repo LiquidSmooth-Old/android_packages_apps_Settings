@@ -19,39 +19,45 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <ListPreference
-        android:key="halo_state"
-        android:dialogTitle="@string/halo_state_title"
-        android:title="@string/halo_state_title"
-        android:summary="@string/halo_state_summary"
-        android:entries="@array/entries_halo_state"
-        android:entryValues="@array/values_halo_state" />
-		
-    <net.margaritov.preference.colorpicker.ColorPickerPreference
-        android:key="halo_color"
-        android:title="@string/halo_color_title"
-        android:summary="@string/halo_color_summary"
-        android:defaultValue="#66ffffff" />
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/general_category_title">
 
-     <ListPreference
-        android:key="halo_size"
-        android:dialogTitle="@string/halo_size_title"
-        android:title="@string/halo_size_title"
-        android:summary="@string/halo_size_summary"
-        android:entries="@array/entries_halo_size"
-        android:entryValues="@array/values_halo_size" />
+        <ListPreference
+            android:key="halo_state"
+            android:dialogTitle="@string/halo_state_title"
+            android:title="@string/halo_state_title"
+            android:summary="@string/halo_state_summary"
+            android:entries="@array/entries_halo_state"
+            android:entryValues="@array/values_halo_state" />
+    		
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="halo_color"
+            android:title="@string/halo_color_title"
+            android:summary="@string/halo_color_summary"
+            android:defaultValue="#66ffffff" />
 
-     <CheckBoxPreference
-        android:key="halo_hide"
-        android:title="@string/halo_hide_title"
-        android:summary="@string/halo_hide_summary"
-        android:defaultValue="false" />
+         <ListPreference
+            android:key="halo_size"
+            android:dialogTitle="@string/halo_size_title"
+            android:title="@string/halo_size_title"
+            android:summary="@string/halo_size_summary"
+            android:entries="@array/entries_halo_size"
+            android:entryValues="@array/values_halo_size" />
 
-     <CheckBoxPreference
-        android:key="halo_ninja"
-        android:title="@string/halo_ninja_title"
-        android:summary="@string/halo_ninja_summary"
-        android:defaultValue="false" />
+         <CheckBoxPreference
+            android:key="halo_hide"
+            android:title="@string/halo_hide_title"
+            android:summary="@string/halo_hide_summary"
+            android:defaultValue="false" />
+
+         <CheckBoxPreference
+            android:key="halo_ninja"
+            android:title="@string/halo_ninja_title"
+            android:summary="@string/halo_ninja_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="advanced_category"
@@ -95,6 +101,12 @@
             android:title="@string/halo_unlock_ping_title"
             android:summary="@string/halo_unlock_ping_summary"
             android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="floating_mode"
+            android:title="@string/floating_mode_title"
+            android:summary="@string/floating_mode_summary"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
