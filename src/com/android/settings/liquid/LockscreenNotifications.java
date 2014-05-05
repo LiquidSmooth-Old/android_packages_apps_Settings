@@ -170,7 +170,7 @@ public class LockscreenNotifications extends SettingsPreferenceFragment
 
         mDynamicWidth = (CheckBoxPreference) prefs.findPreference(KEY_DYNAMIC_WIDTH);
         mDynamicWidth.setChecked(Settings.System.getInt(cr,
-                    Settings.System.LOCKSCREEN_NOTIFICATIONS_DYNAMIC_WIDTH, 1) == 1);
+                    Settings.System.LOCKSCREEN_NOTIFICATIONS_DYNAMIC_WIDTH, 0) == 1);
         mDynamicWidth.setEnabled(mLockscreenNotifications.isChecked());
 
         boolean hasProximitySensor = getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_PROXIMITY);
