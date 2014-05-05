@@ -2044,6 +2044,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="blacklist_button_title">Blacklist</string>
     <string name="floating_blacklist_label">Blacklist from Floating Mode</string>
     <string name="halo_blacklist_label">Blacklist from Halo</string>
+    <string name="hover_blacklist_label">Blacklist from Hover</string>
     <string name="peek_blacklist_label">Blacklist from Peek</string>
+
+    <!-- Hover settings -->
+    <string name="hover_title">Hover settings</string>
+    <string name="hover_summary">Enables and customize hover notifications</string>
+    <string name="hover_state_title">Hover</string>
+    <string name="hover_state_summary">Enable hover notification system</string>
 
 </resources>

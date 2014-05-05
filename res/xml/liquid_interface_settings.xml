@@ -58,6 +58,12 @@
         android:summary="@string/button_keys_summary"
         android:fragment="com.android.settings.liquid.HardwareKeysSettings" />
 
+     <PreferenceScreen
+     	android:key="hover_settings"
+        android:title="@string/hover_title"
+        android:summary="@string/hover_summary"
+        android:fragment="com.android.settings.liquid.HoverSettings" />
+
     <PreferenceScreen
         android:key="navbar_targets_settings"
         android:fragment="com.android.settings.liquid.dslv.ButtonsListViewSettings"
