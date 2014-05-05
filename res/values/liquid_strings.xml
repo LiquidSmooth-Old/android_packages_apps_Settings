@@ -354,7 +354,7 @@
     <string name="lockscreen_target_summary">View or change custom lock screen targets</string>
     <string name="lockscreen_target_color_title">Target icon color</string>
     <string name="lockscreen_eight_targets_title">Eight slider targets</string>
-    <string name="lockscreen_eight_targets_summary">Enable eight custom lock screen targets.</string>
+    <string name="lockscreen_eight_targets_summary">Enable eight custom lock screen targets</string>
     <string name="lockscreen_enable_eight_targets_dialog">Changing this option resets your current lock screen targets setup to default.</string>
     <string name="lockscreen_enable_eight_targets_enabled_dialog">\n\nWith eight lock screen targets enabled you cannot use your lock screen shortcuts at the same time.</string>
     <string name="lockscreen_glowpad_torch_title">Slider torch</string>
@@ -369,7 +369,7 @@
     <string name="lockscreen_shortcuts_title">Shortcuts</string>
     <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
     <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
-    <string name="lockscreen_shorcuts_longpress_summary">Open custom lock screen shortcuts on longpress</string>
+    <string name="lockscreen_shorcuts_longpress_summary">Lock screen shortcuts on longpress</string>
 
     <!-- Lock screen wallpaper -->
     <string name="lockscreen_wallpaper">Custom wallpaper</string>
@@ -1833,24 +1833,24 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="disable_fc_notifications_summary">This will hide all force close notifications</string>
 
     <!-- Halo options -->
-    <string name="halo_hide_title">Hide Halo after activity</string>
-    <string name="halo_hide_summary">Halo will appear for incoming tasks and scroll out of sight after a while</string>
-    <string name="halo_reversed_title">Reverse Halo</string>
-    <string name="halo_reversed_summary">Applies for task switching and moving gestures</string>
-    <string name="halo_state_title">Halo policy</string>
-    <string name="halo_state_summary">Enables black/white listing notifications</string>
-    <string name="halo_state_black">Black list</string>
-    <string name="halo_state_white">White list</string>
+    <string name="halo_hide_title">Hide after activity</string>
+    <string name="halo_hide_summary">Appears then scrolls out of the way</string>
+    <string name="halo_reversed_title">Reverse gestures</string>
+    <string name="halo_reversed_summary">Drag using double tap swipe gestures</string>
+    <string name="halo_state_title">Current policy</string>
+    <string name="halo_state_summary">Black or white listing notifications</string>
+    <string name="halo_state_black">Blacklist</string>
+    <string name="halo_state_white">Whitelist</string>
     <string name="halo_pause_title">Pause active app</string>
-    <string name="halo_pause_summary">When opening an app with Halo the underlying app will get paused</string>
+    <string name="halo_pause_summary">Open while the underlying app pauses</string>
     <string name="halo_ninja_title">Ninja mode</string>
-    <string name="halo_ninja_summary">Halo will disappear completely when empty</string>
+    <string name="halo_ninja_summary">Will vanish completely when empty</string>
     <string name="halo_notification_msgbox_title">Enable message pop-up</string>
-    <string name="halo_notification_msgbox_summary">Show message box for incoming notifications</string>
+    <string name="halo_notification_msgbox_summary">Show message box for incoming</string>
     <string name="halo_unlock_ping_title">Ping on unlock</string>
-    <string name="halo_unlock_ping_summary">Halo will ping when device is unlocked if new notifications were received</string>
+    <string name="halo_unlock_ping_summary">Ping bubble when device is unlocked</string>
     <string name="halo_size_title">Halo size</string>
-    <string name="halo_size_summary">Defines how big Halo is going to be</string>
+    <string name="halo_size_summary">How big the bubble is going to be</string>
     <string name="halo_size_miniscule">Miniscule</string>
     <string name="halo_size_small">Small</string>
     <string name="halo_size_default">Normal (default)</string>
@@ -1858,18 +1858,18 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="halo_size_gigantic">Gigantic</string>
     <string name="halo_size_monster">Monster</string>
     <string name="halo_notification_count_title">Notification count</string>
-    <string name="halo_notification_count_summary">Display notification counts on Halo</string>
+    <string name="halo_notification_count_summary">Display current notification counts</string>
     <string name="halo_notification_count_none">None</string>
     <string name="halo_notification_count_total">Total</string>
     <string name="halo_notification_count_individual">Per app</string>
     <string name="halo_notification_count_both">Both</string>
     <string name="halo_msgbox_animation_title">Message box animation</string>
-    <string name="halo_msgbox_animation_summary">Halo message box animation for incoming notifications</string>
+    <string name="halo_msgbox_animation_summary">Message box animations for incoming</string>
     <string name="halo_msgbox_animation_none">None</string>
     <string name="halo_msgbox_animation_flip">Flip</string>
     <string name="app_halo_label_black">Blacklist from Halo</string>
     <string name="app_halo_label_white">Whitelist from Halo</string>
-    <string name="halo_color_title">Halo color</string>
-    <string name="halo_color_summary">Defines what color the Halo bubble is</string>
+    <string name="halo_color_title">Circle color</string>
+    <string name="halo_color_summary">Define the background shading color</string>
 
 </resources>

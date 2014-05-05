@@ -31,8 +31,7 @@
         android:key="halo_color"
         android:title="@string/halo_color_title"
         android:summary="@string/halo_color_summary"
-        android:defaultValue="#66ffffff"
-        android:dependency="halo_enabled" />
+        android:defaultValue="#66ffffff" />
 
      <ListPreference
         android:key="halo_size"
