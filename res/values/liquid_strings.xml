@@ -1030,8 +1030,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="summary_pref_menu_location">Where you want the menu buttons to appear</string>
     <string name="title_pref_menu_display">Menu visibility</string>
     <string name="summary_pref_menu_display">When you want the menu buttons to appear</string>
-    <string name="navbar_enable_bar">Enable navigation</string>
-    <string name="navbar_enable_bar_summary">Enable system navigation bar</string>
+    <string name="navbar_enable_bar">Enable navbar</string>
+    <string name="navbar_enable_bar_summary">Enable navigation bar</string>
     <string name="navigation_bar_height_title">Navigation bar height</string>
     <string name="navigation_bar_height_summary">Navigation bar height while in portrait.</string>
     <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
@@ -1523,7 +1523,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 	<!-- Wakelock blocker -->
     <string name="wakelock_blocker">Wakelock blocker</string>
     <string name="wakelock_blocker_title">Enable</string>
-    <string name="wakelock_blocker_summary">Activate blocking for wakelocks</string>
+    <string name="wakelock_blocker_summary">Block system wakelocks</string>
     <string name="wakelock_blocker_save">Save</string>
     <string name="wakelock_list_header">Available wakelocks</string>
     <string name="wakelock_blocker_reload">Reload</string>
@@ -1654,7 +1654,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ad_annoying_summary">Limit the notification to once per time period</string>
     <string name="ad_double_tap_title">Double tap to sleep</string>
     <string name="ad_double_tap_summary">Turn screen off with double tap</string>
-    <string name="ad_shake_event_settings_title">Shake settings</string>
+    <string name="ad_shake_event_settings_title">Shake</string>
     <string name="ad_shake_event_title">Shake to redisplay</string>
     <string name="ad_shake_event_summary">Shake device to redisplay notifications</string>
     <string name="ad_shake_force_title">Default event</string>

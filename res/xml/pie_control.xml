@@ -14,13 +14,19 @@
      limitations under the License.
 -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/pie_control_title">
+<PreferenceScreen
+    android:title="@string/pie_control_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <CheckBoxPreference
         android:key="pie_control"
         android:title="@string/pie_control_title"
         android:summary="@string/pie_control_summary" />
+
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/general_category_title">
 
         <PreferenceScreen
                 android:key="pie_button"
@@ -45,8 +51,11 @@
             android:title="@string/pie_control_trigger_positions"
             android:dependency="pie_control" />
 
+    </PreferenceCategory>
+
     <PreferenceCategory
-        android:title="@string/additional_category_title">
+        android:key="advanced_category"
+        android:title="@string/advanced_category_title">
 
         <ListPreference
             android:key="pie_menu"
