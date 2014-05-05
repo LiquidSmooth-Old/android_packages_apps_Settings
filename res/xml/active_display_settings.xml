@@ -175,7 +175,7 @@
 
     <PreferenceCategory
         android:key="ad_shake_event"
-        android:title="@string/ad_shake_event_settings_title" />
+        android:title="@string/ad_shake_event_settings_title">
 
         <com.android.settings.liquid.SystemCheckBoxPreference
             android:key="active_display_shake_event"

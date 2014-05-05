@@ -53,9 +53,10 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.liquid.AppMultiSelectListPreference;
 import com.android.internal.util.liquid.DeviceUtils;
 
-import java.lang.Thread;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class InterfaceSettings extends SettingsPreferenceFragment
     implements OnPreferenceChangeListener {
