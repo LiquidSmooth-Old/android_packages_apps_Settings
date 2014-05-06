@@ -53,7 +53,7 @@
     <string name="halo_options_title">Halo options</string>
     <string name="notification_drawer_title">Notification drawer</string>
     <string name="pie_control_title">Pie control</string>
-    <string name="theme_settings_title">Dark Mode</string>
+    <string name="theme_settings_title">Total blackout</string>
 
     <!-- Action shortcuts -->
     <string name="shortcut_picker_title">Action shortcuts</string>

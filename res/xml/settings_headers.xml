@@ -132,7 +132,7 @@
         android:fragment="com.android.settings.liquid.PieControl"
         android:icon="@drawable/ic_liquid_pie_control" />
 
-    <!-- Theme settings -->
+    <!-- Total blackout -->
     <header
         android:id="@+id/theme_settings"
 		android:title="@string/theme_settings_title"
