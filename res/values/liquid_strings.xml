@@ -2473,4 +2473,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="sizer_message_filefail">Failed to create profile.</string>
     <string name="sizer_message_noselect">Nothing selected.</string>
 
+    <!-- Statusbar Second Clock -->
+    <string name="clock_use_second">Second</string>
+    <string name="clock_use_second_summary">Show seconds in the clock</string>
+
 </resources>
