@@ -23,18 +23,26 @@
         android:key="general_category"
         android:title="@string/general_category_title">
 
+        <CheckBoxPreference
+            android:key="halo_enabled"
+            android:title="@string/halo_enabled_title"
+            android:summary="@string/halo_enabled_summary"
+            android:defaultValue="false" />
+
         <ListPreference
             android:key="halo_state"
             android:dialogTitle="@string/halo_state_title"
             android:title="@string/halo_state_title"
             android:summary="@string/halo_state_summary"
             android:entries="@array/entries_halo_state"
+            android:dependency="halo_enabled"
             android:entryValues="@array/values_halo_state" />
     		
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="halo_color"
             android:title="@string/halo_color_title"
             android:summary="@string/halo_color_summary"
+            android:dependency="halo_enabled"
             android:defaultValue="#66ffffff" />
 
          <ListPreference
@@ -43,18 +51,21 @@
             android:title="@string/halo_size_title"
             android:summary="@string/halo_size_summary"
             android:entries="@array/entries_halo_size"
+            android:dependency="halo_enabled"
             android:entryValues="@array/values_halo_size" />
 
          <CheckBoxPreference
             android:key="halo_hide"
             android:title="@string/halo_hide_title"
             android:summary="@string/halo_hide_summary"
+            android:dependency="halo_enabled"
             android:defaultValue="false" />
 
          <CheckBoxPreference
             android:key="halo_ninja"
             android:title="@string/halo_ninja_title"
             android:summary="@string/halo_ninja_summary"
+            android:dependency="halo_enabled"
             android:defaultValue="false" />
 
     </PreferenceCategory>
@@ -69,12 +80,14 @@
             android:title="@string/halo_notification_count_title"
             android:summary="@string/halo_notification_count_summary"
             android:entries="@array/entries_halo_notification_count"
+            android:dependency="halo_enabled"
             android:entryValues="@array/values_halo_notification_count" />
 
         <CheckBoxPreference
             android:key="halo_msgbox"
             android:title="@string/halo_notification_msgbox_title"
             android:summary="@string/halo_notification_msgbox_summary"
+            android:dependency="halo_enabled"
             android:defaultValue="true" />
 
         <ListPreference  
@@ -83,29 +96,34 @@
             android:title="@string/halo_msgbox_animation_title"
             android:summary="@string/halo_msgbox_animation_summary"
             android:entries="@array/entries_halo_msgbox_animation"
+            android:dependency="halo_enabled"
             android:entryValues="@array/values_halo_msgbox_animation" />
 
         <CheckBoxPreference
             android:key="halo_reversed"
             android:title="@string/halo_reversed_title"
             android:summary="@string/halo_reversed_summary"
+            android:dependency="halo_enabled"
             android:defaultValue="true" />
 
         <CheckBoxPreference
             android:key="halo_pause"
             android:title="@string/halo_pause_title"
+            android:dependency="halo_enabled"
             android:summary="@string/halo_pause_summary" />
 
         <CheckBoxPreference
             android:key="halo_unlock_ping"
             android:title="@string/halo_unlock_ping_title"
             android:summary="@string/halo_unlock_ping_summary"
+            android:dependency="halo_enabled"
             android:defaultValue="false" />
 
         <CheckBoxPreference
             android:key="floating_mode"
             android:title="@string/floating_mode_title"
             android:summary="@string/floating_mode_summary"
+            android:dependency="halo_enabled"
             android:defaultValue="true" />
 
     </PreferenceCategory>
