@@ -1851,6 +1851,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="disable_fc_notifications_summary">This will hide all force close notifications</string>
 
     <!-- Halo options -->
+    <string name="halo_enabled_title">Enable Halo</string>
+    <string name="halo_enabled_summary">When checked the bubble is activated</string>
     <string name="halo_hide_title">Hide after activity</string>
     <string name="halo_hide_summary">Appears then scrolls out of the way</string>
     <string name="halo_reversed_title">Reverse gestures</string>
