@@ -52,7 +52,7 @@ public class SmsCallController {
     private static final String KEY_REQUIRED_CALLS = "required_calls";
     private static final String KEY_SMS_BYPASS_CODE = "sms_bypass_code";
     private static final String SCHEDULE_SERVICE_COMMAND =
-            "com.android.settings.slim.service.SCHEDULE_SERVICE_COMMAND";
+            "com.android.settings.liquid.service.SCHEDULE_SERVICE_COMMAND";
 
     private static final int FULL_DAY = 1440; // 1440 minutes in a day
     private static final int TIME_LIMIT = 30; // 30 minute bypass limit
