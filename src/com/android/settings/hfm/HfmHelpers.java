@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014 Dirty Unicorns
+ * Copyright (C) 2014 Android Ice Cold Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,12 +22,22 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.BufferedReader;
-
+import java.net.HttpURLConnection;
+import java.net.URL;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.StrictMode;
 import android.provider.Settings;
-import android.util.Log;
+import android.widget.TextView;
+
+import com.android.settings.du.hfm.HfmSettings;
+import com.android.settings.R;
 
 public final class HfmHelpers {
     private static final String TAG = "HfmHelpers";
@@ -34,6 +45,8 @@ public final class HfmHelpers {
     private HfmHelpers() {
         throw new AssertionError();
     }
+
+    public static int i = 0;
 
     public static void checkStatus(Context context) {
         File defHosts = new File("/etc/hosts.og");
@@ -91,5 +104,99 @@ public final class HfmHelpers {
                        + " ; mount -o ro,remount /system";
             RunAsRoot(cmd);
         }
+    }
+
+    public static boolean isScriptFinished() {
+        File altHosts = new File("/etc/hosts.alt");
+        File hosts0 = new File("/etc/hosts0");
+        File hosts1 = new File("/etc/hosts1");
+        File hosts2 = new File("/etc/hosts2");
+        File hosts3 = new File("/etc/hosts3");
+        File tmpHosts = new File("/etc/hosts.tmp");
+        File started = new File("/etc/started.cfg");
+
+        if (altHosts.exists() && !hosts0.exists() && !hosts1.exists()
+            && !hosts2.exists() && !hosts3.exists() && !tmpHosts.exists() && !started.exists()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isAvailable(String urlString) throws IOException {
+        try {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+
+            URL url = new URL(urlString);
+
+            HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
+            urlc.setRequestProperty("Connection", "close");
+            urlc.setConnectTimeout(1000);
+            urlc.connect();
+
+            if (urlc.getResponseCode() == 200) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public static void showDialog(String message, Context c) {
+        AlertDialog dialog = new AlertDialog.Builder(c)
+        .setMessage(message)
+        .setNeutralButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) { 
+                //Nothing here
+            }
+        }).show();
+        TextView tv = (TextView) dialog.findViewById(android.R.id.message);
+        tv.setTextSize(14);
+    }
+
+    public static void checkConnectivity(Context c, ConnectivityManager man) throws IOException {
+        NetworkInfo networkInfo = man.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            HfmSettings.pd.show();
+            FetchHosts.fetch(); //Download and manage new hosts
+            i = 0;
+            applyNew(c);
+        } else {
+            showDialog(HfmSettings.res.getString(R.string.hfm_dialog_conn_error, c), c);
+        }
+    }
+
+    public static void applyNew(final Context c) {
+
+        final int delay = 500; //ms
+        final Handler h = new Handler();
+        h.postDelayed(new Runnable() {
+            public void run() {
+                if (isScriptFinished()) {
+                    if (HfmSettings.mHfmDisableAds.isChecked()) {
+                        checkStatus(c); //Hosts are downloaded. Apply if user has enabled blocking.
+                    }
+                    showDialog(FetchHosts.successfulSources + HfmSettings.res.getString(R.string.hfm_dialog_success), c);
+                    HfmSettings.pd.dismiss();
+                } else if (i < 40) {
+                    i++;
+                    h.postDelayed(this, delay);
+                } else {
+                    showDialog(HfmSettings.res.getString(R.string.hfm_dialog_failed), c);
+                    try {
+                        RunAsRoot("mount -o rw,remount /system"
+                                     + " && rm -f /etc/hosts[0-9] /etc/hosts.tmp /etc/started.cfg"
+                                     + " && mount -o ro,remount /system"); //Clean scraps after failing
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    HfmSettings.pd.dismiss();
+                }
+            }
+        }, delay);
     }
 }
