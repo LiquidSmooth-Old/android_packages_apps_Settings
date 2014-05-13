@@ -18,4 +18,11 @@
     <!-- Gesture anywhere -->
     <color name="ga_gesture_color">@android:color/white</color>
 
+    <!-- LinearColorBar -->
+    <color name="linear_color_bar_left_color">#ff0099cc</color>
+    <color name="linear_color_bar_middle_color">#ff0099cc</color>
+    <color name="linear_color_bar_right_color">#ff888888</color>
+    <color name="linear_color_bar_gray_color">#ff555555</color>
+    <color name="linear_color_bar_white_color">#ffffffff</color>
+
 </resources>
