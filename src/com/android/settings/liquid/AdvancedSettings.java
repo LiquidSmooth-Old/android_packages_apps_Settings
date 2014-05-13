@@ -25,7 +25,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
-import com.android.settings.hfm.HfmHelpers;
+import com.android.settings.liquid.util.Helpers;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -37,11 +37,9 @@ public class AdvancedSettings extends SettingsPreferenceFragment
 
     private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
     private static final String PREF_DEVICESETTINGS_APP = "devicesettings_app";
-    private static final String HFM_DISABLE_ADS = "hfm_disable_ads";
 
     private PreferenceScreen mDeviceSettingsApp;
     private ListPreference mMsob;
-    private CheckBoxPreference mHfmDisableAds;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,10 +52,6 @@ public class AdvancedSettings extends SettingsPreferenceFragment
                 Settings.System.MEDIA_SCANNER_ON_BOOT, 0)));
         mMsob.setSummary(mMsob.getEntry());
         mMsob.setOnPreferenceChangeListener(this);
-		
-        mHfmDisableAds = (CheckBoxPreference) findPreference(HFM_DISABLE_ADS);
-        mHfmDisableAds.setChecked((Settings.System.getInt(resolver,
-                Settings.System.HFM_DISABLE_ADS, 0) == 1));
 
         mDeviceSettingsApp = (PreferenceScreen) findPreference(PREF_DEVICESETTINGS_APP);
 
@@ -79,16 +73,6 @@ public class AdvancedSettings extends SettingsPreferenceFragment
         return false;
 
     }
-	
-    @Override
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if  (preference == mHfmDisableAds) {
-            boolean checked = ((CheckBoxPreference)preference).isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.HFM_DISABLE_ADS, checked ? 1:0);
-            HfmHelpers.checkStatus(getActivity());
-            return true;
-          }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
