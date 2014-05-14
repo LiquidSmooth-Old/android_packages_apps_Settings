@@ -1232,6 +1232,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="title_tile_bluetooth">Bluetooth</string>
     <string name="title_tile_brightness">Brightness</string>
     <string name="title_tile_camera">Camera</string>
+    <string name="title_tile_compass">Compass</string>
     <string name="title_tile_contact">Contact</string>
     <string name="title_tile_custom">Custom</string>
     <string name="title_tile_sleep">Go to sleep</string>

@@ -28,6 +28,7 @@ import static com.android.internal.util.liquid.QSConstants.TILE_BLUETOOTH;
 import static com.android.internal.util.liquid.QSConstants.TILE_BRIGHTNESS;
 import static com.android.internal.util.liquid.QSConstants.TILE_BUGREPORT;
 import static com.android.internal.util.liquid.QSConstants.TILE_CAMERA;
+import static com.android.internal.util.liquid.QSConstants.TILE_COMPASS;
 import static com.android.internal.util.liquid.QSConstants.TILE_CONTACT;
 import static com.android.internal.util.liquid.QSConstants.TILE_CUSTOM;
 import static com.android.internal.util.liquid.QSConstants.TILE_CUSTOM_KEY;
@@ -103,6 +104,9 @@ public class QuickSettingsUtil {
         registerTile(new QuickSettingsUtil.TileInfo(
         	    TILE_CAMERA, R.string.title_tile_camera,
         	    "com.android.systemui:drawable/ic_qs_camera"));
+        registerTile(new QuickSettingsUtil.TileInfo(
+                TILE_COMPASS, R.string.title_tile_compass,
+                "com.android.systemui:drawable/ic_qs_compass_on"));
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_EXPANDEDDESKTOP, R.string.title_tile_expanded_desktop,
                 "com.android.systemui:drawable/ic_qs_expanded_desktop_on"));
@@ -250,6 +254,11 @@ public class QuickSettingsUtil {
         // Don't show the Camera tile if the device has no cameras
         if (!DeviceUtils.deviceSupportsCamera()) {
         	removeTile(TILE_CAMERA);
+        }
+
+        // Don't show the Compass tile if the device has no orientation sensor
+        if (!DeviceUtils.deviceSupportsCompass(context)) {
+            removeTile(TILE_COMPASS);
         }
     }
 
