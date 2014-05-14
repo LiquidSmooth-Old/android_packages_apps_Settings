@@ -27,6 +27,7 @@ import static com.android.internal.util.liquid.QSConstants.TILE_BATTERYSAVER;
 import static com.android.internal.util.liquid.QSConstants.TILE_BLUETOOTH;
 import static com.android.internal.util.liquid.QSConstants.TILE_BRIGHTNESS;
 import static com.android.internal.util.liquid.QSConstants.TILE_BUGREPORT;
+import static com.android.internal.util.liquid.QSConstants.TILE_COMPASS;
 import static com.android.internal.util.liquid.QSConstants.TILE_CONTACT;
 import static com.android.internal.util.liquid.QSConstants.TILE_CUSTOM;
 import static com.android.internal.util.liquid.QSConstants.TILE_CUSTOM_KEY;
@@ -99,6 +100,9 @@ public class QuickSettingsUtil {
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_BRIGHTNESS, R.string.title_tile_brightness,
                 "com.android.systemui:drawable/ic_qs_brightness_auto_off"));
+        registerTile(new QuickSettingsUtil.TileInfo(
+                TILE_COMPASS, R.string.title_tile_compass,
+                "com.android.systemui:drawable/ic_qs_compass_on"));
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_EXPANDEDDESKTOP, R.string.title_tile_expanded_desktop,
                 "com.android.systemui:drawable/ic_qs_expanded_desktop_on"));
@@ -241,6 +245,11 @@ public class QuickSettingsUtil {
         // Don't show the Fast charge tile if not supported by kernel
         if (!DeviceUtils.fchargeEnabled(context)) {
             removeTile(TILE_FCHARGE);
+        }
+
+        // Don't show the Compass tile if the device has no orientation sensor
+        if (!DeviceUtils.deviceSupportsCompass(context)) {
+            removeTile(TILE_COMPASS);
         }
     }
 
