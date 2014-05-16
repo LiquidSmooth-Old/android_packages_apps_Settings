@@ -26,7 +26,7 @@
 
     <PreferenceScreen
         android:key="shake_events_disabled_apps"
-        android:fragment="com.android.settings.slim.dslv.ButtonsListViewSettings"
+        android:fragment="com.android.settings.liquid.dslv.ButtonsListViewSettings"
         android:title="@string/shake_events_disabled_title"
         android:summary="@string/shake_events_disabled_summary"
         android:dependency="enable_shake_events">
