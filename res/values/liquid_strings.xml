@@ -1857,7 +1857,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Double-tap to sleep -->
     <string name="status_bar_double_tap_to_sleep_title">Double-tap to sleep</string>
-    <string name="status_bar_double_tap_to_sleep_summary">Double-tap the status bar to goto sleep</string>
+    <string name="status_bar_double_tap_to_sleep_summary">Double-tap the status bar to goto sleep</string>                            
 
     <!-- Status bar notification count -->
     <string name="status_bar_notification_count_title">Notification count</string>
@@ -1931,7 +1931,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="category_quick_access">Quick ribbon</string>
     <string name="title_quick_access">Show in drawer</string>
     <string name="title_quick_access_linked">Linked layout</string>
-    <string name="summary_quick_access_linked">Use the same tiles and layout as the Quick Settings panel</string>
+    <string name="summary_quick_access_linked">Use the select tiles from quick settings</string>
     <string name="ribbon_picker_title">Ribbon and layout</string>
     <string name="ribbon_picker_summary">View, select or change the ribbon widgets</string>
 
