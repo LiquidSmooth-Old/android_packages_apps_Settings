@@ -46,7 +46,7 @@
             android:entryValues="@array/notification_hide_labels_values"
             android:persistent="false" />
 
-         <com.android.settings.widget.SeekBarPreference
+         <SlimSeekBarPreference
              android:key="notification_alpha"
              android:title="@string/notif_alpha_title" />
 

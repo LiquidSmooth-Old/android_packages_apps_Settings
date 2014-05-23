@@ -39,6 +39,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
+import android.preference.SlimSeekBarPreference;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.text.TextUtils.SimpleStringSplitter;
@@ -56,7 +57,6 @@ import com.android.settings.DialogCreatable;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
-import com.android.settings.widget.SeekBarPreference;
 
 import java.util.HashSet;
 import java.util.List;
@@ -197,7 +197,7 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mToggleLockScreenRotationPreference;
     private CheckBoxPreference mToggleSpeakPasswordPreference;
     private ListPreference mShakeSensitivity;
-    private SeekBarPreference mSelectLongPressTimeoutPreference;
+    private SlimSeekBarPreference mSelectLongPressTimeoutPreference;
     private Preference mNoServicesMessagePreference;
     private PreferenceScreen mCaptioningPreferenceScreen;
     private PreferenceScreen mDisplayMagnificationPreferenceScreen;
@@ -363,7 +363,7 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
 
         // Long press timeout.
         mSelectLongPressTimeoutPreference =
-                (SeekBarPreference) findPreference(SELECT_LONG_PRESS_TIMEOUT_PREFERENCE);
+                (SlimSeekBarPreference) findPreference(SELECT_LONG_PRESS_TIMEOUT_PREFERENCE);
         mSelectLongPressTimeoutPreference.setDefault(LONGPRESS_TIME_DEFAULT);
         mSelectLongPressTimeoutPreference.isMilliseconds(true);
         mSelectLongPressTimeoutPreference.setInterval(1);
