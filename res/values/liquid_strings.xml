@@ -322,6 +322,7 @@
     <string name="icon_picker_email2">Email Holo</string>
     <string name="icon_picker_facebook">Facebook</string>
     <string name="icon_picker_gallery">Gallery</string>
+    <string name="icon_picker_gmail">Gmail</string>
     <string name="icon_picker_google_small">Google (small)</string>
     <string name="icon_picker_googleplus">Google Plus</string>
     <string name="icon_picker_googletalk">Hangouts</string>
@@ -334,6 +335,7 @@
     <string name="icon_picker_podcast">Podcast</string>
     <string name="icon_picker_rss">Rss</string>
     <string name="icon_picker_search">Search</string>
+    <string name="icon_picker_snapchat">Snapchat</string>
     <string name="icon_picker_twitter">Twitter</string>
 
     <!-- Lock screen buttons -->
