@@ -1598,7 +1598,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
                                
     <!-- Toggle switch title for enabling battery saver connections. [CHAR LIMIT=32] -->
     <string name="data_usage_enable_batterysaver">Battery saver</string>
-
+    
     <!-- Battery saver mode -->
     <string name="unit_sec">sec</string>
     <string name="network_lte">LTE (recommended)</string>
