@@ -28,12 +28,6 @@
             android:summary="@string/notification_style_summary"
             android:fragment="com.android.settings.liquid.NotificationDrawerStyle" />
 
-        <CheckBoxPreference
-            android:key="custom_status_bar_header"
-            android:title="@string/custom_statusbar_header_title"
-            android:summary="@string/custom_statusbar_header_summary"
-            android:defaultValue="false" />
-
          <com.android.settings.liquid.CustomCarrier
              android:key="notification_custom_carrier_label"
              android:title="@string/notification_custom_carrier_label_title"

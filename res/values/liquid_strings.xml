@@ -1542,10 +1542,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_disable_ime_triggers_title">Trigger size on keyboard</string>
     <string name="pie_disable_ime_triggers_summary">Reduces left and right trigger size</string>
 
-    <!-- Contextual header -->
-    <string name="custom_statusbar_header_title">Contextual header</string>
-    <string name="custom_statusbar_header_summary">Sets header based on date and time</string>
-
     <!-- Notification reminder -->
     <string name="noti_reminder_category">Reminders</string>
     <string name="noti_reminder_enable_title">Enable notification reminder</string>
