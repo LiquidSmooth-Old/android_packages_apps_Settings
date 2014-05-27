@@ -33,7 +33,6 @@ import static com.android.internal.util.liquid.QSConstants.TILE_CUSTOM_KEY;
 import static com.android.internal.util.liquid.QSConstants.TILE_CUSTOM_DELIMITER;
 import static com.android.internal.util.liquid.QSConstants.TILE_DELIMITER;
 import static com.android.internal.util.liquid.QSConstants.TILE_EXPANDEDDESKTOP;
-import static com.android.internal.util.liquid.QSConstants.TILE_EQUALIZER;
 import static com.android.internal.util.liquid.QSConstants.TILE_IMESWITCHER;
 import static com.android.internal.util.liquid.QSConstants.TILE_LOCATION;
 import static com.android.internal.util.liquid.QSConstants.TILE_LOCKSCREEN;
@@ -266,8 +265,6 @@ public class QuickSettingsUtil {
             return context.getResources().getString(R.string.dynamic_tile_alarm);
         } else if (tile.equals(TILE_BUGREPORT)) {
             return context.getResources().getString(R.string.dynamic_tile_bugreport);
-        } else if (tile.equals(TILE_EQUALIZER)) {
-            return context.getResources().getString(R.string.dynamic_tile_equalizer);
         }
         return null;
     }

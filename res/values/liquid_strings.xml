@@ -1258,7 +1258,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="title_tile_shake">Shake events</string>
     <string name="title_tile_fcharge">Fast charge</string>
     <string name="title_tile_onthego">On-The-Go</string>
-    <string name="dynamic_tile_equalizer">Equalizer</string>
     <string name="dynamic_tile_ime_switcher">IME switcher</string>
     <string name="dynamic_tile_usb_tether">USB tether</string>
     <string name="dynamic_tile_alarm">Alarm</string>
