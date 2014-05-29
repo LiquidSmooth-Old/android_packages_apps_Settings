@@ -75,7 +75,7 @@
         android:title="@string/lockscreen_wallpaper_settings_title"
         android:icon="@drawable/prd_ic_lockscreen_wallpapers">
         <intent android:targetPackage="com.android.wallpapercropper"
-                android:targetClass="com.android.wallpapercropper.WallpaperPickerActivity" />
+                android:targetClass="com.android.wallpapercropper.LockWallpaperPickerActivity" />
     </Preference>
 
     <!-- Boot Animations -->
