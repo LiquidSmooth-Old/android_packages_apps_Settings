@@ -33,4 +33,24 @@
         android:key="lock_pattern_size_6"
         android:title="@string/lock_pattern_size_6"
         android:persistent="false"/>
+
+    <PreferenceScreen
+        android:key="lock_pattern_size_7"
+        android:title="@string/lock_pattern_size_7"
+        android:persistent="false"/>
+
+    <PreferenceScreen
+        android:key="lock_pattern_size_8"
+        android:title="@string/lock_pattern_size_8"
+        android:persistent="false"/>
+
+   <PreferenceScreen
+        android:key="lock_pattern_size_9"
+        android:title="@string/lock_pattern_size_9"
+        android:persistent="false"/>
+
+    <PreferenceScreen
+        android:key="lock_pattern_size_10"
+        android:title="@string/lock_pattern_size_10"
+        android:persistent="false"/>
 </PreferenceScreen>

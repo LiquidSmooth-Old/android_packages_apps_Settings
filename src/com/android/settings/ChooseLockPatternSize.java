@@ -64,6 +64,14 @@ public class ChooseLockPatternSize extends PreferenceActivity {
                 patternSize = 5;
             } else if ("lock_pattern_size_6".equals(key)) {
                 patternSize = 6;
+            } else if ("lock_pattern_size_7".equals(key)) {
+                patternSize = 7;
+            } else if ("lock_pattern_size_8".equals(key)) {
+                patternSize = 8;
+            } else if ("lock_pattern_size_9".equals(key)) {
+                patternSize = 9;
+            } else if ("lock_pattern_size_10".equals(key)) {
+               patternSize = 10;
             } else {
                 patternSize = 3;
             }

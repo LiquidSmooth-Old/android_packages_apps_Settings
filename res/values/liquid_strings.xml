@@ -2480,5 +2480,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Text for disabling immersive mode messages -->
     <string name="disable_immersive_message_title">Diable Immersive Mode Messages</string>
     <string name="disable_immersive_message_summary">This will hide all Immersive Mode Messages</string>
+	
+    <!-- Sizes for pattern lockscreen -->
+    <string name="lock_pattern_size_7">7x7</string>
+    <string name="lock_pattern_size_8">8x8</string>
+    <string name="lock_pattern_size_9">9x9</string>
+    <string name="lock_pattern_size_10">10x10</string>
 
 </resources>
