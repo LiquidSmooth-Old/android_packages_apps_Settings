@@ -60,6 +60,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     private static final String RECENT_PANEL_LEFTY_MODE = "recent_panel_lefty_mode";
     private static final String RECENT_PANEL_SCALE = "recent_panel_scale";
     private static final String RECENT_PANEL_EXPANDED_MODE = "recent_panel_expanded_mode";
+    private static final String RECENT_PANEL_SHOW_TOPMOST = "recent_panel_show_topmost";
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int MENU_HELP = MENU_RESET + 1; 
@@ -78,6 +79,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     private CheckBoxPreference mRecentPanelLeftyMode;
     private ListPreference mRecentPanelScale;
     private ListPreference mRecentPanelExpandedMode;
+    private CheckBoxPreference mRecentsShowTopmost;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -143,6 +145,12 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         mRecentPanelLeftyMode.setOnPreferenceChangeListener(this);
         mRecentPanelScale = (ListPreference) findPreference(RECENT_PANEL_SCALE);
         mRecentPanelScale.setOnPreferenceChangeListener(this);
+		
+        boolean enableRecentsShowTopmost = Settings.System.getInt(getContentResolver(),
+                                      Settings.System.RECENT_PANEL_SHOW_TOPMOST, 0) == 1;
+        mRecentsShowTopmost = (CheckBoxPreference) findPreference(RECENT_PANEL_SHOW_TOPMOST);
+        mRecentsShowTopmost.setChecked(enableRecentsShowTopmost);
+        mRecentsShowTopmost.setOnPreferenceChangeListener(this);
 
         mRecentPanelExpandedMode = (ListPreference) findPreference(RECENT_PANEL_EXPANDED_MODE);
         mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
@@ -252,6 +260,11 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
             int value = Integer.parseInt((String) newValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.RECENT_PANEL_EXPANDED_MODE, value);
+            return true;
+        } else if (preference == mRecentsShowTopmost) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.RECENT_PANEL_SHOW_TOPMOST,
+                    ((Boolean) newValue) ? 1 : 0);
             return true;
         }
         return false;

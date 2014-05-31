@@ -246,6 +246,8 @@
     <string name="recent_panel_expanded_mode_auto">Auto (default)</string>
     <string name="recent_panel_expanded_mode_always">Always</string>
     <string name="recent_panel_expanded_mode_never">Never</string>
+    <string name="recent_panel_show_topmost_title">Show topmost task</string>
+    <string name="recent_panel_show_topmost_summary">Don\'t exclude the topmost task in recents view</string>
 
     <!-- Recent apps panel -->
     <string name="recent_panel_category">Recent apps panel</string>

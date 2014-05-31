@@ -33,6 +33,12 @@
         android:summary="@string/recent_panel_expanded_mode_summary"
         android:persistent="false"
         android:dependency="custom_recent_mode" />
+		
+    <CheckBoxPreference
+        android:key="recent_panel_show_topmost"
+        android:title="@string/recent_panel_show_topmost_title"
+        android:summary="@string/recent_panel_show_topmost_summary"
+        android:persistent="false" />
 
     <CheckBoxPreference
         android:key="recent_panel_lefty_mode"
