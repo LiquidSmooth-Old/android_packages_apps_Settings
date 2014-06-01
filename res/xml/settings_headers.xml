@@ -241,10 +241,13 @@
     <!-- Theme chooser -->
     <header
         android:id="@+id/theme_chooser"
-        android:title="@string/theme_chooser_title"
-        android:breadCrumbTitle="@string/theme_chooser_title"
-        android:fragment="com.android.settings.ThemeSettings"
-        android:icon="@drawable/prd_ic_themepacks" />
+        android:icon="@drawable/ic_settings_themes"
+        android:title="@string/theme_chooser_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.tmobile.themechooser"
+            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
+    </header>
 
     <!-- Wakelock blocker -->
     <header
