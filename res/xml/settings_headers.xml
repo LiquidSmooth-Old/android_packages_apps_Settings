@@ -227,6 +227,14 @@
         android:fragment="com.android.settings.profiles.ProfilesSettings"
         android:title="@string/profiles_settings_title" />
 
+    <!-- Themes -->
+    <header
+        android:id="@+id/themes_settings"
+        android:title="@string/themes_settings_title"
+        android:breadCrumbTitle="@string/themes_settings_title"
+        android:fragment="com.android.settings.ThemeSettings"
+        android:icon="@drawable/prd_ic_themepacks" />
+
     <!-- Location -->
     <header
         android:fragment="com.android.settings.location.LocationSettings"
