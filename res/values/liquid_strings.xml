@@ -867,6 +867,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="shortcut_action_power_off">Power off</string>
     <string name="shortcut_action_reboot">Reboot</string>
     <string name="shortcut_action_sound">Sound</string>
+    <string name="shortcut_action_profiles">Profiles</string>
     <string name="shortcut_action_app">Custom app</string>
     <string name="shortcut_action_home">Home</string>
     <string name="shortcut_action_back">Back</string>

@@ -785,6 +785,7 @@
         <item>@string/shortcut_action_reboot</item>
         <item>@string/shortcut_action_screenshot</item>
         <item>@string/shortcut_action_sound</item>
+        <item>@string/shortcut_action_profiles</item>
     </string-array>
 
     <string-array name="shortcut_action_power_menu_values" translatable="false">
@@ -797,6 +798,7 @@
         <item>**reboot**</item>
         <item>**screenshot**</item>
         <item>**sound**</item>
+        <item>**profiles**</item>
     </string-array>
 
     <!-- MediaScanner behavior on boot -->
