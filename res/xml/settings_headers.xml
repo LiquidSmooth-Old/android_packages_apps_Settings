@@ -35,13 +35,6 @@
         android:title="@string/bluetooth_settings_title"
         android:icon="@drawable/ic_settings_bluetooth2" />
 
-    <!-- Total blackout -->
-    <header
-        android:id="@+id/theme_settings"
-        android:title="@string/theme_settings_title"
-        android:fragment="com.android.settings.liquid.themes.ThemeSettings"
-        android:icon="@drawable/ic_liquid_theme_settings" />
-
     <!-- Data Usage -->
     <header
         android:id="@+id/data_usage_settings"
@@ -67,17 +60,6 @@
     <!-- GENERAL -->
     <header android:id="@+id/general_section"
         android:title="@string/general_category_title" />
-
-    <!-- Theme chooser -->
-    <header
-        android:id="@+id/theme_chooser"
-        android:icon="@drawable/ic_settings_themes"
-        android:title="@string/theme_chooser_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="com.tmobile.themechooser"
-            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
-    </header>
 
     <!-- Interface -->
     <header
@@ -132,31 +114,30 @@
     <!-- Halo options -->
     <header
         android:id="@+id/halo_options"
-        android:title="@string/halo_options_title"
+		android:title="@string/halo_options_title"
         android:fragment="com.android.settings.liquid.HaloOptions"
         android:icon="@drawable/ic_liquid_halo_options" />
 
     <!-- Notification drawer -->
     <header
         android:id="@+id/notification_drawer"
-        android:title="@string/notification_drawer_title"
+		android:title="@string/notification_drawer_title"
         android:fragment="com.android.settings.liquid.NotificationDrawer"
         android:icon="@drawable/ic_liquid_notification_drawer" />
 
     <!-- Pie control -->
     <header
         android:id="@+id/pie_control"
-        android:title="@string/pie_control_title"
+		android:title="@string/pie_control_title"
         android:fragment="com.android.settings.liquid.PieControl"
         android:icon="@drawable/ic_liquid_pie_control" />
 
-    <!-- Wakelock blocker -->
+    <!-- Total blackout -->
     <header
-        android:id="@+id/wakelock_blocker"
-        android:title="@string/wakelock_blocker"
-        android:fragment="com.android.settings.liquid.WakeLockBlocker"
-        android:icon="@drawable/ic_menu_save"
-        android:layout="@layout/preference_wakelockblocker" />
+        android:id="@+id/theme_settings"
+		android:title="@string/theme_settings_title"
+        android:fragment="com.android.settings.liquid.themes.ThemeSettings"
+        android:icon="@drawable/ic_liquid_theme_settings" />
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
@@ -256,6 +237,17 @@
         android:icon="@drawable/ic_settings_backup"
         android:title="@string/privacy_settings"
         android:id="@+id/privacy_settings" />
+
+    <!-- Theme chooser -->
+    <header
+        android:id="@+id/theme_chooser"
+        android:icon="@drawable/ic_settings_themes"
+        android:title="@string/theme_chooser_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.tmobile.themechooser"
+            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
+    </header>
 
     <!--  ACCOUNTS section -->
     <header
