@@ -35,23 +35,19 @@
             android:entryValues="@array/media_scanner_on_boot_values" />
 
         <PreferenceScreen
-            android:id="@+id/initD"
-            android:fragment="com.android.settings.liquid.InitD"
-            android:title="@string/init_d_title"
-            android:summary="@string/header_summary_init_d" />
-
-        <PreferenceScreen
-            android:key="buildprop_modder"
-            android:title="@string/propmodder_title"
+            android:key="prop_modder"
+            android:title="@string/prop_modder_title"
             android:fragment="com.android.settings.liquid.PropModder"/>
 
-        <!-- Wakelock blocker -->
+        <PreferenceScreen
+            android:key="startup_tweaks"
+            android:title="@string/startup_tweaks_title"
+            android:fragment="com.android.settings.liquid.StartupTweaks" />
+
         <PreferenceScreen
             android:id="@+id/wakelock_blocker"
             android:title="@string/wakelock_blocker"
-            android:fragment="com.android.settings.liquid.WakeLockBlocker"
-            android:icon="@drawable/ic_menu_save"
-            android:layout="@layout/preference_wakelockblocker" />
+            android:fragment="com.android.settings.liquid.WakeLockBlocker" />
 
     </PreferenceCategory>
 

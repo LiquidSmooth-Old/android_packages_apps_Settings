@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2014 The LiquidSmooth Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.android.settings.liquid;
 
 import java.io.BufferedReader;
@@ -32,9 +48,9 @@ import com.android.settings.liquid.util.Helpers;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-public class InitD extends SettingsPreferenceFragment {
+public class StartupTweaks extends SettingsPreferenceFragment {
 
-    private static final String TAG = "InitD";
+    private static final String TAG = "StartupTweaks";
 
     private static final int MSG_LOAD_PREFS = 0;
     private static final int DIALOG_INIT_D_ERROR = 0;
@@ -78,9 +94,9 @@ public class InitD extends SettingsPreferenceFragment {
     protected SharedPreferences mPrefs;
     private ProgressDialog mPbarDialog;
 
-    private static InitD sActivity;
+    private static StartupTweaks sActivity;
 
-    public static InitD whatActivity() {
+    public static StartupTweaks whatActivity() {
         return sActivity;
     }
 
@@ -93,7 +109,7 @@ public class InitD extends SettingsPreferenceFragment {
     }
 
     private void loadValues() {
-        mPbarDialog = new ProgressDialog(InitD.this.getActivity());
+        mPbarDialog = new ProgressDialog(StartupTweaks.this.getActivity());
         mPbarDialog.setMessage("Loading values ...");
         mPbarDialog.show();
         new Thread() {
@@ -118,7 +134,7 @@ public class InitD extends SettingsPreferenceFragment {
                 }
 
                 saveAllPrefs();
-                addPreferencesFromResource(R.xml.init_d);
+                addPreferencesFromResource(R.xml.startup_tweaks);
                 mPrefs.registerOnSharedPreferenceChangeListener(
                         mOnSharedPreferenceChangeListener);
                 break;
@@ -166,11 +182,11 @@ public class InitD extends SettingsPreferenceFragment {
     @Override
     public Dialog onCreateDialog(final int id) {
         if (id == DIALOG_INIT_D_ERROR) {
-            return new AlertDialog.Builder(InitD.this.getActivity())
+            return new AlertDialog.Builder(StartupTweaks.this.getActivity())
             .setIcon(android.R.drawable.ic_dialog_alert)
-            .setTitle(getString(R.string.dt_init_d_error))
+            .setTitle(getString(R.string.dt_tweaks_error))
             .setCancelable(false)
-            .setMessage(getString(R.string.dm_init_d_error))
+            .setMessage(getString(R.string.dm_tweaks_error))
             .setPositiveButton(getString(R.string.db_exit),
                     new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {

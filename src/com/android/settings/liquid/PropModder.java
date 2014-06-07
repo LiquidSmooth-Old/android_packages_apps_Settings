@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2012 The Android Open Source Project
+ * Copyright (C) 2014 The LiquidSmooth Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,6 +15,12 @@
  */
 
 package com.android.settings.liquid;
+
+import java.io.BufferedOutputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.File;
+import java.io.FileWriter;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -46,21 +52,16 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import java.io.BufferedOutputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.File;
-import java.io.FileWriter;
-
-import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.liquid.util.CMDProcessor;
 import com.android.settings.liquid.util.Helpers;
+import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 
 public class PropModder extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "PropModder";
+
     private static final String APPEND_CMD = "echo \"%s=%s\" >> /system/build.prop";
     private static final String KILL_PROP_CMD = "busybox sed -i \"/%s/D\" /system/build.prop";
     private static final String REPLACE_CMD = "busybox sed -i \"/%s/ c %s=%s\" /system/build.prop";
@@ -176,7 +177,7 @@ public class PropModder extends PreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.propmodder);
+        addPreferencesFromResource(R.xml.prop_modder);
         prefSet = getPreferenceScreen();
 
         mWifiScanPref = (ListPreference) prefSet.findPreference(WIFI_SCAN_PREF);

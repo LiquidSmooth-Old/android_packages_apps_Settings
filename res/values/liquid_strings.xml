@@ -1939,12 +1939,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="performance_settings_warning_header">Warning</string>
     <string name="performance_settings_warning_title">Proceed with Caution</string>
 
-    <!-- PropModder -->
-    <string name="propmodder_title">Build.prop Mods</string>
-    <string name="propmodder_switches">Switches</string>
+    <!-- Prop modder -->
+    <string name="prop_modder_title">Prop modder</string>
+    <string name="prop_modder_switches">Switches</string>
     <string name="buildprop_title">build.prop mods (reboot required)</string>
     <string name="buildprop_settings_warning">These settings are included for experimentation and any changes made to them have the potential to cause instability, crashes, data loss or hardware failures.\n\nWe request you do not file bug reports if any of these settings have been changed from the defaults.</string>
-    <string name="nonprop_cat_title">Mods involving init.d script</string>
+    <string name="nonprop_cat_title">Mods involving startup scripts</string>
+    <string name="pref_disable_bootanimation_title">Disable bootanimation</string>
     <string name="pref_wifi_scan_interval_title">Wifi scan interval</string>
     <string name="pref_wifi_scan_interval_summary">The time between wifi scans when no stored access points are available</string>
     <string name="pref_wifi_scan_alt_summary">Time between wifi scans: %s</string>
@@ -1987,14 +1988,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pref_gpu_title">GPU Acceleration</string>
     <string name="pref_gpu_summary">Enable hardware acceleration where the GPU controls the UI instead of the CPU</string>
 
-    <!-- Diable BootAnimation -->
-    <string name="pref_disable_bootanimation_title">Disable Boot Animation</string>
+    <!-- Diable bootanimation -->
 
-    <!-- Init.d -->
-    <string name="header_summary_init_d">@null</string>
-    <string name="init_d_title">Init.d</string>
-    <string name="app_name">Init.d Conf</string>
-    <string name="pt_general">General</string>
+    <!-- Startup tweaks -->
+    <string name="startup_tweaks_title">Startup tweaks</string>
     <string name="pt_zipalign_apks">Zipalign apps</string>
     <string name="ps_zipalign_apks">Zipalign any unaligned apps on each boot</string>
     <string name="pt_fix_permissions">Fix permissions</string>
@@ -2050,8 +2047,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ps_loopy_smoothness_tweak">Enable/disable loopy smoothness tweaks</string>
     <string name="pt_init_d_credits">Developed by:</string>
     <string name="ps_init_d_credits">Jared Rummler (JRummy16)</string>
-    <string name="dt_init_d_error">Init.d error</string>
-    <string name="dm_init_d_error">It looks like init.d isn\'t setup properly. Please contact your ROM developer.</string>
+    <string name="dt_tweaks_error">Startup tweaks error</string>
+    <string name="dm_tweaks_error">It looks like startup tweaks isn\'t setup properly. Please contact your ROM developer.</string>
     <string name="db_exit">Exit</string>
 
 </resources>
