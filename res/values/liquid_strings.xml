@@ -1468,4 +1468,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="changelog_unknown">Unknown</string>
     <string name="changelog_version">Version</string>
 
+    <!-- LiquidSmooth Updater -->
+    <string name="liquidsmoothupdate_settings_title">LiquidSmooth Updates</string>
+    <string name="liquidsmoothupdate_settings_summary">Check for, view or install updates</string>
+
 </resources>

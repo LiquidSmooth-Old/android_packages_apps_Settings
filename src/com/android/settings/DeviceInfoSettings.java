@@ -70,6 +70,7 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
     private static final String KEY_DEVICE_CPU = "device_cpu";
     private static final String KEY_DEVICE_MEMORY = "device_memory";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
+    private static final String KEY_LIQUIDSMOOTH_UPDATES = "liquidsmooth_updates";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -141,6 +142,13 @@ public class DeviceInfoSettings extends RestrictedSettingsFragment {
         // Remove Baseband version if wifi-only device
         if (Utils.isWifiOnly(getActivity())) {
             getPreferenceScreen().removePreference(findPreference(KEY_BASEBAND_VERSION));
+        }
+
+        // Only the owner should see the Updater settings, if it exists
+        if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
+            removePreferenceIfPackageNotInstalled(findPreference(KEY_LIQUIDSMOOTH_UPDATES));
+        } else {
+            getPreferenceScreen().removePreference(findPreference(KEY_LIQUIDSMOOTH_UPDATES));
         }
 
         /*
