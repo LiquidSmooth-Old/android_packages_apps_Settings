@@ -90,8 +90,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_LIQUID_SHARE = "share";
     private static final String KEY_LIQUIDSMOOTH_UPDATES = "liquidsmooth_updates";
 
-    static final int TAPS_TO_BE_A_DEVELOPER = 7;
-
     long[] mHits = new long[3];
     int mDevHitCountdown;
     Toast mDevHitToast;
