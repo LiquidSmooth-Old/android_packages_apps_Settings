@@ -29,6 +29,15 @@
                     android:targetClass="android.romstats.AnonymousStats" />
         </PreferenceScreen>
 
+        <!-- LiquidSmooth Updates -->
+        <PreferenceScreen android:key="liquidsmooth_updates"
+                android:title="@string/liquidsmoothupdate_settings_title"
+                android:summary="@string/liquidsmoothupdate_settings_summary">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.liquid.updater"
+                    android:targetClass="com.liquid.updater.UpdatesSettings" />
+        </PreferenceScreen>
+
         <!-- Change Log -->
         <PreferenceScreen android:key="changelog"
             android:title="@string/changelog_title"

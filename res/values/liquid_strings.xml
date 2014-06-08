@@ -212,7 +212,7 @@
     <string name="power_menu_summary">Change or view order of global power menu</string>
     <string name="power_menu_style_summary">Customize power menu icon and text colors</string>
 
-	<!-- Progress bar -->
+    <!-- Progress bar -->
     <string name="progressbar_title">Progress bar</string>
     <string name="progressbar_summary">Customize appearance of the progress bars</string>
     <string name="progressbar_mirror_title">Mirror mode</string>
@@ -1670,9 +1670,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="custom_runtime_warning_title">Warning</string>
     <string name="custom_runtime_warning_message">ART is not supported by LiquidSmooth. This setting is included for experimentation only and has the potential to cause instability, crashes, data loss or prevent the proper boot of your device. Visit &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; for more information.&lt;br/&gt;&lt;br/&gt;We request you do not file bug reports if you have enabled ART as your runtime.&lt;br/&gt;&lt;br/&gt;Are you sure you want to reboot to change runtime from <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> to <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
 
-    <!-- OTA App -->
-    <string name="ota_app">LiquidSmooth Updates</string>
-    <string name="ota_app_summary">Check for ROM updates</string>
+    <!-- LiquidSmooth Updater -->
+    <string name="liquidsmoothupdate_settings_title">LiquidSmooth Updates</string>
+    <string name="liquidsmoothupdate_settings_summary">Check for, view or install updates</string>
 
     <!-- Vibration multiplier -->
     <string name="vibrator_multiplier_title">Vibration multiplier</string>
