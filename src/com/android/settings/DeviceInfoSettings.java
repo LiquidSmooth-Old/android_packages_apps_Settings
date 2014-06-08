@@ -87,6 +87,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_DEVICE_CPU = "device_cpu";
     private static final String KEY_DEVICE_MEMORY = "device_memory";
     private static final String KEY_LIQUID_SHARE = "share";
+    private static final String KEY_LIQUIDSMOOTH_UPDATES = "liquidsmooth_updates";
 
     long[] mHits = new long[3];
 
@@ -153,6 +154,13 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         // Dont show feedback option if there is no reporter.
         if (TextUtils.isEmpty(getFeedbackReporterPackage(getActivity()))) {
             getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_FEEDBACK));
+        }
+
+        // Only the owner should see the Updater settings, if it exists
+        if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
+            removePreferenceIfPackageNotInstalled(findPreference(KEY_LIQUIDSMOOTH_UPDATES));
+        } else {
+            getPreferenceScreen().removePreference(findPreference(KEY_LIQUIDSMOOTH_UPDATES));
         }
 
         /*
@@ -523,6 +531,30 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         } catch (IOException e) {}
 
         return result;
+    }
+
+    private boolean removePreferenceIfPackageNotInstalled(Preference preference) {
+        String intentUri=((PreferenceScreen) preference).getIntent().toUri(1);
+        Pattern pattern = Pattern.compile("component=([^/]+)/");
+        Matcher matcher = pattern.matcher(intentUri);
+
+        String packageName=matcher.find()?matcher.group(1):null;
+        if(packageName != null) {
+            try {
+                PackageInfo pi = getPackageManager().getPackageInfo(packageName,
+                        PackageManager.GET_ACTIVITIES);
+                if (!pi.applicationInfo.enabled) {
+                   Log.e(LOG_TAG,"package "+packageName+" is disabled, hiding preference.");
+                    getPreferenceScreen().removePreference(preference);
+                    return true;
+                }
+           } catch (NameNotFoundException e) {
+                Log.e(LOG_TAG,"package "+packageName+" not installed, hiding preference.");
+                getPreferenceScreen().removePreference(preference);
+                return true;
+            }
+        }
+        return false;
     }
 }
 

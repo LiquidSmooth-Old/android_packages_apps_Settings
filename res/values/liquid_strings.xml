@@ -32,4 +32,8 @@
     <string name="rominfo_settings_list_item_title">LiquidSmooth Statistics</string>
     <string name="rominfo_settings_list_item_summary">Help make LiquidSmooth better by opting into anonymous statistics reporting</string>
 
+    <!-- LiquidSmooth Updater -->
+    <string name="liquidsmoothupdate_settings_title">LiquidSmooth Updates</string>
+    <string name="liquidsmoothupdate_settings_summary">Check for, view or install updates</string>
+
 </resources>
