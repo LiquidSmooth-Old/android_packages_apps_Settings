@@ -132,6 +132,17 @@
         android:fragment="com.android.settings.liquid.PieControl"
         android:icon="@drawable/ic_liquid_pie_control" />
 
+    <!-- Theme chooser -->
+    <header
+        android:id="@+id/theme_chooser"
+        android:icon="@drawable/ic_settings_themes"
+        android:title="@string/theme_chooser_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.tmobile.themechooser"
+            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
+    </header>
+    
     <!-- Total blackout -->
     <header
         android:id="@+id/theme_settings"
@@ -237,17 +248,6 @@
         android:icon="@drawable/ic_settings_backup"
         android:title="@string/privacy_settings"
         android:id="@+id/privacy_settings" />
-
-    <!-- Theme chooser -->
-    <header
-        android:id="@+id/theme_chooser"
-        android:icon="@drawable/ic_settings_themes"
-        android:title="@string/theme_chooser_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="com.tmobile.themechooser"
-            android:targetClass="com.tmobile.themechooser.ThemeChooser" />
-    </header>
 
     <!--  ACCOUNTS section -->
     <header
