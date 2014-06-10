@@ -1279,6 +1279,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="custom_tile_long_press">Longpress:</string>
     <string name="custom_tile_null_warning">An action must be set first</string>
     <string name="custom_tile_resolve_name">Unknown</string>
+    <string name="title_tile_profile">Profile</string>
 
     <!-- QuickSettings style options -->
     <string name="quicksettings_tiles_style">Style</string>
