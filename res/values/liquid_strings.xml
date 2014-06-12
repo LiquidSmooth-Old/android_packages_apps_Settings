@@ -2069,5 +2069,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_long_fadeout_7seconds">7 seconds</string>
     <string name="hover_long_fadeout_10seconds">10 seconds</string>
     <string name="hover_long_fadeout_15seconds">15 seconds</string>
+	
+    <!-- Liquid Extra Info -->
+    <string name="lsextrainfo">Extra information</string>
+    <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
 
 </resources>
