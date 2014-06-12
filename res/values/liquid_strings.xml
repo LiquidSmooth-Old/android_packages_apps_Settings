@@ -2087,5 +2087,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_exclude_low_priority_summary">Notifications marked as low priority</string>
     <string name="hover_exclude_non_clearable_title">Exclude non-clearable</string>
     <string name="hover_exclude_non_clearable_summary">Notifications marked as non clearable</string>
+	
+    <!-- Liquid Extra Info -->
+    <string name="lsextrainfo">Extra information</string>
+    <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
 
 </resources>
