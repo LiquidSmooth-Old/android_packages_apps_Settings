@@ -22,6 +22,7 @@ import android.net.TrafficStats;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.RemoteException;
 import android.preference.CheckBoxPreference;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
@@ -32,6 +33,7 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
+import android.view.WindowManagerGlobal;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -50,6 +52,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String NETWORK_TRAFFIC_PERIOD = "network_traffic_period";
     private static final String STATUS_BAR_NOTIFICATION_COUNT = "status_bar_notification_count";
     private static final String STATUS_BAR_SIGNAL = "status_bar_signal";
+    private static final String KEY_EXPANDED_DESKTOP = "expanded_desktop";
 
     private PreferenceScreen mClockStyle;
     private CheckBoxPreference mStatusBarBrightnessControl;
@@ -58,6 +61,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private ListPreference mNetTrafficPeriod;
     private CheckBoxPreference mStatusBarNotifCount;
     private ListPreference mStatusBarSignal;
+    private ListPreference mExpandedDesktopPref;
 
     private int mNetTrafficVal;
     private int MASK_UP;
@@ -74,6 +78,26 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         loadResources();
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+
+        // Expanded desktop
+        mExpandedDesktopPref = (ListPreference) findPreference(KEY_EXPANDED_DESKTOP);
+        int expandedDesktopValue = Settings.System.getInt(getContentResolver(),
+                Settings.System.EXPANDED_DESKTOP_STYLE, 2);
+
+        try {
+            boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
+
+            if (hasNavBar) {
+                mExpandedDesktopPref.setOnPreferenceChangeListener(this);
+                mExpandedDesktopPref.setValue(String.valueOf(expandedDesktopValue));
+                updateExpandedDesktop(expandedDesktopValue);
+            } else {
+                prefSet.removePreference(mExpandedDesktopPref);
+            }
+        } catch (RemoteException e) {
+            Log.e(TAG, "Error getting navigation bar status");
+        }
 
         // Start observing for changes on auto brightness
         StatusBarBrightnessChangedObserver statusBarBrightnessChangedObserver =
@@ -142,6 +166,10 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
                     (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mExpandedDesktopPref) {
+            int expandedDesktopValue = Integer.valueOf((String) newValue);
+            updateExpandedDesktop(expandedDesktopValue);
             return true;
         } else if (preference == mNetTrafficState) {
             int intState = Integer.valueOf((String)newValue);
@@ -240,6 +268,24 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                 }
             }
         } catch (SettingNotFoundException e) {
+        }
+    }
+
+    private void updateExpandedDesktop(int value) {
+        ContentResolver cr = getContentResolver();
+        Resources res = getResources();
+        int summary = -2;
+
+        Settings.System.putInt(cr, Settings.System.EXPANDED_DESKTOP_STYLE, value);
+
+        if (value == 1) {
+            summary = R.string.expanded_desktop_status_bar;
+        } else if (value == 2) {
+            summary = R.string.expanded_desktop_no_status_bar;
+        }
+
+        if (mExpandedDesktopPref != null && summary != -2) {
+            mExpandedDesktopPref.setSummary(res.getString(summary));
         }
     }
 
