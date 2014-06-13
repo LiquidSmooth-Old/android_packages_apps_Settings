@@ -22,20 +22,20 @@
     android:layout_height="match_parent">
 
     <CheckBox
-        android:id="@+id/peek_blacklist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginTop="4dip"
-        android:text="@string/peek_blacklist_label" />
-
-    <CheckBox
         android:id="@+id/floating_blacklist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="4dip"
         android:text="@string/floating_blacklist_label" />
+
+    <CheckBox 
+        android:id="@+id/halo_blacklist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="4dip"
+        android:text="@string/halo_blacklist_label" />
 
     <CheckBox
         android:id="@+id/hover_blacklist"
@@ -44,5 +44,13 @@
         android:layout_gravity="start"
         android:layout_marginTop="4dip"
         android:text="@string/hover_blacklist_label" />
+
+    <CheckBox
+        android:id="@+id/peek_blacklist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="4dip"
+        android:text="@string/peek_blacklist_label" />
 
 </LinearLayout>
