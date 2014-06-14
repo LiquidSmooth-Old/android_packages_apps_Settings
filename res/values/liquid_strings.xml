@@ -2052,6 +2052,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_summary">Enables and customize hover notifications</string>
     <string name="hover_enabled_title">Enable Hover</string>
     <string name="hover_enabled_summary">Enable the hover notification system</string>
+    <string name="hover_hide_button_title">Hide button</string>
+    <string name="hover_hide_button_summary">Hide the hover button in status bar</string>
+    <string name="hover_active_title">Activate Hover</string>
+    <string name="hover_active_summary">Use hover and hide status bar button</string>
     <string name="hover_exclude_low_priority_title">Exclude low priority</string>
     <string name="hover_exclude_low_priority_summary">Notifications marked as low priority</string>
     <string name="hover_exclude_non_clearable_title">Exclude non-clearable</string>
