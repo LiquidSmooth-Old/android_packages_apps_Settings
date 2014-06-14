@@ -20,9 +20,9 @@
     android:title="@string/hover_title">
 
     <com.android.settings.liquid.SystemCheckBoxPreference
-        android:key="hover_state"
-        android:title="@string/hover_state_title"
-        android:summary="@string/hover_state_summary"
+        android:key="hover_enabled"
+        android:title="@string/hover_enabled_title"
+        android:summary="@string/hover_enabled_summary"
         android:defaultValue="false" />
 
     <com.android.settings.liquid.SystemCheckBoxPreference
