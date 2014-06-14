@@ -817,7 +817,7 @@ Opciones adicionales están disponibles por mucho tiempo-presionar una línea. S
   <string name="notification_hide_labels_text">en el panel de notificación</string>
   <string name="battery_icon_title">Icono de batería</string>
   <string name="battery_status_icon">Icono</string>
-  <string name="battery_status_percentage">Porcentaje %</string>
+  <string name="battery_status_percentage">Porcentaje</string>
   <string name="battery_status_icon_percentage">Icono con porcentaje</string>
   <string name="battery_status_icon_percentage_jb">Icono con porcentaje (estilo JB)</string>
   <string name="battery_status_circle">Círculo</string>

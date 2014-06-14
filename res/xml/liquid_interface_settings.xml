@@ -83,6 +83,12 @@
         android:title="@string/progressbar_title"
         android:summary="@string/progressbar_summary"
         android:fragment="com.android.settings.liquid.ProgressBar" />
+		
+     <PreferenceScreen
+     	android:key="hover_settings"
+        android:title="@string/hover_title"
+        android:summary="@string/hover_summary"
+        android:fragment="com.android.settings.liquid.HoverSettings" />
 
     <PreferenceScreen
         android:key="recent_panel"
