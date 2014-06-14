@@ -2052,5 +2052,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_summary">Enables and customize hover notifications</string>
     <string name="hover_state_title">Hover</string>
     <string name="hover_state_summary">Enable hover notification system</string>
+    <string name="hover_exclude_low_priority_title">Exclude low priority</string>
+    <string name="hover_exclude_low_priority_summary">Notifications marked as low priority</string>
+    <string name="hover_exclude_non_clearable_title">Exclude non-clearable</string>
+    <string name="hover_exclude_non_clearable_summary">Notifications marked as non clearable</string>
 
 </resources>
