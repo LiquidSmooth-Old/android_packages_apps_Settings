@@ -33,6 +33,13 @@
                 android:dialogTitle="@string/button_backlight_title"
                 android:persistent="false" />
 
+            <ListPreference
+                android:key="button_backlight_mode"
+                android:title="@string/button_backlight_title"
+                android:entries="@array/button_backlight_entries"
+                android:entryValues="@array/button_backlight_values"
+                android:persistent="true" />
+
         </PreferenceCategory>
 
         <PreferenceCategory

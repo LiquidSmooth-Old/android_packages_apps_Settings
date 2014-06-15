@@ -2500,4 +2500,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="gamma_tuning_brightness">Brightness</string>
     <string name="gamma_tuning_saturation">Saturation</string>
 
+    <!-- Button backlight mode -->
+    <string name="button_backlight_auto">Auto</string>
+    <string name="button_backlight_on">On</string>
+    <string name="button_backlight_off">Off</string>
+    <string name="button_backlight_force_on">Force on</string>
+    <string name="button_backlight_force_off">Force off</string>
+
 </resources>

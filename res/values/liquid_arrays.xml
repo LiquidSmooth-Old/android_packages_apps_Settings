@@ -2178,4 +2178,21 @@
     <string-array name="gamma_descriptors" translatable="false">
     </string-array>
 
+    <!-- Button Backlight settings -->
+    <string-array name="button_backlight_entries" translatable="false">
+        <item>@string/button_backlight_auto</item>
+        <item>@string/button_backlight_off</item>
+        <item>@string/button_backlight_on</item>
+        <item>@string/button_backlight_force_off</item>
+        <item>@string/button_backlight_force_on</item>
+    </string-array>
+
+    <string-array name="button_backlight_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
 </resources>

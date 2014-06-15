@@ -37,6 +37,7 @@ import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.ViewConfiguration;
 
 import com.android.internal.util.liquid.AppHelper;
 import com.android.internal.util.liquid.ButtonsConstants;
@@ -87,6 +88,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private static final String KEYS_CAMERA_WAKE = "keys_camera_press";
     private static final String KEYS_CAMERA_PEAK = "keys_camera_peak";
     private static final String KEYS_CAMERA_MUSIC = "keys_camera_music";
+    private static final String KEY_BUTTON_BACKLIGHT_MODE = "button_backlight_mode";
 
     private static final int DLG_SHOW_WARNING_DIALOG = 0;
     private static final int DLG_SHOW_ACTION_DIALOG  = 1;
@@ -122,6 +124,8 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mCameraWake;
     private CheckBoxPreference mCameraSleepOnRelease;
     private CheckBoxPreference mCameraMusicControls;
+
+    private ListPreference mButtonBacklightPref;
 
     private boolean mCheckPreferences;
     private Map<String, String> mKeySettings = new HashMap<String, String>();
@@ -364,6 +368,19 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
             prefs.removePreference(backlight);
         }
 
+        final boolean hasNavBar = !ViewConfiguration.get(getActivity()).hasPermanentMenuKey();
+
+        mButtonBacklightPref = (ListPreference) findPreference(KEY_BUTTON_BACKLIGHT_MODE);
+        if (hasNavBar) {
+            prefs.removePreference(mButtonBacklightPref);
+        } else {
+            final int currentButtonBacklight = Settings.System.getInt(getContentResolver(),
+                    Settings.System.BUTTON_BACKLIGHT_MODE, 0);
+            mButtonBacklightPref.setValueIndex(currentButtonBacklight);
+            mButtonBacklightPref.setOnPreferenceChangeListener(this);
+            mButtonBacklightPref.setSummary(mButtonBacklightPref.getEntries()[currentButtonBacklight]);
+        }
+
         mCheckPreferences = true;
         return prefs;
     }
@@ -471,6 +488,12 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), Settings.System.HARDWARE_KEY_REBINDING,
                     value ? 1 : 0);
+            return true;
+        } else if (preference == mButtonBacklightPref) {
+            final int value = Integer.parseInt((String) newValue);
+            mButtonBacklightPref.setSummary(mButtonBacklightPref.getEntries()[value]);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.BUTTON_BACKLIGHT_MODE, value);
             return true;
         }
         return false;
