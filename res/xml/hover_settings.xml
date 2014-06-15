@@ -40,6 +40,13 @@
         android:defaultValue="false" />
 
     <com.android.settings.liquid.SystemCheckBoxPreference
+        android:key="hover_require_fullscreen_mode"
+        android:title="@string/hover_require_fullscreen_mode_title"
+        android:summary="@string/hover_require_fullscreen_mode_summary"
+        android:dependency="hover_enabled"
+        android:defaultValue="false" />
+
+    <com.android.settings.liquid.SystemCheckBoxPreference
         android:key="hover_exclude_non_clearable"
         android:title="@string/hover_exclude_non_clearable_title"
         android:summary="@string/hover_exclude_non_clearable_summary"
