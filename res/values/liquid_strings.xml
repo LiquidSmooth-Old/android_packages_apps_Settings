@@ -2060,5 +2060,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_exclude_low_priority_summary">Notifications marked as low priority</string>
     <string name="hover_exclude_non_clearable_title">Exclude non-clearable</string>
     <string name="hover_exclude_non_clearable_summary">Notifications marked as non clearable</string>
+    <string name="hover_require_fullscreen_mode_title">Require expanded desktop</string>
+    <string name="hover_require_fullscreen_mode_summary">Only show when status bar is hidden</string>
 
 </resources>
