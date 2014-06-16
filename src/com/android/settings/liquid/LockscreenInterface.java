@@ -17,17 +17,34 @@
 package com.android.settings.liquid;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.database.ContentObserver;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
+import android.provider.Settings;
+import android.provider.Settings.SettingNotFoundException;
 import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.PreferenceCategory;
-import android.provider.Settings;
+import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.SeekBarPreference;
+import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.android.settings.R;
@@ -37,12 +54,14 @@ import com.android.internal.util.liquid.DeviceUtils;
 import java.io.File;
 import java.io.IOException;
 
-public class LockscreenInterface extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+public class LockscreenInterface extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
+
     private static final String TAG = "LockscreenInterface";
 
     private static final int DLG_ENABLE_EIGHT_TARGETS = 0;
 
+    private static final String LOCKSCREEN_GENERAL_CATEGORY = "general_category";
     private static final String PREF_LOCKSCREEN_EIGHT_TARGETS = "lockscreen_eight_targets";
     private static final String PREF_LOCKSCREEN_SHORTCUTS = "lockscreen_shortcuts";
     private static final String PREF_LOCKSCREEN_TORCH = "lockscreen_torch";
@@ -52,10 +71,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private Preference mShortcuts;
 
     private boolean mCheckPreferences;
-
-    public boolean hasButtons() {
-        return !getResources().getBoolean(com.android.internal.R.bool.config_showNavigationBar);
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,7 +86,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             prefs.removeAll();
         }
 
-        addPreferencesFromResource(R.xml.lockscreen_interface_settings);
+        addPreferencesFromResource(R.xml.lockscreen_interface);
         prefs = getPreferenceScreen();
 
         mLockscreenEightTargets = (CheckBoxPreference) findPreference(
@@ -127,6 +142,10 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         return false;
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
 
     private void showDialogInner(int id, boolean state) {
         DialogFragment newFragment = MyAlertDialogFragment.newInstance(id, state);
@@ -206,5 +225,4 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
              }
         }
     }
-
 }

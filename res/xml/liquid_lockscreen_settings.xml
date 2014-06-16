@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2014 The LiquidSmooth Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen
+    android:title="@string/lockscreen_settings_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/general_category_title">
+
+        <PreferenceScreen
+            android:key="lockscreen_interface"
+            android:title="@string/lockscreen_interface_title"
+            android:summary="@string/lockscreen_interface_summary"
+            android:fragment="com.android.settings.liquid.LockscreenInterface" />
+
+        <PreferenceScreen
+            android:key="lockscreen_notifications"
+            android:title="@string/lockscreen_notifications_title"
+            android:summary="@string/lockscreen_notifications_summary"
+            android:fragment="com.android.settings.liquid.LockscreenNotifications" />
+
+        <PreferenceScreen
+            android:key="lockscreen_style"
+            android:title="@string/lockscreen_style_title"
+            android:summary="@string/lockscreen_style_summary"
+            android:fragment="com.android.settings.liquid.LockscreenStyle" />
+
+        <PreferenceScreen
+            android:key="lockscreen_widgets"
+            android:title="@string/lockscreen_widgets_title"
+            android:summary="@string/lockscreen_widgets_summary"
+            android:fragment="com.android.settings.liquid.LockscreenWidgets" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="advanced_category"
+        android:title="@string/advanced_category_title">
+
+        <CheckBoxPreference
+            android:key="lockscreen_battery_status"
+            android:title="@string/lockscreen_battery_status_title"
+            android:summary="@string/lockscreen_battery_status_summary" />
+
+        <CheckBoxPreference
+            android:key="lock_before_unlock"
+            android:title="@string/lock_before_unlock_title"
+            android:summary="@string/lock_before_unlock_summary" />
+
+        <ListPreference
+            android:key="lockscreen_rotation"
+            android:title="@string/lockscreen_rotation_title"
+            android:entries="@array/lockscreen_rotation_entries"
+            android:entryValues="@array/lockscreen_rotation_values" />
+
+        <CheckBoxPreference
+            android:key="menu_unlock"
+            android:title="@string/unlock_menu_unlock_title"
+            android:summary="@string/unlock_menu_unlock_summary" />
+
+        <CheckBoxPreference
+            android:key="quick_unlock_control"
+            android:title="@string/unlock_quick_unlock_control_title"
+            android:summary="@string/unlock_quick_unlock_control_summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

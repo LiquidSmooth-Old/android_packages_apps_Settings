@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2013 SlimRoms Project
+<!-- Copyright (C) 2014 The LiquidSmooth Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,26 +13,32 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/lockscreen_widgets_title" >
 
-         <CheckBoxPreference
+<PreferenceScreen
+    android:title="@string/lockscreen_widgets_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <PreferenceCategory
+        android:key="general_category"
+        android:title="@string/general_category_title">
+
+        <CheckBoxPreference
             android:key="lockscreen_enable_widgets"
             android:title="@string/security_enable_widgets_title" />
 
-         <CheckBoxPreference
+        <CheckBoxPreference
             android:key="lockscreen_all_widgets"
             android:dependency="lockscreen_enable_widgets"
             android:title="@string/lockscreen_allow_all_title"
             android:summary="@string/lockscreen_allow_all_summary" />
 
-         <CheckBoxPreference
+        <CheckBoxPreference
             android:key="lockscreen_disable_frame"
             android:title="@string/lockscreen_widget_frame_title"
             android:summary="@string/lockscreen_widget_frame_summary" />
 
-         <CheckBoxPreference
+        <CheckBoxPreference
             android:key="lockscreen_camera_widget"
             android:title="@string/lockscreen_camera_widget_title"
             android:summary="@string/lockscreen_camera_widget_summary" />
@@ -42,14 +48,16 @@
             android:title="@string/lockscreen_use_widget_container_carousel_title"
             android:summary="@string/lockscreen_use_widget_container_carousel_summary" />
 
-         <CheckBoxPreference
+        <CheckBoxPreference
             android:key="lockscreen_disable_hints"
             android:title="@string/lockscreen_disable_hints_title"
             android:summary="@string/lockscreen_disable_hints_summary" />
 
-         <CheckBoxPreference
+        <CheckBoxPreference
             android:key="lockscreen_maximize_widgets"
             android:title="@string/lockscreen_maximize_widgets_title"
             android:summary="@string/lockscreen_maximize_widgets_summary" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

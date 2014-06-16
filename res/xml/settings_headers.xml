@@ -68,6 +68,13 @@
         android:fragment="com.android.settings.liquid.InterfaceSettings"
         android:icon="@drawable/ic_liquid_interface" />
 
+    <!-- Lock screen -->
+    <header
+        android:id="@+id/lockscreen_settings"
+        android:title="@string/lockscreen_settings_title"
+        android:fragment="com.android.settings.liquid.LockscreenSettings"
+        android:icon="@drawable/ic_liquid_lockscreen" />
+
     <!-- Navigation -->
     <header
         android:id="@+id/navigation_settings"

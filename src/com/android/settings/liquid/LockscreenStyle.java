@@ -76,7 +76,6 @@ public class LockscreenStyle extends SettingsPreferenceFragment
     private static final String KEY_LOCKSCREEN_MISC_COLOR =
             "lockscreen_misc_color";
 
-
     private String mDefault;
 
     private CheckBoxPreference mColorizeCustom;
@@ -201,6 +200,7 @@ public class LockscreenStyle extends SettingsPreferenceFragment
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == REQUEST_PICK_LOCK_ICON) {
 
@@ -302,6 +302,11 @@ public class LockscreenStyle extends SettingsPreferenceFragment
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     private void setPreferenceSummary(

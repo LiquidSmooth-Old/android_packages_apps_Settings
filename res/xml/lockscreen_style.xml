@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (C) 2013 SlimRoms Project
+<!-- Copyright (C) 2014 The LiquidSmooth Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,49 +13,57 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/lockscreen_style_title" >
 
-    <ListPreference
-        android:key="lockscreen_lock_icon"
-        android:title="@string/lockscreen_icon_title"
-        android:entries="@array/lock_icon_entries"
-        android:entryValues="@array/lock_icon_values"/>
+<PreferenceScreen
+    android:title="@string/lockscreen_style_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <CheckBoxPreference
-        android:key="lockscreen_colorize_icon"
-        android:title="@string/lockscreen_colorize_handle_title"
-        android:summary="@string/lockscreen_colorize_handle_summary" />
+    <PreferenceCategory
+        android:key="advanced_category"
+        android:title="@string/advanced_category_title">
 
-    <net.margaritov.preference.colorpicker.ColorPickerPreference
-        android:key="lockscreen_targets_color"
-        android:title="@string/lockscreen_targets_color_title"
-        android:summary="@string/lockscreen_targets_color_summary"
-        android:defaultValue="0xffffff" />
+        <ListPreference
+            android:key="lockscreen_lock_icon"
+            android:title="@string/lockscreen_icon_title"
+            android:entries="@array/lock_icon_entries"
+            android:entryValues="@array/lock_icon_values" />
 
-    <net.margaritov.preference.colorpicker.ColorPickerPreference
-        android:key="lockscreen_frame_color"
-        android:title="@string/lockscreen_frame_color_title"
-        android:summary="@string/lockscreen_frame_color_summary"
-        android:defaultValue="0xffffff" />
+        <CheckBoxPreference
+            android:key="lockscreen_colorize_icon"
+            android:title="@string/lockscreen_colorize_handle_title"
+            android:summary="@string/lockscreen_colorize_handle_summary" />
+			
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="lockscreen_targets_color"
+            android:title="@string/lockscreen_targets_color_title"
+            android:summary="@string/lockscreen_targets_color_summary"
+            android:defaultValue="0xffffff" />
 
-    <net.margaritov.preference.colorpicker.ColorPickerPreference
-        android:key="lockscreen_lock_color"
-        android:title="@string/lockscreen_lock_color_title"
-        android:summary="@string/lockscreen_lock_color_summary"
-        android:defaultValue="0xffffff" />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="lockscreen_frame_color"
+            android:title="@string/lockscreen_frame_color_title"
+            android:summary="@string/lockscreen_frame_color_summary"
+            android:defaultValue="0xffffff" />
 
-    <net.margaritov.preference.colorpicker.ColorPickerPreference
-        android:key="lockscreen_dots_color"
-        android:title="@string/lockscreen_dots_color_title"
-        android:summary="@string/lockscreen_dots_color_summary"
-        android:defaultValue="0xffffff" />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="lockscreen_lock_color"
+            android:title="@string/lockscreen_lock_color_title"
+            android:summary="@string/lockscreen_lock_color_summary"
+            android:defaultValue="0xffffff" />
 
-    <net.margaritov.preference.colorpicker.ColorPickerPreference
-        android:key="lockscreen_misc_color"
-        android:title="@string/lockscreen_misc_color_title"
-        android:summary="@string/lockscreen_misc_color_summary"
-        android:defaultValue="0xffffff" />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="lockscreen_dots_color"
+            android:title="@string/lockscreen_dots_color_title"
+            android:summary="@string/lockscreen_dots_color_summary"
+            android:defaultValue="0xffffff" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="lockscreen_misc_color"
+            android:title="@string/lockscreen_misc_color_title"
+            android:summary="@string/lockscreen_misc_color_summary"
+            android:defaultValue="0xffffff" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
