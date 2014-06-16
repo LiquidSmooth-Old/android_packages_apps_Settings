@@ -23,10 +23,6 @@
         android:title="@string/superuser_settings_title"
         android:fragment="com.koushikdutta.superuser.PolicyNativeFragment" />
 
-    <PreferenceCategory
-        android:key="advanced_category"
-        android:title="@string/advanced_category_title">
-
         <ListPreference
             android:key="media_scanner_on_boot"
             android:title="@string/media_scanner_on_boot_title"
@@ -48,8 +44,6 @@
             android:id="@+id/wakelock_blocker"
             android:title="@string/wakelock_blocker"
             android:fragment="com.android.settings.liquid.WakeLockBlocker" />
-
-    </PreferenceCategory>
 
     <PreferenceScreen
         android:key="devicesettings_app"
