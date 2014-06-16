@@ -36,6 +36,15 @@
         <extra android:name="useOnlyFullAppPicker" android:value="true" />
         <extra android:name="disableIconPicker" android:value="true" />
     </PreferenceScreen>
+	
+    <ListPreference
+        android:key="shake_sensitivity"
+        android:title="@string/shake_sensitivity_title"
+        android:summary="@string/shake_sensitivity_summary"
+        android:entries="@array/shake_sensitivity_entries"
+        android:entryValues="@array/shake_sensitivity_values"
+        android:dependency="enable_shake_events"
+        android:persistent="false"/>
 
     <PreferenceCategory
         android:title="@string/shake_events_normal_title">
