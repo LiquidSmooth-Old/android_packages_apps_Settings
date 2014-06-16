@@ -2094,6 +2094,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_exclude_low_priority_summary">Notifications marked as low priority</string>
     <string name="hover_exclude_non_clearable_title">Exclude non-clearable</string>
     <string name="hover_exclude_non_clearable_summary">Notifications marked as non clearable</string>
+    <string name="hover_exclude_topmost_title">Exclude topmost app</string>
+    <string name="hover_exclude_topmost_summary">Exclude notifications from the app running in foreground</string>
 	
     <!-- Liquid Extra Info -->
     <string name="lsextrainfo">Extra information</string>
