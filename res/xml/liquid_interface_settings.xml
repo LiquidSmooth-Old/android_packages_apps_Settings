@@ -31,12 +31,6 @@
         android:summary="@string/app_circle_bar_included_apps_summary"
         android:dependency="enable_app_circle_bar" />
 
-    <CheckBoxPreference
-        android:key="use_alt_resolver"
-        android:title="@string/alt_resolver_title"
-        android:summary="@string/alt_resolver_summary"
-        android:defaultValue="false" />
-
     <PreferenceScreen
         android:key="lock_clock"
         android:title="@string/lock_clock_title"

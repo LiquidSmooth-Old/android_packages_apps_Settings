@@ -78,10 +78,6 @@
 
 <!-- INTERFACE START -->
 
-    <!-- Alternate resolver -->
-    <string name="alt_resolver_title">Alternate resolver</string>
-    <string name="alt_resolver_summary">Use alternate default app picking grid</string>
-
     <!-- Clock widget -->
     <string name="lock_clock_title">Clock widget</string>
     <string name="lock_clock_summary">Change home or lock screen widget display</string>
