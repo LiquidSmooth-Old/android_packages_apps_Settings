@@ -135,6 +135,12 @@
                 android:summary="@string/sunlight_enhancement_summary"
                 android:defaultValue="true" />
 
+        <CheckBoxPreference
+                android:key="color_enhancement"
+                android:title="@string/color_enhancement_title"
+                android:summary="@string/color_enhancement_summary"
+                android:defaultValue="true" />
+
 
         <!-- DeviceHandler device specific screen off gesture settings -->
         <Preference
