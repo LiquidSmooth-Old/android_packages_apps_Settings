@@ -115,12 +115,6 @@
             android:persistent="true" />
 
         <CheckBoxPreference
-            android:key="pref_jit"
-            android:title="@string/pref_jit_title"
-            android:summary="@string/pref_jit_summary"
-            android:persistent="true" />
-
-        <CheckBoxPreference
             android:key="pref_gpu"
             android:title="@string/pref_gpu_title"
             android:summary="@string/pref_gpu_summary"
