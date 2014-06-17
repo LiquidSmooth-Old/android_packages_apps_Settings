@@ -653,35 +653,34 @@ public class InstalledAppDetails extends Fragment
         } else if (requestCode == REQUEST_TOGGLE_PROTECTION) {
             switch (resultCode) {
                 case Activity.RESULT_OK:
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            // User validated send intent to set app to visible and refresh
-                            String components = "";
-                            for (ActivityInfo aInfo : mPackageInfo.activities) {
-                                components += new ComponentName(aInfo.packageName, aInfo.name)
-                                        .flattenToString() + "|";
-                            }
-
-                            String [] cName = components.split("\\|");
-                            ProtectedAppsReceiver
-                                    .protectedAppComponents(cName, true, getActivity());
-                            ProtectedAppsReceiver
-                                    .updateSettingsSecure(cName, true, getActivity());
-                            ProtectedAppsReceiver
-                                    .notifyProtectedChanged(components, true, getActivity());
-
-                            getActivity().invalidateOptionsMenu();
-                            if (!refreshUi()) {
-                                setIntentAndFinish(true, true);
-                            }
-                        }
-                    }, 100);
+                    new ToggleProtectedAppComponents().execute();
                     break;
                 case Activity.RESULT_CANCELED:
                     // User failed to enter/confirm a lock pattern, do nothing
                     break;
             }
+        }
+    }
+    private class ToggleProtectedAppComponents extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            getActivity().invalidateOptionsMenu();
+            if (!refreshUi()) {
+                setIntentAndFinish(true, true);
+            }
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            String components = "";
+            for (ActivityInfo aInfo : mPackageInfo.activities) {
+                components += new ComponentName(aInfo.packageName, aInfo.name)
+                        .flattenToString() + "|";
+            }
+
+            ProtectedAppsReceiver.protectedAppComponentsAndNotify
+                    (components, true, getActivity());
+            return null;
         }
     }
 

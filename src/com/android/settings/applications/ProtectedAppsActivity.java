@@ -253,6 +253,7 @@ public class ProtectedAppsActivity extends Activity {
         protected void onPreExecute() {
             mDialog.setMessage(getResources().getString(R.string.saving_protected_components));
             mDialog.setCancelable(false);
+            mDialog.setCanceledOnTouchOutside(false);
             mDialog.show();
         }
 
@@ -274,12 +275,8 @@ public class ProtectedAppsActivity extends Activity {
                     components += cn.flattenToShortString() + "|";
                 }
 
-                ProtectedAppsReceiver.protectedAppComponents(components.split("\\|"),
-                        appList.protect, mContext);
-                ProtectedAppsReceiver.updateSettingsSecure(components.split("\\|"),
-                        appList.protect, mContext);
-                ProtectedAppsReceiver.notifyProtectedChanged(components,
-                        appList.protect, mContext);
+                ProtectedAppsReceiver.protectedAppComponentsAndNotify
+                        (components, appList.protect, mContext);
             }
 
             return null;

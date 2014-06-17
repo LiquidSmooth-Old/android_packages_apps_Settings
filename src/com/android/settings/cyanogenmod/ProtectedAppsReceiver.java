@@ -28,12 +28,17 @@ public class ProtectedAppsReceiver extends BroadcastReceiver {
             boolean protect = intent.getBooleanExtra(PROTECTED_STATE, true);
             String components = intent.getStringExtra(PROTECTED_COMPONENT);
             components = components == null ? "" : components;
-            String [] cName = components.split("\\|");
 
-            protectedAppComponents(cName, protect, context);
-            updateSettingsSecure(cName, protect, context);
-            notifyProtectedChanged(components, protect, context);
+            protectedAppComponentsAndNotify(components, protect, context);
         }
+    }
+
+    public static void protectedAppComponentsAndNotify(String components, boolean protect, Context context) {
+        String [] cName = components.split("\\|");
+
+        protectedAppComponents(cName, protect, context);
+        updateSettingsSecure(cName, protect, context);
+        notifyProtectedChanged(components, protect, context);
     }
 
     public static void protectedAppComponents(String [] componentNames, boolean protect, Context context) {
