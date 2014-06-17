@@ -2530,4 +2530,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="sunlight_enhancement_title">Sunlight enhancement</string>
     <string name="sunlight_enhancement_summary">Enhance display brightness and readability under bright sunlight</string>
 
+    <!-- Color enhancement settings screen -->
+    <string name="color_enhancement_title">Color enhancement</string>
+    <string name="color_enhancement_summary">Dynamically enhance the color of the display</string>
+
 </resources>
