@@ -60,4 +60,13 @@
         android:dependency="hover_active"
         android:defaultValue="true" />
 
+    <com.android.settings.liquid.SystemListPreference
+        android:key="hover_long_fade_out_delay"
+        android:title="@string/hover_long_fadeout_title"
+        android:dialogTitle="@string/hover_long_fadeout_title"
+        android:entries="@array/hover_long_fadeout_entries"
+        android:entryValues="@array/hover_long_fadeout_values"
+        android:dependency="hover_active"
+        android:defaultValue="5000" />
+
 </PreferenceScreen>
