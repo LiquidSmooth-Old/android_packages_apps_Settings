@@ -2050,8 +2050,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Hover settings -->
     <string name="hover_title">Hover settings</string>
     <string name="hover_summary">Enables and customize hover notifications</string>
-    <string name="hover_enabled_title">Enable Hover</string>
-    <string name="hover_enabled_summary">Enable the hover notification system</string>
     <string name="hover_hide_button_title">Hide button</string>
     <string name="hover_hide_button_summary">Hide the hover button in status bar</string>
     <string name="hover_active_title">Activate Hover</string>
