@@ -84,4 +84,10 @@
         android:summary="@string/recent_panel_summary"
         android:fragment="com.android.settings.liquid.RecentPanelSettings" />
 
+    <PreferenceScreen
+        android:key="shake_events"
+        android:title="@string/shake_events_title"
+        android:summary="@string/shake_events_summary"
+        android:fragment="com.android.settings.liquid.ShakeEvents" />
+
 </PreferenceScreen>
