@@ -25,8 +25,8 @@
         android:summary="@string/navbar_enable_bar_summary" />
 
     <PreferenceCategory
-        android:key="navbar_cat"
-        android:title="@string/navbar_cat">
+        android:key="general_category"
+        android:title="@string/general_category_title">
 
         <PreferenceScreen
                 android:key="navbar_button_settings"
@@ -56,8 +56,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="advanced_cat"
-        android:title="@string/advanced_settings">
+        android:key="advanced_category"
+        android:title="@string/advanced_category_title">
 
         <ListPreference
             android:key="pref_navbar_menu_display"

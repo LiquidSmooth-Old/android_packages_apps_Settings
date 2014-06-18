@@ -53,7 +53,7 @@
     <string name="halo_options_title">Halo options</string>
     <string name="notification_drawer_title">Notification drawer</string>
     <string name="pie_control_title">Pie control</string>
-    <string name="theme_settings_title">Theme settings</string>
+    <string name="theme_settings_title">Total blackout</string>
 
     <!-- Device settings -->
     <string name="device_settings_title">Device</string>
@@ -623,7 +623,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Navigation settings -->
     <string name="navigation_settings_options_title">Navigation options</string>
-    <string name="power_menu_title">Global menu</string>
 
     <!-- Power menu -->
     <string name="power_menu_title">Power menu</string>
@@ -649,11 +648,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="navigation_bar">Navigation bar</string>
     <string name="navbar_button_cat">Navigation bar buttons</string>
     <string name="title_pref_menu_location">Menu location</string>
-    <string name="summary_pref_menu_location">Where do you want the menu buttons to appear?</string>
+    <string name="summary_pref_menu_location">Where you want the menu buttons to appear</string>
     <string name="title_pref_menu_display">Menu visibility</string>
-    <string name="summary_pref_menu_display">How and when do you want the menu buttons to appear?</string>
-    <string name="navbar_enable_bar">Enable navigation bar</string>
-    <string name="navbar_enable_bar_summary">Enable the navigation bar</string>
+    <string name="summary_pref_menu_display">When you want the menu buttons to appear</string>
+    <string name="navbar_enable_bar">Enable navbar</string>
+    <string name="navbar_enable_bar_summary">Enable navigation bar</string>
     <string name="navigation_bar_height_title">Navigation bar height</string>
     <string name="navigation_bar_height_summary">Navigation bar height while in portrait.</string>
     <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
@@ -661,7 +660,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="navigation_bar_width_title">Navigation bar width</string>
     <string name="navigation_bar_width_summary">Navigation bar height if the bar is along a side.</string>
     <string name="navbar_can_move">Show landscape</string>
-    <string name="navbar_can_move_summary">Shows navigation bar in lanscape on the bottom</string>
+    <string name="navbar_can_move_summary">Shows navigation bar in landscape</string>
     <string name="navbar_style_dimen_title">Dimensions</string>
     <string name="navbar_button_title">Buttons</string>
     <string name="navbar_targets_title">Ring targets</string>
@@ -977,7 +976,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="quicksettings_tiles_style_additional_options">Additional options</string>
     <string name="tiles_per_row_title">Tiles per row</string>
     <string name="tiles_per_row_duplicate_landscape_title">Scale landscape quantity</string>
-    <string name="tiles_per_row_duplicate_landscape_summary">Landscape view doubles tiles per row quantity</string>
+    <string name="tiles_per_row_duplicate_landscape_summary">Landscape view doubles tiles per row</string>
     <string name="quick_tiles_bg_color_title">Tiles background color</string>
     <string name="quick_tiles_bg_pressed_color_title">Tiles pressed background color</string>
     <string name="quick_tiles_text_color_title">Tiles text color</string>
@@ -1188,13 +1187,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
-    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
+    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left</string>
 
     <!-- Keyguard allow rotation -->
     <string name="lockscreen_rotation_title">Lockscreen rotation</string>
     <string name="lockscreen_rotation_portrait">Portrait only</string>
     <string name="lockscreen_rotation_landscape">Landscape only</string>
-    <string name="lockscreen_rotation_summary_extra">(display rotation dependant)</string>
+    <string name="lockscreen_rotation_summary_extra">Display rotation dependant</string>
 
     <!-- Keyguard always show battery -->
     <string name="lockscreen_battery_status_title">Battery status</string>
@@ -1206,7 +1205,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Lock screen menu unlock -->
     <string name="unlock_menu_unlock_title">Menu unlock</string>
-    <string name="unlock_menu_unlock_summary">Pressing the menu button unlocks the device</string>
+    <string name="unlock_menu_unlock_summary">Pressing menu button unlocks device</string>
 
     <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB over network</string>
@@ -1229,7 +1228,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_control_trigger_bottom">Trigger bottom screen border</string>
     <string name="pie_control_trigger_right">Trigger right screen border</string>
     <string name="pie_control_trigger_top">Trigger top screen border</string>
-    <string name="pie_control_trigger_top_summary">Top pie does not show status and clock information</string>
+    <string name="pie_control_trigger_top_summary">Top pie does not show status info</string>
     <string name="pie_button_style">Buttons style</string>
     <string name="pie_button_color_title">Button color</string>
     <string name="pie_button_alpha_title">Button transparency</string>
@@ -1243,7 +1242,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_icon_color_mode_dialog_title">Colorize</string>
     <string name="pie_icon_color_mode_summary">Change the button icon color mode</string>
     <string name="pie_trigger_note_title">Note</string>
-    <string name="pie_trigger_note_summary">To avoid conflicts with status bar or navigation bar, the triggers on these edges are automatically turned off if one or both are available</string>
+    <string name="pie_trigger_note_summary">To avoid conflicts with status bar or navigation bar, the triggers on these edges are turned off if one or both are available</string>
     <string name="pie_background_color_title">Background color</string>
     <string name="pie_snap_color_title">Snap point color</string>
     <string name="pie_text_color_title">Text color</string>
@@ -1254,9 +1253,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_style_title">Style</string>
     <string name="pie_dimens_title">Dimension</string>
     <string name="pie_show_snap_title">Show snap points</string>
-    <string name="pie_show_snap_summary">Shows snap points to change the trigger edge dynamically</string>
+    <string name="pie_show_snap_summary">Change the trigger edge dynamically</string>
     <string name="pie_show_text_title">Show status and clock</string>
-    <string name="pie_show_text_summary">Shows phone status, time and date information</string>
+    <string name="pie_show_text_summary">Shows status, time and date info</string>
     <string name="pie_show_background_title">Show background</string>
     <string name="pie_show_background_summary">Enable pie background screen</string>
     <string name="pie_button">Buttons</string>
@@ -1266,8 +1265,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_style_reset_message">Reset style entries to default?</string>
     <string name="pie_warning_no_navigation_present">No other navigation is currently enabled. Turning off pie controls can result in an unusable device. Do you want to enable navigation bar instead?</string>
     <string name="pie_trigger_warning">Minimum one of the main triggers (bottom, left or right) needs to be enabled.</string>
-    <string name="pie_disable_ime_triggers_title">Reduce trigger size on keyboard</string>
-    <string name="pie_disable_ime_triggers_summary">Reduces left and right trigger size if keyboard is active</string>
+    <string name="pie_disable_ime_triggers_title">Trigger size on keyboard</string>
+    <string name="pie_disable_ime_triggers_summary">Reduces left and right trigger size</string>
 
     <!-- Notification reminder -->
     <string name="noti_reminder_category">Reminders</string>
