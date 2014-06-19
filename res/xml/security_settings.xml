@@ -20,5 +20,11 @@
         <CheckBoxPreference
             android:key="allow_multiuser"
             android:title="@string/multiuser_preference_title" />
+			
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="power_menu_user_enabled"
+            android:title="@string/power_menu_user_title"
+            android:summary="@string/power_menu_user_summary"
+            android:defaultValue="false" />
 
 </PreferenceScreen>
