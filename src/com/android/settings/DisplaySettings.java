@@ -67,6 +67,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
     private static final String KEY_TOAST_ANIMATION = "toast_animation";
+    private static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
 
     private static final String ROTATION_ANGLE_0 = "0";
     private static final String ROTATION_ANGLE_90 = "90";
@@ -85,6 +86,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mWakeUpWhenPluggedOrUnplugged;
     private PreferenceCategory mWakeUpOptions;
     private ListPreference mToastAnimation;
+    private CheckBoxPreference mDisableIM;
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -230,6 +232,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mListViewInterpolator.setSummary(mListViewInterpolator.getEntry());
         mListViewInterpolator.setOnPreferenceChangeListener(this);
         mListViewInterpolator.setEnabled(listviewanimation > 0);
+
+        mDisableIM = (CheckBoxPreference) findPreference(DISABLE_IMMERSIVE_MESSAGE);
+        mDisableIM.setChecked((Settings.System.getInt(resolver,
+                Settings.System.DISABLE_IMMERSIVE_MESSAGE, 0) == 1));
 
         mToastAnimation = (ListPreference) prefSet.findPreference(KEY_TOAST_ANIMATION);
         mToastAnimation.setSummary(mToastAnimation.getEntry());
@@ -409,6 +415,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             boolean value = mNotificationPulse.isChecked();
             Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_LIGHT_PULSE,
                     value ? 1 : 0);
+            return true;
+        } else if  (preference == mDisableIM) {
+            boolean checked = ((CheckBoxPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.DISABLE_IMMERSIVE_MESSAGE, checked ? 1:0);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
