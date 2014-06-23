@@ -2250,6 +2250,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Wi-Fi settings screen, advanced, title of the item to set the Wi-Fi priority. -->
     <string name="wifi_setting_priority_title">Wi-Fi priority</string>
     <!-- Wi-Fi settings screen, setting summary for setting the Wi-Fi priority-->
-    <string name="wifi_setting_priority_summary">Specify the priority of the Wi-Fi networks</string
+    <string name="wifi_setting_priority_summary">Specify the priority of the Wi-Fi networks</string>
+
+    <!-- Show connected to Wi-Fi hotspot devices -->
+    <string name="clients">CLIENTS</string>
 
 </resources>
