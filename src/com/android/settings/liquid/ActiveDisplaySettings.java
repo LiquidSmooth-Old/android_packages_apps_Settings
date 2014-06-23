@@ -82,6 +82,7 @@ public class ActiveDisplaySettings extends SettingsPreferenceFragment implements
     private ListPreference mRedisplayPref;
     private int mMinimumBacklight;
     private int mMaximumBacklight;
+    private PreferenceScreen mActiveDisplay;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -97,6 +98,8 @@ public class ActiveDisplaySettings extends SettingsPreferenceFragment implements
         mEnabledPref.setChecked((Settings.System.getInt(mResolver,
                 Settings.System.ENABLE_ACTIVE_DISPLAY, 0) == 1));
         mEnabledPref.setOnPreferenceChangeListener(this);
+
+        disablePref();
 
         mBypassPref = (CheckBoxPreference) prefSet.findPreference(KEY_BYPASS_CONTENT);
         mPocketModePref = (ListPreference) prefSet.findPreference(KEY_POCKET_MODE);
@@ -355,5 +358,17 @@ public class ActiveDisplaySettings extends SettingsPreferenceFragment implements
 
     private boolean is24Hour() {
         return DateFormat.is24HourFormat(mContext);
+    }
+
+    private void disablePref() {
+        ContentResolver resolver = getActivity().getContentResolver();
+        boolean enabled = Settings.System.getInt(resolver,
+                Settings.System.PEEK_STATE, 0) == 1;
+        if (enabled) {
+            Settings.System.putInt(resolver,
+                Settings.System.ENABLE_ACTIVE_DISPLAY, 0);
+            mEnabledPref.setEnabled(false);;
+            mEnabledPref.setSummaryOff(R.string.ad_disabled_summary);
+        }
     }
 }
