@@ -26,6 +26,13 @@
         android:defaultValue="false" />
 
     <com.android.settings.liquid.SystemCheckBoxPreference
+        android:key="hover_exclude_from_lock_screen"
+        android:title="@string/hover_exclude_from_lock_screen_title"
+        android:summary="@string/hover_exclude_from_lock_screen_summary"
+        android:dependency="hover_active"
+        android:defaultValue="false" />
+
+    <com.android.settings.liquid.SystemCheckBoxPreference
         android:key="hover_hide_button"
         android:title="@string/hover_hide_button_title"
         android:summary="@string/hover_hide_button_summary"
