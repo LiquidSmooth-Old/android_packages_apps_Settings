@@ -474,6 +474,7 @@
 	<!-- Notification peek -->
     <string name="notification_peek_title">Notification peek</string>
     <string name="notification_peek_summary">Show notifications by picking up device</string>
+    <string name="notification_peek_disabled_summary">Peek is currently disabled, to re-enable turn off Active Display</string>
 
     <!-- Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Quick unlock</string>
@@ -1755,6 +1756,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ad_pocket_mode_off">Off</string>
     <string name="ad_pocket_mode_notifications">Notifications only</string>
     <string name="ad_pocket_mode_always">Always</string>
+    <string name="ad_disabled_summary">Active Display is currently disabled, to re-enable turn off Peek</string>
 
 	<!-- LiquidSmooth Anonymous Stats -->
     <string name="rominfo_settings_list_item_title">LiquidSmooth Statistics</string>

@@ -20,6 +20,7 @@ import android.app.ActivityManager;
 import android.app.admin.DevicePolicyManager;
 import android.content.pm.PackageManager;
 import android.content.Context;
+import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.net.Uri;
@@ -201,6 +202,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment
         mNotificationPeek.setPersistent(false);
 
         updatePeekCheckbox();
+        disablePref();
     }
 
     private void updatePeekCheckbox() {
@@ -257,5 +259,17 @@ public class LockscreenSettings extends SettingsPreferenceFragment
                     mNotificationPeek.isChecked() ? 1 : 0);
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
+
+    private void disablePref() {
+        ContentResolver resolver = getActivity().getContentResolver();
+        boolean enabled = Settings.System.getInt(resolver,
+                Settings.System.ENABLE_ACTIVE_DISPLAY, 0) == 1;
+        if (enabled) {
+            Settings.System.putInt(resolver,
+                Settings.System.PEEK_STATE, 0);
+            mNotificationPeek.setEnabled(false);
+            mNotificationPeek.setSummary(R.string.notification_peek_disabled_summary);
+        }
     }
 }
