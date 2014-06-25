@@ -525,4 +525,8 @@
     <string name="expanded_enabled_for_all">Enabled for all</string>
     <string name="expanded_user_configurable">User configurable</string>
 
+    <!-- High touch sensitivity -->
+    <string name="high_touch_sensitivity_title">High touch sensitivity</string>
+    <string name="high_touch_sensitivity_summary">Increase touchscreen sensitivity so it can be used while wearing gloves</string>
+
 </resources>
