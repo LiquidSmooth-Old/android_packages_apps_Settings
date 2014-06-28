@@ -38,6 +38,15 @@
         android:summary="@string/disable_fullscreen_keyboard_summary"
         android:defaultValue="false" />
 
+    <com.android.settings.liquid.SystemListPreference
+        android:key="ime_cursor_longpress_action"
+        android:title="@string/ime_cursor_longpress_action_title"
+        android:summary="@string/ime_cursor_longpress_action_summary"
+        android:dialogTitle="@string/ime_cursor_longpress_action_title"
+        android:entries="@array/ime_cursor_longpress_action_entries"
+        android:entryValues="@array/ime_cursor_longpress_action_values"
+        android:defaultValue="0" />
+
     <CheckBoxPreference
         android:key="status_bar_ime_switcher"
         android:title="@string/ime_switcher_notify"
