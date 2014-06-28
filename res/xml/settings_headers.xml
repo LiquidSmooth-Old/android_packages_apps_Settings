@@ -15,7 +15,8 @@
 -->
 
 <preference-headers
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <!-- WIRELESS and NETWORKS -->
     <header android:id="@+id/wireless_section"
@@ -61,6 +62,7 @@
 
     <!-- Other wireless and network controls -->
     <header
+        settings:includeXmlForSearch="@xml/wireless_settings"
         android:id="@+id/wireless_settings"
         android:title="@string/radio_controls_title"
         android:breadCrumbTitle="@string/wireless_networks_settings_title"
@@ -73,6 +75,7 @@
 
     <!-- Interface -->
     <header
+        settings:includeXmlForSearch="@xml/liquid_interface_settings"
         android:id="@+id/interface_settings"
         android:title="@string/interface_settings_title"
         android:fragment="com.android.settings.liquid.InterfaceSettings"
@@ -80,6 +83,7 @@
 
     <!-- Lock screen -->
     <header
+        settings:includeXmlForSearch="@xml/liquid_lockscreen_settings"
         android:id="@+id/lockscreen_settings"
         android:title="@string/lockscreen_settings_title"
         android:fragment="com.android.settings.liquid.LockscreenSettings"
@@ -87,6 +91,7 @@
 
     <!-- Navigation -->
     <header
+        settings:includeXmlForSearch="@xml/liquid_navigation_settings"
         android:id="@+id/navigation_settings"
         android:title="@string/navigation_settings_title"
         android:fragment="com.android.settings.liquid.NavigationSettings"
@@ -105,6 +110,7 @@
 
     <!-- Status bar -->
     <header
+        settings:includeXmlForSearch="@xml/liquid_statusbar_settings"
         android:id="@+id/statusbar_settings"
         android:title="@string/statusbar_settings_title"
         android:fragment="com.android.settings.liquid.StatusBarSettings"
@@ -116,6 +122,7 @@
 
     <!-- Active display -->
     <header
+        settings:includeXmlForSearch="@xml/active_display_settings"
         android:id="@+id/active_display"
         android:title="@string/active_display_title"
         android:fragment="com.android.settings.liquid.ActiveDisplaySettings"
@@ -123,6 +130,7 @@
 
     <!-- Halo options -->
     <header
+        settings:includeXmlForSearch="@xml/halo_options"
         android:id="@+id/halo_options"
 		android:title="@string/halo_options_title"
         android:fragment="com.android.settings.liquid.HaloOptions"
@@ -130,6 +138,7 @@
 
     <!-- Notification drawer -->
     <header
+        settings:includeXmlForSearch="@xml/notification_drawer"
         android:id="@+id/notification_drawer"
 		android:title="@string/notification_drawer_title"
         android:fragment="com.android.settings.liquid.NotificationDrawer"
@@ -137,6 +146,7 @@
 
     <!-- Pie control -->
     <header
+        settings:includeXmlForSearch="@xml/pie_control"
         android:id="@+id/pie_control"
 		android:title="@string/pie_control_title"
         android:fragment="com.android.settings.liquid.PieControl"
@@ -144,6 +154,7 @@
 
     <!-- Total blackout -->
     <header
+        settings:includeXmlForSearch="@xml/liquid_theme_settings"
         android:id="@+id/theme_settings"
 		android:title="@string/theme_settings_title"
         android:fragment="com.android.settings.liquid.themes.ThemeSettings"
@@ -162,6 +173,7 @@
 
     <!-- Sound -->
     <header
+        settings:includeXmlForSearch="@xml/sound_settings"
         android:id="@+id/sound_settings"
         android:icon="@drawable/ic_settings_sound"
         android:fragment="com.android.settings.SoundSettings"
@@ -169,6 +181,7 @@
 
     <!-- Display -->
     <header
+        settings:includeXmlForSearch="@xml/display_settings"
         android:id="@+id/display_settings"
         android:icon="@drawable/ic_settings_display"
         android:fragment="com.android.settings.DisplaySettings"
@@ -244,6 +257,7 @@
 
     <!-- Security -->
     <header
+        settings:includeXmlForSearch="@xml/security_settings"
         android:fragment="com.android.settings.SecuritySettings"
         android:icon="@drawable/ic_settings_security"
         android:title="@string/security_settings_title"
@@ -251,6 +265,7 @@
 
     <!-- Language -->
     <header
+        settings:includeXmlForSearch="@xml/language_settings"
         android:id="@+id/language_settings"
         android:fragment="com.android.settings.inputmethod.InputMethodAndLanguageSettings"
         android:icon="@drawable/ic_settings_language"
@@ -282,6 +297,7 @@
 
     <!-- Date & Time -->
     <header
+        settings:includeXmlForSearch="@xml/date_time_prefs"
         android:id="@+id/date_time_settings"
         android:fragment="com.android.settings.DateTimeSettings"
         android:icon="@drawable/ic_settings_date_time"
@@ -289,6 +305,7 @@
 
     <!-- Accessibility feedback -->
     <header
+        settings:includeXmlForSearch="@xml/accessibility_settings"
         android:id="@+id/accessibility_settings"
         android:fragment="com.android.settings.accessibility.AccessibilitySettings"
         android:icon="@drawable/ic_settings_accessibility"
@@ -303,6 +320,7 @@
 
     <!-- Development -->
     <header
+        settings:includeXmlForSearch="@xml/development_prefs"
         android:id="@+id/development_settings"
         android:fragment="com.android.settings.DevelopmentSettings"
         android:icon="@drawable/ic_settings_development"
@@ -310,6 +328,7 @@
 
     <!-- Advanced options -->
     <header
+        settings:includeXmlForSearch="@xml/liquid_advanced_settings"
         android:id="@+id/advanced_options_settings"
         android:fragment="com.android.settings.liquid.AdvancedSettings"
         android:icon="@drawable/ic_settings_advanced"
@@ -317,6 +336,7 @@
 
     <!-- About Device -->
     <header
+        settings:includeXmlForSearch="@xml/device_info_settings"
         android:id="@+id/about_settings"
         android:fragment="com.android.settings.DeviceInfoSettings"
         android:icon="@drawable/ic_settings_about"

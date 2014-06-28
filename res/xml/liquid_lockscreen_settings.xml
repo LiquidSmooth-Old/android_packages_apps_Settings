@@ -24,6 +24,7 @@
         android:title="@string/general_category_title">
 
         <PreferenceScreen
+            settings:excludeFromSearch="true"
             android:key="lockscreen_buttons"
             android:title="@string/lockscreen_buttons_title"
             android:summary="@string/lockscreen_buttons_summary"
