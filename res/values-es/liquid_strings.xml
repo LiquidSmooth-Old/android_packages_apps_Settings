@@ -379,6 +379,7 @@
   <string name="unlock_menu_unlock_summary">Dejar apretado el botón Menú desbloquea el dispositivo</string>
   <string name="notification_peek_title">Ojear notificaciones</string>
   <string name="notification_peek_summary">Mostrar notificaciones al recoger el dispositivo</string>
+  <string name="notification_peek_disabled_summary">Peek actualmente está desactivada, para volver a habilitar apagar pantalla activa</string>
   <string name="unlock_quick_unlock_control_title">Desbloqueo rápido</string>
   <string name="unlock_quick_unlock_control_summary">Se desbloquea usando el PIN o contraseña correcta</string>
   <string name="shake_to_secure_title">Batido para garantizar</string>
@@ -1451,6 +1452,7 @@ Plural Form
   <string name="ad_pocket_mode_off">Deshabilitado</string>
   <string name="ad_pocket_mode_notifications">Sólo notificaciones</string>
   <string name="ad_pocket_mode_always">Siempre</string>
+  <string name="ad_disabled_summary">Pantalla activa actualmente está desactivada, para volver a habilitar apagar Peek</string>
   <string name="rominfo_settings_list_item_title">Estadísticas LiquidSmooth</string>
   <string name="rominfo_settings_list_item_summary">Ayudar a mejorar al optar en estadísticas anónimas informes LiquidSmooth</string>
   <string name="changelog_title">Líquido Changelog</string>
@@ -1735,6 +1737,12 @@ Plural Form
   <string name="hover_exclude_non_clearable_summary">Notificaciones marcadas como no eliminables</string>
   <string name="hover_exclude_topmost_title">Excluir la aplicación superior</string>
   <string name="hover_exclude_topmost_summary">Excluir las notificaciones de la aplicación en primer plano</string>
+  <string name="hover_long_fadeout_title">Tiempo de notificación hover</string>
+  <string name="hover_long_fadeout_3seconds">3 segundos</string>
+  <string name="hover_long_fadeout_5seconds">5 segundos (por defecto)</string>
+  <string name="hover_long_fadeout_7seconds">7 segundos</string>
+  <string name="hover_long_fadeout_10seconds">10 segundos</string>
+  <string name="hover_long_fadeout_15seconds">15 segundos</string>
   <string name="lsextrainfo">Información adicional</string>
   <string name="lsextrainfo_summary">Mostrar información extra de cpu, pantalla, etc</string>
   <string name="ring_mode_title">Modo llamada</string>
@@ -1826,4 +1834,24 @@ Plural Form
   <string name="toggleSync">Sincronización de datos</string>
   <string name="toggle2g3g">2G / 3G</string>
   <string name="toggleNfc">NFC</string>
+  <string name="menu_hidden_apps_delete">Reiniciar</string>
+  <string name="menu_hidden_apps_reset_lock">Reestablecer patrón de bloqueo</string>
+  <string name="protected_apps">Aplicaciones protegidas</string>
+  <string name="saving_protected_components">Estado del componente de ahorro</string>
+  <string name="flip_qs_tiles_title">Voltear etiquetas</string>
+  <string name="flip_qs_tiles_summary">Voltea etiquetas al tocar</string>
+  <string name="power_menu_user_title">Menú de energía selector usuario</string>
+  <string name="power_menu_user_summary">Mostrar una lista de todos los usuarios en el menú de energía</string>
+  <string name="wifi_setting_priority_title">Prioridad Wi-Fi</string>
+  <string name="wifi_setting_priority_summary">Especificar la prioridad de las redes Wi-Fi</string>
+  <string name="clients">CLIENTES</string>
+  <string name="hfm_disable_ads_title">Desactivar anuncios</string>
+  <string name="hfm_disable_ads_summary">Cambiar el archivo hosts para desactivar los anuncios</string>
+  <string name="hfm_pref_screen_title">Bloqueador de anuncios</string>
+  <string name="hfm_update_hosts">Actualizar archivo hosts</string>
+  <string name="hfm_update_hosts_summary">Descargar y aplicar hosts recientes</string>
+  <string name="hfm_dialog_wait">Trabajando, por favor espere...</string>
+  <string name="hfm_dialog_failed">No se pudo actualizar archivo hosts. Por favor intentelo nuevamente.</string>
+  <string name="hfm_dialog_success">/ 4 fuentes hosts aplicadas con éxito!</string>
+  <string name="hfm_dialog_conn_error">Error: sin conectividad de red</string>
 </resources>
