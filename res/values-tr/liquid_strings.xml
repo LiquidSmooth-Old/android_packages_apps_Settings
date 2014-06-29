@@ -379,6 +379,7 @@
   <string name="unlock_menu_unlock_summary">Menü düğmesine basmak aygıtın kilidini açar</string>
   <string name="notification_peek_title">Peek bildirimi</string>
   <string name="notification_peek_summary">Aygıtı ele alınca bildirimleri göster</string>
+  <string name="notification_peek_disabled_summary">Peek şuanda devredışı, etkinleştirmek için Aktif Görüntülemeyi kapatın</string>
   <string name="unlock_quick_unlock_control_title">Hızlı kilit aç</string>
   <string name="unlock_quick_unlock_control_summary">Doğru PIN veya parola kullanarak kilidini açar</string>
   <string name="shake_to_secure_title">Güvenlik için salla</string>
@@ -1441,6 +1442,7 @@
   <string name="ad_pocket_mode_off">Kapalı</string>
   <string name="ad_pocket_mode_notifications">Yalnızca bildirimler</string>
   <string name="ad_pocket_mode_always">Her zaman</string>
+  <string name="ad_disabled_summary">Aktif Görüntüleme şuanda devredışı, etkinleştirmek için Peeki kapatın</string>
   <string name="rominfo_settings_list_item_title">LiquidSmooth istatistik</string>
   <string name="rominfo_settings_list_item_summary">LiquidSmooth yardımcı olun rapor gönderin</string>
   <string name="changelog_title">Liquid Geliştirmeleri</string>
@@ -1725,6 +1727,12 @@
   <string name="hover_exclude_non_clearable_summary">Temizlenemeyen bildirimler</string>
   <string name="hover_exclude_topmost_title">En üstteki app dışla</string>
   <string name="hover_exclude_topmost_summary">Ön planda çalışan uygulama bildirimleri dıında</string>
+  <string name="hover_long_fadeout_title">Hover bildirim süresi</string>
+  <string name="hover_long_fadeout_3seconds">3 saniye</string>
+  <string name="hover_long_fadeout_5seconds">5 saniye (varsayılan)</string>
+  <string name="hover_long_fadeout_7seconds">7 saniye</string>
+  <string name="hover_long_fadeout_10seconds">10 saniye</string>
+  <string name="hover_long_fadeout_15seconds">15 saniye</string>
   <string name="lsextrainfo">Ekstra bilgi</string>
   <string name="lsextrainfo_summary">Cpu, ekran, vb ekstra bilgi görüntüle</string>
   <string name="ring_mode_title">Zil modu</string>
@@ -1816,4 +1824,24 @@
   <string name="toggleSync">Veri Senkronizasyonu</string>
   <string name="toggle2g3g">2G / 3G</string>
   <string name="toggleNfc">NFC</string>
+  <string name="menu_hidden_apps_delete">Sıfırla</string>
+  <string name="menu_hidden_apps_reset_lock">Desen kilidini sıfırla</string>
+  <string name="protected_apps">Korunan uygulamalar</string>
+  <string name="saving_protected_components">Bileşen durumu kaydetme</string>
+  <string name="flip_qs_tiles_title">Kareleri çevir</string>
+  <string name="flip_qs_tiles_summary">Dokununca kareleri çevir</string>
+  <string name="power_menu_user_title">Güç menüsü kullanıcı seçici</string>
+  <string name="power_menu_user_summary">Güç menüsünde tüm kullanıcıların listesini göster</string>
+  <string name="wifi_setting_priority_title">Wi-Fi önceliği</string>
+  <string name="wifi_setting_priority_summary">Wi-Fi ağlarının önceliğini belirleyin</string>
+  <string name="clients">İSTEMCİLER</string>
+  <string name="hfm_disable_ads_title">Reklamları devre dışı bırak</string>
+  <string name="hfm_disable_ads_summary">Reklamları devredışı bırakmak için host dosyasını değiştir</string>
+  <string name="hfm_pref_screen_title">Reklam engelleyici</string>
+  <string name="hfm_update_hosts">Hosts dosyasını güncelleştir</string>
+  <string name="hfm_update_hosts_summary">Yeni host dosyasını indir ve uygula</string>
+  <string name="hfm_dialog_wait">İşleniyor, lütfen bekleyin...</string>
+  <string name="hfm_dialog_failed">Host güncelleme hatalı. Tekrar deneyin.</string>
+  <string name="hfm_dialog_success">/ 4 host dosyası başarıyla uygulandı!</string>
+  <string name="hfm_dialog_conn_error">Hata: Ağ bağlantısı yok</string>
 </resources>
