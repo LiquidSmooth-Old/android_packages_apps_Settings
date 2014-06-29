@@ -25,7 +25,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceChangeListener;
-import com.android.settings.util.Helpers;
+import com.android.settings.liquid.util.Helpers;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;

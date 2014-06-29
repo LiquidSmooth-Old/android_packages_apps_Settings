@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.hfm;
+package com.android.settings.liquid.hfm;
 
 import java.io.DataOutputStream;
 import java.io.File;
@@ -36,7 +36,7 @@ import android.os.StrictMode;
 import android.provider.Settings;
 import android.widget.TextView;
 
-import com.android.settings.du.hfm.HfmSettings;
+import com.android.settings.liquid.hfm.HfmSettings;
 import com.android.settings.R;
 
 public final class HfmHelpers {
