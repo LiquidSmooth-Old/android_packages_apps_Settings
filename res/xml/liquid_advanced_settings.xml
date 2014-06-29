@@ -19,13 +19,6 @@
     android:title="@string/advanced_options_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <ListPreference
-        android:key="media_scanner_on_boot"
-        android:title="@string/media_scanner_on_boot_title"
-        android:persistent="false"
-        android:entries="@array/media_scanner_on_boot_entries"
-        android:entryValues="@array/media_scanner_on_boot_values" />
-
     <PreferenceScreen
         android:key="hfm_settings"
         android:title="@string/hfm_pref_screen_title"

@@ -20,38 +20,25 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
-import android.preference.Preference.OnPreferenceChangeListener;
-import com.android.settings.liquid.util.Helpers;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.List;
 
-public class AdvancedSettings extends SettingsPreferenceFragment
-        implements OnPreferenceChangeListener {
+public class AdvancedSettings extends SettingsPreferenceFragment {
 
-    private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
     private static final String PREF_DEVICESETTINGS_APP = "devicesettings_app";
 
     private PreferenceScreen mDeviceSettingsApp;
-    private ListPreference mMsob;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.liquid_advanced_settings);
-
-        mMsob = (ListPreference) findPreference(PREF_MEDIA_SCANNER_ON_BOOT);
-        mMsob.setValue(String.valueOf(Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.MEDIA_SCANNER_ON_BOOT, 0)));
-        mMsob.setSummary(mMsob.getEntry());
-        mMsob.setOnPreferenceChangeListener(this);
 
         mDeviceSettingsApp = (PreferenceScreen) findPreference(PREF_DEVICESETTINGS_APP);
 
@@ -71,22 +58,5 @@ public class AdvancedSettings extends SettingsPreferenceFragment
 
         }
         return false;
-
     }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        String value = (String) newValue;
-        if (preference == mMsob) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.MEDIA_SCANNER_ON_BOOT,
-                    Integer.valueOf(value));
-
-            mMsob.setValue(String.valueOf(value));
-            mMsob.setSummary(mMsob.getEntry());
-            return true;
-        }
-        return false;
-    }
-
 }

@@ -167,6 +167,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
     private static final String DEVELOPMENT_SHORTCUT_KEY = "development_shortcut";
 
+    private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
+
     private static final int RESULT_DEBUG_APP = 1000;
 
     // Dialog identifiers used in showDialog
@@ -233,6 +235,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private CheckBoxPreference mChamberUnlocked;
 
     private CheckBoxPreference mDevelopmentShortcut;
+
+    private ListPreference mMsob;
 
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
     private final ArrayList<CheckBoxPreference> mResetCbPrefs
@@ -386,6 +390,12 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         } else {
             removePreference(mChamberUnlocked);
         }
+
+        mMsob = (ListPreference) findPreference(PREF_MEDIA_SCANNER_ON_BOOT);
+        mMsob.setValue(String.valueOf(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.MEDIA_SCANNER_ON_BOOT, 0)));
+        mMsob.setSummary(mMsob.getEntry());
+        mMsob.setOnPreferenceChangeListener(this);
     }
 
     private ListPreference addListPreference(String prefKey) {
@@ -1425,6 +1435,8 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        String value = (String) newValue;
+
         if (SELECT_RUNTIME_KEY.equals(preference.getKey())) {
             final String oldRuntimeValue = VMRuntime.getRuntime().vmLibrary();
             final String newRuntimeValue = newValue.toString();
@@ -1518,6 +1530,13 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.CHAMBER_OF_SECRETS,
                     (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mMsob) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.MEDIA_SCANNER_ON_BOOT,
+                    Integer.valueOf(value));
+            mMsob.setValue(String.valueOf(value));
+            mMsob.setSummary(mMsob.getEntry());
             return true;
         }
         return false;
