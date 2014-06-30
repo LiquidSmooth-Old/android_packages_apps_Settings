@@ -2099,6 +2099,13 @@
         <activity android:name=".applications.LockPatternActivity"
                   android:label="@string/protected_apps"
                   android:excludeFromRecents="true">
+
+        <service android:name=".liquid.identicons.IdenticonCreationService"
+                 android:exported="false" />
+
+        <service android:name=".liquid.identicons.IdenticonRemovalService"
+                 android:exported="false" />
+
             <intent-filter>
                 <action android:name=".applications.LockPatternActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
