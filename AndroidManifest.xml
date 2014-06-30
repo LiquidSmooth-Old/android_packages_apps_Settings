@@ -219,10 +219,10 @@
         <receiver
             android:name=".liquid.service.AlarmReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.TIMEZONE_CHANGED"></action>
-                <action android:name="android.intent.action.TIME_CHANGED"></action>
-                <action android:name="android.intent.action.DATE_CHANGED"></action>
-                <action android:name="com.android.settings.liquid.service.SCHEDULE_SERVICE_COMMAND"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_CHANGED"/>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="com.android.settings.liquid.service.UPDATE_QUIET_HOURS_MODES"/>
             </intent-filter>
         </receiver>
 
