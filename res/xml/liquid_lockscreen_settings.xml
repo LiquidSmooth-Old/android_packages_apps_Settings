@@ -37,12 +37,6 @@
             android:fragment="com.android.settings.liquid.LockscreenInterface" />
 
         <PreferenceScreen
-            android:key="lockscreen_notifications"
-            android:title="@string/lockscreen_notifications_title"
-            android:summary="@string/lockscreen_notifications_summary"
-            android:fragment="com.android.settings.liquid.LockscreenNotifications" />
-
-        <PreferenceScreen
             android:key="lockscreen_style"
             android:title="@string/lockscreen_style_title"
             android:summary="@string/lockscreen_style_summary"

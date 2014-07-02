@@ -96,6 +96,14 @@
         android:title="@string/navigation_settings_title"
         android:fragment="com.android.settings.liquid.NavigationSettings"
         android:icon="@drawable/ic_liquid_navigation" />
+		
+    <!-- Notifications -->
+    <header
+        settings:includeXmlForSearch="@xml/notification_settings"
+        android:id="@+id/notification_settings"
+        android:icon="@drawable/ic_settings_notifications"
+        android:title="@string/notification_settings_title"
+        android:fragment="com.android.settings.liquid.NotificationSettings" />
 
     <!-- Kernel Tweaker -->
     <header
@@ -119,22 +127,6 @@
     <!-- ADVANCED -->
     <header android:id="@+id/advanced_section"
         android:title="@string/advanced_category_title" />
-
-    <!-- Active display -->
-    <header
-        settings:includeXmlForSearch="@xml/active_display_settings"
-        android:id="@+id/active_display"
-        android:title="@string/active_display_title"
-        android:fragment="com.android.settings.liquid.ActiveDisplaySettings"
-        android:icon="@drawable/ic_liquid_active_display" />
-
-    <!-- Halo options -->
-    <header
-        settings:includeXmlForSearch="@xml/halo_options"
-        android:id="@+id/halo_options"
-		android:title="@string/halo_options_title"
-        android:fragment="com.android.settings.liquid.HaloOptions"
-        android:icon="@drawable/ic_liquid_halo_options" />
 
     <!-- Notification drawer -->
     <header

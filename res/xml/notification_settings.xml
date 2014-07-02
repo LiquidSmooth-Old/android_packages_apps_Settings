@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2014 The LiquidSmooth Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/notification_settings_title">
+	
+    <!-- Active display -->
+    <PreferenceScreen
+        android:key="active_display"
+        android:id="@+id/active_display"
+        android:title="@string/active_display_title"
+        android:summary="@string/ad_summary"
+        android:fragment="com.android.settings.liquid.ActiveDisplaySettings" />
+		
+    <!-- Halo -->
+    <PreferenceScreen
+        android:key="halo_options"
+        android:id="@+id/halo_options"
+        android:title="@string/halo_options_title"
+        android:summary="@string/halo_summary"
+        android:fragment="com.android.settings.liquid.HaloOptions" />
+
+    <!-- Hover -->
+    <PreferenceScreen
+        android:key="hover_settings"
+        android:title="@string/hover_title"
+        android:summary="@string/hover_summary"
+        android:fragment="com.android.settings.liquid.HoverSettings" />
+		
+    <!-- LockScreen Notifications -->
+    <PreferenceScreen
+        android:key="lockscreen_notifications"
+        android:title="@string/lockscreen_notifications_title"
+        android:summary="@string/lockscreen_notifications_summary"
+        android:fragment="com.android.settings.liquid.LockscreenNotifications" />
+
+</PreferenceScreen>
