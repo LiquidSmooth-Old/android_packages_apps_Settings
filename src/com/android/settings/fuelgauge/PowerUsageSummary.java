@@ -75,7 +75,6 @@ public class PowerUsageSummary extends PreferenceFragment implements
     private ListPreference mLowBatteryWarning;
     private PreferenceCategory mBatteryPrefsCat;
     private PreferenceCategory mBatteryStatsCat;
-    private PreferenceScreen mBatterySaverPrefs;
 
     private int mStatsType = BatteryStats.STATS_SINCE_CHARGED;
 
@@ -124,9 +123,6 @@ public class PowerUsageSummary extends PreferenceFragment implements
         mBatteryStatsCat =
             (PreferenceCategory) mAppListGroup.findPreference(KEY_BATTERY_STATS_CATEGORY);
 
-        mBatterySaverPrefs =
-            (PreferenceScreen) mAppListGroup.findPreference(KEY_BATTERY_SAVER);
-
         mLowBatteryWarning =
             (ListPreference) mAppListGroup.findPreference(KEY_LOW_BATTERY_WARNING_POLICY);
         int lowBatteryWarning = Settings.System.getInt(getActivity().getContentResolver(),
@@ -171,9 +167,6 @@ public class PowerUsageSummary extends PreferenceFragment implements
             PreferenceActivity pa = (PreferenceActivity)getActivity();
             pa.startPreferencePanel(BatteryHistoryDetail.class.getName(), args,
                     R.string.history_details_title, null, null, 0);
-            return super.onPreferenceTreeClick(preferenceScreen, preference);
-        }
-        if (preference == mBatterySaverPrefs) {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
         if (!(preference instanceof PowerGaugePreference)) {
@@ -258,8 +251,6 @@ public class PowerUsageSummary extends PreferenceFragment implements
         mAppListGroup.removeAll();
         mAppListGroup.setOrderingAsAdded(false);
 
-        mBatterySaverPrefs.setOrder(-6);
-        mAppListGroup.addPreference(mBatterySaverPrefs);
         mBatteryPrefsCat.setOrder(-5);
         mAppListGroup.addPreference(mBatteryPrefsCat);
         mLowBatteryWarning.setOrder(-4);
