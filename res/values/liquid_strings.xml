@@ -1231,6 +1231,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Pie Control -->
     <string name="pie_control_summary">Enable pie controls</string>
+    <string name="pie_summary">Configure or view current pie settings</string>
     <string name="pie_control_size">Navigation size</string>
     <string name="pie_control_trigger_positions">Trigger options</string>
     <string name="pie_control_trigger_left">Trigger left screen border</string>

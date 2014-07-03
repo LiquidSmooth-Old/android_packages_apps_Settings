@@ -18,6 +18,20 @@
     android:title="@string/navigation_settings_title"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+	
+    <!-- Hardware Keys -->
+    <PreferenceScreen
+        android:key="hardwarekeys_settings"
+        android:title="@string/button_keys_title"
+        android:summary="@string/button_keys_summary"
+        android:fragment="com.android.settings.liquid.HardwareKeysSettings" />
+		
+    <!-- Pie control -->
+    <PreferenceScreen
+        android:id="@+id/pie_control"
+        android:title="@string/pie_control_title"
+        android:summary="@string/pie_summary"
+        android:fragment="com.android.settings.liquid.PieControl" />
 
     <CheckBoxPreference
         android:key="enable_nav_bar"

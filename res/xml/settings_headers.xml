@@ -136,14 +136,6 @@
         android:fragment="com.android.settings.liquid.NotificationDrawer"
         android:icon="@drawable/ic_liquid_notification_drawer" />
 
-    <!-- Pie control -->
-    <header
-        settings:includeXmlForSearch="@xml/pie_control"
-        android:id="@+id/pie_control"
-		android:title="@string/pie_control_title"
-        android:fragment="com.android.settings.liquid.PieControl"
-        android:icon="@drawable/ic_liquid_pie_control" />
-
     <!-- Total blackout -->
     <header
         settings:includeXmlForSearch="@xml/liquid_theme_settings"

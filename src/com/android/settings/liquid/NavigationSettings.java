@@ -50,6 +50,7 @@ public class NavigationSettings extends SettingsPreferenceFragment
     private static final String PREF_RING = "navbar_targets_settings";
     private static final String PREF_STYLE_DIMEN = "navbar_style_dimen_settings";
     private static final String PREF_NAVIGATION_BAR_CAN_MOVE = "navbar_can_move";
+    private static final String KEY_HARDWARE_KEYS = "hardwarekeys_settings";
 
     private static final int DLG_NAVIGATION_WARNING = 0;
 
@@ -134,6 +135,13 @@ public class NavigationSettings extends SettingsPreferenceFragment
                     Settings.System.NAVIGATION_BAR_CAN_MOVE, 1) == 0);
         }
         updateNavbarPreferences(enableNavigationBar);
+
+        PreferenceScreen hardwareKeys = (PreferenceScreen) findPreference(KEY_HARDWARE_KEYS);
+        int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        if (deviceKeys == 0 && hardwareKeys != null) {
+            getPreferenceScreen().removePreference(hardwareKeys);
+        }
     }
 
 
