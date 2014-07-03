@@ -104,6 +104,14 @@
         android:icon="@drawable/ic_settings_notifications"
         android:title="@string/notification_settings_title"
         android:fragment="com.android.settings.liquid.NotificationSettings" />
+		
+    <!-- Notification drawer -->
+    <header
+        settings:includeXmlForSearch="@xml/notification_drawer"
+        android:id="@+id/notification_drawer"
+		android:title="@string/notification_drawer_title"
+        android:fragment="com.android.settings.liquid.NotificationDrawer"
+        android:icon="@drawable/ic_liquid_notification_drawer" />
 
     <!-- Kernel Tweaker -->
     <header
@@ -123,26 +131,6 @@
         android:title="@string/statusbar_settings_title"
         android:fragment="com.android.settings.liquid.StatusBarSettings"
         android:icon="@drawable/ic_liquid_statusbar" />
-
-    <!-- ADVANCED -->
-    <header android:id="@+id/advanced_section"
-        android:title="@string/advanced_category_title" />
-
-    <!-- Notification drawer -->
-    <header
-        settings:includeXmlForSearch="@xml/notification_drawer"
-        android:id="@+id/notification_drawer"
-		android:title="@string/notification_drawer_title"
-        android:fragment="com.android.settings.liquid.NotificationDrawer"
-        android:icon="@drawable/ic_liquid_notification_drawer" />
-
-    <!-- Total blackout -->
-    <header
-        settings:includeXmlForSearch="@xml/liquid_theme_settings"
-        android:id="@+id/theme_settings"
-		android:title="@string/theme_settings_title"
-        android:fragment="com.android.settings.liquid.themes.ThemeSettings"
-        android:icon="@drawable/ic_liquid_theme_settings" />
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
@@ -223,6 +211,14 @@
         android:icon="@drawable/ic_settings_profiles"
         android:fragment="com.android.settings.profiles.ProfilesSettings"
         android:title="@string/profiles_settings_title" />
+		
+    <!-- Total blackout -->
+    <header
+        settings:includeXmlForSearch="@xml/liquid_theme_settings"
+        android:id="@+id/theme_settings"
+		android:title="@string/theme_settings_title"
+        android:fragment="com.android.settings.liquid.themes.ThemeSettings"
+        android:icon="@drawable/ic_liquid_theme_settings" />
 
     <!-- Themes -->
     <header
