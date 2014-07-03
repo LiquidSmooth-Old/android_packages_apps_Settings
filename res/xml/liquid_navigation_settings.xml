@@ -19,7 +19,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 	
-    <!-- LockScreen Notifications -->
+    <!-- App Side Bar -->
     <com.android.settings.liquid.SystemCheckBoxPreference
         android:key="enable_app_circle_bar"
         android:title="@string/app_circle_bar_title"
@@ -31,6 +31,13 @@
         android:title="@string/app_circle_bar_included_apps_title"
         android:summary="@string/app_circle_bar_included_apps_summary"
         android:dependency="enable_app_circle_bar" />
+
+    <!-- Gesture Anywhere -->
+    <PreferenceScreen
+        android:key="gesture_anywhere"
+        android:title="@string/gesture_anywhere_title"
+        android:summary="@string/gesture_anywhere_summary"
+        android:fragment="com.android.settings.liquid.gestureanywhere.GestureAnywhereSettings" />
 	
     <!-- Hardware Keys -->
     <PreferenceScreen
