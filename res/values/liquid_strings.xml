@@ -660,8 +660,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="summary_pref_menu_location">Where you want the menu buttons to appear</string>
     <string name="title_pref_menu_display">Menu visibility</string>
     <string name="summary_pref_menu_display">When you want the menu buttons to appear</string>
-    <string name="navbar_enable_bar">Enable navbar</string>
-    <string name="navbar_enable_bar_summary">Enable navigation bar</string>
+    <string name="navbar_enable_bar">Navigation Bar</string>
+    <string name="navbar_enable_bar_summary">Enable or disable navbar</string>
     <string name="navigation_bar_height_title">Navigation bar height</string>
     <string name="navigation_bar_height_summary">Navigation bar height while in portrait.</string>
     <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
@@ -1926,9 +1926,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- App circle sidebar -->
     <string name="app_circle_bar_title">App circle sidebar</string>
-    <string name="app_circle_bar_summary">Show circle app launcher after touching</string>
+    <string name="app_circle_bar_summary">Enable circular app launcher</string>
     <string name="app_circle_bar_included_apps_title">Included apps</string>
-    <string name="app_circle_bar_included_apps_summary">Apps will show in app circle sidebar</string>
+    <string name="app_circle_bar_included_apps_summary">Apps that will show in the app circle sidebar</string>
 
     <!-- Performance Settings | Warning dialog -->
     <string name="performance_settings_warning_header">Warning</string>
