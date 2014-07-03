@@ -32,12 +32,19 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.text.TextUtils;
 
 import com.android.internal.util.liquid.DeviceUtils;
 import com.android.internal.util.liquid.LiquidActions;
+import com.android.settings.liquid.AppMultiSelectListPreference;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class NavigationSettings extends SettingsPreferenceFragment
     implements OnPreferenceChangeListener {
@@ -51,6 +58,7 @@ public class NavigationSettings extends SettingsPreferenceFragment
     private static final String PREF_STYLE_DIMEN = "navbar_style_dimen_settings";
     private static final String PREF_NAVIGATION_BAR_CAN_MOVE = "navbar_can_move";
     private static final String KEY_HARDWARE_KEYS = "hardwarekeys_settings";
+    private static final String PREF_INCLUDE_APP_CIRCLE_BAR_KEY = "app_circle_bar_included_apps";
 
     private static final int DLG_NAVIGATION_WARNING = 0;
 
@@ -63,6 +71,7 @@ public class NavigationSettings extends SettingsPreferenceFragment
     PreferenceScreen mButtonPreference;
     PreferenceScreen mRingPreference;
     PreferenceScreen mStyleDimenPreference;
+    private AppMultiSelectListPreference mIncludedAppCircleBar;
 
     private SettingsObserver mSettingsObserver = new SettingsObserver(new Handler());
     private final class SettingsObserver extends ContentObserver {
@@ -142,8 +151,11 @@ public class NavigationSettings extends SettingsPreferenceFragment
         if (deviceKeys == 0 && hardwareKeys != null) {
             getPreferenceScreen().removePreference(hardwareKeys);
         }
+        mIncludedAppCircleBar = (AppMultiSelectListPreference) findPreference(PREF_INCLUDE_APP_CIRCLE_BAR_KEY);
+        Set<String> includedApps = getIncludedApps();
+        if (includedApps != null) mIncludedAppCircleBar.setValues(includedApps);
+        mIncludedAppCircleBar.setOnPreferenceChangeListener(this);
     }
-
 
     private void updateNavbarPreferences(boolean show) {
         mNavBarMenuDisplay.setEnabled(show);
@@ -185,8 +197,32 @@ public class NavigationSettings extends SettingsPreferenceFragment
                     Settings.System.NAVIGATION_BAR_CAN_MOVE,
                     ((Boolean) newValue) ? 0 : 1);
             return true;
+        } else if (preference == mIncludedAppCircleBar) {
+            storeIncludedApps((Set<String>) newValue);
+            return true;
         }
         return false;
+    }
+	
+    private Set<String> getIncludedApps() {
+        String included = Settings.System.getString(getContentResolver(),
+                Settings.System.WHITELIST_APP_CIRCLE_BAR);
+        if (TextUtils.isEmpty(included)) {
+            return null;
+        }
+        return new HashSet<String>(Arrays.asList(included.split("\\|")));
+    }
+
+    private void storeIncludedApps(Set<String> values) {
+        StringBuilder builder = new StringBuilder();
+        String delimiter = "";
+        for (String value : values) {
+            builder.append(delimiter);
+            builder.append(value);
+            delimiter = "|";
+        }
+        Settings.System.putString(getContentResolver(),
+                Settings.System.WHITELIST_APP_CIRCLE_BAR, builder.toString());
     }
 
     @Override
