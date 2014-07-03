@@ -17,10 +17,32 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/display_settings"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+		
+        <PreferenceCategory
+            android:key="category_light_options"
+            android:title="@string/display_category_light_options_title" >
 
-        <com.android.settings.BrightnessPreference
+            <PreferenceScreen
+                android:key="battery_light"
+                android:title="@string/battery_light_title"
+                android:fragment="com.android.settings.liquid.notificationlight.BatteryLightSettings" />
+				
+            <com.android.settings.BrightnessPreference
                 android:title="@string/brightness"
+                android:summary="@string/brightness_control_summary"
                 android:persistent="false"/>
+
+            <CheckBoxPreference
+                android:key="notification_pulse"
+                android:title="@string/notification_pulse_title"
+                android:persistent="false" />
+
+            <PreferenceScreen
+                android:key="notification_light"
+                android:title="@string/notification_light_title"
+                android:fragment="com.android.settings.liquid.notificationlight.NotificationLightSettings" />
+
+        </PreferenceCategory>
 
         <PreferenceScreen
                 android:key="screen_recorder"
@@ -32,7 +54,7 @@
                 android:key="display_rotation"
                 android:fragment="com.android.settings.liquid.DisplayRotation"
                 android:title="@string/display_rotation_title" />
-
+				
         <ListPreference
                 android:key="screen_timeout"
                 android:title="@string/screen_timeout"
@@ -49,11 +71,18 @@
         <PreferenceScreen
                 android:key="wifi_display"
                 android:title="@string/wifi_display_settings_title"
+                android:summary="@string/wifi_display_summary"
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
 
     <PreferenceCategory
         android:key="category_animation_options"
         android:title="@string/display_category_animation_options_title" >
+		
+        <PreferenceScreen
+            android:key="animation_controls"
+            android:title="@string/animation_controls_title"
+            android:summary="@string/animation_controls_summary"
+            android:fragment="com.android.settings.liquid.AnimationControls" />
 
         <ListPreference
             android:key="system_power_crt_mode"
@@ -61,6 +90,12 @@
             android:title="@string/system_power_crt_mode_title"
             android:entries="@array/entries_system_power_crt_mode"
             android:entryValues="@array/values_system_power_crt_mode" />
+			
+        <PreferenceScreen
+            android:key="interface_animation_scroll"
+            android:fragment="com.android.settings.liquid.KeyboardAnimationInterfaceSettings"
+            android:title="@string/ime_animation_title"
+            android:summary="@string/ime_animation_summary" />
 
         <ListPreference
             android:key="listview_animation"
@@ -77,18 +112,12 @@
             android:entries="@array/listview_interpolator_entries"
             android:entryValues="@array/listview_interpolator_values"
             android:defaultValue="0" />
-
+			
         <PreferenceScreen
-            android:key="animation_controls"
-            android:title="@string/animation_controls_title"
-            android:summary="@string/animation_controls_summary"
-            android:fragment="com.android.settings.liquid.AnimationControls" />
-
-        <PreferenceScreen
-            android:key="interface_animation_scroll"
-            android:fragment="com.android.settings.liquid.KeyboardAnimationInterfaceSettings"
-            android:title="@string/ime_animation_title"
-            android:summary="@string/ime_animation_summary" />
+            android:key="progressbar_settings"
+            android:title="@string/progressbar_title"
+            android:summary="@string/progressbar_summary"
+            android:fragment="com.android.settings.liquid.ProgressBar" />
 
         <PreferenceScreen
             android:key="interface_animation_scroll"
@@ -101,30 +130,10 @@
             android:title="@string/toast_animation_title"
             android:entries="@array/toast_animation_entries"
             android:entryValues="@array/toast_animation_values"
-            android:persistent="false" />
+            android:persistent="false"
+            android:summary="@string/toast_animation_summary" />
 
     </PreferenceCategory>
-
-        <PreferenceCategory
-            android:key="category_light_options"
-            android:title="@string/display_category_light_options_title" >
-
-            <PreferenceScreen
-                android:key="battery_light"
-                android:title="@string/battery_light_title"
-                android:fragment="com.android.settings.liquid.notificationlight.BatteryLightSettings" />
-
-            <CheckBoxPreference
-                android:key="notification_pulse"
-                android:title="@string/notification_pulse_title"
-                android:persistent="false" />
-
-            <PreferenceScreen
-                android:key="notification_light"
-                android:title="@string/notification_light_title"
-                android:fragment="com.android.settings.liquid.notificationlight.NotificationLightSettings" />
-
-        </PreferenceCategory>
 
         <PreferenceCategory
             android:key="category_wakeup_options"

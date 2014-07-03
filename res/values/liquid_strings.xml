@@ -193,6 +193,9 @@
     <!-- Wi-Fi settings screen, setting summary for setting the Wi-Fi priority-->
     <string name="wifi_setting_priority_summary">Specify the priority of the Wi-Fi networks</string>
 
+    <!-- Wifi Display aka Cast Screen summary-->
+    <string name="wifi_display_summary">Specify the priority of the Wi-Fi networks</string>
+
     <!-- Show connected to Wi-Fi hotspot devices -->
     <string name="clients">CLIENTS</string>
 
@@ -389,6 +392,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="auto_brightness_sensitivity_medium">Medium</string>
     <string name="auto_brightness_sensitivity_high">High</string>
     <string name="auto_brightness_sensitivity_veryhigh">Very high</string>
+    <string name="brightness_control_summary">Control how bright the screen is</string>
 
     <!-- Blacklist preferences -->
     <string name="blacklist_title">Blacklist</string>
