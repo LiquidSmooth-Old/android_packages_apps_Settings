@@ -18,6 +18,7 @@
         android:title="@string/about_settings">
 
         <PreferenceScreen android:key="liquid_logo"
+                          android:enabled="false"
                           android:layout="@layout/liquid_logo_row" />
 
         <!-- Liquid Anonymous Stats -->
