@@ -581,6 +581,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Notification drawer settings  -->
     <string name="notification_drawer_qs_title">Notification &amp; QS drawer</string>
     <string name="notification_drawer_title">Notification drawer</string>
+    <string name="notification_drawer_summary">Configure or view notification drawer settings</string>
     <string name="notification_shortcuts_settings_title">Shortcuts</string>
     <string name="notification_shortcuts_settings_summary">Show shortcuts in the notification drawer</string>
 

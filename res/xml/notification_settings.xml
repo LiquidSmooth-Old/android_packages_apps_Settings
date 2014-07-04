@@ -48,5 +48,12 @@
         android:title="@string/lockscreen_notifications_title"
         android:summary="@string/lockscreen_notifications_summary"
         android:fragment="com.android.settings.liquid.LockscreenNotifications" />
+		
+    <!-- Notification drawer -->
+    <PreferenceScreen
+        android:id="@+id/notification_drawer"
+		android:title="@string/notification_drawer_title"
+        android:summary="@string/notification_drawer_summary"
+        android:fragment="com.android.settings.liquid.NotificationDrawer" />
 
 </PreferenceScreen>

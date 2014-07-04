@@ -104,14 +104,6 @@
         android:icon="@drawable/ic_settings_notifications"
         android:title="@string/notification_settings_title"
         android:fragment="com.android.settings.liquid.NotificationSettings" />
-		
-    <!-- Notification drawer -->
-    <header
-        settings:includeXmlForSearch="@xml/notification_drawer"
-        android:id="@+id/notification_drawer"
-		android:title="@string/notification_drawer_title"
-        android:fragment="com.android.settings.liquid.NotificationDrawer"
-        android:icon="@drawable/ic_liquid_notification_drawer" />
 
     <!-- Kernel Tweaker -->
     <header
