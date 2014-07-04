@@ -89,7 +89,7 @@ public class LockscreenNotifications extends SettingsPreferenceFragment
 
         boolean hasProximitySensor = getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_PROXIMITY);
 
-        if (!hasProximitySensor) {
+        if (hasProximitySensor) {
 		    mPocketMode = (CheckBoxPreference) prefs.findPreference(KEY_POCKET_MODE);
 		    mPocketMode.setChecked(Settings.System.getInt(cr,
 		                Settings.System.LOCKSCREEN_NOTIFICATIONS_POCKET_MODE, 0) == 1);
