@@ -197,7 +197,7 @@
     <string name="wifi_setting_priority_summary">Specify the priority of the Wi-Fi networks</string>
 
     <!-- Wifi Display aka Cast Screen summary-->
-    <string name="wifi_display_summary">Specify the priority of the Wi-Fi networks</string>
+    <string name="wifi_display_summary">Screen mirroring on another device</string>
 
     <!-- Show connected to Wi-Fi hotspot devices -->
     <string name="clients">CLIENTS</string>
