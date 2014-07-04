@@ -97,6 +97,11 @@
             android:entries="@array/smart_pulldown_entries"
             android:entryValues="@array/smart_pulldown_values"
             android:persistent="false" />
+			
+        <PreferenceScreen
+            android:id="@+id/weather"
+            android:title="@string/weather_settings_title"
+            android:fragment="com.android.settings.liquid.Weather" />
 
     </PreferenceCategory>
 
