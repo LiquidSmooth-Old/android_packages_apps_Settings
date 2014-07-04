@@ -18,16 +18,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/advanced_options_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-	
-    <PreferenceScreen
-        android:key="pref_battery_saver"
-        android:fragment="com.android.settings.liquid.BatterySaverSettings"
-        android:title="@string/battery_saver_title" />
 
     <PreferenceScreen
         android:key="hfm_settings"
         android:title="@string/hfm_pref_screen_title"
         android:fragment="com.android.settings.liquid.hfm.HfmSettings" />
+
+    <PreferenceScreen
+        android:key="pref_battery_saver"
+        android:fragment="com.android.settings.liquid.BatterySaverSettings"
+        android:title="@string/battery_saver_title" />
 
     <PreferenceScreen
         android:key="devicesettings_app"
