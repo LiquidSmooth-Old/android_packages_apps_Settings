@@ -122,6 +122,9 @@
     <string name="notification_light_voicemail_title">Voicemail</string>
     <string name="notification_light_choose_app">Choose application</string>
     <string name="notification_light_add">Add</string>
+	
+    <!-- Display settings screen, screen settings -->
+    <string name="display_category_screen_options_title">Screen options</string>
 
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
@@ -2264,6 +2267,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Identicons -->
     <string name="identicons_title">Identicons</string>
+    <string name="identicons_summary">New default contact picture</string>
     <string name="identicons_enabled_title">Identicons</string>
     <string name="identicons_enabled_summary">Use identicon as default contact picture when creating new contacts</string>
     <string name="identicons_style_title">Identicon style</string>
