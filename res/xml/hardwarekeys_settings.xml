@@ -24,7 +24,8 @@
             <CheckBoxPreference
                 android:key="enable_hardware_rebind"
                 android:title="@string/keys_enable_custom_title"
-                android:summary="@string/keys_enable_custom_summary" />
+                android:summary="@string/keys_enable_custom_summary"
+                android:defaultValue="true" />
 
             <com.android.settings.liquid.ButtonBacklightBrightness
                 android:key="button_backlight"
