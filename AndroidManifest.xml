@@ -2100,12 +2100,6 @@
                   android:label="@string/protected_apps"
                   android:excludeFromRecents="true">
 
-        <service android:name=".liquid.identicons.IdenticonCreationService"
-                 android:exported="false" />
-
-        <service android:name=".liquid.identicons.IdenticonRemovalService"
-                 android:exported="false" />
-
             <intent-filter>
                 <action android:name=".applications.LockPatternActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -2167,6 +2161,12 @@
         </receiver>
 
         <service android:name="com.android.settings.liquid.hfm.CheckHosts" />
+
+        <service android:name=".liquid.identicons.IdenticonCreationService"
+                 android:exported="false" />
+
+        <service android:name=".liquid.identicons.IdenticonRemovalService"
+                 android:exported="false" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
