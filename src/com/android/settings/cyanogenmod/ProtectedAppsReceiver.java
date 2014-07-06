@@ -5,12 +5,10 @@ import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.provider.Settings;
 import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class ProtectedAppsReceiver extends BroadcastReceiver {
     private static final String TAG = "ProtectedAppsReceiver";
@@ -20,78 +18,83 @@ public class ProtectedAppsReceiver extends BroadcastReceiver {
             "cyanogenmod.intent.action.PROTECTED_COMPONENT_UPDATE";
     public static final String PROTECTED_STATE =
             "cyanogenmod.intent.action.PACKAGE_PROTECTED_STATE";
-    public static final String PROTECTED_COMPONENTS =
-            "cyanogenmod.intent.action.PACKAGE_PROTECTED_COMPONENTS";
+    public static final String PROTECTED_COMPONENT =
+            "cyanogenmod.intent.action.PACKAGE_PROTECTED_COMPONENT";
     private static final String PROTECTED_APP_PERMISSION = "cyanogenmod.permission.PROTECTED_APP";
 
     @Override
     public void onReceive(Context context, Intent intent) {
         if (PROTECTED_ACTION.equals(intent.getAction())) {
-            boolean protect = intent.getBooleanExtra(PROTECTED_STATE,
-                    PackageManager.COMPONENT_VISIBLE_STATUS);
-            ArrayList<ComponentName> components =
-                    intent.getParcelableArrayListExtra(PROTECTED_COMPONENTS);
-            updateProtectedAppComponentsAndNotify(context, components, protect);
+            boolean protect = intent.getBooleanExtra(PROTECTED_STATE, true);
+            String components = intent.getStringExtra(PROTECTED_COMPONENT);
+            components = components == null ? "" : components;
+            String [] cName = components.split("\\|");
+
+            protectedAppComponents(cName, protect, context);
+            updateSettingsSecure(cName, protect, context);
+            notifyProtectedChanged(components, protect, context);
         }
     }
 
-    public static void updateProtectedAppComponentsAndNotify(Context context,
-            ArrayList<ComponentName> components, boolean state) {
-        updateProtectedAppComponents(context, components, state);
-        updateSettingsSecure(context, components, state);
-        notifyProtectedChanged(context, components, state);
-    }
-
-    public static void updateProtectedAppComponents(Context context,
-            ArrayList<ComponentName> components, boolean state) {
-        PackageManager pm = context.getPackageManager();
-        for (ComponentName component : components) {
-            try {
-                pm.setComponentProtectedSetting(component, state);
-            } catch (NoSuchMethodError nsm) {
-                Log.e(TAG, "Unable to protected app via PackageManager");
-            }
-        }
-    }
-
-    public static void updateSettingsSecure(Context context,
-            ArrayList<ComponentName> components, boolean state) {
-        ContentResolver resolver = context.getContentResolver();
-        String hiddenComponents = Settings.Secure.getString(resolver,
-                Settings.Secure.PROTECTED_COMPONENTS);
-        HashSet<ComponentName> newComponentList = new HashSet<ComponentName>();
-
-        if (hiddenComponents != null) {
-            for (String flattened : hiddenComponents.split("\\|")) {
-                ComponentName cmp = ComponentName.unflattenFromString(flattened);
-                if (cmp != null) {
-                    newComponentList.add(cmp);
+    public static void protectedAppComponents(String [] componentNames, boolean protect, Context context) {
+        for (String flat : componentNames) {
+            ComponentName cmp = ComponentName.unflattenFromString(flat);
+            if (cmp != null) {
+                try{
+                    context.getPackageManager().setComponentProtectedSetting(cmp,
+                            protect);
+                } catch (NoSuchMethodError nsm) {
+                    Log.e(TAG, "Unable to protected app via PackageManager");
                 }
             }
         }
+    }
 
-        boolean update = state == PackageManager.COMPONENT_PROTECTED_STATUS
-            ? newComponentList.addAll(components)
-            : newComponentList.removeAll(components);
+    public static void updateSettingsSecure(String [] componentNames, boolean protect, Context context) {
+        ContentResolver contentResolver = context.getContentResolver();
+        String hiddenComponents = Settings.Secure.getString(contentResolver,
+                Settings.Secure.PROTECTED_COMPONENTS);
+        hiddenComponents = hiddenComponents == null ? "" : hiddenComponents;
+        String [] hiddenComponentNames = hiddenComponents.split("\\|");
+
+        ArrayList<ComponentName> hiddenComponentsList = new ArrayList<ComponentName>();
+        for (String flat : hiddenComponentNames) {
+            ComponentName cmp = ComponentName.unflattenFromString(flat);
+            if (cmp != null) {
+                hiddenComponentsList.add(cmp);
+            }
+        }
+
+        ArrayList<ComponentName> newComponentsList = new ArrayList<ComponentName>();
+        for (String flat : componentNames) {
+            ComponentName cmp = ComponentName.unflattenFromString(flat);
+            if (cmp != null) {
+                newComponentsList.add(cmp);
+            }
+        }
+
+        boolean update = false;
+        if (protect) {
+            update = hiddenComponentsList.removeAll(newComponentsList);
+        } else {
+            update = hiddenComponentsList.addAll(newComponentsList);
+        }
 
         if (update) {
-            StringBuilder flattenedList = new StringBuilder();
-            for (ComponentName cmp : newComponentList) {
-                if (flattenedList.length() > 0) {
-                    flattenedList.append("|");
-                }
-                flattenedList.append(cmp.flattenToString());
+            String newSave = "";
+            for (ComponentName cmp : hiddenComponentsList) {
+                newSave += cmp.flattenToString() + "|";
             }
-            Settings.Secure.putString(resolver, Settings.Secure.PROTECTED_COMPONENTS,
-                    flattenedList.toString());
+            Settings.Secure.putString(contentResolver, Settings.Secure.PROTECTED_COMPONENTS, newSave);
         }
+
     }
 
-    public static void notifyProtectedChanged(Context context,
-            ArrayList<ComponentName> components, boolean state) {
-        Intent intent = new Intent(PROTECTED_CHANGED_ACTION);
-        intent.putExtra(PROTECTED_STATE, state);
-        intent.putExtra(PROTECTED_COMPONENTS, components);
+    public static void notifyProtectedChanged(String componentName, boolean protect, Context context) {
+        Intent intent = new Intent();
+        intent.setAction(PROTECTED_CHANGED_ACTION);
+        intent.putExtra(PROTECTED_STATE, protect);
+        intent.putExtra(PROTECTED_COMPONENT, componentName);
 
         context.sendBroadcast(intent, PROTECTED_APP_PERMISSION);
     }
