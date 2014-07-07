@@ -73,6 +73,7 @@
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.SYSTEM_NOTIFICATION_LISTENER" />
+    <uses-permission android:name="android.permission.CHANGE_HEADS_UP_STATE" />
 
     <permission
         android:name="android.permission.REQUEST_SUPERUSER"

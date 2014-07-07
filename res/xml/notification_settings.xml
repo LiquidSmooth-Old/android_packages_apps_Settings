@@ -41,6 +41,14 @@
         android:title="@string/halo_options_title"
         android:summary="@string/halo_summary"
         android:fragment="com.android.settings.liquid.HaloOptions" />
+		
+    <!-- Heads Up -->
+    <PreferenceScreen
+        android:key="headsup_settings"
+        android:id="@+id/headsup_settings"
+        android:title="@string/heads_up_title"
+        android:summary="@string/heads_up_summary"
+        android:fragment="com.android.settings.liquid.HeadsUp" />
 
     <!-- Hover -->
     <PreferenceScreen
