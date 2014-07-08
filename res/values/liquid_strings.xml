@@ -673,8 +673,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="summary_pref_menu_location">Where you want the menu buttons to appear</string>
     <string name="title_pref_menu_display">Menu visibility</string>
     <string name="summary_pref_menu_display">When you want the menu buttons to appear</string>
-    <string name="navbar_enable_bar">Navigation Bar</string>
-    <string name="navbar_enable_bar_summary">Enable or disable navbar</string>
+    <string name="navbar_enable_bar">Navigation bar</string>
+    <string name="navbar_enable_bar_summary">Enable or disable system navigation</string>
     <string name="navigation_bar_height_title">Navigation bar height</string>
     <string name="navigation_bar_height_summary">Navigation bar height while in portrait.</string>
     <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
@@ -1472,7 +1472,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="network_1x">1x</string>
     <string name="network_global">Global</string>
     <string name="battery_saver_action_undefined">Undefined</string>
-    <string name="battery_saver_title">Battery saver mode</string>
+    <string name="battery_saver_title">Battery saver</string>
     <string name="pref_battery_saver_enable_title">Battery saver</string>
     <string name="pref_battery_saver_enable_summary">This will automatically manage your device battery usage and switch your network to user-defined power saving mode or normal mode depending on mobile data and Wi-Fi connection states</string>
     <string name="pref_battery_saver_enable_no_mobiledata_summary">This will automatically manage your device battery usage to user-defined</string>
@@ -2418,25 +2418,25 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="heads_up_title">Heads up settings</string>
     <string name="heads_up_summary">Configure or view current headsup settings</string>
     <string name="heads_up_expanded_title">Always expanded</string>
-    <string name="heads_up_expanded_summary">Show heads up notification always expanded</string>
+    <string name="heads_up_expanded_summary">Show notification always expanded</string>
     <string name="heads_up_show_updates_title">Show updates</string>
-    <string name="heads_up_show_updates_summary">Show updates from pending background notifications as heads up</string>
+    <string name="heads_up_show_updates_summary">Show pending notifications updates</string>
     <string name="heads_up_snooze_title">Snooze timer</string>
-    <string name="heads_up_snooze_summary">If snooze button is pressed disable heads up for <xliff:g id="number">%d</xliff:g> minutes.</string>
-    <string name="heads_up_snooze_disabled_summary">Snooze timer is disabled.</string>
+    <string name="heads_up_snooze_summary"><xliff:g id="number">%d</xliff:g> minutes</string>
+    <string name="heads_up_snooze_disabled_summary">Snooze timer is disabled</string>
     <string name="heads_up_snooze_3min">3 minutes</string>
     <string name="heads_up_snooze_5min">5 minutes</string>
     <string name="heads_up_snooze_10min">10 minutes</string>
     <string name="heads_up_snooze_15min">15 minutes</string>
     <string name="heads_up_snooze_20min">20 minutes</string>
     <string name="heads_up_time_out_title">Time out</string>
-    <string name="heads_up_time_out_summary">Heads up notification will show up for <xliff:g id="number">%d</xliff:g> seconds.</string>
-    <string name="heads_up_time_out_never_summary">Heads up notification will show till it is dismissed.</string>
+    <string name="heads_up_time_out_summary"><xliff:g id="number">%d</xliff:g> seconds</string>
+    <string name="heads_up_time_out_never_summary">Notifications show till dismissed</string>
     <string name="heads_up_time_out_4sec">4 seconds</string>
     <string name="heads_up_time_out_6sec">6 seconds</string>
     <string name="heads_up_time_out_8sec">8 seconds</string>
     <string name="heads_up_time_out_10sec">10 seconds</string>
     <string name="heads_up_time_out_never">Never</string>
-    <string name="heads_up_switch_label">Enable heads up notification</string>
+    <string name="heads_up_switch_label">Enable heads up notifications</string>
 
 </resources>
