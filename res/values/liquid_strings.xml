@@ -208,9 +208,6 @@
     <!-- Wifi Display aka Cast Screen summary-->
     <string name="wifi_display_summary">Screen mirroring on another device</string>
 
-    <!-- Show connected to Wi-Fi hotspot devices -->
-    <string name="clients">CLIENTS</string>
-
     <!-- Status bar -->
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_style_title">Style</string>
