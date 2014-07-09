@@ -152,32 +152,28 @@ public class ExtraInfo {
         return parts[2];
     }
 
-        public String getDisplayWidthInches() {
+
+    public String getDisplayWidthInches() {
         NumberFormat numFormat = NumberFormat.getInstance();
         numFormat.setMaximumFractionDigits(2);
-        return numFormat.format(mDisplayMetrics.xdpi);
+        return numFormat.format(mDisplay.getWidth() / mDisplayMetrics.xdpi);
     }
-
-        public String getDisplayHeightInches() {
+    public String getDisplayHeightInches() {
         NumberFormat numFormat = NumberFormat.getInstance();
         numFormat.setMaximumFractionDigits(2);
-        return numFormat.format(mDisplayMetrics.ydpi);
+        return numFormat.format(mDisplay.getHeight() / mDisplayMetrics.ydpi);
     }
-
-        public String getDisplayDiagonalInches() {
+    public String getDisplayDiagonalInches() {
         NumberFormat numFormat = NumberFormat.getInstance();
         numFormat.setMaximumFractionDigits(2);
 
         return numFormat.format(
                         Math.sqrt(
-                        Math.pow(mDisplayMetrics.xdpi, 2) +
-                        Math.pow(mDisplayMetrics.ydpi, 2)));
+                        Math.pow(mDisplay.getWidth() / mDisplayMetrics.xdpi, 2) +
+                        Math.pow(mDisplay.getHeight() / mDisplayMetrics.ydpi, 2)));
     }
-
-        @SuppressWarnings("deprecation")
-        public String getDisplayWidth() { return String.valueOf(mDisplay.getWidth()); }
-        @SuppressWarnings("deprecation")
-        public String getDisplayHeight() { return String.valueOf(mDisplay.getHeight()); }
+    public String getDisplayWidth() { return String.valueOf(mDisplay.getWidth()); }
+    public String getDisplayHeight() { return String.valueOf(mDisplay.getHeight()); }
     public String getDisplayDpiX() { return String.valueOf(mDisplayMetrics.xdpi); }
     public String getDisplayDpiY() { return String.valueOf(mDisplayMetrics.ydpi); }
     public String getDisplayRefreshRate() { return String.valueOf(mDisplay.getRefreshRate()); }
