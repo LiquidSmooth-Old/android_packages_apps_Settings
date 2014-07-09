@@ -2183,7 +2183,7 @@
         <item>1</item>
         <item>2</item>
     </string-array>
-	
+
     <!-- Ring mode options. -->
     <string-array name="ring_mode_entries" translatable="false">
         <item>@string/ring_mode_normal</item>
@@ -2294,7 +2294,7 @@
         <item>0</item>
         <item>1</item>
     </string-array>
-	
+
     <!-- Identicons -->
     <string-array name="identicons_style_entries" translatable="false">
         <item>@string/identicons_style_retro</item>
@@ -2316,7 +2316,7 @@
         <item>@drawable/ic_identicons_style_spirograph</item>
         <item>@drawable/ic_identicons_style_dotmatrix</item>
     </array>
-	
+
     <!-- Drive mod -->
     <string-array name="voice_tts_annoy_notif_entries">
         <item>@string/voice_tts_annoy_notif_default</item>
@@ -2343,7 +2343,7 @@
         <item>120000</item>
         <item>300000</item>
     </string-array>
-	
+
     <!-- Heads up -->
     <string-array name="heads_up_snooze_entries">
         <item>@string/disabled</item>
@@ -2377,6 +2377,23 @@
         <item>6000</item>
         <item>8000</item>
         <item>10000</item>
+    </string-array>
+
+    <!-- PEEK pickup timeout -->
+    <string-array name="peek_pickup_timeout_values" translatable="false">
+        <item>10000</item>
+        <item>30000</item>
+        <item>45000</item>
+        <item>60000</item>
+        <item>120000</item>
+    </string-array>
+
+    <string-array name="peek_pickup_timeout_entries" translatable="false">
+        <item>@string/peek_pickup_10seconds</item>
+        <item>@string/peek_pickup_30seconds</item>
+        <item>@string/peek_pickup_45seconds</item>
+        <item>@string/peek_pickup_60seconds</item>
+        <item>@string/peek_pickup_120seconds</item>
     </string-array>
 
 </resources>

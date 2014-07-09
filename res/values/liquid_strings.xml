@@ -131,7 +131,7 @@
     <string name="notification_light_voicemail_title">Voicemail</string>
     <string name="notification_light_choose_app">Choose application</string>
     <string name="notification_light_add">Add</string>
-	
+
     <!-- Display settings screen, screen settings -->
     <string name="display_category_screen_options_title">Screen options</string>
 
@@ -1537,7 +1537,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="custom_runtime_warning_title">Warning</string>
     <string name="custom_runtime_warning_message">ART is not supported by LiquidSmooth. This setting is included for experimentation only and has the potential to cause instability, crashes, data loss or prevent the proper boot of your device. Visit &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; for more information.&lt;br/&gt;&lt;br/&gt;We request you do not file bug reports if you have enabled ART as your runtime.&lt;br/&gt;&lt;br/&gt;Are you sure you want to reboot to change runtime from <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> to <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
 
-	<!-- LiquidSmooth Anonymous Stats -->
+    <!-- LiquidSmooth Anonymous Stats -->
     <string name="rominfo_settings_list_item_title">LiquidSmooth Statistics</string>
     <string name="rominfo_settings_list_item_summary">Help make LiquidSmooth better by opting into anonymous statistics reporting</string>
 
@@ -1856,10 +1856,17 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="battery_around_ring_title">Battery around ring</string>
     <string name="battery_around_ring_summary">Display battery level around unlock ring</string>
 
-	<!-- Notification peek -->
+    <!--Notification peek-->
     <string name="notification_peek_title">Notification peek</string>
     <string name="notification_peek_summary">Show notifications by picking up device</string>
-    <string name="notification_peek_disabled_summary">Peek is currently disabled, to re-enable turn off Active Display</string>
+    <string name="peek_pickup_timeout_title">Peek pickup timeout</string>
+    <string name="peek_pickup_10seconds">10 seconds (default)</string>
+    <string name="peek_pickup_30seconds">30 seconds</string>
+    <string name="peek_pickup_45seconds">45 seconds</string>
+    <string name="peek_pickup_60seconds">1 minute</string>
+    <string name="peek_pickup_120seconds">2 minutes</string>
+    <string name="notification_peek_time_title">Peek time</string>
+    <string name="notification_peek_time_summary">How long to display peeked notification</string>
 
     <!-- Lock screen gestures -->
     <string name="lockgesture_change_lock_pattern_label">Change unlock gesture</string>
@@ -2080,7 +2087,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="dt_tweaks_error">Startup tweaks error</string>
     <string name="dm_tweaks_error">It looks like startup tweaks isn\'t setup properly. Please contact your ROM developer.</string>
     <string name="db_exit">Exit</string>
-	
+
     <!--User preferences settings-->
     <string name="personalization">Personalization</string>
     <string name="reset_user_preferences_title">Reset Swipe left to float</string>
@@ -2121,11 +2128,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_long_fadeout_7seconds">7 seconds</string>
     <string name="hover_long_fadeout_10seconds">10 seconds</string>
     <string name="hover_long_fadeout_15seconds">15 seconds</string>
-	
+
     <!-- Liquid Extra Info -->
     <string name="lsextrainfo">Extra information</string>
     <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
-	
+
     <!-- Sound settings screen -->
     <string name="ring_mode_title">Ring mode</string>
     <string name="ring_mode_normal">Normal</string>
@@ -2255,11 +2262,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="menu_hidden_apps_reset_lock">Reset pattern lock</string>
     <string name="protected_apps">Protected apps</string>
     <string name="saving_protected_components">Saving component state</string>
-	
+
     <!-- Flip Tiles -->
     <string name="flip_qs_tiles_title">Flip tiles</string>
     <string name="flip_qs_tiles_summary">Flips the tiles on touch</string>
-	
+
     <!-- Power Menu User Switcher -->
     <string name="power_menu_user_title">Power menu user switcher</string>
     <string name="power_menu_user_summary">Show a list of all users in power menu</string>

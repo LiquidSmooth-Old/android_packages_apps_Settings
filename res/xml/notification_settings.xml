@@ -18,7 +18,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/notification_settings_title">
-	
+
     <!-- Active display -->
     <PreferenceScreen
         android:key="active_display"
@@ -26,14 +26,14 @@
         android:title="@string/active_display_title"
         android:summary="@string/ad_summary"
         android:fragment="com.android.settings.liquid.ActiveDisplaySettings" />
-		
+
     <!-- Driving mode -->
     <PreferenceScreen
         android:key="interface_voice_tts"
         android:title="@string/voice_tts_title"
         android:summary="@string/voice_tts_summary"
         android:fragment="com.android.settings.liquid.TtsNotification" />
-		
+
     <!-- Halo -->
     <PreferenceScreen
         android:key="halo_options"
@@ -41,7 +41,7 @@
         android:title="@string/halo_options_title"
         android:summary="@string/halo_summary"
         android:fragment="com.android.settings.liquid.HaloOptions" />
-		
+
     <!-- Heads Up -->
     <PreferenceScreen
         android:key="headsup_settings"
@@ -56,19 +56,26 @@
         android:title="@string/hover_title"
         android:summary="@string/hover_summary"
         android:fragment="com.android.settings.liquid.HoverSettings" />
-		
+
     <!-- LockScreen Notifications -->
     <PreferenceScreen
         android:key="lockscreen_notifications"
         android:title="@string/lockscreen_notifications_title"
         android:summary="@string/lockscreen_notifications_summary"
         android:fragment="com.android.settings.liquid.LockscreenNotifications" />
-		
+
     <!-- Notification drawer -->
     <PreferenceScreen
         android:id="@+id/notification_drawer"
-		android:title="@string/notification_drawer_title"
+        android:title="@string/notification_drawer_title"
         android:summary="@string/notification_drawer_summary"
         android:fragment="com.android.settings.liquid.NotificationDrawer" />
+
+    <!-- Peek -->
+    <PreferenceScreen
+        android:key="notification_peek"
+        android:fragment="com.android.settings.liquid.PeekSettings"
+        android:title="@string/notification_peek_title"
+        android:summary="@string/notification_peek_summary" />
 
 </PreferenceScreen>

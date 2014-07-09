@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 The LiquidSmooth Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/notification_peek_title" >
+
+        <CheckBoxPreference
+            android:key="notification_peek"
+            android:title="@string/notification_peek_title" />
+
+        <ListPreference
+            android:key="peek_pickup_timeout"
+            android:title="@string/peek_pickup_timeout_title"
+            android:persistent="false"
+            android:entries="@array/peek_pickup_timeout_entries"
+            android:entryValues="@array/peek_pickup_timeout_values"
+            android:dependency="notification_peek" />
+
+        <com.android.settings.widget.SeekBarPreferenceCham
+            android:key="notification_peek_time"
+            android:persistent="false"
+            android:title="@string/notification_peek_time_title"
+            android:summary="@string/notification_peek_time_summary"
+            android:max="10000"
+            settings:minimum="500"
+            settings:unitsLeft=""
+            settings:unitsRight="ms"
+            settings:interval="100"
+            android:defaultValue="5000"
+            android:dependency="notification_peek" />
+
+</PreferenceScreen>
