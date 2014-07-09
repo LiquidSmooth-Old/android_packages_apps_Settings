@@ -35,7 +35,7 @@ public class AirplaneModeEnabler implements Preference.OnPreferenceChangeListene
     private final Context mContext;
 
     private PhoneStateIntentReceiver mPhoneStateReceiver;
-    
+
     private final CheckBoxPreference mCheckBoxPref;
 
     private static final int EVENT_SERVICE_STATE_CHANGED = 3;
@@ -45,7 +45,8 @@ public class AirplaneModeEnabler implements Preference.OnPreferenceChangeListene
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case EVENT_SERVICE_STATE_CHANGED:
-                    onAirplaneModeChanged();
+                    mCheckBoxPref.setEnabled(true);
+                                        onAirplaneModeChanged();
                     break;
             }
         }
@@ -59,18 +60,18 @@ public class AirplaneModeEnabler implements Preference.OnPreferenceChangeListene
     };
 
     public AirplaneModeEnabler(Context context, CheckBoxPreference airplaneModeCheckBoxPreference) {
-        
+
         mContext = context;
         mCheckBoxPref = airplaneModeCheckBoxPreference;
-        
+
         airplaneModeCheckBoxPreference.setPersistent(false);
-    
+
         mPhoneStateReceiver = new PhoneStateIntentReceiver(mContext, mHandler);
         mPhoneStateReceiver.notifyServiceState(EVENT_SERVICE_STATE_CHANGED);
     }
 
     public void resume() {
-        
+
         mCheckBoxPref.setChecked(isAirplaneModeOn(mContext));
 
         mPhoneStateReceiver.registerIntent();
@@ -79,7 +80,7 @@ public class AirplaneModeEnabler implements Preference.OnPreferenceChangeListene
                 Settings.Global.getUriFor(Settings.Global.AIRPLANE_MODE_ON), true,
                 mAirplaneModeObserver);
     }
-    
+
     public void pause() {
         mPhoneStateReceiver.unregisterIntent();
         mCheckBoxPref.setOnPreferenceChangeListener(null);
@@ -97,7 +98,7 @@ public class AirplaneModeEnabler implements Preference.OnPreferenceChangeListene
                                 enabling ? 1 : 0);
         // Update the UI to reflect system setting
         mCheckBoxPref.setChecked(enabling);
-        
+
         // Post the intent
         Intent intent = new Intent(Intent.ACTION_AIRPLANE_MODE_CHANGED);
         intent.putExtra("state", enabling);
@@ -115,7 +116,7 @@ public class AirplaneModeEnabler implements Preference.OnPreferenceChangeListene
     private void onAirplaneModeChanged() {
         mCheckBoxPref.setChecked(isAirplaneModeOn(mContext));
     }
-    
+
     /**
      * Called when someone clicks on the checkbox preference.
      */
@@ -124,7 +125,8 @@ public class AirplaneModeEnabler implements Preference.OnPreferenceChangeListene
                     SystemProperties.get(TelephonyProperties.PROPERTY_INECM_MODE))) {
             // In ECM mode, do not update database at this point
         } else {
-            setAirplaneModeOn((Boolean) newValue);
+            mCheckBoxPref.setEnabled(false);
+                        setAirplaneModeOn((Boolean) newValue);
         }
         return true;
     }

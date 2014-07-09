@@ -18,19 +18,13 @@
     android:title="@string/navigation_settings_title"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-	
-    <!-- App Side Bar -->
-    <com.android.settings.liquid.SystemCheckBoxPreference
-        android:key="enable_app_circle_bar"
-        android:title="@string/app_circle_bar_title"
-        android:summary="@string/app_circle_bar_summary" />
 
-    <com.android.settings.liquid.AppMultiSelectListPreference
-        android:key="app_circle_bar_included_apps"
-        android:persistent="false"
-        android:title="@string/app_circle_bar_included_apps_title"
-        android:summary="@string/app_circle_bar_included_apps_summary"
-        android:dependency="enable_app_circle_bar" />
+    <!-- App circle sidebar -->
+    <PreferenceScreen
+        android:key="app_circle_sidebar"
+        android:title="@string/app_circle_bar_title"
+        android:summary="@string/app_circle_bar_summary"
+        android:fragment="com.android.settings.liquid.AppCircleSidebar" />
 
     <!-- Gesture Anywhere -->
     <PreferenceScreen

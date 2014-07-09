@@ -711,13 +711,11 @@ public class DataUsageSummary extends Fragment {
 
         if (TAB_MOBILE.equals(currentTab)) {
             setPreferenceTitle(mDataEnabledView, R.string.data_usage_enable_mobile);
-            setPreferenceTitle(mBatterySaverEnabledView, R.string.data_usage_enable_batterysaver);
             setPreferenceTitle(mDisableAtLimitView, R.string.data_usage_disable_mobile_limit);
             mTemplate = buildTemplateMobileAll(getActiveSubscriberId(context));
 
         } else if (TAB_3G.equals(currentTab)) {
             setPreferenceTitle(mDataEnabledView, R.string.data_usage_enable_3g);
-            mBatterySaverEnabledView.setVisibility(View.GONE);
             setPreferenceTitle(mDisableAtLimitView, R.string.data_usage_disable_3g_limit);
             // TODO: bind mDataEnabled to 3G radio state
             mTemplate = buildTemplateMobile3gLower(getActiveSubscriberId(context));
@@ -863,11 +861,6 @@ public class DataUsageSummary extends Fragment {
         } else {
             return mConnService.getMobileDataEnabled();
         }
-    }
-
-    private boolean isBatterySaverEnabled() {
-        final ContentResolver resolver = getActivity().getContentResolver();
-        return Settings.Global.getInt(resolver, Settings.Global.BATTERY_SAVER_OPTION, 0) != 0;
     }
 
     private void setMobileDataEnabled(boolean enabled) {
