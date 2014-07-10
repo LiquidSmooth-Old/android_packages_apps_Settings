@@ -82,6 +82,7 @@ public class PeekSettings extends SettingsPreferenceFragment implements OnPrefer
         boolean enabled = Settings.System.getInt(getContentResolver(),
                 Settings.System.PEEK_STATE, 0) == 1;
         mNotificationPeek.setChecked(enabled);
+        disablePref();
     }
 
     private void updatePeekTimeoutOptions(Object newValue) {
@@ -117,5 +118,19 @@ public class PeekSettings extends SettingsPreferenceFragment implements OnPrefer
                     Settings.System.PEEK_TIME, time);
         }
         return true;
+    }
+
+     private void disablePref() {
+          ContentResolver resolver = getActivity().getContentResolver();
+          boolean enabled = (Settings.System.getInt(resolver,
+                  Settings.System.ENABLE_ACTIVE_DISPLAY, 0) == 1) ||
+                  (Settings.System.getInt(resolver,
+                  Settings.System.LOCKSCREEN_NOTIFICATIONS_POCKET_MODE, 0) == 1);
+        if (enabled) {
+            Settings.System.putInt(resolver,
+                Settings.System.PEEK_STATE, 0);
+            mNotificationPeek.setEnabled(false);
+            mNotificationPeek.setSummary(R.string.notification_peek_disabled_summary);
+        }
     }
 }

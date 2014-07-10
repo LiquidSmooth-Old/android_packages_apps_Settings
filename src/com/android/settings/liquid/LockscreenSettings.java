@@ -194,8 +194,6 @@ public class LockscreenSettings extends SettingsPreferenceFragment
         if (!hasButtons) {
             generalCategory.removePreference(lockButtons);
         }
-
-        disablePref();
     }
 
     @Override
@@ -243,11 +241,5 @@ public class LockscreenSettings extends SettingsPreferenceFragment
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
-    }
-
-    private void disablePref() {
-        ContentResolver resolver = getActivity().getContentResolver();
-        boolean enabled = Settings.System.getInt(resolver,
-                Settings.System.ENABLE_ACTIVE_DISPLAY, 0) == 1;
     }
 }

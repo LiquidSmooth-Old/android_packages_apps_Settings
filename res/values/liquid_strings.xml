@@ -1436,7 +1436,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ad_pocket_mode_off">Off</string>
     <string name="ad_pocket_mode_notifications">Notifications only</string>
     <string name="ad_pocket_mode_always">Always</string>
-    <string name="ad_disabled_summary">Active Display is currently disabled, to re-enable turn off Peek</string>
+    <string name="ad_disabled_summary">Active Display is currently disabled, to re-enable turn off Peek and Lockscreen notification pocket mode</string>
 
     <!-- Bluetooth accept all Filestypes -->
     <string name="bluetooth_accept_all_files">Accept all file types</string>
@@ -1561,6 +1561,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="lockscreen_notification_summary">Show current pending notifications</string>
     <string name="pocket_mode">Pocket mode</string>
     <string name="pocket_mode_summary">Screen on and show notifications</string>
+    <string name="pocket_mode_disabled_summary">Pocket mode is currently disabled, to re-enable turn off Active Display and Peek</string>
     <string name="show_always">Show always</string>
     <string name="show_always_summary">Screen on when removed from pocket</string>
     <string name="hide_low_priority">Hide low priority</string>
@@ -1867,6 +1868,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="peek_pickup_120seconds">2 minutes</string>
     <string name="notification_peek_time_title">Peek time</string>
     <string name="notification_peek_time_summary">How long to display peeked notification</string>
+    <string name="notification_peek_disabled_summary">Peek is currently disabled, to re-enable turn off Active Display and Lockscreen Notification pocket mode</string>
 
     <!-- Lock screen gestures -->
     <string name="lockgesture_change_lock_pattern_label">Change unlock gesture</string>

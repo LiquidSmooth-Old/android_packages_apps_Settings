@@ -94,6 +94,7 @@ public class LockscreenNotifications extends SettingsPreferenceFragment
 		    mPocketMode.setChecked(Settings.System.getInt(cr,
 		                Settings.System.LOCKSCREEN_NOTIFICATIONS_POCKET_MODE, 0) == 1);
 		    mPocketMode.setEnabled(mLockscreenNotifications.isChecked());
+		    disablePref();
 
 		    mShowAlways = (CheckBoxPreference) prefs.findPreference(KEY_SHOW_ALWAYS);
 		    mShowAlways.setChecked(Settings.System.getInt(cr,
@@ -288,5 +289,19 @@ public class LockscreenNotifications extends SettingsPreferenceFragment
         }
         Settings.System.putString(getContentResolver(),
                 Settings.System.LOCKSCREEN_NOTIFICATIONS_EXCLUDED_APPS, builder.toString());
+    }
+
+     private void disablePref() {
+          ContentResolver resolver = getActivity().getContentResolver();
+          boolean enabled = (Settings.System.getInt(resolver,
+                  Settings.System.ENABLE_ACTIVE_DISPLAY, 0) == 1) ||
+                  (Settings.System.getInt(resolver,
+                  Settings.System.PEEK_STATE, 0) == 1);
+        if (enabled) {
+            Settings.System.putInt(resolver,
+                Settings.System.LOCKSCREEN_NOTIFICATIONS_POCKET_MODE, 0);
+            mPocketMode.setEnabled(false);
+            mPocketMode.setSummary(R.string.pocket_mode_disabled_summary);
+        }
     }
 }
