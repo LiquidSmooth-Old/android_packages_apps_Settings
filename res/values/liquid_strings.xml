@@ -67,6 +67,7 @@
 
     <!-- Device settings -->
     <string name="device_settings_title">Device</string>
+    <string name="device_legal_summary">Open source and Google licenses</string>
 
     <!-- Action shortcuts -->
     <string name="shortcut_picker_title">Action shortcuts</string>

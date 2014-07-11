@@ -67,7 +67,8 @@
         <!-- Legal Information -->
         <PreferenceScreen
                 android:key="container"
-                android:title="@string/legal_information">
+                android:title="@string/legal_information"
+                android:summary="@string/device_legal_summary">
 
             <!-- Note: The titles given here probably won't be used.  Instead, we programmatically
                        fill the title with the label of the activity with the corresponding action.
@@ -103,15 +104,6 @@
             <intent android:action="android.settings.SAFETY" />
         </PreferenceScreen>
 
-        <!-- Contributors -->
-        <!--
-        <PreferenceScreen
-                android:key="contributors"
-                android:title="@string/contributors_title">
-            <intent android:action="android.settings.TEAM" />
-        </PreferenceScreen>
-        -->
-
         <PreferenceScreen
                 android:key="regulatory_info"
                 android:title="@string/regulatory_information">
@@ -122,55 +114,63 @@
         <Preference android:key="device_model"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/model_number"
-                android:summary="@string/device_info_default"/>
+                android:summary="@string/device_info_default"
+                android:selectable="false" />
 
         <!-- Device firmware version -->
         <Preference android:key="firmware_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/firmware_version"
-                android:summary="@string/device_info_default"/>
+                android:summary="@string/device_info_default" />
 
         <!-- Device FCC equipment id -->
         <Preference android:key="fcc_equipment_id"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/fcc_equipment_id"
-                android:summary="@string/device_info_default"/>
+                android:summary="@string/device_info_default"
+                android:selectable="false" />
 
         <!-- Device Baseband version -->
         <Preference android:key="baseband_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/baseband_version"
-                android:summary="@string/device_info_default"/>
+                android:summary="@string/device_info_default"
+                android:selectable="false" />
 
         <!-- Device Kernel version -->
         <Preference android:key="kernel_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/kernel_version"
-                android:summary="@string/device_info_default"/>
+                android:summary="@string/device_info_default"
+                android:selectable="false" />
 
         <!-- Device cpu info -->
         <Preference android:key="device_cpu"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/cpu_info"
-                android:summary="@string/device_info_default"/>
+                android:summary="@string/device_info_default"
+                android:selectable="false" />
 
         <!-- Device mem info -->
         <Preference android:key="device_memory"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/mem_info"
-                android:summary="@string/device_info_default"/>
+                android:summary="@string/device_info_default"
+                android:selectable="false" />
 
         <!-- Mod version -->
         <Preference android:key="mod_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/mod_version"
-                android:summary="@string/mod_version_default" />
+                android:summary="@string/mod_version_default"
+                android:selectable="false" />
 
         <!-- Build date -->
         <Preference android:key="build_date"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/build_date"
-                android:summary="@string/build_date_default" />
+                android:summary="@string/build_date_default"
+                android:selectable="false" />
 
         <!-- Detailed build version -->
         <Preference android:key="build_number"
@@ -182,6 +182,7 @@
         <Preference android:key="selinux_status"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/selinux_status"
-                android:summary="@string/selinux_status_enforcing"/>
+                android:summary="@string/selinux_status_enforcing"
+                android:selectable="false" />
 
 </PreferenceScreen>
