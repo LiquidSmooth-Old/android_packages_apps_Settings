@@ -23,6 +23,9 @@
     <string name="liquid_version_title">Liquid version</string>
     <string name="liquid_version_default">Unknown</string>
 
+    <!-- About phone screen, legal summary -->
+    <string name="device_legal_summary">Open source and Google licenses</string>
+
     <!-- Build date -->
     <string name="build_date">Build date</string>
     <string name="build_date_default">2012-01-01-0000</string>
