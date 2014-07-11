@@ -19,4 +19,6 @@
     <string name="lsextrainfo">Extra information</string>
     <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
 
+    <!-- About phone screen, legal summary -->
+    <string name="device_legal_summary">Open source and Google licenses</string>
 </resources>
