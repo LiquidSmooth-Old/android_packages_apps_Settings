@@ -17,7 +17,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/display_settings"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-		
+
         <PreferenceCategory
             android:key="category_light_options"
             android:title="@string/display_category_light_options_title" >
@@ -26,7 +26,7 @@
                 android:key="battery_light"
                 android:title="@string/battery_light_title"
                 android:fragment="com.android.settings.liquid.notificationlight.BatteryLightSettings" />
-				
+
             <com.android.settings.BrightnessPreference
                 android:title="@string/brightness"
                 android:summary="@string/brightness_control_summary"
@@ -45,26 +45,26 @@
         </PreferenceCategory>
 		
         <PreferenceCategory
-            android:key="category_screem_options"
+            android:key="category_screen_options"
             android:title="@string/display_category_screen_options_title" >
-			
+
         <PreferenceScreen
                 android:key="wifi_display"
                 android:title="@string/wifi_display_settings_title"
                 android:summary="@string/wifi_display_summary"
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
-				
+
         <PreferenceScreen
                 android:key="screensaver"
                 android:title="@string/screensaver_settings_title"
                 android:fragment="com.android.settings.DreamSettings" />
-				
+
         <PreferenceScreen
                 android:id="@+id/identicons"
                 android:title="@string/identicons_title"
                 android:summary="@string/identicons_summary"
                 android:fragment="com.android.settings.liquid.identicons.IdenticonsSettings" />
-				
+
         <PreferenceScreen
                 android:key="display_rotation"
                 android:fragment="com.android.settings.liquid.DisplayRotation"
@@ -75,7 +75,7 @@
                 android:title="@string/screen_recorder_title"
                 android:summary="@string/screen_recorder_summary2"
                 android:fragment="com.android.settings.liquid.ScreenRecorderSettings" />
-				
+
         <ListPreference
                 android:key="screen_timeout"
                 android:title="@string/screen_timeout"
@@ -83,13 +83,13 @@
                 android:persistent="false"
                 android:entries="@array/screen_timeout_entries"
                 android:entryValues="@array/screen_timeout_values" />
-				
+
         </PreferenceCategory>
 
     <PreferenceCategory
         android:key="category_animation_options"
         android:title="@string/display_category_animation_options_title" >
-		
+
         <PreferenceScreen
             android:key="animation_controls"
             android:title="@string/animation_controls_title"
@@ -102,7 +102,7 @@
             android:title="@string/system_power_crt_mode_title"
             android:entries="@array/entries_system_power_crt_mode"
             android:entryValues="@array/values_system_power_crt_mode" />
-			
+
         <PreferenceScreen
             android:key="interface_animation_scroll"
             android:fragment="com.android.settings.liquid.KeyboardAnimationInterfaceSettings"
@@ -124,7 +124,7 @@
             android:entries="@array/listview_interpolator_entries"
             android:entryValues="@array/listview_interpolator_values"
             android:defaultValue="0" />
-			
+
         <PreferenceScreen
             android:key="progressbar_settings"
             android:title="@string/progressbar_title"
