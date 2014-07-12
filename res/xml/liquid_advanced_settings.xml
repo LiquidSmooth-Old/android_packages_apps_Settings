@@ -22,12 +22,14 @@
     <PreferenceScreen
         android:key="hfm_settings"
         android:title="@string/hfm_pref_screen_title"
-        android:fragment="com.android.settings.liquid.hfm.HfmSettings" />
+        android:fragment="com.android.settings.liquid.hfm.HfmSettings"
+        android:summary="@string/advanced_adblocker_summary" />
 
     <PreferenceScreen
         android:key="pref_battery_saver"
         android:fragment="com.android.settings.liquid.BatterySaverSettings"
-        android:title="@string/battery_saver_title" />
+        android:title="@string/battery_saver_title"
+        android:summary="@string/advanced_batterysaver_summary" />
 
     <PreferenceScreen
         android:key="devicesettings_app"
@@ -41,25 +43,30 @@
     <PreferenceScreen
         android:key="prop_modder"
         android:title="@string/prop_modder_title"
-        android:fragment="com.android.settings.liquid.PropModder" />
+        android:fragment="com.android.settings.liquid.PropModder"
+        android:summary="@string/advanced_propmodder_summary" />
 
     <PreferenceScreen
         android:key="startup_tweaks"
         android:title="@string/startup_tweaks_title"
-        android:fragment="com.android.settings.liquid.StartupTweaks" />
+        android:fragment="com.android.settings.liquid.StartupTweaks"
+        android:summary="@string/advanced_startup_summary" />
 
     <PreferenceScreen
         android:title="@string/superuser_settings_title"
-        android:fragment="com.koushikdutta.superuser.PolicyNativeFragment" />
+        android:fragment="com.koushikdutta.superuser.PolicyNativeFragment"
+        android:summary="@string/advanced_superuser_summary" />
 		
     <PreferenceScreen
         android:id="@+id/system_app_remover"
         android:title="@string/sizer_title"
-        android:fragment="com.android.settings.liquid.SystemappRemover" />
+        android:fragment="com.android.settings.liquid.SystemappRemover"
+        android:summary="@string/advanced_systemapp_summary" />
 
     <PreferenceScreen
         android:id="@+id/wakelock_blocker"
         android:title="@string/wakelock_blocker"
-        android:fragment="com.android.settings.liquid.WakeLockBlocker" />
+        android:fragment="com.android.settings.liquid.WakeLockBlocker"
+        android:summary="@string/advanced_wakelock_summary" />
 
 </PreferenceScreen>

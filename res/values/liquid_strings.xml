@@ -42,9 +42,16 @@
     <string name="build_date">Build date</string>
     <string name="build_date_default">2012-01-01-0000</string>
 
-    <!-- Advanced titles -->
+    <!-- Advanced Settings -->
     <string name="advanced_category_title">Advanced</string>
     <string name="advanced_options_title">Advanced options</string>
+    <string name="advanced_adblocker_summary">Configure or view current ad blocker settings</string>
+    <string name="advanced_batterysaver_summary">Configure or view current battery saver settings</string>
+    <string name="advanced_propmodder_summary">Configure or view current build.prop settings</string>
+    <string name="advanced_startup_summary">Configure or view current startup tweaks settings</string>
+    <string name="advanced_superuser_summary">Configure or view current superuser settings</string>
+    <string name="advanced_systemapp_summary">Search for and remove system apps</string>
+    <string name="advanced_wakelock_summary">Configure or view current wakelock blocker settings</string>
 
     <!-- Category titles -->
     <string name="additional_category_title">Additional</string>
