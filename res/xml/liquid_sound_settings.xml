@@ -19,11 +19,6 @@
     android:title="@string/sound_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceScreen
-        android:key="quiet_hours_settings"
-        android:fragment="com.android.settings.liquid.QuietHours"
-        android:title="@string/quiet_hours_title" />
-
     <CheckBoxPreference
         android:key="camera_sounds"
         android:title="@string/camera_sounds_title"
@@ -41,6 +36,16 @@
         android:title="@string/volbtn_music_controls_title"
         android:summary="@string/volbtn_music_controls_summary"
         android:persistent="false" />
+		
+    <PreferenceScreen
+        android:key="volume_steps_settings"
+        android:fragment="com.android.settings.liquid.VolumeSteps"
+        android:title="@string/volume_steps_title" />
+		
+    <PreferenceScreen
+            android:key="sound_packages"
+            android:fragment="com.android.settings.sounds.SoundPackageSettings"
+            android:title="@string/sound_packages_title" />
 
     <PreferenceCategory
         android:title="@string/notifications_category_title" />
