@@ -2545,4 +2545,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ime_navigation_up_down">up / down</string>
     <string name="ime_navigation_home_end">home / end</string>
 
+    <!-- Notification Spam -->
+    <string name="spam_added_title">Added %1$s</string>	1278
+    <string name="spam_last_blocked_title">Last blocked %1$s</string>	1279
+    <string name="block_notifications_title">Filter notifications</string>	1280
+    <string name="no_filters_title">No filters set</string>
+
 </resources>

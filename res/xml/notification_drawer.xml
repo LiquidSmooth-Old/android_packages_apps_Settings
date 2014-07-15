@@ -115,6 +115,10 @@
             android:summary="@string/notification_style_summary"
             android:fragment="com.android.settings.liquid.NotificationDrawerStyle" />
 
+        <PreferenceScreen
+            android:title="@string/block_notifications_title"
+            android:fragment="com.android.settings.liquid.SpamList" />
+
          <com.android.settings.liquid.CustomCarrier
              android:key="notification_custom_carrier_label"
              android:title="@string/notification_custom_carrier_label_title"
