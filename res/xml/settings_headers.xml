@@ -45,6 +45,13 @@
         <intent
             android:action="android.settings.DATA_ROAMING_SETTINGS" />
     </header>
+	
+    <!-- Location -->
+    <header
+        android:fragment="com.android.settings.location.LocationSettings"
+        android:icon="@drawable/ic_settings_location"
+        android:title="@string/location_settings_title"
+        android:id="@+id/location_settings" />
 
     <!-- Data Usage -->
     <header
@@ -219,13 +226,6 @@
         android:breadCrumbTitle="@string/themes_settings_title"
         android:fragment="com.android.settings.ThemeSettings"
         android:icon="@drawable/prd_ic_themepacks" />
-
-    <!-- Location -->
-    <header
-        android:fragment="com.android.settings.location.LocationSettings"
-        android:icon="@drawable/ic_settings_location"
-        android:title="@string/location_settings_title"
-        android:id="@+id/location_settings" />
 
     <!-- Security -->
     <header
