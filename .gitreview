@@ -1,0 +1,5 @@
+[gerrit]
+host=gerrit.liquidsmooth.net
+port=29418
+project=LiquidSmooth/android_packages_apps_Settings.git
+defaultbranch=kitkat3
