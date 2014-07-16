@@ -41,6 +41,7 @@ import com.android.settings.Utils;
 public class Download extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     Preference mLSGapps;
+    Preference mLSExfat;
     Preference mLSOfficial;
     Preference mLSNightly;
     Preference mPAGapps;
@@ -56,6 +57,7 @@ public class Download extends SettingsPreferenceFragment implements OnPreference
         final ContentResolver resolver = getActivity().getContentResolver();
 
         mLSGapps = findPreference("ls_gapps");
+        mLSExfat = findPreference("ls_exfat");
         mLSOfficial = findPreference("ls_official");
         mLSNightly = findPreference("ls_nightly");
         mPAGapps = findPreference("pa_gapps");
@@ -97,6 +99,12 @@ public class Download extends SettingsPreferenceFragment implements OnPreference
             return true;
         } else if (preference == mLSNightly) {
             Uri uri = Uri.parse("http://goo.gl/xiEed1");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+            return true;
+        }
+        } else if (preference == mLSExfat) {
+            Uri uri = Uri.parse("http://goo.gl/J0znQc");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
             return true;

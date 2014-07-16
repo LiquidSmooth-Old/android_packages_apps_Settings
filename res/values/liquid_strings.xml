@@ -2506,6 +2506,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="xposed_summary">While Xposed is proven to be a very useful tool, some modules may cause issues/bugs in custom ROMs. Please uninstall all modules before reporting any bugs that you may come across while using Xposed.</string>
     <string name="xposed_mod_title">Module Repository</string>
     <string name="xposed_mod_summary">Browse and install modules to be used with Xposed Framework</string>
+    <string name="ls_exfat_title">Flashable Exfat Compatibility</string>
+    <string name="ls_exfat_summary">Link for zip that allows you to use exfat sdcards</string>
 	
     <!-- Partition Info -->
     <string name="partition_info_title">Partition info</string>

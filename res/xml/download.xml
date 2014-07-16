@@ -31,6 +31,11 @@
         android:title="@string/ls_nightly_title"
         android:summary="@string/ls_nightly_summary" />
 
+    <Preference
+        android:key="ls_exfat"
+        android:title="@string/ls_exfat_title"
+        android:summary="@string/ls_exfat_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
