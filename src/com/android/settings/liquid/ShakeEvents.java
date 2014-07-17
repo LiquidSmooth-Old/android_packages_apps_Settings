@@ -16,6 +16,7 @@
 
 package com.android.settings.liquid;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -73,6 +74,9 @@ public class ShakeEvents extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.shake_event_settings);
+		
+        ActionBar actionBar = getActivity().getActionBar();
+        actionBar.setIcon(R.drawable.ic_liquid_theme_settings);
 
         mPicker = new ShortcutPickerHelper(getActivity(), this);
 

@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.File;
 import java.io.FileWriter;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Notification;
@@ -174,6 +175,9 @@ public class PropModder extends PreferenceFragment implements
 
         addPreferencesFromResource(R.xml.prop_modder);
         prefSet = getPreferenceScreen();
+
+        ActionBar actionBar = getActivity().getActionBar();
+        actionBar.setIcon(R.drawable.ic_liquid_theme_settings);
 
         mWifiScanPref = (ListPreference) prefSet.findPreference(WIFI_SCAN_PREF);
         mWifiScanPref.setOnPreferenceChangeListener(this);
