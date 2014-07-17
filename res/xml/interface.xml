@@ -15,8 +15,9 @@
 -->
 
 <PreferenceScreen
-    android:title="@string/interface_settings_title"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/liquid_customize_title"
+    android:layout="@layout/preference_interface"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <ListPreference
@@ -47,12 +48,6 @@
             <extra android:name="actionEntries" android:value="shortcut_action_power_menu_entries" />
             <extra android:name="fragment" android:value="com.android.settings.liquid.fragments.PowerMenuFragment" />
     </PreferenceScreen>
-
-    <PreferenceScreen
-        android:key="recent_panel"
-        android:title="@string/recent_panel_title"
-        android:summary="@string/recent_panel_summary"
-        android:fragment="com.android.settings.liquid.RecentPanelSettings" />
 
     <PreferenceScreen
         android:key="shake_events"
