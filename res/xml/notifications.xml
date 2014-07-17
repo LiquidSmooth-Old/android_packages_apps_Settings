@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 Slimroms Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/notification_settings_title"
+    android:layout="@layout/preference_notification"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+    <!-- Active display -->
+    <PreferenceScreen
+        android:key="active_display"
+        android:id="@+id/active_display"
+        android:title="@string/active_display_title"
+        android:summary="@string/ad_summary"
+        android:fragment="com.android.settings.liquid.ActiveDisplaySettings" />
+
+    <!-- Driving mode -->
+    <PreferenceScreen
+        android:key="interface_voice_tts"
+        android:title="@string/voice_tts_title"
+        android:summary="@string/voice_tts_summary"
+        android:fragment="com.android.settings.liquid.TtsNotification" />
+
+    <!-- Halo -->
+    <PreferenceScreen
+        android:key="halo_options"
+        android:id="@+id/halo_options"
+        android:title="@string/halo_options_title"
+        android:summary="@string/halo_summary"
+        android:fragment="com.android.settings.liquid.HaloOptions" />
+
+    <!-- Heads Up -->
+    <PreferenceScreen
+        android:key="headsup_settings"
+        android:id="@+id/headsup_settings"
+        android:title="@string/heads_up_title"
+        android:summary="@string/heads_up_summary"
+        android:fragment="com.android.settings.liquid.HeadsUp" />
+
+    <!-- Hover -->
+    <PreferenceScreen
+        android:key="hover_settings"
+        android:title="@string/hover_title"
+        android:summary="@string/hover_summary"
+        android:fragment="com.android.settings.liquid.HoverSettings" />
+
+    <!-- LockScreen Notifications -->
+    <PreferenceScreen
+        android:key="lockscreen_notifications"
+        android:title="@string/lockscreen_notifications_title"
+        android:summary="@string/lockscreen_notifications_summary"
+        android:fragment="com.android.settings.liquid.LockscreenNotifications" />
+
+    <!-- Notification drawer -->
+    <PreferenceScreen
+        android:id="@+id/notification_drawer"
+        android:title="@string/notification_drawer_title"
+        android:summary="@string/notification_drawer_summary"
+        android:fragment="com.android.settings.liquid.NotificationDrawer" />
+
+    <!-- Peek -->
+    <PreferenceScreen
+        android:key="notification_peek"
+        android:fragment="com.android.settings.liquid.PeekSettings"
+        android:title="@string/notification_peek_title"
+        android:summary="@string/notification_peek_summary" />
+
+</PreferenceScreen>

@@ -42,9 +42,16 @@
     <string name="build_date">Build date</string>
     <string name="build_date_default">2012-01-01-0000</string>
 
+    <!-- LiquidSmooth Customization -->
+    <string name="liquid_customize_title">LiquidSmooth</string>
+    <string name="interface_title">Interface</string>
+    <string name="misc_title">Misc</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="navigation_title">Naviagtion</string>
+    <string name="statusbar_title">Status Bar</string>
+
     <!-- Advanced Settings -->
     <string name="advanced_category_title">Advanced</string>
-    <string name="advanced_options_title">Advanced options</string>
     <string name="advanced_adblocker_summary">Configure or view current ad blocker settings</string>
     <string name="advanced_batterysaver_summary">Configure or view current battery saver settings</string>
     <string name="advanced_propmodder_summary">Configure or view current build.prop settings</string>
@@ -58,7 +65,6 @@
     <string name="general_category_title">General</string>
 
     <!-- General settings -->
-    <string name="interface_settings_title">Interface</string>
     <string name="lockscreen_settings_title">Lock screen</string>
     <string name="navigation_settings_title">Navigation</string>
     <string name="kernel_tweaker_title">Performance</string>
