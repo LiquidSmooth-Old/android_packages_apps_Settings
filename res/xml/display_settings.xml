@@ -66,21 +66,9 @@
                 android:persistent="false" />
 
         <PreferenceScreen
-                android:id="@+id/identicons"
-                android:title="@string/identicons_title"
-                android:summary="@string/identicons_summary"
-                android:fragment="com.android.settings.liquid.identicons.IdenticonsSettings" />
-
-        <PreferenceScreen
                 android:key="display_rotation"
                 android:fragment="com.android.settings.liquid.DisplayRotation"
                 android:title="@string/display_rotation_title" />
-
-        <PreferenceScreen
-                android:key="screen_recorder"
-                android:title="@string/screen_recorder_title"
-                android:summary="@string/screen_recorder_summary2"
-                android:fragment="com.android.settings.liquid.ScreenRecorderSettings" />
 
         <ListPreference
                 android:key="screen_timeout"
@@ -96,24 +84,12 @@
         android:key="category_animation_options"
         android:title="@string/display_category_animation_options_title" >
 
-        <PreferenceScreen
-            android:key="animation_controls"
-            android:title="@string/animation_controls_title"
-            android:summary="@string/animation_controls_summary"
-            android:fragment="com.android.settings.liquid.AnimationControls" />
-
         <ListPreference
             android:key="system_power_crt_mode"
             android:dialogTitle="@string/system_power_crt_mode_dialog_title"
             android:title="@string/system_power_crt_mode_title"
             android:entries="@array/entries_system_power_crt_mode"
             android:entryValues="@array/values_system_power_crt_mode" />
-
-        <PreferenceScreen
-            android:key="interface_animation_scroll"
-            android:fragment="com.android.settings.liquid.KeyboardAnimationInterfaceSettings"
-            android:title="@string/ime_animation_title"
-            android:summary="@string/ime_animation_summary" />
 
         <ListPreference
             android:key="listview_animation"
@@ -130,18 +106,6 @@
             android:entries="@array/listview_interpolator_entries"
             android:entryValues="@array/listview_interpolator_values"
             android:defaultValue="0" />
-
-        <PreferenceScreen
-            android:key="progressbar_settings"
-            android:title="@string/progressbar_title"
-            android:summary="@string/progressbar_summary"
-            android:fragment="com.android.settings.liquid.ProgressBar" />
-
-        <PreferenceScreen
-            android:key="interface_animation_scroll"
-            android:fragment="com.android.settings.liquid.ScrollAnimationInterfaceSettings"
-            android:title="@string/scrolling_title"
-            android:summary="@string/scrolling_summary" />
 
         <ListPreference
             android:key="toast_animation"
