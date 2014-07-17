@@ -16,6 +16,7 @@
 
 package com.android.settings.liquid;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface; 
@@ -90,6 +91,9 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.recent_panel_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        ActionBar actionBar = getActivity().getActionBar();
+        actionBar.setIcon(R.drawable.ic_liquid_theme_settings);
 
         boolean enableRecentsCustom = Settings.System.getBoolean(getContentResolver(),
                                       Settings.System.CUSTOM_RECENT_TOGGLE, false);
