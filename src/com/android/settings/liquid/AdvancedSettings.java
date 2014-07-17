@@ -38,7 +38,7 @@ public class AdvancedSettings extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.liquid_advanced_settings);
+        addPreferencesFromResource(R.xml.advanced);
 
         mDeviceSettingsApp = (PreferenceScreen) findPreference(PREF_DEVICESETTINGS_APP);
 
