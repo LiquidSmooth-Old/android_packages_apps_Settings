@@ -92,7 +92,7 @@ public class NavigationSettings extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
 
         // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.liquid_navigation_settings);
+        addPreferencesFromResource(R.xml.navigation);
 
         PreferenceScreen prefs = getPreferenceScreen();
 
