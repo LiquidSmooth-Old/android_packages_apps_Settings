@@ -17,6 +17,7 @@
 
 package com.android.settings.liquid;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -79,6 +80,9 @@ public class ProgressBar extends SettingsPreferenceFragment implements
 		getPreferenceScreen().removeAll();
 		getPreferenceScreen().addPreference(PreviewLayout);
 		addPreferencesFromResource(R.xml.progressbar);
+
+        ActionBar actionBar = getActivity().getActionBar();
+        actionBar.setIcon(R.drawable.ic_liquid_theme_settings);
 
 		boolean progressbar_mirror_enabled = Settings.System.getInt(
                 getContentResolver(), Settings.System.PROGRESSBAR_MIRROR, 0) == 1;

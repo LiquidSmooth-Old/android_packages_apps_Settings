@@ -16,6 +16,7 @@
 
 package com.android.settings.liquid;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
@@ -102,6 +103,9 @@ public class TtsNotification extends SettingsPreferenceFragment implements
         PreferenceScreen prefSet = getPreferenceScreen();
 
         mShareprefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        ActionBar actionBar = getActivity().getActionBar();
+        actionBar.setIcon(R.drawable.ic_liquid_theme_settings);
 
         mEnableVoiceTTS = (SwitchPreference) prefSet.findPreference(KEY_VOICE_TTS);
         mEnableVoiceTTS.setChecked(mShareprefs.getBoolean(IntentReceiver.ENABLED, false));
