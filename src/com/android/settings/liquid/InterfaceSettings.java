@@ -16,6 +16,7 @@
 
 package com.android.settings.liquid;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.app.AlertDialog;
@@ -64,6 +65,9 @@ public class InterfaceSettings extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.liquid_interface_settings);
+
+        ActionBar actionBar = getActivity().getActionBar();
+        actionBar.setIcon(R.drawable.ic_liquid_theme_settings);
 
         mActivity = getActivity();
 
