@@ -16,6 +16,7 @@
 
 package com.android.settings.liquid;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -120,6 +121,9 @@ public class QuietHours extends SettingsPreferenceFragment implements
             ContentResolver resolver = mContext.getContentResolver();
 
             PreferenceScreen prefSet = getPreferenceScreen();
+
+            ActionBar actionBar = getActivity().getActionBar();
+            actionBar.setIcon(R.drawable.ic_liquid_theme_settings);
 
             mPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
 
