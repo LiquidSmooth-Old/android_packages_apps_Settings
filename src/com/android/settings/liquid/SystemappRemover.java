@@ -32,6 +32,7 @@ import java.util.Collections;
 import java.util.ListIterator;
 import java.util.Scanner;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.app.Fragment;
@@ -67,6 +68,8 @@ public class SystemappRemover extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
          View view = inflater.inflate(R.layout.slim_sizer, container, false);
+         ActionBar actionBar = getActivity().getActionBar();
+         actionBar.setIcon(R.drawable.ic_liquid_theme_settings);
          return view;
      }
 
