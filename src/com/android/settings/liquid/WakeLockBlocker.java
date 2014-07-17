@@ -16,6 +16,7 @@
 
 package com.android.settings.liquid;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.PowerManager;
@@ -116,6 +117,9 @@ public class WakeLockBlocker extends SettingsPreferenceFragment {
         mWakeLockState = new HashMap<String, Boolean>();
         updateSeenWakeLocksList();
         updateBlockedWakeLocksList();
+
+        ActionBar actionBar = getActivity().getActionBar();
+        actionBar.setIcon(R.drawable.ic_liquid_theme_settings);
 
         mBlockerEnabled = (Switch) getActivity().findViewById(
                 R.id.wakelock_blocker_switch);
