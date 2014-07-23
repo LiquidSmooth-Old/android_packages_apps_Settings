@@ -64,6 +64,7 @@
     <string name="kernel_tweaker_title">Performance</string>
     <string name="statusbar_settings_title">Status bar</string>
     <string name="notification_settings_title">Notifications</string>
+    <string name="viper_settings_title">Audio engine</string>
 
     <!-- Advanced settings -->
     <string name="active_display_title">Active display</string>
