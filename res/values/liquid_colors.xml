@@ -25,8 +25,4 @@
     <color name="linear_color_bar_gray_color">#ff555555</color>
     <color name="linear_color_bar_white_color">#ffffffff</color>
 
-    <!-- Screen color settings -->
-    <color name="screencolor_background">#50000000</color>
-    <drawable name="transparent_background">#00000000</drawable>
-
 </resources>

@@ -2417,13 +2417,6 @@
         <item >Save Profile</item>
     </string-array>
 
-    <!-- Screen color settings -->
-    <string-array name="screen_color_setting">
-        <item>Standard</item>
-        <item>Vivid</item>
-        <item>Custom</item>
-    </string-array>
-
     <!-- NavBar IME Cursor Longpress -->
     <string-array name="ime_cursor_longpress_action_entries">
         <item>@string/ime_navigation_up_down</item>

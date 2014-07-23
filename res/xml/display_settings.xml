@@ -75,17 +75,6 @@
                 android:key="display_rotation"
                 android:fragment="com.android.settings.liquid.DisplayRotation"
                 android:title="@string/display_rotation_title" />
-				
-        <PreferenceScreen
-            android:persistent="false"
-            android:key="screencolor_settings"
-            android:title="@string/display_color_title"
-            android:summary="@string/display_color_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.settings"
-                android:targetClass="com.android.settings.ScreenColorSettings" />
-        </PreferenceScreen>
 
         <PreferenceScreen
                 android:key="screen_recorder"
