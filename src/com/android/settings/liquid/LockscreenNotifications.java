@@ -54,7 +54,7 @@ public class LockscreenNotifications extends SettingsPreferenceFragment
     private static final String KEY_NOTIFICATIONS_HEIGHT = "notifications_height";
     private static final String KEY_PRIVACY_MODE = "privacy_mode";
     private static final String KEY_OFFSET_TOP = "offset_top";
-    private static final String KEY_CATEGORY_GENERAL = "category_general";
+    private static final String KEY_CATEGORY_GENERAL = "general_category";
     private static final String KEY_EXCLUDED_APPS = "excluded_apps";
     private static final String KEY_NOTIFICATION_COLOR = "notification_color";
     private static final String KEY_DYNAMIC_WIDTH = "dynamic_width";
@@ -87,20 +87,17 @@ public class LockscreenNotifications extends SettingsPreferenceFragment
         mLockscreenNotifications.setChecked(Settings.System.getInt(cr,
                     Settings.System.LOCKSCREEN_NOTIFICATIONS, 1) == 1);
 
-        boolean hasProximitySensor = getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_PROXIMITY);
+        mPocketMode = (CheckBoxPreference) prefs.findPreference(KEY_POCKET_MODE);
+        mPocketMode.setChecked(Settings.System.getInt(cr,
+                    Settings.System.LOCKSCREEN_NOTIFICATIONS_POCKET_MODE, 0) == 1);
+        mPocketMode.setEnabled(mLockscreenNotifications.isChecked());
+        disablePref();
 
-        if (hasProximitySensor) {
-		    mPocketMode = (CheckBoxPreference) prefs.findPreference(KEY_POCKET_MODE);
-		    mPocketMode.setChecked(Settings.System.getInt(cr,
-		                Settings.System.LOCKSCREEN_NOTIFICATIONS_POCKET_MODE, 0) == 1);
-		    mPocketMode.setEnabled(mLockscreenNotifications.isChecked());
-		    disablePref();
+        mShowAlways = (CheckBoxPreference) prefs.findPreference(KEY_SHOW_ALWAYS);
+        mShowAlways.setChecked(Settings.System.getInt(cr,
+                    Settings.System.LOCKSCREEN_NOTIFICATIONS_SHOW_ALWAYS, 0) == 1);
+        mShowAlways.setEnabled(mPocketMode.isChecked() && mPocketMode.isEnabled());
 
-		    mShowAlways = (CheckBoxPreference) prefs.findPreference(KEY_SHOW_ALWAYS);
-		    mShowAlways.setChecked(Settings.System.getInt(cr,
-		                Settings.System.LOCKSCREEN_NOTIFICATIONS_SHOW_ALWAYS, 0) == 1);
-		    mShowAlways.setEnabled(mPocketMode.isChecked() && mPocketMode.isEnabled());
-        }
         mWakeOnNotification = (CheckBoxPreference) prefs.findPreference(KEY_WAKE_ON_NOTIFICATION);
         mWakeOnNotification.setChecked(Settings.System.getInt(cr,
                     Settings.System.LOCKSCREEN_NOTIFICATIONS_WAKE_ON_NOTIFICATION, 0) == 1);
@@ -176,6 +173,13 @@ public class LockscreenNotifications extends SettingsPreferenceFragment
         mDynamicWidth.setChecked(Settings.System.getInt(cr,
                     Settings.System.LOCKSCREEN_NOTIFICATIONS_DYNAMIC_WIDTH, 0) == 1);
         mDynamicWidth.setEnabled(mLockscreenNotifications.isChecked());
+
+        boolean hasProximitySensor = getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_PROXIMITY);
+        if (!hasProximitySensor) {
+            PreferenceCategory general = (PreferenceCategory) prefs.findPreference(KEY_CATEGORY_GENERAL);
+            general.removePreference(mPocketMode);
+            general.removePreference(mShowAlways);
+        }
     }
 
     @Override
