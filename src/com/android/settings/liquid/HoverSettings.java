@@ -67,10 +67,6 @@ public class HoverSettings extends SettingsPreferenceFragment implements
         super.onPause();
     }
 
-    public void UpdateSettings() {
-        //
-    }
-
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         return true;
