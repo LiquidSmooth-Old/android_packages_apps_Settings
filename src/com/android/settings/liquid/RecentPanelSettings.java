@@ -60,6 +60,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     private static final String RECENT_PANEL_SCALE = "recent_panel_scale";
     private static final String RECENT_PANEL_EXPANDED_MODE = "recent_panel_expanded_mode";
     private static final String RECENT_PANEL_SHOW_TOPMOST = "recent_panel_show_topmost";
+    private static final String RECENT_PANEL_BG_COLOR =	"recent_panel_bg_color";
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int MENU_HELP = MENU_RESET + 1; 
@@ -79,6 +80,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     private ListPreference mRecentPanelScale;
     private ListPreference mRecentPanelExpandedMode;
     private CheckBoxPreference mRecentsShowTopmost;
+    private ColorPickerPreference mRecentPanelBgColor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -265,6 +267,14 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
                     Settings.System.RECENT_PANEL_SHOW_TOPMOST,
                     ((Boolean) newValue) ? 1 : 0);
             return true;
+        } else if (preference == mRecentPanelBgColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.RECENT_PANEL_BG_COLOR,intHex);
+            return true;
         }
         return false;
     }
@@ -289,6 +299,11 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     }
 
     private void updateRecentsOptions() {
+	    // Recent panel background color 	410
+        int intColor;
+        String hexColor;
+        mRecentPanelBgColor = (ColorPickerPreference) findPreference(RECENT_PANEL_BG_COLOR);
+        mRecentPanelBgColor.setOnPreferenceChangeListener(this);
         int ramBarMode = Settings.System.getInt(getActivity().getContentResolver(),
                Settings.System.RECENTS_RAM_BAR_MODE, 0);
         boolean recentsStyle = Settings.System.getBoolean(getActivity().getContentResolver(),
