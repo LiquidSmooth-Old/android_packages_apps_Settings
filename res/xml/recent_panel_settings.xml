@@ -57,6 +57,13 @@
         android:persistent="false"
         android:dependency="custom_recent_mode" />
 
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="recent_panel_bg_color"
+        android:title="@string/recent_panel_bg_color_title"
+        android:defaultValue="@android:color/trds_background"
+        alphaSlider="true"
+        android:dependency="custom_recent_mode" />
+
     <CheckBoxPreference
         android:key="recent_menu_clear_all"
         android:title="@string/show_recent_clear_all_button_title"
