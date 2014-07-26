@@ -27,6 +27,13 @@
         android:defaultValue="false" />
 
     <CheckBoxPreference
+        android:key="heads_up_floating_window"
+        android:title="@string/heads_up_floating_window_title"
+        android:summary="@string/heads_up_floating_window_summary"
+        android:persistent="false"
+        android:defaultValue="false" />
+
+    <CheckBoxPreference
         android:key="heads_up_show_update"
         android:title="@string/heads_up_show_updates_title"
         android:summary="@string/heads_up_show_updates_summary"
