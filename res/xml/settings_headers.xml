@@ -80,11 +80,11 @@
     <header android:id="@+id/general_section"
         android:title="@string/general_category_title" />
 
-    <!-- Viper4Android -->
+    <!-- Equalizer -->
     <header
-        android:id="@+id/viper_audio"
-        android:title="@string/viper_settings_title"
-        android:icon="@drawable/ic_settings_viper" >
+        android:id="@+id/equalizer_settings"
+        android:title="@string/equalizer_settings_title"
+        android:icon="@drawable/ic_liquid_equalizer" >
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"

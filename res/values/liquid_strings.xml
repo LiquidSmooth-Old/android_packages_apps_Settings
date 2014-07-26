@@ -58,13 +58,13 @@
     <string name="general_category_title">General</string>
 
     <!-- General settings -->
+    <string name="equalizer_settings_title">Equalizer</string>
     <string name="interface_settings_title">Interface</string>
     <string name="lockscreen_settings_title">Lock screen</string>
     <string name="navigation_settings_title">Navigation</string>
     <string name="kernel_tweaker_title">Performance</string>
     <string name="statusbar_settings_title">Status bar</string>
     <string name="notification_settings_title">Notifications</string>
-    <string name="viper_settings_title">Audio engine</string>
 
     <!-- Advanced settings -->
     <string name="active_display_title">Active display</string>
