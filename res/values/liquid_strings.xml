@@ -2283,6 +2283,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="flip_qs_tiles_title">Flip tiles</string>
     <string name="flip_qs_tiles_summary">Flips the tiles on touch</string>
 
+    <!-- Quicksettings floating window -->
+    <string name="title_floating_window">Floating window</string>
+    <string name="summary_floating_window">Tile opens in floating window</string>
+
     <!-- Power Menu User Switcher -->
     <string name="power_menu_user_title">Power menu user switcher</string>
     <string name="power_menu_user_summary">Show a list of all users in power menu</string>

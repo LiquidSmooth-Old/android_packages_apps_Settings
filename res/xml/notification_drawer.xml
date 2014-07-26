@@ -34,9 +34,9 @@
             android:summary="@string/summary_quicksettings_tiles_style" />
 
         <com.android.settings.liquid.SystemCheckBoxPreference
-            android:key="quick_settings_tiles_vibrate"
-            android:title="@string/haptic_qs_tiles_title"
-            android:summary="@string/haptic_qs_tiles_summary"
+            android:key="quick_settings_floating_window"
+            android:title="@string/floating_window_title"
+            android:summary="@string/floating_window_summary"
             android:defaultValue="false" />
 			
         <com.android.settings.liquid.SystemCheckBoxPreference
@@ -44,6 +44,12 @@
             android:title="@string/flip_qs_tiles_title"
             android:summary="@string/flip_qs_tiles_summary"
             android:defaultValue="true" />
+
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="quick_settings_tiles_vibrate"
+            android:title="@string/haptic_qs_tiles_title"
+            android:summary="@string/haptic_qs_tiles_summary"
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 	
