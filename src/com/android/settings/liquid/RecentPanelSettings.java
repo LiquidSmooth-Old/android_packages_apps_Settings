@@ -18,7 +18,7 @@ package com.android.settings.liquid;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.DialogInterface; 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -63,7 +63,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     private static final String RECENT_PANEL_BG_COLOR =	"recent_panel_bg_color";
 
     private static final int MENU_RESET = Menu.FIRST;
-    private static final int MENU_HELP = MENU_RESET + 1; 
+    private static final int MENU_HELP = MENU_RESET + 1;
 
     static final int DEFAULT_MEM_COLOR = 0xff8d8d8d;
     static final int DEFAULT_CACHE_COLOR = 0xff00aa00;
@@ -104,7 +104,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
             Settings.System.SHOW_CLEAR_RECENTS_BUTTON, 1) == 1);
         mRecentClearAll.setOnPreferenceChangeListener(this);
         mRecentClearAllPosition = (ListPreference) prefSet.findPreference(RECENT_MENU_CLEAR_ALL_LOCATION);
-        String recentClearAllPosition = Settings.System.getString(getActivity().getContentResolver(), 
+        String recentClearAllPosition = Settings.System.getString(getActivity().getContentResolver(),
             Settings.System.CLEAR_RECENTS_BUTTON_LOCATION);
         if (recentClearAllPosition != null) {
              mRecentClearAllPosition.setValue(recentClearAllPosition);
@@ -176,7 +176,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
             case MENU_RESET:
                 resetToDefault();
                 return true;
-            default: 
+            default:
                 return super.onContextItemSelected(item);
         }
     }
@@ -192,7 +192,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         });
         alertDialog.setNegativeButton(R.string.cancel, null);
         alertDialog.create().show();
-    } 
+    }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mRecentsCustom) { // Enable||disbale Slim Recent
@@ -239,12 +239,12 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
             return true;
         } else if (preference == mRecentClearAll) {
             boolean value = (Boolean) newValue;
-            Settings.System.putInt(getActivity().getContentResolver(), 
+            Settings.System.putInt(getActivity().getContentResolver(),
                  Settings.System.SHOW_CLEAR_RECENTS_BUTTON, value ? 1 : 0);
             return true;
         } else if (preference == mRecentClearAllPosition) {
             String value = (String) newValue;
-            Settings.System.putString(getActivity().getContentResolver(), 
+            Settings.System.putString(getActivity().getContentResolver(),
                  Settings.System.CLEAR_RECENTS_BUTTON_LOCATION, value);
             return true;
         } else if (preference == mRecentPanelScale) {
@@ -299,7 +299,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     }
 
     private void updateRecentsOptions() {
-	    // Recent panel background color 	410
+        // Recent panel background color
         int intColor;
         String hexColor;
         mRecentPanelBgColor = (ColorPickerPreference) findPreference(RECENT_PANEL_BG_COLOR);
