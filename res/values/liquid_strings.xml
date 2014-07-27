@@ -2521,6 +2521,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="xposed_summary">While Xposed is proven to be a very useful tool, some modules may cause issues/bugs in custom ROMs. Please uninstall all modules before reporting any bugs that you may come across while using Xposed.</string>
     <string name="xposed_mod_title">Module Repository</string>
     <string name="xposed_mod_summary">Browse and install modules to be used with Xposed Framework</string>
+	<string name="playstore_title">Play Store v4.9.13</string>	1766
+    <string name="playstore_summary">Updated playstore with material design</string>
+    <string name="misc_category">Miscellaneous</string>
+    
 	
     <!-- Partition Info -->
     <string name="partition_info_title">Partition info</string>

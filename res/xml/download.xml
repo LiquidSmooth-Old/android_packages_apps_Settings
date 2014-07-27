@@ -42,10 +42,13 @@
         android:title="@string/lsgapps_title"
         android:summary="@string/lsgapps_summary" />
 
+
     <Preference
         android:key="pa_gapps"
+        android:layout="@layout/preference_playstore"
         android:title="@string/pagapps_title"
         android:summary="@string/pagapps_summary" />
+
 
     </PreferenceCategory>
 
@@ -61,12 +64,26 @@
 
     <Preference
         android:key="xposed"
+        android:layout="@layout/preference_xposed"
         android:title="@string/xposed_title" />
 
     <Preference
         android:key="xposed_mod"
+        android:layout="@layout/preference_xposed"
         android:title="@string/xposed_mod_title"
         android:summary="@string/xposed_mod_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="misc_category"
+        android:title="@string/misc_category">
+
+    <Preference
+        android:key="playstore"
+        android:layout="@layout/preference_playstore"
+        android:title="@string/playstore_title"
+        android:summary="@string/playstore_summary" />
 
     </PreferenceCategory>
 

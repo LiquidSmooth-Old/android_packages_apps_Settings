@@ -44,6 +44,7 @@ public class Download extends SettingsPreferenceFragment implements OnPreference
     Preference mLSOfficial;
     Preference mLSNightly;
     Preference mPAGapps;
+    Preference mPlayStore;
     Preference mXposed;
     Preference mXposedMod;
 
@@ -59,6 +60,7 @@ public class Download extends SettingsPreferenceFragment implements OnPreference
         mLSOfficial = findPreference("ls_official");
         mLSNightly = findPreference("ls_nightly");
         mPAGapps = findPreference("pa_gapps");
+        mPlayStore = findPreference("playstore");
         mXposed = findPreference("xposed");
         mXposedMod = findPreference("xposed_mod");
     }
@@ -77,6 +79,11 @@ public class Download extends SettingsPreferenceFragment implements OnPreference
             return true;
         } else if (preference == mPAGapps) {
             Uri uri = Uri.parse("http://goo.gl/CPwXdX");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+            return true;
+        } else if (preference == mPlayStore) {
+            Uri uri = Uri.parse("http://goo.gl/tWWgyJ");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
             return true;
