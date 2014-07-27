@@ -2545,4 +2545,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ime_navigation_up_down">up / down</string>
     <string name="ime_navigation_home_end">home / end</string>
 
+    <!-- Device specific settings -->
+    <string name="screen_off_gesture_settings_title">Screen off gestures</string>
+
 </resources>

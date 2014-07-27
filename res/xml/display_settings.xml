@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2010 The Android Open Source Project
+<!-- Copyright (C) 2014 SlimRoms Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -91,6 +91,16 @@
                 android:entryValues="@array/screen_timeout_values" />
 
         </PreferenceCategory>
+
+        <!-- DeviceHandler device specific screen off gesture settings -->
+        <Preference
+            android:key="screen_off_gesture_settings"
+            android:title="@string/screen_off_gesture_settings_title">
+            <intent
+                android:action="com.slim.action.LAUNCH_SCREEN_OFF_GESTURE_SETTINGS"
+                android:targetPackage="com.slim.device"
+                android:targetClass="com.slim.device.settings.ScreenOffGestureSettings" />
+        </Preference>
 
     <PreferenceCategory
         android:key="category_animation_options"
