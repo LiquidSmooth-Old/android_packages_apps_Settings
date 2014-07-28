@@ -2440,6 +2440,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="heads_up_expanded_summary">Show notification always expanded</string>
     <string name="heads_up_show_updates_title">Show updates</string>
     <string name="heads_up_show_updates_summary">Show pending notifications updates</string>
+    <string name="heads_up_gravity_title">Show at the bottom</string>
+    <string name="heads_up_gravity_summary">Notification on bottom of screen</string>
     <string name="heads_up_snooze_title">Snooze timer</string>
     <string name="heads_up_snooze_summary"><xliff:g id="number">%d</xliff:g> minutes</string>
     <string name="heads_up_snooze_disabled_summary">Snooze timer is disabled</string>
@@ -2457,7 +2459,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="heads_up_time_out_10sec">10 seconds</string>
     <string name="heads_up_time_out_never">Never</string>
     <string name="heads_up_switch_label">Enable heads up notifications</string>
-	
+
     <!-- SlimSizer  -->
     <string name="listsystem">list</string>
     <string name="sizer_title">System App Remover</string>
