@@ -2125,6 +2125,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hover_summary">Enables and customize hover notifications</string>
     <string name="hover_hide_button_title">Hide button</string>
     <string name="hover_hide_button_summary">Hide the hover button in status bar</string>
+    <string name="hover_disable_lockscreen_title">Disable lock screen</string>
+    <string name="hover_disable_lockscreen_summary">Hide notifications on lock screen</string>
     <string name="hover_active_title">Activate Hover</string>
     <string name="hover_active_summary">Use hover and hide status bar button</string>
     <string name="hover_exclude_low_priority_title">Exclude low priority</string>
