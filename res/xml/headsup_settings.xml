@@ -27,6 +27,13 @@
         android:defaultValue="false" />
 
     <CheckBoxPreference
+        android:key="heads_up_disable_lockscreen"
+        android:title="@string/heads_up_disable_lockscreen_title"
+        android:summary="@string/heads_up_disable_lockscreen_summary"
+        android:persistent="false"
+        android:defaultValue="false" />
+
+    <CheckBoxPreference
         android:key="heads_up_floating_window"
         android:title="@string/heads_up_floating_window_title"
         android:summary="@string/heads_up_floating_window_summary"

@@ -57,6 +57,8 @@ public class HeadsUp extends SettingsPreferenceFragment implements
             "heads_up_show_update";
     private static final String PREF_HEADS_UP_GRAVITY =
             "heads_up_gravity";
+    private static final String PREF_HEADS_UP_DISABLE_LOCKSCREEN =
+            "heads_up_disable_lockscreen";
 
     ListPreference mHeadsUpSnoozeTime;
     ListPreference mHeadsUpTimeOut;
@@ -64,6 +66,7 @@ public class HeadsUp extends SettingsPreferenceFragment implements
     CheckBoxPreference mHeadsUpFloatingWindow;
     CheckBoxPreference mHeadsUpShowUpdates;
     CheckBoxPreference mHeadsUpGravity;
+    CheckBoxPreference mHeadsUpDisableLockScreen;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -94,6 +97,11 @@ public class HeadsUp extends SettingsPreferenceFragment implements
         mHeadsUpGravity.setChecked(Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.HEADS_UP_GRAVITY_BOTTOM, 0, UserHandle.USER_CURRENT) == 1);
         mHeadsUpGravity.setOnPreferenceChangeListener(this);
+
+        mHeadsUpDisableLockScreen = (CheckBoxPreference) findPreference(PREF_HEADS_UP_DISABLE_LOCKSCREEN);
+        mHeadsUpDisableLockScreen.setChecked(Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.HEADS_UP_DISABLE_LOCKSCREEN, 0, UserHandle.USER_CURRENT) == 1);
+        mHeadsUpDisableLockScreen.setOnPreferenceChangeListener(this);
 
         mHeadsUpSnoozeTime = (ListPreference) findPreference(PREF_HEADS_UP_SNOOZE_TIME);
         mHeadsUpSnoozeTime.setOnPreferenceChangeListener(this);
@@ -167,6 +175,11 @@ public class HeadsUp extends SettingsPreferenceFragment implements
         } else if (preference == mHeadsUpGravity) {
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.HEADS_UP_GRAVITY_BOTTOM,
+                    (Boolean) newValue ? 1 : 0, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mHeadsUpDisableLockScreen) {
+            Settings.System.putIntForUser(getContentResolver(),
+                    Settings.System.HEADS_UP_DISABLE_LOCKSCREEN,
                     (Boolean) newValue ? 1 : 0, UserHandle.USER_CURRENT);
             return true;
         }
