@@ -107,12 +107,6 @@
             android:defaultValue="true" />
 
         <CheckBoxPreference
-            android:key="halo_pause"
-            android:title="@string/halo_pause_title"
-            android:dependency="halo_enabled"
-            android:summary="@string/halo_pause_summary" />
-
-        <CheckBoxPreference
             android:key="halo_unlock_ping"
             android:title="@string/halo_unlock_ping_title"
             android:summary="@string/halo_unlock_ping_summary"

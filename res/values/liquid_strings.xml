@@ -1935,8 +1935,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="halo_state_summary">Black or white listing notifications</string>
     <string name="halo_state_black">Blacklist</string>
     <string name="halo_state_white">Whitelist</string>
-    <string name="halo_pause_title">Pause active app</string>
-    <string name="halo_pause_summary">Open while the underlying app pauses</string>
     <string name="halo_ninja_title">Ninja mode</string>
     <string name="halo_ninja_summary">Will vanish completely when empty</string>
     <string name="halo_notification_msgbox_title">Enable message pop-up</string>
