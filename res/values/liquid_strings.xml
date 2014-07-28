@@ -2438,6 +2438,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="heads_up_summary">Configure or view current headsup settings</string>
     <string name="heads_up_expanded_title">Always expanded</string>
     <string name="heads_up_expanded_summary">Show notification always expanded</string>
+    <string name="heads_up_disable_lockscreen_title">Disable lock screen</string>
+    <string name="heads_up_disable_lockscreen_summary">Hide notifications on lock screen</string>
     <string name="heads_up_show_updates_title">Show updates</string>
     <string name="heads_up_show_updates_summary">Show pending notifications updates</string>
     <string name="heads_up_gravity_title">Show at the bottom</string>
