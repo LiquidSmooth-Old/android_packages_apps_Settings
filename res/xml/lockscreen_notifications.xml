@@ -47,6 +47,12 @@
             android:summary="@string/wake_on_notification_summary" />
 
         <CheckBoxPreference
+            android:key="disable_heads_up"
+            android:title="@string/disable_heads_up"
+            android:dependency="wake_on_notification"
+            android:summary="@string/disable_heads_up_summary" />
+
+        <CheckBoxPreference
             android:key="hide_low_priority"
             android:title="@string/hide_low_priority"
             android:dependency="lockscreen_notifications"
