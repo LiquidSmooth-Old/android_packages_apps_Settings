@@ -479,6 +479,8 @@ public class LockscreenTargets extends Fragment implements
 
     @Override
     public void onTrigger(View v, final int target) {
+        mWaveView.reset(false);
+
         if (target == mTargetOffset) {
             mWaveView.reset(true);
             return;
