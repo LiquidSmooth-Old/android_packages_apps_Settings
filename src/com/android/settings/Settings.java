@@ -387,12 +387,6 @@ public class Settings extends PreferenceActivity
             mSearchBar.clearFocus();
         }
 
-        try {
-            unregisterReceiver(mBatteryInfoReceiver);
-        } catch (IllegalArgumentException e) {
-            // Ignore (receiver didn't have time to register)
-        }
-
         if (mSearchItem != null) {
             mSearchItem.collapseActionView();
         }
