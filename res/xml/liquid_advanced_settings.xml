@@ -41,12 +41,6 @@
     </PreferenceScreen>
 
     <PreferenceScreen
-        android:key="prop_modder"
-        android:title="@string/prop_modder_title"
-        android:fragment="com.android.settings.liquid.PropModder"
-        android:summary="@string/advanced_propmodder_summary" />
-
-    <PreferenceScreen
         android:title="@string/superuser_settings_title"
         android:fragment="com.koushikdutta.superuser.PolicyNativeFragment"
         android:summary="@string/advanced_superuser_summary" />
