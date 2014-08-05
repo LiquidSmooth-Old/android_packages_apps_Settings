@@ -203,6 +203,19 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
         }
 
+        mTapToWake = (CheckBoxPreference) findPreference(KEY_TAP_TO_WAKE);
+        if (!isTapToWakeSupported()) {
+            advancedPrefs.removePreference(mTapToWake);
+            mTapToWake = null;
+        }
+
+        boolean proximityCheckOnWait = res.getBoolean(
+                com.android.internal.R.bool.config_proximityCheckOnWake);
+        if (!proximityCheckOnWait) {
+            advancedPrefs.removePreference(findPreference(KEY_PROXIMITY_WAKE));
+            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
+        }
+
         PreferenceCategory mCategory = (PreferenceCategory) findPreference("category_screen_options");
 
         if (!DisplayColor.isSupported()) {
