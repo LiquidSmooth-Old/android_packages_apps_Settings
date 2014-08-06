@@ -2361,6 +2361,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="heads_up_switch_label">Enable heads up notifications</string>
     <string name="heads_up_floating_window_title">Launch floating window</string>
     <string name="heads_up_floating_window_summary">Open heads up in floating window</string>
+    <string name="heads_up_exclude_from_lock_screen_title">Disable on lock screen</string>
+    <string name="heads_up_exclude_from_lock_screen_summary">Hide notifications on lock screen</string>
 
     <!-- SlimSizer  -->
     <string name="listsystem">list</string>
