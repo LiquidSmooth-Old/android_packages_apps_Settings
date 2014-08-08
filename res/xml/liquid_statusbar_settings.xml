@@ -91,6 +91,22 @@
             android:entryValues="@array/show_network_traffic_frequency_values"
             android:persistent="false" />
 
+        <CheckBoxPreference
+            android:key="network_traffic_autohide"
+            android:title="@string/network_traffic_autohide"
+            android:summary="@string/network_traffic_autohide_summary"
+            android:defaultValue="false" />
+
+        <com.android.settings.liquid.SeekBarPreference
+            android:key="network_traffic_autohide_threshold"
+            android:title="@string/network_traffic_autohide_threshold"
+            android:max="100"
+            settings:min="0"
+            settings:unitsLeft=""
+            settings:unitsRight="kB/s"
+            android:dependency="network_traffic_autohide"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
