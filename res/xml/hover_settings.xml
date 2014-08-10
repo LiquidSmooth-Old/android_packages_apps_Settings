@@ -81,6 +81,7 @@
         android:title="@string/hover_micro_fadeout_title"
         android:persistent="false"
         android:entries="@array/hover_micro_fadeout_entries"
+        android:dependency="hover_active"
         android:entryValues="@array/hover_micro_fadeout_values" />
 
 </PreferenceScreen>
