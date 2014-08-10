@@ -614,6 +614,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="notification_hide_labels_title">Hide notification labels</string>
     <string name="notification_hide_labels_disable">Show all labels</string>
     <string name="notification_hide_labels_carrier">Hide Carrier label</string>
+    <string name="show_status_bar_carrier_title">MIUI-like carrier label</string>
+    <string name="show_status_bar_carrier_summary">Shows carrier label in status bar</string>
+    <string name="status_bar_carrier_color">MIUI-like carrier label Color</string>
     <string name="notification_hide_labels_wifi">Hide WiFi label</string>
     <string name="notification_hide_labels_all">Hide all labels</string>
     <string name="notification_hide_labels_text">in the notification panel</string>
