@@ -70,10 +70,10 @@
     <uses-permission android:name="android.permission.MANAGE_DEVICE_ADMINS" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.SYSTEM_NOTIFICATION_LISTENER" />
     <uses-permission android:name="android.permission.CHANGE_HEADS_UP_STATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
 
     <permission
         android:name="android.permission.REQUEST_SUPERUSER"

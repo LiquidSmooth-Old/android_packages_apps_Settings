@@ -30,12 +30,8 @@
     <integer name="maximum_user_dictionary_word_length" translatable="false">48</integer>
 
     <!-- Volume Rocker Wake Support. Some devices do not support (PMU) this.
-         Setting to false will disable Volume Rocker Wake support -->
+        Setting to false will disable Volume Rocker Wake support -->
     <bool name="config_show_volumeRockerWake">true</bool>
-
-    <!-- Custom density -->
-    <integer name="lcd_density_max" translatable="false">160</integer>
-    <integer name="lcd_density_min" translatable="false">480</integer>
 
     <!-- Whether or not the app is meant to be run as a system app,
          bypassing the need of busybox/su -->
@@ -76,4 +72,5 @@
 
     <!-- This is used to define screen color's contrast progress bar maximum value-->
     <integer name="maximum_contrast_value" translatable="false">360</integer>
+
 </resources>
