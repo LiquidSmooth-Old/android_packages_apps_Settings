@@ -112,6 +112,11 @@
                     android:summary="@string/doze_timeout_summary"
                     android:dependency="doze" />
 
+        <!-- Smart cover -->
+        <PreferenceScreen
+                android:key="smart_cover"
+                android:title="@string/smart_cover_title"
+                android:fragment="com.android.settings.temasek.SmartCoverSettings" />
         </PreferenceCategory>
 
         <PreferenceCategory
