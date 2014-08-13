@@ -33,6 +33,11 @@
             android:fragment="com.android.settings.liquid.StatusBarClockStyle"
             android:title="@string/status_bar_clock" />
 
+        <PreferenceScreen
+            android:key="network_traffic_pref"
+            android:fragment="com.android.settings.liquid.NetworkTraffic"
+            android:title="@string/network_traffic_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -69,43 +74,6 @@
             android:title="@string/status_bar_signal_text_title"
             android:entries="@array/entries_status_bar_signal"
             android:entryValues="@array/values_status_bar_signal" />
-
-        <ListPreference
-            android:key="network_traffic_state"
-            android:title="@string/show_network_traffic_state"
-            android:entries="@array/show_network_traffic_state_entries"
-            android:entryValues="@array/show_network_traffic_state_values"
-            android:persistent="false" />
-
-        <ListPreference
-            android:key="network_traffic_unit"
-            android:title="@string/show_network_traffic_unit"
-            android:entries="@array/show_network_traffic_unit_entries"
-            android:entryValues="@array/show_network_traffic_unit_values"
-            android:persistent="false" />
-
-        <ListPreference
-            android:key="network_traffic_period"
-            android:title="@string/show_network_traffic_frequency"
-            android:entries="@array/show_network_traffic_frequency_entries"
-            android:entryValues="@array/show_network_traffic_frequency_values"
-            android:persistent="false" />
-
-        <CheckBoxPreference
-            android:key="network_traffic_autohide"
-            android:title="@string/network_traffic_autohide"
-            android:summary="@string/network_traffic_autohide_summary"
-            android:defaultValue="false" />
-
-        <com.android.settings.liquid.SeekBarPreference
-            android:key="network_traffic_autohide_threshold"
-            android:title="@string/network_traffic_autohide_threshold"
-            android:max="100"
-            settings:min="0"
-            settings:unitsLeft=""
-            settings:unitsRight="kB/s"
-            android:dependency="network_traffic_autohide"
-            android:persistent="false" />
 
     </PreferenceCategory>
 
