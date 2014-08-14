@@ -38,8 +38,9 @@ import android.view.WindowManagerGlobal;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.liquid.SeekBarPreference;
-
 import com.android.internal.util.liquid.DeviceUtils;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class StatusBarSettings extends SettingsPreferenceFragment
     implements OnPreferenceChangeListener {
@@ -56,6 +57,10 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String STATUS_BAR_NOTIFICATION_COUNT = "status_bar_notification_count";
     private static final String STATUS_BAR_SIGNAL = "status_bar_signal";
     private static final String KEY_EXPANDED_DESKTOP = "expanded_desktop";
+    private static final String STATUS_BAR_CARRIER = "status_bar_carrier";
+    private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
+
+    static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
     private PreferenceScreen mClockStyle;
     private CheckBoxPreference mStatusBarBrightnessControl;
@@ -67,6 +72,8 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private CheckBoxPreference mStatusBarNotifCount;
     private ListPreference mStatusBarSignal;
     private ListPreference mExpandedDesktopPref;
+    private CheckBoxPreference mStatusBarCarrier;
+    private ColorPickerPreference mCarrierColorPicker;
 
     private int mNetTrafficVal;
     private int MASK_UP;
@@ -84,6 +91,9 @@ public class StatusBarSettings extends SettingsPreferenceFragment
 
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+
+        int intColor;
+        String hexColor;
 
         // Expanded desktop
         mExpandedDesktopPref = (ListPreference) findPreference(KEY_EXPANDED_DESKTOP);
@@ -180,12 +190,21 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         mStatusBarSignal.setValue(String.valueOf(signalStyle));
         mStatusBarSignal.setSummary(mStatusBarSignal.getEntry());
         mStatusBarSignal.setOnPreferenceChangeListener(this);
+
+        mStatusBarCarrier = (CheckBoxPreference) findPreference(STATUS_BAR_CARRIER);
+        mStatusBarCarrier.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_CARRIER, 0) == 1));
+
+        mCarrierColorPicker = (ColorPickerPreference) findPreference(STATUS_BAR_CARRIER_COLOR);
+        mCarrierColorPicker.setOnPreferenceChangeListener(this);
+        intColor = Settings.System.getInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_CARRIER_COLOR, DEFAULT_STATUS_CARRIER_COLOR);
+        hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mCarrierColorPicker.setSummary(hexColor);
+        mCarrierColorPicker.setNewPreviewColor(intColor);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-
-        ContentResolver resolver = getActivity().getContentResolver();
-
         if (preference == mStatusBarBrightnessControl) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_BRIGHTNESS_CONTROL,
@@ -245,6 +264,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                     Settings.System.STATUS_BAR_SIGNAL_TEXT, signalStyle);
             mStatusBarSignal.setSummary(mStatusBarSignal.getEntries()[index]);
             return true;
+        } else if (preference == mCarrierColorPicker) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.STATUS_BAR_CARRIER_COLOR, intHex);
+            return true;
         }
         return false;
     }
@@ -277,6 +304,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                     Settings.System.STATUS_BAR_NOTIFICATION_COUNT,
                     mStatusBarNotifCount.isChecked() ? 1 : 0);
             return true;
+        } else if (preference == mStatusBarCarrier) {
+           Settings.System.putInt(getContentResolver(),
+                   Settings.System.STATUS_BAR_CARRIER,
+                   mStatusBarCarrier.isChecked() ? 1 : 0);
+           return true;
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
