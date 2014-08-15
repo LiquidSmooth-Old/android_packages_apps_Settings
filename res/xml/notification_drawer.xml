@@ -78,6 +78,12 @@
         android:key="general_category"
         android:title="@string/general_category_title">
 
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="notification_brightness_slider"
+            android:title="@string/notification_brightness_slider_title"
+            android:summary="@string/notification_brightness_slider_summary"
+            android:defaultValue="false" />
+
         <CheckBoxPreference
             android:key="collapse_panel"
             android:title="@string/title_collapse_panel"
