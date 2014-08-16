@@ -60,7 +60,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     private static final String RECENT_PANEL_SCALE = "recent_panel_scale";
     private static final String RECENT_PANEL_EXPANDED_MODE = "recent_panel_expanded_mode";
     private static final String RECENT_PANEL_SHOW_TOPMOST = "recent_panel_show_topmost";
-    private static final String RECENT_PANEL_BG_COLOR =	"recent_panel_bg_color";
+    private static final String RECENT_PANEL_BG_COLOR = "recent_panel_bg_color";
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int MENU_HELP = MENU_RESET + 1;
@@ -81,6 +81,8 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     private ListPreference mRecentPanelExpandedMode;
     private CheckBoxPreference mRecentsShowTopmost;
     private ColorPickerPreference mRecentPanelBgColor;
+
+    private static final int DEFAULT_BACKGROUND_COLOR = 0x00ffffff;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -159,6 +161,19 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         mRecentsShowTopmost.setChecked(enableRecentsShowTopmost);
         mRecentsShowTopmost.setOnPreferenceChangeListener(this);
 
+        // Recent panel background color
+        mRecentPanelBgColor = (ColorPickerPreference) findPreference(RECENT_PANEL_BG_COLOR);
+        mRecentPanelBgColor.setOnPreferenceChangeListener(this);
+        intColor = Settings.System.getInt(getContentResolver(),
+                Settings.System.RECENT_PANEL_BG_COLOR, 0x00ffffff);
+        hexColor = String.format("#%08x", (0x00ffffff & intColor));
+        //if (hexColor.equals("#00ffffff")) {
+        //    mRecentPanelBgColor.setSummary("TRDS default");
+        //} else {
+            mRecentPanelBgColor.setSummary(hexColor);
+        //}
+        mRecentPanelBgColor.setNewPreviewColor(intColor);
+
         updateRecentsOptions();
         setHasOptionsMenu(true);
     }
@@ -175,6 +190,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         switch (item.getItemId()) {
             case MENU_RESET:
                 resetToDefault();
+                resetValues();
                 return true;
             default:
                 return super.onContextItemSelected(item);
@@ -270,13 +286,25 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         } else if (preference == mRecentPanelBgColor) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
+            //if (hex.equals("#00ffffff")) {
+            //    preference.setSummary("TRDS default");
+            //} else {
+                preference.setSummary(hex);
+            //}
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getContentResolver(),
-                    Settings.System.RECENT_PANEL_BG_COLOR,intHex);
+                    Settings.System.RECENT_PANEL_BG_COLOR,
+                    intHex);
             return true;
         }
         return false;
+    }
+
+    private void resetValues() {
+        Settings.System.putInt(getContentResolver(),
+                Settings.System.RECENT_PANEL_BG_COLOR, DEFAULT_BACKGROUND_COLOR);
+        mRecentPanelBgColor.setNewPreviewColor(DEFAULT_BACKGROUND_COLOR);
+        //mRecentPanelBgColor.setSummary("TRDS default");
     }
 
     private void ramBarColorReset() {
