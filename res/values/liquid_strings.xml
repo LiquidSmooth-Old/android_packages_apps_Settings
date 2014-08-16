@@ -1687,7 +1687,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="ram_bar_button_help">Help</string>
     <string name="ram_bar_button_reset">Reset colors</string>
     <string name="ram_bar_reset">Reset</string>
-    <string name="ram_bar_reset_message">Reset RAM bar to default?</string>
+    <string name="ram_bar_reset_message">Reset RAM bar and recent panel colors to default?</string>
 
     <!-- Custom recent styles -->
     <string name="custom_recent_title">Custom recent styles</string>
