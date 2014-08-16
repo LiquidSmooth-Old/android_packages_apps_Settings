@@ -102,6 +102,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private ListPreference mToastAnimation;
     private CheckBoxPreference mDisableIM;
     private PreferenceScreen mScreenColorSettings;
+    private Preference mDisplayColor;
+    private Preference mDisplayGamma;
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -201,16 +203,20 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             }
         }
 
+        PreferenceCategory mCategory = (PreferenceCategory) findPreference("category_screen_options");
+
         if (!DisplayColor.isSupported()) {
-            getPreferenceScreen().removePreference(findPreference(KEY_DISPLAY_COLOR));
+            mDisplayColor = (Preference) findPreference(KEY_DISPLAY_COLOR);
+            mCategory.removePreference(mDisplayColor);
         }
+
         if (!DisplayGamma.isSupported()) {
-            getPreferenceScreen().removePreference(findPreference(KEY_DISPLAY_GAMMA));
+            mDisplayGamma = (Preference) findPreference(KEY_DISPLAY_GAMMA);
+            mCategory.removePreference(mDisplayGamma);
         }
 
         if (!isPostProcessingSupported()) {
             mScreenColorSettings = (PreferenceScreen) findPreference(KEY_SCREEN_COLOR_SETTINGS);
-            PreferenceCategory mCategory = (PreferenceCategory) findPreference("category_screen_options");
             mCategory.removePreference(mScreenColorSettings);
         }
 
