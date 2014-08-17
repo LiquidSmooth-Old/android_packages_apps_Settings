@@ -175,6 +175,12 @@
             android:defaultValue="0" />
 
         <PreferenceScreen
+            android:key="overscroll_effects"
+            android:title="@string/ui_overscroll_title"
+            android:summary="@string/overscroll_weight_summary"
+            android:fragment="com.android.settings.liquid.OverscrollEffects" />
+
+        <PreferenceScreen
             android:key="progressbar_settings"
             android:title="@string/progressbar_title"
             android:summary="@string/progressbar_summary"
