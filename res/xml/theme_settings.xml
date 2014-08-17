@@ -16,6 +16,14 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Total Blackout -->
+    <Preference
+        android:id="@+id/theme_settings"
+        android:fragment="com.android.settings.liquid.themes.ThemeSettings"
+        android:icon="@drawable/ic_settings_theme"
+        android:title="@string/theme_settings_title"
+        android:summary="@string/theme_settings_summary" />
+
     <!-- Theme Packs -->
     <Preference
         android:key="themepacks_settings"
