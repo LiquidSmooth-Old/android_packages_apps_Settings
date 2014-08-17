@@ -20,7 +20,7 @@
     <Preference
         android:id="@+id/theme_settings"
         android:fragment="com.android.settings.liquid.themes.ThemeSettings"
-        android:icon="@drawable/ic_settings_theme"
+        android:icon="@drawable/ic_liquid_theme_settings"
         android:title="@string/theme_settings_title"
         android:summary="@string/theme_settings_summary" />
 
