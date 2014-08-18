@@ -2250,4 +2250,21 @@
         <item>9</item>
     </string-array>
 
+    <!-- Back to Kill delay control -->
+    <string-array name="kill_app_longpress_back_delay_entries" translatable="false">
+        <item>0.5 second</item>
+        <item>1 seconds</item>
+        <item>2 seconds</item>
+        <item>3 seconds</item>
+        <item>4 seconds</item>
+    </string-array>
+
+    <string-array name="kill_app_longpress_back_delay_values" translatable="false">
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+    </string-array>
+
 </resources>

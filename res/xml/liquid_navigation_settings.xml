@@ -87,6 +87,12 @@
         android:key="advanced_category"
         android:title="@string/advanced_category_title">
 
+        <Preference
+            android:key="back_to_kill"
+            android:fragment="com.android.settings.liquid.BackToKill"
+            android:title="@string/kill_app_longpress_back_title"
+            android:summary="@string/kill_app_longpress_back_summary" />
+
         <ListPreference
             android:key="pref_navbar_menu_display"
             android:entries="@array/pref_menu_display_entries"

@@ -2522,4 +2522,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="overscroll_weight_title">Over scrolling weight</string>
     <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
 
+    <!-- Kill app long-press back -->
+    <string name="kill_app_longpress_back">Kill app back button</string>
+    <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back button</string>
+    <string name="kill_app_longpress_back_title">Back to Kill App</string>
+    <string name="kill_app_longpress_back_delay_title">Kill app back button delay</string>
+    <string name="kill_app_longpress_back_delay_summary">delay for Back to Kill</string>
+
 </resources>
