@@ -28,6 +28,7 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -37,6 +38,7 @@ import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.android.internal.util.liquid.AppHelper;
 import com.android.internal.util.liquid.ButtonsConstants;
@@ -69,6 +71,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
     private static final String KEYS_CATEGORY_BINDINGS = "keys_bindings";
     private static final String KEYS_ENABLE_CUSTOM = "enable_hardware_rebind";
+    private static final String KEYS_OVERFLOW_BUTTON = "keys_overflow_button";
     private static final String KEYS_BACK_PRESS = "keys_back_press";
     private static final String KEYS_BACK_LONG_PRESS = "keys_back_long_press";
     private static final String KEYS_BACK_DOUBLE_TAP = "keys_back_double_tap";
@@ -104,6 +107,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private static final int KEY_MASK_CAMERA     = 0x20;
 
     private CheckBoxPreference mEnableCustomBindings;
+    private ListPreference mOverflowButtonMode;
     private Preference mBackPressAction;
     private Preference mBackLongPressAction;
     private Preference mBackDoubleTapAction;
@@ -346,6 +350,12 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         mEnableCustomBindings.setChecked(enableHardwareRebind);
         mEnableCustomBindings.setOnPreferenceChangeListener(this);
 
+        String overflowButtonMode = Integer.toString(Settings.System.getInt(getContentResolver(),
+                Settings.System.UI_OVERFLOW_BUTTON, 0));
+        mOverflowButtonMode.setOnPreferenceChangeListener(this);
+        mOverflowButtonMode.setValue(overflowButtonMode);
+        mOverflowButtonMode.setSummary(mOverflowButtonMode.getEntry());
+
         // Handle warning dialog.
         SharedPreferences preferences =
                 getActivity().getSharedPreferences("hw_key_settings", Activity.MODE_PRIVATE);
@@ -471,6 +481,13 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), Settings.System.HARDWARE_KEY_REBINDING,
                     value ? 1 : 0);
+            return true;
+        } else if (preference == mOverflowButtonMode) {
+            int val = Integer.parseInt((String) newValue);
+            int index = mOverflowButtonMode.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getContentResolver(), Settings.System.UI_OVERFLOW_BUTTON, val);
+            mOverflowButtonMode.setSummary(mOverflowButtonMode.getEntries()[index]);
+            Toast.makeText(getActivity(), R.string.keys_overflow_toast, Toast.LENGTH_LONG).show();
             return true;
         }
         return false;
@@ -627,5 +644,4 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         public void onCancel(DialogInterface dialog) {
         }
     }
-
 }

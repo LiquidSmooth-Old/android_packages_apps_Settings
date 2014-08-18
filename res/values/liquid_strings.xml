@@ -1180,6 +1180,13 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="keys_action_double">Double tap</string>
     <string name="no_home_key">You have no button assigned any more to the \"Home\" action!\n\nThis can make your device unusable!</string>
 
+    <!-- Overflow button -->
+    <string name="keys_overflow_title">Overflow button</string>
+    <string name="keys_overflow_toast">The action overflow button may not be visible or hidden until apps are restarted</string>
+    <string name="overflow_auto_detect">Auto detect</string>
+    <string name="overflow_show">Show</string>
+    <string name="overflow_hide">Hide</string>
+
     <!-- Hardware keys backlight -->
     <string name="button_backlight_title">Backlight</string>
     <string name="button_backlight_enabled">Illuminate buttons</string>
