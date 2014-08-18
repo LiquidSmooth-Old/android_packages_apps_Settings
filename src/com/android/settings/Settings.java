@@ -104,6 +104,7 @@ import com.android.settings.liquid.DisplayRotation;
 import com.android.settings.liquid.quicksettings.QuickSettingsTiles;
 import com.android.settings.liquid.ShakeEvents;
 import com.android.settings.liquid.QuietHours;
+import com.android.settings.liquid.themes.ThemeEnabler;
 import com.android.settings.profiles.AppGroupConfig;
 import com.android.settings.profiles.ProfileConfig;
 import com.android.settings.profiles.ProfileEnabler;
@@ -160,6 +161,8 @@ public class Settings extends PreferenceActivity
     private Header mCurrentHeader;
     private Header mParentHeader;
     private boolean mInLocalHeaderSwitch;
+
+    private int mCurrentState = 0;
 
     private boolean mAttached;
 
@@ -965,6 +968,7 @@ public class Settings extends PreferenceActivity
         private final WifiEnabler mWifiEnabler;
         private final BluetoothEnabler mBluetoothEnabler;
         private final MobileDataEnabler mMobileDataEnabler;
+        public static ThemeEnabler mThemeEnabler;
         private final ProfileEnabler mProfileEnabler;
         private final LocationEnabler mLocationEnabler;
         private AuthenticatorHelper mAuthHelper;
@@ -982,10 +986,12 @@ public class Settings extends PreferenceActivity
         private LayoutInflater mInflater;
 
         static int getHeaderType(Header header) {
-            if (header.fragment == null && header.intent == null) {
+            if (header.fragment == null && header.intent == null
+                    && header.id != R.id.theme_settings) {
                 return HEADER_TYPE_CATEGORY;
             } else if (header.id == R.id.wifi_settings
                     || header.id == R.id.bluetooth_settings
+                    || header.id == R.id.theme_settings
                     || header.id == R.id.profiles_settings
                     || header.id == R.id.mobile_network_settings
                     || header.id == R.id.location_settings) {
@@ -1035,6 +1041,7 @@ public class Settings extends PreferenceActivity
             mWifiEnabler = new WifiEnabler(context, new Switch(context));
             mBluetoothEnabler = new BluetoothEnabler(context, new Switch(context));
             mMobileDataEnabler = new MobileDataEnabler(context, new Switch(context));
+            mThemeEnabler = new ThemeEnabler(context, new Switch(context));
             mProfileEnabler = new ProfileEnabler(context, new Switch(context));
             mLocationEnabler = new LocationEnabler(context, new Switch(context));
             mDevicePolicyManager = dpm;
@@ -1110,6 +1117,8 @@ public class Settings extends PreferenceActivity
                         mBluetoothEnabler.setSwitch(holder.switch_);
                     } else if (header.id == R.id.mobile_network_settings) {
                         mMobileDataEnabler.setSwitch(holder.switch_);
+                    } else if (header.id == R.id.theme_settings) {
+                        mThemeEnabler.setSwitch(holder.switch_);
                     } else if (header.id == R.id.profiles_settings) {
                         mProfileEnabler.setSwitch(holder.switch_);
                     } else if (header.id == R.id.location_settings) {
@@ -1188,6 +1197,7 @@ public class Settings extends PreferenceActivity
             mWifiEnabler.resume();
             mBluetoothEnabler.resume();
             mMobileDataEnabler.resume();
+            mThemeEnabler.resume();
             mProfileEnabler.resume();
             mLocationEnabler.resume();
         }
@@ -1196,6 +1206,7 @@ public class Settings extends PreferenceActivity
             mWifiEnabler.pause();
             mBluetoothEnabler.pause();
             mMobileDataEnabler.pause();
+            mThemeEnabler.resume();
             mProfileEnabler.pause();
             mLocationEnabler.pause();
         }
@@ -1283,6 +1294,11 @@ public class Settings extends PreferenceActivity
         }
         if (mSearchItem != null) {
             mSearchItem.collapseActionView();
+        }
+
+        if (newConfig.uiThemeMode != mCurrentState && HeaderAdapter.mThemeEnabler != null) {
+            mCurrentState = newConfig.uiThemeMode;
+            HeaderAdapter.mThemeEnabler.setSwitchState();
         }
     }
 
