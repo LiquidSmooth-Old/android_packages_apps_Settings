@@ -222,6 +222,14 @@
         android:fragment="com.android.settings.profiles.ProfilesSettings"
         android:title="@string/profiles_settings_title" />
 
+    <!-- Total blackout -->
+    <header
+        settings:includeXmlForSearch="@xml/liquid_theme_settings"
+        android:id="@+id/theme_settings"
+        android:title="@string/theme_settings_title"
+        android:fragment="com.android.settings.liquid.themes.ThemeSettings"
+        android:icon="@drawable/ic_liquid_theme_settings" />
+
     <!-- Themes -->
     <header
         android:id="@+id/themes_settings"
