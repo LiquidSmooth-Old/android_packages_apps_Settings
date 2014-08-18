@@ -204,6 +204,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
         alertDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 ramBarColorReset();
+                resetValues();
             }
         });
         alertDialog.setNegativeButton(R.string.cancel, null);

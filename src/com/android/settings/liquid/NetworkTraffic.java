@@ -74,6 +74,9 @@ public class NetworkTraffic extends SettingsPreferenceFragment
 
         addPreferencesFromResource(R.xml.network_traffic);
 
+        int intColor;
+        String hexColor;
+
         loadResources();
 
         PreferenceScreen prefSet = getPreferenceScreen();
@@ -81,28 +84,20 @@ public class NetworkTraffic extends SettingsPreferenceFragment
         mNetTrafficState = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_STATE);
         mNetTrafficUnit = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_UNIT);
         mNetTrafficPeriod = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_PERIOD);
+        mNetTrafficColor = (ColorPickerPreference) prefSet.findPreference(NETWORK_TRAFFIC_COLOR);
 
         mNetTrafficAutohide =
-            (CheckBoxPreference) prefSet.findPreference(NETWORK_TRAFFIC_AUTOHIDE);
+                (CheckBoxPreference) prefSet.findPreference(NETWORK_TRAFFIC_AUTOHIDE);
         mNetTrafficAutohide.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.NETWORK_TRAFFIC_AUTOHIDE, 0) == 1));
         mNetTrafficAutohide.setOnPreferenceChangeListener(this);
 
         mNetTrafficAutohideThreshold =
-            (SeekBarPreference) prefSet.findPreference(NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD);
+                (SeekBarPreference) prefSet.findPreference(NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD);
         int netTrafficAutohideThreshold = Settings.System.getInt(getContentResolver(),
                 Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 10);
-            mNetTrafficAutohideThreshold.setValue(netTrafficAutohideThreshold / 1);
-            mNetTrafficAutohideThreshold.setOnPreferenceChangeListener(this);
-
-        mNetTrafficColor =
-            (ColorPickerPreference) prefSet.findPreference(NETWORK_TRAFFIC_COLOR);
-        mNetTrafficColor.setOnPreferenceChangeListener(this);
-        int intColor = Settings.System.getInt(getContentResolver(),
-                Settings.System.NETWORK_TRAFFIC_COLOR, 0xff000000);
-        String hexColor = String.format("#%08x", (0xffffffff & intColor));
-            mNetTrafficColor.setSummary(hexColor);
-            mNetTrafficColor.setNewPreviewColor(intColor);
+        mNetTrafficAutohideThreshold.setValue(netTrafficAutohideThreshold / 1);
+        mNetTrafficAutohideThreshold.setOnPreferenceChangeListener(this);
 
         if (TrafficStats.getTotalTxBytes() != TrafficStats.UNSUPPORTED &&
                 TrafficStats.getTotalRxBytes() != TrafficStats.UNSUPPORTED) {
@@ -125,6 +120,13 @@ public class NetworkTraffic extends SettingsPreferenceFragment
             mNetTrafficPeriod.setValueIndex(intIndex >= 0 ? intIndex : 1);
             mNetTrafficPeriod.setSummary(mNetTrafficPeriod.getEntry());
             mNetTrafficPeriod.setOnPreferenceChangeListener(this);
+
+            mNetTrafficColor.setOnPreferenceChangeListener(this);
+            intColor = Settings.System.getInt(getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_COLOR, 0xffffffff);
+            hexColor = String.format("#%08x", (0xffffffff & intColor));
+            mNetTrafficColor.setSummary(hexColor);
+            mNetTrafficColor.setNewPreviewColor(intColor);
         }
     }
 
@@ -168,20 +170,18 @@ public class NetworkTraffic extends SettingsPreferenceFragment
         alertDialog.setMessage(R.string.network_traffic_color_reset_message);
         alertDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                NetworkTrafficColorReset();
+                resetValues();
             }
         });
         alertDialog.setNegativeButton(R.string.cancel, null);
         alertDialog.create().show();
     }
 
-    private void NetworkTrafficColorReset() {
+    private void resetValues() {
         Settings.System.putInt(getContentResolver(),
-                Settings.System.NETWORK_TRAFFIC_COLOR, DEFAULT_TRAFFIC_COLOR);
-
-        mNetTrafficColor.setNewPreviewColor(DEFAULT_TRAFFIC_COLOR);
-        String hexColor = String.format("#%08x", (0xffffffff & DEFAULT_TRAFFIC_COLOR));
-        mNetTrafficColor.setSummary(hexColor);
+                Settings.System.NETWORK_TRAFFIC_COLOR, DEFAULT_BACKGROUND_COLOR);
+        mNetTrafficColor.setNewPreviewColor(DEFAULT_BACKGROUND_COLOR);
+        //mRecentPanelBgColor.setSummary("TRDS default");
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
