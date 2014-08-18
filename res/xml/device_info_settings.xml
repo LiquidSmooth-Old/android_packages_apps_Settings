@@ -20,14 +20,7 @@
         <PreferenceScreen android:key="liquid_logo"
                           android:enabled="false"
                           android:layout="@layout/liquid_logo_row" />
-						  
-        <!-- LiquidSmooth Change Log -->
-        <PreferenceScreen android:key="changelog"
-            android:title="@string/changelog_title"
-            android:summary="@string/changelog_title_summary"
-            android:fragment="com.android.settings.liquid.ChangeLog" >
-        </PreferenceScreen>
-		
+
         <!-- LiquidSmooth Downloads  -->						
         <Preference
             android:key="download_center"
@@ -52,7 +45,7 @@
                     android:targetPackage="com.liquid.updater"
                     android:targetClass="com.liquid.updater.UpdatesSettings" />
         </PreferenceScreen>
-		
+
         <!-- Liquid Extra Info -->
         <PreferenceScreen android:key="extrainfo"
                 android:title="@string/lsextrainfo"
