@@ -80,6 +80,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment
     private ListPreference mRecentPanelScale;
     private ListPreference mRecentPanelExpandedMode;
     private CheckBoxPreference mRecentsShowTopmost;
+    private ColorPickerPreference mRecentPanelBgColor;
 
     private static final int DEFAULT_BACKGROUND_COLOR = 0x00ffffff;
 
