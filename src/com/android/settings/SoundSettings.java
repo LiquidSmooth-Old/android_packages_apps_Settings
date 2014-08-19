@@ -50,8 +50,10 @@ import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.VolumePanel;
+import com.android.settings.liquid.util.CMDProcessor;
 
 import java.util.List;
+import java.io.File;
 
 public class SoundSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -82,6 +84,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOCK_AUDIO_SETTINGS = "dock_audio";
     private static final String KEY_DOCK_SOUNDS = "dock_sounds";
     private static final String KEY_DOCK_AUDIO_MEDIA_ENABLED = "dock_audio_media_enabled";
+    private static final String DISABLE_BOOTAUDIO = "disable_bootaudio";
 
     private static final String[] NEED_VOICE_CAPABILITY = {
             KEY_RINGTONE, KEY_DTMF_TONE, KEY_CATEGORY_CALLS,
@@ -113,6 +116,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mDockAudioMediaEnabled;
     private CheckBoxPreference mVolumeAdustSound;
     private ListPreference mVolumeOverlay;
+    private CheckBoxPreference mDisableBootAudio;
 
     private Vibrator mVib;
 
@@ -273,6 +277,18 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mVolumeOverlay.setSummary(mVolumeOverlay.getEntry());
 
         initDockSettings();
+
+        mDisableBootAudio = (CheckBoxPreference) findPreference("disable_bootaudio");
+
+        if(!new File("/system/media/audio.mp3").exists() &&
+                !new File("/system/media/boot_audio").exists() ) {
+            mDisableBootAudio.setEnabled(false);
+            mDisableBootAudio.setSummary(R.string.disable_bootaudio_summary_disabled);
+        } else {
+            mDisableBootAudio.setChecked(!new File("/system/media/audio.mp3").exists());
+            if (mDisableBootAudio.isChecked())
+                mDisableBootAudio.setSummary(R.string.disable_bootaudio_summary);
+        }
     }
 
     @Override
@@ -387,6 +403,21 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
         return true;
+        } else if (preference == mDisableBootAudio) {
+            boolean checked = ((CheckBoxPreference) preference).isChecked();
+            if (checked) {
+                Helpers.getMount("rw");
+                new CMDProcessor().su
+                        .runWaitFor("mv /system/media/audio.mp3 /system/media/boot_audio");
+                Helpers.getMount("ro");
+                preference.setSummary(R.string.disable_bootaudio_summary);
+            } else {
+                Helpers.getMount("rw");
+                new CMDProcessor().su
+                        .runWaitFor("mv /system/media/boot_audio /system/media/audio.mp3");
+                Helpers.getMount("ro");
+            }
+            return true;
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
