@@ -81,6 +81,12 @@
             android:summary="@string/status_bar_notification_count_summary"
             android:defaultValue="false" />
 
+        <CheckBoxPreference
+            android:key="statusbar_6bar_signal"
+            android:title="@string/status_bar_six_bar_signal_title"
+            android:summary="@string/status_bar_six_bar_signal_summary"
+            android:persistent="false" />
+
         <ListPreference
             android:key="status_bar_signal"
             android:title="@string/status_bar_signal_text_title"

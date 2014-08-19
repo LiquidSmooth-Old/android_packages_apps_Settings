@@ -2522,4 +2522,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="overscroll_weight_title">Over scrolling weight</string>
     <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
 
+    <!-- 6 Signal Bar options -->
+    <string name="status_bar_six_bar_signal_title">Enable Six Bar Signal</string>
+    <string name="status_bar_six_bar_signal_summary">Enable to show six bar signal in statusbar and QS</string>
+
 </resources>
