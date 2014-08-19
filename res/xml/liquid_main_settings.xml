@@ -58,12 +58,12 @@
         android:title="@string/notification_settings_title"
         android:fragment="com.android.settings.liquid.NotificationSettings" /> -->
 
-    <!-- Status bar
+    <!-- Status bar -->
     <PreferenceScreen
         android:id="@+id/statusbar_settings"
         android:title="@string/statusbar_settings_title"
         android:fragment="com.android.settings.liquid.StatusBarSettings"
-        android:icon="@drawable/ic_liquid_statusbar" /> -->
+        android:icon="@drawable/ic_liquid_statusbar" /> 
 
     <!-- Kernel Tweaker
     <Preference
