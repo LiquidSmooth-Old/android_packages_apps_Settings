@@ -25,6 +25,8 @@ import android.app.DialogFragment;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -75,6 +77,8 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
     private static int mMaxDensity = DisplayMetrics.getDeviceDensity();
     private static int mDefaultDensity = DensityUtils.getLiquidDefaultDensity();
     private static int mMinDensity = DensityUtils.getMinimumDensity();
+    private static final String KEY_TOUCH_CONTROL_SETTINGS = "touch_control_settings";
+    private PreferenceScreen mTouchControl;
 
     private static Activity mActivity;
 
@@ -83,6 +87,11 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.liquid_interface_settings);
+
+        mTouchControl = (PreferenceScreen) findPreference(KEY_TOUCH_CONTROL_SETTINGS);
+        if (!isTouchControlInstalled()) {
+            getPreferenceScreen().removePreference(mTouchControl);
+        }
 
         mActivity = getActivity();
 
@@ -153,6 +162,18 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
         newFragment.setTargetFragment(this, 0);
         newFragment.show(getFragmentManager(), "dialog " + id);
     }
+
+    private boolean isTouchControlInstalled() {
+        boolean ret = true;
+        final PackageManager pm = getPackageManager();
+        try {
+            pm.getPackageInfo("com.mahdi.touchcontrol", PackageManager.GET_META_DATA);
+        } catch (NameNotFoundException e) {
+            ret = false;
+        }
+        return ret;
+    }
+
 
     public static class MyAlertDialogFragment extends DialogFragment {
 
