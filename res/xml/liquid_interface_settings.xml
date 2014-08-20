@@ -58,4 +58,14 @@
         android:summary="@string/shake_events_summary"
         android:fragment="com.android.settings.liquid.ShakeEvents" />
 
+    <PreferenceScreen
+        android:key="touch_control_settings"
+        android:title="@string/touch_control_settings_title"
+        android:summary="@string/touch_control_settings_summary">
+        <intent
+            android:action="com.mahdi.action.LAUNCH_TOUCH_CONTROL_SETTINGS"
+            android:targetPackage="com.mahdi.touchcontrol"
+            android:targetClass="com.mahdi.touchcontrol.settings.TouchControlActivity" />
+    </PreferenceScreen>
+
 </PreferenceScreen>
