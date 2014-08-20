@@ -81,15 +81,19 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         int expandedDesktopValue = Settings.System.getInt(getContentResolver(),
                 Settings.System.EXPANDED_DESKTOP_STYLE, 2);
 
-        try {
-            boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
+        PreferenceCategory mCategory = (PreferenceCategory) findPreference("advanced_category");
 
-            if (hasNavBar) {
+        try {
+            boolean navBarEnabled = (Settings.System.getInt(resolver,
+                Settings.System.NAVIGATION_BAR_SHOW, 0) == 1) ||
+                WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
+
+            if (navBarEnabled) {
                 mExpandedDesktopPref.setOnPreferenceChangeListener(this);
                 mExpandedDesktopPref.setValue(String.valueOf(expandedDesktopValue));
                 updateExpandedDesktop(expandedDesktopValue);
             } else {
-                prefSet.removePreference(mExpandedDesktopPref);
+                mCategory.removePreference(mExpandedDesktopPref);
             }
         } catch (RemoteException e) {
             Log.e(TAG, "Error getting navigation bar status");
