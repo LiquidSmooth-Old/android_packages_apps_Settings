@@ -2506,6 +2506,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="nfc_polling_mode_screen_locked">Screen on, locked</string>
     <string name="nfc_polling_mode_screen_unlocked">Screen on, unlocked (default)</string>
 
+    <!-- Touch control -->
+    <string name="touch_control_settings_title">Touch Control</string>
+    <string name="touch_control_settings_summary">Manage advanced wakeup options including double tap to wake and more</string>
+
     <!-- Custom Over scroll Settings -->
     <string name="ui_overscroll_title">Over scrolling effects</string>
     <string name="overscroll_glow_title">Over scroll Color</string>
