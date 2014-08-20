@@ -25,6 +25,9 @@ import android.app.DialogFragment;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -35,6 +38,7 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -48,7 +52,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.internal.util.liquid.DensityUtils;
+import com.android.settings.liquid.util.Helpers;
 import com.android.settings.R;
+import com.android.settings.Utils;
 import com.android.settings.SettingsPreferenceFragment;
 
 import java.io.BufferedReader;
@@ -75,6 +81,8 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
     private static int mMaxDensity = DisplayMetrics.getDeviceDensity();
     private static int mDefaultDensity = DensityUtils.getLiquidDefaultDensity();
     private static int mMinDensity = DensityUtils.getMinimumDensity();
+    private static final String KEY_TOUCH_CONTROL_SETTINGS = "touch_control_settings";
+    private PreferenceScreen mTouchControl;
 
     private static Activity mActivity;
 
@@ -83,6 +91,11 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.liquid_interface_settings);
+
+        mTouchControl = (PreferenceScreen) findPreference(KEY_TOUCH_CONTROL_SETTINGS);
+        if (!isTouchControlInstalled()) {
+            getPreferenceScreen().removePreference(mTouchControl);
+        }
 
         mActivity = getActivity();
 
@@ -153,6 +166,18 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
         newFragment.setTargetFragment(this, 0);
         newFragment.show(getFragmentManager(), "dialog " + id);
     }
+
+    private boolean isTouchControlInstalled() {
+        boolean ret = true;
+        final PackageManager pm = getPackageManager();
+        try {
+            pm.getPackageInfo("com.mahdi.touchcontrol", PackageManager.GET_META_DATA);
+        } catch (NameNotFoundException e) {
+            ret = false;
+        }
+        return ret;
+    }
+
 
     public static class MyAlertDialogFragment extends DialogFragment {
 
