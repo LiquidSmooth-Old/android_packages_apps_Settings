@@ -57,7 +57,7 @@ public final class HfmHelpers {
                     && areFilesDifferent(hosts, altHosts)) {
                 copyFiles(altHosts, hosts);
             } else if (Settings.System.getInt(context.getContentResolver(), Settings.System.HFM_DISABLE_ADS, 0) == 0
-                    && areFilesDifferent(hosts, defHosts)) {
+                    && areFilesDifferent(hosts, defHosts) && isOurHostsFile()) {
                 copyFiles(defHosts, hosts);
             }
         }
@@ -79,8 +79,19 @@ public final class HfmHelpers {
                 }
                 return true;
         }
-
         return br2.readLine() != null;
+    }
+
+    private static boolean isOurHostsFile() throws IOException {
+        boolean ret = false;
+        File hosts = new File("/etc/hosts");
+        String line;
+        BufferedReader rd1 = getBufferedReader(hosts);
+        line = rd1.readLine();
+        if (line.contains("#LiquidSmooth")) {
+            ret = true;
+        }
+        return ret;
     }
 
     private static BufferedReader getBufferedReader(File file) throws IOException {
