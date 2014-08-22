@@ -53,6 +53,7 @@ import com.android.settings.hardware.DisplayGamma;
 
 
 import org.cyanogenmod.hardware.AdaptiveBacklight;
+import org.cyanogenmod.hardware.SunlightEnhancement;
 
 import java.util.ArrayList;
 
@@ -85,6 +86,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_DISPLAY_COLOR = "color_calibration";
     private static final String KEY_DISPLAY_GAMMA = "gamma_tuning";
     private static final String KEY_ADAPTIVE_BACKLIGHT = "adaptive_backlight";
+    private static final String KEY_SUNLIGHT_ENHANCEMENT = "sunlight_enhancement";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
@@ -111,6 +113,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private Preference mDisplayColor;
     private Preference mDisplayGamma;
     private CheckBoxPreference mAdaptiveBacklight;
+    private CheckBoxPreference mSunlightEnhancement;
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -235,6 +238,21 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
         if (mAdaptiveBacklight != null) {
             mAdaptiveBacklight.setChecked(AdaptiveBacklight.isEnabled());
+        }
+
+       mSunlightEnhancement = (CheckBoxPreference) findPreference(KEY_SUNLIGHT_ENHANCEMENT);
+        if (!isSunlightEnhancementSupported()) {
+            mCategory.removePreference(mSunlightEnhancement);
+            mSunlightEnhancement = null;
+        }
+
+        if (mSunlightEnhancement != null) {
+            if (SunlightEnhancement.isAdaptiveBacklightRequired() &&
+                    !AdaptiveBacklight.isEnabled()) {
+                mSunlightEnhancement.setEnabled(false);
+            } else {
+                mSunlightEnhancement.setChecked(SunlightEnhancement.isEnabled());
+            }
         }
 
         mWakeUpWhenPluggedOrUnplugged =
@@ -535,7 +553,13 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     Settings.System.DISABLE_IMMERSIVE_MESSAGE, checked ? 1:0);
             return true;
         } else if (preference == mAdaptiveBacklight) {
+            if (mSunlightEnhancement != null &&
+                    SunlightEnhancement.isAdaptiveBacklightRequired()) {
+                mSunlightEnhancement.setEnabled(mAdaptiveBacklight.isChecked());
+            }
             return AdaptiveBacklight.setEnabled(mAdaptiveBacklight.isChecked());
+        } else if (preference == mSunlightEnhancement) {
+            return SunlightEnhancement.setEnabled(mSunlightEnhancement.isChecked());
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
 
@@ -632,8 +656,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
      * @param ctx A valid context
      */
     public static void restore(Context context) {
+    final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         if (isAdaptiveBacklightSupported()) {
-            final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
             final boolean enabled = prefs.getBoolean(KEY_ADAPTIVE_BACKLIGHT, true);
             if (!AdaptiveBacklight.setEnabled(enabled)) {
                 Log.e(TAG, "Failed to restore adaptive backlight settings.");
@@ -641,11 +665,35 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.d(TAG, "Adaptive backlight settings restored.");
             }
         }
+
+       if (isSunlightEnhancementSupported()) {
+            final boolean enabled = prefs.getBoolean(KEY_SUNLIGHT_ENHANCEMENT, true);
+            if (SunlightEnhancement.isAdaptiveBacklightRequired() &&
+                    !AdaptiveBacklight.isEnabled()) {
+                SunlightEnhancement.setEnabled(false);
+                Log.d(TAG, "SRE requires CABC, disabled");
+            } else {
+                if (!SunlightEnhancement.setEnabled(enabled)) {
+                    Log.e(TAG, "Failed to restore SRE settings.");
+                } else {
+                    Log.d(TAG, "SRE settings restored.");
+                }
+            }
+        }
     }
 
     private static boolean isAdaptiveBacklightSupported() {
         try {
             return AdaptiveBacklight.isSupported();
+        } catch (NoClassDefFoundError e) {
+            // Hardware abstraction framework not installed
+            return false;
+        }
+    }
+
+   private static boolean isSunlightEnhancementSupported() {
+        try {
+            return SunlightEnhancement.isSupported();
         } catch (NoClassDefFoundError e) {
             // Hardware abstraction framework not installed
             return false;

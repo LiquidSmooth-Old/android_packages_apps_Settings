@@ -129,6 +129,13 @@
                 android:summary="@string/adaptive_backlight_summary"
                 android:defaultValue="true" />
 
+        <CheckBoxPreference
+                android:key="sunlight_enhancement"
+                android:title="@string/sunlight_enhancement_title"
+                android:summary="@string/sunlight_enhancement_summary"
+                android:defaultValue="true" />
+
+
         <!-- DeviceHandler device specific screen off gesture settings -->
         <Preference
             android:key="screen_off_gesture_settings"
