@@ -73,4 +73,9 @@
     <dimen name="captioning_preview_height">200dp</dimen>
 
     <dimen name="settings_side_margin">@*android:dimen/preference_fragment_padding_side</dimen>
+
+    <!-- Smart Filter -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
 </resources>
