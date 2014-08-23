@@ -2526,4 +2526,15 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="adaptive_backlight_title">Adaptive backlight</string>
     <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
 
+    <!-- Smart Filter -->
+    <string name="filter_settings">Smart Filter</string>
+    <string name="filter_value_alpha">Alpha</string>
+    <string name="filter_value_red">Red</string>
+    <string name="filter_value_green">Green</string>
+    <string name="filter_value_blue">Blue</string>
+    <string name="filter_remove">Remove Filter</string>
+    <string name="filter_apply">Apply Filter</string>
+    <string name="filter_notification_title">Smart Filter</string>
+    <string name="filter_notification_message">Filter function is running.</string>
+
 </resources>
