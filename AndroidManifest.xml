@@ -288,6 +288,16 @@
                 android:resource="@id/wifi_settings" />
         </activity>
 
+        <activity
+            android:name="com.android.settings.liquid.smartfilter.MainActivity"
+            android:label="@string/filter_settings" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.android.settings.liquid.smartfilter.MainService"></service>
+
         <!-- Keep compatibility with old shortcuts. -->
         <activity-alias android:name=".wifi.WifiSettings"
                 android:uiOptions="splitActionBarWhenNarrow"
