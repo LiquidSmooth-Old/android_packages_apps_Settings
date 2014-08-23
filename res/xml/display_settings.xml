@@ -110,6 +110,15 @@
                 android:persistent="false" />
 
         <PreferenceScreen
+            android:key="smart_filter"
+            android:title="@string/filter_settings"
+            android:summary="@string/color_calibration_title" >
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.liquid.smartfilter.MainActivity" />
+        </PreferenceScreen>
+
+        <PreferenceScreen
                 android:key="screen_recorder"
                 android:title="@string/screen_recorder_title"
                 android:summary="@string/screen_recorder_summary2"
