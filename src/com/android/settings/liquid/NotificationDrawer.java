@@ -19,6 +19,7 @@ package com.android.settings.liquid;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.ContentObserver;
+import android.graphics.Color;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -38,6 +39,7 @@ import android.text.TextUtils;
 import com.android.internal.util.liquid.DeviceUtils;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.liquid.quicksettings.QuickSettingsUtil;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import com.android.settings.R;
 
@@ -68,6 +70,8 @@ public class NotificationDrawer extends SettingsPreferenceFragment
             "quicksettings_tiles_style";
     private static final String PREF_TILE_PICKER =
             "tile_picker";
+    private static final String BLUR_BACKGROUND_COLORFILTER = 
+            "notificationpanel_blurbackground_color";
 
     ListPreference mHideLabels;
     SlimSeekBarPreference mNotificationAlpha;
@@ -78,6 +82,7 @@ public class NotificationDrawer extends SettingsPreferenceFragment
     ListPreference mQuickPulldown;
     ListPreference mSmartPulldown;
     CheckBoxPreference mCollapsePanel;
+    private ColorPickerPreference mColorPickerPreference;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -177,6 +182,15 @@ public class NotificationDrawer extends SettingsPreferenceFragment
                 Settings.System.QS_COLLAPSE_PANEL, 0, UserHandle.USER_CURRENT) == 1);
         mCollapsePanel.setOnPreferenceChangeListener(this);
 
+        // BlurBackGround
+        int currentcolor = Settings.System.getInt(getContentResolver(),
+                Settings.System.NOTIFICATIONPANEL_BLURBACKGROUND_COLORFILTER,
+                Color.GRAY);
+        mColorPickerPreference = (ColorPickerPreference) findPreference(BLUR_BACKGROUND_COLORFILTER);
+        mColorPickerPreference.setOnPreferenceChangeListener(this);
+        mColorPickerPreference.setDefaultValue(currentcolor);
+        mColorPickerPreference.setNewPreviewColor(currentcolor);
+
         updateQuickSettingsOptions();
     }
 
@@ -259,6 +273,13 @@ public class NotificationDrawer extends SettingsPreferenceFragment
             Settings.System.putStringForUser(getContentResolver(),
                     Settings.System.REMINDER_ALERT_RINGER,
                     val.toString(), UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mColorPickerPreference) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(objValue)));
+            int color = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.NOTIFICATIONPANEL_BLURBACKGROUND_COLORFILTER, color);
             return true;
         }
         return false;

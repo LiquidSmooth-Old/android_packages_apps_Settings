@@ -107,6 +107,29 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:title="@string/category_notification_panel_blur_title" >
+
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="notificationpanel_blurbackground"
+            android:title="@string/title_qs_blur_background"
+            android:summary="@string/qs_blur_background"
+            android:defaultValue="false" />
+
+        <com.android.settings.liquid.SystemCheckBoxPreference
+            android:key="notificationpanel_blurbackground_fade"
+            android:title="@string/title_qs_blur_background_fade"
+            android:summary="@string/qs_blur_background_fade"
+            android:dependency="notificationpanel_blurbackground"
+            android:defaultValue="false" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="notificationpanel_blurbackground_color"
+            android:title="@string/title_qs_blur_background_colorfilter"
+            android:summary="@string/qs_blur_background_colorfilter"
+            android:dependency="notificationpanel_blurbackground"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="advanced_category"
         android:title="@string/advanced_category_title">
 
