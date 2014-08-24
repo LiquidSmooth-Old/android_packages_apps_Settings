@@ -114,6 +114,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private Preference mDisplayGamma;
     private CheckBoxPreference mAdaptiveBacklight;
     private CheckBoxPreference mSunlightEnhancement;
+    private Preference mScreenOffGestures;
 
     private final Configuration mCurConfig = new Configuration();
 
@@ -230,8 +231,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mCategory.removePreference(mScreenColorSettings);
         }
 
-        mAdaptiveBacklight = (CheckBoxPreference) findPreference(KEY_ADAPTIVE_BACKLIGHT);
         if (!isAdaptiveBacklightSupported()) {
+            mAdaptiveBacklight = (CheckBoxPreference) findPreference(KEY_ADAPTIVE_BACKLIGHT);
             mCategory.removePreference(mAdaptiveBacklight);
             mAdaptiveBacklight = null;
         }
@@ -240,8 +241,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mAdaptiveBacklight.setChecked(AdaptiveBacklight.isEnabled());
         }
 
-       mSunlightEnhancement = (CheckBoxPreference) findPreference(KEY_SUNLIGHT_ENHANCEMENT);
         if (!isSunlightEnhancementSupported()) {
+            mSunlightEnhancement = (CheckBoxPreference) findPreference(KEY_SUNLIGHT_ENHANCEMENT);
             mCategory.removePreference(mSunlightEnhancement);
             mSunlightEnhancement = null;
         }
@@ -254,6 +255,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 mSunlightEnhancement.setChecked(SunlightEnhancement.isEnabled());
             }
         }
+
+       if (!isDeviceHandlerInstalled()) {
+            mScreenOffGestures = (Preference) findPreference(KEY_SCREEN_OFF_GESTURE_SETTINGS);
+            mCategory.removePreference(mScreenOffGestures);
+       }
 
         mWakeUpWhenPluggedOrUnplugged =
             (CheckBoxPreference) findPreference(KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED);
@@ -317,8 +323,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mToastAnimation.setValueIndex(CurrentToastAnimation);
         mToastAnimation.setOnPreferenceChangeListener(this);
 
-        Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
-                getPreferenceScreen(), KEY_SCREEN_OFF_GESTURE_SETTINGS);
     }
 
     private void updateTimeoutPreferenceDescription(long currentTimeout) {
@@ -698,5 +702,16 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             // Hardware abstraction framework not installed
             return false;
         }
+    }
+
+    private boolean isDeviceHandlerInstalled() {
+        boolean ret = true;
+        final PackageManager pm = getPackageManager();
+        try {
+            pm.getPackageInfo("com.slim.device", PackageManager.GET_META_DATA);
+        } catch (NameNotFoundException e) {
+            ret = false;
+        }
+        return ret;
     }
 }
