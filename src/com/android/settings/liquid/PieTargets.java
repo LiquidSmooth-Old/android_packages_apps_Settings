@@ -32,6 +32,8 @@ import android.util.Log;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.android.internal.util.liquid.DeviceUtils;
+
 public class PieTargets extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String PA_PIE_MENU = "pa_pie_menu";
@@ -70,6 +72,10 @@ public class PieTargets extends SettingsPreferenceFragment implements OnPreferen
         mPieSearch = (CheckBoxPreference) prefSet.findPreference(PA_PIE_SEARCH);
         mPieSearch.setChecked(Settings.System.getInt(mResolver,
                 Settings.System.PA_PIE_SEARCH, 0) != 0);
+
+        if (!DeviceUtils.deviceSupportsSearch(getActivity().getApplicationContext())) {
+            prefSet.removePreference(mPieSearch);
+        }
 
         mPieLastApp = (CheckBoxPreference) prefSet.findPreference(PA_PIE_LASTAPP);
         mPieLastApp.setChecked(Settings.System.getInt(mResolver,
