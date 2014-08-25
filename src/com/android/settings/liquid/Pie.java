@@ -45,8 +45,6 @@ public class Pie extends SettingsPreferenceFragment
     private static final String PA_PIE_ANGLE = "pa_pie_angle";
     private static final String PA_PIE_GAP = "pa_pie_gap";
     private static final String PA_PIE_NOTIFICATIONS = "pa_pie_notifications";
-    private static final String PA_PIE_MENU = "pa_pie_menu";
-    private static final String PA_PIE_SEARCH = "pa_pie_search";
     private static final String PA_PIE_CENTER = "pa_pie_center";
     private static final String PA_PIE_STICK = "pa_pie_stick";
 
@@ -58,8 +56,6 @@ public class Pie extends SettingsPreferenceFragment
     private ListPreference mPieGap;
     private CheckBoxPreference mPieNotifi;
     private SwitchPreference mPieControls;
-    private CheckBoxPreference mPieMenu;
-    private CheckBoxPreference mPieSearch;
     private CheckBoxPreference mPieCenter;
     private CheckBoxPreference mPieStick;
 
@@ -136,14 +132,6 @@ public class Pie extends SettingsPreferenceFragment
                 Settings.System.PA_PIE_ANGLE, 12);
         mPieAngle.setValue(String.valueOf(pieAngle));
         mPieAngle.setOnPreferenceChangeListener(this);
-
-        mPieMenu = (CheckBoxPreference) prefSet.findPreference(PA_PIE_MENU);
-        mPieMenu.setChecked(Settings.System.getInt(mResolver,
-                Settings.System.PA_PIE_MENU, 1) != 0);
-
-        mPieSearch = (CheckBoxPreference) prefSet.findPreference(PA_PIE_SEARCH);
-        mPieSearch.setChecked(Settings.System.getInt(mResolver,
-                Settings.System.PA_PIE_SEARCH, 1) != 0);
     }
 
     @Override
@@ -152,20 +140,14 @@ public class Pie extends SettingsPreferenceFragment
             Settings.System.putInt(mResolver,
                     Settings.System.PA_PIE_NOTIFICATIONS,
                     mPieNotifi.isChecked() ? 1 : 0);
-        } else if (preference == mPieMenu) {
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.PA_PIE_MENU,
-                    mPieMenu.isChecked() ? 1 : 0);
-        } else if (preference == mPieSearch) {
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.PA_PIE_SEARCH,
-                    mPieSearch.isChecked() ? 1 : 0);
         } else if (preference == mPieCenter) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.PA_PIE_CENTER, mPieCenter.isChecked() ? 1 : 0);
+                    Settings.System.PA_PIE_CENTER,
+                    mPieCenter.isChecked() ? 1 : 0);
         } else if (preference == mPieStick) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.PA_PIE_STICK, mPieStick.isChecked() ? 1 : 0);
+                    Settings.System.PA_PIE_STICK,
+                    mPieStick.isChecked() ? 1 : 0);
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
@@ -176,7 +158,7 @@ public class Pie extends SettingsPreferenceFragment
                     Settings.System.PA_PIE_CONTROLS,
                     (Boolean) newValue ? 1 : 0);
             if (mPieControls.isChecked()) {
-                Toast.makeText(getActivity(), "NO, we're not gonna add Hover!",
+                Toast.makeText(getActivity(), "Enjoy PA Pie!!",
                         Toast.LENGTH_LONG).show();
             }
             return true;

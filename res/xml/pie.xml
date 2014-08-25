@@ -17,11 +17,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/pa_pie_controls_title">
 
-    <PreferenceScreen
-            android:key="pa_pie_color"
-            android:title="@string/pa_pie_color_title"
-            android:fragment="com.android.settings.liquid.PieColor" />
-
     <SwitchPreference
         android:key="pa_pie_controls"
         android:title="@string/pa_pie_controls_title"
@@ -100,16 +95,10 @@
         android:defaultValue="false"
         android:dependency="pa_pie_controls" />
 
-    <CheckBoxPreference
-        android:key="pa_pie_menu"
-        android:title="@string/pa_pie_menu_title"
-        android:summary="@string/pa_pie_menu_summary"
-        android:dependency="pa_pie_controls" />
-
-    <CheckBoxPreference
-        android:key="pa_pie_search"
-        android:title="@string/pa_pie_search_title"
-        android:summary="@string/pa_pie_search_summary"
+    <PreferenceScreen
+        android:key="pa_pie_targets"
+        android:title="@string/pa_pie_targets_title"
+        android:fragment="com.android.settings.liquid.PieTargets"
         android:dependency="pa_pie_controls" />
 
 </PreferenceScreen>

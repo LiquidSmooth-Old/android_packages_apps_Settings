@@ -1410,6 +1410,17 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pa_pie_menu_summary">Whether or not the menu button should always be shown, even when its not needed</string>
     <string name="pa_pie_restart_launcher_title">Restart Launcher</string>
     <string name="pa_pie_restart_launcher_summary">Changing screensize can have adverse effects. This option allows your launcher to regain sanity, the cost is a slight blackout (recommended)</string>
+    <string name="pa_pie_targets_title">Pie Targets</string>
+    <string name="pa_pie_lastapp_title">Last app</string>
+    <string name="pa_pie_lastapp_summary">Enable last app button</string>
+    <string name="pa_pie_killtask_title">Kill task</string>
+    <string name="pa_pie_killtask_summary">Enable kill task button</string>
+    <string name="pa_pie_torch_title">Torch</string>
+    <string name="pa_pie_torch_summary">Enable torch button</string>
+    <string name="pa_pie_actnotif_title">Action notifications</string>
+    <string name="pa_pie_actnotif_summary">Enable expand notifications button</string>
+    <string name="pa_pie_power_title">Power button</string>
+    <string name="pa_pie_power_summary">Enable power button on Pie</string>
 
     <!-- Notification reminder -->
     <string name="noti_reminder_category">Reminders</string>
