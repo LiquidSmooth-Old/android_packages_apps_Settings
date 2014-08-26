@@ -70,7 +70,7 @@
     <string name="active_display_title">Active display</string>
     <string name="halo_options_title">Halo options</string>
     <string name="notification_drawer_title">Notification drawer</string>
-    <string name="pie_control_title">Pie control</string>
+    <string name="pie_control_title">Slim pie controls</string>
     <string name="theme_settings_title">Total blackout</string>
 
     <!-- Device settings -->
@@ -1288,9 +1288,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="usb_mass_storage_title">Mass storage</string>
     <string name="usb_mass_storage_summary">Enable USB mass storage</string>
 
-    <!-- Pie Control -->
+    <!-- Slim Pie Control -->
     <string name="pie_control_summary">Enable pie controls</string>
-    <string name="pie_summary">Configure or view current pie settings</string>
+    <string name="pie_summary">Configure or view current slim pie settings</string>
     <string name="pie_control_size">Navigation size</string>
     <string name="pie_control_trigger_positions">Trigger options</string>
     <string name="pie_control_trigger_left">Trigger left screen border</string>
@@ -1338,6 +1338,77 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_disable_ime_triggers_summary">Reduces left and right trigger size</string>
     <string name="pie_trigger_sensitivity_title">Trigger sensitivity"</string>
     <string name="pie_trigger_sensitivity_summary">Adjust the pie trigger sensitivity</string>
+
+    <!-- PA PIE -->
+    <string name="pa_pie_controls_title">PA pie Controls</string>
+    <string name="pa_pie_controls_summary">Configure or view current pa pie settings</string>
+    <string name="pa_pie_enable_title">Enable Pie</string>
+    <string name="pa_pie_enable_summaryOn">Nom nom nom nom</string>
+    <string name="pa_pie_enable_summaryOff">No Nom nom nom nom</string>
+    <string name="pa_pie_expanded_only_title">Only in expanded desktop</string>
+    <string name="pa_pie_expanded_only_summary">Only allow pie to work when Expanded Desktop is on</string>
+    <string name="pa_pie_gravity_title">Pie gravity</string>
+    <string name="pa_pie_gravity_summary">Select the location where the Pie will be placed</string>
+    <string name="pa_pie_gravity_top">Top</string>
+    <string name="pa_pie_gravity_bottom">Bottom</string>
+    <string name="pa_pie_gravity_right">Right</string>
+    <string name="pa_pie_gravity_left">Left</string>
+    <string name="pa_pie_mode_title">Pie style</string>
+    <string name="pa_pie_mode_summary">Manage how animations and status additions will be handled</string>
+    <string name="pa_pie_mode_bare">Bare</string>
+    <string name="pa_pie_mode_quick">Quick</string>
+    <string name="pa_pie_mode_default">Default</string>
+    <string name="pa_pie_mode_slow">Slow</string>
+    <string name="pa_pie_size_title">Pie size</string>
+    <string name="pa_pie_size_summary">Define Pie controls size</string>
+    <string name="pa_pie_size_small">Small</string>
+    <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
+    <string name="pa_pie_size_large">Large</string>
+    <string name="pa_pie_size_gigantic">Gigantic</string>
+    <string name="pa_pie_size_monster">Monster</string>
+    <string name="pa_pie_color_title">Pie color settings</string>
+    <string name="pa_pie_color_style_title">Pie color style</string>
+    <string name="pa_pie_background_title">Background color</string>
+    <string name="pa_pie_select_title">Selection color</string>
+    <string name="pa_pie_outlines_title">Outlines color</string>
+    <string name="pa_pie_status_clock_title">Clock color</string>
+    <string name="pa_pie_status_title">Status color</string>
+    <string name="pa_pie_chevron_left_title">Left chevron color</string>
+    <string name="pa_pie_chevron_right_title">Right chevron color</string>
+    <string name="pa_pie_juice_title">Battery juice color</string>
+    <string name="pa_pie_button_color_title">Buttons color</string>
+    <string name="pa_pie_gap_title">Item gap</string>
+    <string name="pa_pie_gap_summary">Adjust the gap that separates the Pie elements</string>
+    <string name="pa_pie_angle_title">Pie angle</string>
+    <string name="pa_pie_angle_summary">Adjust the angle of pie\'s egdes from the attachment</string>
+    <string name="pa_pie_angle_none">None (old)</string>
+    <string name="pa_pie_angle_small">Small</string>
+    <string name="pa_pie_angle_big">Normal (default)</string>
+    <string name="pa_pie_angle_huge">Big</string>
+    <string name="pa_pie_angle_super">Huge</string>
+    <string name="pa_pie_gap_none">None</string>
+    <string name="pa_pie_gap_small">Small</string>
+    <string name="pa_pie_gap_big">Big (default)</string>
+    <string name="pa_pie_gap_huge">Huge</string>
+    <string name="pa_pie_center_title">Middle alignment</string>
+    <string name="pa_pie_center_summary">Center pie on the trigger edge</string>
+    <string name="pa_pie_stick_title">Prevent rotation</string>
+    <string name="pa_pie_stick_summary">Avoids orientation change when screen rotates</string>
+    <string name="pa_pie_search_title">Search button</string>
+    <string name="pa_pie_search_summary">Enable search button on pie controls</string>
+    <string name="pa_pie_trigger_title">Trigger area</string>
+    <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
+    <string name="pa_pie_trigger_none">None (Pie disabled)</string>
+    <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
+    <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
+    <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
+    <string name="pa_pie_trigger_huge">Huge</string>
+    <string name="pa_pie_notifications_title">Enable Chevron Targets</string>
+    <string name="pa_pie_notifications_summary">Enabling this will let the Notification panel and QuickSettings tiles become available when swiping</string>
+    <string name="pa_pie_menu_title">Always show menu button</string>
+    <string name="pa_pie_menu_summary">Whether or not the menu button should always be shown, even when its not needed</string>
+    <string name="pa_pie_restart_launcher_title">Restart Launcher</string>
+    <string name="pa_pie_restart_launcher_summary">Changing screensize can have adverse effects. This option allows your launcher to regain sanity, the cost is a slight blackout (recommended)</string>
 
     <!-- Notification reminder -->
     <string name="noti_reminder_category">Reminders</string>
