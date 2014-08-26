@@ -32,20 +32,27 @@
         android:title="@string/gesture_anywhere_title"
         android:summary="@string/gesture_anywhere_summary"
         android:fragment="com.android.settings.liquid.gestureanywhere.GestureAnywhereSettings" />
-	
+
     <!-- Hardware Keys -->
     <PreferenceScreen
         android:key="hardwarekeys_settings"
         android:title="@string/button_keys_title"
         android:summary="@string/button_keys_summary"
         android:fragment="com.android.settings.liquid.HardwareKeysSettings" />
-		
-    <!-- Pie control -->
+
+    <!-- Slim Pie control -->
     <PreferenceScreen
         android:id="@+id/pie_control"
         android:title="@string/pie_control_title"
         android:summary="@string/pie_summary"
         android:fragment="com.android.settings.liquid.PieControl" />
+
+    <!-- PA Pie control -->
+    <PreferenceScreen
+        android:key="pa_pie_control"
+        android:fragment="com.android.settings.liquid.Pie"
+        android:summary="@string/pa_pie_controls_summary"
+        android:title="@string/pa_pie_controls_title" />
 
     <CheckBoxPreference
         android:key="enable_nav_bar"
