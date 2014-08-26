@@ -216,6 +216,20 @@
                 android:value="true" />
         </activity>
 
+        <!-- Pie -->
+
+        <activity android:name="Settings$PieActivity"
+                android:label="@string/pa_pie_controls_title"
+                android:taskAffinity=""
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.liquid.Pie" />
+        </activity>
+
         <!-- Top-level settings -->
 
         <activity android:name="Settings$WifiSettingsActivity"
