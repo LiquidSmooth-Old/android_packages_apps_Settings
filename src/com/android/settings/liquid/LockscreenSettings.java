@@ -140,8 +140,8 @@ public class LockscreenSettings extends SettingsPreferenceFragment
             mLockscreenRotation.setOnPreferenceChangeListener(this);
         }
 
-        PreferenceCategory generalCategory = (PreferenceCategory) prefs
-                .findPreference(KEY_GENERAL_CATEGORY);
+        PreferenceCategory generalCategory = (PreferenceCategory)
+                findPreference(KEY_GENERAL_CATEGORY);
 
         if (generalCategory != null) {
             Preference lockInterfacePref = findPreference(KEY_INTERFACE_SETTINGS);
