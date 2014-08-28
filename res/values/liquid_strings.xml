@@ -2498,12 +2498,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="gamma_tuning_brightness">Brightness</string>
     <string name="gamma_tuning_saturation">Saturation</string>
 
-    <!-- User Selectable Tether Networks-->
-    <string name="tether_usb_network_summary">Press to change USB Network</string>
-    <string name="tether_usb_network_text">USB Tether Network</string>
-    <string name="tether_user_network_default">Use System Default</string>
-    <string name="tether_wifi_network_text">WiFi Tether Network</string>
-
     <!-- NFC Polling-->
     <string name="nfc_polling_mode_title">NFC polling mode</string>
     <string name="nfc_polling_mode_screen_off">Screen off</string>

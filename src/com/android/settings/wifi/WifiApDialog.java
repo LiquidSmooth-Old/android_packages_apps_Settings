@@ -23,7 +23,6 @@ import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiConfiguration.AuthAlgorithm;
 import android.net.wifi.WifiConfiguration.KeyMgmt;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -55,7 +54,6 @@ public class WifiApDialog extends AlertDialog implements View.OnClickListener,
     private View mView;
     private TextView mSsid;
     private int mSecurityTypeIndex = OPEN_INDEX;
-    private String mWifiTetherNetwork = null;
     private EditText mPassword;
 
     WifiConfiguration mWifiConfig;
@@ -151,25 +149,6 @@ public class WifiApDialog extends AlertDialog implements View.OnClickListener,
         ((CheckBox) mView.findViewById(R.id.show_password)).setOnClickListener(this);
         mSecurity.setOnItemSelectedListener(this);
 
-        Spinner netSpinner = (Spinner) mView.findViewById(R.id.tether_wifi_network);
-        String addr = Settings.Global.getString(context.getContentResolver(),
-                Settings.Global.TETHER_WIFI_NETWORK);
-        int position = 0;
-        if ((addr == null) || (addr.length() == 0)) {
-            mWifiTetherNetwork = null;
-        } else {
-            for (int i = 0; i < netSpinner.getCount(); i++) {
-                if (netSpinner.getItemAtPosition(i).equals(addr)) {
-                    mWifiTetherNetwork = netSpinner.getItemAtPosition(i).toString();
-                    position = i;
-                    break;
-                }
-            }
-            mWifiTetherNetwork = null;
-        }
-        netSpinner.setSelection(position);
-        netSpinner.setOnItemSelectedListener(this);
-
         super.onCreate(savedInstanceState);
 
         showSecurityFields();
@@ -207,16 +186,9 @@ public class WifiApDialog extends AlertDialog implements View.OnClickListener,
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        switch (parent.getId()) {
-        case R.id.security:
-            mSecurityTypeIndex = position;
-            showSecurityFields();
-            validate();
-            break;
-        case R.id.tether_wifi_network:
-            mWifiTetherNetwork = ((Spinner)parent).getItemAtPosition(position).toString();
-            break;
-        }
+        mSecurityTypeIndex = position;
+        showSecurityFields();
+        validate();
     }
 
     @Override
@@ -229,9 +201,5 @@ public class WifiApDialog extends AlertDialog implements View.OnClickListener,
             return;
         }
         mView.findViewById(R.id.fields).setVisibility(View.VISIBLE);
-    }
-
-    public String getWifiTetherNetwork() {
-        return mWifiTetherNetwork;
     }
 }
