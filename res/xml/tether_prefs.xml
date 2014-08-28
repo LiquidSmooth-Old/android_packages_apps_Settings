@@ -39,6 +39,11 @@
         android:title="@string/wifi_tether_configure_ap_text"
         android:persistent="false" />
 
+    <PreferenceScreen
+        android:fragment="com.android.settings.wifi.WifiApSettings"
+        android:key="ap_settings"
+        android:title="@string/wifi_tether_checkbox_text" />
+
     <CheckBoxPreference
         android:key="enable_bluetooth_tethering"
         android:title="@string/bluetooth_tether_checkbox_text"
