@@ -2538,4 +2538,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="color_enhancement_title">Color enhancement</string>
     <string name="color_enhancement_summary">Dynamically enhance the color of the display</string>
 
+    <!-- Wifi AP: connected devices -->
+    <string name="wifi_ap_clients_title">Connected devices</string>
+    <string name="wifi_ap_client_ap_disabled">Hotspot is disabled</string>
+    <string name="wifi_ap_client_none_connected">No devices connected</string>
+
 </resources>
