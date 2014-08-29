@@ -53,6 +53,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String KEY_EXPANDED_DESKTOP = "expanded_desktop";
     private static final String STATUS_BAR_CARRIER = "status_bar_carrier";
     private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
+    private static final String STATUSBAR_6BAR_SIGNAL = "statusbar_6bar_signal";
 
     static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
@@ -63,6 +64,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private ListPreference mExpandedDesktopPref;
     private CheckBoxPreference mStatusBarCarrier;
     private ColorPickerPreference mCarrierColorPicker;
+    private CheckBoxPreference mStatusBarSixBarSignal;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -137,6 +139,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         hexColor = String.format("#%08x", (0xffffffff & intColor));
         mCarrierColorPicker.setSummary(hexColor);
         mCarrierColorPicker.setNewPreviewColor(intColor);
+
+        // 6 bar signal
+        mStatusBarSixBarSignal = (CheckBoxPreference) findPreference(STATUSBAR_6BAR_SIGNAL);
+        mStatusBarSixBarSignal.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUSBAR_6BAR_SIGNAL, 0) == 1));
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -180,6 +187,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
            Settings.System.putInt(getContentResolver(),
                    Settings.System.STATUS_BAR_CARRIER,
                    mStatusBarCarrier.isChecked() ? 1 : 0);
+           return true;
+        } else if (preference == mStatusBarSixBarSignal) {
+            Settings.System.putInt(getContentResolver(),
+                   Settings.System.STATUSBAR_6BAR_SIGNAL,
+                   mStatusBarSixBarSignal.isChecked(); ? 1 : 0);
            return true;
         }
 
