@@ -2184,7 +2184,7 @@
          other networks to override the defaults built in to either config.xml
          or Tethering.java -->
     <string-array translatable="false" name="tether_user_networks_entries">
-        <item>Use System Default</item>
+        <item>192.168.43.0/24</item>
         <item>192.168.208.0/24</item>
         <item>192.168.209.0/24</item>
         <item>192.168.210.0/24</item>
