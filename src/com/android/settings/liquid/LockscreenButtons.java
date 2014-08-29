@@ -71,11 +71,6 @@ public class LockscreenButtons extends SettingsPreferenceFragment
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
-        CheckBoxPreference menuUnlock = (CheckBoxPreference)
-                findPreference(Settings.System.MENU_UNLOCK_SCREEN);
-        CheckBoxPreference homeUnlock = (CheckBoxPreference)
-                findPreference(Settings.System.HOME_UNLOCK_SCREEN);
-
         mLongBackAction = (ListPreference) prefSet.findPreference(LONG_PRESS_BACK);
         if (hasBackKey) {
             mLongBackAction.setKey(Settings.System.LOCKSCREEN_LONG_BACK_ACTION);
@@ -88,7 +83,6 @@ public class LockscreenButtons extends SettingsPreferenceFragment
             mLongHomeAction.setKey(Settings.System.LOCKSCREEN_LONG_HOME_ACTION);
         } else {
             getPreferenceScreen().removePreference(mLongHomeAction);
-            getPreferenceScreen().removePreference(homeUnlock);
         }
 
         mLongMenuAction = (ListPreference) prefSet.findPreference(LONG_PRESS_MENU);
@@ -96,7 +90,6 @@ public class LockscreenButtons extends SettingsPreferenceFragment
             mLongMenuAction.setKey(Settings.System.LOCKSCREEN_LONG_MENU_ACTION);
         } else {
             getPreferenceScreen().removePreference(mLongMenuAction);
-            getPreferenceScreen().removePreference(menuUnlock);
         }
 
         mActions = new ListPreference[] {
