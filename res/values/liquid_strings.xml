@@ -1856,6 +1856,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="status_bar_signal_text_title">Signal display</string>
     <string name="status_bar_signal_text_show_text">Signal text</string>
 
+    <!-- 6 bar signal -->
+    <string name="status_bar_six_bar_signal_title">Enable six bar signal</string>
+    <string name="status_bar_six_bar_signal_summary">Enable to show six bar signal in statusbar/qs</string>
+
     <!-- Lock screen settings -->
     <string name="lockscreen_buttons_title">Buttons</string>
     <string name="lockscreen_buttons_summary">View or change lock screen button actions</string>
