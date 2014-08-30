@@ -54,8 +54,6 @@ public class LockscreenSettings extends SettingsPreferenceFragment
     private static final String KEY_ALWAYS_BATTERY_PREF = "lockscreen_battery_status";
     private static final String KEY_LOCKSCREEN_ROTATION = "lockscreen_rotation";
     private static final String KEY_LOCK_BEFORE_UNLOCK = "lock_before_unlock";
-    private static final String KEY_QUICK_UNLOCK_CONTROL = "quick_unlock_control";
-    private static final String KEY_MENU_UNLOCK_PREF = "menu_unlock";
 
     private PackageManager mPM;
     private DevicePolicyManager mDPM;
@@ -65,13 +63,6 @@ public class LockscreenSettings extends SettingsPreferenceFragment
     private CheckBoxPreference mBatteryStatus;
     private ListPreference mLockscreenRotation;
     private CheckBoxPreference mLockBeforeUnlock;
-    private CheckBoxPreference mLockQuickUnlock;
-    private CheckBoxPreference mMenuUnlock;
-
-    // needed for menu unlock
-    private Resources keyguardResource;
-    private boolean mMenuUnlockDefault;
-    private static final int KEY_MASK_MENU = 0x04;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -96,13 +87,6 @@ public class LockscreenSettings extends SettingsPreferenceFragment
             mLockBeforeUnlock.setOnPreferenceChangeListener(this);
         }
 
-        mLockQuickUnlock = (CheckBoxPreference) prefs
-                .findPreference(KEY_QUICK_UNLOCK_CONTROL);
-        if (mLockQuickUnlock != null) {
-            mLockQuickUnlock.setChecked(Settings.System.getInt(getContentResolver(),
-                    Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, 0) == 1);
-        }
-
         mPM = getActivity().getPackageManager();
         Resources keyguardResources = null;
         try {
@@ -110,9 +94,6 @@ public class LockscreenSettings extends SettingsPreferenceFragment
         } catch (Exception e) {
             e.printStackTrace();
         }
-        mMenuUnlockDefault = keyguardResources != null
-            ? keyguardResources.getBoolean(keyguardResources.getIdentifier(
-            "com.android.keyguard:bool/config_disableMenuKeyInLockScreen", null, null)) : false;
 
         mBatteryStatus = (CheckBoxPreference) prefs
                 .findPreference(KEY_ALWAYS_BATTERY_PREF);
@@ -172,21 +153,6 @@ public class LockscreenSettings extends SettingsPreferenceFragment
             }
         }
 
-        mMenuUnlock = (CheckBoxPreference) prefs.findPreference(KEY_MENU_UNLOCK_PREF);
-        if (mMenuUnlock != null) {
-            int deviceKeys = getResources().getInteger(
-                    com.android.internal.R.integer.config_deviceHardwareKeys);
-            boolean hasMenuKey = (deviceKeys & KEY_MASK_MENU) != 0;
-            if (hasMenuKey) {
-                boolean settingsEnabled = Settings.System.getIntForUser(
-                        getContentResolver(),
-                        Settings.System.MENU_UNLOCK_SCREEN, mMenuUnlockDefault ? 0 : 1,
-                        UserHandle.USER_CURRENT) == 1;
-                mMenuUnlock.setChecked(settingsEnabled);
-                mMenuUnlock.setOnPreferenceChangeListener(this);
-            }
-        }
-
         PreferenceScreen lockButtons = (PreferenceScreen) prefs
                 .findPreference(KEY_LOCKSCREEN_BUTTONS);
         boolean hasButtons = (getResources().getInteger(
@@ -219,22 +185,13 @@ public class LockscreenSettings extends SettingsPreferenceFragment
                         + " " + getResources().getString(
                         R.string.lockscreen_rotation_summary_extra));
             }
-        } else if (preference == mMenuUnlock) {
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.MENU_UNLOCK_SCREEN,
-                    ((Boolean) value) ? 1 : 0, UserHandle.USER_CURRENT);
         }
         return true;
     }
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mLockQuickUnlock) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL,
-                    mLockQuickUnlock.isChecked() ? 1 : 0);
-            return true;
-        } else if (preference == mLockRingBattery) {
+        if (preference == mLockRingBattery) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.BATTERY_AROUND_LOCKSCREEN_RING,
                     mLockRingBattery.isChecked() ? 1 : 0);
