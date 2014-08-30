@@ -1344,7 +1344,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pie_trigger_sensitivity_summary">Adjust the pie trigger sensitivity</string>
 
     <!-- PA PIE -->
-    <string name="pa_pie_controls_title">PA pie Controls</string>
+    <string name="pa_pie_controls_title">PA pie controls</string>
     <string name="pa_pie_controls_summary">Configure or view current pa pie settings</string>
     <string name="pa_pie_enable_title">Enable Pie</string>
     <string name="pa_pie_enable_summaryOn">Nom nom nom nom</string>
