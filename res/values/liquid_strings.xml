@@ -866,10 +866,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
     <string name="lockscreen_shorcuts_longpress_summary">Lock screen shortcuts on longpress</string>
 
-    <!-- Quick unlock -->
-    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
-    <string name="unlock_quick_unlock_control_summary">Unlocks using correct pin or password</string>
-
     <!-- Lock screen style -->
     <string name="lockscreen_style_title">Style</string>
     <string name="lockscreen_style_reset_message">Reset all lock screen colors?</string>
@@ -1274,10 +1270,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- About device screen, CPU and RAM info. -->
     <string name="cpu_info">CPU</string>
     <string name="mem_info">Memory</string>
-
-    <!-- Lock screen menu unlock -->
-    <string name="unlock_menu_unlock_title">Menu unlock</string>
-    <string name="unlock_menu_unlock_summary">Pressing menu button unlocks device</string>
 
     <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB over network</string>

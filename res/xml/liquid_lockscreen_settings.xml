@@ -75,17 +75,6 @@
             android:entries="@array/lockscreen_rotation_entries"
             android:entryValues="@array/lockscreen_rotation_values" />
 
-        <CheckBoxPreference
-            android:key="menu_unlock"
-            android:title="@string/unlock_menu_unlock_title"
-            android:summary="@string/unlock_menu_unlock_summary"
-            android:defaultValue="false" />
-
-        <CheckBoxPreference
-            android:key="quick_unlock_control"
-            android:title="@string/unlock_quick_unlock_control_title"
-            android:summary="@string/unlock_quick_unlock_control_summary" />
-
     </PreferenceCategory>
 
 </PreferenceScreen>
