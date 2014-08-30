@@ -56,7 +56,6 @@ public class StatusBarClockStyle extends SettingsPreferenceFragment
     private static final String PREF_ENABLE = "clock_style";
     private static final String PREF_FONT_STYLE = "font_style";
     private static final String PREF_AM_PM_STYLE = "status_bar_am_pm";
-    private static final String CLOCK_USE_SECOND = "clock_use_second";
     private static final String PREF_COLOR_PICKER = "clock_color";
     private static final String PREF_CLOCK_DATE_DISPLAY = "clock_date_display";
     private static final String PREF_CLOCK_DATE_STYLE = "clock_date_style";
@@ -74,7 +73,6 @@ public class StatusBarClockStyle extends SettingsPreferenceFragment
     private ListPreference mClockStyle;
     private ListPreference mFontStyle;
     private ListPreference mClockAmPmStyle;
-    private CheckBoxPreference mClockUseSecond;
     private ColorPickerPreference mColorPicker;
     private ListPreference mClockDateDisplay;
     private ListPreference mClockDateStyle;
@@ -135,10 +133,6 @@ public class StatusBarClockStyle extends SettingsPreferenceFragment
         }
         mClockAmPmStyle.setEnabled(!is24hour);
 
-        mClockUseSecond = (CheckBoxPreference) prefSet.findPreference(CLOCK_USE_SECOND);
-         mClockUseSecond.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
-                Settings.System.CLOCK_USE_SECOND, 0) == 1));
-
         mColorPicker = (ColorPickerPreference) findPreference(PREF_COLOR_PICKER);
         mColorPicker.setOnPreferenceChangeListener(this);
         int intColor = Settings.System.getInt(getActivity().getContentResolver(),
@@ -191,17 +185,6 @@ public class StatusBarClockStyle extends SettingsPreferenceFragment
         setHasOptionsMenu(true);
         mCheckPreferences = true;
         return prefSet;
-    }
-
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        boolean value;
-        if (preference == mClockUseSecond) {
-            value = mClockUseSecond.isChecked();
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.CLOCK_USE_SECOND, value ? 1 : 0);
-            return true;
-        }
-        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
