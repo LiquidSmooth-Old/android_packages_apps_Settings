@@ -184,22 +184,23 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
         if (!mIsOnlyImeSettings) {
             mStylusGestures = (PreferenceScreen) findPreference(KEY_STYLUS_GESTURES);
             mStylusIconEnabled = (CheckBoxPreference) findPreference(KEY_STYLUS_ICON_ENABLED);
+            mHighTouchSensitivity = (CheckBoxPreference) findPreference(KEY_HIGH_TOUCH_SENSITIVITY);
             // remove stylus preference for non stylus devices
             if (!getResources().getBoolean(com.android.internal.R.bool.config_stylusGestures)) {
                 PreferenceGroup pointerSettingsCategory = (PreferenceGroup)
                         findPreference(KEY_POINTER_SETTINGS_CATEGORY);
                 pointerSettingsCategory.removePreference(mStylusGestures);
                 pointerSettingsCategory.removePreference(mStylusIconEnabled);
-            } else {
+
+            // High touch sensitivity
+            if (!isHighTouchSensitivitySupported()) {
+                pointerSettingsCategory.removePreference(mHighTouchSensitivity);
+                mHighTouchSensitivity = null;
+            }
+
+        } else {
                 mStylusIconEnabled.setOnPreferenceChangeListener(this);
             }
-        }
-
-        // High touch sensitivity
-        mHighTouchSensitivity = (CheckBoxPreference) findPreference(KEY_HIGH_TOUCH_SENSITIVITY);
-        if (!isHighTouchSensitivitySupported()) {
-            getPreferenceScreen().removePreference(mHighTouchSensitivity);
-            mHighTouchSensitivity = null;
         }
 
         // Spell Checker
