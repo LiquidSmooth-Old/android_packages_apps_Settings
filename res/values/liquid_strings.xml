@@ -1616,6 +1616,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="vibrator_multiplier_title">Vibration multiplier</string>
 
     <!-- Lock screen notifications -->
+    <string name="privacy">Privacy</string>
+    <string name="wake_up">Wake up</string>
     <string name="lockscreen_notification_title">Enable notifications</string>
     <string name="lockscreen_notification_summary">Show current pending notifications</string>
     <string name="pocket_mode">Pocket mode</string>
@@ -1629,6 +1631,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="hide_non_clearable_summary">Hide all non clearable notifications</string>
     <string name="dismiss_all">Allow dismissing all</string>
     <string name="dismiss_all_summary">Ability to dismiss notifications</string>
+    <string name="dismiss_notification">Dismiss notification</string>
+    <string name="dismiss_notification_summary">Whether or not notification is dismissed when swiped away from interface</string>
     <string name="expanded_view">Expanded notification view</string>
     <string name="expanded_view_summary">Switch between normal and expanded</string>
     <string name="force_expanded_view">Force expanded view</string>
@@ -1644,6 +1648,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="excluded_apps_summary">Excluded applications will not show</string>
     <string name="dynamic_width">Dynamic width</string>
     <string name="dynamic_width_summary">Sets the width of notifications</string>
+    <string name="included_apps_title">Included applications</string>
+    <string name="included_apps_summary">Low priority notifications of included apps will be shown</string>
     <string name="notification_color">Notification background color</string>
 
     <!-- Swap volume buttons -->
