@@ -195,10 +195,12 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
             }
         }
 
+        PreferenceCategory mCategory = (PreferenceCategory) findPreference("pointer_settings_category");
+
         // High touch sensitivity
         mHighTouchSensitivity = (CheckBoxPreference) findPreference(KEY_HIGH_TOUCH_SENSITIVITY);
         if (!isHighTouchSensitivitySupported()) {
-            getPreferenceScreen().removePreference(mHighTouchSensitivity);
+            mCategory.removePreference(mHighTouchSensitivity);
             mHighTouchSensitivity = null;
         }
 
