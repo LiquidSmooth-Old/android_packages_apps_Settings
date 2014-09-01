@@ -174,19 +174,18 @@ public class AppMultiSelectListPreference extends DialogPreference {
 
     @Override
     protected Object onGetDefaultValue(TypedArray a, int index) {
+        final Set<String> result = new HashSet<String>();
         final CharSequence[] defaultValues = a.getTextArray(index);
+
         if (defaultValues != null) {
             final int valueCount = defaultValues.length;
-            final Set<String> result = new HashSet<String>();
 
             for (int i = 0; i < valueCount; i++) {
-                 result.add(defaultValues[i].toString());
+                result.add(defaultValues[i].toString());
             }
-
+        }
             return result;
         }
-        return null;
-    }
 
     @Override
     protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
