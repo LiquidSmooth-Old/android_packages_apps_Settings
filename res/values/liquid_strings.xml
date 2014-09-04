@@ -1038,7 +1038,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="title_tile_hover">Hover</string>
 
     <!-- QuickSettings style options -->
-    <string name="quicksettings_tiles_style">Style</string>
+    <string name="quicksettings_tiles_style">Tile style</string>
     <string name="summary_quicksettings_tiles_style">View or change quick settings style options</string>
     <string name="quicksettings_tiles_style_additional_options">Additional options</string>
     <string name="tiles_per_row_title">Tiles per row</string>

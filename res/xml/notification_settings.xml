@@ -66,6 +66,7 @@
 
     <!-- Notification drawer -->
     <PreferenceScreen
+        settings:includeXmlForSearch="@xml/notification_drawer"
         android:id="@+id/notification_drawer"
         android:title="@string/notification_drawer_title"
         android:summary="@string/notification_drawer_summary"
