@@ -80,67 +80,36 @@
     <header android:id="@+id/general_section"
         android:title="@string/general_category_title" />
 
-    <!-- Equalizer -->
+    <!-- Main LiquidSmooth Settings -->
     <header
-        android:id="@+id/equalizer_settings"
-        android:title="@string/equalizer_settings_title"
-        android:icon="@drawable/ic_liquid_equalizer" >
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"
-            android:targetPackage="com.vipercn.viper4android_v2" />
-    </header>
+        settings:includeXmlForSearch="@xml/liquid_main_settings"
+        android:id="@+id/main_settings"
+        android:title="@string/liquid_settings_title"
+        android:fragment="com.android.settings.liquid.MainSettings"
+        android:icon="@drawable/ic_liquid_theme_settings" />
 
-    <!-- Interface -->
+    <!-- Profiles -->
     <header
-        settings:includeXmlForSearch="@xml/liquid_interface_settings"
-        android:id="@+id/interface_settings"
-        android:title="@string/interface_settings_title"
-        android:fragment="com.android.settings.liquid.InterfaceSettings"
-        android:icon="@drawable/ic_liquid_interface" />
+        android:id="@+id/profiles_settings"
+        android:icon="@drawable/ic_settings_profiles"
+        android:fragment="com.android.settings.profiles.ProfilesSettings"
+        android:title="@string/profiles_settings_title" />
 
-    <!-- Lock screen -->
+    <!-- Total blackout -->
     <header
-        settings:includeXmlForSearch="@xml/liquid_lockscreen_settings"
-        android:id="@+id/lockscreen_settings"
-        android:title="@string/lockscreen_settings_title"
-        android:fragment="com.android.settings.liquid.LockscreenSettings"
-        android:icon="@drawable/ic_liquid_lockscreen" />
+        settings:includeXmlForSearch="@xml/liquid_theme_settings"
+        android:id="@+id/theme_settings"
+        android:title="@string/theme_settings_title"
+        android:fragment="com.android.settings.liquid.themes.ThemeSettings"
+        android:icon="@drawable/ic_settings_performance" />
 
-    <!-- Navigation -->
+    <!-- Themes -->
     <header
-        settings:includeXmlForSearch="@xml/liquid_navigation_settings"
-        android:id="@+id/navigation_settings"
-        android:title="@string/navigation_settings_title"
-        android:fragment="com.android.settings.liquid.NavigationSettings"
-        android:icon="@drawable/ic_liquid_navigation" />
-
-    <!-- Notifications -->
-    <header
-        settings:includeXmlForSearch="@xml/notification_settings"
-        android:id="@+id/notification_settings"
-        android:icon="@drawable/ic_settings_notifications"
-        android:title="@string/notification_settings_title"
-        android:fragment="com.android.settings.liquid.NotificationSettings" />
-
-    <!-- Kernel Tweaker -->
-    <header
-        android:id="@+id/kernel_tweaker"
-        android:title="@string/kernel_tweaker_title"
-        android:icon="@drawable/ic_liquid_performance" >
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.dsht.kerneltweaker.MainActivity"
-            android:targetPackage="com.dsht.kerneltweaker" />
-    </header>
-
-    <!-- Status bar -->
-    <header
-        settings:includeXmlForSearch="@xml/liquid_statusbar_settings"
-        android:id="@+id/statusbar_settings"
-        android:title="@string/statusbar_settings_title"
-        android:fragment="com.android.settings.liquid.StatusBarSettings"
-        android:icon="@drawable/ic_liquid_statusbar" />
+        android:id="@+id/themes_settings"
+        android:title="@string/themes_settings_title"
+        android:breadCrumbTitle="@string/themes_settings_title"
+        android:fragment="com.android.settings.ThemeSettings"
+        android:icon="@drawable/prd_ic_themepacks" />
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
@@ -215,29 +184,6 @@
     <header android:id="@+id/personal_section"
         android:title="@string/header_category_personal" />
 
-    <!-- Profiles -->
-    <header
-        android:id="@+id/profiles_settings"
-        android:icon="@drawable/ic_settings_profiles"
-        android:fragment="com.android.settings.profiles.ProfilesSettings"
-        android:title="@string/profiles_settings_title" />
-
-    <!-- Total blackout -->
-    <header
-        settings:includeXmlForSearch="@xml/liquid_theme_settings"
-        android:id="@+id/theme_settings"
-        android:title="@string/theme_settings_title"
-        android:fragment="com.android.settings.liquid.themes.ThemeSettings"
-        android:icon="@drawable/ic_liquid_theme_settings" />
-
-    <!-- Themes -->
-    <header
-        android:id="@+id/themes_settings"
-        android:title="@string/themes_settings_title"
-        android:breadCrumbTitle="@string/themes_settings_title"
-        android:fragment="com.android.settings.ThemeSettings"
-        android:icon="@drawable/prd_ic_themepacks" />
-
     <!-- Security -->
     <header
         settings:includeXmlForSearch="@xml/security_settings"
@@ -308,14 +254,6 @@
         android:fragment="com.android.settings.DevelopmentSettings"
         android:icon="@drawable/ic_settings_development"
         android:title="@string/development_settings_title" />
-
-    <!-- Advanced options -->
-    <header
-        settings:includeXmlForSearch="@xml/liquid_advanced_settings"
-        android:id="@+id/advanced_options_settings"
-        android:fragment="com.android.settings.liquid.AdvancedSettings"
-        android:icon="@drawable/ic_settings_advanced"
-        android:title="@string/advanced_options_title" />
 
     <!-- About Device -->
     <header

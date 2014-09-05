@@ -44,7 +44,6 @@
 
     <!-- Advanced Settings -->
     <string name="advanced_category_title">Advanced</string>
-    <string name="advanced_options_title">Advanced options</string>
     <string name="advanced_adblocker_summary">Configure or view current ad blocker settings</string>
     <string name="advanced_batterysaver_summary">Configure or view current battery saver settings</string>
     <string name="advanced_propmodder_summary">Configure or view current build.prop settings</string>
@@ -2593,6 +2592,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
     <string name="overscroll_weight_title">Over scrolling weight</string>
     <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+
+    <!-- LiquidSmooth Main Settings -->
+    <string name="liquid_settings_title">LiquidSmooth</string>
 
     <!-- Backlight brightness settings screen -->
     <string name="adaptive_backlight_title">Adaptive backlight</string>
