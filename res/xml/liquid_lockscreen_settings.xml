@@ -75,6 +75,11 @@
             android:entries="@array/lockscreen_rotation_entries"
             android:entryValues="@array/lockscreen_rotation_values" />
 
+        <CheckBoxPreference
+            android:key="quick_unlock_control"
+            android:title="@string/unlock_quick_unlock_control_title"
+            android:summary="@string/unlock_quick_unlock_control_summary" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

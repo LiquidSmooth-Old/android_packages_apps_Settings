@@ -866,6 +866,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
     <string name="lockscreen_shorcuts_longpress_summary">Lock screen shortcuts on longpress</string>
 
+    <!-- Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
+
     <!-- Lock screen style -->
     <string name="lockscreen_style_title">Style</string>
     <string name="lockscreen_style_reset_message">Reset all lock screen colors?</string>
