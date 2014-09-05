@@ -2598,6 +2598,21 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="overscroll_weight_title">Over scrolling weight</string>
     <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
 
+    <!-- Device Specific Settings -->
+    <string name="device_specific_title">Device Specific</string>
+    <string name="device_specific_summary">Modify settings that only work for your device</string>
+
+    <!-- LiquidSmooth Sound	-->
+    <string name="liquid_sound_title">LiquiSmooth Sound</string>
+    <string name="liquid_sound_summary">All sound related settings that we have added</string>
+
+    <!-- LiquidSmooth Display -->
+    <string name="liquid_display_title">LiquiSmooth Display</string>
+    <string name="liquid_display_summary">All display related settings that we have added</string>
+
+    <!-- LiquidSmooth Main Settings -->
+    <string name="liquid_setting_title">LiquiSmooth</string>
+
     <!-- Backlight brightness settings screen -->
     <string name="adaptive_backlight_title">Adaptive backlight</string>
     <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
