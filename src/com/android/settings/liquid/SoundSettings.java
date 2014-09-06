@@ -20,21 +20,32 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ResolveInfo;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.SystemProperties;
+import android.os.Handler;
+import android.os.Message;
+import android.os.UserHandle;
 import android.os.Vibrator;
+import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.preference.SlimSeekBarPreference;
+import android.preference.SeekBarPreference;
+import android.provider.MediaStore;
 import android.provider.Settings;
+import android.telephony.TelephonyManager;
 import android.util.Log;
+
+import java.util.List;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -56,6 +67,9 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
     private static final String PREF_LESS_NOTIFICATION_SOUNDS = "less_notification_sounds";
     private static final String KEY_VOL_MEDIA = "volume_keys_control_media_stream";
+    private static final String KEY_VIBRATION_MULTIPLIER = "vibrator_multiplier";
+    private static final String KEY_VIBRATION_DURATION = "vibration_duration";
+    private static final String KEY_VOLUME_ADJUST_SOUNDS = "volume_adjust_sounds";
 
     // Request code for power notification ringtone picker
     private static final int REQUEST_CODE_POWER_NOTIFICATIONS_RINGTONE = 1;
@@ -71,11 +85,21 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mCameraSounds;
     private ListPreference mAnnoyingNotifications;
     private CheckBoxPreference mVolumeKeysControlMedia;
+    private ListPreference mVibrationMultiplier;
+    private SeekBarPreference mVibrationDuration;
+    private CheckBoxPreference mVolumeAdustSound;
+
+    private Vibrator mVib;
+
+    private boolean mFirstVibration = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        mVib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         addPreferencesFromResource(R.xml.liquid_sound_settings);
 
         mVolBtnMusicCtrl = (CheckBoxPreference) findPreference(KEY_VOLBTN_MUSIC_CTRL);
@@ -144,6 +168,31 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mVolumeKeysControlMedia.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.VOLUME_KEYS_CONTROL_MEDIA_STREAM, 0) != 0);
         mVolumeKeysControlMedia.setOnPreferenceChangeListener(this);
+
+        int userMillis = Settings.System.getInt(resolver,
+                Settings.System.MINIMUM_VIBRATION_DURATION, 0);
+        mVibrationDuration = (SeekBarPreference) findPreference(KEY_VIBRATION_DURATION);
+        mVibrationDuration.setInterval(1);
+        mVibrationDuration.setDefault(0);
+        mVibrationDuration.isMilliseconds(true);
+        mVibrationDuration.setInitValue(userMillis);
+        mVibrationDuration.setOnPreferenceChangeListener(this);
+
+        mVibrationMultiplier = (ListPreference) findPreference(KEY_VIBRATION_MULTIPLIER);
+        String currentValue = Float.toString(Settings.System.getFloat(getActivity()
+                .getContentResolver(), Settings.System.VIBRATION_MULTIPLIER, 1));
+        mVibrationMultiplier.setValue(currentValue);
+        mVibrationMultiplier.setSummary(currentValue);
+        mVibrationMultiplier.setOnPreferenceChangeListener(this);
+
+        if (mVib == null || !mVib.hasVibrator()) {
+            removePreference(KEY_VIBRATION_DURATION);
+        }
+
+        mVolumeAdustSound = (CheckBoxPreference) findPreference(KEY_VOLUME_ADJUST_SOUNDS);
+        mVolumeAdustSound.setChecked(Settings.System.getInt(resolver,
+                Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED, 1) == 1);
+        mVolumeAdustSound.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -207,6 +256,20 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.VOLUME_KEYS_CONTROL_MEDIA_STREAM,
                     (Boolean) objValue ? 1 : 0);
+        }
+        if (preference == mVibrationDuration) {
+            int value = Integer.parseInt((String) objValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.MINIMUM_VIBRATION_DURATION, value);
+            if (mFirstVibration && (value % 5 == 0) && mVib != null) {
+                mVib.vibrate(1);
+            }
+            mFirstVibration = true;
+        }
+        if (KEY_VOLUME_ADJUST_SOUNDS.equals(key)) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
+                (Boolean) objValue ? 1 : 0);
         }
         return true;
     }
