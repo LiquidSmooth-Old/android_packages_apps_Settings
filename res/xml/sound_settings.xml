@@ -19,12 +19,10 @@
         android:key="sound_settings"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <com.android.settings.RingerVolumePreference
-            android:key="ring_volume"
-            android:title="@string/all_volume_title"
-            android:dialogTitle="@string/all_volume_title"
-            android:persistent="false"
-            android:streamType="ring" />
+    <PreferenceScreen
+            android:key="liquid_sound_settings"
+            android:fragment="com.android.settings.liquid.SoundSettings"
+            android:title="@string/liquid_sound_title" />
 
     <Preference
             android:key="musicfx"
@@ -32,11 +30,6 @@
         <intent android:targetPackage="com.android.musicfx"
                 android:targetClass="com.android.musicfx.ControlPanelPicker" />
     </Preference>
-
-    <PreferenceScreen
-            android:key="advanced_sound_settings"
-            android:fragment="com.android.settings.liquid.SoundSettings"
-            android:title="@string/advanced_sound_title" />
 
     <PreferenceCategory
             android:key="category_calls_and_notification"
@@ -72,6 +65,13 @@
 
     <!-- Do not nest these, or removals in code will break -->
 
+    <com.android.settings.RingerVolumePreference
+            android:key="ring_volume"
+            android:title="@string/all_volume_title"
+            android:dialogTitle="@string/all_volume_title"
+            android:persistent="false"
+            android:streamType="ring" />
+
     <ListPreference
             android:key="volume_overlay"
             android:title="@string/volume_overlay_title"
@@ -104,24 +104,6 @@
             android:key="haptic_feedback"
             android:title="@string/haptic_feedback_enable_title"
             android:defaultValue="true" />
-
-    <SlimSeekBarPreference
-            android:key="vibration_duration"
-            android:title="@string/minimum_vibration_duration" />
-
-    <CheckBoxPreference
-            android:key="volume_adjust_sounds"
-            android:title="@string/volume_adjust_sounds_enable_title"
-            android:summary="@string/volume_adjust_sounds_enable_summary"
-            android:defaultValue="true" />
-
-    <ListPreference
-            android:key="vibrator_multiplier"
-            android:persistent="false"
-            android:title="@string/vibrator_multiplier_title"
-            android:dialogTitle="@string/vibrator_multiplier_title"
-            android:entries="@array/vibration_multiplier_values"
-            android:entryValues="@array/vibration_multiplier_values" />
 
     <ListPreference
             android:key="emergency_tone"
