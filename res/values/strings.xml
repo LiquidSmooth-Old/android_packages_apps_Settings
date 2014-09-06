@@ -1755,9 +1755,13 @@
     <!-- Sound settings screen, setting option summary text -->
     <string name="ringtone_summary">""</string>
     <!-- Sound settings screen, volume title -->
+<<<<<<< HEAD
     <string name="all_volume_title">Volumes</string>
     <!-- Sound settings screen, music effects title [CHAR LIMIT=30]-->
     <string name="musicfx_title">Music effects</string>
+=======
+    <string name="all_volume_title">Volume</string>
+>>>>>>> parent of 6eca4b3... Add Settings item to select sound effects control panel.
     <!-- Sound settings screen, setting option name -->
     <string name="ring_volume_title">Ringer volume</string>
     <!-- Sound settings screen, setting option name checkbox -->
