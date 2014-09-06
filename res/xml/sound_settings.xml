@@ -26,6 +26,7 @@
             android:persistent="false"
             android:streamType="ring" />
 
+<<<<<<< HEAD
     <Preference
             android:key="musicfx"
             android:title="@string/musicfx_title">
@@ -38,6 +39,8 @@
             android:fragment="com.android.settings.liquid.SoundSettings"
             android:title="@string/advanced_sound_title" />
 
+=======
+>>>>>>> parent of 6eca4b3... Add Settings item to select sound effects control panel.
     <PreferenceCategory
             android:key="category_calls_and_notification"
             android:title="@string/sound_category_call_ringtone_vibrate_title"/>
