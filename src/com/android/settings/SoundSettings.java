@@ -68,12 +68,9 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DTMF_TONE = "dtmf_tone";
     private static final String KEY_SOUND_EFFECTS = "sound_effects";
     private static final String KEY_HAPTIC_FEEDBACK = "haptic_feedback";
-    private static final String KEY_VIBRATION_DURATION = "vibration_duration";
-    private static final String KEY_VIBRATION_MULTIPLIER = "vibrator_multiplier";
     private static final String KEY_EMERGENCY_TONE = "emergency_tone";
     private static final String KEY_SOUND_SETTINGS = "sound_settings";
     private static final String KEY_LOCK_SOUNDS = "lock_sounds";
-    private static final String KEY_VOLUME_ADJUST_SOUNDS = "volume_adjust_sounds";
     private static final String KEY_VOLUME_OVERLAY = "volume_overlay";
     private static final String KEY_RINGTONE = "ringtone";
     private static final String KEY_NOTIFICATION_SOUND = "notification_sound";
@@ -95,8 +92,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mDtmfTone;
     private CheckBoxPreference mSoundEffects;
     private CheckBoxPreference mHapticFeedback;
-    private ListPreference mVibrationMultiplier;
-    private SlimSeekBarPreference mVibrationDuration;
     private Preference mMusicFx;
     private CheckBoxPreference mLockSounds;
     private Preference mRingtonePreference;
@@ -111,12 +106,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mDockSounds;
     private Intent mDockIntent;
     private CheckBoxPreference mDockAudioMediaEnabled;
-    private CheckBoxPreference mVolumeAdustSound;
     private ListPreference mVolumeOverlay;
-
-    private Vibrator mVib;
-
-    private boolean mFirstVibration = false;
 
     private Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
@@ -150,7 +140,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
-        mVib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         addPreferencesFromResource(R.xml.sound_settings);
 
         if (TelephonyManager.PHONE_TYPE_CDMA != activePhoneType) {
@@ -184,21 +173,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mHapticFeedback.setPersistent(false);
         mHapticFeedback.setChecked(Settings.System.getInt(resolver,
                 Settings.System.HAPTIC_FEEDBACK_ENABLED, 1) != 0);
-        int userMillis = Settings.System.getInt(resolver,
-                Settings.System.MINIMUM_VIBRATION_DURATION, 0);
-        mVibrationDuration = (SlimSeekBarPreference) findPreference(KEY_VIBRATION_DURATION);
-        mVibrationDuration.setInterval(1);
-        mVibrationDuration.setDefault(0);
-        mVibrationDuration.isMilliseconds(true);
-        mVibrationDuration.setInitValue(userMillis);
-        mVibrationDuration.setOnPreferenceChangeListener(this);
-
-        mVibrationMultiplier = (ListPreference) findPreference(KEY_VIBRATION_MULTIPLIER);
-        String currentValue = Float.toString(Settings.System.getFloat(getActivity()
-                .getContentResolver(), Settings.System.VIBRATION_MULTIPLIER, 1));
-        mVibrationMultiplier.setValue(currentValue);
-        mVibrationMultiplier.setSummary(currentValue);
-        mVibrationMultiplier.setOnPreferenceChangeListener(this);
 
         mLockSounds = (CheckBoxPreference) findPreference(KEY_LOCK_SOUNDS);
         mLockSounds.setPersistent(false);
@@ -208,10 +182,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mRingtonePreference = findPreference(KEY_RINGTONE);
         mNotificationPreference = findPreference(KEY_NOTIFICATION_SOUND);
 
-        if (mVib == null || !mVib.hasVibrator()) {
+        Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if (vibrator == null || !vibrator.hasVibrator()) {
             removePreference(KEY_VIBRATE);
             removePreference(KEY_HAPTIC_FEEDBACK);
-            removePreference(KEY_VIBRATION_DURATION);
         }
 
         if (TelephonyManager.PHONE_TYPE_CDMA == activePhoneType) {
@@ -258,11 +232,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                 }
             }
         };
-
-        mVolumeAdustSound = (CheckBoxPreference) findPreference(KEY_VOLUME_ADJUST_SOUNDS);
-        mVolumeAdustSound.setChecked(Settings.System.getInt(resolver,
-                Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED, 1) == 1);
-        mVolumeAdustSound.setOnPreferenceChangeListener(this);
 
         mVolumeOverlay = (ListPreference) findPreference(KEY_VOLUME_OVERLAY);
         mVolumeOverlay.setOnPreferenceChangeListener(this);
@@ -398,30 +367,12 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             } catch (NumberFormatException e) {
                 Log.e(TAG, "could not persist emergency tone setting", e);
             }
-        } else if (preference == mVolumeAdustSound) {
-            Settings.System.putInt(getContentResolver(),
-                Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
-                (Boolean) objValue ? 1 : 0);
         } else if (preference == mVolumeOverlay) {
             int value = Integer.valueOf((String) objValue);
             int index = mVolumeOverlay.findIndexOfValue((String) objValue);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.MODE_VOLUME_OVERLAY, value);
             mVolumeOverlay.setSummary(mVolumeOverlay.getEntries()[index]);
-        } else if (preference == mVibrationDuration) {
-            int value = Integer.parseInt((String) objValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.MINIMUM_VIBRATION_DURATION, value);
-            if (mFirstVibration && (value % 5 == 0) && mVib != null) {
-                mVib.vibrate(1);
-            }
-            mFirstVibration = true;
-        } else if (preference == mVibrationMultiplier) {
-            String currentValue = (String) objValue;
-            float val = Float.parseFloat(currentValue);
-            Settings.System.putFloat(getActivity().getContentResolver(),
-                    Settings.System.VIBRATION_MULTIPLIER, val);
-            mVibrationMultiplier.setSummary(currentValue);
         }
         return true;
     }

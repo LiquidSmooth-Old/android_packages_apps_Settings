@@ -2594,6 +2594,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="overscroll_weight_title">Over scrolling weight</string>
     <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
 
+    <!-- LiquidSmooth Sound -->
+    <string name="liquid_sound_title">LiquiSmooth Sound</string>
+    <string name="liquid_sound_summary">All sound related settings that we have added</string>
+
     <!-- Backlight brightness settings screen -->
     <string name="adaptive_backlight_title">Adaptive backlight</string>
     <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
