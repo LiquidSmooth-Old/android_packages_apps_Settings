@@ -24,13 +24,6 @@
             android:fragment="com.android.settings.liquid.SoundSettings"
             android:title="@string/liquid_sound_title" />
 
-    <Preference
-            android:key="musicfx"
-            android:title="@string/musicfx_title">
-        <intent android:targetPackage="com.android.musicfx"
-                android:targetClass="com.android.musicfx.ControlPanelPicker" />
-    </Preference>
-
     <PreferenceCategory
             android:key="category_calls_and_notification"
             android:title="@string/sound_category_call_ringtone_vibrate_title"/>
