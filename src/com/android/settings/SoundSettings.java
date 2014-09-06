@@ -34,7 +34,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.UserHandle;
 import android.os.Vibrator;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
@@ -46,7 +45,6 @@ import android.provider.MediaStore;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-import android.view.VolumePanel;
 
 public class SoundSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -65,7 +63,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_EMERGENCY_TONE = "emergency_tone";
     private static final String KEY_SOUND_SETTINGS = "sound_settings";
     private static final String KEY_LOCK_SOUNDS = "lock_sounds";
-    private static final String KEY_VOLUME_OVERLAY = "volume_overlay";
     private static final String KEY_RINGTONE = "ringtone";
     private static final String KEY_NOTIFICATION_SOUND = "notification_sound";
     private static final String KEY_CATEGORY_CALLS = "category_calls_and_notification";
@@ -88,7 +85,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mHapticFeedback;
     private CheckBoxPreference mLockSounds;
     private Preference mRingtonePreference;
-    private ListPreference mEmergencyTonePreference;
     private Preference mNotificationPreference;
 
     private Runnable mRingtoneLookupRunnable;
@@ -99,7 +95,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mDockSounds;
     private Intent mDockIntent;
     private CheckBoxPreference mDockAudioMediaEnabled;
-    private ListPreference mVolumeOverlay;
 
     private Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
@@ -182,11 +177,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         }
 
         if (TelephonyManager.PHONE_TYPE_CDMA == activePhoneType) {
-            mEmergencyTonePreference =
+            ListPreference emergencyTonePreference =
                 (ListPreference) findPreference(KEY_EMERGENCY_TONE);
-            mEmergencyTonePreference.setValue(String.valueOf(Settings.Global.getInt(
+            emergencyTonePreference.setValue(String.valueOf(Settings.Global.getInt(
                 resolver, Settings.Global.EMERGENCY_TONE, FALLBACK_EMERGENCY_TONE_VALUE)));
-            mEmergencyTonePreference.setOnPreferenceChangeListener(this);
+            emergencyTonePreference.setOnPreferenceChangeListener(this);
         }
 
         mSoundSettings = (PreferenceGroup) findPreference(KEY_SOUND_SETTINGS);
@@ -212,14 +207,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                 }
             }
         };
-
-        mVolumeOverlay = (ListPreference) findPreference(KEY_VOLUME_OVERLAY);
-        mVolumeOverlay.setOnPreferenceChangeListener(this);
-        int volumeOverlay = Settings.System.getIntForUser(resolver,
-                Settings.System.MODE_VOLUME_OVERLAY, VolumePanel.VOLUME_OVERLAY_EXPANDABLE,
-                UserHandle.USER_CURRENT);
-        mVolumeOverlay.setValue(Integer.toString(volumeOverlay));
-        mVolumeOverlay.setSummary(mVolumeOverlay.getEntry());
 
         initDockSettings();
     }
@@ -336,7 +323,8 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mEmergencyTonePreference) {
+        final String key = preference.getKey();
+        if (KEY_EMERGENCY_TONE.equals(key)) {
             try {
                 int value = Integer.parseInt((String) objValue);
                 Settings.Global.putInt(getContentResolver(),
@@ -344,12 +332,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             } catch (NumberFormatException e) {
                 Log.e(TAG, "could not persist emergency tone setting", e);
             }
-        } else if (preference == mVolumeOverlay) {
-            int value = Integer.valueOf((String) objValue);
-            int index = mVolumeOverlay.findIndexOfValue((String) objValue);
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.MODE_VOLUME_OVERLAY, value);
-            mVolumeOverlay.setSummary(mVolumeOverlay.getEntries()[index]);
         }
         return true;
     }
