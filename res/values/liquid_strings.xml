@@ -1443,6 +1443,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Volume Steps -->
     <string name="volume_steps_title">Volume Steps</string>
+    <string name="volume_steps_summary">Change how much the volume changes on each click</string>
     <string name="volume_steps_60">60</string>
     <string name="volume_steps_45">45</string>
     <string name="volume_steps_30">30</string>
@@ -1872,6 +1873,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- Sound themes -->
     <string name="sound_packages_title">Sound packs</string>
+    <string name="sound_packages_summary">Allows you set custom sound easily</string>
     <string name="install_sound_pack_title">Install sound pack</string>
     <string name="install_sound_pack_summary">Install new sound packs added in SoundPacks folder on the internal storage</string>
     <string name="select_sound_pack_title">Select sound pack</string>
@@ -2596,6 +2598,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
 
     <!-- LiquidSmooth Main Settings -->
     <string name="liquid_settings_title">LiquidSmooth</string>
+
+    <!-- LiquidSmooth Sound -->
+    <string name="liquid_sound_title">LiquidSmooth sound</string>
+    <string name="liquid_sound_summary">All sound related settings that we have added</string>
 
     <!-- Backlight brightness settings screen -->
     <string name="adaptive_backlight_title">Adaptive backlight</string>
