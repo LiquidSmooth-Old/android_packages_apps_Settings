@@ -1678,7 +1678,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="title_animation_no_override">Prevent app overrides</string>
     <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>
     <string name="animation_duration_default">Default</string>
-    <string name="header_summary_animation">@null</string>
+    <string name="header_summary_animation" translatable="false">@null</string>
 
     <!-- Clock widget -->
     <string name="lock_clock_title">Clock widget</string>
