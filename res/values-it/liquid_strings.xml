@@ -269,7 +269,7 @@
   <string name="keyboard_rotation_toggle_title">Auto rotazione tastiera</string>
   <string name="keyboard_rotation_toggle_summary">Forza rotazione automatica quando viene visualizzata la tastiera</string>
   <string name="keyboard_rotation_timeout_title">Timeout Auto-rotazione</string>
-  <string name="keyboard_rotation_timeout_summary">Disattiva il sensore di rotazione automatica <xliff:g id="rotate_timeout"> %1$s </xliff:g> secondi dopo che la tastiera viene nascosta</string>
+  <string name="keyboard_rotation_timeout_summary">Disattiva il sensore di rotazione automatica <xliff:g id="rotate_timeout">%1$s</xliff:g> secondi dopo che la tastiera viene nascosta</string>
   <string name="keyboard_rotation_dialog">Questa caratteristica attiva la rotazione automatica temporaneamente mentre la tastiera è presente.  Essa non ha effetto quando la rotazione automatica è già abilitata.</string>
   <string name="show_enter_key_title">Mostra tasto invio</string>
   <string name="show_enter_key_summary">Forza la tastiera a mostrare il tasto invio invece che il tasto delle emoticons</string>

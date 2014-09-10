@@ -269,7 +269,7 @@
   <string name="keyboard_rotation_toggle_title">Otomatik Klavye rotasyonu</string>
   <string name="keyboard_rotation_toggle_summary">klavye gösterildiğinde Otomatik Döndürmeye zorla</string>
   <string name="keyboard_rotation_timeout_title">Otomatik Döndür zaman aşımı</string>
-  <string name="keyboard_rotation_timeout_summary">Devre dışı bırakır Otomatik Döndür-sensör <xliff:g id="rotate_timeout"> %1$s </xliff:g> saniye sonra klavye gizli</string>
+  <string name="keyboard_rotation_timeout_summary">Devre dışı bırakır Otomatik Döndür-sensör <xliff:g id="rotate_timeout">%1$s</xliff:g> saniye sonra klavye gizli</string>
   <string name="keyboard_rotation_dialog">Bu özellik geçici olarak klavye gösterilir ise etkinleştirmek için Otomatik Döndür zorlar.  Otomatik Döndür zaten etkin olduğunda etkisizdir.</string>
   <string name="show_enter_key_title">Giriş anahtarını göster</string>
   <string name="show_enter_key_summary">Klavyeyi ifadeleri göstermeye zorla</string>

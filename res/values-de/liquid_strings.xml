@@ -269,7 +269,7 @@
   <string name="keyboard_rotation_toggle_title">Auto-Tastatur-Drehung</string>
   <string name="keyboard_rotation_toggle_summary">Erzwingen Sie automatisches Drehen, wenn die Tastatur angezeigt wird</string>
   <string name="keyboard_rotation_timeout_title">Zeitlimit automatisches drehen</string>
-  <string name="keyboard_rotation_timeout_summary">Deaktiviert die automatische Drehung <xliff:g id="rotate_timeout"> %1$ s </xliff:g>  in Sekunden nach dem die Tastatur ausgeblendet ist</string>
+  <string name="keyboard_rotation_timeout_summary">Deaktiviert die automatische Drehung <xliff:g id="rotate_timeout">%1$s</xliff:g>  in Sekunden nach dem die Tastatur ausgeblendet ist</string>
   <string name="keyboard_rotation_dialog">Dieses Feature erzwingt, vorübergehend Auto-Rotation, während die Tastatur angezeigt wird.  Es hat keine Auswirkungen, wenn die Auto-Rotation bereits aktiviert ist.</string>
   <string name="show_enter_key_title">Enter Taste anzeigen</string>
   <string name="show_enter_key_summary">Erzwinge Enter-Taste statt Emoticon-Taste auf der Tastaur</string>

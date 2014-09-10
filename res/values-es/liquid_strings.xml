@@ -270,7 +270,7 @@
   <string name="keyboard_rotation_toggle_title">Rotación de teclado automática</string>
   <string name="keyboard_rotation_toggle_summary">Fuerza de rotación automática cuando se muestra el teclado</string>
   <string name="keyboard_rotation_timeout_title">Tiempo de espera de auto-rotación</string>
-  <string name="keyboard_rotation_timeout_summary">Deshabilita sensor de auto-rotación <xliff:g id="rotate_timeout"> %1$ s </xliff:g> segundos después de que se oculta el teclado</string>
+  <string name="keyboard_rotation_timeout_summary">Deshabilita sensor de auto-rotación <xliff:g id="rotate_timeout">%1$s</xliff:g> segundos después de que se oculta el teclado</string>
   <string name="keyboard_rotation_dialog">Esta función obliga auto-rotación para encender temporalmente mientras se muestra el teclado.  No tiene efecto cuando la rotación automática ya está habilitada.</string>
   <string name="show_enter_key_title">Mostrar tecla \"Intro\"</string>
   <string name="show_enter_key_summary">Forzar que el teclado muestre la tecla \"Intro\" en lugar de la tecla de emoticones</string>
