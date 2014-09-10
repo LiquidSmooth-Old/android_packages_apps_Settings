@@ -185,21 +185,22 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
             mStylusGestures = (PreferenceScreen) findPreference(KEY_STYLUS_GESTURES);
             mStylusIconEnabled = (CheckBoxPreference) findPreference(KEY_STYLUS_ICON_ENABLED);
             mHighTouchSensitivity = (CheckBoxPreference) findPreference(KEY_HIGH_TOUCH_SENSITIVITY);
+            PreferenceGroup pointerSettingsCategory = (PreferenceGroup)
+                    findPreference(KEY_POINTER_SETTINGS_CATEGORY);
+
             // remove stylus preference for non stylus devices
             if (!getResources().getBoolean(com.android.internal.R.bool.config_stylusGestures)) {
-                PreferenceGroup pointerSettingsCategory = (PreferenceGroup)
-                        findPreference(KEY_POINTER_SETTINGS_CATEGORY);
                 pointerSettingsCategory.removePreference(mStylusGestures);
                 pointerSettingsCategory.removePreference(mStylusIconEnabled);
-
+            } else {
+                mStylusIconEnabled.setOnPreferenceChangeListener(this);
+            }
             // High touch sensitivity
             if (!isHighTouchSensitivitySupported()) {
                 pointerSettingsCategory.removePreference(mHighTouchSensitivity);
                 mHighTouchSensitivity = null;
-            }
-
-        } else {
-                mStylusIconEnabled.setOnPreferenceChangeListener(this);
+            } else {
+                mHighTouchSensitivity.setChecked(HighTouchSensitivity.isEnabled());
             }
         }
 
@@ -394,8 +395,9 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
                         chkPref.isChecked() ? 1 : 0);
                 return true;
             }
-        } else if (preference == mHighTouchSensitivity) {
-            return HighTouchSensitivity.setEnabled(mHighTouchSensitivity.isChecked());
+            if (preference == mHighTouchSensitivity) {
+                return HighTouchSensitivity.setEnabled(mHighTouchSensitivity.isChecked());
+            }
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
@@ -631,7 +633,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
             return HighTouchSensitivity.isSupported();
         } catch (NoClassDefFoundError e) {
             // Hardware abstraction framework not installed
-             return false;
+            return false;
         }
     }
 
