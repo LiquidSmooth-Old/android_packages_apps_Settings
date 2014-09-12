@@ -1850,8 +1850,6 @@
 
         <activity android:name=".liquid.LockscreenButtons" />
 
-        <activity android:name=".liquid.WakeLockBlocker" />
-		
         <activity android:name=".liquid.NotificationSettings" />
 
         <activity android:name=".liquid.Download" />
