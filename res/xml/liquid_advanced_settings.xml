@@ -51,10 +51,4 @@
         android:fragment="com.android.settings.liquid.SystemappRemover"
         android:summary="@string/advanced_systemapp_summary" />
 
-    <PreferenceScreen
-        android:id="@+id/wakelock_blocker"
-        android:title="@string/wakelock_blocker"
-        android:fragment="com.android.settings.liquid.WakeLockBlocker"
-        android:summary="@string/advanced_wakelock_summary" />
-
 </PreferenceScreen>
