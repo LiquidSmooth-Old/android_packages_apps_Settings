@@ -294,7 +294,8 @@
         <com.android.settings.liquid.SystemCheckBoxPreference
             android:key="disable_fc_notifications"
             android:title="@string/disable_fc_notifications_title"
-            android:summary="@string/disable_fc_notifications_summary" />
+            android:summary="@string/disable_fc_notifications_summary"
+            android:defaultValue="false" />
 
     </PreferenceCategory>
 
@@ -312,15 +313,11 @@
             android:inputType="textNoSuggestions"
             android:persistent="false" />
 
-     </PreferenceCategory>
+        <com.android.settings.liquid.SecureCheckBoxPreference
+            android:key="chamber_of_secrets"
+            android:title="@string/chamber_title"
+            android:defaultValue="false" />
 
-     <!-- Must remain at bottom -->
-     <Preference
-         android:key="chamber_of_secrets"
-         android:title="\n \n" />
-
-     <CheckBoxPreference
-         android:key="chamber_of_unlocked_secrets"
-         android:title="@string/chamber_title" />
+    </PreferenceCategory>
 
 </PreferenceScreen>

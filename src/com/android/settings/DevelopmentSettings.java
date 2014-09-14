@@ -162,11 +162,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
     private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
 
-    private static final String KEY_CHAMBER_OF_SECRETS = "chamber_of_secrets";
-
-    private static final String KEY_CHAMBER_OF_UNLOCKED_SECRETS =
-            "chamber_of_unlocked_secrets";
-
     private static final String DEVELOPMENT_SHORTCUT_KEY = "development_shortcut";
 
     private static final String PREF_MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
@@ -231,9 +226,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private ListPreference mAppProcessLimit;
 
     private CheckBoxPreference mShowAllANRs;
-
-    private Preference mChamber;
-    private CheckBoxPreference mChamberUnlocked;
 
     private CheckBoxPreference mDevelopmentShortcut;
 
@@ -378,23 +370,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         mRootAccess.setOnPreferenceChangeListener(this);
         if (!removeRootOptionsIfRequired()) {
             mAllPrefs.add(mRootAccess);
-        }
-
-        mChamber = (Preference) findPreference(KEY_CHAMBER_OF_SECRETS);
-        mAllPrefs.add(mChamber);
-        mChamberUnlocked =
-                findAndInitCheckboxPref(KEY_CHAMBER_OF_UNLOCKED_SECRETS);
-        mChamberUnlocked.setOnPreferenceChangeListener(this);
-
-        boolean chamberOpened = Settings.Secure.getInt(
-                getActivity().getContentResolver(),
-                Settings.Secure.CHAMBER_OF_SECRETS, 0) == 1;
-        mChamberUnlocked.setChecked(chamberOpened);
-
-        if (chamberOpened) {
-            removePreference(mChamber);
-        } else {
-            removePreference(mChamberUnlocked);
         }
 
         mMsob = (ListPreference) findPreference(PREF_MEDIA_SCANNER_ON_BOOT);
@@ -1397,18 +1372,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             writeForceRtlOptions();
         } else if (preference == mWifiDisplayCertification) {
             writeWifiDisplayCertificationOptions();
-        } else if (preference == mChamber) {
-            if (Settings.Secure.getInt(getActivity().getContentResolver(),
-                    Settings.Secure.CHAMBER_OF_SECRETS, 0) == 0) {
-                Settings.Secure.putInt(getActivity().getContentResolver(),
-                        Settings.Secure.CHAMBER_OF_SECRETS, 1);
-                Toast.makeText(getActivity(),
-                        R.string.chamber_toast,
-                        Toast.LENGTH_LONG).show();
-                getPreferenceScreen().removePreference(mChamber);
-                addPreference(mChamberUnlocked);
-                mChamberUnlocked.setChecked(true);
-            }
         } else if (preference == mDevelopmentShortcut) {
             writeDevelopmentShortcutOptions();
         } else {
@@ -1510,11 +1473,6 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
             } else {
                 writeRootAccessOptions(newValue);
             }
-            return true;
-        } else if (preference == mChamberUnlocked) {
-            Settings.Secure.putInt(getActivity().getContentResolver(),
-                    Settings.Secure.CHAMBER_OF_SECRETS,
-                    (Boolean) newValue ? 1 : 0);
             return true;
         } else if (preference == mMsob) {
             Settings.System.putInt(getActivity().getContentResolver(),
