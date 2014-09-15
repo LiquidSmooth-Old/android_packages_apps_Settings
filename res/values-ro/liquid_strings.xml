@@ -241,11 +241,6 @@
   <string name="volume_adjust_sounds_enable_summary">Produce sunete când se ajustează volumul din butoanele de control</string>
   <string name="link_volume_ringtones">Leagă volumele sunetelor de apel cu cel de notificare</string>
   <string name="volume_ring_only_description">Ton de apel</string>
-  <string name="volume_overlay_title">Stil panou de volum</string>
-  <string name="volume_overlay_single">Singur</string>
-  <string name="volume_overlay_expandable">Extensibil</string>
-  <string name="volume_overlay_expanded">Extins</string>
-  <string name="volume_overlay_disable">Dezactivare</string>
   <string name="camera_sounds_title">Sunet la captura foto</string>
   <string name="camera_sounds_summary">Activează sunet la captura cu camera sistemului</string>
   <string name="camera_sound_warning_dialog_text">Dezactivarea sunetului pentru captura camerei este ilegală în unele zone. Vă rugăm verificați legea aplicabilă în țara dumneavoastră</string>
@@ -364,6 +359,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="remove_blacklist_entry">Doriţi să eliminaţi această intrare de pe lista neagră?</string>
   <string name="select_contact">Selectaţi contactul</string>
   <string name="increasing_ring_title">Ton de apel ascendent</string>
+  <string name="increasing_ring_summary">Ringtone starts low then gets higher</string>
   <string name="checkbox_increasing_ring">Activează</string>
   <string name="increasing_ring_min_volume_title">Volumul de început al soneriei</string>
   <string name="increasing_ring_volume_notice">Atenție:\nPentru că volumul de start este setat mai tare decât volumul soneriei, telefonul va suna la volumul soneriei.</string>
@@ -733,6 +729,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
   <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
   <string name="lockscreen_shorcuts_longpress_summary">Lock screen shortcuts on longpress</string>
+  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">Stil</string>
   <string name="lockscreen_style_reset_message">Reset all lock screen colors?</string>
   <string name="lockscreen_icon_title">Lock handle icon</string>
@@ -790,10 +788,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
-  <string name="see_through_title">See through</string>
-  <string name="see_through_summary">Shows the content behind lock screen</string>
-  <string name="blur_radius_title">Blur radius</string>
-  <string name="blur_radius_summary">Set lock screen blur intensity effect</string>
   <string name="notification_style_title">Background style</string>
   <string name="notification_style_summary">Customizes style of the notification drawer</string>
   <string name="notification_wallpaper_title">Background</string>
@@ -1202,15 +1196,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="app_moving_reboot_disabled_desc">Successfully disabled application moving.\n\nThe device needs to be rebooted for the setting to take effect.</string>
   <string name="app_moving_reboot_now_button">Reboot now</string>
   <string name="app_moving_reboot_later_button">Reboot later</string>
-  <string name="wakelock_blocker">Wakelock blocker</string>
-  <string name="wakelock_blocker_title">Activează</string>
-  <string name="wakelock_blocker_summary">Block system wakelocks</string>
-  <string name="wakelock_blocker_save">Save</string>
-  <string name="wakelock_list_header">Available wakelocks</string>
-  <string name="wakelock_blocker_reload">Reload</string>
-  <string name="wakelock_blocker_warning_title">Proceed with caution</string>
-  <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>
   <string name="volume_steps_title">Volume Steps</string>
+  <string name="volume_steps_summary">Change how much the volume changes on each click</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
@@ -1428,7 +1415,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="title_animation_no_override">Prevent app overrides</string>
   <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>
   <string name="animation_duration_default">Implicit</string>
-  <string name="header_summary_animation">@null</string>
   <string name="lock_clock_title">Clock widget</string>
   <string name="lock_clock_summary">Change home or lock screen widget display</string>
   <string name="progressbar_title">Progress bar</string>
@@ -1584,6 +1570,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="battery_bar_animate_title">Charging animation</string>
   <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
   <string name="sound_packages_title">Sound packs</string>
+  <string name="sound_packages_summary">Allows you set custom sound easily</string>
   <string name="install_sound_pack_title">Install sound pack</string>
   <string name="install_sound_pack_summary">Install new sound packs added in SoundPacks folder on the internal storage</string>
   <string name="select_sound_pack_title">Select sound pack</string>
@@ -2159,6 +2146,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
+  <string name="liquid_sound_title">LiquidSmooth sound</string>
+  <string name="liquid_sound_summary">All sound related settings that we have added</string>
   <string name="adaptive_backlight_title">Adaptive backlight</string>
   <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
   <string name="sunlight_enhancement_title">Sunlight enhancement</string>
