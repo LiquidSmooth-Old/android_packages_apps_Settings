@@ -241,11 +241,6 @@
   <string name="volume_adjust_sounds_enable_summary">Παίξτε τον ήχο όταν ρυθμίζοντας την ένταση με σκληρό κλειδιά</string>
   <string name="link_volume_ringtones">Σύνδεση εντάσεων ήχου κλήσης &amp; ειδοποιήσεων</string>
   <string name="volume_ring_only_description">Ήχοι κλήσης</string>
-  <string name="volume_overlay_title">Στυλ πάνελ έντασης</string>
-  <string name="volume_overlay_single">Ενιαία</string>
-  <string name="volume_overlay_expandable">Επεκτάσιμο</string>
-  <string name="volume_overlay_expanded">Επεκταμένη</string>
-  <string name="volume_overlay_disable">Απενεργοποίηση</string>
   <string name="camera_sounds_title">Ήχος κλείστρου κάμερα</string>
   <string name="camera_sounds_summary">Ενεργοποίηση του κλείστρου κάμερα σύστημα ήχου</string>
   <string name="camera_sound_warning_dialog_text">Απενεργοποίηση ήχου φωτογραφηκή μηχανή κλείνω είναι παράνομο σε ορισμένες περιοχές! Παρακαλώ ελέγξτε το εφαρμοστέο δίκαιο στη χώρα σας</string>
@@ -369,6 +364,7 @@
   <string name="remove_blacklist_entry">Θέλετε να αφαιρέσετε αυτή την καταχώριση από τη μαύρη λίστα;?</string>
   <string name="select_contact">Επιλέξτε επαφή</string>
   <string name="increasing_ring_title">Αυξανόμενη ένταση ήχου κλήσης</string>
+  <string name="increasing_ring_summary">Ringtone starts low then gets higher</string>
   <string name="checkbox_increasing_ring">Ενεργοποίηση</string>
   <string name="increasing_ring_min_volume_title">Ένταση έναρξης ήχου κλήσης</string>
   <string name="increasing_ring_volume_notice">Σημείωση:\nΗ ένταση έναρξης είναι υψηλότερη από την ένταση του κουδουνιού, ο ήχος κλήσης θα παίξει με την ένταση του κουδουνιού.</string>
@@ -736,6 +732,8 @@
   <string name="lockscreen_shortcuts_summary">Εμφάνιση ή αλλαγή συντομεύσεων οθόνης κλειδώματος</string>
   <string name="lockscreen_shorcuts_longpress_title">Longpress συντομεύσεις</string>
   <string name="lockscreen_shorcuts_longpress_summary">Κλείδωμα οθόνης συντομεύσεων στη longpress</string>
+  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">Στυλ</string>
   <string name="lockscreen_style_reset_message">Επαναφορά όλων των χρωμάτων οθόνης κλειδώματος</string>
   <string name="lockscreen_icon_title">Κλείδωμα εικονιδιου</string>
@@ -793,10 +791,6 @@
   <string name="lock_pattern_size_4">4 x 4</string>
   <string name="lock_pattern_size_5">5 x 5</string>
   <string name="lock_pattern_size_6">6 x 6</string>
-  <string name="see_through_title">Διαφάνεια</string>
-  <string name="see_through_summary">Δείχνει το περιεχόμενο πίσω από την οθόνη κλειδαριών</string>
-  <string name="blur_radius_title">Θαμπάδα ακτίνα</string>
-  <string name="blur_radius_summary">Ορισμός έντασης θαμπωματος οθόνης κλειδώματος</string>
   <string name="notification_style_title">Στυλ φόντου</string>
   <string name="notification_style_summary">Προσαρμόζει το στυλ του συρταριού κοινοποίηση</string>
   <string name="notification_wallpaper_title">Φόντο</string>
@@ -1202,15 +1196,8 @@
   <string name="app_moving_reboot_disabled_desc">Εφαρμογή με επιτυχία ενεργοποιημένη συσκευή moving.\n\nThe πρέπει να γίνει επανεκκίνηση για τη ρύθμιση για να εφαρμοστείτε.</string>
   <string name="app_moving_reboot_now_button">Επανεκκίνηση τώρα;</string>
   <string name="app_moving_reboot_later_button">Επανεκκίνηση αργότερα</string>
-  <string name="wakelock_blocker">Wakelock αποκλεισμού αναδυόμενων παραθύρων</string>
-  <string name="wakelock_blocker_title">Ενεργοποίηση</string>
-  <string name="wakelock_blocker_summary">Wakelocks μπλοκ συστήματος</string>
-  <string name="wakelock_blocker_save">Αποθήκευση</string>
-  <string name="wakelock_list_header">Διαθέσιμα wakelocks</string>
-  <string name="wakelock_blocker_reload">Επαναφόρτωση</string>
-  <string name="wakelock_blocker_warning_title">Συνεχίστε με Προσοχή</string>
-  <string name="wakelock_blocker_warning">Κλείδωμα wakelocks έχουν τη δυνατότητα να προκαλέσει αστάθεια, συντριβές ή απώλειας δεδομένων.</string>
   <string name="volume_steps_title">Βήματα έντασης</string>
+  <string name="volume_steps_summary">Change how much the volume changes on each click</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
@@ -1428,7 +1415,6 @@
   <string name="title_animation_no_override">Αποφευχθεί παρακάμψεις app</string>
   <string name="summary_animation_no_override">Αποτρέψετε την παράκαμψη μεταβάσεις apps</string>
   <string name="animation_duration_default">Προεπιλογή</string>
-  <string name="header_summary_animation">@null</string>
   <string name="lock_clock_title">Widget ρολογιού</string>
   <string name="lock_clock_summary">Αλλάξετε το σπίτι ή το κλείδωμα οθόνης widget</string>
   <string name="progressbar_title">Γραμμή προόδου</string>
@@ -1584,6 +1570,7 @@
   <string name="battery_bar_animate_title">Κινούμενο εικονίδιο φόρτισης</string>
   <string name="battery_bar_animate_summary">Η φόρτωση animation μπορεί να οδηγήσει σε μια κακή εμπειρία χρήστη. Ενεργοποίηση κατά την κρίση σας.</string>
   <string name="sound_packages_title">Πακέτα ήχου</string>
+  <string name="sound_packages_summary">Allows you set custom sound easily</string>
   <string name="install_sound_pack_title">Εγκατάσταση ήχου pack</string>
   <string name="install_sound_pack_summary">Εγκαταστήσετε νέα υγιή πακέτα που προστίθενται στο φάκελο SoundPacks για την εσωτερική αποθήκευση</string>
   <string name="select_sound_pack_title">Επιλέξτε το στοιχείο πακέτο ήχου</string>
@@ -2159,6 +2146,8 @@
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
+  <string name="liquid_sound_title">LiquidSmooth sound</string>
+  <string name="liquid_sound_summary">All sound related settings that we have added</string>
   <string name="adaptive_backlight_title">Adaptive backlight</string>
   <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
   <string name="sunlight_enhancement_title">Sunlight enhancement</string>

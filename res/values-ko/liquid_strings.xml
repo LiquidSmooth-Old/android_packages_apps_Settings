@@ -241,11 +241,6 @@
   <string name="volume_adjust_sounds_enable_summary">하드웨어키로 볼륨을 조절할 때 소리를 재생</string>
   <string name="link_volume_ringtones">링크 벨소리 &amp; 알림 볼륨</string>
   <string name="volume_ring_only_description">벨소리</string>
-  <string name="volume_overlay_title">볼륨 패널 스타일</string>
-  <string name="volume_overlay_single">단일</string>
-  <string name="volume_overlay_expandable">확장 가능한</string>
-  <string name="volume_overlay_expanded">확장</string>
-  <string name="volume_overlay_disable">비활성화</string>
   <string name="camera_sounds_title">카메라 셔터 소리</string>
   <string name="camera_sounds_summary">시스템 카메라 셔터 소리를 사용합니다</string>
   <string name="camera_sound_warning_dialog_text">카메라 셔터 소리를 사용하지 않도록 설정하면 일부 지역에서는 불법입니다! 해당 국가의 관련 법률을 확인하시기 바랍니다</string>
@@ -364,6 +359,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="remove_blacklist_entry">이 블랙 리스트 항목을 제거 하시겠습니까?</string>
   <string name="select_contact">연락처 선택</string>
   <string name="increasing_ring_title">Ascending ringtone</string>
+  <string name="increasing_ring_summary">Ringtone starts low then gets higher</string>
   <string name="checkbox_increasing_ring">활성화</string>
   <string name="increasing_ring_min_volume_title">Ringing start volume</string>
   <string name="increasing_ring_volume_notice">Notice:\nAs the start volume is set higher than the ringer volume, the ring tone will be played using the ringer volume.</string>
@@ -734,6 +730,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
   <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
   <string name="lockscreen_shorcuts_longpress_summary">Lock screen shortcuts on longpress</string>
+  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">스타일</string>
   <string name="lockscreen_style_reset_message">모든 잠금 화면 색상을 재설정?</string>
   <string name="lockscreen_icon_title">잠금 핸들 아이콘</string>
@@ -791,10 +789,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
-  <string name="see_through_title">See through</string>
-  <string name="see_through_summary">Shows the content behind lock screen</string>
-  <string name="blur_radius_title">반경 블러</string>
-  <string name="blur_radius_summary">Set lock screen blur intensity effect</string>
   <string name="notification_style_title">배경 스타일</string>
   <string name="notification_style_summary">Customizes style of the notification drawer</string>
   <string name="notification_wallpaper_title">배경</string>
@@ -1201,15 +1195,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="app_moving_reboot_disabled_desc">Successfully disabled application moving.\n\nThe device needs to be rebooted for the setting to take effect.</string>
   <string name="app_moving_reboot_now_button">Reboot now</string>
   <string name="app_moving_reboot_later_button">Reboot later</string>
-  <string name="wakelock_blocker">Wakelock blocker</string>
-  <string name="wakelock_blocker_title">활성화</string>
-  <string name="wakelock_blocker_summary">Block system wakelocks</string>
-  <string name="wakelock_blocker_save">Save</string>
-  <string name="wakelock_list_header">Available wakelocks</string>
-  <string name="wakelock_blocker_reload">Reload</string>
-  <string name="wakelock_blocker_warning_title">Proceed with caution</string>
-  <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>
   <string name="volume_steps_title">Volume Steps</string>
+  <string name="volume_steps_summary">Change how much the volume changes on each click</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
@@ -1427,7 +1414,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="title_animation_no_override">Prevent app overrides</string>
   <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>
   <string name="animation_duration_default">기본</string>
-  <string name="header_summary_animation">@null</string>
   <string name="lock_clock_title">Clock widget</string>
   <string name="lock_clock_summary">Change home or lock screen widget display</string>
   <string name="progressbar_title">Progress bar</string>
@@ -1583,6 +1569,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="battery_bar_animate_title">충전 애니메이션</string>
   <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
   <string name="sound_packages_title">Sound packs</string>
+  <string name="sound_packages_summary">Allows you set custom sound easily</string>
   <string name="install_sound_pack_title">Install sound pack</string>
   <string name="install_sound_pack_summary">Install new sound packs added in SoundPacks folder on the internal storage</string>
   <string name="select_sound_pack_title">Select sound pack</string>
@@ -2158,6 +2145,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
+  <string name="liquid_sound_title">LiquidSmooth sound</string>
+  <string name="liquid_sound_summary">All sound related settings that we have added</string>
   <string name="adaptive_backlight_title">Adaptive backlight</string>
   <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
   <string name="sunlight_enhancement_title">Sunlight enhancement</string>

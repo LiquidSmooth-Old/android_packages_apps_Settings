@@ -242,11 +242,6 @@
   <string name="volume_adjust_sounds_enable_summary">Emitir un sonido cuando se ajusta el volumen con las teclas</string>
   <string name="link_volume_ringtones">Vincular volumen de llamadas &amp; y notificaciones</string>
   <string name="volume_ring_only_description">Tono de llamada</string>
-  <string name="volume_overlay_title">Estilo del panel de volumen</string>
-  <string name="volume_overlay_single">Simple</string>
-  <string name="volume_overlay_expandable">Expandible</string>
-  <string name="volume_overlay_expanded">Expandido</string>
-  <string name="volume_overlay_disable">Desactivado</string>
   <string name="camera_sounds_title">Sonido de captura de la cámara</string>
   <string name="camera_sounds_summary">Habilitar sonido del obturador de la cámara de sistema</string>
   <string name="camera_sound_warning_dialog_text">Desactivar el sonido del disparador es ilegal en algunas áreas. Por favor revise la ley aplicable en su país</string>
@@ -270,7 +265,7 @@
   <string name="keyboard_rotation_toggle_title">Rotación de teclado automática</string>
   <string name="keyboard_rotation_toggle_summary">Fuerza de rotación automática cuando se muestra el teclado</string>
   <string name="keyboard_rotation_timeout_title">Tiempo de espera de auto-rotación</string>
-  <string name="keyboard_rotation_timeout_summary">Deshabilita sensor de auto-rotación <xliff:g id="rotate_timeout">%1$s</xliff:g> segundos después de que se oculta el teclado</string>
+  <string name="keyboard_rotation_timeout_summary">Deshabilita sensor de auto-rotación <xliff:g id="rotate_timeout">%1$s</xliff:g> segundos después de que se oculta el teclado<xliff:g id="rotate_timeout"> %1$ s </xliff:g> segundos después de que se oculta el teclado</string>
   <string name="keyboard_rotation_dialog">Esta función obliga auto-rotación para encender temporalmente mientras se muestra el teclado.  No tiene efecto cuando la rotación automática ya está habilitada.</string>
   <string name="show_enter_key_title">Mostrar tecla \"Intro\"</string>
   <string name="show_enter_key_summary">Forzar que el teclado muestre la tecla \"Intro\" en lugar de la tecla de emoticones</string>
@@ -348,6 +343,7 @@ Opciones adicionales están disponibles por mucho tiempo-presionar una línea. S
   <string name="remove_blacklist_entry">¿Quieres remover esta entrada de la lista negra?</string>
   <string name="select_contact">Seleccionar contacto</string>
   <string name="increasing_ring_title">Tono de sonido ascendente</string>
+  <string name="increasing_ring_summary">Ringtone starts low then gets higher</string>
   <string name="checkbox_increasing_ring">Activar</string>
   <string name="increasing_ring_min_volume_title">Inicio de volúmen del timbre</string>
   <string name="increasing_ring_volume_notice">Advertencia:\nSi el volúmen inicial se configura más alto que el volúmen de timbre, el sonido usará el volúmen de timbre.</string>
@@ -715,6 +711,8 @@ Opciones adicionales están disponibles por mucho tiempo-presionar una línea. S
   <string name="lockscreen_shortcuts_summary">Ver o cambiar los accesos directos de la pantalla de bloqueo</string>
   <string name="lockscreen_shorcuts_longpress_title">Accesos directos mantener apretado</string>
   <string name="lockscreen_shorcuts_longpress_summary">Bloqueo pantalla accesos directos en longpress</string>
+  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">Estilo</string>
   <string name="lockscreen_style_reset_message">¿Deseas restablecer todos los colores de la pantalla de bloqueo?</string>
   <string name="lockscreen_icon_title">Icono de anillo de bloqueo</string>
@@ -772,10 +770,6 @@ Opciones adicionales están disponibles por mucho tiempo-presionar una línea. S
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
-  <string name="see_through_title">Ver a través</string>
-  <string name="see_through_summary">Mostrar el contenido detrás de la pantalla de bloqueo</string>
-  <string name="blur_radius_title">Radio de borrosidad</string>
-  <string name="blur_radius_summary">Sistema de bloqueo de pantalla desenfoque efecto intensidad</string>
   <string name="notification_style_title">Estilo del fondo</string>
   <string name="notification_style_summary">Personalizar el estilo del menú de notificaciones</string>
   <string name="notification_wallpaper_title">Fondo</string>
@@ -1185,15 +1179,8 @@ Plural Form
   <string name="app_moving_reboot_disabled_desc">Moving.\n\nThe dispositivo habilitado correctamente debe reiniciarse para que la puesta en vigor.</string>
   <string name="app_moving_reboot_now_button">Reiniciar ahora</string>
   <string name="app_moving_reboot_later_button">Reiniciar después</string>
-  <string name="wakelock_blocker">Bloquear el despertador de Bloqueo</string>
-  <string name="wakelock_blocker_title">Activar</string>
-  <string name="wakelock_blocker_summary">Sistema de bloque wakelocks</string>
-  <string name="wakelock_blocker_save">Guardar</string>
-  <string name="wakelock_list_header">Despertador de Bloqueo disponible</string>
-  <string name="wakelock_blocker_reload">Recargar</string>
-  <string name="wakelock_blocker_warning_title">Procede con precaución</string>
-  <string name="wakelock_blocker_warning">Bloqueos en el despertador de Bloqueo tiende potencialmente a causar inestabilidad, accidentes o pérdidas de datos.</string>
   <string name="volume_steps_title">Niveles de volumen</string>
+  <string name="volume_steps_summary">Change how much the volume changes on each click</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
@@ -1411,7 +1398,6 @@ Plural Form
   <string name="title_animation_no_override">Evitar anulaciones de apps</string>
   <string name="summary_animation_no_override">Evitar a aplicaciones reemplazar las transiciones</string>
   <string name="animation_duration_default">Por defecto</string>
-  <string name="header_summary_animation">@null</string>
   <string name="lock_clock_title">Widget Clock (cLock)</string>
   <string name="lock_clock_summary">Cambiar el widget de la pantalla de inicio o de bloqueo</string>
   <string name="progressbar_title">Barra de progreso</string>
@@ -1567,6 +1553,7 @@ Plural Form
   <string name="battery_bar_animate_title">Animación de carga</string>
   <string name="battery_bar_animate_summary">La animación de carga puede resultar en una experiencia de usuario pobre. Permiten a su propia discreción.</string>
   <string name="sound_packages_title">Paquetes de sonido</string>
+  <string name="sound_packages_summary">Allows you set custom sound easily</string>
   <string name="install_sound_pack_title">Instalar el paquete de sonido</string>
   <string name="install_sound_pack_summary">Instalar el paquete de sonido</string>
   <string name="select_sound_pack_title">Seleccione el paquete de sonido</string>
@@ -2142,6 +2129,8 @@ Plural Form
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
+  <string name="liquid_sound_title">LiquidSmooth sound</string>
+  <string name="liquid_sound_summary">All sound related settings that we have added</string>
   <string name="adaptive_backlight_title">Adaptive backlight</string>
   <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
   <string name="sunlight_enhancement_title">Sunlight enhancement</string>

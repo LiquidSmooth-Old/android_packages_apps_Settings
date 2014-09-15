@@ -241,11 +241,6 @@
   <string name="volume_adjust_sounds_enable_summary">Відтворювати звук під час регулювання гучності із жорстких клавіш</string>
   <string name="link_volume_ringtones">Пов\'язати гучність рінгтона &amp; сповіщень</string>
   <string name="volume_ring_only_description">Рінгтон</string>
-  <string name="volume_overlay_title">Стиль панелі звуку</string>
-  <string name="volume_overlay_single">Одиночна</string>
-  <string name="volume_overlay_expandable">Розширювана</string>
-  <string name="volume_overlay_expanded">Розгорнута</string>
-  <string name="volume_overlay_disable">Вимкнено</string>
   <string name="camera_sounds_title">Звук затвора камери</string>
   <string name="camera_sounds_summary">Увімкнути звук затвора камери системи</string>
   <string name="camera_sound_warning_dialog_text">Вимкнення звуку затвора камери є незаконним в деяких країнах! В Україні теж. Вимикайте на ваш страх та ризик</string>
@@ -352,6 +347,7 @@
   <string name="remove_blacklist_entry">Ви хочете видалити цей запис з чорного списку?</string>
   <string name="select_contact">Вибрати контакт</string>
   <string name="increasing_ring_title">Наростаюча гучність дзвінка</string>
+  <string name="increasing_ring_summary">Ringtone starts low then gets higher</string>
   <string name="checkbox_increasing_ring">Увімкнути</string>
   <string name="increasing_ring_min_volume_title">Початкова гучність дзвінка</string>
   <string name="increasing_ring_volume_notice">Зауваження:\nЯкщо початкова гучність дзвінка вища за встановлену системну гучність, дзвінок буде відтворено на гучності, встановленій у системі.</string>
@@ -631,9 +627,9 @@
   <string name="quiet_hours_dim">Вимкнути світлові сповіщення</string>
   <string name="quiet_hours_dim_on">Світлове сповіщення буде відключено</string>
   <string name="quiet_hours_dim_off">Світлове сповіщення працюватиме як зазвичай</string>
-  <string name="quiet_hours_system">Disable system sounds</string>
-  <string name="quiet_hours_system_on">System sounds will be disabled</string>
-  <string name="quiet_hours_system_off">System sounds will function as normal</string>
+  <string name="quiet_hours_system">Вимкнути системні звуки</string>
+  <string name="quiet_hours_system_on">Системні звуки буде вимкнено</string>
+  <string name="quiet_hours_system_off">Системні звуки функціюватимуть як зазвичай</string>
   <string name="quiet_hours_haptic">Вимкнути вібровіддачу</string>
   <string name="quiet_hours_haptic_on">Вібровіддачу буде вимкнуто</string>
   <string name="quiet_hours_haptic_off">Вібровіддача працюватиме як зазвичай</string>
@@ -719,6 +715,8 @@
   <string name="lockscreen_shortcuts_summary">Переглянути чи змінити користувацькі ярлики екрану блокування</string>
   <string name="lockscreen_shorcuts_longpress_title">Довгий дотик до ярлика</string>
   <string name="lockscreen_shorcuts_longpress_summary">Активація ярликів при довгому натисканні</string>
+  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">Стиль</string>
   <string name="lockscreen_style_reset_message">Скинути всі кольори екрану блокування?</string>
   <string name="lockscreen_icon_title">Значок кільця екрану блокування</string>
@@ -776,10 +774,6 @@
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
-  <string name="see_through_title">Показувати наскрізь</string>
-  <string name="see_through_summary">Показувати вміст позаду екрана блокування</string>
-  <string name="blur_radius_title">Радіус розмиття</string>
-  <string name="blur_radius_summary">Задати інтенсивність ефекту розмиття екрана блокування</string>
   <string name="notification_style_title">Стиль тла</string>
   <string name="notification_style_summary">Налаштовує стиль панелі сповіщень</string>
   <string name="notification_wallpaper_title">Тло</string>
@@ -1040,7 +1034,7 @@
   <string name="lockscreen_rotation_summary_extra">Режим обертання екрана</string>
   <string name="lockscreen_battery_status_title">Стан батареї на екрані блокування</string>
   <string name="lockscreen_battery_status_summary">Завжди відображати статус батареї на екрані блокування</string>
-  <string name="cpu_info">CPU</string>
+  <string name="cpu_info">ЦП</string>
   <string name="mem_info">Пам\'ять</string>
   <string name="adb_over_network">Налагодження по мережі</string>
   <string name="adb_over_network_summary">Увімкнути режим налагодження TCP/IP через мережеві інтерфейси (Wi-Fi та USB-мережі). Це налаштування скидається при перезавантаженні</string>
@@ -1187,15 +1181,8 @@
   <string name="app_moving_reboot_disabled_desc">Можливість переміщення додатків вимкнена.\n\nЩоб зміни вступили в силу потрібно перезавантажити пристрій.</string>
   <string name="app_moving_reboot_now_button">Перезавантажити зараз</string>
   <string name="app_moving_reboot_later_button">Перезавантажити пізніше</string>
-  <string name="wakelock_blocker">Блокування ввімкнення</string>
-  <string name="wakelock_blocker_title">Увімкнути</string>
-  <string name="wakelock_blocker_summary">Блокувати системні wakelockи</string>
-  <string name="wakelock_blocker_save">Зберегти</string>
-  <string name="wakelock_list_header">Доступні wakelockи</string>
-  <string name="wakelock_blocker_reload">Оновити</string>
-  <string name="wakelock_blocker_warning_title">Використовуйте на свій страх і ризик</string>
-  <string name="wakelock_blocker_warning">Блокування wakelockів може викликати нестабільність, креші чи втрату даних.</string>
   <string name="volume_steps_title">Рівні гучності</string>
+  <string name="volume_steps_summary">Change how much the volume changes on each click</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
@@ -1413,7 +1400,6 @@
   <string name="title_animation_no_override">Запобігти перевизначення програми</string>
   <string name="summary_animation_no_override">Запобігти перевизначення переходів в програмах</string>
   <string name="animation_duration_default">За замовчуванням</string>
-  <string name="header_summary_animation">Пусто</string>
   <string name="lock_clock_title">Віджет годинника</string>
   <string name="lock_clock_summary">Зміна налаштувань відображення віджету на головному екрані або екрані блокування</string>
   <string name="progressbar_title">Прогрес бар</string>
@@ -1569,6 +1555,7 @@
   <string name="battery_bar_animate_title">Анімація заряджання</string>
   <string name="battery_bar_animate_summary">Зміна анімації заряджання може призвести до негативних вражень від використання. Використовуйте на власний розсуд.</string>
   <string name="sound_packages_title">Набори звуків</string>
+  <string name="sound_packages_summary">Allows you set custom sound easily</string>
   <string name="install_sound_pack_title">Встановити набір звуків</string>
   <string name="install_sound_pack_summary">Встановити нові набори звуків у папку наборів звуків у внутрішній пам\'яті</string>
   <string name="select_sound_pack_title">Виберіть набір звуків</string>
@@ -2144,6 +2131,8 @@
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
+  <string name="liquid_sound_title">LiquidSmooth sound</string>
+  <string name="liquid_sound_summary">All sound related settings that we have added</string>
   <string name="adaptive_backlight_title">Adaptive backlight</string>
   <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
   <string name="sunlight_enhancement_title">Sunlight enhancement</string>

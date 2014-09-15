@@ -241,11 +241,6 @@
   <string name="volume_adjust_sounds_enable_summary">Fiziksel tuşlarla ses seviyesini değiştirirken ses çıkarır</string>
   <string name="link_volume_ringtones">Zilsesi ve bildirim ses düzeyini bağla</string>
   <string name="volume_ring_only_description">Zil sesi</string>
-  <string name="volume_overlay_title">Ses paneli stili</string>
-  <string name="volume_overlay_single">Tek</string>
-  <string name="volume_overlay_expandable">Genişletilebilir</string>
-  <string name="volume_overlay_expanded">Genişletilmiş</string>
-  <string name="volume_overlay_disable">Pasif</string>
   <string name="camera_sounds_title">Kamera Deklanşör sesi</string>
   <string name="camera_sounds_summary">Sistem fotoğraf makinesi obtüratör ses etkinleştirme</string>
   <string name="camera_sound_warning_dialog_text">Kamera çekim ses devre dışı bırakmak bazı alanlarda yasa dışı! Lütfen ülkenizdeki yasa kontrol edin</string>
@@ -269,7 +264,7 @@
   <string name="keyboard_rotation_toggle_title">Otomatik Klavye rotasyonu</string>
   <string name="keyboard_rotation_toggle_summary">klavye gösterildiğinde Otomatik Döndürmeye zorla</string>
   <string name="keyboard_rotation_timeout_title">Otomatik Döndür zaman aşımı</string>
-  <string name="keyboard_rotation_timeout_summary">Devre dışı bırakır Otomatik Döndür-sensör <xliff:g id="rotate_timeout">%1$s</xliff:g> saniye sonra klavye gizli</string>
+  <string name="keyboard_rotation_timeout_summary">Devre dışı bırakır Otomatik Döndür-sensör <xliff:g id="rotate_timeout">%1$s</xliff:g> saniye sonra klavye gizli <xliff:g id="rotate_timeout"> %1$s </xliff:g> saniye sonra klavye gizli</string>
   <string name="keyboard_rotation_dialog">Bu özellik geçici olarak klavye gösterilir ise etkinleştirmek için Otomatik Döndür zorlar.  Otomatik Döndür zaten etkin olduğunda etkisizdir.</string>
   <string name="show_enter_key_title">Giriş anahtarını göster</string>
   <string name="show_enter_key_summary">Klavyeyi ifadeleri göstermeye zorla</string>
@@ -343,6 +338,7 @@
   <string name="remove_blacklist_entry">Bu kara liste girişini kaldırmak istiyor musunuz?</string>
   <string name="select_contact">Rehberden seç</string>
   <string name="increasing_ring_title">Artan zil sesi</string>
+  <string name="increasing_ring_summary">Ringtone starts low then gets higher</string>
   <string name="checkbox_increasing_ring">Etkinleştir</string>
   <string name="increasing_ring_min_volume_title">Açılış sesini çal</string>
   <string name="increasing_ring_volume_notice">Not:\nBaşlangıç ses düzeyi, normal zil sesi düzeyinden yüksek olduğunda, zil sesi, normal zil sesi düzeyinde çalar.</string>
@@ -710,6 +706,8 @@
   <string name="lockscreen_shortcuts_summary">Özel kilit ekranı kısayollarını görüntüleyin ve değiştirin</string>
   <string name="lockscreen_shorcuts_longpress_title">Uzun basma kısayolları</string>
   <string name="lockscreen_shorcuts_longpress_summary">Kilit ekranı uzun basma kısayolları</string>
+  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">Stil</string>
   <string name="lockscreen_style_reset_message">Tüm kilit ekran renklerini sıfırla?</string>
   <string name="lockscreen_icon_title">Kilit tutamaç simgesi</string>
@@ -767,10 +765,6 @@
   <string name="lock_pattern_size_4">4 x 4</string>
   <string name="lock_pattern_size_5">5 x 5</string>
   <string name="lock_pattern_size_6">6 x 6</string>
-  <string name="see_through_title">Bulanık göster</string>
-  <string name="see_through_summary">Kilit perde arkasında içerik gösterir</string>
-  <string name="blur_radius_title">Bulanıklık yarıçapı</string>
-  <string name="blur_radius_summary">Kilit ekranın bulanıklık yoğunluğunu ayarlayın</string>
   <string name="notification_style_title">Arka plan stili</string>
   <string name="notification_style_summary">Bildirim çekmece stilini özelleştirir</string>
   <string name="notification_wallpaper_title">Arka plan</string>
@@ -1175,15 +1169,8 @@
   <string name="app_moving_reboot_disabled_desc">Başarıyla etkinleştirilmiş uygulama moving.\n\nThe aygıt ayarın etkinleşmesi için yeniden başlatılması gerekir.</string>
   <string name="app_moving_reboot_now_button">Şimdi yeniden başlat</string>
   <string name="app_moving_reboot_later_button">Daha sonra yeniden başlat</string>
-  <string name="wakelock_blocker">Wakelock engelleyici</string>
-  <string name="wakelock_blocker_title">Etkinleştir</string>
-  <string name="wakelock_blocker_summary">Sistem uyanırken kilitlemeyi engelle</string>
-  <string name="wakelock_blocker_save">Kaydet</string>
-  <string name="wakelock_list_header">Mevcut wakelocks</string>
-  <string name="wakelock_blocker_reload">Güncelle</string>
-  <string name="wakelock_blocker_warning_title">Dikkatle hareket edin</string>
-  <string name="wakelock_blocker_warning">Engelleme wakelocks istikrarsızlık, gürültüyle çarpmak ya da veri kaybına neden potansiyeline sahip.</string>
   <string name="volume_steps_title">Ses Seviyesi</string>
+  <string name="volume_steps_summary">Change how much the volume changes on each click</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
@@ -1401,7 +1388,6 @@
   <string name="title_animation_no_override">Uygulama geçersiz kılmalarını önle</string>
   <string name="summary_animation_no_override">Uygulamaları geçersiz geçişleri önle</string>
   <string name="animation_duration_default">Varsayılan</string>
-  <string name="header_summary_animation">@null</string>
   <string name="lock_clock_title">Saat widgeti</string>
   <string name="lock_clock_summary">Ev ya da kilit ekran widget görüntülenme biçimini değiştirme</string>
   <string name="progressbar_title">İlerleme çubuğu</string>
@@ -1557,6 +1543,7 @@
   <string name="battery_bar_animate_title">Şarj animasyonu</string>
   <string name="battery_bar_animate_summary">Şarj animasyonu kötü bir kullanıcı deneyimi içinde sonuçlanabilir. Kendi takdirine etkinleştirin.</string>
   <string name="sound_packages_title">Ses paketleri</string>
+  <string name="sound_packages_summary">Allows you set custom sound easily</string>
   <string name="install_sound_pack_title">Ses paketi yükleyin</string>
   <string name="install_sound_pack_summary">Dahili depolama SoundPacks klasöründe eklendi yeni ses paketlerini yükleme</string>
   <string name="select_sound_pack_title">Ses paketi seçin</string>
@@ -2132,6 +2119,8 @@
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
+  <string name="liquid_sound_title">LiquidSmooth sound</string>
+  <string name="liquid_sound_summary">All sound related settings that we have added</string>
   <string name="adaptive_backlight_title">Adaptive backlight</string>
   <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
   <string name="sunlight_enhancement_title">Sunlight enhancement</string>

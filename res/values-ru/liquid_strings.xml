@@ -241,11 +241,6 @@
   <string name="volume_adjust_sounds_enable_summary">Проигрывать звук при настройке громкости</string>
   <string name="link_volume_ringtones">Объединить громкость звонка &amp; уведомлений</string>
   <string name="volume_ring_only_description">Звонок</string>
-  <string name="volume_overlay_title">Стиль звуковой панели</string>
-  <string name="volume_overlay_single">Одиночная</string>
-  <string name="volume_overlay_expandable">Расширяемая</string>
-  <string name="volume_overlay_expanded">Расширенная</string>
-  <string name="volume_overlay_disable">Выключить</string>
   <string name="camera_sounds_title">Звук затвора камеры</string>
   <string name="camera_sounds_summary">Включите звук затвора камеры</string>
   <string name="camera_sound_warning_dialog_text">Отключение звука затвора камеры является незаконным в некоторых областях!</string>
@@ -275,8 +270,8 @@
   <string name="show_enter_key_summary">Принудительно показывать кнопку ввода вместо кнопки смайликов</string>
   <string name="ime_switcher_notify">Уведомление выбора метода ввода</string>
   <string name="ime_switcher_notify_summary">Отображать уведомление выбора метода ввода</string>
-  <string name="high_touch_sensitivity_title">High touch sensitivity</string>
-  <string name="high_touch_sensitivity_summary">Increase the screen\'s sensitivity so you can touch it while wearing gloves</string>
+  <string name="high_touch_sensitivity_title">Высокая чувствительность</string>
+  <string name="high_touch_sensitivity_summary">Увеличить чувствительность экрана, для работы в перчатках</string>
   <string name="root_access">Root-доступ</string>
   <string name="root_access_warning_title">Разрешить root-доступ?</string>
   <string name="root_access_warning_message">Позволение приложениям запрашивать root-доступ очень опасно и может поставить под угрозу безопасность вашей системы!</string>
@@ -343,6 +338,7 @@
   <string name="remove_blacklist_entry">Вы хотите удалить этот номер из «черного списка»?</string>
   <string name="select_contact">Выберите контакт</string>
   <string name="increasing_ring_title">Нарастающий звонок</string>
+  <string name="increasing_ring_summary">Мелодия начинается с низкой громкости, а затем становится выше</string>
   <string name="checkbox_increasing_ring">Включить</string>
   <string name="increasing_ring_min_volume_title">Начальная громкость звонка</string>
   <string name="increasing_ring_volume_notice">Обратите внимание: \nAs стартовая громкость установлена выше, чем громкость, звонок будет воспроизводиться с громкостью звонка.</string>
@@ -464,7 +460,7 @@
   <string name="shortcuts_icon_picker_pocket">Карман</string>
   <string name="shortcuts_icon_picker_quicksettings">Быстрые настройки</string>
   <string name="shortcuts_icon_picker_rss">RSS-канал</string>
-  <string name="shortcuts_icon_picker_sdcard">SDCard</string>
+  <string name="shortcuts_icon_picker_sdcard">SD карта</string>
   <string name="shortcuts_icon_picker_search">Поиск</string>
   <string name="shortcuts_icon_picker_sms">Сообщения</string>
   <string name="shortcuts_icon_picker_tasks">Задачи</string>
@@ -622,9 +618,9 @@
   <string name="quiet_hours_dim">Отключить световое уведомление</string>
   <string name="quiet_hours_dim_on">Световое уведомление будет отключено</string>
   <string name="quiet_hours_dim_off">Световое уведомление будет работать как обычно</string>
-  <string name="quiet_hours_system">Disable system sounds</string>
-  <string name="quiet_hours_system_on">System sounds will be disabled</string>
-  <string name="quiet_hours_system_off">System sounds will function as normal</string>
+  <string name="quiet_hours_system">Отключение системных звуков</string>
+  <string name="quiet_hours_system_on">Системные звуки будут отключены</string>
+  <string name="quiet_hours_system_off">Системные звуки будут работать в обычном режиме</string>
   <string name="quiet_hours_haptic">Отключить виброотдачу</string>
   <string name="quiet_hours_haptic_on">Виброотдача будет отключена</string>
   <string name="quiet_hours_haptic_off">Виброотдача будет работать как обычно</string>
@@ -710,6 +706,8 @@
   <string name="lockscreen_shortcuts_summary">Просмотреть или изменить ярлыки на экране блокировки</string>
   <string name="lockscreen_shorcuts_longpress_title">Длительное нажатие на ярлыки</string>
   <string name="lockscreen_shorcuts_longpress_summary">Ярлыки долгого нажатия на экране блокировки</string>
+  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">Стиль</string>
   <string name="lockscreen_style_reset_message">Сбросить все цвета экрана блокировки?</string>
   <string name="lockscreen_icon_title">Значок кружка экрана блокировки</string>
@@ -767,10 +765,6 @@
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
-  <string name="see_through_title">Показывать насквозь</string>
-  <string name="see_through_summary">Показывает содержимое позади экрана блокировки</string>
-  <string name="blur_radius_title">Радиус размытия</string>
-  <string name="blur_radius_summary">Задать эффект интенсивности размытия  экрана блокировки</string>
   <string name="notification_style_title">Стиль фона</string>
   <string name="notification_style_summary">Настраивает стиль панели уведомлений</string>
   <string name="notification_wallpaper_title">Фон</string>
@@ -1177,15 +1171,8 @@
   <string name="app_moving_reboot_disabled_desc">Возможность перемещения приложений выключена .\n\nЧтобы изменения вступили в силу нужно перезагрузить устройство.</string>
   <string name="app_moving_reboot_now_button">Перезагрузить сейчас</string>
   <string name="app_moving_reboot_later_button">Перезагрузить позже</string>
-  <string name="wakelock_blocker">Блокировка включения</string>
-  <string name="wakelock_blocker_title">Включить</string>
-  <string name="wakelock_blocker_summary">Блокировать системные вейклоки</string>
-  <string name="wakelock_blocker_save">Сохранить</string>
-  <string name="wakelock_list_header">Доступные вейклоки</string>
-  <string name="wakelock_blocker_reload">Обновить</string>
-  <string name="wakelock_blocker_warning_title">Используйте на свой страх и риск</string>
-  <string name="wakelock_blocker_warning">Блок включения может вызвать нестабильность.</string>
   <string name="volume_steps_title">Уровни громкости</string>
+  <string name="volume_steps_summary">Change how much the volume changes on each click</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
@@ -1403,7 +1390,6 @@
   <string name="title_animation_no_override">Предотвратить переопределения приложения</string>
   <string name="summary_animation_no_override">Предотвратить переопределение переходов в приложениях</string>
   <string name="animation_duration_default">По умолчанию</string>
-  <string name="header_summary_animation">@null</string>
   <string name="lock_clock_title">Виджет часов</string>
   <string name="lock_clock_summary">Просмотр или изменение настроек отображения виджета «cLock» на главном экране или экране блокировки</string>
   <string name="progressbar_title">Шкала выполнения</string>
@@ -1559,6 +1545,7 @@
   <string name="battery_bar_animate_title">Анимация зарядки</string>
   <string name="battery_bar_animate_summary">Изменение анимации зарядки может привести к негативным впечатлениям от использования. используйте по собственному усмотрению.</string>
   <string name="sound_packages_title">Наборы звуков</string>
+  <string name="sound_packages_summary">Allows you set custom sound easily</string>
   <string name="install_sound_pack_title">Установить набор звуков</string>
   <string name="install_sound_pack_summary">Установить новые наборы звуков в папку наборов звуков в внутренней памяти</string>
   <string name="select_sound_pack_title">Выберите набор звуков</string>
@@ -2134,6 +2121,8 @@
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
+  <string name="liquid_sound_title">LiquidSmooth sound</string>
+  <string name="liquid_sound_summary">All sound related settings that we have added</string>
   <string name="adaptive_backlight_title">Adaptive backlight</string>
   <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
   <string name="sunlight_enhancement_title">Sunlight enhancement</string>

@@ -241,11 +241,6 @@
   <string name="volume_adjust_sounds_enable_summary">Play sound when adjusting volume with hard keys</string>
   <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
   <string name="volume_ring_only_description">Ringtone</string>
-  <string name="volume_overlay_title">Volume panel style</string>
-  <string name="volume_overlay_single">Single</string>
-  <string name="volume_overlay_expandable">Expandable</string>
-  <string name="volume_overlay_expanded">Expanded</string>
-  <string name="volume_overlay_disable">Disable</string>
   <string name="camera_sounds_title">Kameran suljinääni</string>
   <string name="camera_sounds_summary">Enable system camera shutter sound</string>
   <string name="camera_sound_warning_dialog_text">Disabling the camera shutter sound is illegal in some areas! Please check the applicable law in your country</string>
@@ -364,6 +359,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="remove_blacklist_entry">Do you want to remove this blacklist entry?</string>
   <string name="select_contact">Valitse yhteystieto</string>
   <string name="increasing_ring_title">Ascending ringtone</string>
+  <string name="increasing_ring_summary">Ringtone starts low then gets higher</string>
   <string name="checkbox_increasing_ring">Enable</string>
   <string name="increasing_ring_min_volume_title">Ringing start volume</string>
   <string name="increasing_ring_volume_notice">Notice:\nAs the start volume is set higher than the ringer volume, the ring tone will be played using the ringer volume.</string>
@@ -733,6 +729,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="lockscreen_shortcuts_summary">View or change custom lock screen shortcuts</string>
   <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
   <string name="lockscreen_shorcuts_longpress_summary">Lock screen shortcuts on longpress</string>
+  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">Tyyli</string>
   <string name="lockscreen_style_reset_message">Reset all lock screen colors?</string>
   <string name="lockscreen_icon_title">Lock handle icon</string>
@@ -790,10 +788,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="lock_pattern_size_4">4x4</string>
   <string name="lock_pattern_size_5">5x5</string>
   <string name="lock_pattern_size_6">6x6</string>
-  <string name="see_through_title">See through</string>
-  <string name="see_through_summary">Shows the content behind lock screen</string>
-  <string name="blur_radius_title">Blur radius</string>
-  <string name="blur_radius_summary">Set lock screen blur intensity effect</string>
   <string name="notification_style_title">Background style</string>
   <string name="notification_style_summary">Customizes style of the notification drawer</string>
   <string name="notification_wallpaper_title">Background</string>
@@ -1201,15 +1195,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="app_moving_reboot_disabled_desc">Successfully disabled application moving.\n\nThe device needs to be rebooted for the setting to take effect.</string>
   <string name="app_moving_reboot_now_button">Reboot now</string>
   <string name="app_moving_reboot_later_button">Reboot later</string>
-  <string name="wakelock_blocker">Wakelock blocker</string>
-  <string name="wakelock_blocker_title">Enable</string>
-  <string name="wakelock_blocker_summary">Block system wakelocks</string>
-  <string name="wakelock_blocker_save">Save</string>
-  <string name="wakelock_list_header">Available wakelocks</string>
-  <string name="wakelock_blocker_reload">Lataa uudelleen</string>
-  <string name="wakelock_blocker_warning_title">Proceed with caution</string>
-  <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>
   <string name="volume_steps_title">Volume Steps</string>
+  <string name="volume_steps_summary">Change how much the volume changes on each click</string>
   <string name="volume_steps_60">60</string>
   <string name="volume_steps_45">45</string>
   <string name="volume_steps_30">30</string>
@@ -1582,6 +1569,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="battery_bar_animate_title">Charging animation</string>
   <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
   <string name="sound_packages_title">Sound packs</string>
+  <string name="sound_packages_summary">Allows you set custom sound easily</string>
   <string name="install_sound_pack_title">Install sound pack</string>
   <string name="install_sound_pack_summary">Install new sound packs added in SoundPacks folder on the internal storage</string>
   <string name="select_sound_pack_title">Select sound pack</string>
@@ -2157,6 +2145,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
+  <string name="liquid_sound_title">LiquidSmooth sound</string>
+  <string name="liquid_sound_summary">All sound related settings that we have added</string>
   <string name="adaptive_backlight_title">Adaptive backlight</string>
   <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
   <string name="sunlight_enhancement_title">Sunlight enhancement</string>
