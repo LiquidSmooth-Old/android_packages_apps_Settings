@@ -1,0 +1,27 @@
+From 8317e2655209e993c7846262e9e038daed829726 Mon Sep 17 00:00:00 2001
+From: "Shaheer Kumar K.V" <shaheer_kv@live.com>
+Date: Tue, 16 Sep 2014 09:53:56 +0530
+Subject: [PATCH] Added missing code vibration intensity control
+
+---
+ src/com/android/settings/liquid/SoundSettings.java | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/src/com/android/settings/liquid/SoundSettings.java b/src/com/android/settings/liquid/SoundSettings.java
+index 4cee40f..446db95 100644
+--- a/src/com/android/settings/liquid/SoundSettings.java
++++ b/src/com/android/settings/liquid/SoundSettings.java
+@@ -265,6 +265,13 @@ public boolean onPreferenceChange(Preference preference, Object objValue) {
+             }
+             mFirstVibration = true;
+         }
++        if (preference == mVibrationMultiplier) {
++ 		String currentValue = (String) objValue;
++ 		float val = Float.parseFloat(currentValue);
++ 		Settings.System.putFloat(getActivity().getContentResolver(),
++ 		Settings.System.VIBRATION_MULTIPLIER, val);
++ 		mVibrationMultiplier.setSummary(currentValue);
++	}
+         if (KEY_VOLUME_ADJUST_SOUNDS.equals(key)) {
+             Settings.System.putInt(getContentResolver(),
+                 Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
