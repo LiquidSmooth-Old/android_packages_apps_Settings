@@ -265,6 +265,13 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             }
             mFirstVibration = true;
         }
+        if (preference == mVibrationMultiplier) {
+ 		String currentValue = (String) objValue;
+ 		float val = Float.parseFloat(currentValue);
+ 		Settings.System.putFloat(getActivity().getContentResolver(),
+ 		Settings.System.VIBRATION_MULTIPLIER, val);
+ 		mVibrationMultiplier.setSummary(currentValue);
+	}
         if (KEY_VOLUME_ADJUST_SOUNDS.equals(key)) {
             Settings.System.putInt(getContentResolver(),
                 Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
