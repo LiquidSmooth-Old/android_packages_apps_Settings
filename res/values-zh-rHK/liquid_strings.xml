@@ -16,8 +16,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="ok">OK</string>
-  <string name="add">Add</string>
-  <string name="reset">Reset</string>
+  <string name="add">新增</string>
+  <string name="reset">重設</string>
   <string name="enabled">Enabled</string>
   <string name="style_title">Style</string>
   <string name="attention">Attention</string>
@@ -67,7 +67,7 @@
   <string name="arrow_down">↓</string>
   <string name="hex">Hex:</string>
   <string name="hex_hint">#ff000000</string>
-  <string name="set">Set</string>
+  <string name="set">設定</string>
   <string name="gesture_anywhere_title">Gesture anywhere</string>
   <string name="gesture_anywhere_summary">Custom screen gestures to execute actions</string>
   <string name="gesture_anywhere_enabled_title">Gesture anywhere</string>
@@ -112,7 +112,7 @@
   <string name="notification_light_missed_call_title">Missed call</string>
   <string name="notification_light_voicemail_title">Voicemail</string>
   <string name="notification_light_choose_app">Choose application</string>
-  <string name="notification_light_add">Add</string>
+  <string name="notification_light_add">新增</string>
   <string name="display_category_screen_options_title">Screen options</string>
   <string name="edit_light_settings">Edit light settings</string>
   <string name="pulse_speed_title">Pulse length and speed</string>
@@ -288,7 +288,7 @@
   <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
   <string name="auto_brightness_adjust_button">Adjust</string>
   <string name="auto_brightness_close_button">Close</string>
-  <string name="auto_brightness_reset_button">Reset</string>
+  <string name="auto_brightness_reset_button">重設</string>
   <string name="auto_brightness_split_dialog_title">Split brightness level</string>
   <string name="auto_brightness_level_dialog_title">Light level setup</string>
   <string name="auto_brightness_lux">Ambient brightness (lux)</string>
@@ -422,8 +422,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="shortcut_action_select_action_longpress">Choose longpress action:</string>
   <string name="shortcut_action_select_action">Choose action:</string>
   <string name="shortcut_action_select_action_newbutton">Choose new action:</string>
-  <string name="shortcut_action_reset">Reset</string>
-  <string name="shortcut_action_add">Add</string>
+  <string name="shortcut_action_reset">重設</string>
+  <string name="shortcut_action_add">新增</string>
   <string name="shortcut_action_reset_message">Reset all entries to default?</string>
   <string name="shortcut_action_max">Maximum entries size has been reached</string>
   <string name="shortcut_action_warning">Warning</string>
@@ -1434,7 +1434,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="progressbar_linear">Linear</string>
   <string name="progressbar_acceleratedecelerate">AccelerateDecelerate</string>
   <string name="progressbar_decelerate">Decelerate</string>
-  <string name="progressbar_reset">Reset</string>
+  <string name="progressbar_reset">重設</string>
   <string name="progressbar_button_reset">Reset colors</string>
   <string name="progressbar_reset_message">Reset progress bar to default?</string>
   <string name="recent_panel_title">Recent panel</string>
@@ -1465,7 +1465,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="ram_bar_color_disabled">Disabled</string>
   <string name="ram_bar_button_help">Help</string>
   <string name="ram_bar_button_reset">Reset colors</string>
-  <string name="ram_bar_reset">Reset</string>
+  <string name="ram_bar_reset">重設</string>
   <string name="ram_bar_reset_message">Reset RAM bar and recent panel colors to default?</string>
   <string name="custom_recent_title">Custom recent styles</string>
   <string name="custom_recent_summary">Enable slim recent or disable for stock</string>
@@ -1778,7 +1778,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="ring_mode_vibrate">Vibrate</string>
   <string name="ring_mode_mute">Mute</string>
   <string name="profiles_settings_title">Profiles</string>
-  <string name="profiles_add">Add</string>
+  <string name="profiles_add">新增</string>
   <string name="profile_menu_delete">Delete</string>
   <string name="profile_settings_title">Profile</string>
   <string name="profile_empty_list_profiles_off">To configure and use system profiles, turn profiles on.</string>
@@ -1805,7 +1805,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="rename_dialog_message">Enter a new name</string>
   <string name="duplicate_profile_name">Duplicate profile name!</string>
   <string name="duplicate_appgroup_name">Duplicate app group name!</string>
-  <string name="profile_reset_title">Reset</string>
+  <string name="profile_reset_title">重設</string>
   <string name="profile_reset_message">Delete all user created profiles and app groups and restore them to default?</string>
   <string name="profile_delete_confirm">Delete this profile?</string>
   <string name="profile_app_delete_confirm">Remove this app?</string>
@@ -1864,7 +1864,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="toggleSync">Data Sync</string>
   <string name="toggle2g3g">2G/3G</string>
   <string name="toggleNfc">NFC</string>
-  <string name="menu_hidden_apps_delete">Reset</string>
+  <string name="menu_hidden_apps_delete">重設</string>
   <string name="menu_hidden_apps_reset_lock">Reset pattern lock</string>
   <string name="protected_apps">Protected apps</string>
   <string name="saving_protected_components">Saving component state</string>
@@ -2096,14 +2096,14 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="restore_preview">View default picture</string>
   <string name="selectnewfile_menu">View new picture from Gallery</string>
   <string name="selectfile_menu">View picture from Gallery</string>
-  <string name="restore_default_str">Reset</string>
+  <string name="restore_default_str">重設</string>
   <string name="hue_str">Hue: <xliff:g id="hue_value">%1$s</xliff:g></string>
   <string name="saturation_str">Saturation: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Contrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
   <string name="intensity_str">Intensity: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
   <string name="custom_density_title">Custom density</string>
   <string name="set_custom_density_title">Set custom density</string>
-  <string name="set_custom_density_set">Set</string>
+  <string name="set_custom_density_set">設定</string>
   <string name="current_density">"Current density: "</string>
   <string name="new_density">"New density: "</string>
   <string name="density_change_warning">Note: Changing density will close all running apps!</string>
