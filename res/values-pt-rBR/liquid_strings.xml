@@ -723,7 +723,7 @@ Horas de silêncio permitirá ao toque está definido como silencioso</string>
   <string name="lockscreen_shortcuts_summary">Exibir ou alterar os atalhos personalizados da tela de bloqueio</string>
   <string name="lockscreen_shorcuts_longpress_title">Toque longo para atalhos</string>
   <string name="lockscreen_shorcuts_longpress_summary">Atalhos de tela de bloqueio na longpress</string>
-  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_title">Desbloqueio rápido</string>
   <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">Estilo</string>
   <string name="lockscreen_style_reset_message">Redefinir todas as cores de tela de bloqueio?</string>
@@ -1561,7 +1561,7 @@ Horas de silêncio permitirá ao toque está definido como silencioso</string>
   <string name="battery_bar_animate_title">Animação de carregamento</string>
   <string name="battery_bar_animate_summary">A animação do carregamento pode resultar em uma experiência de usuário ruim. Habilite a seu próprio critério.</string>
   <string name="sound_packages_title">Pacotes de som</string>
-  <string name="sound_packages_summary">Allows you set custom sound easily</string>
+  <string name="sound_packages_summary">Permite que você facilmente definir o som personalizado</string>
   <string name="install_sound_pack_title">Instalar pacote de som</string>
   <string name="install_sound_pack_summary">Instalar novos pacotes de som adicionados na pasta SoundPacks do armazenamento interno</string>
   <string name="select_sound_pack_title">Selecione o pacote de som</string>
@@ -2137,7 +2137,7 @@ Horas de silêncio permitirá ao toque está definido como silencioso</string>
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Selecione o peso dos objetos roláveis</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
-  <string name="liquid_sound_title">LiquidSmooth sound</string>
+  <string name="liquid_sound_title">LiquidSmooth som</string>
   <string name="liquid_sound_summary">All sound related settings that we have added</string>
   <string name="adaptive_backlight_title">Luz de fundo adaptável</string>
   <string name="adaptive_backlight_summary">Inteligentemente variar o brilho da luz de fundo do visor e ajudar a maximizar a vida útil da bateria</string>
