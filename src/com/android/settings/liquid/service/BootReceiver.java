@@ -25,6 +25,9 @@ import android.os.BatteryManager;
 import android.provider.Settings;
 import com.android.settings.DisplaySettings;
 
+import com.android.settings.hardware.DisplayColor;
+import com.android.settings.hardware.DisplayGamma;
+
 public class BootReceiver extends BroadcastReceiver {
 
     @Override
@@ -45,5 +48,7 @@ public class BootReceiver extends BroadcastReceiver {
 
         QuietHoursController.getInstance(context).scheduleService();
         DisplaySettings.restore(context);
+        DisplayColor.restore(context);
+        DisplayGamma.restore(context);
     }
 }
