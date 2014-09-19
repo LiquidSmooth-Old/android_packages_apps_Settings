@@ -20,6 +20,10 @@
         android:key="security_category"
         android:title="@string/lock_settings_title">
 
+        <CheckBoxPreference
+            android:key="visiblegesture"
+            android:title="@string/lockgesture_settings_enable_visible_pattern_title"/>
+
         <PreferenceScreen
             android:fragment="com.android.settings.liquid.KeyguardShakeEvents"
             android:key="shake_events"
