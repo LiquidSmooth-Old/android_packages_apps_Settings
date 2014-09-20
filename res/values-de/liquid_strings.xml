@@ -345,7 +345,7 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="remove_blacklist_entry">Möchten Sie diesen Listen-Eintrag entfernen?</string>
   <string name="select_contact">Wählen Sie Kontakt</string>
   <string name="increasing_ring_title">Ansteigender Klingelton</string>
-  <string name="increasing_ring_summary">Ringtone starts low then gets higher</string>
+  <string name="increasing_ring_summary">Klingelton startet leise und wird dann lauter</string>
   <string name="checkbox_increasing_ring">Aktivieren</string>
   <string name="increasing_ring_min_volume_title">Ruftonlautstärke Anfangswert</string>
   <string name="increasing_ring_volume_notice">Hinweis: \nAs, wenn die Start-Lautstärke höher als die aktuelle Lautstärke eingestellt ist, wird der Klingelton mit der Ruftonlautstärke wiedergegeben.</string>
@@ -713,8 +713,8 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="lockscreen_shortcuts_summary">Anzeigen oder Ändern von benutzerdefinierten Bildschirmsperre Verknüpfungen</string>
   <string name="lockscreen_shorcuts_longpress_title">Verknüpfungen lang gedrückt</string>
   <string name="lockscreen_shorcuts_longpress_summary">Sperrbildschirm-Verknüpfungen bei langem Drücken</string>
-  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
-  <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
+  <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
+  <string name="unlock_quick_unlock_control_summary">Bei PIN/Pass Sperrbildschirmen Eingabetaste automatisch drücken</string>
   <string name="lockscreen_style_title">Stil</string>
   <string name="lockscreen_style_reset_message">Zurücksetzen alle Bildschirmsperre Farben?</string>
   <string name="lockscreen_icon_title">Bildschirmsperre Icon</string>
@@ -1126,8 +1126,8 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="pa_pie_button_color">Schaltflächenfarbe</string>
   <string name="pa_pie_button_color_title">Schaltflächenfarbe</string>
   <string name="pa_pie_gap_title">Objektzwischenraum</string>
-  <string name="pa_pie_gap_summary">Adjust the gap that separates the Pie elements</string>
-  <string name="pa_pie_angle_title">Pie angle</string>
+  <string name="pa_pie_gap_summary">Einstellen des Abstands zwischen den Pie Schaltflächen</string>
+  <string name="pa_pie_angle_title">Pie Winkel</string>
   <string name="pa_pie_angle_summary">Adjust the angle of pie\'s egdes from the attachment</string>
   <string name="pa_pie_angle_none">Keine(alt)</string>
   <string name="pa_pie_angle_small">Klein</string>
@@ -1138,9 +1138,9 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="pa_pie_gap_small">Klein</string>
   <string name="pa_pie_gap_big">Groß (Standard)</string>
   <string name="pa_pie_gap_huge">Sehr groß</string>
-  <string name="pa_pie_center_title">Middle alignment</string>
+  <string name="pa_pie_center_title">Mittige Ausrichtung</string>
   <string name="pa_pie_center_summary">Center pie on the trigger edge</string>
-  <string name="pa_pie_stick_title">Prevent rotation</string>
+  <string name="pa_pie_stick_title">Drehung verhindern</string>
   <string name="pa_pie_stick_summary">Avoids orientation change when screen rotates</string>
   <string name="pa_pie_search_title">Suchknopf</string>
   <string name="pa_pie_search_summary">Enable search button on pie controls</string>
@@ -1745,8 +1745,8 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="hover_require_fullscreen_mode_summary">Hover nur zeigen, wenn die Statusleiste ausgeblendet ist</string>
   <string name="hover_exclude_topmost_title">Aktive App ausschließen</string>
   <string name="hover_exclude_topmost_summary">Benachrichtigungen der App im Vordergrund ausschließen</string>
-  <string name="hover_exclude_from_lock_screen_title">Disable on lock screen</string>
-  <string name="hover_exclude_from_lock_screen_summary">Hide notifications on lock screen</string>
+  <string name="hover_exclude_from_lock_screen_title">Auf dem Sperrbildschirm deaktiviert</string>
+  <string name="hover_exclude_from_lock_screen_summary">Verstecke Benachrichtigungen auf dem Sperrbildschirm</string>
   <string name="hover_long_fadeout_title">Hover Benachrichtigungszeit</string>
   <string name="hover_long_fadeout_3seconds">3 Sekunden</string>
   <string name="hover_long_fadeout_5seconds">5 Sekunden (Standard)</string>
@@ -2072,7 +2072,7 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="ime_navigation_home_end">Home / Ende</string>
   <string name="screen_off_gesture_settings_title">Geste zum Ausschalten des Diplays</string>
   <string name="display_color_title">Displayfarbe</string>
-  <string name="display_color_summary">Customize the hue, saturation, etc</string>
+  <string name="display_color_summary">Anpassen von Farbton, Sättigung usw.</string>
   <string name="custom_screencolor">Ändere die Displayfarbe</string>
   <string name="screencolor_save">Speichern</string>
   <string name="screencolor_cancel">Abbrechen</string>
@@ -2082,16 +2082,16 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="selectnewfile_menu">Zeige neues Foto in der Galerie</string>
   <string name="selectfile_menu">Zeige Foto in der Galerie</string>
   <string name="restore_default_str">Zurücksetzen</string>
-  <string name="hue_str">Hue: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Saturation: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Contrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intensity: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="hue_str">Farbton: <xliff:g id="hue_value"> %1$s </xliff:g></string>
+  <string name="saturation_str">Sättigung: <xliff:g id="saturation_value"> %1$s </xliff:g></string>
+  <string name="contrast_str">Kontrast: <xliff:g id="contrast_value"> %1$s </xliff:g></string>
+  <string name="intensity_str">Intensität: <xliff:g id="intensity_str_value"> %1$s </xliff:g></string>
   <string name="custom_density_title">Benutzerdefinierte Pixeldichte</string>
   <string name="set_custom_density_title">Benutzerdefinierte Pixeldichte einstellen</string>
   <string name="set_custom_density_set">Setze</string>
-  <string name="current_density">"Current density: "</string>
-  <string name="new_density">"New density: "</string>
-  <string name="density_change_warning">Note: Changing density will close all running apps!</string>
+  <string name="current_density">"Aktuelle Pixeldichte: "</string>
+  <string name="new_density">"Neue Pixeldichte: "</string>
+  <string name="density_change_warning">Hinweis: Ändern Pixeldichte schließt alle laufenden Apps!</string>
   <string name="font_size_sample">Beispiel</string>
   <string name="screen_on_notification_led_title">Screen-On Notification Light</string>
   <string name="screen_on_notification_led_summary">Enable Notification Light even when screen is on.</string>
@@ -2139,5 +2139,5 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="color_enhancement_summary">Dynamically enhance the color of the display</string>
   <string name="wifi_ap_clients_title">Connected devices</string>
   <string name="wifi_ap_client_ap_disabled">Hotspot is disabled</string>
-  <string name="wifi_ap_client_none_connected">No devices connected</string>
+  <string name="wifi_ap_client_none_connected">Keine Geräte angeschlossen</string>
 </resources>

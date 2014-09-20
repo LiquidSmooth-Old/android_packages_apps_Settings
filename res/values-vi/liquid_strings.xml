@@ -926,7 +926,7 @@
   <string name="theme_auto_mode_off">Вручну</string>
   <string name="theme_auto_mode_lightsensor">В залежності від освітлення</string>
   <string name="theme_auto_mode_twilight">У денний час</string>
-  <string name="theme_auto_switch_mode_error">Включений режим автоматичної зміни. Ручне перемикання неможливе.</string>
+  <string name="theme_auto_switch_mode_error">Tự động thay đổi theo điều kiện ánh sáng chế độ được kích hoạt. Chuyển đổi thủ công là không thể.</string>
   <string name="change_crypt_password_title">Змінити пароль</string>
   <string name="change_crypt_password_summary">Змінити пароль, що використовується для шифрування пристрою</string>
   <string name="encryptionpassword_choose_your_password_header">Встановити пароль шифрування</string>
