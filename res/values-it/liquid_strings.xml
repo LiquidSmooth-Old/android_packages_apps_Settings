@@ -726,7 +726,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="lockscreen_shortcuts_summary">Visualizza o modifica le scorciatoie di sblocco dello schermo</string>
   <string name="lockscreen_shorcuts_longpress_title">Scorciatoie a pressione prolungata</string>
   <string name="lockscreen_shorcuts_longpress_summary">Scorciatoie di sblocco con pressione prolungata</string>
-  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_title">Sblocco rapido</string>
   <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">Stile</string>
   <string name="lockscreen_style_reset_message">Reimpostare tutti i colori del blocco schermo?</string>
