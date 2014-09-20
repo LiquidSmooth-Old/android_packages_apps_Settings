@@ -346,7 +346,7 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="remove_blacklist_entry">Voulez-vous supprimer cette entrée de la liste noire ?</string>
   <string name="select_contact">Sélectionnez un contact</string>
   <string name="increasing_ring_title">Sonnerie progressive</string>
-  <string name="increasing_ring_summary">Ringtone starts low then gets higher</string>
+  <string name="increasing_ring_summary">Sonnerie commence faible puis augmente</string>
   <string name="checkbox_increasing_ring">Activer</string>
   <string name="increasing_ring_min_volume_title">Volume de départ de la sonnerie</string>
   <string name="increasing_ring_volume_notice">Remarque :\nLe volume de départ étant défini au-dessus du volume de la sonnerie, ce dernier sera utilisé à la place.</string>
@@ -714,7 +714,7 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="lockscreen_shortcuts_summary">Afficher ou modifier les raccourcis personnalisés de l\'écran de verrouillage</string>
   <string name="lockscreen_shorcuts_longpress_title">Raccourcis par appui long</string>
   <string name="lockscreen_shorcuts_longpress_summary">Ouvrir les raccourcis personnalisés sur un appui long</string>
-  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_title">Déverrouillage rapide</string>
   <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">Style</string>
   <string name="lockscreen_style_reset_message">Réinitialiser tous les choix de couleur ?</string>
@@ -2129,7 +2129,7 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="overscroll_weight_title">Effet de défilement poids</string>
   <string name="overscroll_weight_summary">Sélectionnez le poids des objets défilants</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
-  <string name="liquid_sound_title">LiquidSmooth sound</string>
+  <string name="liquid_sound_title">LiquidSmooth son</string>
   <string name="liquid_sound_summary">All sound related settings that we have added</string>
   <string name="adaptive_backlight_title">Rétro-éclairage adaptatif</string>
   <string name="adaptive_backlight_summary">Varier intelligemment la luminosité du rétroéclairage de l\'écran et aider à maximiser l\'autonomie</string>

@@ -354,7 +354,7 @@ brilho da tela desejada. Selecionando \'Dividir\' permite duplicar uma linha, a 
   <string name="remove_blacklist_entry">Você quer remover esta entrada da lista negra?</string>
   <string name="select_contact">Selecionar Contato</string>
   <string name="increasing_ring_title">Toque crescente</string>
-  <string name="increasing_ring_summary">Ringtone starts low then gets higher</string>
+  <string name="increasing_ring_summary">Toque começa baixo, então fica maior</string>
   <string name="checkbox_increasing_ring">Habilitar</string>
   <string name="increasing_ring_min_volume_title">Início volume de toque</string>
   <string name="increasing_ring_volume_notice">Aviso: \nO volume de início é definido mais elevado do que o volume da campainha, o toque será executado usando o volume da campainha.</string>
@@ -2138,7 +2138,7 @@ Horas de silêncio permitirá ao toque está definido como silencioso</string>
   <string name="overscroll_weight_summary">Selecione o peso dos objetos roláveis</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">LiquidSmooth som</string>
-  <string name="liquid_sound_summary">All sound related settings that we have added</string>
+  <string name="liquid_sound_summary">Todos os ajustes relacionados com o som que nós adicionamos</string>
   <string name="adaptive_backlight_title">Luz de fundo adaptável</string>
   <string name="adaptive_backlight_summary">Inteligentemente variar o brilho da luz de fundo do visor e ajudar a maximizar a vida útil da bateria</string>
   <string name="sunlight_enhancement_title">Aprimoramento de luz solar</string>

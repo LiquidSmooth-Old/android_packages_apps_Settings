@@ -660,9 +660,9 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="quiet_hours_bypass_ringtone_loop_summary_off">Dzwonek zagra tylko raz</string>
   <string name="quiet_hours_alarm_dismiss">Wyłącz Alarm</string>
   <string name="quiet_hours_alarm_and">" i "</string>
-  <string name="quiet_hours_alarm_dialog_title">QUIETHOURS BYPASSED</string>
+  <string name="quiet_hours_alarm_dialog_title">Ciche godziny zignorowane</string>
   <string name="quiet_hours_alarm_message">" spełnia wymagania do pominięcia Cichych Godzin!"</string>
-  <string name="start_time_title">Start</string>
+  <string name="start_time_title">Uruchom</string>
   <string name="end_time_title">Koniec</string>
   <string name="display_rotation_title">Obracanie</string>
   <string name="display_rotation_disabled">Wyłączony</string>
@@ -716,7 +716,7 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="lockscreen_shortcuts_summary">Zobacz lub zmień niestandardowe skróty ekranu blokady</string>
   <string name="lockscreen_shorcuts_longpress_title">Długie przyciśnięcie skrótu</string>
   <string name="lockscreen_shorcuts_longpress_summary">Skróty ekranu blokady przy długim przyciśnięciu</string>
-  <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+  <string name="unlock_quick_unlock_control_title">Szybkie odblokowanie</string>
   <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
   <string name="lockscreen_style_title">Styl</string>
   <string name="lockscreen_style_reset_message">Zresetować wszystkie kolory ekranu blokady?</string>
@@ -1089,49 +1089,49 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="pie_trigger_warning">Minimalnie jeden z głównych wyzwalaczy (na dole, po lewej lub prawej) musi być włączony.</string>
   <string name="pie_disable_ime_triggers_title">Rozmiar wyzwalacza na klawiaturze</string>
   <string name="pie_disable_ime_triggers_summary">Zmniejsza rozmiar lewego i prawego wyzwalacza</string>
-  <string name="pie_trigger_sensitivity_title">Trigger sensitivity\"</string>
-  <string name="pie_trigger_sensitivity_summary">Adjust the pie trigger sensitivity</string>
-  <string name="pa_pie_controls_title">PA pie controls</string>
-  <string name="pa_pie_controls_summary">Configure or view current pa pie settings</string>
-  <string name="pa_pie_enable_title">Enable Pie</string>
+  <string name="pie_trigger_sensitivity_title">Czułość wyzwalacza\"</string>
+  <string name="pie_trigger_sensitivity_summary">Dostosuj czułość wyzwalacza PIE</string>
+  <string name="pa_pie_controls_title">Kontrola PA PIE</string>
+  <string name="pa_pie_controls_summary">Skonfiguruj lub przeglądaj bieżące ustawienia PIE</string>
+  <string name="pa_pie_enable_title">Włącz PIE</string>
   <string name="pa_pie_enable_summaryOn">Nom nom nom nom</string>
   <string name="pa_pie_enable_summaryOff">Nie Nom nom nom nom</string>
   <string name="pa_pie_expanded_only_title">Tylko w rozszerzonym pulpicie</string>
-  <string name="pa_pie_expanded_only_summary">Only allow pie to work when Expanded Desktop is on</string>
-  <string name="pa_pie_gravity_title">Pie gravity</string>
+  <string name="pa_pie_expanded_only_summary">Pozwalaj na włączenie PIE tylko gdy rozszerzony pulpit jest włączony</string>
+  <string name="pa_pie_gravity_title">Grawitacja PIE</string>
   <string name="pa_pie_gravity_summary">Select the location where the Pie will be placed</string>
   <string name="pa_pie_gravity_top">Góra</string>
   <string name="pa_pie_gravity_bottom">Dół</string>
   <string name="pa_pie_gravity_right">Prawa strona</string>
   <string name="pa_pie_gravity_left">Lewy</string>
-  <string name="pa_pie_mode_title">Pie style</string>
+  <string name="pa_pie_mode_title">Styl PIE</string>
   <string name="pa_pie_mode_summary">Manage how animations and status additions will be handled</string>
-  <string name="pa_pie_mode_bare">Bare</string>
-  <string name="pa_pie_mode_quick">Quick</string>
+  <string name="pa_pie_mode_bare">Nagie</string>
+  <string name="pa_pie_mode_quick">Super szybka</string>
   <string name="pa_pie_mode_default">Domyślny</string>
   <string name="pa_pie_mode_slow">Wolno</string>
-  <string name="pa_pie_size_title">Pie size</string>
-  <string name="pa_pie_size_summary">Define Pie controls size</string>
-  <string name="pa_pie_size_small">Small</string>
+  <string name="pa_pie_size_title">Rozmiar PIE</string>
+  <string name="pa_pie_size_summary">Zdefiniuj rozmiar PIE</string>
+  <string name="pa_pie_size_small">Mały</string>
   <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_size_large">Large</string>
+  <string name="pa_pie_size_large">Duży</string>
   <string name="pa_pie_size_gigantic">Gigantyczne</string>
   <string name="pa_pie_size_monster">Ogromne</string>
-  <string name="pa_pie_color_title">Pie color settings</string>
-  <string name="pa_pie_color_style_title">Pie color style</string>
+  <string name="pa_pie_color_title">Ustawienia koloru PIE</string>
+  <string name="pa_pie_color_style_title">Styl koloru PIE</string>
   <string name="pa_pie_background_title">Kolor tła</string>
   <string name="pa_pie_select_title">Wybór kolorów</string>
   <string name="pa_pie_outlines_title">Kolor konturów</string>
   <string name="pa_pie_status_clock_title">Kolor zegara</string>
-  <string name="pa_pie_status_title">Status color</string>
-  <string name="pa_pie_chevron_left_title">Left chevron color</string>
-  <string name="pa_pie_chevron_right_title">Right chevron color</string>
+  <string name="pa_pie_status_title">Kolor statusu</string>
+  <string name="pa_pie_chevron_left_title">Kolor lewej klamry</string>
+  <string name="pa_pie_chevron_right_title">Kolor prawej klamry</string>
   <string name="pa_pie_juice_title">Battery juice color</string>
   <string name="pa_pie_button_color">Kolor przycisku</string>
   <string name="pa_pie_button_color_title">Kolor przycisku</string>
   <string name="pa_pie_gap_title">Item gap</string>
   <string name="pa_pie_gap_summary">Adjust the gap that separates the Pie elements</string>
-  <string name="pa_pie_angle_title">Pie angle</string>
+  <string name="pa_pie_angle_title">Kąt PIE</string>
   <string name="pa_pie_angle_summary">Adjust the angle of pie\'s egdes from the attachment</string>
   <string name="pa_pie_angle_none">None (old)</string>
   <string name="pa_pie_angle_small">Małe</string>
@@ -1142,15 +1142,15 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="pa_pie_gap_small">Małe</string>
   <string name="pa_pie_gap_big">Big (default)</string>
   <string name="pa_pie_gap_huge">Ogromne</string>
-  <string name="pa_pie_center_title">Middle alignment</string>
+  <string name="pa_pie_center_title">Wyrównanie w środku</string>
   <string name="pa_pie_center_summary">Center pie on the trigger edge</string>
-  <string name="pa_pie_stick_title">Prevent rotation</string>
+  <string name="pa_pie_stick_title">Zapobiegaj rotacji</string>
   <string name="pa_pie_stick_summary">Avoids orientation change when screen rotates</string>
   <string name="pa_pie_search_title">Search button</string>
   <string name="pa_pie_search_summary">Enable search button on pie controls</string>
-  <string name="pa_pie_trigger_title">Trigger area</string>
+  <string name="pa_pie_trigger_title">Obszar wyzwalania</string>
   <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
-  <string name="pa_pie_trigger_none">None (Pie disabled)</string>
+  <string name="pa_pie_trigger_none">Brak (PIE wyłączone)</string>
   <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
   <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
   <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
@@ -1578,7 +1578,7 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="show_network_traffic_2000">2000 ms</string>
   <string name="network_traffic_autohide">Auto-ukrywanie</string>
   <string name="network_traffic_autohide_summary">Hide monitor when there is no activity</string>
-  <string name="network_traffic_autohide_threshold">Inactivity threshold</string>
+  <string name="network_traffic_autohide_threshold">Próg bezczynności</string>
   <string name="network_traffic_color_style">Color style</string>
   <string name="network_traffic_color_reset">Resetuj kolor</string>
   <string name="network_traffic_color_reset_message">Reset network traffic color to default?</string>
@@ -2082,29 +2082,29 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="new_str">Nowa</string>
   <string name="restore_preview">Pokaż domyślny obraz</string>
   <string name="selectnewfile_menu">Zobacz nowy obraz z galerii</string>
-  <string name="selectfile_menu">View picture from Gallery</string>
+  <string name="selectfile_menu">Zobacz zdjęcie z galerii</string>
   <string name="restore_default_str">Resetuj</string>
-  <string name="hue_str">Hue: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Saturation: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Contrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intensity: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="hue_str">Barwa: <xliff:g id="hue_value"> %1$s </xliff:g></string>
+  <string name="saturation_str">Nasycenie: <xliff:g id="saturation_value"> %1$s </xliff:g></string>
+  <string name="contrast_str">Kontrast: <xliff:g id="contrast_value"> %1$s </xliff:g></string>
+  <string name="intensity_str">Intensywność: <xliff:g id="intensity_str_value"> %1$s </xliff:g></string>
   <string name="custom_density_title">Niestandardowa gęstość</string>
   <string name="set_custom_density_title">Ustaw niestandardową gęstość</string>
   <string name="set_custom_density_set">Ustaw</string>
-  <string name="current_density">"Current density: "</string>
-  <string name="new_density">"New density: "</string>
+  <string name="current_density">"Obecna gęstość: : "</string>
+  <string name="new_density">"Nowa gęstość: "</string>
   <string name="density_change_warning">Note: Changing density will close all running apps!</string>
   <string name="font_size_sample">Przykład</string>
   <string name="screen_on_notification_led_title">Screen-On Notification Light</string>
   <string name="screen_on_notification_led_summary">Enable Notification Light even when screen is on.</string>
-  <string name="color_calibration_title">Color calibration</string>
-  <string name="color_calibration_summary">Calibrate on-screen colors</string>
+  <string name="color_calibration_title">Kalibracja kolorów</string>
+  <string name="color_calibration_summary">Kalibracja kolorów ekranu</string>
   <string name="color_red_title">Czerwony</string>
   <string name="color_green_title">ZIelony</string>
   <string name="color_blue_title">Niebieski</string>
-  <string name="gamma_tuning_title_head">Gamma calibration</string>
-  <string name="gamma_tuning_summary_head">Tweak gamma values</string>
-  <string name="gamma_tuning_control_set_header">Group <xliff:g id="index">%d</xliff:g></string>
+  <string name="gamma_tuning_title_head">Kalibracja wartości gamma</string>
+  <string name="gamma_tuning_summary_head">Dostosowanie wartości gamma</string>
+  <string name="gamma_tuning_control_set_header">Grupa <xliff:g id="index">: %d </xliff:g></string>
   <string name="gamma_tuning_contrast">Kontrast</string>
   <string name="gamma_tuning_brightness">Jasność</string>
   <string name="gamma_tuning_saturation">Nasycenie</string>
@@ -2112,10 +2112,10 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="tether_usb_network_text">USB Tether Network</string>
   <string name="tether_user_network_default">Use System Default</string>
   <string name="tether_wifi_network_text">WiFi Tether Network</string>
-  <string name="nfc_polling_mode_title">NFC polling mode</string>
-  <string name="nfc_polling_mode_screen_off">Screen off</string>
-  <string name="nfc_polling_mode_screen_locked">Screen on, locked</string>
-  <string name="nfc_polling_mode_screen_unlocked">Screen on, unlocked (default)</string>
+  <string name="nfc_polling_mode_title">Tryb cyklicznego przeglądania NFC</string>
+  <string name="nfc_polling_mode_screen_off">Wyłącz ekran</string>
+  <string name="nfc_polling_mode_screen_locked">Ekran włączony, zablokowany</string>
+  <string name="nfc_polling_mode_screen_unlocked">Ekran włączony, odblokowany (domyślnie)</string>
   <string name="ui_overscroll_title">Over scrolling effects</string>
   <string name="overscroll_glow_title">Over scroll Color</string>
   <string name="edge_effect_title">Edge Glow effect</string>
@@ -2137,7 +2137,7 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
   <string name="sunlight_enhancement_title">Sunlight enhancement</string>
   <string name="sunlight_enhancement_summary">Enhance display brightness and readability under bright sunlight</string>
-  <string name="color_enhancement_title">Color enhancement</string>
+  <string name="color_enhancement_title">Poprawa kolorów</string>
   <string name="color_enhancement_summary">Dynamically enhance the color of the display</string>
   <string name="wifi_ap_clients_title">Połączone urządzenia</string>
   <string name="wifi_ap_client_ap_disabled">Hotspot jest wyłączony</string>
