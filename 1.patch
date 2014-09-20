@@ -1,0 +1,17 @@
+diff --git a/res/xml/liquid_navigation_settings.xml b/res/xml/liquid_navigation_settings.xml
+index e4f2cc8..e4228b7 100644
+--- a/res/xml/liquid_navigation_settings.xml
++++ b/res/xml/liquid_navigation_settings.xml
+@@ -113,10 +113,11 @@
+             android:title="@string/navbar_can_move"
+             android:summary="@string/navbar_can_move_summary" />
+ 
+-        <com.android.settings.liquid.SystemSettingCheckBoxPreference
++        <com.android.settings.liquid.SystemCheckBoxPreference
+             android:key="disable_ime_navbar"
+             android:title="@string/disable_ime_navbar_title"
+             android:summary="@string/disable_ime_navbar_summary"
++            android:dependency="enable_nav_bar"
+             android:defaultValue="false" />
+ 
+     </PreferenceCategory>
