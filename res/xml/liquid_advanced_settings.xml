@@ -33,7 +33,8 @@
 
     <PreferenceScreen
         android:key="devicesettings_app"
-        android:title="@string/device_settings_title">
+        android:title="@string/device_settings_title"
+        android:summary="@string/devicesettings_app_summary">
         <intent
             android:action="com.cyanogenmod.action.LAUNCH_DEVICE_SETTINGS"
             android:targetPackage="com.cyanogenmod.settings.device"

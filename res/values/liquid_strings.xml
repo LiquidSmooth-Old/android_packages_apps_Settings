@@ -75,6 +75,7 @@
 
     <!-- Device settings -->
     <string name="device_settings_title">Device</string>
+    <string name="devicesettings_app_summary">Configure device specific options</string>
     <string name="device_legal_summary">Open source and Google licenses</string>
 
     <!-- Action shortcuts -->
