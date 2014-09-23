@@ -734,7 +734,7 @@
   <string name="lockscreen_maximize_widgets_title">Tiện ích cực đại</string>
   <string name="lockscreen_maximize_widgets_summary">Hiển thị tối đa tiện ích màn hình khóa</string>
   <string name="lockscreen_disable_hints_title">Vô hiệu hoá trang gợi ý</string>
-  <string name="lockscreen_disable_hints_summary">Vo hiệu hóa phát sáng xung quanh trang tiện ích</string>
+  <string name="lockscreen_disable_hints_summary">Vô hiệu hóa phát sáng xung quanh trang tiện ích</string>
   <string name="lockscreen_use_widget_container_carousel_title">Kích hoạt tính năng tiện ích carousel</string>
   <string name="lockscreen_use_widget_container_carousel_summary">Sử dụng carousel hoạt hình trong bức chân dung</string>
   <string name="lockscreen_widget_frame_title">Vô hiệu hóa khung tiện ích</string>
@@ -861,7 +861,7 @@
   <string name="quick_tiles_alpha_title">Tiles background transparency</string>
   <string name="qs_style_reset_message">Đặt lại tất cả các màu sắc để mặc định?</string>
   <string name="pref_network_mode_title">Chế độ mạng</string>
-  <string name="pref_screentimeout_mode_title">Час до вимкнення екрану</string>
+  <string name="pref_screentimeout_mode_title">Chế độ thời gian sáng</string>
   <string name="pref_ring_mode_title">Chế độ âm thanh</string>
   <string name="pref_music_mode_title">Chế độ âm nhạc</string>
   <string name="screentimeout_mode1">15s | 1m | 5m | Không bao giờ</string>
@@ -1506,8 +1506,8 @@
   <string name="animation_slide_left">Trượt ở bên trái</string>
   <string name="animation_slide_right_no_fade">Trượt ở bên phải (không phai)</string>
   <string name="animation_slide_left_no_fade">Trượt ở bên trái (không phai)</string>
-  <string name="animation_slide_up">Trượt ở dưới cùng</string>
-  <string name="animation_slide_down">Зсунути вверх</string>
+  <string name="animation_slide_up">Trượt ở trên cùng</string>
+  <string name="animation_slide_down">Trượt ở dưới cùng</string>
   <string name="animation_translucent">Mờ</string>
   <string name="animation_grow_shrink">Phát triển (Trên cùng)</string>
   <string name="animation_grow_shrink_center">Phát triển trong (Trung tâm)</string>
