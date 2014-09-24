@@ -469,6 +469,7 @@ public class Settings extends PreferenceActivity
         ApnSettings.class.getName(),
         ShakeEvents.class.getName(),
         ThemeSettings.class.getName()
+        com.android.settings.wifi.WifiApSettings.class.getName()
     };
 
     @Override
@@ -1356,4 +1357,5 @@ public class Settings extends PreferenceActivity
     public static class RamBarActivity extends Settings { /* empty */ }
     public static class ShakeEventsSettingsActivity extends Settings { /* empty */ }
     public static class ThemeSettingsActivity extends Settings { /* empty */ }
+    public static class WifiApSettingsActivity extends Settings { /* empty */ }
 }
