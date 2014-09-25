@@ -506,7 +506,7 @@ Opciones adicionales están disponibles por mucho tiempo-presionar una línea. S
   <string name="notification_hide_labels_text">en el panel de notificación</string>
   <string name="battery_icon_title">Icono de batería</string>
   <string name="battery_status_icon">Icono</string>
-  <string name="battery_status_percentage">Porcentaje %</string>
+  <string name="battery_status_percentage">Porcentaje</string>
   <string name="battery_status_icon_percentage">Icono con porcentaje</string>
   <string name="battery_status_icon_percentage_jb">Icono con porcentaje (estilo JB)</string>
   <string name="battery_status_circle">Círculo</string>
@@ -524,7 +524,7 @@ Opciones adicionales están disponibles por mucho tiempo-presionar una línea. S
   <string name="battery_bolt_color">Color de carga</string>
   <string name="battery_text_charging_color">Color de carga texto porcentaje (15-89%)</string>
   <string name="battery_circle_charging_color">Círculo color de carga</string>
-  <string name="battery_style_reset_message">¿Restablecer todos los colores de la batería?</string>
+  <string name="battery_style_reset_message">Restablecer todos los colores de la batería?</string>
   <string name="power_notifications_category_title">Alarma de conectividad de la energía</string>
   <string name="power_notifications_enable_title">Activar</string>
   <string name="power_notifications_enable_summary">Alerta cuando la alimentación está conectada o desconectada</string>
