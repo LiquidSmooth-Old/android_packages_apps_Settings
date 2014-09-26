@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
             super(context);
             int indent = ExtraInfoLib.dpToPx(context, 20);
             int pad = ExtraInfoLib.dpToPx(context, 2);
-            setTextColor(Color.GREEN);
+            setTextColor(Color.WHITE);
             setPadding(indent, pad, pad, pad);
             setText(text);
         }
