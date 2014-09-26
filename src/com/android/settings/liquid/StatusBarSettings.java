@@ -54,6 +54,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String STATUS_BAR_CARRIER = "status_bar_carrier";
     private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
     private static final String STATUSBAR_6BAR_SIGNAL = "statusbar_6bar_signal";
+    private static final String TOGGLE_CARRIER_LOGO = "toggle_carrier_logo";
 
     static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
@@ -63,8 +64,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private ListPreference mStatusBarSignal;
     private ListPreference mExpandedDesktopPref;
     private CheckBoxPreference mStatusBarCarrier;
+    private CheckBoxPreference mToggleCarrierLogo;
     private ColorPickerPreference mCarrierColorPicker;
     private CheckBoxPreference mStatusBarSixBarSignal;
+
+    private ContentResolver mCr;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -129,8 +133,12 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         mStatusBarSignal.setOnPreferenceChangeListener(this);
 
         mStatusBarCarrier = (CheckBoxPreference) findPreference(STATUS_BAR_CARRIER);
-        mStatusBarCarrier.setChecked((Settings.System.getInt(getContentResolver(),
+        mStatusBarCarrier.setChecked((Settings.System.getInt(mCr,
                 Settings.System.STATUS_BAR_CARRIER, 0) == 1));
+
+        mToggleCarrierLogo = (CheckBoxPreference) findPreference(TOGGLE_CARRIER_LOGO);
+        mToggleCarrierLogo.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.TOGGLE_CARRIER_LOGO, 0) == 1));
 
         mCarrierColorPicker = (ColorPickerPreference) findPreference(STATUS_BAR_CARRIER_COLOR);
         mCarrierColorPicker.setOnPreferenceChangeListener(this);
@@ -193,6 +201,10 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                    Settings.System.STATUSBAR_6BAR_SIGNAL,
                    mStatusBarSixBarSignal.isChecked() ? 1 : 0);
            return true;
+        } else if (preference == mToggleCarrierLogo) {
+            Settings.System.putInt(mCr, Settings.System.TOGGLE_CARRIER_LOGO,
+                   mToggleCarrierLogo.isChecked() ? 1 : 0);
+            return true;
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
