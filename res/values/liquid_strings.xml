@@ -2593,6 +2593,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="overscroll_weight_title">Over scrolling weight</string>
     <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
 
+    <!-- Statusbar carrier logo-->
+    <string name="disable_carrier_logo">Carrier logo</string>
+    <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
+
     <!-- LiquidSmooth Main Settings -->
     <string name="liquid_settings_title">LiquidSmooth</string>
 
