@@ -15,27 +15,27 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="ok">OK</string>
-  <string name="add">Add</string>
-  <string name="reset">Reset</string>
-  <string name="enabled">Enabled</string>
+  <string name="ok">موافق</string>
+  <string name="add">إضافة</string>
+  <string name="reset">إعادة ضبط</string>
+  <string name="enabled">مفعل</string>
   <string name="style_title">Style</string>
-  <string name="attention">Attention</string>
-  <string name="default_string">Default</string>
-  <string name="reset_message">Reset entries to default?</string>
-  <string name="sunday">Sunday</string>
-  <string name="monday">Monday</string>
-  <string name="tuesday">Tuesday</string>
-  <string name="wednesday">Wednesday</string>
-  <string name="thursday">Thursday</string>
-  <string name="friday">Friday</string>
-  <string name="saturday">Saturday</string>
-  <string name="mod_version">LiquidSmooth version</string>
-  <string name="mod_version_default">Unknown</string>
-  <string name="build_date">Build date</string>
-  <string name="build_date_default">2012-01-01-0000</string>
-  <string name="advanced_category_title">Advanced</string>
-  <string name="advanced_options_title">Advanced options</string>
+  <string name="attention">تحذير</string>
+  <string name="default_string">الإفتراضى</string>
+  <string name="reset_message">إعادة تعيين للإفتراضى؟</string>
+  <string name="sunday">الأحد</string>
+  <string name="monday">الإثنين</string>
+  <string name="tuesday">الثلاثاء</string>
+  <string name="wednesday">الأربعاء</string>
+  <string name="thursday">الخميس</string>
+  <string name="friday">الجمعة</string>
+  <string name="saturday">السبت</string>
+  <string name="mod_version">إصدار ليكيود سموث</string>
+  <string name="mod_version_default">غير معروف</string>
+  <string name="build_date">تاريخ النسخة</string>
+  <string name="build_date_default">٠٠٠٠-٠١-٠١-٢٠١٢</string>
+  <string name="advanced_category_title">متقدم</string>
+  <string name="advanced_options_title">إعدادات متقدمة</string>
   <string name="advanced_adblocker_summary">Configure or view current ad blocker settings</string>
   <string name="advanced_batterysaver_summary">Configure or view current battery saver settings</string>
   <string name="advanced_propmodder_summary">Configure or view current build.prop settings</string>
@@ -43,26 +43,27 @@
   <string name="advanced_superuser_summary">Configure or view current superuser settings</string>
   <string name="advanced_systemapp_summary">Search for and remove system apps</string>
   <string name="advanced_wakelock_summary">Configure or view current wakelock blocker settings</string>
-  <string name="additional_category_title">Additional</string>
-  <string name="general_category_title">General</string>
+  <string name="additional_category_title">إضافية</string>
+  <string name="general_category_title">عام</string>
   <string name="equalizer_settings_title">Equalizer</string>
-  <string name="interface_settings_title">Interface</string>
-  <string name="lockscreen_settings_title">Lock screen</string>
-  <string name="navigation_settings_title">Navigation</string>
-  <string name="kernel_tweaker_title">Performance</string>
-  <string name="statusbar_settings_title">Status bar</string>
-  <string name="notification_settings_title">Notifications</string>
-  <string name="active_display_title">Active display</string>
+  <string name="interface_settings_title">واجهة</string>
+  <string name="lockscreen_settings_title">شاشة القفل</string>
+  <string name="navigation_settings_title">التصفح</string>
+  <string name="kernel_tweaker_title">الأداء</string>
+  <string name="statusbar_settings_title">شريط المهام</string>
+  <string name="notification_settings_title">إشعارات</string>
+  <string name="active_display_title">شاشة نشطة</string>
   <string name="halo_options_title">Halo options</string>
   <string name="notification_drawer_title">Notification drawer</string>
   <string name="pie_control_title">Slim pie controls</string>
-  <string name="theme_settings_title">Total blackout</string>
-  <string name="device_settings_title">Device</string>
-  <string name="device_legal_summary">Open source and Google licenses</string>
+  <string name="theme_settings_title">الاسود بالكامل</string>
+  <string name="device_settings_title">الجهاز</string>
+  <string name="devicesettings_app_summary">Configure device specific options</string>
+  <string name="device_legal_summary">المصدر المفتوح ورخصة جوجل</string>
   <string name="shortcut_picker_title">Action shortcuts</string>
   <string name="superuser_settings_title">Superuser</string>
-  <string name="dialog_color_picker">Color Picker</string>
-  <string name="press_color_to_apply">Press on color below to apply</string>
+  <string name="dialog_color_picker">منتقي الألوان</string>
+  <string name="press_color_to_apply">اضغط على اللون أدناه لتطبيق</string>
   <string name="arrow_right">→</string>
   <string name="arrow_down">↓</string>
   <string name="hex">Hex:</string>
@@ -91,7 +92,7 @@
   <string name="ga_prompt_gesture_name">Name</string>
   <string name="ga_error_missing_name">You must enter a name</string>
   <string name="ga_save_success">Gesture saved in %s</string>
-  <string name="ga_rename_action">OK</string>
+  <string name="ga_rename_action">موافق</string>
   <string name="ga_cancel_action">Cancel</string>
   <string name="ga_gestures_loading">Loading gestures...</string>
   <string name="ga_gestures_empty">No gestures</string>
@@ -105,14 +106,14 @@
   <string name="profile_applist_title">Apps</string>
   <string name="display_category_light_options_title">Light options</string>
   <string name="notification_light_title">Notification light</string>
-  <string name="notification_light_general_title">General</string>
+  <string name="notification_light_general_title">عام</string>
   <string name="notification_light_applist_title">Applications</string>
   <string name="notification_light_phonelist_title">Phone</string>
   <string name="notification_light_use_custom">Use custom values</string>
   <string name="notification_light_missed_call_title">Missed call</string>
   <string name="notification_light_voicemail_title">Voicemail</string>
   <string name="notification_light_choose_app">Choose application</string>
-  <string name="notification_light_add">Add</string>
+  <string name="notification_light_add">إضافة</string>
   <string name="display_category_screen_options_title">Screen options</string>
   <string name="edit_light_settings">Edit light settings</string>
   <string name="pulse_speed_title">Pulse length and speed</string>
@@ -156,7 +157,7 @@
   <string name="privacy_guard_help_text">In this screen you can choose for which apps Privacy Guard should be active by simply tapping on them. Selected apps will not be able to access your personal data, such as contacts, messages, location or call logs. Long pressing on an entry allows to set specifically app permissions.\n\nBy default built-in apps are not shown. If you want to show them or filter apps to show only the ones requesting access to personal data by their permissions, select the respective options in the menu.</string>
   <string name="privacy_guard_manager_show_system_apps">Show built-in apps</string>
   <string name="privacy_guard_manager_filter_permissions">Permission filter</string>
-  <string name="privacy_guard_app_ops_detail_dialog_title">Attention</string>
+  <string name="privacy_guard_app_ops_detail_dialog_title">تحذير</string>
   <string name="privacy_guard_app_ops_detail_dialog_text">Selected app does not request permissions which access personal data. Do you want to modify the other permissions?</string>
   <string name="privacy_guard_app_ops_detail_reset_dialog_text">Reset all permissions back to default?</string>
   <string name="app_ops_btn_text">Modify</string>
@@ -169,9 +170,9 @@
   <string name="wifi_setting_priority_title">Wi-Fi priority</string>
   <string name="wifi_setting_priority_summary">Specify the priority of the Wi-Fi networks</string>
   <string name="wifi_display_summary">Screen mirroring on another device</string>
-  <string name="status_bar_title">Status bar</string>
+  <string name="status_bar_title">شريط المهام</string>
   <string name="status_bar_style_title">Style</string>
-  <string name="status_bar_general_title">General</string>
+  <string name="status_bar_general_title">عام</string>
   <string name="status_bar_clock">Clock and date</string>
   <string name="status_bar_clock_title">Clock and date style</string>
   <string name="clock_title_enable">Alignment</string>
@@ -234,7 +235,7 @@
   <string name="wakeup_when_plugged_unplugged_title">Wake up on charge</string>
   <string name="wakeup_when_plugged_unplugged_summary">Wake up device if charger is plugged/unplugged.</string>
   <string name="sound_title">Sound</string>
-  <string name="advanced_sound_title">Advanced options</string>
+  <string name="advanced_sound_title">إعدادات متقدمة</string>
   <string name="volbtn_music_controls_title">Volume rocker music controls</string>
   <string name="volbtn_music_controls_summary">When screen off, long-pressing the volume rockers will seek music tracks</string>
   <string name="volume_adjust_sounds_enable_title">Volume adjust sound</string>
@@ -255,7 +256,7 @@
   <string name="system_power_crt_mode_vertical">Collapse vertical</string>
   <string name="system_power_crt_mode_both">Collapse orientation dependent</string>
   <string name="system_power_crt_mode_scale">Scale down</string>
-  <string name="title_keyboard_input">Advanced options</string>
+  <string name="title_keyboard_input">إعدادات متقدمة</string>
   <string name="disable_fullscreen_keyboard_title">Disable fullscreen keyboard</string>
   <string name="disable_fullscreen_keyboard_summary">Landscape keyboard will never take up entire screen</string>
   <string name="volume_key_cursor_control_title">Volume key cursor control</string>
@@ -288,7 +289,7 @@
   <string name="auto_brightness_last_level_format"><xliff:g id="level">%1$d</xliff:g> -\n\u221e lux</string>
   <string name="auto_brightness_adjust_button">Adjust</string>
   <string name="auto_brightness_close_button">Close</string>
-  <string name="auto_brightness_reset_button">Reset</string>
+  <string name="auto_brightness_reset_button">إعادة ضبط</string>
   <string name="auto_brightness_split_dialog_title">Split brightness level</string>
   <string name="auto_brightness_level_dialog_title">Light level setup</string>
   <string name="auto_brightness_lux">Ambient brightness (lux)</string>
@@ -403,7 +404,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="shortcut_action_kill">Kill app</string>
   <string name="shortcut_action_power">Screen Off</string>
   <string name="shortcut_action_theme_switch">Theme switcher</string>
-  <string name="shortcut_action_notifications">Notifications</string>
+  <string name="shortcut_action_notifications">إشعارات</string>
   <string name="shortcut_action_menu_big">Menu</string>
   <string name="shortcut_action_qs">Quicksettings panel</string>
   <string name="shortcut_action_smart">Smart pulldown</string>
@@ -422,8 +423,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="shortcut_action_select_action_longpress">Choose longpress action:</string>
   <string name="shortcut_action_select_action">Choose action:</string>
   <string name="shortcut_action_select_action_newbutton">Choose new action:</string>
-  <string name="shortcut_action_reset">Reset</string>
-  <string name="shortcut_action_add">Add</string>
+  <string name="shortcut_action_reset">إعادة ضبط</string>
+  <string name="shortcut_action_add">إضافة</string>
   <string name="shortcut_action_reset_message">Reset all entries to default?</string>
   <string name="shortcut_action_max">Maximum entries size has been reached</string>
   <string name="shortcut_action_warning">Warning</string>
@@ -473,7 +474,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="shortcuts_icon_picker_market">Market</string>
   <string name="shortcuts_icon_picker_movie">Movies</string>
   <string name="shortcuts_icon_picker_music">Music</string>
-  <string name="shortcuts_icon_picker_nav">Navigation</string>
+  <string name="shortcuts_icon_picker_nav">التصفح</string>
   <string name="shortcuts_icon_picker_phone">Phone</string>
   <string name="shortcuts_icon_picker_package">Package</string>
   <string name="shortcuts_icon_picker_pinterest">Pinterest</string>
@@ -491,7 +492,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="shortcuts_icon_picker_twitter">Twitter</string>
   <string name="shortcuts_icon_picker_unlock">Unlock</string>
   <string name="icon_picker_type">Select icon type:</string>
-  <string name="icon_default">Default</string>
+  <string name="icon_default">الإفتراضى</string>
   <string name="icon_presets">System icons</string>
   <string name="icon_custom">Gallery</string>
   <string name="icon_pack">Icon pack</string>
@@ -592,7 +593,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="button_transparency_title">Button transparency</string>
   <string name="nav_button_color_mode_summary">Change the navigation bar button color mode</string>
   <string name="navigation_bar_glow_tint_title">Glow color</string>
-  <string name="advanced_options_settings_title">Advanced options</string>
+  <string name="advanced_options_settings_title">إعدادات متقدمة</string>
   <string name="media_scanner_on_boot_title">MediaScanner behavior on boot</string>
   <string name="media_scanner_on_boot_enabled">Scan media</string>
   <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
@@ -718,7 +719,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="icon_picker_sms">Messaging</string>
   <string name="icon_picker_movie">Movie</string>
   <string name="icon_picker_music">Music</string>
-  <string name="icon_picker_nav_normal">Navigation</string>
+  <string name="icon_picker_nav_normal">التصفح</string>
   <string name="icon_picker_phone">Phone</string>
   <string name="icon_picker_podcast">Podcast</string>
   <string name="icon_picker_rss">Rss</string>
@@ -800,7 +801,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="notif_alpha_title">Notification transparency</string>
   <string name="notification_brightness_slider_title">Brightness slider</string>
   <string name="notification_brightness_slider_summary">Show brightness slider in drawer</string>
-  <string name="notifications_category_title">Notifications</string>
+  <string name="notifications_category_title">إشعارات</string>
   <string name="less_notification_sounds_title">Less frequent notification sounds</string>
   <string name="less_notification_sounds_summary">Limit the notification sounds of each app to only play once per set time period</string>
   <string name="less_notification_sounds_default">Default Behaviour</string>
@@ -828,7 +829,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="title_tile_sleep">Go to sleep</string>
   <string name="title_tile_location">Location</string>
   <string name="title_tile_torch">Torch</string>
-  <string name="title_tile_lockscreen">Lock screen</string>
+  <string name="title_tile_lockscreen">شاشة القفل</string>
   <string name="title_tile_lte">LTE</string>
   <string name="title_tile_mobiledata">Mobile data</string>
   <string name="title_tile_autorotate">Orientation</string>
@@ -870,7 +871,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="custom_toggle_double_click_check">Double-tap to switch to the previous action</string>
   <string name="custom_tile_long_press">Longpress:</string>
   <string name="custom_tile_null_warning">An action must be set first</string>
-  <string name="custom_tile_resolve_name">Unknown</string>
+  <string name="custom_tile_resolve_name">غير معروف</string>
   <string name="title_tile_profile">Profile</string>
   <string name="title_tile_hover">Hover</string>
   <string name="quicksettings_tiles_style">Tile style</string>
@@ -999,12 +1000,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   </plurals>
   <string name="backlight_summary_disabled">Disabled</string>
   <string name="backlight_summary_enabled_with_timeout">Enabled for <xliff:g id="timeout">%s</xliff:g></string>
-  <string name="backlight_summary_enabled">Enabled</string>
+  <string name="backlight_summary_enabled">مفعل</string>
   <string name="confirm_delete_apn">The APN will be deleted.</string>
   <string name="minimum_vibration_duration">Minimum vibration duration</string>
   <string name="interface_settings_animation_title">Animation options</string>
   <string name="listview_animation_title">ListView animation</string>
-  <string name="listview_off">Default</string>
+  <string name="listview_off">الإفتراضى</string>
   <string name="listview_wave_left">Wave (left)</string>
   <string name="listview_wave_right">Wave (right)</string>
   <string name="listview_alpha">Alpha</string>
@@ -1126,7 +1127,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="pa_pie_mode_summary">Manage how animations and status additions will be handled</string>
   <string name="pa_pie_mode_bare">Bare</string>
   <string name="pa_pie_mode_quick">Quick</string>
-  <string name="pa_pie_mode_default">Default</string>
+  <string name="pa_pie_mode_default">الإفتراضى</string>
   <string name="pa_pie_mode_slow">Slow</string>
   <string name="pa_pie_size_title">Pie size</string>
   <string name="pa_pie_size_summary">Define Pie controls size</string>
@@ -1250,7 +1251,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="ad_timeout_title">Display timeout</string>
   <string name="ad_threshold_title">Proximity time threshold</string>
   <string name="ad_brightness_title">Display brightness</string>
-  <string name="ad_customizations_title">Advanced</string>
+  <string name="ad_customizations_title">متقدم</string>
   <string name="ad_excluded_apps_title">Excluded apps</string>
   <string name="ad_excluded_apps_summary">No notifications will be shown for these apps</string>
   <string name="ad_privacy_apps_title">Privacy mode</string>
@@ -1417,7 +1418,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="animation_duration_title">Animation duration</string>
   <string name="title_animation_no_override">Prevent app overrides</string>
   <string name="summary_animation_no_override">Prevent apps from overriding transitions</string>
-  <string name="animation_duration_default">Default</string>
+  <string name="animation_duration_default">الإفتراضى</string>
   <string name="lock_clock_title">Clock widget</string>
   <string name="lock_clock_summary">Change home or lock screen widget display</string>
   <string name="progressbar_title">Progress bar</string>
@@ -1439,7 +1440,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="progressbar_linear">Linear</string>
   <string name="progressbar_acceleratedecelerate">AccelerateDecelerate</string>
   <string name="progressbar_decelerate">Decelerate</string>
-  <string name="progressbar_reset">Reset</string>
+  <string name="progressbar_reset">إعادة ضبط</string>
   <string name="progressbar_button_reset">Reset colors</string>
   <string name="progressbar_reset_message">Reset progress bar to default?</string>
   <string name="recent_panel_title">Recent panel</string>
@@ -1466,11 +1467,11 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="ram_bar_color_app_mem_color">Applications RAM color</string>
   <string name="ram_bar_color_cache_mem_color">Cache RAM color</string>
   <string name="ram_bar_color_total_mem_color">Other RAM color</string>
-  <string name="ram_bar_color_enabled">Enabled</string>
+  <string name="ram_bar_color_enabled">مفعل</string>
   <string name="ram_bar_color_disabled">Disabled</string>
   <string name="ram_bar_button_help">Help</string>
   <string name="ram_bar_button_reset">Reset colors</string>
-  <string name="ram_bar_reset">Reset</string>
+  <string name="ram_bar_reset">إعادة ضبط</string>
   <string name="ram_bar_reset_message">Reset RAM bar and recent panel colors to default?</string>
   <string name="custom_recent_title">Custom recent styles</string>
   <string name="custom_recent_summary">Enable slim recent or disable for stock</string>
@@ -1513,7 +1514,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="toast_animation_title">Toast animations</string>
   <string name="toast_animation_summary">Select and preview system toast animation</string>
   <string name="toast_none_animation">None</string>
-  <string name="toast_default_animation">Default</string>
+  <string name="toast_default_animation">الإفتراضى</string>
   <string name="toast_fade_animation">Fade animation</string>
   <string name="toast_SlideRight_animation">Slide right</string>
   <string name="toast_SlideLeft_animation">Slide left</string>
@@ -1531,7 +1532,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="ime_animation_title">IME animations</string>
   <string name="ime_animation_summary">Set custom animations for system keyboard</string>
   <string name="animation_settings_reset_message">Reset animations to default?</string>
-  <string name="animation_default">Default</string>
+  <string name="animation_default">الإفتراضى</string>
   <string name="animation_fade">Fade</string>
   <string name="animation_slide_right">Slide in right</string>
   <string name="animation_slide_left">Slide in left</string>
@@ -1559,7 +1560,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="animation_overfling_distance_title">Overfling distance</string>
   <string name="animation_duration_summary">Set duration</string>
   <string name="animation_no_scroll_title">Scrolling modifiers</string>
-  <string name="animation_no_scroll_summary_on">Enabled</string>
+  <string name="animation_no_scroll_summary_on">مفعل</string>
   <string name="animation_no_scroll_summary_off">Disabled</string>
   <string name="scroll_disclaimer_summary">Note: Most apps need to be restarted for custom values to take effect</string>
   <string name="multiuser_preference_title">Multiuser support</string>
@@ -1615,7 +1616,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="status_bar_six_bar_signal_summary">Enable to show six bar signal in statusbar/qs</string>
   <string name="lockscreen_buttons_title">Buttons</string>
   <string name="lockscreen_buttons_summary">View or change lock screen button actions</string>
-  <string name="lockscreen_interface_title">Interface</string>
+  <string name="lockscreen_interface_title">واجهة</string>
   <string name="lockscreen_interface_summary">Customize lock screen sliders or shortcuts</string>
   <string name="lockscreen_notifications_title">Lock screen notifications</string>
   <string name="lockscreen_notifications_summary">Configure lock screen notification settings</string>
@@ -1783,7 +1784,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="ring_mode_vibrate">Vibrate</string>
   <string name="ring_mode_mute">Mute</string>
   <string name="profiles_settings_title">Profiles</string>
-  <string name="profiles_add">Add</string>
+  <string name="profiles_add">إضافة</string>
   <string name="profile_menu_delete">Delete</string>
   <string name="profile_settings_title">Profile</string>
   <string name="profile_empty_list_profiles_off">To configure and use system profiles, turn profiles on.</string>
@@ -1810,7 +1811,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="rename_dialog_message">Enter a new name</string>
   <string name="duplicate_profile_name">Duplicate profile name!</string>
   <string name="duplicate_appgroup_name">Duplicate app group name!</string>
-  <string name="profile_reset_title">Reset</string>
+  <string name="profile_reset_title">إعادة ضبط</string>
   <string name="profile_reset_message">Delete all user created profiles and app groups and restore them to default?</string>
   <string name="profile_delete_confirm">Delete this profile?</string>
   <string name="profile_app_delete_confirm">Remove this app?</string>
@@ -1854,7 +1855,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="profile_connection_enable">Enable</string>
   <string name="profile_system_settings_title">System settings</string>
   <string name="profile_lockmode_title">Lock screen mode</string>
-  <string name="profile_lockmode_default">Default</string>
+  <string name="profile_lockmode_default">الإفتراضى</string>
   <string name="profile_lockmode_insecure">Insecure</string>
   <string name="profile_lockmode_disabled">Disabled</string>
   <string name="profile_lockmode_default_summary">Use system default</string>
@@ -1869,7 +1870,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="toggleSync">Data Sync</string>
   <string name="toggle2g3g">2G/3G</string>
   <string name="toggleNfc">NFC</string>
-  <string name="menu_hidden_apps_delete">Reset</string>
+  <string name="menu_hidden_apps_delete">إعادة ضبط</string>
   <string name="menu_hidden_apps_reset_lock">Reset pattern lock</string>
   <string name="protected_apps">Protected apps</string>
   <string name="saving_protected_components">Saving component state</string>
@@ -1979,7 +1980,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="voice_tts_date">Date is</string>
   <string name="voice_tts_music">Now playing</string>
   <string name="voice_tts_engine_started">Drive Mode Ready</string>
-  <string name="unknown_tts">Unknown</string>
+  <string name="unknown_tts">غير معروف</string>
   <string name="unknown_number_tts">Unknown number</string>
   <string name="time_one">One</string>
   <string name="time_two">Two</string>
@@ -2101,7 +2102,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="restore_preview">View default picture</string>
   <string name="selectnewfile_menu">View new picture from Gallery</string>
   <string name="selectfile_menu">View picture from Gallery</string>
-  <string name="restore_default_str">Reset</string>
+  <string name="restore_default_str">إعادة ضبط</string>
   <string name="hue_str">Hue: <xliff:g id="hue_value">%1$s</xliff:g></string>
   <string name="saturation_str">Saturation: <xliff:g id="saturation_value">%1$s</xliff:g></string>
   <string name="contrast_str">Contrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>

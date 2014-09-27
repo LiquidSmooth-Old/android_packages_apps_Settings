@@ -58,6 +58,7 @@
   <string name="pie_control_title">Kontrola PIE</string>
   <string name="theme_settings_title">Czarne tło</string>
   <string name="device_settings_title">Urządzenie</string>
+  <string name="devicesettings_app_summary">Configure device specific options</string>
   <string name="device_legal_summary">Open source i licencje Google</string>
   <string name="shortcut_picker_title">Akcje skrótów</string>
   <string name="superuser_settings_title">Superuser</string>
@@ -1140,14 +1141,14 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="pa_pie_angle_super">Ogromne</string>
   <string name="pa_pie_gap_none">Brak</string>
   <string name="pa_pie_gap_small">Małe</string>
-  <string name="pa_pie_gap_big">Big (default)</string>
+  <string name="pa_pie_gap_big">Duży (domyślnie)</string>
   <string name="pa_pie_gap_huge">Ogromne</string>
   <string name="pa_pie_center_title">Wyrównanie w środku</string>
   <string name="pa_pie_center_summary">Center pie on the trigger edge</string>
   <string name="pa_pie_stick_title">Zapobiegaj rotacji</string>
   <string name="pa_pie_stick_summary">Avoids orientation change when screen rotates</string>
-  <string name="pa_pie_search_title">Search button</string>
-  <string name="pa_pie_search_summary">Enable search button on pie controls</string>
+  <string name="pa_pie_search_title">Przycisk wyszukiwania</string>
+  <string name="pa_pie_search_summary">Włącz przycisk wyszukiwania w kontroli PIE</string>
   <string name="pa_pie_trigger_title">Obszar wyzwalania</string>
   <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
   <string name="pa_pie_trigger_none">Brak (PIE wyłączone)</string>
@@ -1555,7 +1556,7 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="battery_bar_animate_title">Animacja ładowania</string>
   <string name="battery_bar_animate_summary">Zmiana animacji ładowania. Włącz według własnego uznania.</string>
   <string name="sound_packages_title">Paczki dźwięków</string>
-  <string name="sound_packages_summary">Allows you set custom sound easily</string>
+  <string name="sound_packages_summary">Pozwala łatwo ustawić niestandardowy dźwięk</string>
   <string name="install_sound_pack_title">Zainstaluj pakiet dźwięków</string>
   <string name="install_sound_pack_summary">Zainstaluj nowe pakiety dźwiękowe dodane w folderze SoundPacks na pamięci wewnętrznej</string>
   <string name="select_sound_pack_title">Wybierz pakiet dźwięków</string>
@@ -1579,7 +1580,7 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="network_traffic_autohide">Auto-ukrywanie</string>
   <string name="network_traffic_autohide_summary">Hide monitor when there is no activity</string>
   <string name="network_traffic_autohide_threshold">Próg bezczynności</string>
-  <string name="network_traffic_color_style">Color style</string>
+  <string name="network_traffic_color_style">Styl koloru</string>
   <string name="network_traffic_color_reset">Resetuj kolor</string>
   <string name="network_traffic_color_reset_message">Reset network traffic color to default?</string>
   <string name="status_bar_double_tap_to_sleep_title">Dwukrotnie dotknij, aby uśpić</string>

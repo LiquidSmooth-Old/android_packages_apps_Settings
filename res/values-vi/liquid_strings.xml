@@ -58,6 +58,7 @@
   <string name="pie_control_title">Trình điều khiển Pie</string>
   <string name="theme_settings_title">Tất cả nghỉ</string>
   <string name="device_settings_title">Thiết bị</string>
+  <string name="devicesettings_app_summary">Configure device specific options</string>
   <string name="device_legal_summary">Mã nguồn mở và giấy phép Google</string>
   <string name="shortcut_picker_title">Hành động phím tắt</string>
   <string name="superuser_settings_title">Superuser</string>
@@ -236,7 +237,7 @@
   <string name="sound_title">Âm thanh</string>
   <string name="advanced_sound_title">Tùy chọn nâng cao</string>
   <string name="volbtn_music_controls_title">Điều khiển âm nhạc rocker âm lượng</string>
-  <string name="volbtn_music_controls_summary">Khi màn hình tắt, dài ép rocker khối lượng sẽ tìm kiếm các bài nhạc</string>
+  <string name="volbtn_music_controls_summary">Phím tăng/giảm âm lượng điều khiển hoạt động đa phương tiện</string>
   <string name="volume_adjust_sounds_enable_title">Âm báo điều chỉnh âm lượng</string>
   <string name="volume_adjust_sounds_enable_summary">Phát âm khi điều chỉnh âm lượng bằng phím cứng</string>
   <string name="link_volume_ringtones">Khối lượng nhạc chuông &amp; thông báo liên kết</string>
@@ -450,7 +451,7 @@
   <string name="shortcuts_icon_picker_maps">Bản đồ</string>
   <string name="shortcuts_icon_picker_market">Chợ ứng dụng</string>
   <string name="shortcuts_icon_picker_movie">Phim</string>
-  <string name="shortcuts_icon_picker_music">Âm thanh</string>
+  <string name="shortcuts_icon_picker_music">Âm nhạc</string>
   <string name="shortcuts_icon_picker_nav">Điều hướng</string>
   <string name="shortcuts_icon_picker_phone">Điện thoại</string>
   <string name="shortcuts_icon_picker_package">Gói</string>
@@ -1178,7 +1179,7 @@
   <string name="volume_steps_5">5</string>
   <string name="volume_steps_alarm_title">Báo thức</string>
   <string name="volume_steps_dtmf_title">DTMF</string>
-  <string name="volume_steps_music_title">Âm thanh</string>
+  <string name="volume_steps_music_title">Âm nhạc</string>
   <string name="volume_steps_notification_title">Thông báo</string>
   <string name="volume_steps_ring_title">Chuông</string>
   <string name="volume_steps_system_title">Hệ thống</string>

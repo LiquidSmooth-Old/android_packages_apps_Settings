@@ -58,6 +58,7 @@
   <string name="pie_control_title">Pie control</string>
   <string name="theme_settings_title">Total blackout</string>
   <string name="device_settings_title">Device</string>
+  <string name="devicesettings_app_summary">Configure device specific options</string>
   <string name="device_legal_summary">Open source and Google licenses</string>
   <string name="shortcut_picker_title">Action shortcuts</string>
   <string name="superuser_settings_title">Superuser</string>

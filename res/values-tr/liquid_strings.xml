@@ -58,6 +58,7 @@
   <string name="pie_control_title">Pie denetimi</string>
   <string name="theme_settings_title">Karanlık tema</string>
   <string name="device_settings_title">Aygıt</string>
+  <string name="devicesettings_app_summary">Configure device specific options</string>
   <string name="device_legal_summary">Açık kaynak ve Google lisansları</string>
   <string name="shortcut_picker_title">Eylem kısayolları</string>
   <string name="superuser_settings_title">Yetkili kullanıcı</string>

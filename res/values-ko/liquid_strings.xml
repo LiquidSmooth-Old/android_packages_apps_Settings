@@ -58,6 +58,7 @@
   <string name="pie_control_title">파이 컨트롤</string>
   <string name="theme_settings_title">토탈 블랙아웃</string>
   <string name="device_settings_title">기기</string>
+  <string name="devicesettings_app_summary">Configure device specific options</string>
   <string name="device_legal_summary">Open source and Google licenses</string>
   <string name="shortcut_picker_title">작업 바로가기</string>
   <string name="superuser_settings_title">슈퍼유저</string>

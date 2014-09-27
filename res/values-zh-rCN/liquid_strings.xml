@@ -58,6 +58,7 @@
   <string name="pie_control_title">Pie 控制</string>
   <string name="theme_settings_title">完全黑色</string>
   <string name="device_settings_title">设备</string>
+  <string name="devicesettings_app_summary">Configure device specific options</string>
   <string name="device_legal_summary">Open source and Google licenses</string>
   <string name="shortcut_picker_title">快捷动作</string>
   <string name="superuser_settings_title">超级用户</string>

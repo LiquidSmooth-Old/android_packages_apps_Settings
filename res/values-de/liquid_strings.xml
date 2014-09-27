@@ -58,6 +58,7 @@
   <string name="pie_control_title">Pie-Steuerung</string>
   <string name="theme_settings_title">Dunkles Design</string>
   <string name="device_settings_title">Gerät</string>
+  <string name="devicesettings_app_summary">Configure device specific options</string>
   <string name="device_legal_summary">Open Source und Google Lizenzen</string>
   <string name="shortcut_picker_title">Aktionssymbolleiste</string>
   <string name="superuser_settings_title">Superuser</string>

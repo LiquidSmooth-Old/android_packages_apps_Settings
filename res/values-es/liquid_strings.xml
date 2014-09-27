@@ -58,6 +58,7 @@
   <string name="pie_control_title">Control Pie</string>
   <string name="theme_settings_title">Tema oscuro</string>
   <string name="device_settings_title">Dispositivo</string>
+  <string name="devicesettings_app_summary">Configure device specific options</string>
   <string name="device_legal_summary">Código libre y licencias de Google</string>
   <string name="shortcut_picker_title">Accesos Directos</string>
   <string name="superuser_settings_title">Superusuario</string>
@@ -2012,8 +2013,8 @@ Plural Form
   <string name="heads_up_switch_label">Habilitar notificaciones heads up</string>
   <string name="heads_up_floating_window_title">Lanzamiento de ventana flotante</string>
   <string name="heads_up_floating_window_summary">Abrir Heads up en ventana flotante</string>
-  <string name="heads_up_exclude_from_lock_screen_title">Disable on lock screen</string>
-  <string name="heads_up_exclude_from_lock_screen_summary">Hide notifications on lock screen</string>
+  <string name="heads_up_exclude_from_lock_screen_title">Desactivar en pantalla de bloqueo</string>
+  <string name="heads_up_exclude_from_lock_screen_summary">Ocultar notificaciones en pantalla de bloqueo</string>
   <string name="listsystem">lista</string>
   <string name="sizer_title">Eliminar aplicación de sistema</string>
   <string name="caution">Precaución!</string>

@@ -58,6 +58,7 @@
   <string name="pie_control_title">Controlos Pie</string>
   <string name="theme_settings_title">Apagão total</string>
   <string name="device_settings_title">Dispositivo</string>
+  <string name="devicesettings_app_summary">Configure device specific options</string>
   <string name="device_legal_summary">Open source e licenças do Google</string>
   <string name="shortcut_picker_title">Atalhos de ação</string>
   <string name="superuser_settings_title">Superusuário</string>

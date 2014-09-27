@@ -1,0 +1,218 @@
+From 96644e51943fca98f45c343da0261d7d7abc89d9 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Hern=C3=A1n=20Casta=C3=B1=C3=B3n?= <herna@mokeedev.com>
+Date: Thu, 25 Sep 2014 19:32:08 +0200
+Subject: [PATCH] Spanish translations and fixes
+
+This is the first part of editing, fixing and translating strings into correct Spanish. I will translate all the rest non-translated strings and will fix the wrong ones. I will do in some parts, since I do not have so much time to do all at the first time. There are a lot of strings but I fixed and translated most easy and importants one.
+---
+ res/values-es/liquid_strings.xml | 96 ++++++++++++++++++++--------------------
+ 1 file changed, 48 insertions(+), 48 deletions(-)
+
+diff --git a/res/values-es/liquid_strings.xml b/res/values-es/liquid_strings.xml
+index 69561fa..d6a3830 100644
+--- a/res/values-es/liquid_strings.xml
++++ b/res/values-es/liquid_strings.xml
+@@ -25,11 +25,11 @@
+   <string name="reset_message">¿Restablecer la configuración por defecto?</string>
+   <string name="sunday">Domingo</string>
+   <string name="monday">Lunes</string>
+-  <string name="tuesday">martes</string>
+-  <string name="wednesday">Miercoles</string>
++  <string name="tuesday">Martes</string>
++  <string name="wednesday">Miércoles</string>
+   <string name="thursday">Jueves</string>
+   <string name="friday">Viernes</string>
+-  <string name="saturday">Sabado</string>
++  <string name="saturday">Sábado</string>
+   <string name="mod_version">Versión de LiquidSmooth</string>
+   <string name="mod_version_default">Desconocido</string>
+   <string name="build_date">Fecha de compilación</string>
+@@ -148,7 +148,7 @@
+   <string name="privacy_guard_default_title">Gestor de privacidad</string>
+   <string name="privacy_guard_default_summary">No acceder a datos personales de forma predeterminada para las aplicaciones recién instaladas</string>
+   <string name="privacy_guard_notification_title">Notificación</string>
+-  <string name="privacy_guard_notifiation_summary">Mostrar notificación si protector de privacidad está activo.</string>
++  <string name="privacy_guard_notifiation_summary">Mostrar notificación si el protector de privacidad está activo.</string>
+   <string name="privacy_guard_manager_title">Guardián de privacidad</string>
+   <string name="privacy_guard_manager_summary">Gestionar las aplicaciones que tienen acceso a sus datos personales y otros permisos.</string>
+   <string name="privacy_guard_no_user_apps">No hay aplicaciones instaladas</string>
+@@ -168,7 +168,7 @@
+   <string name="wifi_menu_forget_all">Olvidar todas las redes</string>
+   <string name="wifi_setting_priority_title">Prioridad Wi-Fi</string>
+   <string name="wifi_setting_priority_summary">Especificar la prioridad de las redes Wi-Fi</string>
+-  <string name="wifi_display_summary">Pantalla reflejado en otro dispositivo</string>
++  <string name="wifi_display_summary">Pantalla reflejada en otro dispositivo</string>
+   <string name="status_bar_title">Barra de estado</string>
+   <string name="status_bar_style_title">Estilo</string>
+   <string name="status_bar_general_title">General</string>
+@@ -214,7 +214,7 @@
+   <string name="shake_events_title">Eventos de agitado</string>
+   <string name="shake_events_summary">Usar diferentes eventos de agitados para realizar acciones</string>
+   <string name="shake_events_enabled_title">Habilitar la escucha al agitar</string>
+-  <string name="shake_events_normal_title">activar eventos al agitar</string>
++  <string name="shake_events_normal_title">Activar eventos al agitar</string>
+   <string name="shake_events_disabled_title">Aplicaciones inhabilitadas</string>
+   <string name="shake_events_disabled_summary">Inhabilitar eventos de agitado al usar estas aplicaciones</string>
+   <string name="shake_event_x_title">Al agitar horizontalmente</string>
+@@ -243,7 +243,7 @@
+   <string name="link_volume_ringtones">Vincular volumen de llamadas &amp; y notificaciones</string>
+   <string name="volume_ring_only_description">Tono de llamada</string>
+   <string name="camera_sounds_title">Sonido de captura de la cámara</string>
+-  <string name="camera_sounds_summary">Habilitar sonido del obturador de la cámara de sistema</string>
++  <string name="camera_sounds_summary">Habilitar sonido del obturador de la cámara del sistema</string>
+   <string name="camera_sound_warning_dialog_text">Desactivar el sonido del disparador es ilegal en algunas áreas. Por favor revise la ley aplicable en su país</string>
+   <string name="safe_headset_volume_title">Volumen auricular seguro</string>
+   <string name="safe_headset_volume_summary">Prevenir niveles de volumen altos cuando el auricular está conectado por primera vez</string>
+@@ -278,7 +278,7 @@
+   <string name="root_access_warning_message">Permitir que las aplicaciones tengan acceso root es muy peligroso y podría comprometer la seguridad de su sistema!</string>
+   <string name="root_access_none">Deshabilitada</string>
+   <string name="root_access_apps">Sólo apps</string>
+-  <string name="root_access_adb">Solo ADB</string>
++  <string name="root_access_adb">Sólo ADB</string>
+   <string name="root_access_all">Aplicaciones y ADB</string>
+   <string name="auto_brightness_setup_title">Brillo automático</string>
+   <string name="auto_brightness_adjustment_title">Ajustar brillo</string>
+@@ -524,7 +524,7 @@ Opciones adicionales están disponibles por mucho tiempo-presionar una línea. S
+   <string name="battery_bolt_color">Color de carga</string>
+   <string name="battery_text_charging_color">Color de carga texto porcentaje (15-89%)</string>
+   <string name="battery_circle_charging_color">Círculo color de carga</string>
+-  <string name="battery_style_reset_message">Restablecer todos los colores de la batería?</string>
++  <string name="battery_style_reset_message">¿Restablecer todos los colores de la batería?</string>
+   <string name="power_notifications_category_title">Alarma de conectividad de la energía</string>
+   <string name="power_notifications_enable_title">Activar</string>
+   <string name="power_notifications_enable_summary">Alerta cuando la alimentación está conectada o desconectada</string>
+@@ -553,9 +553,9 @@ Opciones adicionales están disponibles por mucho tiempo-presionar una línea. S
+   <string name="navigation_bar">Barra de navegación</string>
+   <string name="navbar_button_cat">Botones de la barra de navegación</string>
+   <string name="title_pref_menu_location">Ubicación del menú</string>
+-  <string name="summary_pref_menu_location">Donde usted quiere que los botones del menú aparezcan</string>
++  <string name="summary_pref_menu_location">Donde quiere usted que los botones del menú aparezcan</string>
+   <string name="title_pref_menu_display">Visibilidad del menú</string>
+-  <string name="summary_pref_menu_display">Cuando usted quiere que los botones del menú que aparezcan</string>
++  <string name="summary_pref_menu_display">Cuando quiere usted que los botones del menú que aparezcan</string>
+   <string name="navbar_enable_bar">Barra de navegación</string>
+   <string name="navbar_enable_bar_summary">Activar o desactivar el sistema de navegación</string>
+   <string name="navigation_bar_height_title">Altura de la barra de navegación</string>
+@@ -587,15 +587,15 @@ Opciones adicionales están disponibles por mucho tiempo-presionar una línea. S
+   <string name="five">Cinco</string>
+   <string name="six">Seis</string>
+   <string name="quiet_hours_title">Horas de tranquilidad</string>
+-  <string name="quiet_hours_summary">Configurar las horas que el dispositivo debe estar en silencio</string>
++  <string name="quiet_hours_summary">Configurar las horas en las que el dispositivo debe estar en silencio</string>
+   <string name="quiet_hours_mode">Modo silencioso horas</string>
+   <string name="quiet_hours_off">Horas de silencio desactivado</string>
+   <string name="quiet_hours_forced">horas tranquilas siempre estan</string>
+   <string name="quiet_hours_times_warning">Veces no pueden solaparse: ajuste a tiempo posible más cercano</string>
+   <string name="quiet_hours_wifi">Requieren una conexión WiFi</string>
+-  <string name="quiet_hours_wifi_on">Debe estar conectado WiFi</string>
+-  <string name="quiet_hours_wifi_off">WiFi puede ser en cualquier estado</string>
+-  <string name="quiet_hours_charging">Dispositivo que se enchufarán requieren</string>
++  <string name="quiet_hours_wifi_on">Debe estar conectado al WiFi</string>
++  <string name="quiet_hours_wifi_off">WiFi puede estar en cualquier estado</string>
++  <string name="quiet_hours_charging">Requiere que el dispositivo esté conectado</string>
+   <string name="quiet_hours_charging_off">Dispositivo de carga puede estar en cualquier estado</string>
+   <string name="quiet_hours_charging_on">Dispositivo debe ser carga</string>
+   <string name="quiet_hours_timed">Horas tranquilas se basa en las funciones de tiempo</string>
+@@ -2071,13 +2071,13 @@ Plural Form
+   <string name="ime_navigation_up_down">arriba / abajo</string>
+   <string name="ime_navigation_home_end">Página de inicio / fin</string>
+   <string name="screen_off_gesture_settings_title">Gestos pantalla apagada</string>
+-  <string name="display_color_title">Screen color</string>
++  <string name="display_color_title">Color de la pantalla</string>
+   <string name="display_color_summary">Customize the hue, saturation, etc</string>
+   <string name="custom_screencolor">Custom screen color</string>
+   <string name="screencolor_save">Guardar</string>
+   <string name="screencolor_cancel">Cancelar</string>
+-  <string name="previous_str">Previous</string>
+-  <string name="new_str">New</string>
++  <string name="previous_str">Anterior</string>
++  <string name="new_str">Nuevo</string>
+   <string name="restore_preview">View default picture</string>
+   <string name="selectnewfile_menu">View new picture from Gallery</string>
+   <string name="selectfile_menu">View picture from Gallery</string>
+@@ -2089,47 +2089,47 @@ Plural Form
+   <string name="custom_density_title">Densidad personalizada</string>
+   <string name="set_custom_density_title">Establecer una densidad personalizada</string>
+   <string name="set_custom_density_set">Seleccionar</string>
+-  <string name="current_density">"Current density: "</string>
+-  <string name="new_density">"New density: "</string>
+-  <string name="density_change_warning">Note: Changing density will close all running apps!</string>
+-  <string name="font_size_sample">Sample</string>
+-  <string name="screen_on_notification_led_title">Screen-On Notification Light</string>
+-  <string name="screen_on_notification_led_summary">Enable Notification Light even when screen is on.</string>
+-  <string name="color_calibration_title">Color calibration</string>
+-  <string name="color_calibration_summary">Calibrate on-screen colors</string>
+-  <string name="color_red_title">Red</string>
+-  <string name="color_green_title">Green</string>
+-  <string name="color_blue_title">Blue</string>
+-  <string name="gamma_tuning_title_head">Gamma calibration</string>
+-  <string name="gamma_tuning_summary_head">Tweak gamma values</string>
++  <string name="current_density">"Densidad actual: "</string>
++  <string name="new_density">"Nueva densidad: "</string>
++  <string name="density_change_warning">Nota: ¡Cambiar la densidad cerrada todas las aplicaciones abiertas!</string>
++  <string name="font_size_sample">Ejemplo</string>
++  <string name="screen_on_notification_led_title">LED de notificacion con la pantalla encendida</string>
++  <string name="screen_on_notification_led_summary">Activar LED de notificación incluso cuando la pantalla está encendida.</string>
++  <string name="color_calibration_title">Calibración del color</string>
++  <string name="color_calibration_summary">Calibrar colores de la pantalla</string>
++  <string name="color_red_title">Rojo</string>
++  <string name="color_green_title">Verde</string>
++  <string name="color_blue_title">Azul</string>
++  <string name="gamma_tuning_title_head">Calibración Gamma</string>
++  <string name="gamma_tuning_summary_head">Editar valores Gamma</string>
+   <string name="gamma_tuning_control_set_header">Group <xliff:g id="index">%d</xliff:g></string>
+-  <string name="gamma_tuning_contrast">Contrast</string>
++  <string name="gamma_tuning_contrast">Contraste</string>
+   <string name="gamma_tuning_brightness">Brillo</string>
+-  <string name="gamma_tuning_saturation">Saturation</string>
++  <string name="gamma_tuning_saturation">Saturación</string>
+   <string name="tether_usb_network_summary">Press to change USB Network</string>
+-  <string name="tether_usb_network_text">USB Tether Network</string>
+-  <string name="tether_user_network_default">Use System Default</string>
+-  <string name="tether_wifi_network_text">WiFi Tether Network</string>
++  <string name="tether_usb_network_text">Anclaje USB</string>
++  <string name="tether_user_network_default">Usar por defecto el del sistema</string>
++  <string name="tether_wifi_network_text">Zona Wi-Fi portátil</string>
+   <string name="nfc_polling_mode_title">NFC polling mode</string>
+-  <string name="nfc_polling_mode_screen_off">Screen off</string>
+-  <string name="nfc_polling_mode_screen_locked">Screen on, locked</string>
+-  <string name="nfc_polling_mode_screen_unlocked">Screen on, unlocked (default)</string>
++  <string name="nfc_polling_mode_screen_off">Pantalla apagada</string>
++  <string name="nfc_polling_mode_screen_locked">Pantalla encendida, bloqueado/string>
++  <string name="nfc_polling_mode_screen_unlocked">Pantalla encendida, desbloqueado (default)</string>
+   <string name="ui_overscroll_title">Over scrolling effects</string>
+   <string name="overscroll_glow_title">Over scroll Color</string>
+   <string name="edge_effect_title">Edge Glow effect</string>
+   <string name="bounce_effect_title">Bounce effect</string>
+   <string name="none_effect_title">Ninguno</string>
+-  <string name="extra_heavy_title">Extra Heavy</string>
+-  <string name="heavy_title">Heavy</string>
+-  <string name="medium_title">Mediana</string>
+-  <string name="light_title">Fina</string>
+-  <string name="extra_light_title">Extra Light</string>
++  <string name="extra_heavy_title">Muy pesado</string>
++  <string name="heavy_title">Pesado</string>
++  <string name="medium_title">Mediano</string>
++  <string name="light_title">Ligero</string>
++  <string name="extra_light_title">Extra Ligero</string>
+   <string name="overscroll_title">Over scrolling effect</string>
+   <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
+   <string name="overscroll_weight_title">Over scrolling weight</string>
+   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+   <string name="liquid_settings_title">LiquidSmooth</string>
+-  <string name="liquid_sound_title">LiquidSmooth sound</string>
++  <string name="liquid_sound_title">LiquidSmooth sonido</string>
+   <string name="liquid_sound_summary">All sound related settings that we have added</string>
+   <string name="adaptive_backlight_title">Adaptive backlight</string>
+   <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
+@@ -2137,7 +2137,7 @@ Plural Form
+   <string name="sunlight_enhancement_summary">Enhance display brightness and readability under bright sunlight</string>
+   <string name="color_enhancement_title">Color enhancement</string>
+   <string name="color_enhancement_summary">Dynamically enhance the color of the display</string>
+-  <string name="wifi_ap_clients_title">Connected devices</string>
+-  <string name="wifi_ap_client_ap_disabled">Hotspot is disabled</string>
+-  <string name="wifi_ap_client_none_connected">No devices connected</string>
++  <string name="wifi_ap_clients_title">Dispositivos conectados</string>
++  <string name="wifi_ap_client_ap_disabled">Punto Wi-Fi desactivado</string>
++  <string name="wifi_ap_client_none_connected">No hay dispositivos conectados</string>
+ </resources>
