@@ -58,6 +58,7 @@
   <string name="pie_control_title">Pie-hallinta</string>
   <string name="theme_settings_title">Musta ulkoasu</string>
   <string name="device_settings_title">Laite</string>
+  <string name="devicesettings_app_summary">Configure device specific options</string>
   <string name="device_legal_summary">Avoimen lähdekoodin ja Googlen lisenssit</string>
   <string name="shortcut_picker_title">Toimintojen pikanäppäimet</string>
   <string name="superuser_settings_title">Superuser</string>
