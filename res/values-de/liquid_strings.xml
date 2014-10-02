@@ -2032,8 +2032,6 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="sizer_message_filesuccess">Profil erstellt.</string>
   <string name="sizer_message_filefail">Erstellen des Profils fehlgeschlagen.</string>
   <string name="sizer_message_noselect">Nichts ausgewählt.</string>
-  <string name="clock_use_second">Sekunde</string>
-  <string name="clock_use_second_summary">Sekunden in der Uhr anzeigen</string>
   <string name="disable_immersive_message_title">Vollbild Modus Nachrichten deaktivieren</string>
   <string name="disable_immersive_message_summary">Dadurch werden alle Vollbild Modus Nachrichten ausgeblendet</string>
   <string name="lock_pattern_size_7">7 x 7</string>

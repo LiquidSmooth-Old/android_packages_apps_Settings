@@ -2048,8 +2048,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="sizer_message_filesuccess">Created profile.</string>
   <string name="sizer_message_filefail">Failed to create profile.</string>
   <string name="sizer_message_noselect">Nothing selected.</string>
-  <string name="clock_use_second">Second</string>
-  <string name="clock_use_second_summary">Show seconds in the clock</string>
   <string name="disable_immersive_message_title">Disable Immersive Mode Messages</string>
   <string name="disable_immersive_message_summary">This will hide all Immersive Mode Messages</string>
   <string name="lock_pattern_size_7">7x7</string>

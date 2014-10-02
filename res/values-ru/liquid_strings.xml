@@ -2026,8 +2026,6 @@
   <string name="sizer_message_filesuccess">Созданный профиль.</string>
   <string name="sizer_message_filefail">Не удается создать профиль.</string>
   <string name="sizer_message_noselect">Ничего не выбрано.</string>
-  <string name="clock_use_second">Секунд</string>
-  <string name="clock_use_second_summary">Показывать секунды в часах</string>
   <string name="disable_immersive_message_title">Отключить сообщения Immersive Mode</string>
   <string name="disable_immersive_message_summary">Это позволит скрыть все сообщения Immersive Mode</string>
   <string name="lock_pattern_size_7">7x7</string>

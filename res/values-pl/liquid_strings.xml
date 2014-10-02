@@ -58,7 +58,7 @@
   <string name="pie_control_title">Kontrola PIE</string>
   <string name="theme_settings_title">Czarne tło</string>
   <string name="device_settings_title">Urządzenie</string>
-  <string name="devicesettings_app_summary">Configure device specific options</string>
+  <string name="devicesettings_app_summary">Konfiguruj specyficzne opcje urządzenia</string>
   <string name="device_legal_summary">Open source i licencje Google</string>
   <string name="shortcut_picker_title">Akcje skrótów</string>
   <string name="superuser_settings_title">Superuser</string>
@@ -272,7 +272,7 @@
   <string name="ime_switcher_notify">Powiadomienie wyboru klawiatury</string>
   <string name="ime_switcher_notify_summary">Wyświetlaj powiadomienie wyboru metody wprowadzania tekstu</string>
   <string name="high_touch_sensitivity_title">Wysoka czułość dotyku</string>
-  <string name="high_touch_sensitivity_summary">Increase the screen\'s sensitivity so you can touch it while wearing gloves</string>
+  <string name="high_touch_sensitivity_summary">Zwiększenie czułości ekranu, można używać podczas noszenia rękawic</string>
   <string name="root_access">Dostęp do roota</string>
   <string name="root_access_warning_title">Przyznać dostęp do roota?</string>
   <string name="root_access_warning_message">Przyznanie aplikacjom dostępu do Root\'a jest  bardzo niebezpieczne i może zagrozić bezpieczeństwu systemu!</string>
@@ -1134,7 +1134,7 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="pa_pie_gap_summary">Adjust the gap that separates the Pie elements</string>
   <string name="pa_pie_angle_title">Kąt PIE</string>
   <string name="pa_pie_angle_summary">Adjust the angle of pie\'s egdes from the attachment</string>
-  <string name="pa_pie_angle_none">None (old)</string>
+  <string name="pa_pie_angle_none">Brak (stary)</string>
   <string name="pa_pie_angle_small">Małe</string>
   <string name="pa_pie_angle_big">Normalne (domyślne)</string>
   <string name="pa_pie_angle_huge">Duże</string>
@@ -1594,7 +1594,7 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="status_bar_style_icon">Ikona sygnału</string>
   <string name="status_bar_signal_text_title">Wyświetlanie sygnału</string>
   <string name="status_bar_signal_text_show_text">Tekst sygnału</string>
-  <string name="status_bar_six_bar_signal_title">Enable six bar signal</string>
+  <string name="status_bar_six_bar_signal_title">Włącz sześcio paskowy pasek sygnału</string>
   <string name="status_bar_six_bar_signal_summary">Enable to show six bar signal in statusbar/qs</string>
   <string name="lockscreen_buttons_title">Przyciski</string>
   <string name="lockscreen_buttons_summary">Zobacz lub zmień zachowanie przycisków na ekranie blokady</string>
@@ -2034,8 +2034,6 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="sizer_message_filesuccess">Utworzony profil.</string>
   <string name="sizer_message_filefail">Nie można utworzyć profilu.</string>
   <string name="sizer_message_noselect">Niczego nie wybrano.</string>
-  <string name="clock_use_second">Sekunda</string>
-  <string name="clock_use_second_summary">Pokaż sekundy w zegarze</string>
   <string name="disable_immersive_message_title">Wyłącz tryb wciągających wiadomości</string>
   <string name="disable_immersive_message_summary">To będzie ukrywać wszystkie wiadomości w trybie rozszerzonego pulpitu</string>
   <string name="lock_pattern_size_7">7x7</string>
