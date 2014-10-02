@@ -28,6 +28,11 @@
             android:fragment="com.android.settings.liquid.BatteryIconStyle"
             android:title="@string/battery_icon_title" />
 
+	    <PreferenceScreen
+  	        android:key="battery_style_pref"		
+	        android:fragment="com.android.settings.liquid.StatusBarColor"	
+	        android:title="@string/custom_status_bar_header_title" />
+
         <PreferenceScreen
             android:key="clock_style_pref"
             android:fragment="com.android.settings.liquid.StatusBarClockStyle"
