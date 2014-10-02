@@ -2040,8 +2040,6 @@ Horas de silêncio permitirá ao toque está definido como silencioso</string>
   <string name="sizer_message_filesuccess">Perfil criado.</string>
   <string name="sizer_message_filefail">Falha ao criar o perfil.</string>
   <string name="sizer_message_noselect">Nada está selecionado.</string>
-  <string name="clock_use_second">Segundo</string>
-  <string name="clock_use_second_summary">Mostrar os segundos no relógio</string>
   <string name="disable_immersive_message_title">Desabilitar modo imerso nas mensagens</string>
   <string name="disable_immersive_message_summary">Isto irá esconder todas as mensagens de modo imerso</string>
   <string name="lock_pattern_size_7">7x7</string>

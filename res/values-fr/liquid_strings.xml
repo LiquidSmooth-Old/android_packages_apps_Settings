@@ -2032,8 +2032,6 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="sizer_message_filesuccess">Profil créé.</string>
   <string name="sizer_message_filefail">Impossible de créer le profil.</string>
   <string name="sizer_message_noselect">Rien n\'est sélectionné.</string>
-  <string name="clock_use_second">Seconde</string>
-  <string name="clock_use_second_summary">Afficher les secondes dans l\'horloge</string>
   <string name="disable_immersive_message_title">Désactiver les messages du mode immersif</string>
   <string name="disable_immersive_message_summary">Ceci masquera tout les messages du mode immersif</string>
   <string name="lock_pattern_size_7">7x7</string>

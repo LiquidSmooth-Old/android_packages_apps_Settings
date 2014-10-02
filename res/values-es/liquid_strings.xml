@@ -2032,8 +2032,6 @@ Plural Form
   <string name="sizer_message_filesuccess">Perfil creado.</string>
   <string name="sizer_message_filefail">Fallo creando el perfil.</string>
   <string name="sizer_message_noselect">Nada seleccionado.</string>
-  <string name="clock_use_second">Segundo</string>
-  <string name="clock_use_second_summary">Mostrar segundos en el reloj</string>
   <string name="disable_immersive_message_title">Desactivar mensajes modo inmersivo</string>
   <string name="disable_immersive_message_summary">Esto ocultará todos los mensajes en modo inmersivo</string>
   <string name="lock_pattern_size_7">7x7</string>
