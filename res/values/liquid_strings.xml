@@ -1349,7 +1349,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pa_pie_size_title">Pie size</string>
     <string name="pa_pie_size_summary">Define Pie controls size</string>
     <string name="pa_pie_size_small">Small</string>
-    <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
+    <string name="pa_pie_size_default" translatable="false">@string/pa_pie_mode_default</string>
     <string name="pa_pie_size_large">Large</string>
     <string name="pa_pie_size_gigantic">Gigantic</string>
     <string name="pa_pie_size_monster">Monster</string>
@@ -1387,9 +1387,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="pa_pie_trigger_title">Trigger area</string>
     <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
     <string name="pa_pie_trigger_none">None (Pie disabled)</string>
-    <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
-    <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
-    <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
+    <string name="pa_pie_trigger_small" translatable="false">@string/pa_pie_size_small</string>
+    <string name="pa_pie_trigger_normal" translatable="false">@string/pa_pie_mode_default</string>
+    <string name="pa_pie_trigger_big" translatable="false">@string/pa_pie_gap_big</string>
     <string name="pa_pie_trigger_huge">Huge</string>
     <string name="pa_pie_notifications_title">Enable Chevron Targets</string>
     <string name="pa_pie_notifications_summary">Enabling this will let the Notification panel and QuickSettings tiles become available when swiping</string>
