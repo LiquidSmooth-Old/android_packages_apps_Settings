@@ -58,7 +58,7 @@
   <string name="pie_control_title">Kruhové ovládání</string>
   <string name="theme_settings_title">Celkový výpadek</string>
   <string name="device_settings_title">Zařízení</string>
-  <string name="devicesettings_app_summary">Configure device specific options</string>
+  <string name="devicesettings_app_summary">Nastavte specifické možnosti zařízení</string>
   <string name="device_legal_summary">Open source a Google licence</string>
   <string name="shortcut_picker_title">Zástupci akcí</string>
   <string name="superuser_settings_title">Superuživatel</string>
@@ -2041,8 +2041,6 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. \'Odstranit\' sma
   <string name="sizer_message_filesuccess">Vytvořený profil.</string>
   <string name="sizer_message_filefail">Nezdařilo se vytvořit profil.</string>
   <string name="sizer_message_noselect">Není nic vybráno.</string>
-  <string name="clock_use_second">Sekundy</string>
-  <string name="clock_use_second_summary">Zobrazit sekundy v hodinách</string>
   <string name="disable_immersive_message_title">Zakázat zprávy pohlcujícího režimu</string>
   <string name="disable_immersive_message_summary">Toto skryje všechny zprávy pohlcujícího režimu</string>
   <string name="lock_pattern_size_7">7x7</string>

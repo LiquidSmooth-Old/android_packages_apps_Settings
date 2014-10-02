@@ -1516,8 +1516,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="toast_SlideLeft_animation">Slide left</string>
   <string name="toast_Xylon_animation">Xylon animation</string>
   <string name="toast_Toko_animation">Toko animation</string>
-  <string name="toast_Tn_animation">TN animatie</string>
-  <string name="toast_Honami_animation">Honami animatie</string>
+  <string name="toast_Tn_animation">Tn animation</string>
+  <string name="toast_Honami_animation">Honami animation</string>
   <string name="toast_FastFade_animation">Snel vervagen</string>
   <string name="toast_GrowFade_animation">Groei vervanging</string>
   <string name="toast_GrowFadeCenter_animation">Groei vervanging midden</string>
@@ -1525,7 +1525,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="toast_Translucent_animation">Doorschijnend animatie</string>
   <string name="toast_SlideLeftRight_animation">Slide Left To Right Animation</string>
   <string name="toast_SlideRightLeft_animation">Slide Right To Left Animation</string>
-  <string name="ime_animation_title">IME animaties</string>
+  <string name="ime_animation_title">IME animations</string>
   <string name="ime_animation_summary">Stel aangepaste animaties voor systeem toetsenbord in</string>
   <string name="animation_settings_reset_message">Reset animations to default?</string>
   <string name="animation_default">Oletus</string>
@@ -2048,8 +2048,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="sizer_message_filesuccess">Created profile.</string>
   <string name="sizer_message_filefail">Failed to create profile.</string>
   <string name="sizer_message_noselect">Nothing selected.</string>
-  <string name="clock_use_second">Second</string>
-  <string name="clock_use_second_summary">Show seconds in the clock</string>
   <string name="disable_immersive_message_title">Disable Immersive Mode Messages</string>
   <string name="disable_immersive_message_summary">This will hide all Immersive Mode Messages</string>
   <string name="lock_pattern_size_7">7x7</string>

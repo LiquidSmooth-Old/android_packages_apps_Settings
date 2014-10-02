@@ -2049,8 +2049,6 @@
   <string name="sizer_message_filesuccess">Προφίλ που δημιουργήθηκε.</string>
   <string name="sizer_message_filefail">Απέτυχε η δημιουργία προφίλ.</string>
   <string name="sizer_message_noselect">Τίποτα δεν επιλέχτηκε.</string>
-  <string name="clock_use_second">Δεύτερο</string>
-  <string name="clock_use_second_summary">Εμφάνιση δευτερολέπτων στο ρολόι</string>
   <string name="disable_immersive_message_title">Disable Immersive Mode Messages</string>
   <string name="disable_immersive_message_summary">Αυτό θα κρύψει όλα Immersive μηνύματα κατάστασης</string>
   <string name="lock_pattern_size_7">7 x 7</string>

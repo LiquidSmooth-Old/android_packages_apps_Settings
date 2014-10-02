@@ -58,7 +58,7 @@
   <string name="pie_control_title">PIE-керування</string>
   <string name="theme_settings_title">Темна тема</string>
   <string name="device_settings_title">Пристрій</string>
-  <string name="devicesettings_app_summary">Configure device specific options</string>
+  <string name="devicesettings_app_summary">Налаштувати конкретні параметри пристрою</string>
   <string name="device_legal_summary">Відкритий вихідний код та ліцензії Google</string>
   <string name="shortcut_picker_title">Ярлики дій</string>
   <string name="superuser_settings_title">Суперкористувач</string>
@@ -1145,8 +1145,8 @@
   <string name="pa_pie_gap_huge">Величезний</string>
   <string name="pa_pie_center_title">Вирівнювання посередині</string>
   <string name="pa_pie_center_summary">Center pie on the trigger edge</string>
-  <string name="pa_pie_stick_title">Prevent rotation</string>
-  <string name="pa_pie_stick_summary">Avoids orientation change when screen rotates</string>
+  <string name="pa_pie_stick_title">Запобігання обертанню</string>
+  <string name="pa_pie_stick_summary">Дозволяє уникнути зміни орієнтації, коли екран обертається</string>
   <string name="pa_pie_search_title">Кнопка пошуку</string>
   <string name="pa_pie_search_summary">Включити кнопку пошуку в pie</string>
   <string name="pa_pie_trigger_title">Trigger area</string>
@@ -2034,8 +2034,6 @@
   <string name="sizer_message_filesuccess">Профіль створено.</string>
   <string name="sizer_message_filefail">Не вдалося створити профіль.</string>
   <string name="sizer_message_noselect">Нічого не вибрано.</string>
-  <string name="clock_use_second">Секунда</string>
-  <string name="clock_use_second_summary">Показати секунди в годиннику</string>
   <string name="disable_immersive_message_title">Вимкнути повідомлення Immersive Mode</string>
   <string name="disable_immersive_message_summary">Це дозволить приховати всі повідомлення Immersive Mode</string>
   <string name="lock_pattern_size_7">7x7</string>
@@ -2096,8 +2094,8 @@
   <string name="new_density">"Нова щільність: "</string>
   <string name="density_change_warning">Примітка: Зміна щільності закриє всі запущені програми!</string>
   <string name="font_size_sample">Зразок</string>
-  <string name="screen_on_notification_led_title">Screen-On Notification Light</string>
-  <string name="screen_on_notification_led_summary">Enable Notification Light even when screen is on.</string>
+  <string name="screen_on_notification_led_title">LED-сповіщення при увімкнутому екрані</string>
+  <string name="screen_on_notification_led_summary">Увімкнути LED-сповіщення навіть тоді, коли екран увімкнено.</string>
   <string name="color_calibration_title">Калібрування кольору</string>
   <string name="color_calibration_summary">Калібрування кольорів на екрані</string>
   <string name="color_red_title">Червоний</string>
