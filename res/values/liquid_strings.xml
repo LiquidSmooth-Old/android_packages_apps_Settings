@@ -1841,6 +1841,21 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Allow Multiuser -->
     <string name="multiuser_preference_title">Multiuser support</string>
 
+    <!-- Status bar color -->
+    <string name="custom_status_bar_header_title">Status Bar Color</string>
+    <string name="custom_status_bar_color_title">Custom status bar color</string>
+    <string name="status_bar_opaque_color">Opaque color</string>
+    <string name="status_bar_transparent_color">Dimmed color</string>
+    <string name="status_bar_color_reset">Reset status bar color</string>
+    <string name="restart_status_bar_menu_title">Restart status bar</string>
+    <string name="restart_status_bar_title">Restart?</string>
+    <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+    <string name="custom_system_icon_color_title">Custom system icon color</string>
+    <string name="system_icon_color">Icon color</string>
+    <string name="custom_color_summary">Override the system color of the System UI</string>	
+    <string name="custom_status_bar_apply_title">Apply</string>
+    <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
+
     <!-- Battery Bar -->
     <string name="status_bar_battery_cat_title">Battery</string>
     <string name="battery_bar_title">Battery Bar</string>
