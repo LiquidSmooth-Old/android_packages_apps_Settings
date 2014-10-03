@@ -2224,6 +2224,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="profile_lockmode_disabled_summary">Lock screen is disabled</string>
     <string name="profile_airplanemode_title">Airplane mode</string>
 
+    <!-- Disable immersive mode navbar when ime is showing -->
+    <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+    <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
+
     <!-- Connection override toggles (not all are used at this time ) -->
     <string name="toggleWifi">Wi-Fi</string>
     <string name="toggleWifiAp">Portable Wi-Fi hotspot</string>
