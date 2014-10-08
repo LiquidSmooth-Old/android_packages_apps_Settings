@@ -291,6 +291,7 @@
     <string name="pref_volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
     <string name="wakeup_when_plugged_unplugged_title">Wake up on charge</string>
     <string name="wakeup_when_plugged_unplugged_summary">Wake up device if charger is plugged/unplugged.</string>
+    <string name="double_tap_to_wake_title">Double-tap to wake</string>
 
     <!-- Sound settings -->
     <string name="sound_title">Sound</string>

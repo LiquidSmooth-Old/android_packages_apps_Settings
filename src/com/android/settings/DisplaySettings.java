@@ -55,6 +55,7 @@ import com.android.settings.hardware.DisplayGamma;
 import org.cyanogenmod.hardware.AdaptiveBacklight;
 import org.cyanogenmod.hardware.SunlightEnhancement;
 import org.cyanogenmod.hardware.ColorEnhancement;
+import org.cyanogenmod.hardware.TapToWake;
 
 import java.util.ArrayList;
 
@@ -89,6 +90,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_ADAPTIVE_BACKLIGHT = "adaptive_backlight";
     private static final String KEY_SUNLIGHT_ENHANCEMENT = "sunlight_enhancement";
     private static final String KEY_COLOR_ENHANCEMENT = "color_enhancement";
+    private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
@@ -117,6 +119,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private CheckBoxPreference mAdaptiveBacklight;
     private CheckBoxPreference mSunlightEnhancement;
     private CheckBoxPreference mColorEnhancement;
+    private CheckBoxPreference mTapToWake;
     private Preference mScreenOffGestures;
 
     private final Configuration mCurConfig = new Configuration();
@@ -272,6 +275,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (!isDeviceHandlerInstalled()) {
             mScreenOffGestures = (Preference) findPreference(KEY_SCREEN_OFF_GESTURE_SETTINGS);
             mCategory.removePreference(mScreenOffGestures);
+        }
+
+        if (!isTapToWakeSupported()) {
+            mTapToWake = (CheckBoxPreference) findPreference(KEY_TAP_TO_WAKE);
+            mCategory.removePreference(mTapToWake);
+            mTapToWake = null;
         }
 
         mWakeUpWhenPluggedOrUnplugged =
@@ -443,6 +452,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Settings.System.getUriFor(Settings.System.ACCELEROMETER_ROTATION), true,
                 mAccelerometerRotationObserver);
 
+        if (mTapToWake != null) {
+            mTapToWake.setChecked(TapToWake.isEnabled());
+        }
+
         updateDisplayRotationPreferenceDescription();
         updateState();
         updateLightPulseDescription();
@@ -579,6 +592,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             return SunlightEnhancement.setEnabled(mSunlightEnhancement.isChecked());
         } else if (preference == mColorEnhancement) {
             return ColorEnhancement.setEnabled(mColorEnhancement.isChecked());
+        } else if (preference == mTapToWake) {
+            return TapToWake.setEnabled(mTapToWake.isChecked());
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
@@ -707,6 +722,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.d(TAG, "Color enhancement settings restored.");
             }
         }
+        if (isTapToWakeSupported()) {
+            final boolean enabled = prefs.getBoolean(KEY_TAP_TO_WAKE, true);
+            if (!TapToWake.setEnabled(enabled)) {
+                Log.e(TAG, "Failed to restore tap-to-wake settings.");
+            } else {
+                Log.d(TAG, "Tap-to-wake settings restored.");
+            }
+        }
     }
 
     private static boolean isAdaptiveBacklightSupported() {
@@ -730,6 +753,15 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static boolean isColorEnhancementSupported() {
         try {
             return ColorEnhancement.isSupported();
+        } catch (NoClassDefFoundError e) {
+            // Hardware abstraction framework not installed
+            return false;
+        }
+    }
+
+    private static boolean isTapToWakeSupported() {
+        try {
+            return TapToWake.isSupported();
         } catch (NoClassDefFoundError e) {
             // Hardware abstraction framework not installed
             return false;
