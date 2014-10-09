@@ -234,6 +234,7 @@
   <string name="pref_volume_wake_summary">yukarı/aşağı tuşuna basarak cihaz uyanacak</string>
   <string name="wakeup_when_plugged_unplugged_title">Şarja takılınca uyan</string>
   <string name="wakeup_when_plugged_unplugged_summary">şarj cihazı takıp çıkarmada aygıtı uyandır.</string>
+  <string name="double_tap_to_wake_title">Double-tap to wake</string>
   <string name="sound_title">Ses</string>
   <string name="advanced_sound_title">Gelişmiş Ayarlar</string>
   <string name="volbtn_music_controls_title">Ses tuşları ile müzik kontrolü</string>
@@ -1102,7 +1103,6 @@
   <string name="pa_pie_size_title">Pie boyutu</string>
   <string name="pa_pie_size_summary">Pie kontrollerinin boyutlarını tanımla</string>
   <string name="pa_pie_size_small">Küçük</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
   <string name="pa_pie_size_large">Büyük</string>
   <string name="pa_pie_size_gigantic">Dev</string>
   <string name="pa_pie_size_monster">Canavar</string>
@@ -1140,9 +1140,6 @@
   <string name="pa_pie_trigger_title">Tetikleyici alanı</string>
   <string name="pa_pie_trigger_summary">Kaydırma bölgesinin boyutunu belirleyin</string>
   <string name="pa_pie_trigger_none">Hiçbiri (Pie devre dışı)</string>
-  <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
-  <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
   <string name="pa_pie_trigger_huge">Çok Büyük</string>
   <string name="pa_pie_notifications_title">Şerit Görevlerini Etkinleştir</string>
   <string name="pa_pie_notifications_summary">Bunu etkinleştirince Bildirimler panelinde ve Hızlı ayarlar çekmecesi kareleri sürüklenince kullanılabilir hale gelir</string>
@@ -1534,6 +1531,19 @@
   <string name="animation_no_scroll_summary_off">Devre dışı</string>
   <string name="scroll_disclaimer_summary">Not: Çoğu uygulamalar için özel değerler etkili olabilmesi yeniden başlatılması gerekiyor</string>
   <string name="multiuser_preference_title">Çoklu kullanıcı desteği</string>
+  <string name="custom_status_bar_header_title">Status Bar Color</string>
+  <string name="custom_status_bar_color_title">Custom status bar color</string>
+  <string name="status_bar_opaque_color">Opaque color</string>
+  <string name="status_bar_transparent_color">Dimmed color</string>
+  <string name="status_bar_color_reset">Reset status bar color</string>
+  <string name="restart_status_bar_menu_title">Restart status bar</string>
+  <string name="restart_status_bar_title">Restart?</string>
+  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="system_icon_color">Simge renkleri</string>
+  <string name="custom_color_summary">Override the system color of the System UI</string>
+  <string name="custom_status_bar_apply_title">Apply</string>
+  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
   <string name="status_bar_battery_cat_title">Pil</string>
   <string name="battery_bar_title">Pil Bar</string>
   <string name="battery_bar">Pil çubuğunun konumu</string>
@@ -1832,6 +1842,8 @@
   <string name="profile_lockmode_insecure_summary">Güvensiz kilit ekranını kullan</string>
   <string name="profile_lockmode_disabled_summary">Kilit ekranı devre dışı</string>
   <string name="profile_airplanemode_title">Uçak Modu</string>
+  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+  <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
   <string name="toggleWifi">Wi-Fi</string>
   <string name="toggleWifiAp">Taşınabilir Wi-Fi hotspot</string>
   <string name="toggleBluetooth">Bluetooth</string>

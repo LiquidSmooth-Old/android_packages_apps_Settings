@@ -58,7 +58,7 @@
   <string name="pie_control_title">Pie vezérlő</string>
   <string name="theme_settings_title">Teljes sötétítés</string>
   <string name="device_settings_title">Készülék</string>
-  <string name="devicesettings_app_summary">Configure device specific options</string>
+  <string name="devicesettings_app_summary">Készülék függő beállítások konfigurálása</string>
   <string name="device_legal_summary">Nyílt forráskód és a Google licencek</string>
   <string name="shortcut_picker_title">Műveleti parancsikonok</string>
   <string name="superuser_settings_title">Rendszergazda</string>
@@ -234,6 +234,7 @@
   <string name="pref_volume_wake_summary">Hangerő fel/le bekapcsolja a kijelzőt</string>
   <string name="wakeup_when_plugged_unplugged_title">Töltésre feléled</string>
   <string name="wakeup_when_plugged_unplugged_summary">Töltő csatlakoztatása bekapcsolja a képernyőt.</string>
+  <string name="double_tap_to_wake_title">Double-tap to wake</string>
   <string name="sound_title">Hang</string>
   <string name="advanced_sound_title">Haladó beállítások</string>
   <string name="volbtn_music_controls_title">Hang gomb - zene vezérlés</string>
@@ -620,15 +621,15 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="quiet_hours_daily_off">A single set of times is enabled</string>
   <string name="quiet_time_prefs_title">Csendes óra időtartományok</string>
   <string name="quiet_hours_auto_title">Csengetési mód követése</string>
-  <string name="quiet_hours_auto_silent">Quiet hours will enable when ringer is set to silent</string>
-  <string name="quiet_hours_auto_vibrate">Quiet hours will enable when ringer is set to vibrate or silent</string>
+  <string name="quiet_hours_auto_silent">A Csendes órák bekapcsolódnak, ha a csengés le van némítva</string>
+  <string name="quiet_hours_auto_vibrate">A Csendes órák bekapcsolódnak, ha a csengés le van némítva, vagy rezgőre van állítva</string>
   <string name="quiet_hours_start">Csendes órák kezdete</string>
   <string name="quiet_hours_start_summary">Mikor kezdjük a csendes órák kényszerítését</string>
   <string name="quiet_hours_end">Csendes órák vége</string>
   <string name="quiet_hours_end_summary">Mikor fejezzük be a csendes órák kényszerítését</string>
   <string name="quiet_hours_ringer_title">Csengés némítása</string>
   <string name="quiet_hours_ringer_on">Nem fog csörögni</string>
-  <string name="quiet_hours_ringer_off">Ringer will play like normal</string>
+  <string name="quiet_hours_ringer_off">A csengőhang normálisan fog szólni</string>
   <string name="quiet_hours_mute">Értesítések némítása</string>
   <string name="quiet_hours_mute_on">Nincs hanglejátszás</string>
   <string name="quiet_hours_mute_off">Normál hanglejátszás</string>
@@ -645,7 +646,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="quiet_hours_haptic_on">Az érintési visszajelzés ki lesz kapcsolva</string>
   <string name="quiet_hours_haptic_off">Érintési visszajelzés a szokásos módon fog működni</string>
   <string name="quiet_hours_active_from">Aktív, ettől</string>
-  <string name="quiet_hours_active_to">to</string>
+  <string name="quiet_hours_active_to">-</string>
   <string name="quiet_hours_auto_sms_group">Automatikus válasz</string>
   <string name="quiet_hours_auto_sms_title">Bejövő szöveges üzenetek</string>
   <string name="quiet_hours_auto_sms_call_title">Bejövő hívások</string>
@@ -660,8 +661,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="quiet_hours_sms_code_null">[Riasztás]</string>
   <string name="quiet_hours_sms_bypass_title">Szöveges üzenet megkerülése</string>
   <string name="quiet_hours_sms_code_title">Szöveges üzenet kulcs</string>
-  <string name="quiet_hours_sms_code_explain">If an incoming message contains this text your phone will
-            sound an alarm</string>
+  <string name="quiet_hours_sms_code_explain">Ha egy bejövő üzenet ezt a szöveget tartalmazza, a készülék riasztani fog</string>
   <string name="quiet_hours_call_bypass_title">Bejövő hívás megkerülése</string>
   <string name="quiet_hours_calls_required_title">Hívások száma 30 perc alatt</string>
   <string name="quiet_hours_calls_required_summary">" megkerülő hívások a csendes órák alatt"</string>
@@ -692,7 +692,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="lockscreen_enable_eight_targets_dialog">Ezen opció módosítása visszaállítja a jelenlegi zárképernyő hivatkozásokat alapértelmezettre.</string>
   <string name="lockscreen_enable_eight_targets_enabled_dialog">\n\nNyolc hivatkozásos fogantyú engedélyezésekor nem tudja használni a zárképernyő parancsikonjait egyszerre.</string>
   <string name="lockscreen_glowpad_torch_title">Fogantyús zseblámpa</string>
-  <string name="lockscreen_glowpad_torch_summary">Longpress and hold to start torch</string>
+  <string name="lockscreen_glowpad_torch_summary">Nyomja hosszan és tartsa a zseblámpa bekapcsolásához</string>
   <string name="lockscreen_target_reset">Zárképernyő hivatkozások visszaállítása alapértelmezettre</string>
   <string name="lockscreen_target_reset_message">Törli az összes létrehozott zárképernyő hivatkozást és visszaállítja alapértelmezettre?</string>
   <string name="lockscreen_target_empty">Egyik sem</string>
@@ -726,9 +726,9 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="lockscreen_shortcuts_title">Parancsikonok</string>
   <string name="lockscreen_shortcuts_summary">Tekintse meg vagy módosítsa a zárképernyő hivatkozásokat</string>
   <string name="lockscreen_shorcuts_longpress_title">Parancsikonok nyomva tartva</string>
-  <string name="lockscreen_shorcuts_longpress_summary">Lock screen shortcuts on longpress</string>
+  <string name="lockscreen_shorcuts_longpress_summary">Zárképernyő hivatkozások hosszan nyomás esetén</string>
   <string name="unlock_quick_unlock_control_title">Gyors feloldás</string>
-  <string name="unlock_quick_unlock_control_summary">Auto press enter on pin/pass lockscreens</string>
+  <string name="unlock_quick_unlock_control_summary">Biztonságos billentyűzárnál a beütött kód automatikus elfogadása</string>
   <string name="lockscreen_style_title">Kinézet</string>
   <string name="lockscreen_style_reset_message">Visszaállítja a zárképernyő összes színét?</string>
   <string name="lockscreen_icon_title">Zár ikon</string>
@@ -738,7 +738,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="lockscreen_colorize_handle_title">Egyedi ikon színezése</string>
   <string name="lockscreen_colorize_handle_summary">Feloldási szín be lesz állítva a feloldó fogantyúnak</string>
   <string name="lockscreen_frame_color_title">Keret színe</string>
-  <string name="lockscreen_frame_color_summary">Color of the unlock frame</string>
+  <string name="lockscreen_frame_color_summary">A feloldókeret színe</string>
   <string name="lockscreen_lock_color_title">Zár színe</string>
   <string name="lockscreen_lock_color_summary">Lakat ikon színe</string>
   <string name="lockscreen_dots_color_title">Pontok színe</string>
@@ -750,17 +750,17 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="lockscreen_widgets_title">Modulok</string>
   <string name="lockscreen_camera_widget_title">Kamera modul engedélyezése</string>
   <string name="lockscreen_allow_all_title">Minden modul engedélyezése</string>
-  <string name="lockscreen_allow_all_summary">Allow legacy widgets for placement</string>
-  <string name="lockscreen_allow_all_warning">Some widgets may not behave as expected when placed on the lock screen.  Other widgets may expose your personal data to anyone who accesses your device.  Please be mindful of these warnings before continuing.</string>
-  <string name="lockscreen_camera_widget_summary">Show camera widget on lock screen</string>
+  <string name="lockscreen_allow_all_summary">Általános modulok elhelyezésének engedélyezése</string>
+  <string name="lockscreen_allow_all_warning">Néhány modul furcsán viselkedhet a záróképernyőn. Mások pedig személyes adatokat mutathatnak akárkinek, aki hozzáfér a készülékhez. Kérjük, tartsa szem előtt ezeket a figyelmeztetéseket!</string>
+  <string name="lockscreen_camera_widget_summary">Kamera modul megjelenítése a zárképernyőn</string>
   <string name="lockscreen_maximize_widgets_title">Indítás teljes méretben</string>
-  <string name="lockscreen_maximize_widgets_summary">Show lock screen widget maximized</string>
+  <string name="lockscreen_maximize_widgets_summary">Zárképernyő modulok maximális méretben való megjelenítése</string>
   <string name="lockscreen_disable_hints_title">Oldal tippek letiltása</string>
   <string name="lockscreen_disable_hints_summary">Disables glow around widget pager</string>
-  <string name="lockscreen_use_widget_container_carousel_title">Enable carousel widget</string>
-  <string name="lockscreen_use_widget_container_carousel_summary">Use carousel animation in portrait</string>
-  <string name="lockscreen_widget_frame_title">Disable widget frames</string>
-  <string name="lockscreen_widget_frame_summary">Disable widget background frames</string>
+  <string name="lockscreen_use_widget_container_carousel_title">Körhinta modul engedéyezése</string>
+  <string name="lockscreen_use_widget_container_carousel_summary">Körhinta animáció engedélyezése álló módban</string>
+  <string name="lockscreen_widget_frame_title">Modulkeretek letiltása</string>
+  <string name="lockscreen_widget_frame_summary">Modulháttér-keretek letiltása</string>
   <string name="lock_numpad_random_title">PIN pad számok sorrendjének módosítása</string>
   <string name="lock_numpad_random_dialog_title">PIN pad véletlen sorrend</string>
   <string name="lock_numpad_random_off">Kikapcsolva</string>
@@ -860,7 +860,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="disable_qs_message">All tiles were removed. Quick settings are disabled.\n\nTo enable add a tile.</string>
   <string name="help_qs_message">To add a quick settings tile, press the Add button and choose the tile you would like. To rearrange your tiles, longpress the tile and drag it into the position you want. If you want to delete a tile, drag it to the delete button which appears while dragging the tile.\n\nTo setup dynamic tiles press the respective icon on the top right of the screen\n\nTo disable quick settings, remove all tiles.</string>
   <string name="custom_tile_dialog_text">Each action will add a new state to the tile. Each click changes to the next state. Long-press to add long-press actions. If no click action exists the long-action icon will be used for the tile. This allows you to change states by clicking and launch actions by long-pressing.</string>
-  <string name="custom_tile_dialog_title">Custom tile actions</string>
+  <string name="custom_tile_dialog_title">Egyéni csempe műveletek</string>
   <string name="custom_tile_dialog_extra_text">Advanced tile detected. Your tile will now change states when adjusted from anywhere. You may optionally input an icon and label for the toggle to switch to if it doesn\'t recognize the state it\'s in.</string>
   <string name="custom_toggle_extras">Custom tile extras</string>
   <string name="custom_toggle_collapse_check">Collapse notification shade</string>
@@ -876,7 +876,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="quicksettings_tiles_style_additional_options">További beállítások</string>
   <string name="tiles_per_row_title">Soronkénti csempeszám</string>
   <string name="tiles_per_row_duplicate_landscape_title">Fekvő mennyiség léptékezése</string>
-  <string name="tiles_per_row_duplicate_landscape_summary">Landscape view doubles tiles per row</string>
+  <string name="tiles_per_row_duplicate_landscape_summary">Fekvő nézetben dupla csempe soronként</string>
   <string name="quick_tiles_bg_color_title">Csempék háttérszíne</string>
   <string name="quick_tiles_bg_pressed_color_title">Csempék érintéskori háttérszíne</string>
   <string name="quick_tiles_text_color_title">Csempék szövegszíne</string>
@@ -905,7 +905,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="smart_pulldown_dismissable">Nincs kitörölhető</string>
   <string name="smart_pulldown_persistent">Nincs jelenlévő értesítés</string>
   <string name="smart_pulldown_all">Nincs kitörölhető vagy jelenlévő értesítés</string>
-  <string name="title_collapse_panel">Quick collapse</string>
+  <string name="title_collapse_panel">Gyors összecsukás</string>
   <string name="summary_collapse_panel">Close the notification panel upon toggle</string>
   <string name="gestures_settings_title">Toll mozdulatok</string>
   <string name="category_spen_title">Toll mozdulatok</string>
@@ -1108,8 +1108,8 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="pa_pie_enable_summaryOff">No Nom nom nom nom</string>
   <string name="pa_pie_expanded_only_title">Only in expanded desktop</string>
   <string name="pa_pie_expanded_only_summary">Only allow pie to work when Expanded Desktop is on</string>
-  <string name="pa_pie_gravity_title">Pie gravity</string>
-  <string name="pa_pie_gravity_summary">Select the location where the Pie will be placed</string>
+  <string name="pa_pie_gravity_title">Pie gravitáció</string>
+  <string name="pa_pie_gravity_summary">Válassza ki a helyet, ahová a Pie kerüljön</string>
   <string name="pa_pie_gravity_top">Fent</string>
   <string name="pa_pie_gravity_bottom">Alul</string>
   <string name="pa_pie_gravity_right">Jobb</string>
@@ -1121,9 +1121,8 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="pa_pie_mode_default">Alapértelmezett</string>
   <string name="pa_pie_mode_slow">Lassú</string>
   <string name="pa_pie_size_title">Pie méret</string>
-  <string name="pa_pie_size_summary">Define Pie controls size</string>
+  <string name="pa_pie_size_summary">Adja meg a Pie vezérlők méretét</string>
   <string name="pa_pie_size_small">Kicsi</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
   <string name="pa_pie_size_large">Nagy</string>
   <string name="pa_pie_size_gigantic">Gigantikus</string>
   <string name="pa_pie_size_monster">Monster</string>
@@ -1141,7 +1140,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="pa_pie_button_color_title">Buttons color</string>
   <string name="pa_pie_gap_title">Item gap</string>
   <string name="pa_pie_gap_summary">Adjust the gap that separates the Pie elements</string>
-  <string name="pa_pie_angle_title">Pie angle</string>
+  <string name="pa_pie_angle_title">Pie szöge</string>
   <string name="pa_pie_angle_summary">Adjust the angle of pie\'s egdes from the attachment</string>
   <string name="pa_pie_angle_none">Egyik sem (régi)</string>
   <string name="pa_pie_angle_small">Kicsi</string>
@@ -1154,16 +1153,13 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="pa_pie_gap_huge">Hatalmas</string>
   <string name="pa_pie_center_title">Középre igazítás</string>
   <string name="pa_pie_center_summary">Center pie on the trigger edge</string>
-  <string name="pa_pie_stick_title">Prevent rotation</string>
+  <string name="pa_pie_stick_title">Forgatás megakadályozása</string>
   <string name="pa_pie_stick_summary">Avoids orientation change when screen rotates</string>
   <string name="pa_pie_search_title">Keresés gomb</string>
-  <string name="pa_pie_search_summary">Enable search button on pie controls</string>
-  <string name="pa_pie_trigger_title">Trigger area</string>
+  <string name="pa_pie_search_summary">Keresés gomb engedélyezése a Pie vezérlőn</string>
+  <string name="pa_pie_trigger_title">Kiváltó terület</string>
   <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
   <string name="pa_pie_trigger_none">None (Pie disabled)</string>
-  <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
-  <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
   <string name="pa_pie_trigger_huge">Hatalmas</string>
   <string name="pa_pie_notifications_title">Enable Chevron Targets</string>
   <string name="pa_pie_notifications_summary">Enabling this will let the Notification panel and QuickSettings tiles become available when swiping</string>
@@ -1357,7 +1353,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="development_shortcut_title">Development shortcut</string>
   <string name="development_shortcut_summary">Enable \'wipe data\' and \'force close\' options in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Figyelem</string>
-  <string name="custom_runtime_warning_message">ART is not supported by LiquidSmooth. This setting is included for experimentation only and has the potential to cause instability, crashes, data loss or prevent the proper boot of your device. Visit &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; for more information.&lt;br/&gt;&lt;br/&gt;We request you do not file bug reports if you have enabled ART as your runtime.&lt;br/&gt;&lt;br/&gt;Are you sure you want to reboot to change runtime from <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> to <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
+  <string name="custom_runtime_warning_message">A LiquidSmooth nem támogatja az ART futtatási környezetet. Ez a beállítás csak kísérleti jelleggel van jelen a rendszerben. Instabilitást, rendszerösszeomlást, adatvesztést okozhat, vagy akár elindíthatatlanná teheti az eszközt. Látogasson el az &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; oldalra a további információkért.&lt;br/&gt;&lt;br/&gt;Kérjük, ne küldjön hibabejelentést, amennyiben az ART futtatási környezet engedélyezve van.&lt;br/&gt;&lt;br/&gt;Biztosan újra kívánja indítani az eszközt és a jelenlegi futtatót, <xliff:g id="old" example="libdvm.so">%1$s</xliff:g>-ról <xliff:g id="new" example="libart.so">%2$s</xliff:g>-ra cserélni?</string>
   <string name="rominfo_settings_list_item_title">LiquidSmooth statisztikák</string>
   <string name="rominfo_settings_list_item_summary">Segíts jobbá tenni a LiquidSmooth-ot névtelen felhasználói statisztikák küldésével</string>
   <string name="liquidsmoothupdate_settings_title">LiquidSmooth frissítések</string>
@@ -1433,7 +1429,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="progressbar_decelerate">Lelassítás</string>
   <string name="progressbar_reset">Visszaállítás</string>
   <string name="progressbar_button_reset">Színek visszaállítása</string>
-  <string name="progressbar_reset_message">Reset progress bar to default?</string>
+  <string name="progressbar_reset_message">Folyamatjelző sáv alaphelyzetbe állítása?</string>
   <string name="recent_panel_title">Legutóbbi panel</string>
   <string name="recent_panel_summary">Enables and customize recent apps display</string>
   <string name="recent_clear_all_button">Recent clear all button</string>
@@ -1445,7 +1441,7 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="recent_clear_all_button_location_top_right">Jobb fent</string>
   <string name="recent_clear_all_button_location_bottom_left">Bal lent</string>
   <string name="recent_clear_all_button_location_bottom_right">Jobb lent</string>
-  <string name="ram_bar">Recent RAM bar</string>
+  <string name="ram_bar">Előzmények RAM sáv</string>
   <string name="ram_bar_note_title">Jegyzet</string>
   <string name="ram_bar_note_summary">A RAM sáv megjeleníti az aktuális memóriát (RAM). Kérjük vegye figyelembe, hogy miután cache-elte az alkalmazásokat a készülék gyorsabban fogja őket megnyitni.</string>
   <string name="ram_bar_mode_title">Recent RAM bar mode</string>
@@ -1555,6 +1551,19 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="animation_no_scroll_summary_off">Kikapcsolva</string>
   <string name="scroll_disclaimer_summary">Megjegyzés: A legtöbb alkalmazást újra kell indítani az egyéni értékek életbe lépéséhez</string>
   <string name="multiuser_preference_title">Több felhasználó támogatása</string>
+  <string name="custom_status_bar_header_title">Status Bar Color</string>
+  <string name="custom_status_bar_color_title">Custom status bar color</string>
+  <string name="status_bar_opaque_color">Opaque color</string>
+  <string name="status_bar_transparent_color">Dimmed color</string>
+  <string name="status_bar_color_reset">Reset status bar color</string>
+  <string name="restart_status_bar_menu_title">Restart status bar</string>
+  <string name="restart_status_bar_title">Restart?</string>
+  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="system_icon_color">Ikon szín</string>
+  <string name="custom_color_summary">Override the system color of the System UI</string>
+  <string name="custom_status_bar_apply_title">Apply</string>
+  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
   <string name="status_bar_battery_cat_title">Akkumulátor</string>
   <string name="battery_bar_title">Akkumulátorsáv</string>
   <string name="battery_bar">Akkumulátorsáv elhelyezkedése</string>
@@ -1853,6 +1862,8 @@ Az \"Eltávolítás\" törli a kiválasztott sort.
   <string name="profile_lockmode_insecure_summary">Védtelen használata</string>
   <string name="profile_lockmode_disabled_summary">Nincs zárolt képernyő</string>
   <string name="profile_airplanemode_title">Repülőgép üzemmód</string>
+  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+  <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
   <string name="toggleWifi">Wi-Fi</string>
   <string name="toggleWifiAp">Hordozható Wi-Fi hotspot</string>
   <string name="toggleBluetooth">Bluetooth</string>

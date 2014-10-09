@@ -234,6 +234,7 @@
   <string name="pref_volume_wake_summary">Lautstärke Tasten laut/leise wecken Gerät auf</string>
   <string name="wakeup_when_plugged_unplugged_title">Beim Anschließen an Ladegerät aufwachen</string>
   <string name="wakeup_when_plugged_unplugged_summary">Aufwachen des Gerätes, wenn Ladegerät angeschlossen/abgezogen wird.</string>
+  <string name="double_tap_to_wake_title">Double-tap to wake</string>
   <string name="sound_title">Ton</string>
   <string name="advanced_sound_title">Erweiterte Einstellungen</string>
   <string name="volbtn_music_controls_title">Lautstärkeregler Medien Kontrolle</string>
@@ -1110,7 +1111,6 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="pa_pie_size_title">Größe von Pie</string>
   <string name="pa_pie_size_summary">Definiere die Größe der Pie-Einstellungen</string>
   <string name="pa_pie_size_small">Klein</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
   <string name="pa_pie_size_large">Groß</string>
   <string name="pa_pie_size_gigantic">Gigantisch</string>
   <string name="pa_pie_size_monster">Riesig</string>
@@ -1148,9 +1148,6 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="pa_pie_trigger_title">Trigger area</string>
   <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
   <string name="pa_pie_trigger_none">None (Pie disabled)</string>
-  <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
-  <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
   <string name="pa_pie_trigger_huge">Sehr groß</string>
   <string name="pa_pie_notifications_title">Enable Chevron Targets</string>
   <string name="pa_pie_notifications_summary">Enabling this will let the Notification panel and QuickSettings tiles become available when swiping</string>
@@ -1544,6 +1541,19 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="animation_no_scroll_summary_off">Deaktiviert</string>
   <string name="scroll_disclaimer_summary">Hinweis: Die meisten Apps benötigen einen Neustart, damit diese Einstellungen wirksam werden</string>
   <string name="multiuser_preference_title">Multiuser Unterstützung</string>
+  <string name="custom_status_bar_header_title">Status Bar Color</string>
+  <string name="custom_status_bar_color_title">Custom status bar color</string>
+  <string name="status_bar_opaque_color">Opaque color</string>
+  <string name="status_bar_transparent_color">Dimmed color</string>
+  <string name="status_bar_color_reset">Reset status bar color</string>
+  <string name="restart_status_bar_menu_title">Restart status bar</string>
+  <string name="restart_status_bar_title">Restart?</string>
+  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="system_icon_color">Icon-Farbe</string>
+  <string name="custom_color_summary">Override the system color of the System UI</string>
+  <string name="custom_status_bar_apply_title">Apply</string>
+  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
   <string name="status_bar_battery_cat_title">Akku</string>
   <string name="battery_bar_title">Akku Anzeige</string>
   <string name="battery_bar">Position der Akku Anzeige</string>
@@ -1842,6 +1852,8 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="profile_lockmode_insecure_summary">Nutze unsichere Bildschirmsperre</string>
   <string name="profile_lockmode_disabled_summary">Sperrbildschirm ist deaktiviert</string>
   <string name="profile_airplanemode_title">Flugmodus</string>
+  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+  <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
   <string name="toggleWifi">WLAN</string>
   <string name="toggleWifiAp">Mobiler WLAN Hotspot</string>
   <string name="toggleBluetooth">Bluetooth</string>

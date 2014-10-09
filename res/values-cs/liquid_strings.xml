@@ -234,6 +234,7 @@
   <string name="pref_volume_wake_summary">Stiskem tlačítka hlasitost nahoru/dolů bude zařízení probuzeno</string>
   <string name="wakeup_when_plugged_unplugged_title">Probudit při nabíjení</string>
   <string name="wakeup_when_plugged_unplugged_summary">Probuzení zařízení, je-li nabíječka je připojena/odpojena.</string>
+  <string name="double_tap_to_wake_title">Double-tap to wake</string>
   <string name="sound_title">Zvuk</string>
   <string name="advanced_sound_title">Pokročilé možnosti</string>
   <string name="volbtn_music_controls_title">Tlačítka hlasitosti ovládají hudbu</string>
@@ -1121,7 +1122,6 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. \'Odstranit\' sma
   <string name="pa_pie_size_title">Velikost kruhu</string>
   <string name="pa_pie_size_summary">Definuje velikost kruhového ovládání</string>
   <string name="pa_pie_size_small">Malý</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
   <string name="pa_pie_size_large">Velký</string>
   <string name="pa_pie_size_gigantic">Gigantický</string>
   <string name="pa_pie_size_monster">Monstrózní</string>
@@ -1159,9 +1159,6 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. \'Odstranit\' sma
   <string name="pa_pie_trigger_title">Spouštěcí oblast</string>
   <string name="pa_pie_trigger_summary">Určete velikost oblasti, která registruje švihnutí</string>
   <string name="pa_pie_trigger_none">Žádný (Kruh zakázán)</string>
-  <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
-  <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
   <string name="pa_pie_trigger_huge">Velmi velký</string>
   <string name="pa_pie_notifications_title">Povolit cíle Chevronu</string>
   <string name="pa_pie_notifications_summary">Povolením tohoto dovolíte aby zůstaly panel oznámení a dlaždice rychlého nastavení k dispozici při umisťování</string>
@@ -1553,6 +1550,19 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. \'Odstranit\' sma
   <string name="animation_no_scroll_summary_off">Vypnuto</string>
   <string name="scroll_disclaimer_summary">Poznámka: Většinu aplikací je třeba restartovat aby se vlastní hodnoty se projevily</string>
   <string name="multiuser_preference_title">Podpora více uživatelů</string>
+  <string name="custom_status_bar_header_title">Status Bar Color</string>
+  <string name="custom_status_bar_color_title">Custom status bar color</string>
+  <string name="status_bar_opaque_color">Opaque color</string>
+  <string name="status_bar_transparent_color">Dimmed color</string>
+  <string name="status_bar_color_reset">Reset status bar color</string>
+  <string name="restart_status_bar_menu_title">Restart status bar</string>
+  <string name="restart_status_bar_title">Restart?</string>
+  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="system_icon_color">Barva ikony</string>
+  <string name="custom_color_summary">Override the system color of the System UI</string>
+  <string name="custom_status_bar_apply_title">Apply</string>
+  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
   <string name="status_bar_battery_cat_title">Baterie</string>
   <string name="battery_bar_title">Pruh baterie</string>
   <string name="battery_bar">Pozice pruhu baterie</string>
@@ -1851,6 +1861,8 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. \'Odstranit\' sma
   <string name="profile_lockmode_insecure_summary">Použít nezabezpečený zámek obrazovky</string>
   <string name="profile_lockmode_disabled_summary">Zámek obrazovky je vypnutý</string>
   <string name="profile_airplanemode_title">Režim v letadle</string>
+  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+  <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
   <string name="toggleWifi">Wi-Fi</string>
   <string name="toggleWifiAp">Přenosný Wi-Fi hotspot</string>
   <string name="toggleBluetooth">Bluetooth</string>

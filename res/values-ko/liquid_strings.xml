@@ -234,6 +234,7 @@
   <string name="pref_volume_wake_summary">볼륨 위/아래 키를 누르면 장치가 켜집니다</string>
   <string name="wakeup_when_plugged_unplugged_title">충전시 화면 켜기</string>
   <string name="wakeup_when_plugged_unplugged_summary">충전기에 연결/분리 될시 장치를깨우기.</string>
+  <string name="double_tap_to_wake_title">Double-tap to wake</string>
   <string name="sound_title">소리</string>
   <string name="advanced_sound_title">고급 옵션</string>
   <string name="volbtn_music_controls_title">볼륨버튼으로 음악 컨트롤</string>
@@ -1128,7 +1129,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="pa_pie_size_title">Pie size</string>
   <string name="pa_pie_size_summary">Define Pie controls size</string>
   <string name="pa_pie_size_small">Small</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
   <string name="pa_pie_size_large">Large</string>
   <string name="pa_pie_size_gigantic">Gigantic</string>
   <string name="pa_pie_size_monster">Monster</string>
@@ -1166,9 +1166,6 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="pa_pie_trigger_title">Trigger area</string>
   <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
   <string name="pa_pie_trigger_none">None (Pie disabled)</string>
-  <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
-  <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
   <string name="pa_pie_trigger_huge">Huge</string>
   <string name="pa_pie_notifications_title">Enable Chevron Targets</string>
   <string name="pa_pie_notifications_summary">Enabling this will let the Notification panel and QuickSettings tiles become available when swiping</string>
@@ -1560,6 +1557,19 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="animation_no_scroll_summary_off">사용 안 함</string>
   <string name="scroll_disclaimer_summary">Note: Most apps need to be restarted for custom values to take effect</string>
   <string name="multiuser_preference_title">Multiuser support</string>
+  <string name="custom_status_bar_header_title">Status Bar Color</string>
+  <string name="custom_status_bar_color_title">Custom status bar color</string>
+  <string name="status_bar_opaque_color">Opaque color</string>
+  <string name="status_bar_transparent_color">Dimmed color</string>
+  <string name="status_bar_color_reset">Reset status bar color</string>
+  <string name="restart_status_bar_menu_title">Restart status bar</string>
+  <string name="restart_status_bar_title">Restart?</string>
+  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="system_icon_color">아이콘 색</string>
+  <string name="custom_color_summary">Override the system color of the System UI</string>
+  <string name="custom_status_bar_apply_title">Apply</string>
+  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
   <string name="status_bar_battery_cat_title">배터리</string>
   <string name="battery_bar_title">Battery Bar</string>
   <string name="battery_bar">Battery bar location</string>
@@ -1858,6 +1868,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="profile_lockmode_insecure_summary">Use insecure lock screen</string>
   <string name="profile_lockmode_disabled_summary">Lock screen is disabled</string>
   <string name="profile_airplanemode_title">비행기 모드</string>
+  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+  <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
   <string name="toggleWifi">Wi-Fi</string>
   <string name="toggleWifiAp">Portable Wi-Fi hotspot</string>
   <string name="toggleBluetooth">블루투스</string>

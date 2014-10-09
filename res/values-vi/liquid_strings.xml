@@ -234,6 +234,7 @@
   <string name="pref_volume_wake_summary">Nhấn phím âm lượng lên/xuống sẽ đánh thức thiết bị</string>
   <string name="wakeup_when_plugged_unplugged_title">Bật màn hình khi sạc</string>
   <string name="wakeup_when_plugged_unplugged_summary">Sáng màn hình thiết bị nếu bộ sạc được cắm vào/rút ra.</string>
+  <string name="double_tap_to_wake_title">Double-tap to wake</string>
   <string name="sound_title">Âm thanh</string>
   <string name="advanced_sound_title">Tùy chọn nâng cao</string>
   <string name="volbtn_music_controls_title">Điều khiển âm nhạc rocker âm lượng</string>
@@ -1101,7 +1102,6 @@
   <string name="pa_pie_size_title">Kích thước Pie</string>
   <string name="pa_pie_size_summary">Xác định kích thước điều khiển Pie</string>
   <string name="pa_pie_size_small">Nhỏ</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
   <string name="pa_pie_size_large">Hơi lớn</string>
   <string name="pa_pie_size_gigantic">Khổng lồ</string>
   <string name="pa_pie_size_monster">Quái vật</string>
@@ -1139,9 +1139,6 @@
   <string name="pa_pie_trigger_title">Trigger area</string>
   <string name="pa_pie_trigger_summary">Xác định kích thước của khu vực đăng ký swipes</string>
   <string name="pa_pie_trigger_none">Không có (Pie bị vô hiệu hoá)</string>
-  <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
-  <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
   <string name="pa_pie_trigger_huge">Rất lớn</string>
   <string name="pa_pie_notifications_title">Enable Chevron Targets</string>
   <string name="pa_pie_notifications_summary">Cho phép điều này sẽ cho phép bảng điều khiển thông báo và QuickSettings tiles trở nên có sẵn khi swiping</string>
@@ -1533,6 +1530,19 @@
   <string name="animation_no_scroll_summary_off">Vô hiệu hóa</string>
   <string name="scroll_disclaimer_summary">Lưu ý: Hầu hết các ứng dụng cần phải được khởi động lại cho các giá trị tùy chỉnh có hiệu lực</string>
   <string name="multiuser_preference_title">Multiuser hỗ trợ</string>
+  <string name="custom_status_bar_header_title">Status Bar Color</string>
+  <string name="custom_status_bar_color_title">Custom status bar color</string>
+  <string name="status_bar_opaque_color">Opaque color</string>
+  <string name="status_bar_transparent_color">Dimmed color</string>
+  <string name="status_bar_color_reset">Reset status bar color</string>
+  <string name="restart_status_bar_menu_title">Restart status bar</string>
+  <string name="restart_status_bar_title">Restart?</string>
+  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="system_icon_color">Biểu tượng màu sắc</string>
+  <string name="custom_color_summary">Override the system color of the System UI</string>
+  <string name="custom_status_bar_apply_title">Apply</string>
+  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
   <string name="status_bar_battery_cat_title">Pin</string>
   <string name="battery_bar_title">Pin Bar</string>
   <string name="battery_bar">Thanh báo pin</string>
@@ -1831,6 +1841,8 @@
   <string name="profile_lockmode_insecure_summary">Sử dụng khóa màn hình không bảo mật</string>
   <string name="profile_lockmode_disabled_summary">Khóa màn hình bị vô hiệu hóa</string>
   <string name="profile_airplanemode_title">Chế độ Máy bay</string>
+  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+  <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
   <string name="toggleWifi">Wi-Fi</string>
   <string name="toggleWifiAp">Điểm phát sóng Wi-Fi di động</string>
   <string name="toggleBluetooth">Bluetooth</string>

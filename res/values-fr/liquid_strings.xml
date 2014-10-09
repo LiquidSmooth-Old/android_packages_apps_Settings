@@ -234,6 +234,7 @@
   <string name="pref_volume_wake_summary">Appuyer sur les touches volume haut/bas reveillera l\'écran de l\'appareil</string>
   <string name="wakeup_when_plugged_unplugged_title">Réveil sur mise en charge</string>
   <string name="wakeup_when_plugged_unplugged_summary">Réveiller l\'appareil si le chargeur est branché/débranché.</string>
+  <string name="double_tap_to_wake_title">Double-tap to wake</string>
   <string name="sound_title">Son</string>
   <string name="advanced_sound_title">Options avancées</string>
   <string name="volbtn_music_controls_title">Commande de la musique par les boutons de volume</string>
@@ -1112,7 +1113,6 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="pa_pie_size_title">Taille du pie</string>
   <string name="pa_pie_size_summary">Définir la taille du contrôles Pie</string>
   <string name="pa_pie_size_small">Petit</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
   <string name="pa_pie_size_large">Grand</string>
   <string name="pa_pie_size_gigantic">Gigantesque</string>
   <string name="pa_pie_size_monster">Monstre</string>
@@ -1150,9 +1150,6 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="pa_pie_trigger_title">Zone du déclencheur</string>
   <string name="pa_pie_trigger_summary">Déterminer la taille de la zone qui enregistre le balayages</string>
   <string name="pa_pie_trigger_none">Aucun (Pie désactivé)</string>
-  <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
-  <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
   <string name="pa_pie_trigger_huge">Énorme</string>
   <string name="pa_pie_notifications_title">Activer cibles Chevron</string>
   <string name="pa_pie_notifications_summary">Activer ceci laissera le panneau de notification et les tuiles de Paramètres rapides disponibles avant de faire glisser</string>
@@ -1544,6 +1541,19 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="animation_no_scroll_summary_off">Désactivé</string>
   <string name="scroll_disclaimer_summary">Remarque : La plupart des applications doivent être redémarrés pour que les modifications prennent effet</string>
   <string name="multiuser_preference_title">Prise en charge multi-utilisateur</string>
+  <string name="custom_status_bar_header_title">Status Bar Color</string>
+  <string name="custom_status_bar_color_title">Custom status bar color</string>
+  <string name="status_bar_opaque_color">Opaque color</string>
+  <string name="status_bar_transparent_color">Dimmed color</string>
+  <string name="status_bar_color_reset">Reset status bar color</string>
+  <string name="restart_status_bar_menu_title">Restart status bar</string>
+  <string name="restart_status_bar_title">Restart?</string>
+  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="system_icon_color">Couleur de l\'icône</string>
+  <string name="custom_color_summary">Override the system color of the System UI</string>
+  <string name="custom_status_bar_apply_title">Apply</string>
+  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
   <string name="status_bar_battery_cat_title">Batterie</string>
   <string name="battery_bar_title">Barre de batterie</string>
   <string name="battery_bar">Emplacement de la barre de la batterie</string>
@@ -1842,6 +1852,8 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="profile_lockmode_insecure_summary">Utiliser un écran de verrouillage non sécurisé</string>
   <string name="profile_lockmode_disabled_summary">Écran de verrouillage désactivé</string>
   <string name="profile_airplanemode_title">Mode avion</string>
+  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+  <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
   <string name="toggleWifi">Wi-Fi</string>
   <string name="toggleWifiAp">Point d\'accès Wi-Fi mobile</string>
   <string name="toggleBluetooth">Bluetooth</string>

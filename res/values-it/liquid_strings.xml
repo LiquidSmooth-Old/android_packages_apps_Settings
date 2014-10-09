@@ -58,7 +58,7 @@
   <string name="pie_control_title">Controllo di Pie</string>
   <string name="theme_settings_title">Blackout totale</string>
   <string name="device_settings_title">Dispositivo</string>
-  <string name="devicesettings_app_summary">Configure device specific options</string>
+  <string name="devicesettings_app_summary">Configurare le opzioni specifiche del dispositivo</string>
   <string name="device_legal_summary">Open source e licenze di Google</string>
   <string name="shortcut_picker_title">Tasti di scelta rapida</string>
   <string name="superuser_settings_title">Superuser</string>
@@ -234,6 +234,7 @@
   <string name="pref_volume_wake_summary">Premere i tasti volume su/giù per risvegliare il dispositivo</string>
   <string name="wakeup_when_plugged_unplugged_title">Accendi quando in carica</string>
   <string name="wakeup_when_plugged_unplugged_summary">Accendi il dispositivo se colleghi/s colleghi il caricabatteria.</string>
+  <string name="double_tap_to_wake_title">Double-tap to wake</string>
   <string name="sound_title">Audio</string>
   <string name="advanced_sound_title">Opzioni avanzate</string>
   <string name="volbtn_music_controls_title">Controlli musicali dal bilancere del volume</string>
@@ -832,7 +833,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="title_tile_autorotate">Orientamento</string>
   <string name="title_tile_settings">Impostazioni</string>
   <string name="title_tile_sound">Audio</string>
-  <string name="title_tile_sync">Sync</string>
+  <string name="title_tile_sync">Sincronizzazione</string>
   <string name="title_tile_wifiap">Wi-Fi AP</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">Cambia utente</string>
@@ -896,12 +897,12 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="music_tile_mode_tracktitle">Visualizza il titolo del brano</string>
   <string name="title_quick_pulldown">Pulldown rapido</string>
   <string name="summary_quick_pulldown">%1$s Il bordo laterale della barra di stato mostra le Impostazioni rapide</string>
-  <string name="quick_pulldown_off">Off</string>
+  <string name="quick_pulldown_off">Spento</string>
   <string name="quick_pulldown_left">Sinistra</string>
   <string name="quick_pulldown_right">Destra</string>
   <string name="smart_pulldown_title">Pulldown intelligente</string>
   <string name="smart_pulldown_summary">Apri Impostazioni rapide quando 1%1$s non ci sono le notifiche presenti</string>
-  <string name="smart_pulldown_off">Off</string>
+  <string name="smart_pulldown_off">Spento</string>
   <string name="smart_pulldown_dismissable">Non sovrascrivibile</string>
   <string name="smart_pulldown_persistent">Non persistente</string>
   <string name="smart_pulldown_all">Non sovrascrivibile o persistente</string>
@@ -912,7 +913,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="enable_subcat_title">Stilo</string>
   <string name="enable_spen_title_head">Abilita Gestures stilo</string>
   <string name="enable_spen_summary_head">Lancia un\'azione custom con lo swipe sul pulsante dello stilo. Attenzione: le app non saranno in grado di ricevere input generato tenendo premuto il pulsante dello stilo</string>
-  <string name="gestures_subcat_title">Gestures</string>
+  <string name="gestures_subcat_title">Gesti</string>
   <string name="gestures_left_spen_title_head">Scorrimento a sinistra</string>
   <string name="gestures_left_spen_summary_head">Lanciare l\'azione personalizzata con uno swipe a sinistra</string>
   <string name="gestures_right_spen_title_head">Scorrimento a destra</string>
@@ -1123,7 +1124,6 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="pa_pie_size_title">Pie size</string>
   <string name="pa_pie_size_summary">Definire la dimensione del Pie controls</string>
   <string name="pa_pie_size_small">Piccolo</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
   <string name="pa_pie_size_large">Largo</string>
   <string name="pa_pie_size_gigantic">Gigantesco</string>
   <string name="pa_pie_size_monster">Mostruoso</string>
@@ -1161,9 +1161,6 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="pa_pie_trigger_title">Area di attivazione</string>
   <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
   <string name="pa_pie_trigger_none">Nessuno (Pie disabilitato)</string>
-  <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
-  <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
   <string name="pa_pie_trigger_huge">Molto grande</string>
   <string name="pa_pie_notifications_title">Enable Chevron Targets</string>
   <string name="pa_pie_notifications_summary">Enabling this will let the Notification panel and QuickSettings tiles become available when swiping</string>
@@ -1276,7 +1273,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="ad_threshold_3s">3 secondi</string>
   <string name="ad_threshold_4s">4 secondi</string>
   <string name="ad_threshold_5s">5 secondi</string>
-  <string name="ad_pocket_mode_off">Off</string>
+  <string name="ad_pocket_mode_off">Spento</string>
   <string name="ad_pocket_mode_notifications">Solo notifica</string>
   <string name="ad_pocket_mode_always">Sempre</string>
   <string name="ad_disabled_summary">Active Display è attualmente disattivato, per riattivare disattiva modalità tasca e notifica Peek</string>
@@ -1555,6 +1552,19 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="animation_no_scroll_summary_off">Disabilitato</string>
   <string name="scroll_disclaimer_summary">Nota: La maggior parte delle applicazioni devono essere riavviate per avere effetto</string>
   <string name="multiuser_preference_title">Supporto multiutente</string>
+  <string name="custom_status_bar_header_title">Status Bar Color</string>
+  <string name="custom_status_bar_color_title">Custom status bar color</string>
+  <string name="status_bar_opaque_color">Opaque color</string>
+  <string name="status_bar_transparent_color">Dimmed color</string>
+  <string name="status_bar_color_reset">Reset status bar color</string>
+  <string name="restart_status_bar_menu_title">Restart status bar</string>
+  <string name="restart_status_bar_title">Restart?</string>
+  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="system_icon_color">Colore dell\'icona</string>
+  <string name="custom_color_summary">Override the system color of the System UI</string>
+  <string name="custom_status_bar_apply_title">Apply</string>
+  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
   <string name="status_bar_battery_cat_title">Batteria</string>
   <string name="battery_bar_title">Barra della batteria</string>
   <string name="battery_bar">Posizione barra della batteria</string>
@@ -1853,6 +1863,8 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="profile_lockmode_insecure_summary">Non usare protezioni per il blocco schermo</string>
   <string name="profile_lockmode_disabled_summary">Il blocco schermo è disattivato</string>
   <string name="profile_airplanemode_title">Modalità Aereo</string>
+  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+  <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
   <string name="toggleWifi">Wi-Fi</string>
   <string name="toggleWifiAp">Hotspot Wi-Fi portatile</string>
   <string name="toggleBluetooth">Bluetooth</string>

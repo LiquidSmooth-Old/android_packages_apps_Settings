@@ -234,6 +234,7 @@
   <string name="pref_volume_wake_summary">Naciśnięcie przycisku głośności +/- obudzi urządzenie</string>
   <string name="wakeup_when_plugged_unplugged_title">Obudź przy podłączeniu ładowarki</string>
   <string name="wakeup_when_plugged_unplugged_summary">Obudź urządzenie jeśli ładowarka zostanie podłączona/dołączona.</string>
+  <string name="double_tap_to_wake_title">Double-tap to wake</string>
   <string name="sound_title">Dźwięk</string>
   <string name="advanced_sound_title">Zaawansowane opcje</string>
   <string name="volbtn_music_controls_title">Sterowanie muzyką za pomocą przycisków głośności</string>
@@ -1114,7 +1115,6 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="pa_pie_size_title">Rozmiar PIE</string>
   <string name="pa_pie_size_summary">Zdefiniuj rozmiar PIE</string>
   <string name="pa_pie_size_small">Mały</string>
-  <string name="pa_pie_size_default">@string/pa_pie_mode_default</string>
   <string name="pa_pie_size_large">Duży</string>
   <string name="pa_pie_size_gigantic">Gigantyczne</string>
   <string name="pa_pie_size_monster">Ogromne</string>
@@ -1152,9 +1152,6 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="pa_pie_trigger_title">Obszar wyzwalania</string>
   <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
   <string name="pa_pie_trigger_none">Brak (PIE wyłączone)</string>
-  <string name="pa_pie_trigger_small">@string/pa_pie_size_small</string>
-  <string name="pa_pie_trigger_normal">@string/pa_pie_mode_default</string>
-  <string name="pa_pie_trigger_big">@string/pa_pie_gap_big</string>
   <string name="pa_pie_trigger_huge">Ogromne</string>
   <string name="pa_pie_notifications_title">Enable Chevron Targets</string>
   <string name="pa_pie_notifications_summary">Enabling this will let the Notification panel and QuickSettings tiles become available when swiping</string>
@@ -1546,6 +1543,19 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="animation_no_scroll_summary_off">Wyłączony</string>
   <string name="scroll_disclaimer_summary">Uwaga: Większość aplikacji musi zostać zrestartowanych, aby niestandardowe ustawienia zaczęły działać</string>
   <string name="multiuser_preference_title">Obsługa wielu użytkowników</string>
+  <string name="custom_status_bar_header_title">Status Bar Color</string>
+  <string name="custom_status_bar_color_title">Custom status bar color</string>
+  <string name="status_bar_opaque_color">Opaque color</string>
+  <string name="status_bar_transparent_color">Dimmed color</string>
+  <string name="status_bar_color_reset">Reset status bar color</string>
+  <string name="restart_status_bar_menu_title">Restart status bar</string>
+  <string name="restart_status_bar_title">Restart?</string>
+  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
+  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="system_icon_color">Kolor ikony</string>
+  <string name="custom_color_summary">Override the system color of the System UI</string>
+  <string name="custom_status_bar_apply_title">Apply</string>
+  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
   <string name="status_bar_battery_cat_title">Bateria</string>
   <string name="battery_bar_title">Pasek baterii</string>
   <string name="battery_bar">Lokalizacja paska baterii</string>
@@ -1844,6 +1854,8 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="profile_lockmode_insecure_summary">Niezabezpieczony ekran blokady</string>
   <string name="profile_lockmode_disabled_summary">Ekran blokady jest wyłączony</string>
   <string name="profile_airplanemode_title">Tryb samolotowy</string>
+  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+  <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
   <string name="toggleWifi">Wi-Fi</string>
   <string name="toggleWifiAp">Przenośny hotspot Wi-Fi</string>
   <string name="toggleBluetooth">Bluetooth</string>
