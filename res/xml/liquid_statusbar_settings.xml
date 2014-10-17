@@ -12,6 +12,12 @@
             android:fragment="com.android.settings.liquid.QsSettings"
             android:title="@string/qs_title" />
 
+        <SwitchPreference
+            android:key="status_bar_ticker_enabled"
+            android:title="@string/status_bar_ticker_title"
+            android:summary="@string/status_bar_ticker_summary"
+            android:defaultValue="true" />
+
         <com.android.settings.liquid.SystemSettingSwitchPreference
             android:key="status_bar_show_weather"
             android:title="@string/status_bar_show_weather_title"
