@@ -136,6 +136,17 @@
         </PreferenceCategory>
 
         <PreferenceCategory
+            android:key="button_longpress_recents"
+            android:title="@string/recents_long_press_title">
+
+	        <ListPreference
+                android:key="navigation_recents_long_press"
+                android:dialogTitle="@string/navigation_bar_recents_title"
+                android:title="@string/navigation_bar_recents_title"
+                android:persistent="false" />
+        </PreferenceCategory>
+
+        <PreferenceCategory
             android:key="button_keys_camera"
             android:title="@string/keys_camera_title">
 

@@ -2626,4 +2626,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="maximum_head_level">Head: %1$s W/kg</string>
     <string name="maximum_body_level">Body: %1$s W/kg</string>
 
+    <!-- Long Press Recents -->
+    <string name="navigation_bar_recents_title">Recents long press action</string>
+    <string name="recents_long_press_title">Recents</string>
+
 </resources>
