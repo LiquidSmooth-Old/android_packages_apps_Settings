@@ -266,7 +266,7 @@
   <string name="keyboard_rotation_toggle_title">Auto-Tastatur-Drehung</string>
   <string name="keyboard_rotation_toggle_summary">Erzwingen Sie automatisches Drehen, wenn die Tastatur angezeigt wird</string>
   <string name="keyboard_rotation_timeout_title">Zeitlimit automatisches drehen</string>
-  <string name="keyboard_rotation_timeout_summary">Deaktiviert die automatische Drehung <xliff:g id="rotate_timeout">%1$s</xliff:g>  in Sekunden nach dem die Tastatur ausgeblendet ist Drehung <xliff:g id="rotate_timeout"> %1$ s </xliff:g>  in Sekunden nach dem die Tastatur ausgeblendet ist</string>
+  <string name="keyboard_rotation_timeout_summary">Deaktiviert die automatische Drehung <xliff:g id="rotate_timeout">%1$s</xliff:g>  in Sekunden nach dem die Tastatur ausgeblendet ist Drehung <xliff:g id="rotate_timeout"> %1$s </xliff:g>  in Sekunden nach dem die Tastatur ausgeblendet ist</string>
   <string name="keyboard_rotation_dialog">Dieses Feature erzwingt, vorübergehend Auto-Rotation, während die Tastatur angezeigt wird.  Es hat keine Auswirkungen, wenn die Auto-Rotation bereits aktiviert ist.</string>
   <string name="show_enter_key_title">Enter Taste anzeigen</string>
   <string name="show_enter_key_summary">Erzwinge Enter-Taste statt Emoticon-Taste auf der Tastaur</string>
@@ -423,7 +423,7 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="shortcut_action_help_button">Schaltfläche</string>
   <string name="shortcut_action_help_app">App</string>
   <string name="shortcut_action_help_icon">, während des Symbol auswählen, Anpassungsoptionen anzeigen</string>
-  <string name="shortcut_action_help_main">Um eine %1$ s hinzuzufügen, wählen Sie das Symbol \"hinzufügen\".  Sobald ein %1$ s hinzugefügt wird, ändert Sie die Zeile markieren target%2$s\n\nZum entfernen ein %1$ s, Wischen Sie die Zeile horizontal nach links oder rechts.  Neu anordnen einen %1$ s in der Liste durch vertikal ziehen nach links.\n\nSoll auf Standardwerte zurückgesetzt werden, wählen Sie das Symbol \"zurücksetzen\".</string>
+  <string name="shortcut_action_help_main">Um eine %1$s hinzuzufügen, wählen Sie das Symbol \"hinzufügen\".  Sobald ein %1$s hinzugefügt wird, ändert Sie die Zeile markieren target%2$s\n\nZum entfernen ein %1$s, Wischen Sie die Zeile horizontal nach links oder rechts.  Neu anordnen einen %1$s in der Liste durch vertikal ziehen nach links.\n\nSoll auf Standardwerte zurückgesetzt werden, wählen Sie das Symbol \"zurücksetzen\".</string>
   <string name="shortcut_action_help_delete_last_entry">Jeden %1$s in der Liste zu entfernen wird das Feature vollständig deaktivieren.</string>
   <string name="shortcut_action_help_pie_second_layer_delete_last_entry">Entfernen aller %1$s in der Liste wird den zweiten PIE Layer entfernen.</string>
   <string name="shortcuts_icon_picker_alarm">Wecker</string>
