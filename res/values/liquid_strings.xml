@@ -1618,6 +1618,19 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Vibration multiplier -->
     <string name="vibrator_multiplier_title">Vibration multiplier</string>
 
+    <!-- Tinted statusbar -->
+    <string name="tinted_statusbar_title">Colors</string>
+    <string name="title_tinted_statusbar">Dynamic Color Changer</string>
+    <string name="title_tinted_statusbar_option">Apply color to</string>
+    <string name="tinted_statusbar_off">Disabled</string>
+    <string name="tinted_statusbar_actionbar">Action bar color</string>
+    <string name="tinted_statusbar_system">Screen color</string>
+    <string name="tinted_statusbar_statusbar">Status bar</string>
+    <string name="tinted_statusbar_navbar">Navigation bar</string>
+    <string name="tinted_statusbar_all">Both</string>
+    <string name="tinted_statusbar_transparent_title">Status bar opacity</string>
+    <string name="tinted_navbar_transparent_title">Navigation bar opacity</string>
+
     <!-- Lock screen notifications -->
     <string name="lockscreen_notification_title">Enable notifications</string>
     <string name="lockscreen_notification_summary">Show current pending notifications</string>
@@ -1854,7 +1867,10 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
     <string name="custom_system_icon_color_title">Custom system icon color</string>
     <string name="system_icon_color">Icon color</string>
-    <string name="custom_color_summary">Override the system color of the System UI</string>
+    <string name="custom_icon_color_summary">Override the system icon color of the System UI</string>
+    <string name="custom_notification_icon_color_title">Custom notification icon color</string>
+    <string name="notification_icon_color">Icon color</string>
+    <string name="custom_notification_color_summary">Override the notification icon color of the System UI</string>
     <string name="custom_status_bar_apply_title">Apply</string>
     <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
 

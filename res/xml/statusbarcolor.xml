@@ -16,9 +16,9 @@
  -->
 
 <PreferenceScreen
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/custom_status_bar_color_title"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/custom_status_bar_color_title"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <CheckBoxPreference
             android:key="custom_status_bar_color"
@@ -35,7 +35,7 @@
     <CheckBoxPreference
             android:key="custom_system_icon_color"
             android:title="@string/custom_system_icon_color_title"
-            android:summaryOn="@string/custom_color_summary"
+            android:summaryOn="@string/custom_icon_color_summary"
             android:defaultValue="false" />
 
     <net.margaritov.preference.colorpicker.ColorPickerPreference
@@ -45,6 +45,18 @@
             android:defaultValue="0xFFFFFFFF" />
 
     <CheckBoxPreference
+            android:key="custom_notification_icon_color"
+            android:title="@string/custom_notification_icon_color_title"
+            android:summaryOn="@string/custom_notification_color_summary"
+            android:defaultValue="false" />
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="notification_icon_color"
+            android:title="@string/notification_icon_color"
+            android:dependency="custom_notification_icon_color"
+            android:defaultValue="0xFFFFFFFF" />
+
+     <CheckBoxPreference
             android:key="custom_status_bar_apply"
             android:title="@string/custom_status_bar_apply_title"
             android:summary="@string/custom_status_bar_apply_summary"

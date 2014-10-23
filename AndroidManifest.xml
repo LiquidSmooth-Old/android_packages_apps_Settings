@@ -1856,6 +1856,8 @@
 
         <activity android:name=".liquid.StatusBarColor" />
 
+        <activity android:name=".liquid.TintedStatusBar" />
+
         <!-- Pseudo-activity used to provide an intent-filter entry point to rotation settings -->
         <activity android:name="Settings$DisplayRotationSettingsActivity"
                 android:label="@string/display_rotation_title"
