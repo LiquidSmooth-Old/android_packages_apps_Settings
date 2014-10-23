@@ -69,6 +69,14 @@
         android:fragment="com.android.settings.liquid.StatusBarSettings"
         android:icon="@drawable/ic_liquid_statusbar" />
 
+    <!-- Tinted system bars -->
+    <Preference
+        settings:includeXmlForSearch="@xml/tintedstatusbar"
+        android:id="@+id/tinted_statusbar"
+        android:title="@string/title_tinted_statusbar"
+        android:fragment="com.android.settings.liquid.TintedStatusBar"
+        android:icon="@drawable/ic_dt_tintedstatusbar" />
+
     <!-- Kernel Tweaker -->
     <Preference
         android:id="@+id/kernel_tweaker"
