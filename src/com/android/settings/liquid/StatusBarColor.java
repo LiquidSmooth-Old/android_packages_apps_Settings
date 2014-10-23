@@ -42,14 +42,20 @@ public class StatusBarColor extends SettingsPreferenceFragment implements
 
     private static final String PREF_CUSTOM_STATUS_BAR_COLOR = "custom_status_bar_color";
     private static final String PREF_STATUS_BAR_OPAQUE_COLOR = "status_bar_opaque_color";
+//    private static final String PREF_STATUS_BAR_SEMI_TRANS_COLOR = "status_bar_trans_color";
     private static final String PREF_CUSTOM_SYSTEM_ICON_COLOR = "custom_system_icon_color";
     private static final String PREF_SYSTEM_ICON_COLOR = "system_icon_color";
+    private static final String PREF_CUSTOM_NOTIFICATION_ICON_COLOR = "custom_notification_icon_color";
+    private static final String PREF_NOTIFICATION_ICON_COLOR = "notification_icon_color";
     private static final String PREF_CUSTOM_STATUS_BAR_APPLY = "custom_status_bar_apply";
 
     private CheckBoxPreference mCustomBarColor;
     private ColorPickerPreference mBarOpaqueColor;
+//    private ColorPickerPreference mBarTransColor;
     private CheckBoxPreference mCustomIconColor;
+    private CheckBoxPreference mCustomNotificationIconColor;
     private ColorPickerPreference mIconColor;
+    private ColorPickerPreference mNotificationIconColor;
     private CheckBoxPreference mApplyCustomBar;
 
     @Override
@@ -82,8 +88,12 @@ public class StatusBarColor extends SettingsPreferenceFragment implements
         mCustomIconColor.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.CUSTOM_SYSTEM_ICON_COLOR, 0) == 1);
 
-        mApplyCustomBar = (CheckBoxPreference) findPreference(PREF_CUSTOM_STATUS_BAR_APPLY);
-        mApplyCustomBar.setChecked(false);
+	mCustomNotificationIconColor = (CheckBoxPreference) findPreference(PREF_CUSTOM_NOTIFICATION_ICON_COLOR);
+        mCustomNotificationIconColor.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.CUSTOM_NOTIFICATION_ICON_COLOR, 0) == 1);
+
+	mApplyCustomBar = (CheckBoxPreference) findPreference(PREF_CUSTOM_STATUS_BAR_APPLY);	
+	mApplyCustomBar.setChecked(false);
 
         mBarOpaqueColor = (ColorPickerPreference) findPreference(PREF_STATUS_BAR_OPAQUE_COLOR);
         mBarOpaqueColor.setOnPreferenceChangeListener(this);
@@ -99,6 +109,20 @@ public class StatusBarColor extends SettingsPreferenceFragment implements
         }
         mBarOpaqueColor.setNewPreviewColor(intColor);
 
+//        mBarTransColor = (ColorPickerPreference) findPreference(PREF_STATUS_BAR_SEMI_TRANS_COLOR);
+//        mBarTransColor.setOnPreferenceChangeListener(this);
+//        intColor = Settings.System.getInt(getActivity().getContentResolver(),
+//                    Settings.System.STATUS_BAR_SEMI_TRANS_COLOR, 0x66000000);
+//        mBarTransColor.setSummary(getResources().getString(R.string.default_string));
+//        if (intColor == 0xff000000) {
+//            intColor = systemUiResources.getColor(systemUiResources.getIdentifier(
+//                    "com.android.systemui:color/system_bar_background_semi_transparent", null, null));
+//        } else {
+//            hexColor = String.format("#%08x", (0x66ffffff & intColor));
+//            mBarTransColor.setSummary(hexColor);
+//        }
+//        mBarTransColor.setNewPreviewColor(intColor);
+
         mIconColor = (ColorPickerPreference) findPreference(PREF_SYSTEM_ICON_COLOR);
         mIconColor.setOnPreferenceChangeListener(this);
         intColor = Settings.System.getInt(getContentResolver(),
@@ -112,6 +136,22 @@ public class StatusBarColor extends SettingsPreferenceFragment implements
             mIconColor.setSummary(hexColor);
         }
         mIconColor.setNewPreviewColor(intColor);
+	
+	intColor = Settings.System.getInt(getContentResolver(),
+                    Settings.System.NOTIFICATION_ICON_COLOR, -1);
+	mNotificationIconColor = (ColorPickerPreference) findPreference(PREF_NOTIFICATION_ICON_COLOR);
+        mNotificationIconColor.setOnPreferenceChangeListener(this);
+        intColor = Settings.System.getInt(getContentResolver(),
+                    Settings.System.NOTIFICATION_ICON_COLOR, -1);
+        mNotificationIconColor.setSummary(getResources().getString(R.string.default_string));
+        if (intColor == 0xffffffff) {
+            intColor = systemUiResources.getColor(systemUiResources.getIdentifier(
+                    "com.android.systemui:color/status_bar_clock_color", null, null));
+        } else {
+           hexColor = String.format("#%08x", (0xffffffff & intColor));
+            mNotificationIconColor.setSummary(hexColor);
+        }
+        mNotificationIconColor.setNewPreviewColor(intColor);
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
@@ -127,9 +167,14 @@ public class StatusBarColor extends SettingsPreferenceFragment implements
                     Settings.System.CUSTOM_SYSTEM_ICON_COLOR,
             mCustomIconColor.isChecked() ? 1 : 0);
             return true;
-        } else if (preference == mApplyCustomBar) {
-            Helpers.restartSystemUI();
-            mApplyCustomBar.setChecked(false);
+	} else if (preference == mCustomNotificationIconColor) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.CUSTOM_NOTIFICATION_ICON_COLOR,
+            mCustomNotificationIconColor.isChecked() ? 1 : 0);
+            return true;	
+	} else if (preference == mApplyCustomBar) {	
+	    Helpers.restartSystemUI();	
+	    mApplyCustomBar.setChecked(false);
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -151,6 +196,13 @@ public class StatusBarColor extends SettingsPreferenceFragment implements
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.SYSTEM_ICON_COLOR, intHex);
+	 } else if (preference == mNotificationIconColor) {
+            String hex = ColorPickerPreference.convertToARGB(Integer
+                    .valueOf(String.valueOf(objValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NOTIFICATION_ICON_COLOR, intHex);
         } else {
             return false;
         }
