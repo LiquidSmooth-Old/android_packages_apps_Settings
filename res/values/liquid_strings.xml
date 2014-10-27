@@ -1913,6 +1913,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="status_bar_double_tap_sleep_pin_password_summary">Double tap the text entry view</string>
     <string name="status_bar_double_tap_sleep_pattern_title">Pattern</string>
     <string name="status_bar_double_tap_sleep_pattern_summary">Double tap anywhere on the pattern view</string>
+    <string name="status_bar_double_tap_sleep_nav_bar_title">Navigation bar</string>
+    <string name="status_bar_double_tap_sleep_nav_bar_summary">Double tap anywhere on the navigation bar</string>
 
     <!-- Status bar notification count -->
     <string name="status_bar_notification_count_title">Notification count</string>
