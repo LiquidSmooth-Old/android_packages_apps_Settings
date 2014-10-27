@@ -2634,4 +2634,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="notify_changed_networks_notification">Notification</string>
     <string name="notify_changed_networks_notification_sound">Notification with sound</string>
 
+    <!-- ticker preference -->
+    <string name="ticker_disabled_title">Disable notification ticker</string>
+    <string name="ticker_disabled_summary">Don\'t scroll text from incoming notifications in the status bar</string>
+
 </resources>
