@@ -55,6 +55,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private static final String STATUS_BAR_CARRIER_COLOR = "status_bar_carrier_color";
     private static final String STATUSBAR_6BAR_SIGNAL = "statusbar_6bar_signal";
     private static final String TOGGLE_CARRIER_LOGO = "toggle_carrier_logo";
+    private static final String PREF_TICKER = "ticker_disabled";
 
     static final int DEFAULT_STATUS_CARRIER_COLOR = 0xffffffff;
 
@@ -67,6 +68,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private CheckBoxPreference mToggleCarrierLogo;
     private ColorPickerPreference mCarrierColorPicker;
     private CheckBoxPreference mStatusBarSixBarSignal;
+    private CheckBoxPreference mTicker;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -130,6 +132,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         mStatusBarSignal.setSummary(mStatusBarSignal.getEntry());
         mStatusBarSignal.setOnPreferenceChangeListener(this);
 
+        mTicker = (CheckBoxPreference) prefSet.findPreference(PREF_TICKER);
+        mTicker.setChecked(Settings.System.getInt(resolver,
+                Settings.System.TICKER_DISABLED, 0) == 1);
+        mTicker.setOnPreferenceChangeListener(this);
+
         mStatusBarCarrier = (CheckBoxPreference) findPreference(STATUS_BAR_CARRIER);
         mStatusBarCarrier.setChecked((Settings.System.getInt(getContentResolver(),
                 Settings.System.STATUS_BAR_CARRIER, 0) == 1));
@@ -176,6 +183,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.STATUS_BAR_CARRIER_COLOR, intHex);
+            return true;
+        } else if (preference == mTicker) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                Settings.System.TICKER_DISABLED, value ? 1 : 0);
             return true;
         }
         return false;
