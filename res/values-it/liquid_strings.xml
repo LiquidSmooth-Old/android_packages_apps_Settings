@@ -837,6 +837,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="title_tile_wifiap">Wi-Fi AP</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">Cambia utente</string>
+  <string name="title_tile_network_adb">ADB attraverso la rete</string>
   <string name="title_tile_networkmode">Modalità rete</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Timeout schermo</string>
@@ -1352,7 +1353,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="battery_saver_network_cdma_title">Reti CDMA</string>
   <string name="battery_saver_system_title">Opzioni di sistema</string>
   <string name="development_shortcut_title">Scorciatoie sviluppatore</string>
-  <string name="development_shortcut_summary">Attiva le opzioni \'Cancella dati\' e \'Arresto forzato\' nell\'area delle notifiche e nella lista delle app recenti</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Attenzione</string>
   <string name="custom_runtime_warning_message">ART non è supportato da LiquidSmooth. Questa impostazione è disponibile solo a scopo di sperimentazione e può causare instabilità, crash, perdita di dati o impedire al dispositivo di avviarsi correttamente. Visita &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; per maggiori informazioni.&lt;br/&gt;&lt;br/&gt;Ti chiediamo di non segnalarci eventuali errori se hai attivo ART come runtime.&lt;br/&gt;&lt;br/&gt;Sei sicuro di volere riavviare per cambiare runtime da <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> a <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
   <string name="rominfo_settings_list_item_title">Statistiche LiquidSmooth</string>
@@ -2150,6 +2151,8 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">LiquidSmooth sound</string>
   <string name="liquid_sound_summary">All sound related settings that we have added</string>
@@ -2162,4 +2165,7 @@ inserire punti di controllo aggiuntivi. \'Rimuovi\' cancella la riga selezionata
   <string name="wifi_ap_clients_title">Dispositivi collegati</string>
   <string name="wifi_ap_client_ap_disabled">Hotspot è disabilitato</string>
   <string name="wifi_ap_client_none_connected">Nessun dispositivo collegato</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>

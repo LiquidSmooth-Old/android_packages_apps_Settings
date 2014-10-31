@@ -266,7 +266,7 @@
   <string name="keyboard_rotation_toggle_title">Auto-Tastatur-Drehung</string>
   <string name="keyboard_rotation_toggle_summary">Erzwingen Sie automatisches Drehen, wenn die Tastatur angezeigt wird</string>
   <string name="keyboard_rotation_timeout_title">Zeitlimit automatisches drehen</string>
-  <string name="keyboard_rotation_timeout_summary">Deaktiviert die automatische Drehung <xliff:g id="rotate_timeout">%1$s</xliff:g>  in Sekunden nach dem die Tastatur ausgeblendet ist Drehung <xliff:g id="rotate_timeout"> %1$s </xliff:g>  in Sekunden nach dem die Tastatur ausgeblendet ist</string>
+  <string name="keyboard_rotation_timeout_summary">Deaktiviert die automatische Drehung <xliff:g id="rotate_timeout">%1$s</xliff:g>  in Sekunden nach dem die Tastatur ausgeblendet ist Drehung</string>
   <string name="keyboard_rotation_dialog">Dieses Feature erzwingt, vorübergehend Auto-Rotation, während die Tastatur angezeigt wird.  Es hat keine Auswirkungen, wenn die Auto-Rotation bereits aktiviert ist.</string>
   <string name="show_enter_key_title">Enter Taste anzeigen</string>
   <string name="show_enter_key_summary">Erzwinge Enter-Taste statt Emoticon-Taste auf der Tastaur</string>
@@ -376,7 +376,7 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="shortcut_action_power_off">Ausschalten</string>
   <string name="shortcut_action_reboot">Neustart</string>
   <string name="shortcut_action_sound">Ton</string>
-  <string name="shortcut_action_profiles">Profiel</string>
+  <string name="shortcut_action_profiles">Profile</string>
   <string name="shortcut_action_app">Benutzerdefinierte Anwendung</string>
   <string name="shortcut_action_home">Startseite</string>
   <string name="shortcut_action_back">Zurück</string>
@@ -824,6 +824,7 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="title_tile_wifiap">WLAN-Hotspot</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">Benutzer-Wechseln</string>
+  <string name="title_tile_network_adb">ADB übers Netzwerk</string>
   <string name="title_tile_networkmode">Netzwerkmodus</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Bildschirm-Timeout</string>
@@ -1123,7 +1124,7 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="pa_pie_status_title">Statusfarbe</string>
   <string name="pa_pie_chevron_left_title">Farbe des linken Chevron</string>
   <string name="pa_pie_chevron_right_title">Farbe des rechten Chevron</string>
-  <string name="pa_pie_juice_title">Battery juice color</string>
+  <string name="pa_pie_juice_title">Batterie saft farbe</string>
   <string name="pa_pie_button_color">Schaltflächenfarbe</string>
   <string name="pa_pie_button_color_title">Schaltflächenfarbe</string>
   <string name="pa_pie_gap_title">Objektzwischenraum</string>
@@ -1145,13 +1146,13 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="pa_pie_stick_summary">Avoids orientation change when screen rotates</string>
   <string name="pa_pie_search_title">Suchknopf</string>
   <string name="pa_pie_search_summary">Enable search button on pie controls</string>
-  <string name="pa_pie_trigger_title">Trigger area</string>
-  <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
-  <string name="pa_pie_trigger_none">None (Pie disabled)</string>
+  <string name="pa_pie_trigger_title">Auslösebereich</string>
+  <string name="pa_pie_trigger_summary">Lege den Auslösebereich fest</string>
+  <string name="pa_pie_trigger_none">Keiner (Pie deaktiviert)</string>
   <string name="pa_pie_trigger_huge">Sehr groß</string>
   <string name="pa_pie_notifications_title">Enable Chevron Targets</string>
   <string name="pa_pie_notifications_summary">Enabling this will let the Notification panel and QuickSettings tiles become available when swiping</string>
-  <string name="pa_pie_menu_title">Always show menu button</string>
+  <string name="pa_pie_menu_title">Menü-Taste immer anzeigen</string>
   <string name="pa_pie_menu_summary">Whether or not the menu button should always be shown, even when its not needed</string>
   <string name="pa_pie_restart_launcher_title">Launcher neu starten</string>
   <string name="pa_pie_restart_launcher_summary">Changing screensize can have adverse effects. This option allows your launcher to regain sanity, the cost is a slight blackout (recommended)</string>
@@ -1339,7 +1340,7 @@ Zusätzliche Optionen werden durch Gedrückthalten der Zeile angezeigt. Mit \"Be
   <string name="battery_saver_network_cdma_title">CDMA Netze</string>
   <string name="battery_saver_system_title">Systemeinstellungen</string>
   <string name="development_shortcut_title">Entwickler Verknüpfung</string>
-  <string name="development_shortcut_summary">Aktivieren Sie \"Daten löschen\" und \"schließen erzwingen\" Option im Infobereich und zuletzt verwendete Anwendungs Liste</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Warnung</string>
   <string name="custom_runtime_warning_message">ART wird von LiquidSmooth nicht unterstützt. Diese Einstellung ist experimentell und nur für Entwickler gedacht. Sie kann zu Instabilitäten, Abstürzen oder Datenverlust führen oder verhindern, dass Ihr Gerät startet. Besuchen Sie &lt;a href=\"http://source.android.com/devices/tech
 /dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; für mehr Informationen.&lt;br/&gt;&lt;br/&gt;Melden Sie keine Fehler, wenn Sie ART als Laufzeitumgebung aktiviert haben.&lt;br/&gt;&lt;br/&gt;Sind Sie sicher, dass Sie das Gerät neu starten wollen, um die Laufzeitumgebung von <xliff:g id="old" example="libdvm.so">%1$s</xliff:g>
@@ -1541,19 +1542,19 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="animation_no_scroll_summary_off">Deaktiviert</string>
   <string name="scroll_disclaimer_summary">Hinweis: Die meisten Apps benötigen einen Neustart, damit diese Einstellungen wirksam werden</string>
   <string name="multiuser_preference_title">Multiuser Unterstützung</string>
-  <string name="custom_status_bar_header_title">Status Bar Color</string>
-  <string name="custom_status_bar_color_title">Custom status bar color</string>
-  <string name="status_bar_opaque_color">Opaque color</string>
+  <string name="custom_status_bar_header_title">Statusleisten Farbe</string>
+  <string name="custom_status_bar_color_title">Benutzerdefinierte Farbe der Statusleiste</string>
+  <string name="status_bar_opaque_color">Farbe</string>
   <string name="status_bar_transparent_color">Dimmed color</string>
-  <string name="status_bar_color_reset">Reset status bar color</string>
-  <string name="restart_status_bar_menu_title">Restart status bar</string>
-  <string name="restart_status_bar_title">Restart?</string>
+  <string name="status_bar_color_reset">Zurücksetzten der Statusleisten Farbe</string>
+  <string name="restart_status_bar_menu_title">Statusleiste neustarten</string>
+  <string name="restart_status_bar_title">Neustart?</string>
   <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
   <string name="custom_system_icon_color_title">Custom system icon color</string>
   <string name="system_icon_color">Icon-Farbe</string>
   <string name="custom_color_summary">Override the system color of the System UI</string>
-  <string name="custom_status_bar_apply_title">Apply</string>
-  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
+  <string name="custom_status_bar_apply_title">Anwenden</string>
+  <string name="custom_status_bar_apply_summary">SystemUI neustarten um die Änderungen wirksam zu machen</string>
   <string name="status_bar_battery_cat_title">Akku</string>
   <string name="battery_bar_title">Akku Anzeige</string>
   <string name="battery_bar">Position der Akku Anzeige</string>
@@ -2131,14 +2132,16 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="bounce_effect_title">Bounce effect</string>
   <string name="none_effect_title">Keine</string>
   <string name="extra_heavy_title">Extra Heavy</string>
-  <string name="heavy_title">Heavy</string>
+  <string name="heavy_title">Fett</string>
   <string name="medium_title">Mittel</string>
-  <string name="light_title">Hell</string>
-  <string name="extra_light_title">Extra Light</string>
+  <string name="light_title">Dünn</string>
+  <string name="extra_light_title">Extra Dünn</string>
   <string name="overscroll_title">Over scrolling effect</string>
   <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">LiquidSmooth sound</string>
   <string name="liquid_sound_summary">All sound related settings that we have added</string>
@@ -2148,7 +2151,10 @@ auf <xliff:g id="new" example="libart.so">%2$s</xliff:g> zu ändern?</string>
   <string name="sunlight_enhancement_summary">Enhance display brightness and readability under bright sunlight</string>
   <string name="color_enhancement_title">Farbverbesserungen</string>
   <string name="color_enhancement_summary">Dynamically enhance the color of the display</string>
-  <string name="wifi_ap_clients_title">Connected devices</string>
-  <string name="wifi_ap_client_ap_disabled">Hotspot is disabled</string>
+  <string name="wifi_ap_clients_title">Verbundene Geräte</string>
+  <string name="wifi_ap_client_ap_disabled">Hotspot ist deaktiviert</string>
   <string name="wifi_ap_client_none_connected">Keine Geräte angeschlossen</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>

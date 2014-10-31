@@ -234,7 +234,7 @@
   <string name="pref_volume_wake_summary">Naciśnięcie przycisku głośności +/- obudzi urządzenie</string>
   <string name="wakeup_when_plugged_unplugged_title">Obudź przy podłączeniu ładowarki</string>
   <string name="wakeup_when_plugged_unplugged_summary">Obudź urządzenie jeśli ładowarka zostanie podłączona/dołączona.</string>
-  <string name="double_tap_to_wake_title">Double-tap to wake</string>
+  <string name="double_tap_to_wake_title">Podwójne dotknięcie aby wybudzić</string>
   <string name="sound_title">Dźwięk</string>
   <string name="advanced_sound_title">Zaawansowane opcje</string>
   <string name="volbtn_music_controls_title">Sterowanie muzyką za pomocą przycisków głośności</string>
@@ -827,6 +827,7 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="title_tile_wifiap">Punkt dostępu Wi-Fi</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">Przełącznik użytkowników</string>
+  <string name="title_tile_network_adb">ADB przez sieć</string>
   <string name="title_tile_networkmode">Tryb sieci</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Wygaszanie ekranu</string>
@@ -1101,7 +1102,7 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="pa_pie_expanded_only_title">Tylko w rozszerzonym pulpicie</string>
   <string name="pa_pie_expanded_only_summary">Pozwalaj na włączenie PIE tylko gdy rozszerzony pulpit jest włączony</string>
   <string name="pa_pie_gravity_title">Grawitacja PIE</string>
-  <string name="pa_pie_gravity_summary">Select the location where the Pie will be placed</string>
+  <string name="pa_pie_gravity_summary">Wybierz lokalizację, gdzie zostanie umieszczone Pie</string>
   <string name="pa_pie_gravity_top">Góra</string>
   <string name="pa_pie_gravity_bottom">Dół</string>
   <string name="pa_pie_gravity_right">Prawa strona</string>
@@ -1343,7 +1344,7 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="battery_saver_network_cdma_title">Sieci CDMA</string>
   <string name="battery_saver_system_title">Opcje systemu</string>
   <string name="development_shortcut_title">Skrót deweloperski</string>
-  <string name="development_shortcut_summary">Włącz opcje \'wipe data\' oraz \'force close\' w obszarze powiadomień oraz na liście ostatnich aplikacji</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Ostrzeżenie</string>
   <string name="custom_runtime_warning_message">ART nie jest wspierany przez LiquidSmooth. To ustawienie jest eksperymentalne i może powodować braki stabilności, błędy w działaniu niektórych aplikacji, utratę danych lub spowodować brak możliwości włączenia urządzenia. Po więcej informacji odwiedź &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;Prosimy o nieprzesyłanie raportów o błędach jeśli ART jest aktywowany.&lt;br/&gt;&lt;br/&gt;Czy jesteś pewień, że chcesz zrestartować urządzenie w celu zmiany <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> na <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
   <string name="rominfo_settings_list_item_title">Statystyki LiquidSmooth</string>
@@ -2141,6 +2142,8 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">LiquidSmooth sound</string>
   <string name="liquid_sound_summary">All sound related settings that we have added</string>
@@ -2153,4 +2156,7 @@ ważnych punktów kontrolnych w dolnych zakresach jasności otoczenia.
   <string name="wifi_ap_clients_title">Połączone urządzenia</string>
   <string name="wifi_ap_client_ap_disabled">Hotspot jest wyłączony</string>
   <string name="wifi_ap_client_none_connected">Brak połączonych urządzeń</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>

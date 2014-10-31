@@ -234,7 +234,7 @@
   <string name="pref_volume_wake_summary">yukarı/aşağı tuşuna basarak cihaz uyanacak</string>
   <string name="wakeup_when_plugged_unplugged_title">Şarja takılınca uyan</string>
   <string name="wakeup_when_plugged_unplugged_summary">şarj cihazı takıp çıkarmada aygıtı uyandır.</string>
-  <string name="double_tap_to_wake_title">Double-tap to wake</string>
+  <string name="double_tap_to_wake_title">Uyandırmak için çift dokunun</string>
   <string name="sound_title">Ses</string>
   <string name="advanced_sound_title">Gelişmiş Ayarlar</string>
   <string name="volbtn_music_controls_title">Ses tuşları ile müzik kontrolü</string>
@@ -817,6 +817,7 @@
   <string name="title_tile_wifiap">Kablosuz AP</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">Kullanıcı değiştirici</string>
+  <string name="title_tile_network_adb">ADB ağ üzerinden</string>
   <string name="title_tile_networkmode">Ağ modu</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Ekran zaman aşımı</string>
@@ -1331,7 +1332,7 @@
   <string name="battery_saver_network_cdma_title">CDMA Ağları</string>
   <string name="battery_saver_system_title">Sistem seçenekleri</string>
   <string name="development_shortcut_title">Geliştirme kısayolu</string>
-  <string name="development_shortcut_summary">\'Verileri sil\' ve \'Kapatma zorla\' seçeneklerini bildirim çubuğunda ve en son uygulamalar listesinde etkin kıl</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Uyarı</string>
   <string name="custom_runtime_warning_message">ART LiquidSmooth tarafından desteklenmiyor. Bu ayar, sadece deneme için yer ve istikrarsızlık, çöker, veri kaybına neden veya cihazınıza uygun çizme önlemek için potansiyele sahiptir. Visit &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; for more information.&lt;br/&gt;&lt;br/&gt;We request you do not file bug reports if you have enabled ART as your runtime.&lt;br/&gt;&lt;br/&gt;Are you sure you want to reboot to change runtime from <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> to <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
   <string name="rominfo_settings_list_item_title">LiquidSmooth istatistik</string>
@@ -1531,19 +1532,19 @@
   <string name="animation_no_scroll_summary_off">Devre dışı</string>
   <string name="scroll_disclaimer_summary">Not: Çoğu uygulamalar için özel değerler etkili olabilmesi yeniden başlatılması gerekiyor</string>
   <string name="multiuser_preference_title">Çoklu kullanıcı desteği</string>
-  <string name="custom_status_bar_header_title">Status Bar Color</string>
-  <string name="custom_status_bar_color_title">Custom status bar color</string>
-  <string name="status_bar_opaque_color">Opaque color</string>
-  <string name="status_bar_transparent_color">Dimmed color</string>
-  <string name="status_bar_color_reset">Reset status bar color</string>
-  <string name="restart_status_bar_menu_title">Restart status bar</string>
-  <string name="restart_status_bar_title">Restart?</string>
-  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
-  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="custom_status_bar_header_title">Durum çubuğunun rengi</string>
+  <string name="custom_status_bar_color_title">Özel durum çubuğu rengi</string>
+  <string name="status_bar_opaque_color">Opak renk</string>
+  <string name="status_bar_transparent_color">Soluk renk</string>
+  <string name="status_bar_color_reset">Durum çubuğu rengini Sıfırla</string>
+  <string name="restart_status_bar_menu_title">Durum çubuğunu yeniden başlatın</string>
+  <string name="restart_status_bar_title">Yeniden Başlat?</string>
+  <string name="restart_status_bar_message">Sistem kullanıcı Arabirimi değişiklik olduğunda yeniden başlayacak.</string>
+  <string name="custom_system_icon_color_title">Özel sistem simge rengi</string>
   <string name="system_icon_color">Simge renkleri</string>
-  <string name="custom_color_summary">Override the system color of the System UI</string>
-  <string name="custom_status_bar_apply_title">Apply</string>
-  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
+  <string name="custom_color_summary">Sistem kullanıcı Arabirimi sistem rengini geçersiz kıl</string>
+  <string name="custom_status_bar_apply_title">Uygula</string>
+  <string name="custom_status_bar_apply_summary">SystemUI değişikliklerini uygulamak için yeniden başlatın</string>
   <string name="status_bar_battery_cat_title">Pil</string>
   <string name="battery_bar_title">Pil Bar</string>
   <string name="battery_bar">Pil çubuğunun konumu</string>
@@ -1842,8 +1843,8 @@
   <string name="profile_lockmode_insecure_summary">Güvensiz kilit ekranını kullan</string>
   <string name="profile_lockmode_disabled_summary">Kilit ekranı devre dışı</string>
   <string name="profile_airplanemode_title">Uçak Modu</string>
-  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
-  <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
+  <string name="disable_ime_navbar_title">IME gezinti çubuğunu devre dışı bırak</string>
+  <string name="disable_ime_navbar_summary">Genişletilmiş masaüstü modunda ime gösteriminde gezinti çubuğunu iptal et</string>
   <string name="toggleWifi">Wi-Fi</string>
   <string name="toggleWifiAp">Taşınabilir Wi-Fi hotspot</string>
   <string name="toggleBluetooth">Bluetooth</string>
@@ -2129,6 +2130,8 @@
   <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
   <string name="overscroll_weight_title">Üzerinde kaydırma ağırlığı</string>
   <string name="overscroll_weight_summary">Kadydırılabilir nesnelerin ağırlığını belirleyin</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">LiquidSmooth sesi</string>
   <string name="liquid_sound_summary">Bütün ses seçimleri bizim tarafımızdan yapıldı</string>
@@ -2141,4 +2144,7 @@
   <string name="wifi_ap_clients_title">Bağlı cihazlar</string>
   <string name="wifi_ap_client_ap_disabled">Hotspot devre dışı</string>
   <string name="wifi_ap_client_none_connected">Bağlı aygıt yok</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>

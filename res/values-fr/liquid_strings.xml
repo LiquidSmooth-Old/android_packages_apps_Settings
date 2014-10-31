@@ -825,6 +825,7 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="title_tile_wifiap">P.A Wi-Fi</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">Changeur d\'utilisateur</string>
+  <string name="title_tile_network_adb">ADB par le réseau</string>
   <string name="title_tile_networkmode">Mode réseau</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Mise en veille de l\'écan</string>
@@ -1341,7 +1342,7 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="battery_saver_network_cdma_title">Réseau CDMA</string>
   <string name="battery_saver_system_title">Options Système</string>
   <string name="development_shortcut_title">Raccourcis développement</string>
-  <string name="development_shortcut_summary">Active les options \'Effacer données\' et \'Forcer fermeture\' dans la zone de notification et la liste des applications récentes</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Avertissement</string>
   <string name="custom_runtime_warning_message">ART n\'est pas supporté par LiquidSmooth. Ce paramètre est inclus pour des expérimentations seulement. Il peut causer des instabilités, des crashs, des pertes de données ou empêcher votre appareil de démarrer. Lisez l\'&lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introduction à ART&lt;/a&gt; pour plus d\'informations.&lt;br/&gt;&lt;br/&gt;Merci de na pas remplir de rapports de bugs si vous utilisez ART.&lt;br/&gt;&lt;br/&gt;Êtes-vous sûr de vouloir redémarrer pour changer le moteur d\'exécution de <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> à <xliff:g id="new" example="libart.so">%2$s</xliff:g>\\u00A0?</string>
   <string name="rominfo_settings_list_item_title">Statistiques de LiquidSmooth</string>
@@ -1543,16 +1544,16 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="multiuser_preference_title">Prise en charge multi-utilisateur</string>
   <string name="custom_status_bar_header_title">Status Bar Color</string>
   <string name="custom_status_bar_color_title">Custom status bar color</string>
-  <string name="status_bar_opaque_color">Opaque color</string>
+  <string name="status_bar_opaque_color">Couleur opaque</string>
   <string name="status_bar_transparent_color">Dimmed color</string>
   <string name="status_bar_color_reset">Reset status bar color</string>
-  <string name="restart_status_bar_menu_title">Restart status bar</string>
-  <string name="restart_status_bar_title">Restart?</string>
+  <string name="restart_status_bar_menu_title">Redémarrez la barre d\'état</string>
+  <string name="restart_status_bar_title">Redémarrer ?</string>
   <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
   <string name="custom_system_icon_color_title">Custom system icon color</string>
   <string name="system_icon_color">Couleur de l\'icône</string>
   <string name="custom_color_summary">Override the system color of the System UI</string>
-  <string name="custom_status_bar_apply_title">Apply</string>
+  <string name="custom_status_bar_apply_title">Appliquer</string>
   <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
   <string name="status_bar_battery_cat_title">Batterie</string>
   <string name="battery_bar_title">Barre de batterie</string>
@@ -2139,6 +2140,8 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="overscroll_summary">Choisissez comment faire défiler les objets</string>
   <string name="overscroll_weight_title">Effet de défilement poids</string>
   <string name="overscroll_weight_summary">Sélectionnez le poids des objets défilants</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">LiquidSmooth son</string>
   <string name="liquid_sound_summary">All sound related settings that we have added</string>
@@ -2151,4 +2154,7 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="wifi_ap_clients_title">Périphériques connectés</string>
   <string name="wifi_ap_client_ap_disabled">Point d\'accès est désactivé</string>
   <string name="wifi_ap_client_none_connected">Aucun périphérique connecté</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>

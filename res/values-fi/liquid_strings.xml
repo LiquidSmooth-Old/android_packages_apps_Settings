@@ -45,7 +45,7 @@
   <string name="advanced_wakelock_summary">Määritä tai tarkastele nykyisiä wakelockin estoasetuksia</string>
   <string name="additional_category_title">Lisää</string>
   <string name="general_category_title">Yleiset</string>
-  <string name="equalizer_settings_title">Equalizer</string>
+  <string name="equalizer_settings_title">Taajuuskorjain</string>
   <string name="interface_settings_title">Ulkoasu</string>
   <string name="lockscreen_settings_title">Lukitusnäyttö</string>
   <string name="navigation_settings_title">Navigointi</string>
@@ -160,11 +160,11 @@
   <string name="privacy_guard_app_ops_detail_dialog_title">Huomio</string>
   <string name="privacy_guard_app_ops_detail_dialog_text">Selected app does not request permissions which access personal data. Do you want to modify the other permissions?</string>
   <string name="privacy_guard_app_ops_detail_reset_dialog_text">Haluatko palauttaa kaikki käyttöoikeudet oletusarvoihin?</string>
-  <string name="app_ops_btn_text">Modify</string>
+  <string name="app_ops_btn_text">Muokkaa</string>
   <string name="app_ops_no_item_text">This app has no changeable permissions.</string>
-  <string name="wifi_setting_countrycode_title">Wi-Fi region code</string>
-  <string name="wifi_setting_countrycode_summary">Specify the region code for Wi-Fi</string>
-  <string name="wifi_setting_countrycode_error">There was a problem setting the region code.</string>
+  <string name="wifi_setting_countrycode_title">Wi-Fi aluekoodi</string>
+  <string name="wifi_setting_countrycode_summary">Aseta Wi-Fin aluekoodi</string>
+  <string name="wifi_setting_countrycode_error">Ongelma asetettaessa aluekoodia.</string>
   <string name="wifi_setting_countrycode_disabled">Enable Wi-Fi to change this option.</string>
   <string name="wifi_menu_forget_all">Forget all networks</string>
   <string name="wifi_setting_priority_title">Wi-Fi priority</string>
@@ -840,6 +840,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="title_tile_wifiap">Wi-Fi AP</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">User switcher</string>
+  <string name="title_tile_network_adb">ADB over network</string>
   <string name="title_tile_networkmode">Network mode</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Screen timeout</string>
@@ -1357,7 +1358,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="battery_saver_network_cdma_title">CDMA Networks</string>
   <string name="battery_saver_system_title">System options</string>
   <string name="development_shortcut_title">Development shortcut</string>
-  <string name="development_shortcut_summary">Enable \'wipe data\' and \'force close\' options in notification area and recent apps list</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Warning</string>
   <string name="custom_runtime_warning_message">ART is not supported by LiquidSmooth. This setting is included for experimentation only and has the potential to cause instability, crashes, data loss or prevent the proper boot of your device. Visit &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; for more information.&lt;br/&gt;&lt;br/&gt;We request you do not file bug reports if you have enabled ART as your runtime.&lt;br/&gt;&lt;br/&gt;Are you sure you want to reboot to change runtime from <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> to <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
   <string name="rominfo_settings_list_item_title">LiquidSmooth Statistics</string>
@@ -2155,6 +2156,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">LiquidSmooth sound</string>
   <string name="liquid_sound_summary">All sound related settings that we have added</string>
@@ -2167,4 +2170,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
   <string name="wifi_ap_clients_title">Connected devices</string>
   <string name="wifi_ap_client_ap_disabled">Hotspot is disabled</string>
   <string name="wifi_ap_client_none_connected">No devices connected</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>

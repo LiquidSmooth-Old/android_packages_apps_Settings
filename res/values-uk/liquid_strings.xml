@@ -826,6 +826,7 @@
   <string name="title_tile_wifiap">Точка доступу Wi-Fi</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">Користувачі</string>
+  <string name="title_tile_network_adb">Налагодження по мережі</string>
   <string name="title_tile_networkmode">Режим мережі</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Затримка вимкнення екрана</string>
@@ -1343,7 +1344,7 @@
   <string name="battery_saver_network_cdma_title">Мережі CDMA</string>
   <string name="battery_saver_system_title">Системні параметри</string>
   <string name="development_shortcut_title">Додаткові пункти меню</string>
-  <string name="development_shortcut_summary">Показувати пункти \"Стерти дані\" і \"Зупинити\" в панелі сповіщень та списку недавніх програм</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Увага</string>
   <string name="custom_runtime_warning_message">ART не підтримується LiquidSmooth. Ця опція експериментальна і може привести до нестабільної роботи, помилки, втрату даних і навіть заважати завантаженню пристрою. Відвідайте сторінку «&lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Уведення в ART&lt;/a&gt;» (на англ. мові) для додаткової інформації.&lt;br/&gt;&lt;br/&gt;Ми просимо не присилати баг-репорти, якщо вибрали ART в якості середовища виконання системи.&lt;br/&gt;&lt;br/&gt;Ви дійсно бажаєте перезапустити пристрій і перемкнути середовище з «<xliff:g id="old" example="libdvm.so">%1$s</xliff:g>» на «<xliff:g id="new" example="libart.so">%2$s</xliff:g>»?</string>
   <string name="rominfo_settings_list_item_title">Статистика LiquidSmooth</string>
@@ -2141,6 +2142,8 @@
   <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">Звук LiquidSmooth</string>
   <string name="liquid_sound_summary">Всі звукові параметри, що ми додали</string>
@@ -2153,4 +2156,7 @@
   <string name="wifi_ap_clients_title">Підключені пристрої</string>
   <string name="wifi_ap_client_ap_disabled">Точка доступу вимкнута</string>
   <string name="wifi_ap_client_none_connected">Немає підключених пристроїв</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>

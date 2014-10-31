@@ -834,6 +834,7 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. \'Odstranit\' sma
   <string name="title_tile_wifiap">Wi-Fi přístupový bod</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">Přepnutí uživatele</string>
+  <string name="title_tile_network_adb">ADB přes síť</string>
   <string name="title_tile_networkmode">Režim sítě</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Časový limit obrazovky</string>
@@ -1350,7 +1351,7 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. \'Odstranit\' sma
   <string name="battery_saver_network_cdma_title">CDMA sítě</string>
   <string name="battery_saver_system_title">Možnosti systému</string>
   <string name="development_shortcut_title">Zkratka pro vývojáře</string>
-  <string name="development_shortcut_summary">Povolit možnosti \'Vyčistit data\' a \'Vynutit ukončení\' v oblasti oznámení a seznamu nedávných aplikací</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Varování</string>
   <string name="custom_runtime_warning_message">ART není podporován LiquidSmooth. Toto nastavení je experimentální a může potencionálně způsobit nestabilitu systému, pády aplikací, ztrátu dat nebo bránit správnému spuštění zařízení. Navštivte &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Představujeme ART&lt;/a&gt;pro více informací.&lt;br/&gt;&lt;br/&gt;Žádáme vás neposílejte chybová hlášení, pokud jste povolili ART jako své běhové prostředí.&lt;br/&gt;&lt;br/&gt;Opravdu chcete restartovat pro změnu běhového prostředí z <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> na <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
   <string name="rominfo_settings_list_item_title">LiquidSmooth statistiky</string>
@@ -2148,6 +2149,8 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. \'Odstranit\' sma
   <string name="overscroll_summary">Vyberte, jak posuvné objekty vypadají, když dojde k překmitu</string>
   <string name="overscroll_weight_title">Hmotnost během posouvání</string>
   <string name="overscroll_weight_summary">Vyberte hmotnost posuvných objektů</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">LiquidSmooth zvuk</string>
   <string name="liquid_sound_summary">Všechna související zvuková nastavení, která jsme přidali</string>
@@ -2160,4 +2163,7 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. \'Odstranit\' sma
   <string name="wifi_ap_clients_title">Připojená zařízení</string>
   <string name="wifi_ap_client_ap_disabled">Hotspot je zakázán</string>
   <string name="wifi_ap_client_none_connected">Žádná zařízení není připojeno</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>

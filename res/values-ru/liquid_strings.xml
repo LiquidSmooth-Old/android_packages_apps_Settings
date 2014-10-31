@@ -58,7 +58,7 @@
   <string name="pie_control_title">Управление Pie</string>
   <string name="theme_settings_title">Темный режим</string>
   <string name="device_settings_title">Устройство</string>
-  <string name="devicesettings_app_summary">Configure device specific options</string>
+  <string name="devicesettings_app_summary">Настроить параметры устройства</string>
   <string name="device_legal_summary">Открытое ПО и лицензии Google</string>
   <string name="shortcut_picker_title">Ярлыки действий</string>
   <string name="superuser_settings_title">Суперпользователь</string>
@@ -234,7 +234,7 @@
   <string name="pref_volume_wake_summary">Нажатие на качельку громкости разбудит устройство</string>
   <string name="wakeup_when_plugged_unplugged_title">Пробуждать во время зарядки</string>
   <string name="wakeup_when_plugged_unplugged_summary">Пробуждать, если устройство подключено(отключено) к (от) ЗУ.</string>
-  <string name="double_tap_to_wake_title">Double-tap to wake</string>
+  <string name="double_tap_to_wake_title">Двойное касание для пробуждения</string>
   <string name="sound_title">Звук</string>
   <string name="advanced_sound_title">Расширенные функции</string>
   <string name="volbtn_music_controls_title">Управление музыкой качелькой громкости</string>
@@ -817,6 +817,7 @@
   <string name="title_tile_wifiap">Точка доступа Wi-Fi</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">Пользователи</string>
+  <string name="title_tile_network_adb">Отладка по сети</string>
   <string name="title_tile_networkmode">Режим сети</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Тайм-аут экрана</string>
@@ -1099,55 +1100,55 @@
   <string name="pa_pie_mode_title">Стиль Pie</string>
   <string name="pa_pie_mode_summary">Manage how animations and status additions will be handled</string>
   <string name="pa_pie_mode_bare">Bare</string>
-  <string name="pa_pie_mode_quick">Quick</string>
+  <string name="pa_pie_mode_quick">Быстрый</string>
   <string name="pa_pie_mode_default">По умолчанию</string>
   <string name="pa_pie_mode_slow">Медленный</string>
   <string name="pa_pie_size_title">Размер Pie</string>
-  <string name="pa_pie_size_summary">Define Pie controls size</string>
+  <string name="pa_pie_size_summary">Определения размера элементов управления Pie</string>
   <string name="pa_pie_size_small">Маленький</string>
   <string name="pa_pie_size_large">Большой</string>
   <string name="pa_pie_size_gigantic">Гигантский</string>
   <string name="pa_pie_size_monster">Монстер</string>
-  <string name="pa_pie_color_title">Pie color settings</string>
-  <string name="pa_pie_color_style_title">Pie color style</string>
+  <string name="pa_pie_color_title">Настройки цвета  Pie</string>
+  <string name="pa_pie_color_style_title">Стиль цвета Pie</string>
   <string name="pa_pie_background_title">Цвет фона</string>
   <string name="pa_pie_select_title">Выбор цвета</string>
-  <string name="pa_pie_outlines_title">Outlines color</string>
+  <string name="pa_pie_outlines_title">Цветные контуры</string>
   <string name="pa_pie_status_clock_title">Цвет часов</string>
-  <string name="pa_pie_status_title">Status color</string>
+  <string name="pa_pie_status_title">Цвет состояния</string>
   <string name="pa_pie_chevron_left_title">Left chevron color</string>
   <string name="pa_pie_chevron_right_title">Right chevron color</string>
   <string name="pa_pie_juice_title">Battery juice color</string>
   <string name="pa_pie_button_color">Цвет кнопок</string>
   <string name="pa_pie_button_color_title">Цвет кнопок</string>
   <string name="pa_pie_gap_title">Item gap</string>
-  <string name="pa_pie_gap_summary">Adjust the gap that separates the Pie elements</string>
+  <string name="pa_pie_gap_summary">Настроить разрыв, разделяющий элементы Pie</string>
   <string name="pa_pie_angle_title">Pie angle</string>
   <string name="pa_pie_angle_summary">Adjust the angle of pie\'s egdes from the attachment</string>
-  <string name="pa_pie_angle_none">None (old)</string>
+  <string name="pa_pie_angle_none">Нет (старый)</string>
   <string name="pa_pie_angle_small">Маленький</string>
   <string name="pa_pie_angle_big">Нормальный (по умолчанию)</string>
   <string name="pa_pie_angle_huge">Большой</string>
-  <string name="pa_pie_angle_super">Huge</string>
+  <string name="pa_pie_angle_super">Огромный</string>
   <string name="pa_pie_gap_none">Нет</string>
   <string name="pa_pie_gap_small">Маленький</string>
   <string name="pa_pie_gap_big">Большой (по умолчанию)</string>
-  <string name="pa_pie_gap_huge">Huge</string>
+  <string name="pa_pie_gap_huge">Огромный</string>
   <string name="pa_pie_center_title">Middle alignment</string>
   <string name="pa_pie_center_summary">Center pie on the trigger edge</string>
-  <string name="pa_pie_stick_title">Prevent rotation</string>
-  <string name="pa_pie_stick_summary">Avoids orientation change when screen rotates</string>
+  <string name="pa_pie_stick_title">Предотвращения вращения</string>
+  <string name="pa_pie_stick_summary">Предотвращает изменение ориентации при повороте экрана</string>
   <string name="pa_pie_search_title">Кнопка поиска</string>
-  <string name="pa_pie_search_summary">Enable search button on pie controls</string>
+  <string name="pa_pie_search_summary">Включить кнопку Поиск на круговых элементах управления</string>
   <string name="pa_pie_trigger_title">Trigger area</string>
   <string name="pa_pie_trigger_summary">Determine the size of the region that registers swipes</string>
-  <string name="pa_pie_trigger_none">None (Pie disabled)</string>
-  <string name="pa_pie_trigger_huge">Huge</string>
+  <string name="pa_pie_trigger_none">Нет (Pie отключен)</string>
+  <string name="pa_pie_trigger_huge">Огромный</string>
   <string name="pa_pie_notifications_title">Enable Chevron Targets</string>
   <string name="pa_pie_notifications_summary">Enabling this will let the Notification panel and QuickSettings tiles become available when swiping</string>
-  <string name="pa_pie_menu_title">Always show menu button</string>
+  <string name="pa_pie_menu_title">Всегда показывать кнопку меню</string>
   <string name="pa_pie_menu_summary">Whether or not the menu button should always be shown, even when its not needed</string>
-  <string name="pa_pie_restart_launcher_title">Restart Launcher</string>
+  <string name="pa_pie_restart_launcher_title">Перезапустите Launcher</string>
   <string name="pa_pie_restart_launcher_summary">Changing screensize can have adverse effects. This option allows your launcher to regain sanity, the cost is a slight blackout (recommended)</string>
   <string name="noti_reminder_category">Напоминания</string>
   <string name="noti_reminder_enable_title">Включить напоминания о уведомлении</string>
@@ -1333,7 +1334,7 @@
   <string name="battery_saver_network_cdma_title">Сети CDMA</string>
   <string name="battery_saver_system_title">Системные настройки</string>
   <string name="development_shortcut_title">Дополнительные пункты меню</string>
-  <string name="development_shortcut_summary">Показывать пункты «Стереть данные» и «Остановить» в уведомлениях и списке недавних приложений</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Внимание</string>
   <string name="custom_runtime_warning_message">&gt;LiquidSmooth не поддерживает среду ART. Данная настройка включена только в экспериментальных целях и может спровоцировать нестабильность, сбои, потерю данных или препятствовать правильной загрузке устройства. Посетите &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; для более детальной информации.&lt;br/&gt;&lt;br/&gt;Просьба не отсылать отчеты о багах если вы перешли на использование среды ART.&lt;br/&gt;&lt;br/&gt;Перезагрузить устройства для изменения  <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> на <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
   <string name="rominfo_settings_list_item_title">Статистика LiquidSmooth</string>
@@ -1535,19 +1536,19 @@
   <string name="animation_no_scroll_summary_off">Выключено</string>
   <string name="scroll_disclaimer_summary">Примечание: Большинство приложений необходимо перезапустить, чтобы пользовательские значения вступили в силу</string>
   <string name="multiuser_preference_title">Поддержка нескольких пользователей</string>
-  <string name="custom_status_bar_header_title">Status Bar Color</string>
-  <string name="custom_status_bar_color_title">Custom status bar color</string>
-  <string name="status_bar_opaque_color">Opaque color</string>
-  <string name="status_bar_transparent_color">Dimmed color</string>
-  <string name="status_bar_color_reset">Reset status bar color</string>
-  <string name="restart_status_bar_menu_title">Restart status bar</string>
-  <string name="restart_status_bar_title">Restart?</string>
-  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
-  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="custom_status_bar_header_title">Цвет строки состояния</string>
+  <string name="custom_status_bar_color_title">Пользовательский цвет строки состояния</string>
+  <string name="status_bar_opaque_color">Непрозрачный цвет</string>
+  <string name="status_bar_transparent_color">Матовый цвет</string>
+  <string name="status_bar_color_reset">Сбросить цвет строки состояния</string>
+  <string name="restart_status_bar_menu_title">Перезапустить строку состояния</string>
+  <string name="restart_status_bar_title">Перезагрузить?</string>
+  <string name="restart_status_bar_message">Перезапуск строки состояния сразу же изменит значения, которые вы применили.</string>
+  <string name="custom_system_icon_color_title">Пользовательский цвет иконок системы</string>
   <string name="system_icon_color">Цвет иконки</string>
-  <string name="custom_color_summary">Override the system color of the System UI</string>
-  <string name="custom_status_bar_apply_title">Apply</string>
-  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
+  <string name="custom_color_summary">Переопределить системный цвет интерфейса системы</string>
+  <string name="custom_status_bar_apply_title">Применить</string>
+  <string name="custom_status_bar_apply_summary">Перезапустите SystemUI, чтобы применить изменения</string>
   <string name="status_bar_battery_cat_title">Батарея</string>
   <string name="battery_bar_title">Иконка батареи батареи</string>
   <string name="battery_bar">Расположение значка батареи</string>
@@ -1579,10 +1580,10 @@
   <string name="show_network_traffic_1000">1000 мс</string>
   <string name="show_network_traffic_1500">1500 мс</string>
   <string name="show_network_traffic_2000">2000 мс</string>
-  <string name="network_traffic_autohide">Auto hide</string>
-  <string name="network_traffic_autohide_summary">Hide monitor when there is no activity</string>
-  <string name="network_traffic_autohide_threshold">Inactivity threshold</string>
-  <string name="network_traffic_color_style">Color style</string>
+  <string name="network_traffic_autohide">Автоматическое скрытие</string>
+  <string name="network_traffic_autohide_summary">Скрыть монитор при отсутствии активности</string>
+  <string name="network_traffic_autohide_threshold">Порог простоя</string>
+  <string name="network_traffic_color_style">Цветовой стиль</string>
   <string name="network_traffic_color_reset">Сбросить цвет</string>
   <string name="network_traffic_color_reset_message">Reset network traffic color to default?</string>
   <string name="status_bar_double_tap_to_sleep_title">Двойное нажатие по строке состояние усыпляет телефон</string>
@@ -1751,7 +1752,7 @@
   <string name="hover_exclude_topmost_title">Исключить верхний app</string>
   <string name="hover_exclude_topmost_summary">Выключаются уведомления активного приложения</string>
   <string name="hover_exclude_from_lock_screen_title">Выключить на экране блокировке</string>
-  <string name="hover_exclude_from_lock_screen_summary">Hide notifications on lock screen</string>
+  <string name="hover_exclude_from_lock_screen_summary">Скрытие уведомлений на экране блокировки</string>
   <string name="hover_long_fadeout_title">Время уведомления Hover</string>
   <string name="hover_long_fadeout_3seconds">3 секунды</string>
   <string name="hover_long_fadeout_5seconds">5 секунд (по умолчанию)</string>
@@ -1846,7 +1847,7 @@
   <string name="profile_lockmode_insecure_summary">Не запрашивать пароль или PIN-код</string>
   <string name="profile_lockmode_disabled_summary">Отключить экран блокировки</string>
   <string name="profile_airplanemode_title">Режим полёта</string>
-  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
+  <string name="disable_ime_navbar_title">Отключить панель навигации IME</string>
   <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
   <string name="toggleWifi">Wi-Fi</string>
   <string name="toggleWifiAp">Точка доступа Wi-Fi</string>
@@ -1901,12 +1902,12 @@
   <string name="identicons_create_title">Создать ассоциацию</string>
   <string name="identicons_create_summary">Создать ассоциации для существующих контактов без фото</string>
   <string name="identicons_creation_service_running_title">Создание ассоциаций</string>
-  <string name="identicons_creation_service_contact_summary">Processing %s</string>
+  <string name="identicons_creation_service_contact_summary">Обработка %s</string>
   <string name="identicons_creation_service_contact_summary_finishing">Они одинаковые...</string>
   <string name="identicons_remove_title">Удалить ассоциации</string>
   <string name="identicons_remove_summary">Удалить ассоциацию контакта который уже ассоциирован</string>
   <string name="identicons_remove_service_running_title">Удалить ассоциации</string>
-  <string name="identicons_remove_service_contact_summary">Processing photo %1$d/%2$d</string>
+  <string name="identicons_remove_service_contact_summary">Обработка фото %1$d/%2$d</string>
   <string name="identicons_remove_service_contact_summary_finishing">Ещё немного...</string>
   <string name="identicons_style_retro">Ретро</string>
   <string name="identicons_style_contemporary">Современный</string>
@@ -2001,7 +2002,7 @@
   <string name="heads_up_gravity_title">Показывать внизу</string>
   <string name="heads_up_gravity_summary">Уведомление внизу экрана</string>
   <string name="heads_up_snooze_title">Длительность \"отложить\"</string>
-  <string name="heads_up_snooze_summary"><xliff:g id="number">%d</xliff:g> minutes</string>
+  <string name="heads_up_snooze_summary"><xliff:g id="number"> %d </xliff:g> минут</string>
   <string name="heads_up_snooze_disabled_summary">Функция \"Отложить\" отключена</string>
   <string name="heads_up_snooze_3min">3 минуты</string>
   <string name="heads_up_snooze_5min">5 минут</string>
@@ -2009,7 +2010,7 @@
   <string name="heads_up_snooze_15min">15 минут</string>
   <string name="heads_up_snooze_20min">20 минут</string>
   <string name="heads_up_time_out_title">Длительность</string>
-  <string name="heads_up_time_out_summary"><xliff:g id="number">%d</xliff:g> seconds</string>
+  <string name="heads_up_time_out_summary"><xliff:g id="number"> %d </xliff:g> секунд</string>
   <string name="heads_up_time_out_never_summary">\"Всплывающее уведомление\" будет показываться, пока не будет закрыто.</string>
   <string name="heads_up_time_out_4sec">4 секунды</string>
   <string name="heads_up_time_out_6sec">6 секунд</string>
@@ -2020,7 +2021,7 @@
   <string name="heads_up_floating_window_title">Запустить всплывающее окно</string>
   <string name="heads_up_floating_window_summary">Открывать уведомления поверх в всплывающем окне</string>
   <string name="heads_up_exclude_from_lock_screen_title">Выключить на экране блокировке</string>
-  <string name="heads_up_exclude_from_lock_screen_summary">Hide notifications on lock screen</string>
+  <string name="heads_up_exclude_from_lock_screen_summary">Скрытие уведомлений на экране блокировки</string>
   <string name="listsystem">список</string>
   <string name="sizer_title">Удаление системных приложений</string>
   <string name="caution">Внимание!</string>
@@ -2077,31 +2078,31 @@
   <string name="ime_navigation_home_end">home / end</string>
   <string name="screen_off_gesture_settings_title">Жесты при выключенном экране</string>
   <string name="display_color_title">Screen color</string>
-  <string name="display_color_summary">Customize the hue, saturation, etc</string>
+  <string name="display_color_summary">Настройка оттенка, насыщенности и т.д</string>
   <string name="custom_screencolor">Custom screen color</string>
   <string name="screencolor_save">Сохранить</string>
   <string name="screencolor_cancel">Отмена</string>
   <string name="previous_str">Previous</string>
-  <string name="new_str">New</string>
-  <string name="restore_preview">View default picture</string>
-  <string name="selectnewfile_menu">View new picture from Gallery</string>
-  <string name="selectfile_menu">View picture from Gallery</string>
+  <string name="new_str">Новый</string>
+  <string name="restore_preview">Просмотр изображений по умолчанию</string>
+  <string name="selectnewfile_menu">Просмотреть новую картинку из галереи</string>
+  <string name="selectfile_menu">Просмотр картинки из галереи</string>
   <string name="restore_default_str">Сбросить</string>
-  <string name="hue_str">Hue: <xliff:g id="hue_value">%1$s</xliff:g></string>
-  <string name="saturation_str">Saturation: <xliff:g id="saturation_value">%1$s</xliff:g></string>
-  <string name="contrast_str">Contrast: <xliff:g id="contrast_value">%1$s</xliff:g></string>
-  <string name="intensity_str">Intensity: <xliff:g id="intensity_str_value">%1$s</xliff:g></string>
+  <string name="hue_str">Оттенок: <xliff:g id="hue_value"> %1$s </xliff:g></string>
+  <string name="saturation_str">Насыщенность: <xliff:g id="saturation_value"> %1$s </xliff:g></string>
+  <string name="contrast_str">Контраст: <xliff:g id="contrast_value"> %1$s </xliff:g></string>
+  <string name="intensity_str">Интенсивность: <xliff:g id="intensity_str_value"> %1$s </xliff:g></string>
   <string name="custom_density_title">Пользовательская плотность</string>
   <string name="set_custom_density_title">Установить пользовательскую плотность</string>
   <string name="set_custom_density_set">Установить</string>
-  <string name="current_density">"Current density: "</string>
-  <string name="new_density">"New density: "</string>
+  <string name="current_density">"Текущая плотность: "</string>
+  <string name="new_density">"Новая плотность: "</string>
   <string name="density_change_warning">Note: Changing density will close all running apps!</string>
-  <string name="font_size_sample">Sample</string>
+  <string name="font_size_sample">Предпросмотр</string>
   <string name="screen_on_notification_led_title">Screen-On Notification Light</string>
   <string name="screen_on_notification_led_summary">Enable Notification Light even when screen is on.</string>
   <string name="color_calibration_title">Калибровка цвета</string>
-  <string name="color_calibration_summary">Calibrate on-screen colors</string>
+  <string name="color_calibration_summary">Калибровка цвета на экране</string>
   <string name="color_red_title">Красный</string>
   <string name="color_green_title">Зелёный</string>
   <string name="color_blue_title">Синий</string>
@@ -2110,15 +2111,15 @@
   <string name="gamma_tuning_control_set_header">Group <xliff:g id="index">%d</xliff:g></string>
   <string name="gamma_tuning_contrast">Контраст</string>
   <string name="gamma_tuning_brightness">Яркость</string>
-  <string name="gamma_tuning_saturation">Saturation</string>
+  <string name="gamma_tuning_saturation">Насыщенность</string>
   <string name="tether_usb_network_summary">Press to change USB Network</string>
   <string name="tether_usb_network_text">USB Tether Network</string>
-  <string name="tether_user_network_default">Use System Default</string>
+  <string name="tether_user_network_default">Использование системы по умолчанию</string>
   <string name="tether_wifi_network_text">WiFi Tether Network</string>
   <string name="nfc_polling_mode_title">NFC polling mode</string>
-  <string name="nfc_polling_mode_screen_off">Screen off</string>
-  <string name="nfc_polling_mode_screen_locked">Screen on, locked</string>
-  <string name="nfc_polling_mode_screen_unlocked">Screen on, unlocked (default)</string>
+  <string name="nfc_polling_mode_screen_off">Отключение экрана</string>
+  <string name="nfc_polling_mode_screen_locked">Экран включен и заблокирован</string>
+  <string name="nfc_polling_mode_screen_unlocked">Экран включен и разблокирован (по умолчанию)</string>
   <string name="ui_overscroll_title">Over scrolling effects</string>
   <string name="overscroll_glow_title">Over scroll Color</string>
   <string name="edge_effect_title">Edge Glow effect</string>
@@ -2133,16 +2134,21 @@
   <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">Звук LiquidSmooth</string>
   <string name="liquid_sound_summary">All sound related settings that we have added</string>
-  <string name="adaptive_backlight_title">Adaptive backlight</string>
-  <string name="adaptive_backlight_summary">Intelligently vary the backlight brightness of the display and help maximize battery life</string>
+  <string name="adaptive_backlight_title">Адаптивная подсветка</string>
+  <string name="adaptive_backlight_summary">Разумно изменять яркость подсветки дисплея и помочь увеличить жизнь батареи</string>
   <string name="sunlight_enhancement_title">Sunlight enhancement</string>
-  <string name="sunlight_enhancement_summary">Enhance display brightness and readability under bright sunlight</string>
-  <string name="color_enhancement_title">Color enhancement</string>
-  <string name="color_enhancement_summary">Dynamically enhance the color of the display</string>
-  <string name="wifi_ap_clients_title">Connected devices</string>
-  <string name="wifi_ap_client_ap_disabled">Hotspot is disabled</string>
-  <string name="wifi_ap_client_none_connected">No devices connected</string>
+  <string name="sunlight_enhancement_summary">Повышение яркости экрана и читаемость при ярком солнечном свете</string>
+  <string name="color_enhancement_title">Улучшение цвета</string>
+  <string name="color_enhancement_summary">Динамически повысить цвет дисплея</string>
+  <string name="wifi_ap_clients_title">Подключенные устройства</string>
+  <string name="wifi_ap_client_ap_disabled">Точка доступа отключена</string>
+  <string name="wifi_ap_client_none_connected">Устройства не подключены</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>

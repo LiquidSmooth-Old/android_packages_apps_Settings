@@ -234,7 +234,7 @@
   <string name="pref_volume_wake_summary">Pressionar tecla de volume para cima/baixo vai acordar o dispositivo</string>
   <string name="wakeup_when_plugged_unplugged_title">Acordar ao recarregar</string>
   <string name="wakeup_when_plugged_unplugged_summary">Acorda o dispositivo se o carregador for conectado/desconectado.</string>
-  <string name="double_tap_to_wake_title">Double-tap to wake</string>
+  <string name="double_tap_to_wake_title">Dê um duplo toque para acordar</string>
   <string name="sound_title">Som</string>
   <string name="advanced_sound_title">Opções avançadas</string>
   <string name="volbtn_music_controls_title">Trocar musicas com as teclas de volume</string>
@@ -834,6 +834,7 @@ Horas de silêncio permitirá ao toque está definido como silencioso</string>
   <string name="title_tile_wifiap">Ponto de acesso Wi-Fi</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">Alternar usuário</string>
+  <string name="title_tile_network_adb">ADB em rede</string>
   <string name="title_tile_networkmode">Modo de rede</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Tempo limite da Tela</string>
@@ -1349,7 +1350,7 @@ Horas de silêncio permitirá ao toque está definido como silencioso</string>
   <string name="battery_saver_network_cdma_title">Redes CDMA</string>
   <string name="battery_saver_system_title">Opções do sistema</string>
   <string name="development_shortcut_title">Atalho para desenvolvimento</string>
-  <string name="development_shortcut_summary">Ativar opções \'limpar dados\' e \'forçar fechamento\' na área de notificação e lista de aplicativos recentes</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Alerta</string>
   <string name="custom_runtime_warning_message">ART não é suportado por LiquidSmooth. Esta configuração é incluída para apenas experimentos e pode provavelmente causar instabilidade, travamentos, perda de dados ou previnir que o sistema inicialize em seu dispositivo. Visite &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducing ART&lt;/a&gt; para mais informações.&lt;br/&gt;&lt;br/&gt;Nós pedimos que você não reporte problemas se você estiver com o ART ativado.&lt;br/&gt;&lt;br/&gt;Você tem certeza que deseja reiniciar para trocar de <xliff:g xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" id="old" example="libdvm.so">%1$s</xliff:g> para <xliff:g xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" id="new" example="libart.so">%2$s</xliff:g>?</string>
   <string name="rominfo_settings_list_item_title">Estatísticas de LiquidSmooth</string>
@@ -1549,19 +1550,19 @@ Horas de silêncio permitirá ao toque está definido como silencioso</string>
   <string name="animation_no_scroll_summary_off">Desativar</string>
   <string name="scroll_disclaimer_summary">Nota: a maioria dos aplicativos precisam ser reiniciado para valores personalizados levar a efeito</string>
   <string name="multiuser_preference_title">Suporte à multi-usuário</string>
-  <string name="custom_status_bar_header_title">Status Bar Color</string>
-  <string name="custom_status_bar_color_title">Custom status bar color</string>
-  <string name="status_bar_opaque_color">Opaque color</string>
-  <string name="status_bar_transparent_color">Dimmed color</string>
-  <string name="status_bar_color_reset">Reset status bar color</string>
-  <string name="restart_status_bar_menu_title">Restart status bar</string>
-  <string name="restart_status_bar_title">Restart?</string>
-  <string name="restart_status_bar_message">Restarting the System UI will significally change the values you modify.</string>
-  <string name="custom_system_icon_color_title">Custom system icon color</string>
+  <string name="custom_status_bar_header_title">Cor da barra de status</string>
+  <string name="custom_status_bar_color_title">Personalizar a cor da barra de status</string>
+  <string name="status_bar_opaque_color">Cor opaca</string>
+  <string name="status_bar_transparent_color">Cor esmaecida</string>
+  <string name="status_bar_color_reset">Redefinir a cor da barra de status</string>
+  <string name="restart_status_bar_menu_title">Reiniciar a barra de status</string>
+  <string name="restart_status_bar_title">Reiniciar?</string>
+  <string name="restart_status_bar_message">Reiniciar a SystemUI mudará significativamente os valores alterados.</string>
+  <string name="custom_system_icon_color_title">Cor personalizada do ícone de sistema</string>
   <string name="system_icon_color">Cor do ícone</string>
-  <string name="custom_color_summary">Override the system color of the System UI</string>
-  <string name="custom_status_bar_apply_title">Apply</string>
-  <string name="custom_status_bar_apply_summary">Restart SystemUI to apply the changes</string>
+  <string name="custom_color_summary">Substituir a cor do sistema da systemUI</string>
+  <string name="custom_status_bar_apply_title">Aplicar</string>
+  <string name="custom_status_bar_apply_summary">Reinicie o SystemUI para aplicar as alterações</string>
   <string name="status_bar_battery_cat_title">Bateria</string>
   <string name="battery_bar_title">Barra de bateria</string>
   <string name="battery_bar">Localização de barra de bateria</string>
@@ -1860,8 +1861,8 @@ Horas de silêncio permitirá ao toque está definido como silencioso</string>
   <string name="profile_lockmode_insecure_summary">Usar bloqueio inseguro</string>
   <string name="profile_lockmode_disabled_summary">Bloqueio de tela está desabilitado</string>
   <string name="profile_airplanemode_title">Modo Avião</string>
-  <string name="disable_ime_navbar_title">Disable IME navigation bar</string>
-  <string name="disable_ime_navbar_summary">Disable navigation bar when ime shows in immersive mode</string>
+  <string name="disable_ime_navbar_title">Desativar a barra de navegação do IME</string>
+  <string name="disable_ime_navbar_summary">Desativar a barra quando o ime mostra no modo envolvente de navegação</string>
   <string name="toggleWifi">Wi-Fi</string>
   <string name="toggleWifiAp">Ponto de acesso portátil</string>
   <string name="toggleBluetooth">Bluetooth</string>
@@ -2147,6 +2148,8 @@ Horas de silêncio permitirá ao toque está definido como silencioso</string>
   <string name="overscroll_summary">Escolher como roláveis objetos quando eles superação</string>
   <string name="overscroll_weight_title">Sobre o peso de rolagem</string>
   <string name="overscroll_weight_summary">Selecione o peso dos objetos roláveis</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">LiquidSmooth som</string>
   <string name="liquid_sound_summary">Todos os ajustes relacionados com o som que nós adicionamos</string>
@@ -2159,4 +2162,7 @@ Horas de silêncio permitirá ao toque está definido como silencioso</string>
   <string name="wifi_ap_clients_title">Dispositivos conectados</string>
   <string name="wifi_ap_client_ap_disabled">Ponto de acesso está desabilitado</string>
   <string name="wifi_ap_client_none_connected">Não há dispositivos conectados</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>

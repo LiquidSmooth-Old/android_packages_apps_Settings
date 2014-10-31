@@ -822,6 +822,7 @@ Opciones adicionales están disponibles por mucho tiempo-presionar una línea. S
   <string name="title_tile_wifiap">Punto Wi-Fi móvil</string>
   <string name="title_tile_wifi">Wifi</string>
   <string name="title_tile_user">Conmutador de usuario</string>
+  <string name="title_tile_network_adb">ADB a través de la red</string>
   <string name="title_tile_networkmode">Modo de red</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Tiempo de espera de pantalla</string>
@@ -1341,7 +1342,7 @@ Plural Form
   <string name="battery_saver_network_cdma_title">Redes CDMA</string>
   <string name="battery_saver_system_title">Opciones del sistema</string>
   <string name="development_shortcut_title">Opciones de desarrollador</string>
-  <string name="development_shortcut_summary">Habilitar las opciones de \'\'Borrar datos\'\' y \'\'Forzar detención\'\' en el área de notificación y en la lista aplicaciones recientes</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Advertencia</string>
   <string name="custom_runtime_warning_message">ART no está soportado por LiquidSmooth. Este ajuste ha sido incluido solamente para fines experimentales y puede causar inestabilidad, bloqueos, pérdida de datos e incluso impedir el correcto inicio del dispositivo. Para más información visita &lt;a href=\"http://source.android.com/devices/tech/dalvik/art.html\"&gt;Introducción a ART&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;No aceptaremos archivos de informe de errores si has habilitado ART.&lt;br/&gt;&lt;br/&gt;¿Estás seguro de que quieres reiniciar para cambiar el tiempo de ejecución de <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> a <xliff:g id="new" example="libart.so">%2$s</xliff:g>?</string>
   <string name="rominfo_settings_list_item_title">Estadísticas LiquidSmooth</string>
@@ -2139,6 +2140,8 @@ Plural Form
   <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">LiquidSmooth sonido</string>
   <string name="liquid_sound_summary">Todas las opciones relacionadas con el sonido que hemos añadido</string>
@@ -2151,4 +2154,7 @@ Plural Form
   <string name="wifi_ap_clients_title">Dispositivos conectados</string>
   <string name="wifi_ap_client_ap_disabled">Punto Wi-Fi desactivado</string>
   <string name="wifi_ap_client_none_connected">No hay dispositivos conectados</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>

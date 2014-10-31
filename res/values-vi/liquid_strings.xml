@@ -816,6 +816,7 @@
   <string name="title_tile_wifiap">Điểm tr.cập WIFI</string>
   <string name="title_tile_wifi">Wi-Fi</string>
   <string name="title_tile_user">Chuyển người dùng</string>
+  <string name="title_tile_network_adb">ADB qua mạng</string>
   <string name="title_tile_networkmode">Chế độ Mạng</string>
   <string name="title_tile_nfc">NFC</string>
   <string name="title_tile_screen_timeout">Thời gian sáng màn hình</string>
@@ -1330,7 +1331,7 @@
   <string name="battery_saver_network_cdma_title">Mạng CDMA</string>
   <string name="battery_saver_system_title">Tùy chọn hệ thống</string>
   <string name="development_shortcut_title"> Lối tắt phát triển</string>
-  <string name="development_shortcut_summary">Cho phép \'xoá sạch dữ liệu\' và \'ép buộc đóng\' tuỳ chọn trong vùng thông báo và danh sách ứng dụng gần đây</string>
+  <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
   <string name="custom_runtime_warning_title">Chú ý</string>
   <string name="custom_runtime_warning_message">ART không được hỗ trợ bởi LiquidSmooth. Thiết đặt này được bao gồm cho thử nghiệm chỉ và có khả năng gây ra sự mất ổn định, crashes, mất dữ liệu hoặc ngăn chặn khởi động thích hợp của điện thoại. Truy cập vào &lt; một href = \"http://source.android.com/devices/tech/dalvik/art.html\" &gt; giới thiệu về nghệ thuật &lt;/a &gt; cho thêm thông tin. &lt; br / &gt;&lt; br / &gt; chúng tôi yêu cầu bạn không gửi báo cáo lỗi nếu bạn đã bật ART như thời gian chạy của bạn. &lt; br / &gt;&lt; br / &gt; bạn có chắc bạn muốn khởi động lại để thay đổi thời gian chạy từ <xliff:g id="old" example="libdvm.so"> %1$s </xliff:g> đến <xliff:g id="new" example="libart.so"> %2$s </xliff:g>?</string>
   <string name="rominfo_settings_list_item_title">LiquidSmooth số liệu thống kê</string>
@@ -2128,6 +2129,8 @@
   <string name="overscroll_summary">Choose how scrollable objects look when they overshoot</string>
   <string name="overscroll_weight_title">Over scrolling weight</string>
   <string name="overscroll_weight_summary">Select the weight of the scrollable objects</string>
+  <string name="disable_carrier_logo">Enable carrier logo</string>
+  <string name="carrier_logo_summary">Shows carrier logo in status bar</string>
   <string name="liquid_settings_title">LiquidSmooth</string>
   <string name="liquid_sound_title">âm thanh LiquidSmooth</string>
   <string name="liquid_sound_summary">Tất cả cài đặt âm thanh liên quan mà chúng tôi đã thêm</string>
@@ -2140,4 +2143,7 @@
   <string name="wifi_ap_clients_title">Thiết bị kết nối</string>
   <string name="wifi_ap_client_ap_disabled">Điểm truy cập bị vô hiệu hóa</string>
   <string name="wifi_ap_client_none_connected">Không có thiết bị kết nối</string>
+  <string name="sar_info">Maximum SAR</string>
+  <string name="maximum_head_level">Head: %1$s W/kg</string>
+  <string name="maximum_body_level">Body: %1$s W/kg</string>
 </resources>
