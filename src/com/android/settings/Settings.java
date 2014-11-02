@@ -132,8 +132,7 @@ import java.util.List;
  * Top-level settings activity to handle single pane and double pane UI layout.
  */
 public class Settings extends PreferenceActivity
-        implements ButtonBarHandler, OnAccountsUpdateListener,
-        OnItemClickListener {
+        implements ButtonBarHandler, OnItemClickListener {
 
     private static final String LOG_TAG = "Settings";
 
@@ -185,7 +184,6 @@ public class Settings extends PreferenceActivity
             R.id.language_settings,
             R.id.user_settings,
             R.id.account_settings,
-            R.id.account_add,
             R.id.system_section,
             R.id.date_time_settings,
             R.id.about_settings,
@@ -204,7 +202,6 @@ public class Settings extends PreferenceActivity
 
     private AuthenticatorHelper mAuthenticatorHelper;
     private Header mLastHeader;
-    private boolean mListeningToAccountUpdates;
     private ActionBar mActionBar;
     private MenuItem mSearchItem;
     private SettingsAutoCompleteTextView mSearchBar;
@@ -406,9 +403,6 @@ public class Settings extends PreferenceActivity
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (mListeningToAccountUpdates) {
-            AccountManager.get(this).removeOnAccountsUpdatedListener(this);
-        }
     }
 
     @Override
@@ -709,9 +703,6 @@ public class Settings extends PreferenceActivity
                 if (!mBatteryPresent) {
                     target.remove(i);
                 }
-            } else if (id == R.id.account_settings) {
-                int headerIndex = i + 1;
-                i = insertAccountsHeaders(target, headerIndex);
             } else if (id == R.id.home_settings) {
                 if (!updateHomeSettingHeaders(header)) {
                     target.remove(i);
@@ -741,10 +732,6 @@ public class Settings extends PreferenceActivity
                 if (!showDev) {
                     target.remove(i);
                 }
-            } else if (id == R.id.account_add) {
-                if (um.hasUserRestriction(UserManager.DISALLOW_MODIFY_ACCOUNTS)) {
-                    target.remove(i);
-                }
             }
             if (i < target.size() && target.get(i) == header
                     && UserHandle.MU_ENABLED && UserHandle.myUserId() != 0
@@ -762,68 +749,6 @@ public class Settings extends PreferenceActivity
                 i++;
             }
         }
-    }
-
-    private int insertAccountsHeaders(List<Header> target, int headerIndex) {
-        String[] accountTypes = mAuthenticatorHelper.getEnabledAccountTypes();
-        List<Header> accountHeaders = new ArrayList<Header>(accountTypes.length);
-        for (String accountType : accountTypes) {
-            CharSequence label = mAuthenticatorHelper.getLabelForType(this, accountType);
-            if (label == null) {
-                continue;
-            }
-
-            Account[] accounts = AccountManager.get(this).getAccountsByType(accountType);
-            boolean skipToAccount = accounts.length == 1
-                    && !mAuthenticatorHelper.hasAccountPreferences(accountType);
-            Header accHeader = new Header();
-            accHeader.title = label;
-            if (accHeader.extras == null) {
-                accHeader.extras = new Bundle();
-            }
-            if (skipToAccount) {
-                accHeader.breadCrumbTitleRes = R.string.account_sync_settings_title;
-                accHeader.breadCrumbShortTitleRes = R.string.account_sync_settings_title;
-                accHeader.fragment = AccountSyncSettings.class.getName();
-                accHeader.fragmentArguments = new Bundle();
-                // Need this for the icon
-                accHeader.extras.putString(ManageAccountsSettings.KEY_ACCOUNT_TYPE, accountType);
-                accHeader.extras.putParcelable(AccountSyncSettings.ACCOUNT_KEY, accounts[0]);
-                accHeader.fragmentArguments.putParcelable(AccountSyncSettings.ACCOUNT_KEY,
-                        accounts[0]);
-            } else {
-                accHeader.breadCrumbTitle = label;
-                accHeader.breadCrumbShortTitle = label;
-                accHeader.fragment = ManageAccountsSettings.class.getName();
-                accHeader.fragmentArguments = new Bundle();
-                accHeader.extras.putString(ManageAccountsSettings.KEY_ACCOUNT_TYPE, accountType);
-                accHeader.fragmentArguments.putString(ManageAccountsSettings.KEY_ACCOUNT_TYPE,
-                        accountType);
-                if (!isMultiPane()) {
-                    accHeader.fragmentArguments.putString(ManageAccountsSettings.KEY_ACCOUNT_LABEL,
-                            label.toString());
-                }
-            }
-            accountHeaders.add(accHeader);
-            mAuthenticatorHelper.preloadDrawableForType(this, accountType);
-        }
-
-        // Sort by label
-        Collections.sort(accountHeaders, new Comparator<Header>() {
-            @Override
-            public int compare(Header h1, Header h2) {
-                return h1.title.toString().compareTo(h2.title.toString());
-            }
-        });
-
-        for (Header header : accountHeaders) {
-            target.add(headerIndex++, header);
-        }
-        if (!mListeningToAccountUpdates) {
-            AccountManager.get(this).addOnAccountsUpdatedListener(this, null, true);
-            mListeningToAccountUpdates = true;
-        }
-        return headerIndex;
     }
 
     private boolean updateHomeSettingHeaders(Header header) {
@@ -1195,9 +1120,6 @@ public class Settings extends PreferenceActivity
     @Override
     public void onHeaderClick(Header header, int position) {
         boolean revert = false;
-        if (header.id == R.id.account_add) {
-            revert = true;
-        }
 
         // a temp hack while we prepare to switch
         // to the new theme chooser.
@@ -1255,14 +1177,6 @@ public class Settings extends PreferenceActivity
                     (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
             super.setListAdapter(new HeaderAdapter(this, getHeaders(), mAuthenticatorHelper, dpm));
         }
-    }
-
-    @Override
-    public void onAccountsUpdated(Account[] accounts) {
-        // TODO: watch for package upgrades to invalidate cache; see 7206643
-        mAuthenticatorHelper.updateAuthDescriptions(this);
-        mAuthenticatorHelper.onAccountsUpdated(this, accounts);
-        invalidateHeaders();
     }
 
     @Override
