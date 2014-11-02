@@ -68,7 +68,7 @@
 
     <!-- Advanced settings -->
     <string name="active_display_title">Active display</string>
-    <string name="halo_options_title">Halo options</string>
+    <string name="halo_options_title">Halo Settings</string>
     <string name="notification_drawer_title">Notification drawer</string>
     <string name="pie_control_title">Slim pie controls</string>
     <string name="theme_settings_title">Total blackout</string>
@@ -271,9 +271,9 @@
     <string name="shake_events_normal_title">Active shake events</string>
     <string name="shake_events_disabled_title">Disabled apps</string>
     <string name="shake_events_disabled_summary">Shake disabled while using these apps</string>
-    <string name="shake_event_x_title">When shaken horizontally</string>
-    <string name="shake_event_y_title">When shaken vertically</string>
-    <string name="shake_event_z_title">When shaken back-and-forth</string>
+    <string name="shake_event_x_title">Horizontal shake</string>
+    <string name="shake_event_y_title">Vertical shake</string>
+    <string name="shake_event_z_title">Back-and-forth shake</string>
 
     <!-- Shake sensitivity -->
     <string name="shake_sensitivity_title">Shake sensitivity</string>
@@ -1995,7 +1995,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="lockpassword_gesture_set_toast">Gesture has been set</string>
     <string name="lockpassword_confirm_your_gesture_header">Confirm your gesture</string>
     <string name="lockpassword_choose_your_gesture_header">Draw your gesture</string>
-    <string name="unlock_set_unlock_gesture_title">Gesture</string>
+    <string name="unlock_set_unlock_gesture_title">Gesture (Unsecure)</string>
     <string name="unlock_set_unlock_gesture_summary">Low security, experimental</string>
     <string name="unlock_set_unlock_mode_gesture">Gesture</string>
 
