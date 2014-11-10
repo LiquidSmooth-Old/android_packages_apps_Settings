@@ -21,4 +21,11 @@
 
     <!-- About phone screen, legal summary -->
     <string name="device_legal_summary">Open source and Google licenses</string>
+
+    <!-- Share LiquidSmooth -->
+    <string name="share_liquid_title">Share LiquidSmooth</string>
+    <string name="share_liquid_summary">Let others know about LiquidSmooth</string>
+    <string name="share_message">Check out what #LiquidSmooth is all about @ http://goo.gl/Cuwv18</string>
+    <string name="share_chooser_title">Share LiquidSmooth</string>
+
 </resources>
