@@ -37,6 +37,12 @@
                     android:targetClass="com.android.settings.deviceinfo.Status" />
         </PreferenceScreen>
 
+        <!-- Liquid Share -->
+        <Preference
+            android:key="share"
+            android:title="@string/share_liquid_title"
+            android:summary="@string/share_liquid_summary" />
+
         <!-- Legal Information -->
         <PreferenceScreen
                 android:key="container"
