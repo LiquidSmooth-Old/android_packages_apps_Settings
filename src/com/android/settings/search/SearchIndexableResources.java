@@ -24,6 +24,7 @@ import com.android.settings.DevelopmentSettings;
 import com.android.settings.DeviceInfoSettings;
 import com.android.settings.DisplaySettings;
 import com.android.settings.HomeSettings;
+import com.android.settings.liquid.MainSettings;
 import com.android.settings.ScreenPinningSettings;
 import com.android.settings.PrivacySettings;
 import com.android.settings.R;
@@ -115,6 +116,13 @@ public final class SearchIndexableResources {
                         NO_DATA_RES_ID,
                         WirelessSettings.class.getName(),
                         R.drawable.ic_settings_more));
+
+        sResMap.put(MainSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(MainSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        MainSettings.class.getName(),
+                        R.drawable.ic_liquid_theme_settings));
 
         sResMap.put(HomeSettings.class.getName(),
                 new SearchIndexableResource(
