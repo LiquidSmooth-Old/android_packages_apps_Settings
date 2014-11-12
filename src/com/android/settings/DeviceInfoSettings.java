@@ -19,6 +19,9 @@ package com.android.settings;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -470,5 +473,28 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             }
         };
 
+    private boolean removePreferenceIfPackageNotInstalled(Preference preference) {
+        String intentUri=((PreferenceScreen) preference).getIntent().toUri(1);
+        Pattern pattern = Pattern.compile("component=([^/]+)/");
+        Matcher matcher = pattern.matcher(intentUri);
+
+        String packageName=matcher.find()?matcher.group(1):null;
+        if(packageName != null) {
+            try {
+                PackageInfo pi = getPackageManager().getPackageInfo(packageName,
+                        PackageManager.GET_ACTIVITIES);
+                if (!pi.applicationInfo.enabled) {
+                    Log.e(LOG_TAG,"package "+packageName+" is disabled, hiding preference.");
+                    getPreferenceScreen().removePreference(preference);
+                    return true;
+                }
+            } catch (NameNotFoundException e) {
+                Log.e(LOG_TAG,"package "+packageName+" not installed, hiding preference.");
+                getPreferenceScreen().removePreference(preference);
+                return true;
+            }
+        }
+        return false;
+    }
 }
 

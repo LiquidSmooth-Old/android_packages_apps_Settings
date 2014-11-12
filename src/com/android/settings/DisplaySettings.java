@@ -43,6 +43,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.SystemProperties;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -97,6 +98,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         final ContentResolver resolver = activity.getContentResolver();
 
         addPreferencesFromResource(R.xml.display_settings);
+
+        PreferenceScreen prefSet = getPreferenceScreen();
 
         mScreenSaverPreference = findPreference(KEY_SCREEN_SAVER);
         if (mScreenSaverPreference != null
