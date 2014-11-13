@@ -23,11 +23,6 @@
             android:key="category_liquid_options"
             android:title="@string/display_category_liquid_options_title" >
 
-            <PreferenceScreen
-                android:key="navigation_bar_dimen"
-                android:fragment="com.android.settings.liquid.NavBarDimen"
-                android:title="@string/navbar_dimen_title" />
-
             <CheckBoxPreference
                 android:key="disable_immersive_message"
                 android:title="@string/disable_immersive_message_title"
