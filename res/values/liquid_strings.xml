@@ -1405,4 +1405,10 @@
     <string name="none_is_silent_title">None is Silent mode</string>
     <string name="none_is_silent_summary">Silent mode always sounds alarms</string>
 
+    <!--- Sms security limit -->
+    <string name="app_security_title">App security</string>
+    <string name="sms_security_check_limit_title">SMS message limit</string>
+    <string name="sms_security_check_limit_summary">Display an alert dialog to prevent applications from sending SMS messages too frequently. Current limit: %d messages in 15 minutes</string>
+    <string name="sms_security_check_limit_default">30 (Default)</string>
+
 </resources>
