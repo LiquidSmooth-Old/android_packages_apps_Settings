@@ -83,4 +83,9 @@
         android:icon="@drawable/ic_settings_advanced"
         android:title="@string/advanced_category_title" /> -->
 
+    <PreferenceScreen
+        android:key="hfm_settings"
+        android:title="@string/hfm_pref_screen_title"
+        android:fragment="com.android.settings.liquid.hfm.HfmSettings" />
+
 </PreferenceScreen>
