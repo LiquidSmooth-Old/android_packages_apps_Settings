@@ -35,7 +35,7 @@
         android:title="@string/rominfo_settings_list_item_title"
         android:summary="@string/rominfo_settings_list_item_summary">
         <intent
-		    android:action="android.intent.action.MAIN"
+            android:action="android.intent.action.MAIN"
             android:targetPackage="android.romstats"
             android:targetClass="android.romstats.AnonymousStats" />
     </Preference>
@@ -92,5 +92,10 @@
         android:fragment="com.android.settings.liquid.AdvancedSettings"
         android:icon="@drawable/ic_settings_advanced"
         android:title="@string/advanced_category_title" /> -->
+
+    <PreferenceScreen
+        android:key="hfm_settings"
+        android:title="@string/hfm_pref_screen_title"
+        android:fragment="com.android.settings.liquid.hfm.HfmSettings" />
 
 </PreferenceScreen>
