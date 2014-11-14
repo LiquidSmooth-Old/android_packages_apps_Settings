@@ -78,7 +78,7 @@
                 android:ringtoneType="notification" />
 
         <!-- Screenshot tone -->
-        <com.android.settings.liquid.preference.SystemCheckBoxPreference
+        <com.android.settings.liquid.SystemCheckBoxPreference
                 android:key="screenshot_sound"
                 android:title="@string/screenshot_sound_title"
                 android:summary="@string/screenshot_sound_summary"
