@@ -33,6 +33,13 @@
                 android:summary="@string/auto_brightness_summary"
                 android:persistent="false" />
 
+        <!-- LiveDisplay -->
+        <PreferenceScreen
+                android:key="live_display"
+                android:title="@string/live_display_title"
+                android:summary="@string/live_display_summary"
+                android:fragment="com.android.settings.livedisplay.LiveDisplay" />
+
         <PreferenceScreen
                 android:key="wallpaper"
                 android:title="@string/wallpaper_settings_title"
@@ -80,6 +87,7 @@
                 settings:keywords="@string/keywords_display_cast_screen"
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
 
+<<<<<<< HEAD
         <!-- DeviceHandler device specific screen off gesture settings -->
         <Preference
                 android:key="screen_off_gesture_settings"
@@ -113,6 +121,17 @@
                     android:dependency="doze" />
 
          </PreferenceCategory>
+=======
+        <PreferenceCategory
+                android:key="advanced_display_prefs"
+                android:title="@string/advanced_settings">
+
+                <SwitchPreference
+                    android:key="double_tap_wake_gesture"
+                    android:title="@string/double_tap_to_wake_title" />
+
+        </PreferenceCategory>
+>>>>>>> 0810b20... Squash of cmhw features
 
          <PreferenceCategory
              android:key="category_wakeup_options"
@@ -140,4 +159,25 @@
 
          </PreferenceCategory>
 
+<<<<<<< HEAD
+=======
+        <PreferenceCategory
+            android:key="category_doze_options"
+            android:title="@string/display_category_doze_options_title" >
+
+            <SwitchPreference
+                    android:key="doze"
+                    android:title="@string/doze_title"
+                    android:summary="@string/doze_summary"
+                    android:persistent="false" />
+
+            <PreferenceScreen
+                android:fragment="com.android.settings.slim.fragments.DozeSettingsFragment"
+                android:key="advanced_doze_options"
+                android:title="@string/doze_settings_title"
+                android:dependency="doze" />
+
+        </PreferenceCategory>
+
+>>>>>>> 0810b20... Squash of cmhw features
 </PreferenceScreen>
