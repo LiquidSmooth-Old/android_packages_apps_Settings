@@ -24,7 +24,6 @@
 -keep class com.android.settings.bluetooth.BluetoothEnabler { *; }
 -keep class com.android.settings.dashboard.MobileNetworksEnabler { *; }
 
--keep class com.android.settings.cyanogenmod.*Settings
 -keep class com.android.settings.privacyguard.*
 
 # Keep click responders
