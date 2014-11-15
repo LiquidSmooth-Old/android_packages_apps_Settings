@@ -270,4 +270,11 @@
     <string name="ime_switcher_notify">Selector notification</string>
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
+    <!--- Advanced Settings -->
+    <string name="advanced_settings">Advanced settings</string>
+    <string name="advanced_settings_summary">Enable more settings options</string>
+
+    <!--- Tap To Wake -->
+    <string name="double_tap_to_wake_title">Double-tap to wake</string>
+
 </resources>
