@@ -173,6 +173,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_reboot";
                 stringId = R.string.qs_tile_reboot;
                 break;
+            case QSConstants.TILE_LIVE_DISPLAY:
+                resourceName ="ic_livedisplay_day";
+                stringId = R.string.live_display_title;
+                break;
             default:
                 return null;
         }
