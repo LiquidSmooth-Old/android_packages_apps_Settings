@@ -875,7 +875,7 @@
         <activity android:name="Settings$AppOpsSummaryActivity"
                 android:label="@string/app_ops_settings"
                 android:taskAffinity=""
-                android:enabled="false">
+                android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.APP_OPS_SETTINGS" />
@@ -2030,6 +2030,7 @@
                 android:value="true" />
         </activity>
 
+
         <!-- Liquid Extra info -->
         <activity android:name="com.android.settings.liquid.extrainfo.MainActivity"
                   android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar.MinWidth">
@@ -2054,6 +2055,8 @@
 
         <activity android:name=".liquid.gestureanywhere.GestureAnywhereBuilderActivity" />
         <activity android:name=".liquid.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
+        <activity android:name=".cyanogenmod.PrivacySettings" />
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
