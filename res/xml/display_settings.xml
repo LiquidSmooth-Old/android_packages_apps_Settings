@@ -33,6 +33,13 @@
                 android:summary="@string/auto_brightness_summary"
                 android:persistent="false" />
 
+        <!-- LiveDisplay -->
+        <PreferenceScreen
+                android:key="live_display"
+                android:title="@string/live_display_title"
+                android:summary="@string/live_display_summary"
+                android:fragment="com.android.settings.livedisplay.LiveDisplay" />
+
         <PreferenceScreen
                 android:key="wallpaper"
                 android:title="@string/wallpaper_settings_title"
@@ -113,6 +120,16 @@
                     android:dependency="doze" />
 
          </PreferenceCategory>
+
+        <PreferenceCategory
+                android:key="advanced_display_prefs"
+                android:title="@string/advanced_settings">
+
+                <SwitchPreference
+                    android:key="double_tap_wake_gesture"
+                    android:title="@string/double_tap_to_wake_title" />
+
+        </PreferenceCategory>
 
          <PreferenceCategory
              android:key="category_wakeup_options"
