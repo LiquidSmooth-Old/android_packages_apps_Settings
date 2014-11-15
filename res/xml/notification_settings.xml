@@ -24,6 +24,13 @@
         android:key="sound"
         android:title="@string/sound_settings" >
 
+        <!-- LiquidSmooth options -->
+        <PreferenceScreen
+                android:key="advanced_sound_settings"
+                android:title="@string/advanced_sound_title"
+                android:persistent="false"
+                android:fragment="com.android.settings.liquid.SoundSettings" />
+
         <!-- Media volume -->
         <com.android.settings.notification.VolumeSeekBarPreference
                 android:key="media_volume"
