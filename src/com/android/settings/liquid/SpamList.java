@@ -1,4 +1,4 @@
-package com.android.settings.cyanogenmod;
+package com.android.settings.liquid;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +30,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.android.internal.util.cm.SpamFilter;
-import static com.android.internal.util.cm.SpamFilter.*;
+import com.android.internal.util.liquid.SpamFilter;
+import static com.android.internal.util.liquid.SpamFilter.*;
 import com.android.settings.R;
 import com.android.settings.Settings;
 import com.android.settings.Settings.NotificationStationActivity;
