@@ -19,6 +19,7 @@
     <string name="display_category_liquid_options_title">LiquidSmooth Options</string>
     <string name="category_general_title">General Options</string>
     <string name="liquid_settings_title">LiquidSmooth</string>
+    <string name="attention">Attention</string>
 
     <!-- Liquid Extra Info -->
     <string name="lsextrainfo">Extra information</string>
