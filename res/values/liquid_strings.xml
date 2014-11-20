@@ -20,6 +20,7 @@
     <string name="category_general_title">General Options</string>
     <string name="liquid_settings_title">LiquidSmooth</string>
     <string name="attention">Attention</string>
+    <string name="equalizer_settings_title">Equalizer</string>
 
     <!-- Liquid Extra Info -->
     <string name="lsextrainfo">Extra information</string>

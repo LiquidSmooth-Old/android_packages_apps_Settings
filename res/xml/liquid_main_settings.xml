@@ -19,7 +19,7 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/liquid_settings_title" >
 
-    <!-- Equalizer
+    <!-- Equalizer -->
     <Preference
         android:id="@+id/equalizer_settings"
         android:title="@string/equalizer_settings_title"
@@ -28,7 +28,7 @@
             android:action="android.intent.action.MAIN"
             android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"
             android:targetPackage="com.vipercn.viper4android_v2" /> 
-    </Preference>-->
+    </Preference>
 
     <!-- Interface
     <PreferenceScreen
