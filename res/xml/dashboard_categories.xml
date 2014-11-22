@@ -194,14 +194,6 @@
                 android:icon="@drawable/ic_settings_security"
                 />
 
-        <!-- LiquidSmooth Privacy Settings -->
-        <dashboard-tile
-                android:id="@+id/privacy_settings_liquidsmooth"
-                android:title="@string/privacy_settings_liquidsmooth_title"
-                android:fragment="com.android.settings.liquid.PrivacySettings"
-                android:icon="@drawable/ic_settings_privacy"
-                />
-
         <!-- Account -->
         <dashboard-tile
                 android:id="@+id/account_settings"
