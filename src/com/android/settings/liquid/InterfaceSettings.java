@@ -32,6 +32,7 @@ import com.android.settings.Utils;
 
 public class InterfaceSettings extends SettingsPreferenceFragment {
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,7 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+
         return false;
     }
 
