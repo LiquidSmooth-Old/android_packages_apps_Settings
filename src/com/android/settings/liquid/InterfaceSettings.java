@@ -32,6 +32,10 @@ import com.android.settings.Utils;
 
 public class InterfaceSettings extends SettingsPreferenceFragment {
 
+    private static final String KEY_ADVANCED_REBOOT = "advanced_reboot";
+
+    private ListPreference mAdvancedReboot;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +44,13 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+
+        if (preference == mAdvancedReboot) {
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.ADVANCED_REBOOT,
+                    Integer.valueOf((String) value));
+            mAdvancedReboot.setValue(String.valueOf(value));
+            mAdvancedReboot.setSummary(mAdvancedReboot.getEntry());
+        }
         return false;
     }
 
