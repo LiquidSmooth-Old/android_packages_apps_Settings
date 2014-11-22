@@ -30,12 +30,12 @@
             android:targetPackage="com.vipercn.viper4android_v2" /> 
     </Preference>
 
-    <!-- Interface
+    <!-- Interface -->
     <PreferenceScreen
         android:id="@+id/interface_settings"
         android:title="@string/interface_settings_title"
         android:fragment="com.android.settings.liquid.InterfaceSettings"
-        android:icon="@drawable/ic_liquid_interface" /> -->
+        android:icon="@drawable/ic_liquid_interface_teal" /> 
 
     <!-- Lock screen
     <PreferenceScreen
