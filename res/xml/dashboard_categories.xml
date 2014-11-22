@@ -84,11 +84,20 @@
                 android:icon="@drawable/ic_liquid_theme_settings"
                 />
 
+        <!-- LiquidSmooth Privacy Settings -->
+        <dashboard-tile
+                android:id="@+id/privacy_settings_liquidsmooth"
+                android:title="@string/privacy_settings_liquidsmooth_title"
+                android:fragment="com.android.settings.liquid.PrivacySettings"
+                android:icon="@drawable/ic_settings_privacy_teal"
+                />
+
+        <!-- Hardware Keys -->
         <dashboard-tile
                 android:id="@+id/button_settings"
                 android:title="@string/button_pref_title"
                 android:fragment="com.android.settings.ButtonSettings"
-                android:icon="@drawable/ic_settings_home"
+                android:icon="@drawable/ic_settings_buttons_teal"
                 />
 
         <!-- Home -->
@@ -245,7 +254,7 @@
                 android:id="@+id/superuser_settings"
                 android:title="@string/superuser"
                 android:fragment="com.android.settings.liquid.superuser.PolicyNativeFragment"
-                android:icon="@drawable/ic_action_permission"
+                android:icon="@drawable/ic_action_permission_teal"
                 />
 
         <!-- Development -->
