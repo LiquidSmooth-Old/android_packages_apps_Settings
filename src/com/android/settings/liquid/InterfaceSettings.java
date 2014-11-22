@@ -43,7 +43,7 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
         addPreferencesFromResource(R.xml.liquid_interface_settings);
     }
 
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object value) {
 
         if (preference == mAdvancedReboot) {
             Settings.Secure.putInt(getContentResolver(), Settings.Secure.ADVANCED_REBOOT,
