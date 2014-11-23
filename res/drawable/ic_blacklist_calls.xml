@@ -18,4 +18,3 @@
     <item android:state_checked="true" android:drawable="@drawable/ic_blacklist_calls_on" />
     <item android:drawable="@drawable/ic_blacklist_calls_off" />
 </selector>
-
