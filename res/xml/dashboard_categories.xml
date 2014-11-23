@@ -83,6 +83,13 @@
                 android:icon="@drawable/ic_liquid_theme_settings_teal"
                 />
 
+        <!-- PerformanceControl -->
+        <dashboard-tile
+                android:id="@+id/performance_controls"
+                android:fragment="com.brewcrewfoo.performance.activities.MainActivity"
+                android:icon="@drawable/ic_settings_performance_teal"
+                android:title="@string/performance_settings" />
+
         <!-- BitSyko Layers App -->
         <dashboard-tile
                 android:id="@+id/bitsyko_layers"
