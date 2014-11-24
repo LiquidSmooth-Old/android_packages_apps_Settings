@@ -283,6 +283,12 @@
     <!--- Tap To Wake -->
     <string name="double_tap_to_wake_title">Double-tap to wake</string>
 
+    <!-- Keyguard Notification Settings -->
+    <string name="app_notification_show_on_keyguard_title">Show on lockscreen</string>
+    <string name="app_notification_show_on_keyguard_summary">Show notifications from this app on the lockscreen</string>
+    <string name="app_notification_no_ongoing_on_keyguard_title">Disable ongoing on lockscreen</string>
+    <string name="app_notification_no_ongoing_on_keyguard_summary">Never show ongoing notifications from this app on the lockscreen</string>
+
     <!-- Privacy Settings Header item -->
     <string name="privacy_settings_liquidsmooth_title">Privacy</string>
     <string name="privacy_settings_liquidsmooth_category" translatable="false">LiquidSmooth</string>
