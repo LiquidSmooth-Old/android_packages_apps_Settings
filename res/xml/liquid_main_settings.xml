@@ -72,16 +72,11 @@
         android:fragment="com.brewcrewfoo.performance.activities.MainActivity"
         android:icon="@drawable/ic_settings_performance" />
 
-    <!-- Advanced options
+    <!-- Advanced options -->
     <PreferenceScreen
         android:id="@+id/advanced_options_settings"
         android:fragment="com.android.settings.liquid.AdvancedSettings"
-        android:icon="@drawable/ic_settings_advanced"
-        android:title="@string/advanced_category_title" /> -->
-
-    <PreferenceScreen
-        android:key="hfm_settings"
-        android:title="@string/hfm_pref_screen_title"
-        android:fragment="com.android.settings.liquid.hfm.HfmSettings" />
+        android:icon="@drawable/ic_settings_advanced_teal"
+        android:title="@string/advanced_category_title" />
 
 </PreferenceScreen>
