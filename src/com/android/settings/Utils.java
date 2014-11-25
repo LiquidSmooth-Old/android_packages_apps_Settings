@@ -609,6 +609,11 @@ public final class Utils {
                 .getUsers().size() > 1;
     }
 
+    /* returns whether the device has volume rocker or not. */
+    public static boolean hasVolumeRocker(Context context) {
+        return context.getResources().getBoolean(R.bool.has_volume_rocker);
+    }
+
     /**
      * Start a new instance of the activity, showing only the given fragment.
      * When launched in this mode, the given preference fragment will be instantiated and fill the
