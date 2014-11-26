@@ -68,7 +68,6 @@
                 android:fragment="com.android.settings.WirelessSettings"
                 android:icon="@drawable/ic_settings_more"
                 />
-
     </dashboard-category>
 
     <!-- DEVICE -->
