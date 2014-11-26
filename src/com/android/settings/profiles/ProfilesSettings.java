@@ -176,7 +176,7 @@ public class ProfilesSettings extends SettingsPreferenceFragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         menu.add(0, MENU_RESET, 0, R.string.profile_reset_title)
-                .setIcon(R.drawable.ic_settings_backup) // use the backup icon
+                .setIcon(R.drawable.ic_settings_reset_teal)
                 .setAlphabeticShortcut('r')
                 .setEnabled(mEnabled)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
