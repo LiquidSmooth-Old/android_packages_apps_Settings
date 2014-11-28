@@ -16,6 +16,7 @@
 -keep class com.android.settings.notification.*
 -keep class com.android.settings.liquid.**
 -keep class com.koushikdutta.**
+-keep class com.android.settings.liquid.superuser.**
 
 -keep class com.android.settings.liquid.*Settings
 -keep class com.android.settings.privacyguard.*

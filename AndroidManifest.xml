@@ -106,7 +106,7 @@
         <!-- Only system/su can open this activity -->
         <!-- This activity will then call the MultitaskSuRequestActivity to create a new task stack -->
         <activity
-            android:name="com.koushikdutta.superuser.RequestActivity"
+            android:name=".liquid.superuser.RequestActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/superuser"
             android:launchMode="singleTask"
@@ -119,7 +119,7 @@
         <!-- This is activity is started in multiuser mode when the user invoking su -->
         <!-- is not the device owner (user id 0). -->
         <activity
-            android:name="com.koushikdutta.superuser.NotifyActivity"
+            android:name=".liquid.superuser.NotifyActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/superuser"
             android:launchMode="singleTask"
@@ -131,7 +131,7 @@
 
         <!-- Multiple instances of this activity can be running for multiple su requests -->
         <activity
-            android:name="com.koushikdutta.superuser.MultitaskSuRequestActivity"
+            android:name=".liquid.superuser.MultitaskSuRequestActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
             android:exported="false"
@@ -141,7 +141,7 @@
             android:theme="@style/RequestThemeDark" />
 
         <receiver
-            android:name="com.koushikdutta.superuser.SuReceiver"
+            android:name=".liquid.superuser.SuReceiver"
             android:permission="android.permission.REPORT_SUPERUSER" />
 
         <!-- Settings -->
