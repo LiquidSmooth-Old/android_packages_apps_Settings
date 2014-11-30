@@ -492,4 +492,19 @@
     <string name="notification_light_missed_call_title">Missed call</string>
     <string name="notification_light_voicemail_title">Voicemail</string>
 
+    <!-- Device settings -->
+    <string name="device_settings_title">Device</string>
+    <string name="devicesettings_app_summary">Configure device specific options</string>
+
+    <!-- Advanced Settings -->
+    <string name="advanced_category_title">Advanced</string>
+    <string name="advanced_options_title">Advanced options</string>
+    <string name="advanced_adblocker_summary">Configure or view current ad blocker settings</string>
+    <string name="advanced_batterysaver_summary">Configure or view current battery saver settings</string>
+    <string name="advanced_propmodder_summary">Configure or view current build.prop settings</string>
+    <string name="advanced_startup_summary">Configure or view current startup tweaks settings</string>
+    <string name="advanced_superuser_summary">Configure or view current superuser settings</string>
+    <string name="advanced_systemapp_summary">Search for and remove system apps</string>
+    <string name="advanced_wakelock_summary">Configure or view current wakelock blocker settings</string>
+
 </resources>
