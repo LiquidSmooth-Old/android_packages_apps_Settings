@@ -564,6 +564,10 @@
     <string name="clock_date_format_custom">Custom java format</string>
     <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
 
+    <!-- Search Bar Switcher -->
+    <string name="recents_show_searchbar">Show Search Bar in Recents</string>
+    <string name="recents_show_searchbar_summary">Enable or disable the Google search bar in the recents menu</string>
+
     <!-- Density changer -->
     <string name="dpi">DPI</string>
     <string name="su_dialog_error_title">Warning</string>
