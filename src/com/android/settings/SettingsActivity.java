@@ -217,6 +217,9 @@ public class SettingsActivity extends Activity
             R.id.data_usage_settings,
             R.id.sim_settings,
             R.id.wireless_settings,
+            R.id.button_settings,
+            R.id.privacy_settings_liquidsmooth,
+            R.id.main_settings,
             R.id.device_section,
             R.id.notification_settings,
             R.id.display_settings,
@@ -224,6 +227,7 @@ public class SettingsActivity extends Activity
             R.id.application_settings,
             R.id.battery_settings,
             R.id.personal_section,
+            R.id.profile_settings,
             R.id.location_settings,
             R.id.security_settings,
             R.id.language_settings,
@@ -234,11 +238,10 @@ public class SettingsActivity extends Activity
             R.id.about_settings,
             R.id.accessibility_settings,
             R.id.print_settings,
+            R.id.superuser_settings,
             R.id.nfc_payment_settings,
             R.id.home_settings,
-            R.id.dashboard,
-            R.id.main_settings,
-            R.id.privacy_settings_liquidsmooth
+            R.id.dashboard
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
