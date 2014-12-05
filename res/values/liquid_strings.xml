@@ -842,4 +842,8 @@
 
     <string name="auto_brightness_reset_button">Reset</string>
 
+    <!-- Notification counter -->
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+
 </resources>
