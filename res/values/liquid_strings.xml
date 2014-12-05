@@ -544,7 +544,6 @@
     <string name="advanced_wakelock_summary">Configure or view current wakelock blocker settings</string>
 
     <!-- Status bar -->
-    <string name="status_bar_title">Status bar</string>
     <string name="status_bar_style_title">Style</string>
 
     <!-- Status bar | Clock -->
@@ -743,8 +742,12 @@
     <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
     <string name="media_scanner_on_boot_disabled">Do not scan media</string>
 
-    <!-- QuickSettings: Quick Pulldown -->
+    <!-- Interface settings -->
     <string name="qs_title">Quick settings</string>
+    <string name="notification_drawer_title">Notification drawer</string>
+    <string name="status_bar_title">Status bar</string>
+
+    <!-- QuickSettings: Quick Pulldown -->
     <string name="title_quick_pulldown">Quick pulldown</string>
     <string name="summary_quick_pulldown">%1$s edge of the status bar pulls down Quick Settings</string>
     <string name="quick_pulldown_off">Off</string>
@@ -1161,5 +1164,13 @@
     <string name="status_bar_battery_percentage_default">Hidden (default)</string>
     <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
+
+    <!-- Notification hide labels -->
+    <string name="notification_hide_labels_title">Hide notification labels</string>
+    <string name="notification_hide_labels_disable">Show all labels</string>
+    <string name="notification_hide_labels_carrier">Hide Carrier label</string>
+    <string name="notification_hide_labels_wifi">Hide Wi-Fi label</string>
+    <string name="notification_hide_labels_all">Hide all labels</string>
+    <string name="notification_hide_labels_text">in the notification panel</string>
 
 </resources>

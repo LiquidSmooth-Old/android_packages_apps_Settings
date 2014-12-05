@@ -19,6 +19,12 @@
     android:title="@string/interface_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- Notification Drawer -->
+    <PreferenceScreen
+        android:key="notification_drawer"
+        android:fragment="com.android.settings.liquid.NotificationDrawerSettings"
+        android:title="@string/notification_drawer_title" />
+
     <!-- Density Changer -->
     <PreferenceScreen
         android:key="density_changer"
