@@ -185,8 +185,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private boolean mLastEnabledState;
     private boolean mHaveDebugSettings;
     private boolean mDontPokeProperties;
-	
-    private CheckBoxPreference mAdbNotify;
+
+    private SwitchPreference mAdbNotify;
 
     private SwitchPreference mEnableAdb;
     private Preference mClearAdbKeys;
@@ -194,6 +194,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private SwitchPreference mKeepScreenOn;
     private SwitchPreference mBtHciSnoopLog;
     private SwitchPreference mEnableOemUnlock;
+     private SwitchPreference mQuickBoot;
     private SwitchPreference mAllowMockLocation;
     private SwitchPreference mDebugViewAttributes;
 
@@ -237,7 +238,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private ListPreference mAppProcessLimit;
 
-    private CheckBoxPreference mKillAppLongpressBack;
+    private SwitchPreference mKillAppLongpressBack;
 
     private SwitchPreference mShowAllANRs;
 
@@ -245,7 +246,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private ListPreference mRootAccess;
     private Object mSelectedRootValue;
 
-    private CheckBoxPreference mDevelopmentShortcut;
+    private SwitchPreference mDevelopmentShortcut;
 
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
@@ -289,7 +290,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
 
         mEnableAdb = findAndInitSwitchPref(ENABLE_ADB);
-        mAdbNotify = findAndInitCheckboxPref(ADB_NOTIFY);
+        mAdbNotify = findAndInitSwitchPref(ADB_NOTIFY);
         mClearAdbKeys = findPreference(CLEAR_ADB_KEYS);
         if (!SystemProperties.getBoolean("ro.adb.secure", false)) {
             if (debugDebuggingCategory != null) {
@@ -303,20 +304,20 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             mEnableTerminal = null;
         }
 
-        mKeepScreenOn = findAndInitCheckboxPref(KEEP_SCREEN_ON);
-        mBtHciSnoopLog = findAndInitCheckboxPref(BT_HCI_SNOOP_LOG);
-        mEnableOemUnlock = findAndInitCheckboxPref(ENABLE_OEM_UNLOCK);
+        mKeepScreenOn = findAndInitSwitchPref(KEEP_SCREEN_ON);
+        mBtHciSnoopLog = findAndInitSwitchPref(BT_HCI_SNOOP_LOG);
+        mEnableOemUnlock = findAndInitSwitchPref(ENABLE_OEM_UNLOCK);
 
         if (!showEnableOemUnlockPreference()) {
             removePreference(mEnableOemUnlock);
             mEnableOemUnlock = null;
         }
-        mQuickBoot= findAndInitCheckboxPref(ENABLE_QUICKBOOT);
-        mAllowMockLocation = findAndInitCheckboxPref(ALLOW_MOCK_LOCATION);
-        mDebugViewAttributes = findAndInitCheckboxPref(DEBUG_VIEW_ATTRIBUTES);
+        mQuickBoot= findAndInitSwitchPref(ENABLE_QUICKBOOT);
+        mAllowMockLocation = findAndInitSwitchPref(ALLOW_MOCK_LOCATION);
+        mDebugViewAttributes = findAndInitSwitchPref(DEBUG_VIEW_ATTRIBUTES);
         mPassword = (PreferenceScreen) findPreference(LOCAL_BACKUP_PASSWORD);
         mAllPrefs.add(mPassword);
-        mDevelopmentShortcut = findAndInitCheckboxPref(DEVELOPMENT_SHORTCUT_KEY);
+        mDevelopmentShortcut = findAndInitSwitchPref(DEVELOPMENT_SHORTCUT_KEY);
 
 
         if (!android.os.Process.myUserHandle().equals(UserHandle.OWNER)) {
@@ -380,7 +381,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mAllPrefs.add(mShowAllANRs);
         mResetSpPrefs.add(mShowAllANRs);
 
-        mKillAppLongpressBack = findAndInitCheckboxPref(KILL_APP_LONGPRESS_BACK);
+        mKillAppLongpressBack = findAndInitSwitchPref(KILL_APP_LONGPRESS_BACK);
 
         Preference hdcpChecking = findPreference(HDCP_CHECKING_KEY);
         if (hdcpChecking != null) {
@@ -559,7 +560,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 Settings.Secure.ALLOW_MOCK_LOCATION, 0) != 0);
         updateSwitchPref(mDebugViewAttributes, Settings.Global.getInt(cr,
                 Settings.Global.DEBUG_VIEW_ATTRIBUTES, 0) != 0);
-        updateCheckBox(mQuickBoot, Settings.System.getInt(cr, ENABLE_QUICKBOOT, 0) != 0);
+        updateSwitchPref(mQuickBoot, Settings.System.getInt(cr, ENABLE_QUICKBOOT, 0) != 0);
         updateHdcpValues();
         updatePasswordSummary();
         updateDebuggerOptions();
@@ -608,7 +609,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     }
 
     private void updateDevelopmentShortcutOptions() {
-        mAdvancedReboot.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
+        mDevelopmentShortcut.setChecked(Settings.Secure.getInt(getActivity().getContentResolver(),
                 Settings.Secure.DEVELOPMENT_SHORTCUT, 0) != 0);
     }
 
