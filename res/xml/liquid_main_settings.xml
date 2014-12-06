@@ -44,12 +44,12 @@
         android:fragment="com.android.settings.liquid.LockscreenSettings"
         android:icon="@drawable/ic_liquid_lockscreen" /> -->
 
-    <!-- Navigation
+    <!-- Navigation -->
     <PreferenceScreen
         android:id="@+id/navigation_settings"
         android:title="@string/navigation_settings_title"
         android:fragment="com.android.settings.liquid.NavigationSettings"
-        android:icon="@drawable/ic_liquid_navigation" /> -->
+        android:icon="@drawable/ic_liquid_navigation" /> 
 
     <!-- Notifications
     <PreferenceScreen
