@@ -185,7 +185,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private boolean mLastEnabledState;
     private boolean mHaveDebugSettings;
     private boolean mDontPokeProperties;
-	
+
     private CheckBoxPreference mAdbNotify;
 
     private SwitchPreference mEnableAdb;
@@ -409,6 +409,16 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             pref.setEnabled(false);
             mDisabledPrefs.add(pref);
         }
+    }
+
+    private CheckBoxPreference findAndInitCheckboxPref(String key) {
+        CheckBoxPreference pref = (CheckBoxPreference) findPreference(key);
+        if (pref == null) {
+            throw new IllegalArgumentException("Cannot find preference with key = " + key);
+        }
+        mAllPrefs.add(pref);
+        mResetCbPrefs.add(pref);
+        return pref;
     }
 
     private SwitchPreference findAndInitSwitchPref(String key) {
