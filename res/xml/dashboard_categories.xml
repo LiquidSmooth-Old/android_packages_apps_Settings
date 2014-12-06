@@ -88,7 +88,7 @@
                 android:id="@+id/privacy_settings_liquidsmooth"
                 android:title="@string/privacy_settings_liquidsmooth_title"
                 android:fragment="com.android.settings.liquid.PrivacySettings"
-                android:icon="@drawable/ic_settings_privacy_teal"
+                android:icon="@drawable/ic_settings_privacy"
                 />
 
         <!-- Hardware Keys -->
