@@ -261,7 +261,7 @@
                 android:id="@+id/superuser_settings"
                 android:title="@string/superuser"
                 android:fragment="com.koushikdutta.superuser.PolicyNativeFragment"
-                android:icon="@drawable/ic_action_permission_teal"
+                android:icon="@drawable/ic_action_permission"
                 />
 
         <!-- Development -->
