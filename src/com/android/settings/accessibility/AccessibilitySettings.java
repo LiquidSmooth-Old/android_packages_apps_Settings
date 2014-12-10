@@ -308,12 +308,10 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
         // Large text.
         mToggleLargeTextPreference =
                 (SwitchPreference) findPreference(TOGGLE_LARGE_TEXT_PREFERENCE);
-        mToggleLargeTextPreference.setOnPreferenceChangeListener(this);
 
         // Text contrast.
         mToggleHighTextContrastPreference =
                 (SwitchPreference) findPreference(TOGGLE_HIGH_TEXT_CONTRAST_PREFERENCE);
-        mToggleHighTextContrastPreference.setOnPreferenceChangeListener(this);
 
         // Display inversion.
         mToggleInversionPreference = (SwitchPreference) findPreference(TOGGLE_INVERSION_PREFERENCE);
@@ -322,7 +320,6 @@ public class AccessibilitySettings extends SettingsPreferenceFragment implements
         // Speak passwords.
         mToggleSpeakPasswordPreference =
                 (SwitchPreference) findPreference(TOGGLE_SPEAK_PASSWORD_PREFERENCE);
-        mToggleSpeakPasswordPreference.setOnPreferenceChangeListener(this);
 
         // Long press timeout.
         mSelectLongPressTimeoutPreference =
