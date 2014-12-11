@@ -298,6 +298,8 @@
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_style_title">Style</string>
     <string name="status_bar_general_title">General</string>
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 
     <!--- Advanced Settings -->
     <string name="advanced_settings">Advanced settings</string>
@@ -869,5 +871,9 @@
     <string name="lock_numpad_random_off">Disabled</string>
     <string name="lock_numpad_random_always">Always</string>
     <string name="lock_numpad_random_on_request">On request</string>
+
+    <!-- tap-to-sleep -->
+    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap status bar or lock screen slider to put the device to sleep</string>
 
 </resources>
