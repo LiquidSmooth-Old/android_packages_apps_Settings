@@ -298,6 +298,8 @@
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_style_title">Style</string>
     <string name="status_bar_general_title">General</string>
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 
     <!--- Advanced Settings -->
     <string name="advanced_settings">Advanced settings</string>
