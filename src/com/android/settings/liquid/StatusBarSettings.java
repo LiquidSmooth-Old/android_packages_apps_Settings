@@ -19,7 +19,7 @@ import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.util.liquid.DeviceUtils;
+import com.android.internal.util.slim.DeviceUtils;
 import com.android.settings.Utils;
 
 public class StatusBarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
