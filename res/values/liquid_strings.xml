@@ -303,12 +303,9 @@
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 
-    <!--- Advanced Settings -->
-    <string name="advanced_settings">Advanced settings</string>
-    <string name="advanced_settings_summary">Enable more settings options</string>
-
     <!--- Tap To Wake -->
     <string name="double_tap_to_wake_title">Double-tap to wake</string>
+    <string name="double_tap_wake_summary">Wake screen by double-tapping on it</string>
 
     <!-- Keyguard Notification Settings -->
     <string name="app_notification_show_on_keyguard_title">Show on lockscreen</string>
