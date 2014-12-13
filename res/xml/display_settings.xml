@@ -78,6 +78,22 @@
                 android:summary="@string/gamma_tuning_summary_head"
                 android:persistent="false" />
 
+            <SwitchPreference
+                android:key="double_tap_wake_gesture"
+                android:title="@string/double_tap_to_wake_title"
+                android:summary="@string/double_tap_wake_summary"
+                android:defaultValue="true" />
+
+        <!-- DeviceHandler device specific screen off gesture settings -->
+        <Preference
+                android:key="screen_off_gesture_settings"
+                android:title="@string/screen_off_gesture_settings_title">
+                <intent
+                    android:action="com.slim.action.LAUNCH_SCREEN_OFF_GESTURE_SETTINGS"
+                    android:targetPackage="com.slim.device"
+                    android:targetClass="com.slim.device.settings.ScreenOffGestureSettings" />
+        </Preference>
+
         </PreferenceCategory>
 
         <PreferenceCategory
@@ -145,25 +161,6 @@
                 android:title="@string/wifi_display_settings_title"
                 settings:keywords="@string/keywords_display_cast_screen"
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
-
-            <PreferenceScreen
-                android:key="advanced_display_prefs"
-                android:title="@string/advanced_settings">
-
-                <SwitchPreference
-                    android:key="double_tap_wake_gesture"
-                    android:title="@string/double_tap_to_wake_title" />
-            </PreferenceScreen>
-
-        <!-- DeviceHandler device specific screen off gesture settings -->
-        <Preference
-                android:key="screen_off_gesture_settings"
-                android:title="@string/screen_off_gesture_settings_title">
-                <intent
-                    android:action="com.slim.action.LAUNCH_SCREEN_OFF_GESTURE_SETTINGS"
-                    android:targetPackage="com.slim.device"
-                    android:targetClass="com.slim.device.settings.ScreenOffGestureSettings" />
-        </Preference>
 
         </PreferenceCategory>
 
