@@ -2112,6 +2112,9 @@
 
         <activity android:name=".liquid.MainSettings" />
 
+        <activity android:name=".liquid.gestureanywhere.GestureAnywhereBuilderActivity" />
+        <activity android:name=".liquid.gestureanywhere.GestureAnywhereCreateGestureActivity" />
+
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"
