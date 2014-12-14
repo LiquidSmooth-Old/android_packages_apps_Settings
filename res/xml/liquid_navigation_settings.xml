@@ -19,6 +19,12 @@
     android:title="@string/navigation_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- Gesture anywhere -->
+    <PreferenceScreen
+    	android:key="gesture_anywhere"
+    	android:fragment="com.android.settings.liquid.gestureanywhere.GestureAnywhereSettings"
+	    android:title="@string/gesture_anywhere_title" />
+
     <ListPreference
         android:key="navigation_bar_height"
         android:dialogTitle="@string/navigation_bar_height"
