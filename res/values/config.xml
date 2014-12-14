@@ -24,7 +24,7 @@
 
     <!-- Home button Wake Support. Some devices do not support this.
          Setting to false will disable Home button Wake support -->
-    <bool name="config_show_homeWake">true</bool>
+    <bool name="config_show_homeWake">false</bool>
 
     <!-- TODO: This is purely enforced by the interface, and does not affect what
          strings may be inserted into the actual content provider.
