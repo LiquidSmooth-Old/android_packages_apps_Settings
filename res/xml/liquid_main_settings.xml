@@ -27,7 +27,7 @@
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"
-            android:targetPackage="com.vipercn.viper4android_v2" /> 
+            android:targetPackage="com.vipercn.viper4android_v2" />
     </Preference>
 
     <!-- Interface -->
@@ -35,35 +35,35 @@
         android:id="@+id/interface_settings"
         android:title="@string/interface_settings_title"
         android:fragment="com.android.settings.liquid.InterfaceSettings"
-        android:icon="@drawable/ic_liquid_interface_teal" /> 
+        android:icon="@drawable/ic_liquid_interface_teal" />
 
-    <!-- Lock screen
+    <!-- Lock screen -->
     <PreferenceScreen
         android:id="@+id/lockscreen_settings"
         android:title="@string/lockscreen_settings_title"
         android:fragment="com.android.settings.liquid.LockscreenSettings"
-        android:icon="@drawable/ic_liquid_lockscreen" /> -->
+        android:icon="@drawable/ic_liquid_lockscreen_teal" />
 
-    <!-- Navigation
+    <!-- Navigation -->
     <PreferenceScreen
         android:id="@+id/navigation_settings"
         android:title="@string/navigation_settings_title"
         android:fragment="com.android.settings.liquid.NavigationSettings"
-        android:icon="@drawable/ic_liquid_navigation" /> -->
+        android:icon="@drawable/ic_liquid_navigation" />
 
-    <!-- Notifications
+    <!-- Notifications -->
     <PreferenceScreen
-        android:id="@+id/notification_settings"
-        android:icon="@drawable/ic_settings_notifications"
+        android:id="@+id/liquid_notification_settings"
         android:title="@string/notification_settings_title"
-        android:fragment="com.android.settings.liquid.NotificationSettings" /> -->
+        android:fragment="com.android.settings.liquid.LiquidnotificationSettings" 
+        android:icon="@drawable/ic_liquid_notifications_teal" />
 
     <!-- Status bar -->
     <PreferenceScreen
         android:id="@+id/statusbar_settings"
         android:title="@string/statusbar_settings_title"
         android:fragment="com.android.settings.liquid.StatusBarSettings"
-        android:icon="@drawable/ic_liquid_statusbar" /> 
+        android:icon="@drawable/ic_liquid_statusbar" />
 
     <!-- Kernel Tweaker
     <Preference
@@ -79,8 +79,8 @@
     <!-- Advanced options -->
     <PreferenceScreen
         android:id="@+id/advanced_options_settings"
+        android:title="@string/advanced_category_title"
         android:fragment="com.android.settings.liquid.AdvancedSettings"
-        android:icon="@drawable/ic_settings_advanced_teal"
-        android:title="@string/advanced_category_title" />
+        android:icon="@drawable/ic_settings_advanced_teal" />
 
 </PreferenceScreen>
