@@ -26,6 +26,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -41,6 +42,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
+import android.widget.SeekBar;
+import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.notification.*;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -54,6 +57,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class LiquidnotificationSettings extends SettingsPreferenceFragment {
+    private static final String TAG = "LiquidNotificationSettings";
 
     private static final String KEY_NOTIFICATION = "notification";
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
@@ -88,57 +92,57 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
 
         addPreferencesFromResource(R.xml.liquid_notifications_settings);
 
-        final PreferenceCategory notification = (PreferenceCategory)		
-	                findPreference(KEY_NOTIFICATION);		
-	        initPulse(notification);		
-	        initLockscreenNotifications(notification);		
+        final PreferenceCategory notification = (PreferenceCategory)
+                    findPreference(KEY_NOTIFICATION);
+            initPulse(notification);
+            initLockscreenNotifications(notification);
 
-	        mNotificationAccess = findPreference(KEY_NOTIFICATION_ACCESS);		
-	        refreshNotificationListeners();		
-	
-	        Resources systemUiResources;		
-	        try {		
-	            systemUiResources =		
-	                    getPackageManager().getResourcesForApplication("com.android.systemui");		
-	        } catch (Exception e) {		
-	            return;		
-	        }		
-			
-	        mHeadsUpSnoozeTime = (ListPreference) findPreference(PREF_HEADS_UP_SNOOZE_TIME);		
-	        mHeadsUpSnoozeTime.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {		
-	            @Override		
-	            public boolean onPreferenceChange(Preference preference, Object newValue) {		
-	                int headsUpSnoozeTime = Integer.valueOf((String) newValue);		
-	                updateHeadsUpSnoozeTimeSummary(headsUpSnoozeTime);		
-	                return Settings.System.putInt(getContentResolver(),		
-	                        Settings.System.HEADS_UP_SNOOZE_TIME,		
-	                        headsUpSnoozeTime);		
-	            }		
-	        });		
-	        final int defaultSnoozeTime = systemUiResources.getInteger(systemUiResources.getIdentifier(		
-                        "com.android.systemui:integer/heads_up_snooze_time", null, null));		
-            final int headsUpSnoozeTime = Settings.System.getInt(getContentResolver(),		
-                    Settings.System.HEADS_UP_SNOOZE_TIME, defaultSnoozeTime);		
-    	        mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnoozeTime));		
-            updateHeadsUpSnoozeTimeSummary(headsUpSnoozeTime);		
+            mNotificationAccess = findPreference(KEY_NOTIFICATION_ACCESS);
+            refreshNotificationListeners();
 
-            mHeadsUpTimeOut = (ListPreference) findPreference(PREF_HEADS_UP_TIME_OUT);		
-            mHeadsUpTimeOut.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {		
-                @Override		
-                public boolean onPreferenceChange(Preference preference, Object newValue) {		
-                    int headsUpTimeOut = Integer.valueOf((String) newValue);		
-                    updateHeadsUpTimeOutSummary(headsUpTimeOut);		
-                    return Settings.System.putInt(getContentResolver(),		
-                            Settings.System.HEADS_UP_NOTIFCATION_DECAY,		
-                            headsUpTimeOut);		
-                }		
-            });		
-            final int defaultTimeOut = systemUiResources.getInteger(systemUiResources.getIdentifier(		
-                        "com.android.systemui:integer/heads_up_notification_decay", null, null));		
-            final int headsUpTimeOut = Settings.System.getInt(getContentResolver(),		
-                    Settings.System.HEADS_UP_NOTIFCATION_DECAY, defaultTimeOut);		
-            mHeadsUpTimeOut.setValue(String.valueOf(headsUpTimeOut));		
-            updateHeadsUpTimeOutSummary(headsUpTimeOut);		
+            Resources systemUiResources;
+            try {
+                systemUiResources =
+                        getPackageManager().getResourcesForApplication("com.android.systemui");
+            } catch (Exception e) {
+                return;
+            }
+
+            mHeadsUpSnoozeTime = (ListPreference) findPreference(PREF_HEADS_UP_SNOOZE_TIME);
+            mHeadsUpSnoozeTime.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    int headsUpSnoozeTime = Integer.valueOf((String) newValue);
+                    updateHeadsUpSnoozeTimeSummary(headsUpSnoozeTime);
+                    return Settings.System.putInt(getContentResolver(),
+                            Settings.System.HEADS_UP_SNOOZE_TIME,
+                            headsUpSnoozeTime);
+                }
+            });
+            final int defaultSnoozeTime = systemUiResources.getInteger(systemUiResources.getIdentifier(
+                        "com.android.systemui:integer/heads_up_snooze_time", null, null));
+            final int headsUpSnoozeTime = Settings.System.getInt(getContentResolver(),
+                    Settings.System.HEADS_UP_SNOOZE_TIME, defaultSnoozeTime);
+                mHeadsUpSnoozeTime.setValue(String.valueOf(headsUpSnoozeTime));
+            updateHeadsUpSnoozeTimeSummary(headsUpSnoozeTime);
+
+            mHeadsUpTimeOut = (ListPreference) findPreference(PREF_HEADS_UP_TIME_OUT);
+            mHeadsUpTimeOut.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    int headsUpTimeOut = Integer.valueOf((String) newValue);
+                    updateHeadsUpTimeOutSummary(headsUpTimeOut);
+                    return Settings.System.putInt(getContentResolver(),
+                            Settings.System.HEADS_UP_NOTIFCATION_DECAY,
+                            headsUpTimeOut);
+                }
+            });
+            final int defaultTimeOut = systemUiResources.getInteger(systemUiResources.getIdentifier(
+                        "com.android.systemui:integer/heads_up_notification_decay", null, null));
+            final int headsUpTimeOut = Settings.System.getInt(getContentResolver(),
+                    Settings.System.HEADS_UP_NOTIFCATION_DECAY, defaultTimeOut);
+            mHeadsUpTimeOut.setValue(String.valueOf(headsUpTimeOut));
+            updateHeadsUpTimeOutSummary(headsUpTimeOut);
 
     }
 
@@ -171,6 +175,7 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
         } else {
             mHeadsUpTimeOut.setSummary(summary);
         }
+    }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
 
@@ -182,30 +187,30 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
  		return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
-    // === Pulse notification light === 		
-			
-    private void initPulse(PreferenceCategory parent) {		
-        if (!getResources().getBoolean(		
-                com.android.internal.R.bool.config_intrusiveNotificationLed)) {		
-            parent.removePreference(parent.findPreference(KEY_NOTIFICATION_LIGHT));		
-        }		
-        if (!getResources().getBoolean(		
-                com.android.internal.R.bool.config_intrusiveBatteryLed)		
-                || UserHandle.myUserId() != UserHandle.USER_OWNER) {		
-            parent.removePreference(parent.findPreference(KEY_BATTERY_LIGHT));		
-        }		
-    }		
-	
-    private void updatePulse() {		
-        if (mNotificationPulse == null) {		
-            return;		
-        }		
-        try {		
-            mNotificationPulse.setChecked(Settings.System.getInt(getContentResolver(),		
-                    Settings.System.NOTIFICATION_LIGHT_PULSE) == 1);		
-        } catch (Settings.SettingNotFoundException snfe) {		
-            Log.e(TAG, Settings.System.NOTIFICATION_LIGHT_PULSE + " not found");		
-        }		
+    // === Pulse notification light ===
+
+    private void initPulse(PreferenceCategory parent) {
+        if (!getResources().getBoolean(
+                com.android.internal.R.bool.config_intrusiveNotificationLed)) {
+            parent.removePreference(parent.findPreference(KEY_NOTIFICATION_LIGHT));
+        }
+        if (!getResources().getBoolean(
+                com.android.internal.R.bool.config_intrusiveBatteryLed)
+                || UserHandle.myUserId() != UserHandle.USER_OWNER) {
+            parent.removePreference(parent.findPreference(KEY_BATTERY_LIGHT));
+        }
+    }
+
+    private void updatePulse() {
+        if (mNotificationPulse == null) {
+            return;
+        }
+        try {
+            mNotificationPulse.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.NOTIFICATION_LIGHT_PULSE) == 1);
+        } catch (Settings.SettingNotFoundException snfe) {
+            Log.e(TAG, Settings.System.NOTIFICATION_LIGHT_PULSE + " not found");
+        }
     }
 
     // === Lockscreen (public / private) notifications ===
@@ -291,7 +296,7 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
     // === Callbacks ===
 
     private final class SettingsObserver extends ContentObserver {
-        private final Uri NOTIFICATION_LIGHT_PULSE_URI =		
+        private final Uri NOTIFICATION_LIGHT_PULSE_URI =
                 Settings.System.getUriFor(Settings.System.NOTIFICATION_LIGHT_PULSE);
         private final Uri LOCK_SCREEN_PRIVATE_URI =
                 Settings.Secure.getUriFor(Settings.Secure.LOCK_SCREEN_ALLOW_PRIVATE_NOTIFICATIONS);
@@ -316,8 +321,8 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
         @Override
         public void onChange(boolean selfChange, Uri uri) {
             super.onChange(selfChange, uri);
-            if (NOTIFICATION_LIGHT_PULSE_URI.equals(uri)) {		
-                updatePulse();		
+            if (NOTIFICATION_LIGHT_PULSE_URI.equals(uri)) {
+                updatePulse();
             }
             if (LOCK_SCREEN_PRIVATE_URI.equals(uri) || LOCK_SCREEN_SHOW_URI.equals(uri)) {
                 updateLockscreenNotifications();
@@ -337,5 +342,4 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
             return Arrays.asList(sir);
         }
     };
-}
 }
