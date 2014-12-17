@@ -49,7 +49,7 @@
         android:id="@+id/navigation_settings"
         android:title="@string/navigation_settings_title"
         android:fragment="com.android.settings.liquid.NavigationSettings"
-        android:icon="@drawable/ic_liquid_navigation" />
+        android:icon="@drawable/ic_liquid_navigation_teal" />
 
     <!-- Notifications -->
     <PreferenceScreen
@@ -81,6 +81,6 @@
         android:id="@+id/advanced_options_settings"
         android:title="@string/advanced_category_title"
         android:fragment="com.android.settings.liquid.AdvancedSettings"
-        android:icon="@drawable/ic_settings_advanced_teal" />
+        android:icon="@drawable/ic_liquid_advanced_teal" />
 
 </PreferenceScreen>
