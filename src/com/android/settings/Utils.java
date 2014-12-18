@@ -611,7 +611,9 @@ public final class Utils {
 
     /* returns whether the device has volume rocker or not. */
     public static boolean hasVolumeRocker(Context context) {
-        return context.getResources().getBoolean(R.bool.has_volume_rocker);
+        final int deviceKeys = context.getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        return (deviceKeys & ButtonSettings.KEY_MASK_VOLUME) != 0;
     }
 
     public static boolean isPackageInstalled(Context context, String pkg, boolean ignoreState) {
@@ -631,6 +633,7 @@ public final class Utils {
 
     public static boolean isPackageInstalled(Context context, String pkg) {
         return isPackageInstalled(context, pkg, true);
+
     }
 
     /**

@@ -19,6 +19,7 @@
     <string name="button_pref_title">Buttons</string>
     <string name="hardware_keys_power_key_title">Power button</string>
     <string name="hardware_keys_home_key_title">Home button</string>
+    <string name="hardware_keys_back_key_title">Back button</string>
     <string name="hardware_keys_menu_key_title">Menu button</string>
     <string name="hardware_keys_appswitch_key_title">Recents button</string>
     <string name="hardware_keys_volume_keys_title">Volume buttons</string>
@@ -40,12 +41,9 @@
     <string name="volbtn_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
     <string name="power_end_call_title">End call</string>
     <string name="power_end_call_summary">Pressing the power button will end the current call</string>
-    <string name="button_wake_title">Wake up</string>
-    <string name="home_wake_summary">Pressing the home button will wake your device</string>
+    <string name="button_wake_title">Wake up device</string>
     <string name="home_answer_call_title">Answer call</string>
     <string name="home_answer_call_summary">Pressing the home button will answer the current incoming call</string>
-    <string name="volbtn_wake_device_title">Wake up device</string>
-    <string name="volbtn_wake_device_summary">Pressing either volume button will wake your device</string>
 
     <string name="settings_reset_button">Reset</string>
 
@@ -166,5 +164,9 @@
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">Selector notification</string>
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
+
+     <!-- Music control -->
+    <string name="volbtn_music_controls_title">Playback control</string>
+    <string name="volbtn_music_controls_summary">When the screen is off, long pressing the volume keys will seek music tracks</string>
 
 </resources>
