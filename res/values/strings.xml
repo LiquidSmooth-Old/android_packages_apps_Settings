@@ -5609,7 +5609,7 @@
     <!-- Sounds and Notification -->
 
     <!-- Sound & notification: Settings header. [CHAR LIMIT=30] -->
-    <string name="notification_settings">Sound &amp; notification</string>
+    <string name="notification_settings">Sounds</string>
 
     <!-- Sound & notification > Sound section: Title for the option managing media volume. [CHAR LIMIT=30] -->
     <string name="media_volume_option_title">Media volume</string>
