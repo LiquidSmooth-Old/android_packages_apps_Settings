@@ -24,4 +24,10 @@
     	android:key="gesture_anywhere"
     	android:fragment="com.android.settings.liquid.gestureanywhere.GestureAnywhereSettings"
 	    android:title="@string/gesture_anywhere_title" />
+
+    <!-- Circle app bar -->
+    <PreferenceScreen
+        android:key="app_circle_bar"
+        android:fragment="com.android.settings.liquid.AppCircleBar"
+        android:title="@string/app_circle_bar_title"/>
 </PreferenceScreen>
