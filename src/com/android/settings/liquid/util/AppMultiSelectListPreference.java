@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.settings.util;
+package com.android.settings.liquid.util;
 
 import android.app.AlertDialog;
 import android.content.Context;
