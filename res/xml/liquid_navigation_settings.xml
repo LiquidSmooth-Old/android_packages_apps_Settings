@@ -25,6 +25,12 @@
     	android:fragment="com.android.settings.liquid.gestureanywhere.GestureAnywhereSettings"
 	    android:title="@string/gesture_anywhere_title" />
 
+    <!-- Circle app bar -->
+    <PreferenceScreen
+        android:key="app_circle_bar"
+        android:fragment="com.android.settings.liquid.AppCircleBar"
+        android:title="@string/app_circle_bar_title"/>
+
     <ListPreference
         android:key="navigation_bar_height"
         android:dialogTitle="@string/navigation_bar_height"
