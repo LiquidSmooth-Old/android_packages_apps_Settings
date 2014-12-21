@@ -25,6 +25,12 @@
         android:fragment="com.android.settings.aicp.AppSidebar"
         android:title="@string/app_sidebar_title"/>
 
+    <!-- Circle app bar -->
+    <PreferenceScreen
+        android:key="app_circle_bar"
+        android:fragment="com.android.settings.aicp.AppCircleBar"
+        android:title="@string/app_circle_bar_title"/>
+
      <!-- Gesture anywhere -->
      <PreferenceScreen
          android:key="gesture_anywhere"
