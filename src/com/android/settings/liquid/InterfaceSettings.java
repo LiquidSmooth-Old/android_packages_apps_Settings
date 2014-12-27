@@ -41,7 +41,6 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-
         return false;
     }
 
