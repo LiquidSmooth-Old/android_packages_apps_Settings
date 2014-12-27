@@ -38,6 +38,23 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.liquid_interface_settings);
+
+        // Remove the lock clock preference if its not installed
+        if (!isPackageInstalled("com.cyanogenmod.lockclock")) {
+            removePreference(KEY_LOCK_CLOCK);
+        }
+    }
+
+    private boolean isPackageInstalled(String packageName) {
+        PackageManager pm = getPackageManager();
+        boolean installed = false;
+        try {
+           pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+           installed = true;
+        } catch (PackageManager.NameNotFoundException e) {
+           installed = false;
+        }
+        return installed;
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
