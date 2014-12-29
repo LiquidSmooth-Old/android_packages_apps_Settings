@@ -26,6 +26,12 @@
         android:fragment="com.android.settings.liquid.Density"
         android:icon="@drawable/ic_dt_density_teal" />
 
+    <PreferenceScreen
+        android:key="aokp_animation"
+        android:title="@string/aokp_animation_title"
+        android:summary="@string/aokp_animation_summary"
+        android:fragment="com.android.settings.liquid.AnimationControls" />
+
     <com.android.settings.liquid.SystemSettingSwitchPreference
         android:key="recents_show_hide_search_bar"
         android:title="@string/recents_show_searchbar"
