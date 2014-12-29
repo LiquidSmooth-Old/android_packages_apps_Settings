@@ -26,5 +26,4 @@
             android:title="@string/hfm_update_hosts"
             android:summary="@string/hfm_update_hosts_summary"
             android:dependency="hfm_disable_ads" />
-
 </PreferenceScreen>
