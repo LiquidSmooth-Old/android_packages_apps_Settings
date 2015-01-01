@@ -35,7 +35,7 @@
         android:id="@+id/interface_settings"
         android:title="@string/interface_settings_title"
         android:fragment="com.android.settings.liquid.InterfaceSettings"
-        android:icon="@drawable/ic_liquid_interface_teal" />
+        android:icon="@drawable/ic_liquid_interface" />
 
     <!-- Lock screen 
     <PreferenceScreen
@@ -56,7 +56,7 @@
         android:id="@+id/liquid_notification_settings"
         android:title="@string/notification_settings_title"
         android:fragment="com.android.settings.liquid.LiquidnotificationSettings" 
-        android:icon="@drawable/ic_liquid_notifications_teal" />
+        android:icon="@drawable/ic_liquid_notifications" />
 
     <!-- Status bar -->
     <PreferenceScreen
@@ -81,6 +81,6 @@
         android:id="@+id/advanced_options_settings"
         android:title="@string/advanced_category_title"
         android:fragment="com.android.settings.liquid.AdvancedSettings"
-        android:icon="@drawable/ic_liquid_advanced_teal" />
+        android:icon="@drawable/ic_settings_advanced" />
 
 </PreferenceScreen>

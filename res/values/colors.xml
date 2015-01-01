@@ -15,22 +15,22 @@
 -->
 
 <resources>
-    <color name="black">#000</color>
-    <color name="red">#F00</color>
+    <color name="black">#ff000000</color>
+    <color name="red">#ff000000</color>
 
-    <color name="material_empty_color_light">#FFCED7DB</color>
-    <color name="actionbar_icon_color">#ffffff</color>
+    <color name="material_empty_color_light">#ff546e7a</color>
+    <color name="actionbar_icon_color">#ffffffff</color>
 
-    <color name="memory_used">#F00</color>
-    <color name="memory_avail">@color/material_empty_color_light</color>
-    <color name="memory_apps_usage">#77831A</color>
-    <color name="memory_downloads">#476093</color>
-    <color name="memory_dcim">#793A7F</color>
-    <color name="memory_music">#8E562A</color>
-    <color name="memory_cache">#479392</color>
-    <color name="memory_misc">#7C3030</color>
-    <color name="memory_user_light">#479392</color>
-    <color name="memory_user_dark">#316665</color>
+    <color name="memory_used">#FF000000</color>
+    <color name="memory_avail">#ffced7db</color>
+    <color name="memory_apps_usage">#FF77831A</color>
+    <color name="memory_downloads">#FF476093</color>
+    <color name="memory_dcim">#FF793A7F</color>
+    <color name="memory_music">#FF8E562A</color>
+    <color name="memory_cache">#FF479392</color>
+    <color name="memory_misc">#FF7C3030</color>
+    <color name="memory_user_light">#FF479392</color>
+    <color name="memory_user_dark">#FF316665</color>
 
     <color name="crypt_keeper_clock_background">#ff9a9a9a</color>
     <color name="crypt_keeper_clock_foreground">#ff666666</color>
@@ -41,12 +41,16 @@
     <color name="title_color">@android:color/holo_blue_light</color>
     <color name="setup_divider_color_dark">#33ffffff</color>
     <color name="setup_divider_color_light">#33000000</color>
-    <color name="setup_wizard_color_accent_dark">#ff00e4ff</color>
-    <color name="setup_wizard_color_accent_light">#ff00828e</color>
-    <color name="setup_wizard_wifi_color_dark">#ff00e4ff</color>
-    <color name="setup_wizard_wifi_color_light">#ff0096a6</color>
+    <color name="setup_wizard_color_accent_dark">#ff90a4ae</color>
+    <color name="setup_wizard_color_accent_light">#ff607d8b</color>
+    <color name="setup_wizard_wifi_color_dark">#ff455a64</color>
+    <color name="setup_wizard_wifi_color_light">#ff78909c</color>
+    <color name="setup_wizard_navbar_bg_dark">#ff21272b</color>
+    <color name="setup_wizard_navbar_bg_light">#ffe4e7e9</color>
+    <color name="setup_wizard_navbar_text_dark">#deffffff</color>
+    <color name="setup_wizard_navbar_text_light">#de000000</color>
 
-    <color name="wifi_assistant_color_accent">#ff009587</color>
+    <color name="wifi_assistant_color_accent">#ff78909c</color>
 
     <color name="circle_avatar_frame_color">#ffffffff</color>
     <color name="circle_avatar_frame_shadow_color">#80000000</color>
@@ -66,18 +70,29 @@
     <color name="running_processes_free_ram">#ffced7db</color>
 
     <!-- Palette colors referenced by top-level themes. -->
-    <color name="theme_primary">#ff263238</color>
-    <color name="theme_primary_dark">#ff21272b</color>
-    <color name="theme_accent">#ff009688</color>
+    <color name="theme_primary">#ff455a64</color>
+    <color name="theme_primary_dark">#ff455a64</color>
+    <color name="theme_accent">#ff78909c</color>
 
-    <color name="dashboard_background_color">#ffe1e1e0</color>
-    <color name="switchbar_background_color">#ff37474f</color>
-    <color name="switch_accent_color">#ff7fcac3</color>
+    <color name="dashboard_background_color">#ff151b1e</color>
+    <color name="switchbar_background_color">#ff263238</color>
+    <color name="switch_accent_color">#ffb0bec5</color>
 
     <color name="wifi_divider">#ffe0e0e0</color>
 
     <!-- DSLV colors -->
-    <color name="dslv_icon_dark">#ff009688</color>
-    <color name="dslv_float_cackground_color">#ffe1e1e0</color>
+    <color name="dslv_icon_dark">#ff78909c</color>
+    <color name="dslv_float_cackground_color">#ff1f1f1f</color>
+
+	<!-- Dark UI Specifics -->
+    <color name="background_dark">#ff1f1f1f</color>
+    <color name="holo_blue_light">#ff78909c</color>
+    <color name="holo_blue_dark">#ff78909c</color>
+    <color name="holo_blue_bright">#ff78909c</color>
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="holo_red_dark">#ffcc0000</color>
+    <color name="list_separator">#00000000</color>
+    <color name="floating_action_button_touch_tint">#80ffffff</color>
+    <color name="ga_gesture_color">@*android:color/holo_blue_light</color>
 
 </resources>
