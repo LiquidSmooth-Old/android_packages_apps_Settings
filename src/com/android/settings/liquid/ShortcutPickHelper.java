@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.cyanogenmod;
+package com.android.settings.liquid;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.android.settings.R;
-import com.android.settings.cyanogenmod.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
+import com.android.settings.liquid.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
 
 public class ShortcutPickHelper {
 
@@ -321,4 +321,8 @@ public class ShortcutPickHelper {
 
         return uri;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 83cc293... add Voice Wakeup switch
