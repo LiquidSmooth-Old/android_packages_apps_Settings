@@ -125,7 +125,6 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         initRingtones(sound);
         initVibrateWhenRinging(sound);
         initIncreasingRing(sound);
-    }
 
     @Override
     public void onResume() {
