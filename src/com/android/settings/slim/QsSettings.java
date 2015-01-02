@@ -33,6 +33,7 @@ import android.view.View;
 
 import com.android.internal.widget.LockPatternUtils;
 
+import com.android.settings.slim.qs.QSTiles;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 
@@ -46,6 +47,7 @@ public class QsSettings extends SettingsPreferenceFragment
     private static final String PREF_QUICK_PULLDOWN = "quick_pulldown";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
     private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
+    private Preference mQSTiles;
 
     ListPreference mQuickPulldown;
     ListPreference mSmartPulldown;
@@ -57,6 +59,7 @@ public class QsSettings extends SettingsPreferenceFragment
         // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.qs_settings);
 
+        mQSTiles = findPreference("qs_order");
         PreferenceScreen prefs = getPreferenceScreen();
 
         mQuickPulldown = (ListPreference) findPreference(PREF_QUICK_PULLDOWN);
@@ -91,6 +94,9 @@ public class QsSettings extends SettingsPreferenceFragment
     @Override
     public void onResume() {
         super.onResume();
+        int qsTileCount = QSTiles.determineTileCount(getActivity());
+        mQSTiles.setSummary(getResources().getQuantityString(R.plurals.qs_tiles_summary,
+                    qsTileCount, qsTileCount));
     }
 
     @Override
