@@ -19,17 +19,23 @@
     android:title="@string/navigation_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <!-- Gesture anywhere -->
-    <PreferenceScreen
-    	android:key="gesture_anywhere"
-    	android:fragment="com.android.settings.liquid.gestureanywhere.GestureAnywhereSettings"
-	    android:title="@string/gesture_anywhere_title" />
-
-    <!-- Circle app bar -->
+    <!-- App circle bar -->
     <PreferenceScreen
         android:key="app_circle_bar"
         android:fragment="com.android.settings.liquid.AppCircleBar"
-        android:title="@string/app_circle_bar_title"/>
+        android:title="@string/app_circle_bar_title" />
+
+    <!-- Gesture anywhere -->
+    <PreferenceScreen
+        android:key="gesture_anywhere"
+        android:fragment="com.android.settings.liquid.gestureanywhere.GestureAnywhereSettings"
+        android:title="@string/gesture_anywhere_title" />
+
+    <!-- Pie control -->
+    <PreferenceScreen
+        android:key="pie_settings"
+        android:fragment="com.android.settings.liquid.PieControl"
+        android:title="@string/pie_control_title" />
 
     <ListPreference
         android:key="navigation_bar_height"
