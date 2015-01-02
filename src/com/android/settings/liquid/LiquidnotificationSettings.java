@@ -47,6 +47,7 @@ import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.notification.*;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.liquid.qs.QSTiles;
 import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
@@ -77,12 +78,13 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
     private TwoStatePreference mNotificationPulse;
     private DropDownPreference mLockscreen;
     private Preference mNotificationAccess;
+	private Preference mQSTiles;
     private boolean mSecure;
     private int mLockscreenSelectedValue;
 
     private ListPreference mHeadsUpSnoozeTime;
     private ListPreference mHeadsUpTimeOut;
-
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,6 +93,8 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
         mSecure = new LockPatternUtils(getActivity()).isSecure();
 
         addPreferencesFromResource(R.xml.liquid_notifications_settings);
+
+        mQSTiles = findPreference("qs_order");
 
         final PreferenceCategory notification = (PreferenceCategory)
                     findPreference(KEY_NOTIFICATION);
@@ -151,6 +155,9 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
         super.onResume();
         refreshNotificationListeners();
         mSettingsObserver.register(true);
+        int qsTileCount = QSTiles.determineTileCount(getActivity());
+        mQSTiles.setSummary(getResources().getQuantityString(R.plurals.qs_tiles_summary,
+                    qsTileCount, qsTileCount));
     }
 
     @Override
