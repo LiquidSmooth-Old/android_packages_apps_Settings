@@ -44,6 +44,7 @@ import android.view.View;
 
 import android.widget.SeekBar;
 import com.android.internal.widget.LockPatternUtils;
+import com.android.settings.liquid.qs.QSTiles;
 import com.android.settings.notification.*;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -82,6 +83,8 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
 
     private ListPreference mHeadsUpSnoozeTime;
     private ListPreference mHeadsUpTimeOut;
+
+    private Preference mQSTiles;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -144,6 +147,7 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
             mHeadsUpTimeOut.setValue(String.valueOf(headsUpTimeOut));
             updateHeadsUpTimeOutSummary(headsUpTimeOut);
 
+        mQSTiles = findPreference("qs_order");
     }
 
     @Override
@@ -151,6 +155,10 @@ public class LiquidnotificationSettings extends SettingsPreferenceFragment {
         super.onResume();
         refreshNotificationListeners();
         mSettingsObserver.register(true);
+
+        int qsTileCount = QSTiles.determineTileCount(getActivity());
+        mQSTiles.setSummary(getResources().getQuantityString(R.plurals.qs_tiles_summary,
+                    qsTileCount, qsTileCount));
     }
 
     @Override
