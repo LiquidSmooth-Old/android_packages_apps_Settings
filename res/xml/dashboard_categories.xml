@@ -28,6 +28,7 @@
                 android:title="@string/wifi_settings_title"
                 android:fragment="com.android.settings.wifi.WifiSettings"
                 android:icon="@drawable/ic_settings_wireless"
+                settings:switchClass="com.android.settings.wifi.WifiEnabler"
                 />
 
         <!-- Bluetooth -->
@@ -36,6 +37,7 @@
                 android:title="@string/bluetooth_settings_title"
                 android:fragment="com.android.settings.bluetooth.BluetoothSettings"
                 android:icon="@drawable/ic_settings_bluetooth2"
+                settings:switchClass="com.android.settings.bluetooth.BluetoothEnabler"
                 />
 
         <!-- SIM Cards -->
