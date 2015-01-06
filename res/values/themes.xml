@@ -91,7 +91,7 @@
     <style name="Theme.SettingsBase" parent="@android:style/Theme.Material" />
 
     <style name="Theme.Settings" parent="Theme.SettingsBase">
-        <item name="android:colorBackground">@*android:color/material_blue_grey</item>
+        <item name="android:colorBackground">@*android:color/black</item>
         <item name="@*android:preferenceHeaderPanelStyle">@style/PreferenceHeaderPanelSinglePane</item>
         <item name="@*android:preferencePanelStyle">@style/PreferencePanelSinglePane</item>
         <item name="@*android:preferenceListStyle">@style/PreferenceHeaderListSinglePane</item>
