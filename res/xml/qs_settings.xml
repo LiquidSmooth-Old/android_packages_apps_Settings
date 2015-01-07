@@ -23,9 +23,9 @@
         <PreferenceScreen
             android:key="qs_order"
             android:title="@string/qs_order_title"
-            android:fragment="com.android.settings.cyanogenmod.qs.QSTiles" />
+            android:fragment="com.android.settings.slim.qs.QSTiles" />
 
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        <com.android.settings.slim.SystemSettingSwitchPreference
             android:key="sysui_qs_main_tiles"
             android:title="@string/qs_main_tiles_title"
             android:summaryOn="@string/qs_main_tiles_summary_on"
@@ -53,6 +53,12 @@
             android:title="@string/block_on_secure_keyguard_title"
             android:summary="@string/block_on_secure_keyguard_summary"
             android:persistent="false" />
+
+    <com.android.settings.slim.SystemSettingSwitchPreference
+        android:key="qs_location_advanced"
+        android:title="@string/qs_advanced_location_title"
+        android:summary="@string/qs_advanced_location_summary"
+        android:defaultValue="false" />
 
 </PreferenceScreen>
 
