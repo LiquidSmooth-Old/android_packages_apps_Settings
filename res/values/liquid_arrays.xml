@@ -16,19 +16,6 @@
 -->
 <resources>
 
-   <!--- Navigation bar height -->
-    <string-array name="navigation_bar_height_entries" translatable="false">
-        <item>@string/navigation_bar_height_48</item>
-        <item>@string/navigation_bar_height_44</item>
-        <item>@string/navigation_bar_height_40</item>
-        <item>@string/navigation_bar_height_36</item>
-        <item>@string/navigation_bar_height_32</item>
-        <item>@string/navigation_bar_height_28</item>
-        <item>@string/navigation_bar_height_24</item>
-        <item>@string/navigation_bar_height_20</item>
-        <item>@string/navigation_bar_height_0</item>
-    </string-array>
-
     <string-array name="navigation_bar_height_values" translatable="false">
         <item>48</item>
         <item>44</item>
@@ -1106,6 +1093,20 @@
         <item>5</item>
         <item>6</item>
         <item>7</item>
+    </string-array>
+
+    <string-array name="navbar_dialog_entries" translatable="false">
+        <item>@string/action_short</item>
+        <item>@string/action_long</item>
+        <item>@string/action_double</item>
+        <item>@string/action_icon</item>
+    </string-array>
+
+    <string-array name="navbar_dialog_values" translatable="false">
+        <item>**short**</item>
+        <item>**long**</item>
+        <item>**double**</item>
+        <item>**icon**</item>
     </string-array>
 
 </resources>

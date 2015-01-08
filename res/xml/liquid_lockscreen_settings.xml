@@ -1,3 +1,4 @@
+<<<<<<< HEAD:res/xml/liquid_lockscreen_settings.xml
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2014 The LiquidSmooth Project
 
@@ -20,3 +21,30 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
 </PreferenceScreen>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 The Fusion Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <!-- Gesture anywhere -->
+    <color name="ga_gesture_color">@android:color/black</color>
+
+    <color name="setting_separator">#ff484848</color>
+    <color name="extension_list_item_color">#ff999999</color>
+
+</resources>
+>>>>>>> bd5315f... Squash multiple Fusion goodies [2/2]:res/values/fusion_colors.xml
