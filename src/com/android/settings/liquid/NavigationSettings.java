@@ -16,14 +16,26 @@
 
 package com.android.settings.liquid;
 
+import android.app.AlertDialog;
+import android.content.ContentResolver;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.RemoteException;
+import android.os.SystemProperties;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
+import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.text.Spannable;
+import android.util.Log;
+import android.view.WindowManagerGlobal;
+import android.widget.Toast;
 import android.provider.Settings.SettingNotFoundException;
 
 import com.android.settings.R;
@@ -33,39 +45,70 @@ import com.android.settings.Utils;
 public class NavigationSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
+    private static final String TAG = "NavigationSettings";
 
-    private ListPreference mNavigationBarHeight;
+    private static final String CATEGORY_NAVBAR = "navigation_bar";
+    private static final String CATEGORY_NAV_BAR_ENABLE = "navigation_bar_enable";
+
+    private boolean mCheckPreferences;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.liquid_navigation_settings);
+        PreferenceScreen prefSet = getPreferenceScreen();
 
-        mNavigationBarHeight = (ListPreference) findPreference(KEY_NAVIGATION_BAR_HEIGHT);
-        mNavigationBarHeight.setOnPreferenceChangeListener(this);
-        int statusNavigationBarHeight = Settings.System.getInt(getActivity().getApplicationContext()
-                .getContentResolver(),
-                Settings.System.NAVIGATION_BAR_HEIGHT, 48);
-        mNavigationBarHeight.setValue(String.valueOf(statusNavigationBarHeight));
-        mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntry());
+        final boolean hasRealNavigationBar = getResources()
+                .getBoolean(com.android.internal.R.bool.config_showNavigationBar);
+        if (hasRealNavigationBar) { // only disable on devices with REAL navigation bars
+            final Preference pref = findPreference(CATEGORY_NAV_BAR_ENABLE);
+            if (pref != null) {
+                getPreferenceScreen().removePreference(pref);
+            }
+        // Attach final settings screen.
+        reloadSettings();
+        }
+
+        try {
+            boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar();
+
+            // Hide navigation bar category on devices without navigation bar
+            if (!hasNavBar) {
+                prefSet.removePreference(findPreference(CATEGORY_NAVBAR));
+            }
+        } catch (RemoteException e) {
+            Log.e(TAG, "Error getting navigation bar status");
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
 
-        if (preference == mNavigationBarHeight) {
-            int statusNavigationBarHeight = Integer.valueOf((String) objValue);
-            int index = mNavigationBarHeight.findIndexOfValue((String) objValue);
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.NAVIGATION_BAR_HEIGHT, statusNavigationBarHeight);
-            mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntries()[index]);
-        }
         return true;
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
  		return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
+
+    private PreferenceScreen reloadSettings() {
+        mCheckPreferences = false;
+        PreferenceScreen prefs = getPreferenceScreen();
+        if (prefs != null) {
+            prefs.removeAll();
+        }
+
+        // Load the preferences from an XML resource
+        addPreferencesFromResource(R.xml.liquid_navigation_settings);
+        prefs = getPreferenceScreen();
+
+        mCheckPreferences = true;
+        return prefs;
     }
 }
