@@ -520,15 +520,26 @@
     <string name="heads_up_touch_outside_summary_disabled">Do not hide notification after touch outside or on home button press</string>
 
     <!-- QuickSettings tiles -->
-    <string name="qs_screenshot_tile">Screenshot</string>
-    <string name="qs_sync_tile">Sync</string>
-    <string name="qs_battery_saver_tile">Battery saver</string>
-    <string name="qs_brightness_tile">Brightness</string>
-    <string name="qs_expanded_desktop_tile">Expanded desktop</string>
-    <string name="qs_notifications_tile">Notifications</string>
-    <string name="qs_screen_off_tile">Screen off</string>
-    <string name="qs_tile_reboot">Reboot</string>
-    <string name="qs_tile_usb_tether">USB tethering</string>
+    <string name="qs_tile_wifi">Wi\u2011Fi</string>
+    <string name="qs_tile_bluetooth">Bluetooth</string>
+    <string name="qs_tile_display_inversion">Color inversion</string>
+    <string name="qs_tile_cellular_data">Data connection</string>
+    <string name="qs_tile_airplane_mode">Airplane mode</string>
+    <string name="qs_tile_display_rotation">Rotation</string>
+    <string name="qs_tile_flashlight">Flashlight</string>
+    <string name="qs_tile_location">Location</string>
+    <string name="qs_tile_cast_screen">Cast screen</string>
+    <string name="qs_tile_hotspot">Hotspot</string>
+    <string name="qs_tile_adb_over_network">ADB over network</string>
+    <string name="qs_tile_profiles">System profiles</string>
+    <string name="qs_tile_performance">Performance</string>
+    <string name="qs_music_play_tile">Play</string>
+    <string name="qs_tile_nfc">NFC</string>
+    <string name="qs_tile_compass">Compass</string>
+    <string name="qs_tile_lockscreen">Lockscreen</string>
+    <string name="qs_tile_lte">LTE</string>
+    <string name="qs_tile_visualizer" translatable="false">AudioFX</string>
+    <string name="qs_tile_screen_timeout">Screen timeout</string>
 
     <!-- BitSyko Layers -->
     <string name="bitsyko_layers">Layers</string>
@@ -541,4 +552,9 @@
     <string name="usb_sdcard_title">Mount SD card</string>
     <string name="external_storage_turn_on">External storage has been turned on</string>
     <string name="external_storage_turn_off">External storage has been turned off</string>
+
+    <!-- Title of dialog asking user to confirm before enabling UMS. [CHAR LIMIT=48] -->
+    <string name="usb_settings_enable_ums_title">Enable mass storage?</string>
+    <!-- Message of dialog asking user to confirm before enabling UMS. [CHAR LIMIT=NONE] -->
+    <string name="usb_settings_enable_ums_message">System components and apps rely on primary storage always being available. This feature breaks that functionality. It is strongly recommended to use MTP instead. Are you sure you want to enable mass storage?</string>
 </resources>
