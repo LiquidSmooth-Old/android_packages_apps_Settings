@@ -19,4 +19,8 @@ limitations under the License.
 
     <!-- Gesture Anywhere -->
     <color name="ga_gesture_color">@android:color/holo_blue_light</color>
+
+    <color name="setting_separator">#ff484848</color>
+    <color name="extension_list_item_color">#ff999999</color>
+
 </resources>
