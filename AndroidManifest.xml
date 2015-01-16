@@ -1750,6 +1750,8 @@
                 android:resource="@id/security_settings" />
         </activity>
 
+        <activity android:name=".headsup.HeadsUpSettings" />
+
         <activity-alias android:name=".blacklist.BlacklistSettings"
                 android:taskAffinity="com.android.settings"
                 android:label="@string/blacklist_title"
