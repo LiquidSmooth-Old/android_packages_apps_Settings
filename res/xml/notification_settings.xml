@@ -132,7 +132,7 @@
                 android:title="@string/battery_light_title"
                 android:fragment="com.android.settings.notificationlight.BatteryLightSettings" />
 
-         <!-- When device is locked -->
+        <!-- When device is locked -->
         <com.android.settings.notification.DropDownPreference
                 android:key="lock_screen_notifications"
                 android:title="@string/lock_screen_notifications_title"
