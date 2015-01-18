@@ -70,10 +70,10 @@
                 />
     </dashboard-category>
 
-    <!-- DEVICE -->
+    <!-- PERSONALIZATION -->
     <dashboard-category
-            android:id="@+id/device_section"
-            android:title="@string/header_category_device" >
+            android:id="@+id/personalization_section"
+            android:title="@string/header_category_personalization" >
 
         <!-- LiquidSmooth -->
         <dashboard-tile
@@ -117,6 +117,13 @@
                 <categories android:name="cyanogenmod.intent.category.APP_THEMES" />
             </intent>
         </dashboard-tile>
+
+    </dashboard-category>
+
+    <!-- DEVICE -->
+    <dashboard-category
+            android:id="@+id/device_section"
+            android:title="@string/header_category_device" >
 
         <!-- Home -->
         <dashboard-tile
