@@ -20,7 +20,15 @@
     <!-- Gesture Anywhere -->
     <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
     <dimen name="ga_gesture_thumbnail_size">64dip</dimen>
-    <dimen name="shortcut_picker_left_padding">70dip</dimen>
+    <dimen name="shortcut_picker_left_padding">40dip</dimen>
+
+    <dimen name="lockscreen_icon_side_padding">10dp</dimen>
+    <dimen name="lockscreen_icon_size">35dp</dimen>
+    <dimen name="phone_side_padding">10dp</dimen>
+    <dimen name="phone_bottom_padding">40dp</dimen>
+
+    <dimen name="phone_width">320dp</dimen>
+    <dimen name="phone_height">420dp</dimen>
 
     <!-- navbar height -->
     <dimen name="navigation_bar_height_default">40dp</dimen>
