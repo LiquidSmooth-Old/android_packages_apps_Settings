@@ -17,27 +17,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceCategory
-        android:title="@string/qs_category_title">
-
-        <PreferenceScreen
-            android:key="qs_order"
-            android:title="@string/qs_order_title"
-            android:fragment="com.android.settings.slim.qs.QSTiles" />
-
-        <com.android.settings.slim.SecureSettingSwitchPreference
-            android:key="qs_show_brightness_slider"
-            android:title="@string/qs_brightness_slider_title"
-            android:defaultValue="true"/>
-
-        <com.android.settings.slim.SecureSettingSwitchPreference
-            android:key="sysui_qs_main_tiles"
-            android:title="@string/qs_main_tiles_title"
-            android:summaryOn="@string/qs_main_tiles_summary_on"
-            android:summaryOff="@string/qs_main_tiles_summary_off"
-            android:defaultValue="true" />
-
-    </PreferenceCategory>
 
         <ListPreference
             android:key="quick_pulldown"
@@ -53,17 +32,41 @@
             android:entryValues="@array/smart_pulldown_values"
             android:persistent="false" />
 
+
+
+    <PreferenceCategory
+        android:title="@string/qs_category_title">
+
+        <PreferenceScreen
+            android:key="qs_order"
+            android:title="@string/qs_order_title"
+            android:fragment="com.android.settings.slim.qs.QSTiles" />
+
+        <com.android.settings.slim.SecureSettingSwitchPreference
+            android:key="sysui_qs_main_tiles"
+            android:title="@string/qs_main_tiles_title"
+            android:summaryOn="@string/qs_main_tiles_summary_on"
+            android:summaryOff="@string/qs_main_tiles_summary_off"
+            android:defaultValue="true" />
+
         <SwitchPreference
             android:key="block_on_secure_keyguard"
             android:title="@string/block_on_secure_keyguard_title"
             android:summary="@string/block_on_secure_keyguard_summary"
             android:persistent="false" />
 
-    <com.android.settings.slim.SystemSettingSwitchPreference
-        android:key="qs_location_advanced"
-        android:title="@string/qs_advanced_location_title"
-        android:summary="@string/qs_advanced_location_summary"
-        android:defaultValue="false" />
+        <com.android.settings.slim.SecureSettingSwitchPreference
+            android:key="qs_show_brightness_slider"
+            android:title="@string/qs_brightness_slider_title"
+            android:defaultValue="true"/>
+
+        <com.android.settings.slim.SystemSettingSwitchPreference
+            android:key="qs_location_advanced"
+            android:title="@string/qs_advanced_location_title"
+            android:summary="@string/qs_advanced_location_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
 
