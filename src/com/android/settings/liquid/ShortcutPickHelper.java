@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.cyanogenmod;
+package com.android.settings.liquid;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.android.settings.R;
-import com.android.settings.cyanogenmod.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
+import com.android.settings.liquid.ShortcutPickHelper.AppExpandableAdapter.GroupInfo;
 
 public class ShortcutPickHelper {
 
@@ -77,6 +77,9 @@ public class ShortcutPickHelper {
                 processShortcut(data, REQUEST_PICK_APPLICATION, REQUEST_CREATE_SHORTCUT);
                 break;
             }
+
+        } else {
+            mListener.shortcutPicked(null, null, false);
         }
     }
 
@@ -253,10 +256,10 @@ public class ShortcutPickHelper {
                 ViewGroup parent) {
             if (convertView == null) {
                 convertView = View.inflate(mParent, android.R.layout.simple_list_item_1, null);
-                convertView.setPadding(70, 0, 0, 0);
+                convertView.setPadding(groupPadding, 0, 0, 0);
             }
             TextView textView = (TextView)convertView.findViewById(android.R.id.text1);
-            textView.setText(getGroup(groupPosition).label.toString());
+            textView.setText(getGroup(groupPosition).label);
             return convertView;
         }
 
