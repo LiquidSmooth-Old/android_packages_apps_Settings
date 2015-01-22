@@ -718,4 +718,7 @@
   <string name="pie_trigger_note_title">Nota</string>
   <string name="double_tap_to_sleep_title">Doppio-tocco per sospendere</string>
   <string name="double_tap_to_sleep_summary">Tocca due volte la barra di stato per spegnere lo schermo</string>
+  <!-- Notification ticker -->
+  <string name="status_bar_ticker_title">Ticker delle notifiche</string>
+  <string name="status_bar_ticker_summary">Animazione del testo di notifica nella barra di stato</string>
 </resources>

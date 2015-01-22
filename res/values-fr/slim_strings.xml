@@ -873,4 +873,8 @@
   <string name="expanded_desktop_title">Options du bureau étendu</string>
   <string name="chamber_title">Chambre des Secrets</string>
   <string name="chamber_toast">La chambre des secrets est ouverte</string>
+  <!-- Notification ticker -->
+  <string name="status_bar_ticker_title">Notifications animées</string>
+  <string name="status_bar_ticker_summary">Animation du texte des notifications dans la barre d\'état</string>
+
 </resources>

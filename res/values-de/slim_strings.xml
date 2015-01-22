@@ -836,4 +836,8 @@
   <string name="expanded_desktop_style">Aussehen des erweiterten Desktops</string>
   <string name="expanded_desktop_style_description">Standardaussehen des erweiterten Desktop wählen</string>
   <string name="expanded_desktop_title">Optionen des erweiterten Desktops</string>
+    <!-- Notification ticker -->
+    <string name="status_bar_ticker_title">Benachrichtigungsticker</string>
+    <string name="status_bar_ticker_summary">Animierten Benachrichtigungstext in der Statusleiste anzeigen</string>
+
 </resources>
