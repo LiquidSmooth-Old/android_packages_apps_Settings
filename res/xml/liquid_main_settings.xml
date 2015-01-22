@@ -37,12 +37,12 @@
         android:fragment="com.android.settings.liquid.InterfaceSettings"
         android:icon="@drawable/ic_liquid_interface_teal" />
 
-    <!-- Lock screen -->
+    <!-- Lock screen 
     <PreferenceScreen
         android:id="@+id/lockscreen_settings"
         android:title="@string/lockscreen_settings_title"
         android:fragment="com.android.settings.liquid.LockscreenSettings"
-        android:icon="@drawable/ic_liquid_lockscreen_teal" />
+        android:icon="@drawable/ic_liquid_lockscreen_teal" />-->
 
     <!-- Navigation -->
     <PreferenceScreen
