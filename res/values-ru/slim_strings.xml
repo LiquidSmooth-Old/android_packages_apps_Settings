@@ -743,4 +743,8 @@
   <string name="pie_disable_ime_triggers_summary">Отключает или уменьшает размер области срабатывания в зоне клавиатуры, когда клавиатура открыта</string>
   <string name="double_tap_to_sleep_title">Выключение экрана двойным нажатием</string>
   <string name="double_tap_to_sleep_summary">Дважды коснитесь строки состояния, чтобы перевести устройство в спящий режим</string>
+  <!--Power menu -->
+  <string name="power_category">Кнопка питания</string>
+  <string name="lockscreen_enable_power_menu_title">Меню кнопки питания на экране блокировки</string>
+
 </resources>

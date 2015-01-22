@@ -744,4 +744,8 @@
   <string name="pie_disable_ime_triggers_summary">Zmniejsza obszar aktywacji z lewej i prawej strony jeśli klawiatura jest włączona</string>
   <string name="double_tap_to_sleep_title">Usypianie urządzenia podwójnym tapnięciem na pasku statusu</string>
   <string name="double_tap_to_sleep_summary">Dwukrotnie tapnij na pasku statusu w celu przejścia urządzenia w tryb czuwania</string>
+  <!-- Notification ticker -->
+  <string name="status_bar_ticker_title">Podgląd powiadomienia</string>
+  <string name="status_bar_ticker_summary">Animacja treści powiadomienia na pasku stanu</string>
+
 </resources>
