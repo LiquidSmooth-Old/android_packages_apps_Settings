@@ -60,7 +60,7 @@
             android:title="@string/qs_brightness_slider_title"
             android:defaultValue="true"/>
 
-        <com.android.settings.slim.SystemSettingSwitchPreference
+        <com.android.settings.slim.SecureSettingSwitchPreference
             android:key="qs_location_advanced"
             android:title="@string/qs_advanced_location_title"
             android:summary="@string/qs_advanced_location_summary"
