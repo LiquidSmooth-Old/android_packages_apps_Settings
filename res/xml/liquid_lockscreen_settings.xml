@@ -19,10 +19,4 @@
     android:title="@string/lockscreen_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <SwitchPreference
-        android:key="lockscreen_weather"
-        android:title="@string/lockscreen_weather_title"
-        android:summary="@string/lockscreen_weather_summary"
-        android:defaultValue="true" />
-
 </PreferenceScreen>
