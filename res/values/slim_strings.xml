@@ -632,6 +632,7 @@
     <string name="qs_tile_nfc">NFC</string>
     <string name="qs_tile_compass">Compass</string>
     <string name="qs_tile_lockscreen">Lockscreen</string>
+    <string name="qs_tile_lte">Lte</string>
 
     <string name="qs_brightness_slider_title">Show brightness slider</string>
 
