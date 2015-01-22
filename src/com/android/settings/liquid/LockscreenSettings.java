@@ -16,67 +16,32 @@
 
 package com.android.settings.liquid;
 
-import android.app.admin.DevicePolicyManager;
-import android.content.ContentResolver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.res.Resources;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.SystemClock;
-import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
-import android.preference.SwitchPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
-import android.widget.Toast;
-
-import java.util.ArrayList;
+import android.provider.Settings.SettingNotFoundException;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.util.Helpers;
 import com.android.settings.Utils;
 
 public class LockscreenSettings extends SettingsPreferenceFragment {
 
-    private static final String KEY_LOCKSCREEN_WEATHER = "lockscreen_weather";
-
-    private SwitchPreference mLockscreenWeather;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ContentResolver resolver = getActivity().getContentResolver();
-        PreferenceScreen prefSet = getPreferenceScreen();
-        PackageManager pm = getPackageManager();
-        Resources res = getResources();
-        mContext = getActivity();
-
-        // Lockscreen weather
-        mLockscreenWeather = (SwitchPreference) findPreference(KEY_LOCKSCREEN_WEATHER);
-        mLockscreenWeather.setChecked(Settings.System.getIntForUser(resolver,
-                Settings.System.LOCKSCREEN_WEATHER, 1, UserHandle.USER_CURRENT) == 1);
-        mLockscreenWeather.setOnPreferenceChangeListener(this);
-
         addPreferencesFromResource(R.xml.liquid_lockscreen_settings);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mLockscreenWeather) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.LOCKSCREEN_WEATHER, value ? 1 : 0, UserHandle.USER_CURRENT);
-            Helpers.restartSystem();
-        }
+
         return false;
     }
 
