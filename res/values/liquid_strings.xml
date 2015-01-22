@@ -1496,10 +1496,6 @@
     <!-- SuperSU -->
     <string name="supersu_title">SuperSU</string>
 
-    <!-- Themes Settings -->
-    <!-- Settings main menu entry -->
-    <string name="themes_settings_title">Themes</string>
-
     <!-- WiFi Ad-Hoc mode -->
     <string name="wifi_mode">Mode</string>
     <string name="wifi_mode_ibss">Ad-Hoc (IBSS) Network</string>
@@ -1586,4 +1582,6 @@
 
     <string name="link_volume_option_title">Link ringtone &amp; notification volumes</string>
     <string name="notification_volume_option_title">Notification volume</string>
+=======
+>>>>>>> parent of 6311ec7... Themes: Port to CM12 [2/3]
 </resources>
