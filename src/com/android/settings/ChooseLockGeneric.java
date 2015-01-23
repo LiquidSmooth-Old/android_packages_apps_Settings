@@ -520,6 +520,7 @@ public class ChooseLockGeneric extends SettingsActivity {
                 case DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC:
                 case DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC:
                 case DevicePolicyManager.PASSWORD_QUALITY_COMPLEX:
+                case DevicePolicyManager.PASSWORD_QUALITY_GESTURE_WEAK:
                     return R.string.unlock_disable_lock_password_summary;
                 default:
                     return R.string.unlock_disable_lock_unknown_summary;
@@ -552,7 +553,7 @@ public class ChooseLockGeneric extends SettingsActivity {
             } else if (KEY_UNLOCK_SET_PASSWORD.equals(unlockMethod)) {
                 maybeEnableEncryption(
                         DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC, false);
-            } else if (KEY_UNLOCK_SET_GESTURE.equals(key)) {
+            } else if (KEY_UNLOCK_SET_GESTURE.equals(unlockMethod)) {
                 updateUnlockMethodAndFinish(
                         DevicePolicyManager.PASSWORD_QUALITY_GESTURE_WEAK, false);
             } else {
