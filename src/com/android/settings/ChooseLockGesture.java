@@ -512,7 +512,7 @@ public class ChooseLockGesture extends SettingsActivity {
 
             final boolean isFallback = getActivity().getIntent()
                 .getBooleanExtra(LockPatternUtils.LOCKSCREEN_BIOMETRIC_WEAK_FALLBACK, false);
-            utils.saveLockGesture(mChosenGesture, isFallback);
+            utils.saveLockGesture(mChosenGesture);
             utils.setLockGestureEnabled(true);
 
             if (lockVirgin) {
