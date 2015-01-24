@@ -25,6 +25,12 @@
     	android:fragment="com.android.settings.liquid.gestureanywhere.GestureAnywhereSettings"
 	    android:title="@string/gesture_anywhere_title" />
 
+    <!-- Pie control -->
+    <PreferenceScreen
+         android:key="pie_settings"
+         android:fragment="com.android.settings.liquid.PieControl"
+         android:title="@string/pie_control_title" />
+
     <!-- Circle app bar -->
     <PreferenceScreen
         android:key="app_circle_bar"
