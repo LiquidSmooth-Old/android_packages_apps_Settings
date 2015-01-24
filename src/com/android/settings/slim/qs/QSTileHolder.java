@@ -94,6 +94,18 @@ public class QSTileHolder {
                 resourceName = "ic_qs_network_adb_on";
                 stringId = R.string.adb_over_network;
                 break;
+            case QSConstants.TILE_NFC:
+                resourceName = "ic_qs_nfc_on";
+                stringId = R.string.qs_title_nfc;
+                break;
+            case QSConstants.TILE_COMPASS:
+                resourceName = "ic_qs_compass_on";
+                stringId = R.string.qs_title_compass;
+                break;
+            case QSConstants.TILE_LOCKSCREEN:
+                resourceName = "ic_qs_lock_screen_on";
+                stringId = R.string.qs_title_lockscreen;
+                break;
             default:
                 return null;
         }
