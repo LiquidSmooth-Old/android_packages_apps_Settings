@@ -746,5 +746,12 @@
   <!--Power menu -->
   <string name="power_category">Кнопка питания</string>
   <string name="lockscreen_enable_power_menu_title">Меню кнопки питания на экране блокировки</string>
+    <!--Status bar date -->
+    <string name="status_bar_clock_category">Clock</string>
+    <string name="status_bar_date_title">Стиль даты</string>
+    <string name="status_bar_date_none">Не показывать</string>
+    <string name="status_bar_date_small">Малый размер шрифта</string>
+    <string name="status_bar_date_normal">Обычный размер шрифта</string>
+    <string name="status_bar_date_format_title">Формат даты</string>
 
 </resources>
