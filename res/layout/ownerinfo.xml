@@ -17,7 +17,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:scrollbars="vertical">
+    android:scrollbars="vertical"
+    android:background="@color/exposed_bg_dark">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -53,7 +54,7 @@
                 android:layout_marginTop="8dip"
                 android:text="@string/show_owner_info_on_lockscreen_label"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="?android:attr/textColorSecondary" />
+                android:textColor="@color/exposed_secondary_text_light" />
 
             <View
                 android:layout_width="match_parent"
