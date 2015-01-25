@@ -747,5 +747,12 @@
   <!-- Notification ticker -->
   <string name="status_bar_ticker_title">Podgląd powiadomienia</string>
   <string name="status_bar_ticker_summary">Animacja treści powiadomienia na pasku stanu</string>
+    <!--Status bar date -->
+    <string name="status_bar_clock_category">Clock</string>
+    <string name="status_bar_date_title">Styl daty</string>
+    <string name="status_bar_date_none">Nie pokazuj</string>
+    <string name="status_bar_date_small">Mały rozmiar czcionki</string>
+    <string name="status_bar_date_normal">Normalny rozmiar czcionki</string>
+    <string name="status_bar_date_format_title">Format daty</string>
 
 </resources>

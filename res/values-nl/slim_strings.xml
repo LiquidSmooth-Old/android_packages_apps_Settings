@@ -437,5 +437,12 @@
   <!-- Notification ticker -->
   <string name="status_bar_ticker_title">Melding Ticker</string>
   <string name="status_bar_ticker_summary">Animatie van de meldingstekst in de statusbalk</string>
+    <!--Status bar date -->
+    <string name="status_bar_clock_category">Clock</string>
+    <string name="status_bar_date_title">Datum stijl</string>
+    <string name="status_bar_date_none">Niet weergeven</string>
+    <string name="status_bar_date_small">Kleine lettergrootte</string>
+    <string name="status_bar_date_normal">Normale lettergrootte</string>
+    <string name="status_bar_date_format_title">Date formatering</string>
 
 </resources>
