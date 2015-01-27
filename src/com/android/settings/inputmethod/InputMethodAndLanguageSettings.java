@@ -74,6 +74,7 @@ import java.util.Locale;
 import java.util.TreeSet;
 
 import org.cyanogenmod.hardware.HighTouchSensitivity;
+import org.cyanogenmod.hardware.TouchscreenHovering;
 
 public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, InputManager.InputDeviceListener,
@@ -87,12 +88,15 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private static final String KEY_POINTER_SETTINGS_CATEGORY = "pointer_settings_category";
     private static final String KEY_PREVIOUSLY_ENABLED_SUBTYPES = "previously_enabled_subtypes";
     private static final String KEY_HIGH_TOUCH_SENSITIVITY = "high_touch_sensitivity";
+    private static final String KEY_TOUCHSCREEN_HOVERING = "touchscreen_hovering";
+
     // false: on ICS or later
     private static final boolean SHOW_INPUT_METHOD_SWITCHER_SETTINGS = false;
 
     private int mDefaultInputMethodSelectorVisibility = 0;
     private ListPreference mShowInputMethodSelectorPref;
     private SwitchPreference mHighTouchSensitivity;
+    private SwitchPreference mTouchscreenHovering;
     private PreferenceCategory mKeyboardSettingsCategory;
     private PreferenceCategory mHardKeyboardCategory;
     private PreferenceCategory mGameControllerCategory;
@@ -170,12 +174,21 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
 
         mHighTouchSensitivity = (SwitchPreference) findPreference(KEY_HIGH_TOUCH_SENSITIVITY);
 
+        mTouchscreenHovering = (SwitchPreference) findPreference(KEY_TOUCHSCREEN_HOVERING);
+
         if (pointerSettingsCategory != null) {
             if (!isHighTouchSensitivitySupported()) {
                 pointerSettingsCategory.removePreference(mHighTouchSensitivity);
                 mHighTouchSensitivity = null;
             } else {
                 mHighTouchSensitivity.setChecked(HighTouchSensitivity.isEnabled());
+            }
+
+            if (!isTouchscreenHoveringSupported()) {
+                pointerSettingsCategory.removePreference(mTouchscreenHovering);
+                mTouchscreenHovering = null;
+            } else {
+                mTouchscreenHovering.setChecked(TouchscreenHovering.isEnabled());
             }
 
             if (pointerSettingsCategory.getPreferenceCount() == 0) {
@@ -353,6 +366,8 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
             }
         } else if (preference == mHighTouchSensitivity) {
             return HighTouchSensitivity.setEnabled(mHighTouchSensitivity.isChecked());
+        } else if (preference == mTouchscreenHovering) {
+            return TouchscreenHovering.setEnabled(mTouchscreenHovering.isChecked());
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
@@ -633,6 +648,15 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private static boolean isHighTouchSensitivitySupported() {
         try {
             return HighTouchSensitivity.isSupported();
+        } catch (NoClassDefFoundError e) {
+            // Hardware abstraction framework not installed
+            return false;
+        }
+    }
+
+   private static boolean isTouchscreenHoveringSupported() {
+        try {
+            return TouchscreenHovering.isSupported();
         } catch (NoClassDefFoundError e) {
             // Hardware abstraction framework not installed
             return false;
