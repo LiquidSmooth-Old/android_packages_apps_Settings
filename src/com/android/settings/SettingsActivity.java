@@ -1230,6 +1230,16 @@ public class SettingsActivity extends Activity
                             UserManager.DISALLOW_DEBUGGING_FEATURES)) {
                         removeTile = true;
                     }
+                } else if (id == R.id.bitsyko_layers) {
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("org.bitsyko.overlaymanager", 0).versionCode > 0);
+                    } catch (PackageManager.NameNotFoundException e) {
+
+                    }
+                    if (!supported) {
+                        removeTile = true;
+                    }
                 }
 
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0
@@ -1390,3 +1400,4 @@ public class SettingsActivity extends Activity
         mResultIntentData = resultIntentData;
     }
 }
+
