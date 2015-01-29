@@ -83,6 +83,17 @@
                 android:icon="@drawable/ic_liquid_theme_settings_teal"
                 />
 
+        <!-- BitSyko Layers App -->
+        <dashboard-tile
+                android:id="@+id/bitsyko_layers"
+                android:icon="@drawable/ic_bitsyko_layers"
+                android:title="@string/bitsyko_layers">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.bitsyko.overlaymanager"
+                    android:targetClass="org.bitsyko.overlaymanager.main" />
+        </dashboard-tile>
+
     </dashboard-category>
 
     <!-- DEVICE -->
