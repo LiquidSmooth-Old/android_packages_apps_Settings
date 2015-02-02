@@ -92,12 +92,14 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
     private static final String KEY_HIGH_TOUCH_SENSITIVITY = "high_touch_sensitivity";
     private static final String KEY_TOUCHSCREEN_HOVERING = "touchscreen_hovering";
     private static final String KEY_STYLUS_GESTURES = "stylus_gestures";
+    private static final String KEY_STYLUS_ICON_ENABLED = "stylus_icon_enabled";
 
     // false: on ICS or later
     private static final boolean SHOW_INPUT_METHOD_SWITCHER_SETTINGS = false;
 
     private int mDefaultInputMethodSelectorVisibility = 0;
     private ListPreference mShowInputMethodSelectorPref;
+    private SwitchPreference mStylusIconEnabled;
     private PreferenceCategory mKeyboardSettingsCategory;
     private PreferenceCategory mHardKeyboardCategory;
     private PreferenceCategory mGameControllerCategory;
@@ -181,6 +183,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
                         findPreference(KEY_POINTER_SETTINGS_CATEGORY);
 
         mStylusGestures = (PreferenceScreen) findPreference(KEY_STYLUS_GESTURES);
+        mStylusIconEnabled = (SwitchPreference) findPreference(KEY_STYLUS_ICON_ENABLED);
         mHighTouchSensitivity = (SwitchPreference) findPreference(KEY_HIGH_TOUCH_SENSITIVITY);
 
         mTouchscreenHovering = (SwitchPreference) findPreference(KEY_TOUCHSCREEN_HOVERING);
@@ -189,6 +192,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
 
             if (!getResources().getBoolean(com.android.internal.R.bool.config_stylusGestures)) {
                 pointerSettingsCategory.removePreference(mStylusGestures);
+                pointerSettingsCategory.removePreference(mStylusIconEnabled);
             }
 
             if (!mCmHardwareManager.isSupported(
@@ -309,6 +313,11 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
             }
         }
 
+        if (mStylusIconEnabled != null) {
+            mStylusIconEnabled.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.STYLUS_ICON_ENABLED, 0) == 1);
+        }
+
         if (!mShowsOnlyFullImeAndKeyboardList) {
             if (mLanguagePref != null) {
                 String localeName = getLocaleName(getActivity());
@@ -366,7 +375,10 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
         if (Utils.isMonkeyRunning()) {
             return false;
         }
-        if (preference instanceof PreferenceScreen) {
+        if (preference == mStylusIconEnabled) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                Settings.System.STYLUS_ICON_ENABLED, mStylusIconEnabled.isChecked() ? 1 : 0);
+        } else if (preference instanceof PreferenceScreen) {
             if (preference.getFragment() != null) {
                 // Fragment will be handled correctly by the super class.
             } else if (KEY_CURRENT_INPUT_METHOD.equals(preference.getKey())) {
