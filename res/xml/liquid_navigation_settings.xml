@@ -19,6 +19,12 @@
     android:title="@string/navigation_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- Navigation Bar -->
+    <PreferenceScreen
+        android:key="navigation_bar"
+        android:fragment="com.android.settings.liquid.NavBar"
+        android:title="@string/navigation_bar_title" />
+
     <!-- Gesture anywhere -->
     <PreferenceScreen
     	android:key="gesture_anywhere"
