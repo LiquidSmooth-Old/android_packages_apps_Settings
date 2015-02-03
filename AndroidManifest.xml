@@ -2147,6 +2147,7 @@
         <activity android:name=".cyanogenmod.PrivacySettings" />
         <activity android:name=".notificationlight.NotificationLightSettings" />
         <activity android:name=".notificationlight.BatteryLightSettings" />
+        <activity android:name=".slim.PerformanceSettings" />
 
         <!-- Liquid Extra info -->
         <activity android:name="com.android.settings.liquid.extrainfo.MainActivity"
