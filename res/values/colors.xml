@@ -105,6 +105,7 @@
     <color name="exposed_secondary_text_dark">#b3ffffff</color>
     <color name="exposed_barPrimaryColor">#ff009688</color>
     <color name="exposed_barPredictionColor">@color/material_empty_color_light</color>
+    <color name="exposed_expanded_item">#ff000000</color>
     <color name="exposed_datachartfillcolor">#ff009688</color>
     <color name="exposed_datachartfillcolor_secondary">#ff80cbc4</color>
     <color name="exposed_data_limit_chart_labelcolor">#ff37474f</color>
