@@ -25,6 +25,15 @@
         android:fragment="com.android.settings.liquid.NavBar"
         android:title="@string/navigation_bar_title" />
 
+    <ListPreference
+        android:key="navigation_bar_height"
+        android:dialogTitle="@string/navigation_bar_height"
+        android:title="@string/navigation_bar_height"
+        android:entries="@array/navigation_bar_height_entries"
+        android:entryValues="@array/navigation_bar_height_values"
+        android:defaultValue="48"
+        android:persistent="false" />
+
     <!-- Gesture anywhere -->
     <PreferenceScreen
     	android:key="gesture_anywhere"
@@ -42,14 +51,5 @@
         android:key="app_circle_bar"
         android:fragment="com.android.settings.liquid.AppCircleBar"
         android:title="@string/app_circle_bar_title"/>
-
-    <ListPreference
-        android:key="navigation_bar_height"
-        android:dialogTitle="@string/navigation_bar_height"
-        android:title="@string/navigation_bar_height"
-        android:entries="@array/navigation_bar_height_entries"
-        android:entryValues="@array/navigation_bar_height_values"
-        android:defaultValue="48"
-        android:persistent="false" />
 
 </PreferenceScreen>

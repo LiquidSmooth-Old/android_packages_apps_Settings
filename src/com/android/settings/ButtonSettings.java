@@ -182,7 +182,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         if (isKeyDisablerSupported()) {
             try {
                 IWindowManager wm = WindowManagerGlobal.getWindowManagerService();
-                needsNavigationBar = wm.needsNavigationBar();
             } catch (RemoteException e) {
             }
 
@@ -319,8 +318,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         try {
             // Only show the navigation bar category on devices that have a navigation bar
             // unless we are forcing it via development settings
-            boolean forceNavbar = android.provider.Settings.System.getInt(getContentResolver(),
-                    android.provider.Settings.System.DEV_FORCE_SHOW_NAVBAR, 0) == 1;
             boolean hasNavBar = WindowManagerGlobal.getWindowManagerService().hasNavigationBar()
                     || forceNavbar;
 
@@ -434,8 +431,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         final int defaultBrightness = context.getResources().getInteger(
                 com.android.internal.R.integer.config_buttonBrightnessSettingDefault);
 
-        Settings.System.putInt(context.getContentResolver(),
-                Settings.System.DEV_FORCE_SHOW_NAVBAR, enabled ? 1 : 0);
         KeyDisabler.setActive(enabled);
 
         /* Save/restore button timeouts to disable them in softkey mode */
@@ -458,13 +453,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             }
         }
         editor.commit();
-    }
-
-    private void updateDisableNavkeysOption() {
-        boolean enabled = Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.DEV_FORCE_SHOW_NAVBAR, 0) != 0;
-
-        mDisableNavigationKeys.setChecked(enabled);
     }
 
     private void updateDisableNavkeysCategories(boolean navbarEnabled) {
@@ -508,16 +496,6 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             appSwitchCategory.setEnabled(!navbarEnabled);
         }
     }
-
-    public static void restoreKeyDisabler(Context context) {
-        if (!isKeyDisablerSupported()) {
-            return;
-        }
-
-        writeDisableNavkeysOption(context, Settings.System.getInt(context.getContentResolver(),
-                Settings.System.DEV_FORCE_SHOW_NAVBAR, 0) != 0);
-    }
-
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
