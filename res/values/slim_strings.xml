@@ -491,6 +491,12 @@
     <string name="shortcut_action_media_play_pause">Music - play/pause</string>
     <string name="shortcut_action_media_previous">Music - previous track</string>
     <string name="shortcut_action_wake_device">Wake up device</string>
+    <string name="shortcut_action_airplane">Airplane mode</string>
+    <string name="shortcut_action_power_off">Power off</string>
+    <string name="shortcut_action_reboot">Reboot</string>
+    <string name="shortcut_action_sound">Sound</string>
+    <string name="shortcut_action_users">Users</string>
+    <string name="shortcut_action_lockdown">Lock now</string>
 
     <string name="shortcut_action_longpress">Longpress:</string>
     <string name="shortcut_action_select_action_longpress">Choose longpress action:</string>
@@ -661,6 +667,9 @@
     <string name="lcd_density_default">default</string>
     <string name="lcd_density_unsupported">Unsupported</string>
     <string name="restarting_ui">Restarting UI\u2026</string>
+
+    <!-- Power Menu -->
+    <string name="power_menu_title">Global menu</string>
 
     <!-- Hardware keys -->
     <string name="button_keys_title">Hardware Buttons</string>
