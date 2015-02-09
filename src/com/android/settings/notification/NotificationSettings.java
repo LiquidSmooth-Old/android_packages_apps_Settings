@@ -29,6 +29,7 @@ import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
+import android.hardware.CmHardwareManager;
 import android.media.AudioManager;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -50,10 +51,16 @@ import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.util.Log;
 
+<<<<<<< HEAD:src/com/android/settings/notification/NotificationSettings.java
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+=======
+import com.android.settings.notification.IncreasingRingVolumePreference;
+import com.android.settings.notification.NotificationAccessSettings;
+import com.android.settings.notification.VolumeSeekBarPreference;
+>>>>>>> caccdad... Settings: Change to CmHardwareService:src/com/android/settings/SoundSettings.java
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 
@@ -129,8 +136,26 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         initRingtones(sound);
         initVibrateWhenRinging(sound);
 
+<<<<<<< HEAD:src/com/android/settings/notification/NotificationSettings.java
         updateRingerMode();
         updateEffectsSuppressor();
+=======
+        CmHardwareManager cmHardwareManager =
+                (CmHardwareManager) getSystemService(Context.CMHW_SERVICE);
+        if (!cmHardwareManager.isSupported(CmHardwareManager.FEATURE_VIBRATOR)) {
+            Preference preference = vibrate.findPreference(KEY_VIBRATION_INTENSITY);
+            if (preference != null) {
+                vibrate.removePreference(preference);
+            }
+        }
+
+        initRingtones(sounds);
+        initIncreasingRing(sounds);
+        initVibrateWhenRinging(vibrate);
+
+        mNotificationAccess = findPreference(KEY_NOTIFICATION_ACCESS);
+        refreshNotificationListeners();
+>>>>>>> caccdad... Settings: Change to CmHardwareService:src/com/android/settings/SoundSettings.java
     }
 
     @Override
@@ -410,6 +435,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
     private class Receiver extends BroadcastReceiver {
         private boolean mRegistered;
 
+<<<<<<< HEAD:src/com/android/settings/notification/NotificationSettings.java
         public void register(boolean register) {
             if (mRegistered == register) return;
             if (register) {
@@ -431,6 +457,14 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
             } else if (AudioManager.INTERNAL_RINGER_MODE_CHANGED_ACTION.equals(action)) {
                 mHandler.sendEmptyMessage(H.UPDATE_RINGER_MODE);
             }
+=======
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+
+        @Override
+        public void prepare() {
+            super.prepare();
+>>>>>>> caccdad... Settings: Change to CmHardwareService:src/com/android/settings/SoundSettings.java
         }
     }
 
@@ -455,6 +489,19 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
                 rt.add(KEY_PHONE_RINGTONE);
                 rt.add(KEY_VIBRATE_WHEN_RINGING);
             }
+<<<<<<< HEAD:src/com/android/settings/notification/NotificationSettings.java
+=======
+            Vibrator vib = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+            if (vib == null || !vib.hasVibrator()) {
+                rt.add(KEY_VIBRATE);
+            }
+            CmHardwareManager cmHardwareManager =
+                    (CmHardwareManager) context.getSystemService(Context.CMHW_SERVICE);
+            if (!cmHardwareManager.isSupported(CmHardwareManager.FEATURE_VIBRATOR)) {
+                rt.add(KEY_VIBRATION_INTENSITY);
+            }
+
+>>>>>>> caccdad... Settings: Change to CmHardwareService:src/com/android/settings/SoundSettings.java
             return rt;
         }
     };

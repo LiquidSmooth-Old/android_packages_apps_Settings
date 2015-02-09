@@ -70,6 +70,10 @@
     <uses-permission android:name="android.permission.MANAGE_DEVICE_ADMINS" />
     <uses-permission android:name="android.permission.READ_SEARCH_INDEXABLES" />
     <uses-permission android:name="android.permission.OEM_UNLOCK_STATE" />
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.HARDWARE_ABSTRACTION_ACCESS" />
 
     <application android:label="@string/settings_label"
             android:icon="@mipmap/ic_launcher_settings"
@@ -80,9 +84,21 @@
             android:supportsRtl="true"
             android:allowBackup="false">
 
+<<<<<<< HEAD
         <uses-library android:name="org.cyanogenmod.hardware" required="false" />
 
         <!-- Settings -->
+=======
+        <!-- Screen color Settings Controls -->
+        <activity android:name=".ScreenColorSettings" android:label="@string/screencolor"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="nosensor">
+        </activity>
+        <activity android:name=".CustomScreenColor" android:label="@string/custom_screencolor"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="nosensor">
+        </activity>
+>>>>>>> caccdad... Settings: Change to CmHardwareService
 
         <activity android:name="Settings"
                 android:taskAffinity="com.android.settings"
