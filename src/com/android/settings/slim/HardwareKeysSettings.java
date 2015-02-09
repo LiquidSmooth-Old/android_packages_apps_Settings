@@ -20,16 +20,20 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Bitmap;
+import android.hardware.CmHardwareManager;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.os.Handler;
 import android.os.RemoteException;
 import android.preference.SwitchPreference;
@@ -60,8 +64,6 @@ import com.android.settings.slim.util.ShortcutPickerHelper;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
-import org.cyanogenmod.hardware.KeyDisabler;
 
 public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener, OnPreferenceClickListener,
@@ -147,6 +149,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final Context context = getActivity();
 
         mPicker = new ShortcutPickerHelper(getActivity(), this);
         mHandler = new Handler();
@@ -171,10 +174,13 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
          // Force Navigation bar related options
         mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
 
+        final CmHardwareManager cmHardwareManager =
+                (CmHardwareManager) context.getSystemService(Context.CMHW_SERVICE);
+
         // Only visible on devices that does not have a navigation bar already,
         // and don't even try unless the existing keys can be disabled
         boolean needsNavigationBar = false;
-        if (isKeyDisablerSupported()) {
+        if (cmHardwareManager.isSupported(CmHardwareManager.FEATURE_KEY_DISABLE)) {
             try {
                 IWindowManager wm = WindowManagerGlobal.getWindowManagerService();
                 needsNavigationBar = wm.needsNavigationBar();
@@ -190,7 +196,9 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     }
 
     public static void restoreKeyDisabler(Context context) {
-        if (!isKeyDisablerSupported()) {
+        CmHardwareManager cmHardwareManager =
+                (CmHardwareManager) context.getSystemService(Context.CMHW_SERVICE);
+        if (!cmHardwareManager.isSupported(CmHardwareManager.FEATURE_KEY_DISABLE)) {
             return;
         }
 
@@ -205,10 +213,9 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
 
         Settings.System.putInt(context.getContentResolver(),
                 Settings.System.DEV_FORCE_SHOW_NAVBAR, enabled ? 1 : 0);
-
-        if (isKeyDisablerSupported()) {
-              KeyDisabler.setActive(enabled);
-        }
+        CmHardwareManager cmHardwareManager =
+                (CmHardwareManager) context.getSystemService(Context.CMHW_SERVICE);
+        cmHardwareManager.set(CmHardwareManager.FEATURE_KEY_DISABLE, enabled);
 
         /* Save/restore button timeouts to disable them in softkey mode */
         Editor editor = prefs.edit();
@@ -492,15 +499,6 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         if (backlight != null) {
             backlight.setEnabled(!enabled);
             backlight.updateSummary();
-        }
-    }
-
-    private static boolean isKeyDisablerSupported() {
-        try {
-            return KeyDisabler.isSupported();
-        } catch (NoClassDefFoundError e) {
-            // Hardware abstraction framework not installed
-            return false;
         }
     }
 

@@ -29,6 +29,7 @@ import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
+import android.hardware.CmHardwareManager;
 import android.media.AudioManager;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -49,7 +50,6 @@ import android.provider.OpenableColumns;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.util.Log;
-
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
