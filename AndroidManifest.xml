@@ -2156,6 +2156,20 @@
             </intent-filter>
         </activity>
 
+        <!-- LiquidSmooth Main Settings -->
+        <activity android:name="Settings$MainSettingsActivity"
+            android:label="@string/liquid_settings_title"
+            android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.liquid.MainSettings" />
+        </activity>
+
+        <activity android:name=".liquid.MainSettings" />
+
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"
