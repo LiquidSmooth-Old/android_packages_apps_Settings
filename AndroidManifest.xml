@@ -2098,6 +2098,19 @@
             </intent-filter>
         </activity>
 
+        <activity android:name="Settings$LiquidTweaksActivity"
+            android:label="@string/display_category_liquid_options_title"
+            android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.liquidsmooth.lstweaks.LiquidTweaks" />
+        </activity>
+
+        <activity android:name="com.liquidsmooth.lstweaks.fragments.Download" />
+
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"
                 android:exported="false"

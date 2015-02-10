@@ -75,6 +75,13 @@
             android:id="@+id/personalization_section"
             android:title="@string/header_category_personalization" >
 
+        <dashboard-tile
+                android:id="@+id/liquidtweaks"
+                android:title="@string/display_category_liquid_options_title"
+                android:fragment="com.liquid.lstweaks.LiquidTweaks"
+                android:icon="@drawable/ic_liquid_theme_settings"
+                />
+
         <!-- Interface -->
         <dashboard-tile
                 android:id="@+id/interface_settings"
