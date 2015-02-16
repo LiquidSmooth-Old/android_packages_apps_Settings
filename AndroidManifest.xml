@@ -74,9 +74,6 @@
     <!-- liquid feature permissions -->
     <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO"/>
 
-    <!-- Heads up -->
-    <uses-permission android:name="android.permission.CHANGE_HEADS_UP_STATE" />
-
     <application android:label="@string/settings_label"
             android:icon="@mipmap/ic_launcher_settings"
             android:taskAffinity=""
@@ -2290,6 +2287,9 @@
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
             </intent-filter>
         </receiver>
+
+        <!-- Heads Up -->
+        <activity android:name=".headsup.HeadsUpSettings" />
 
     </application>
 </manifest>
