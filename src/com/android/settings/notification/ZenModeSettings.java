@@ -188,6 +188,8 @@ public class ZenModeSettings extends SettingsPreferenceFragment implements Index
 
         final Preference musicNotifications = PREF_ZEN_MUSIC_NOTIFICATIONS.init(this);
 
+        final Preference musicNotifications = PREF_ZEN_MUSIC_NOTIFICATIONS.init(this);
+
         final PreferenceCategory important =
                 (PreferenceCategory) root.findPreference(KEY_IMPORTANT);
 

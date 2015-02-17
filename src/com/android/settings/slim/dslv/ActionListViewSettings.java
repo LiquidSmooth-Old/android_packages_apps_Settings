@@ -562,8 +562,8 @@ public class ActionListViewSettings extends ListFragment implements
                 return ActionHelper.getLockscreenShortcutConfig(mActivity);
             case SHAKE_EVENTS_DISABLED:
                 return ActionHelper.getDisabledShakeApps(mActivity);
-        }
 */
+        }
         return null;
     }
 
@@ -591,8 +591,8 @@ public class ActionListViewSettings extends ListFragment implements
             case SHAKE_EVENTS_DISABLED:
                 ActionHelper.setDisabledShakeApps(mActivity, actionConfigs, reset);
                 break;
-        }
 */
+        }
     }
 
     private class ViewHolder {
