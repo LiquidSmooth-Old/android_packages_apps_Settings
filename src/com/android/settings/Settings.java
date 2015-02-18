@@ -104,5 +104,6 @@ public class Settings extends SettingsActivity {
     public static class TopLevelSettings extends SettingsActivity { /* empty */ }
     public static class ApnSettingsActivity extends SettingsActivity { /* empty */ }
     public static class ExpandedDesktopSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class LiveDisplayActivity extends SettingsActivity { /* empty */ }
 }
 
