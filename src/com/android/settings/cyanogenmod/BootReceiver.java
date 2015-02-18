@@ -27,9 +27,9 @@ import android.util.Log;
 import com.android.settings.DisplaySettings;
 import com.android.settings.R;
 import com.android.settings.Utils;
-import com.android.settings.hardware.DisplayColor;
-import com.android.settings.hardware.DisplayGamma;
 import com.android.settings.hardware.VibratorIntensity;
+import com.android.settings.livedisplay.DisplayColor;
+import com.android.settings.livedisplay.DisplayGamma;
 import com.android.settings.location.LocationSettings;
 import com.android.settings.slim.HardwareKeysSettings;
 
@@ -44,7 +44,7 @@ public class BootReceiver extends BroadcastReceiver {
     public void onReceive(Context ctx, Intent intent) {
         /* Restore the hardware tunable values */
         DisplaySettings.restore(ctx);
-        DisplayColor.restore(ctx);
+        ButtonSettings.restoreKeyDisabler(ctx);
         DisplayGamma.restore(ctx);
         VibratorIntensity.restore(ctx);
         DisplaySettings.restore(ctx);
