@@ -15,12 +15,14 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Liquid Extra Info -->
-    <string name="lsextrainfo">Extra information</string>
-    <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
-
-    <!-- About phone screen, legal summary -->
-    <string name="device_legal_summary">Open source and Google licenses</string>
+    <!-- LiquidSmooth Settings -->
+    <string name="display_category_liquid_options_title">LiquidSmooth Options</string>
+    <string name="equalizer_settings_title">Equalizer</string>
+    <string name="interface_settings_title">Interface</string>
+    <string name="lockscreen_settings_title">Lock screen</string>
+    <string name="navigation_settings_title">Navigation</string>
+    <string name="statusbar_settings_title">Status bar</string>
+    <string name="notification_settings_title">Notifications</string>
 
     <!-- Share LiquidSmooth -->
     <string name="share_liquid_title">Share LiquidSmooth</string>
@@ -28,11 +30,12 @@
     <string name="share_message">Check out what #LiquidSmooth is all about @ http://goo.gl/Cuwv18</string>
     <string name="share_chooser_title">Share LiquidSmooth</string>
 
-	<!-- LiquidSmooth Anonymous Stats -->
+    <!-- LiquidSmooth About Phone entries -->
+    <string name="device_legal_summary">Open source and Google licenses</string>
+    <string name="lsextrainfo">Extra information</string>
+    <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
     <string name="rominfo_settings_list_item_title">LiquidSmooth Statistics</string>
     <string name="rominfo_settings_list_item_summary">Help make LiquidSmooth better by opting into anonymous statistics reporting</string>
-
-    <!-- LiquidSmooth Updater -->
     <string name="liquidsmoothupdate_settings_title">LiquidSmooth Updates</string>
     <string name="liquidsmoothupdate_settings_summary">Check for, view or install updates</string>
 
@@ -44,8 +47,5 @@
     <string name="partition_info_sdcard">/sdcard (FAT)</string>
     <string name="partition_info_sdext">/sd-ext (EXT)</string>
     <string name="partition_info_used_of">/</string>
-
-    <!-- LiquidSmooth Settings -->
-    <string name="display_category_liquid_options_title">LiquidSmooth Options</string>
 
 </resources>

@@ -75,10 +75,11 @@
             android:id="@+id/personalization_section"
             android:title="@string/header_category_personalization" >
 
+        <!-- LiquidSmooth -->
         <dashboard-tile
-                android:id="@+id/liquidtweaks"
-                android:title="@string/display_category_liquid_options_title"
-                android:fragment="com.liquid.lstweaks.LiquidTweaks"
+                android:id="@+id/main_settings"
+                android:title="@string/liquid_settings_title"
+                android:fragment="com.android.settings.liquid.MainSettings"
                 android:icon="@drawable/ic_liquid_theme_settings"
                 />
 
