@@ -86,7 +86,7 @@
         <PreferenceScreen
                 android:key="animation_settings"
                 android:title="@string/animation_title"
-                android:fragment="com.android.settings.slim.animation.AnimationControls" />
+                android:fragment="com.android.settings.slim.animation.AnimationSettings" />
 
         <PreferenceScreen
                 android:key="wifi_display"
