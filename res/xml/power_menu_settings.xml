@@ -37,7 +37,7 @@
     <CheckBoxPreference
         android:key="airplane"
         android:title="@string/power_menu_airplane_title"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
 
     <CheckBoxPreference
         android:key="users"
@@ -62,6 +62,6 @@
     <CheckBoxPreference
         android:key="silent"
         android:title="@string/power_menu_sound_title"
-        android:defaultValue="true" />
+        android:defaultValue="false" />
 
 </PreferenceScreen>
