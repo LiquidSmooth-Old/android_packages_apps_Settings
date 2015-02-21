@@ -90,8 +90,8 @@
                 android:title="@string/bitsyko_layers">
                 <intent
                     android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.bitsyko.overlaymanager"
-                    android:targetClass="org.bitsyko.overlaymanager.main" />
+                    android:targetPackage="com.lovejoy777.rroandlayersmanager"
+                    android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
         </dashboard-tile>
 
     </dashboard-category>
@@ -262,7 +262,7 @@
         <dashboard-tile
                 android:id="@+id/superuser"
                 android:fragment="com.koushikdutta.superuser.PolicyNativeFragment"
-                android:icon="@drawable/ic_action_permission"
+                android:icon="@drawable/ic_action_permission_teal"
                 android:title="@string/superuser"
                 />
 

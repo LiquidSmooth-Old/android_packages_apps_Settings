@@ -1233,7 +1233,7 @@ public class SettingsActivity extends Activity
                 } else if (id == R.id.bitsyko_layers) {
                     boolean supported = false;
                     try {
-                        supported = (getPackageManager().getPackageInfo("org.bitsyko.overlaymanager", 0).versionCode > 0);
+                        supported = (getPackageManager().getPackageInfo("com.lovejoy777.rroandlayersmanager", 0).versionCode > 0);
                     } catch (PackageManager.NameNotFoundException e) {
 
                     }

@@ -20,11 +20,26 @@
     <string name="reset">Reset</string>
     <string name="help">Help</string>
     <string name="add">Add</string>
+    <string name="reset_android">Android</string>
+    <string name="reset_bliss">Liquid</string>
     <string name="attention">Attention</string>
+    <string name="enabled">Enabled</string>
+    <string name="default_string">Default</string>
+    <string name="more_string">More</string>
+    <string name="color_title">Color</string>
+    <string name="colors_title">Colors</string>
+    <string name="category_colors_title">Customize colors</string>
+    <string name="icons_title">Icons</string>
+    <string name="text_title">Text</string>
     <string name="enabled">Enabled</string>
     <string name="default_string">Default</string>
     <string name="choose_app">Choose application</string>
     <string name="reset_message">Reset all entries to default?</string>
+    <string name="reset_option_message">Reset values to\nAndroid- or Liquid default?</string>
+    <string name="category_general_title">General options</string>
+    <string name="dlg_reset_values_message">Reset values to\nAndroid- or Liquid default?</string>
+    <string name="dlg_reset_android">Android</string>
+    <string name="dlg_reset_bliss">Liquid</string>     
 
     <!-- Slim settings screens -->
     <string name="header_category_personalization">Personalization</string>
