@@ -19,7 +19,7 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/liquid_settings_title" >
 
-    <!-- Equalizer -->
+    <!-- Equalizer 
     <Preference
         android:id="@+id/equalizer_settings"
         android:title="@string/equalizer_settings_title"
@@ -28,7 +28,7 @@
             android:action="android.intent.action.MAIN"
             android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"
             android:targetPackage="com.vipercn.viper4android_v2" />
-    </Preference>
+    </Preference> -->
 
     <!-- Interface -->
     <PreferenceScreen
@@ -51,12 +51,12 @@
         android:fragment="com.android.settings.liquid.NavigationSettings"
         android:icon="@drawable/ic_liquid_navigation_teal" />
 
-    <!-- Notifications -->
+    <!-- Notifications 
     <PreferenceScreen
         android:id="@+id/liquid_notification_settings"
         android:title="@string/notification_settings_title"
         android:fragment="com.android.settings.liquid.LiquidnotificationSettings" 
-        android:icon="@drawable/ic_liquid_notifications_teal" />
+        android:icon="@drawable/ic_liquid_notifications_teal" /> -->
 
     <!-- Status bar -->
     <PreferenceScreen
@@ -65,11 +65,11 @@
         android:fragment="com.android.settings.liquid.StatusBarSettings"
         android:icon="@drawable/ic_liquid_statusbar_teal" />
 
-    <!-- Advanced options -->
+    <!-- Advanced options 
     <PreferenceScreen
         android:id="@+id/advanced_options_settings"
         android:title="@string/advanced_category_title"
         android:fragment="com.android.settings.liquid.AdvancedSettings"
-        android:icon="@drawable/ic_liquid_advanced_teal" />
+        android:icon="@drawable/ic_liquid_advanced_teal" /> -->
 
 </PreferenceScreen>
