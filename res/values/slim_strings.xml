@@ -28,7 +28,6 @@
 
     <!-- Slim settings screens -->
     <string name="header_category_personalization">Personalization</string>
-    <string name="interface_settings_title">Interface</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -44,7 +43,7 @@
     <string name="device_settings_title">Device</string>
 
     <!-- About phone screen, Slim version -->
-    <string name="slim_version_title">Slim version</string>
+    <string name="slim_version_title">Liquid version</string>
     <string name="slim_version_default">Unknown</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Build date</string>
