@@ -80,7 +80,7 @@
                 android:id="@+id/main_settings"
                 android:title="@string/liquid_settings_title"
                 android:fragment="com.android.settings.liquid.MainSettings"
-                android:icon="@drawable/ic_liquid_theme_settings"
+                android:icon="@drawable/ic_liquid_theme_settings_teal"
                 />
 
         <!-- Interface -->
