@@ -83,14 +83,6 @@
                 android:icon="@drawable/ic_liquid_theme_settings_teal"
                 />
 
-        <!-- Interface -->
-        <dashboard-tile
-                android:id="@+id/interface_settings"
-                android:icon="@drawable/ic_settings_interface"
-                android:fragment="com.android.settings.slim.InterfaceSettings"
-                android:title="@string/interface_settings_title"
-                />
-
     </dashboard-category>
 
     <!-- DEVICE -->
