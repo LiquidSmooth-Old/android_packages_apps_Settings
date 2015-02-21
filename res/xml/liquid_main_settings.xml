@@ -23,7 +23,7 @@
     <Preference
         android:id="@+id/equalizer_settings"
         android:title="@string/equalizer_settings_title"
-        android:icon="@drawable/ic_liquid_equalizer" >
+        android:icon="@drawable/ic_liquid_equalizer_teal" >
         <intent
             android:action="android.intent.action.MAIN"
             android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"
@@ -63,7 +63,7 @@
         android:id="@+id/statusbar_settings"
         android:title="@string/statusbar_settings_title"
         android:fragment="com.android.settings.liquid.StatusBarSettings"
-        android:icon="@drawable/ic_liquid_statusbar" />
+        android:icon="@drawable/ic_liquid_statusbar_teal" />
 
     <!-- Advanced options -->
     <PreferenceScreen
