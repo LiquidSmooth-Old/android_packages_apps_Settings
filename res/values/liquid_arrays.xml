@@ -388,6 +388,18 @@
         <item>2</item>
     </string-array>
 
+    <string-array name="status_bar_date_style_entries">
+        <item>@string/status_bar_date_style_normal</item>
+        <item>@string/status_bar_date_style_lowercase</item>
+        <item>@string/status_bar_date_style_uppercase</item>
+    </string-array>
+
+    <string-array name="status_bar_date_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <string-array name="status_bar_date_format_entries_values">
         <item>dd/MM/yy</item>
         <item>MM/dd/yy</item>
@@ -407,6 +419,7 @@
         <item>EEE MMMM dd</item>
         <item>EEEE dd/MM</item>
         <item>EEEE MM/dd</item>
+        <item>@string/status_bar_date_format_custom</item>
     </string-array>
 
     <string-array name="status_bar_battery_style_entries" translatable="false">
