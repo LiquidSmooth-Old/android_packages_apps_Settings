@@ -184,7 +184,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
                 // Set an EditText view to get user input
                 final EditText input = new EditText(getActivity());
-                input.setText(mCustomGreetingText != null ? mCustomGreetingText : "Welcome to Bliss");
+                input.setText(mCustomGreetingText != null ? mCustomGreetingText : "Welcome to Liquid!!");
                 alert.setView(input);
                 alert.setPositiveButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
