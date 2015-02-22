@@ -348,5 +348,11 @@
     <string name="lock_clock_weather_section_title">Weather panel</string>
     <string name="lock_clock_weather_section_summary">View or change how the weather of the \'cLock\' Home  widget will display</string>
     <string name="lock_clock_calendar_section_title">Calendar events</string>
-    <string name="lock_clock_calendar_section_summary">View or change how the calendar of the \'cLock\' Home  widget will display</string>	
+    <string name="lock_clock_calendar_section_summary">View or change how the calendar of the \'cLock\' Home  widget will display</string>
+
+    <!-- Status bar greeting -->
+    <string name="status_bar_greeting_title">Greeting</string>
+    <string name="status_bar_greeting_summary">Display a custom greeting in the status bar after unlocking the device</string>
+    <string name="status_bar_greeting_dialog">Set your greeting</string>
+
 </resources>
