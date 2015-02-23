@@ -63,7 +63,7 @@ public class HfmSettings extends SettingsPreferenceFragment {
         pd.setMessage(res.getString(R.string.hfm_dialog_wait));
         connMgr = (ConnectivityManager) getSystemService(context.CONNECTIVITY_SERVICE);
 
-        addPreferencesFromResource(R.xml.aicp_hfm_settings);
+        addPreferencesFromResource(R.xml.hfm_settings);
         ContentResolver resolver = context.getContentResolver();
         PreferenceScreen prefScreen = getPreferenceScreen();
 
