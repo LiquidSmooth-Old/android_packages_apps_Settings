@@ -72,4 +72,11 @@
         android:fragment="com.android.settings.liquid.AdvancedSettings"
         android:icon="@drawable/ic_liquid_advanced_teal" /> -->
 
+    <!-- Misc Options -->
+    <PreferenceScreen
+        android:id="@+id/misc_settings"
+        android:title="@string/misc_settings_title"
+        android:fragment="com.android.settings.liquid.MiscSettings"
+        android:icon="@drawable/ic_misctweaks_teal" />
+
 </PreferenceScreen>

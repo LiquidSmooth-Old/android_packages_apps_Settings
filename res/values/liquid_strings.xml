@@ -18,6 +18,7 @@
     <!-- LiquidSmooth Settings -->
     <string name="display_category_liquid_options_title">LiquidSmooth Options</string>
     <string name="equalizer_settings_title">Equalizer</string>
+    <string name="misc_settings_title">Misc</string>
     <string name="interface_settings_title">Interface</string>
     <string name="lockscreen_settings_title">Lock screen</string>
     <string name="navigation_settings_title">Navigation</string>
