@@ -27,6 +27,11 @@
             android:fragment="com.android.settings.slim.QsSettings"
             android:title="@string/qs_title" />
 
+        <PreferenceScreen
+            android:key="traffic"
+            android:fragment="com.android.settings.liquid.Traffic"
+            android:title="@string/traffic_category" />
+
         <SwitchPreference
                 android:key="status_bar_brightness_control"
                 android:title="@string/status_bar_toggle_brightness"
