@@ -22,6 +22,7 @@
     <string name="interface_settings_title">Interface</string>
     <string name="lockscreen_settings_title">Lock screen</string>
     <string name="navigation_settings_title">Navigation</string>
+    <string name="performance_settings">Performance</string>
     <string name="statusbar_settings_title">Status bar</string>
     <string name="notification_settings_title">Notifications</string>
     <string name="liquid_settings_title">LiquidSmooth</string>
