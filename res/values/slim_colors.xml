@@ -17,5 +17,6 @@
 <resources>
 
     <color name="qs_tile_tint_color">#FF009587</color>
+    <color name="qs_tile_default_background_color">@android:color/transparent</color>
 
 </resources>
