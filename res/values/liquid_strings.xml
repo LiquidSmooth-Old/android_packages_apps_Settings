@@ -570,5 +570,8 @@
     <string name="qs_screen_off_tile">Screen off</string>
     <string name="qs_ambient_display_tile">Ambient display</string>
     <string name="qs_tile_reboot">Reboot</string>
+    <string name="qs_tile_slimaction">SlimAction</string>
+    <string name="qs_slim_action_summary">Add and set the order of SlimActions for SlimAction tile</string>
+    <string name="qs_slim_action_title">SlimActions</string>
 
 </resources>
