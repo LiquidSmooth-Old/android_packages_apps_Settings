@@ -564,8 +564,11 @@
     <string name="lid_controls_wake_title">Control wake</string>
     <string name="lid_controls_wake_summary">Turn screen on when lid opens</string>
 
-    <!-- Search Bar Switcher -->
-    <string name="recents_show_searchbar">Show Search Bar in Recents</string>
-    <string name="recents_show_searchbar_summary">Enable or disable the Google search bar in the recents menu</string>
+    <!-- Recents display settings -->
+    <string name="category_recents">Overview screen</string>
+    <string name="recents_show_searchbar">Search bar</string>
+    <string name="keywords_recents_show_searchbar">recent recents disable enable show hide search bar searchbar</string>
+    <string name="recents_show_clear">Clear button</string>
+    <string name="keywords_recents_show_clear">recent recents disable enable show hide clear</string>
 
 </resources>
