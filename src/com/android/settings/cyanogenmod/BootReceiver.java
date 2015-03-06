@@ -31,6 +31,7 @@ import com.android.settings.hardware.DisplayColor;
 import com.android.settings.hardware.DisplayGamma;
 import com.android.settings.hardware.VibratorIntensity;
 import com.android.settings.location.LocationSettings;
+import com.android.settings.slim.HardwareKeysSettings;
 
 import java.util.Arrays;
 import java.util.List;
@@ -47,5 +48,6 @@ public class BootReceiver extends BroadcastReceiver {
         DisplayGamma.restore(ctx);
         VibratorIntensity.restore(ctx);
         DisplaySettings.restore(ctx);
+        HardwareKeysSettings.restoreKeyDisabler(ctx);
     }
 }

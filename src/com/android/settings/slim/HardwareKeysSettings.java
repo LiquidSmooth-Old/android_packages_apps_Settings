@@ -20,20 +20,28 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.ContentResolver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.RemoteException;
 import android.preference.SwitchPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceCategory;
+import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.view.IWindowManager;
+import android.view.WindowManagerGlobal;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -46,11 +54,14 @@ import com.android.internal.util.slim.HwKeyHelper;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
+import com.android.settings.cyanogenmod.ButtonBacklightBrightness;
 import com.android.settings.slim.util.ShortcutPickerHelper;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+
+import org.cyanogenmod.hardware.KeyDisabler;
 
 public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener, OnPreferenceClickListener,
@@ -58,6 +69,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
 
     private static final String TAG = "HardwareKeys";
 
+    private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
     private static final String CATEGORY_KEYS = "button_keys";
     private static final String CATEGORY_BACK = "button_keys_back";
     private static final String CATEGORY_CAMERA = "button_keys_camera";
@@ -86,6 +98,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private static final String KEYS_APP_SWITCH_PRESS = "keys_app_switch_press";
     private static final String KEYS_APP_SWITCH_LONG_PRESS = "keys_app_switch_long_press";
     private static final String KEYS_APP_SWITCH_DOUBLE_TAP = "keys_app_switch_double_tap";
+    private static final String DISABLE_NAV_KEYS = "disable_nav_keys";
 
     private static final int DLG_SHOW_WARNING_DIALOG = 0;
     private static final int DLG_SHOW_ACTION_DIALOG  = 1;
@@ -121,6 +134,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private Preference mAppSwitchPressAction;
     private Preference mAppSwitchLongPressAction;
     private Preference mAppSwitchDoubleTapAction;
+    private SwitchPreference mDisableNavigationKeys;
 
     private boolean mCheckPreferences;
     private Map<String, String> mKeySettings = new HashMap<String, String>();
@@ -128,12 +142,16 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private ShortcutPickerHelper mPicker;
     private String mPendingSettingsKey;
     private static FilteredDeviceFeaturesArray sFinalActionDialogArray;
+    private Handler mHandler;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mPicker = new ShortcutPickerHelper(getActivity(), this);
+        mHandler = new Handler();
+
+        final PreferenceScreen prefScreen = getPreferenceScreen();
 
         // Before we start filter out unsupported options on the
         // ListPreference values and entries
@@ -149,6 +167,69 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         reloadSettings();
 
         setHasOptionsMenu(true);
+
+         // Force Navigation bar related options
+        mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
+
+        // Only visible on devices that does not have a navigation bar already,
+        // and don't even try unless the existing keys can be disabled
+        boolean needsNavigationBar = false;
+        if (isKeyDisablerSupported()) {
+            try {
+                IWindowManager wm = WindowManagerGlobal.getWindowManagerService();
+                needsNavigationBar = wm.needsNavigationBar();
+            } catch (RemoteException e) {
+            }
+        }
+
+        final ButtonBacklightBrightness backlight =
+                (ButtonBacklightBrightness) findPreference(KEY_BUTTON_BACKLIGHT);
+        if (!backlight.isButtonSupported() && !backlight.isKeyboardSupported()) {
+            prefScreen.removePreference(backlight);
+        }
+    }
+
+    public static void restoreKeyDisabler(Context context) {
+        if (!isKeyDisablerSupported()) {
+            return;
+        }
+
+        writeDisableNavkeysOption(context, Settings.System.getInt(context.getContentResolver(),
+                Settings.System.DEV_FORCE_SHOW_NAVBAR, 0) != 0);
+    }
+
+    private static void writeDisableNavkeysOption(Context context, boolean enabled) {
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        final int defaultBrightness = context.getResources().getInteger(
+                com.android.internal.R.integer.config_buttonBrightnessSettingDefault);
+
+        Settings.System.putInt(context.getContentResolver(),
+                Settings.System.DEV_FORCE_SHOW_NAVBAR, enabled ? 1 : 0);
+
+        if (isKeyDisablerSupported()) {
+              KeyDisabler.setActive(enabled);
+        }
+
+        /* Save/restore button timeouts to disable them in softkey mode */
+        Editor editor = prefs.edit();
+
+        if (enabled) {
+            int currentBrightness = Settings.System.getInt(context.getContentResolver(),
+                    Settings.System.BUTTON_BRIGHTNESS, defaultBrightness);
+            if (!prefs.contains("pre_navbar_button_backlight")) {
+                editor.putInt("pre_navbar_button_backlight", currentBrightness);
+            }
+            Settings.System.putInt(context.getContentResolver(),
+                    Settings.System.BUTTON_BRIGHTNESS, 0);
+        } else {
+            int oldBright = prefs.getInt("pre_navbar_button_backlight", -1);
+            if (oldBright != -1) {
+                Settings.System.putInt(context.getContentResolver(),
+                        Settings.System.BUTTON_BRIGHTNESS, oldBright);
+                editor.remove("pre_navbar_button_backlight");
+            }
+        }
+        editor.commit();
     }
 
     private PreferenceScreen reloadSettings() {
@@ -393,6 +474,36 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         return null;
     }
 
+    private void updateDisableNavkeysOption() {
+        boolean enabled = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.DEV_FORCE_SHOW_NAVBAR, 0) != 0;
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+        mEnableCustomBindings = (SwitchPreference) prefScreen.findPreference(
+                KEYS_ENABLE_CUSTOM);
+
+        mDisableNavigationKeys.setChecked(enabled);
+        mEnableCustomBindings.setEnabled(!enabled);
+
+        final ButtonBacklightBrightness backlight =
+                (ButtonBacklightBrightness) prefScreen.findPreference(KEY_BUTTON_BACKLIGHT);
+
+   /* Toggle backlight control depending on navbar state, force it to
+           off if enabling */
+        if (backlight != null) {
+            backlight.setEnabled(!enabled);
+            backlight.updateSummary();
+        }
+    }
+
+    private static boolean isKeyDisablerSupported() {
+        try {
+            return KeyDisabler.isSupported();
+        } catch (NoClassDefFoundError e) {
+            // Hardware abstraction framework not installed
+            return false;
+        }
+    }
+
     @Override
     public boolean onPreferenceClick(Preference preference) {
         String settingsKey = null;
@@ -626,4 +737,20 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         }
     }
 
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mDisableNavigationKeys) {
+            mDisableNavigationKeys.setEnabled(false);
+            writeDisableNavkeysOption(getActivity(), mDisableNavigationKeys.isChecked());
+            updateDisableNavkeysOption();
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mDisableNavigationKeys.setEnabled(true);
+                }
+            }, 1000);
+        }
+
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
+    }
 }

@@ -60,7 +60,7 @@ public class NavigationSettings extends SettingsPreferenceFragment implements On
         PreferenceScreen hardwareKeys = (PreferenceScreen) findPreference(KEY_HARDWARE_KEYS);
         int deviceKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
-        if (deviceKeys == 0 && hardwareKeys != null) {
+        if ((deviceKeys ==  0) || (deviceKeys == 64) && hardwareKeys != null) {
             getPreferenceScreen().removePreference(hardwareKeys);
         }
 	}
