@@ -24,10 +24,26 @@
             android:title="@string/disable_fc_notifications_title"
             android:summary="@string/disable_fc_notifications_summary" />
 
+    </PreferenceCategory>
 
+    <PreferenceCategory
+            android:key="recents"
+            android:title="@string/category_recents"
+            settings:advanced="true">
+
+         <!-- Search in Recents -->
          <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="recents_show_hide_search_bar"
             android:title="@string/recents_show_searchbar"
             android:summary="@string/recents_show_searchbar_summary"
             android:defaultValue="false" />
+
+         <!-- Clear in Recents -->
+         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="recents_show_clear_button"
+            android:title="@string/recents_show_clear"
+            settings:keywords="@string/keywords_recents_show_clear"
+            android:defaultValue="true"
+            settings:advanced="true" />
+
 </PreferenceScreen>
