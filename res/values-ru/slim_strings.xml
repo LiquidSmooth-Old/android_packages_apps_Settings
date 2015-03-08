@@ -31,7 +31,7 @@
   <string name="set">Задать</string>
   <string name="color_default">По умолчанию</string>
   <string name="device_settings_title">Устройство</string>
-  <string name="slim_version_title">Версия Slim</string>
+  <string name="slim_version_title">Версия Liquid</string>
   <string name="slim_version_default">Неизвестно</string>
   <string name="build_date">Дата сборки</string>
   <string name="build_date_default">Неизвестно</string>

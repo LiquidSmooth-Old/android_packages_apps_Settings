@@ -30,7 +30,7 @@
   <string name="hex_hint">#FF000000</string>
   <string name="color_default">Standard</string>
   <string name="device_settings_title">Gerät</string>
-  <string name="slim_version_title">Slim-Version</string>
+  <string name="slim_version_title">Liquid version</string>
   <string name="slim_version_default">Unbekannt</string>
   <string name="build_date">Erstellungsdatum</string>
   <string name="build_date_default">Unbekannt</string>
