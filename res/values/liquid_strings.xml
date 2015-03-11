@@ -684,6 +684,9 @@
     <string name="lockscreen_shortcuts_double_tap">Double tap</string>
     <string name="lockscreen_shortcuts_longpress">Longpress</string>
 
+    <!-- Lockscreen visualizer -->
+    <string name="lockscreen_visualizer_title">Display music visualizer</string>
+
     <!-- Lockscreen pin shuffle -->
     <string name="lock_numpad_random_title">Change the order of PIN pad numbers</string>
     <string name="lock_numpad_random_dialog_title">PIN pad random order</string>
