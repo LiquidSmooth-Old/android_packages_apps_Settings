@@ -58,6 +58,12 @@
         </PreferenceScreen>
 
         <PreferenceScreen
+            android:key="lockscreen_weather"
+            android:title="@string/lock_screen_weather_settings_title"
+            android:fragment="com.android.settings.euphoria.LockScreenWeatherSettings"
+            settings:advanced="true"/>
+
+        <PreferenceScreen
             android:fragment="com.android.settings.OwnerInfoSettings"
             android:key="owner_info_settings"
             android:title="@string/owner_info_settings_title"
