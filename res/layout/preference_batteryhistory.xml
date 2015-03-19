@@ -14,23 +14,70 @@
      limitations under the License.
 -->
 
+<!-- MUTT -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="5dip"
+    android:paddingTop="5dip" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mutt_slide_head" />
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal"
+	    android:paddingTop="5dip"
+	    android:paddingBottom="5dip"
+	     >
+
+	    <TextView
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/mutt_slide_left"
+	        android:gravity = "center"
+	        android:layout_weight=".25" />
+
+	    <SeekBar
+	        android:id="@+id/mutt_slider"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft ="15dp"
+	        android:paddingRight ="15dp"
+	        android:max="100"
+	        android:progress="50"
+	        android:layout_weight=".5" />
+
+	    <TextView
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/mutt_slide_right"
+	        android:gravity = "center"
+	        android:layout_weight=".25" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:minHeight="@dimen/battery_history_chart_height">
 
-    <include layout="@layout/battery_history_chart" />
+        <include layout="@layout/battery_history_chart" />
 
-    <TextView android:id="@+id/labelsHeader"
-              android:layout_width="match_parent"
-              android:layout_height="48dp"
-              android:textAppearance="?android:attr/textAppearanceMedium"
-              android:textSize="14sp"
-              android:textColor="?android:attr/colorControlActivated"
-              android:gravity="start|center_vertical"
-              android:text="@string/power_usage_list_summary"
-              android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-              android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" />
+        <TextView android:id="@+id/labelsHeader"
+                  android:layout_width="match_parent"
+                  android:layout_height="48dp"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:textSize="14sp"
+                  android:textColor="?android:attr/colorControlActivated"
+                  android:gravity="start|center_vertical"
+                  android:text="@string/power_usage_list_summary"
+                  android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+                  android:paddingEnd="?android:attr/listPreferredItemPaddingEnd" />
 
+    </LinearLayout>
 </LinearLayout>

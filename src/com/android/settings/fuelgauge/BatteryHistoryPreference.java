@@ -24,6 +24,7 @@ import android.preference.Preference;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.android.settings.R;
@@ -37,6 +38,9 @@ public class BatteryHistoryPreference extends Preference {
 
     final private BatteryStats mStats;
     final private Intent mBatteryBroadcast;
+
+    // MUTT
+    private SeekBar muttSeekBar;
 
     private boolean mHideLabels;
     private View mLabelHeader;
@@ -85,5 +89,26 @@ public class BatteryHistoryPreference extends Preference {
         }
         mLabelHeader = view.findViewById(R.id.labelsHeader);
         mLabelHeader.setVisibility(mHideLabels ? View.GONE : View.VISIBLE);
+
+        // MUTT
+        muttSeekBar = (SeekBar) view.findViewById(R.id.mutt_slider);
+        muttSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        	int mProgress;
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				mStats.setScale(mProgress);
+			}
+			
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+				
+			}
+			
+			@Override
+			public void onProgressChanged(SeekBar seekBar, int progress,
+					boolean fromUser) {
+				mProgress = progress;
+			}
+		});
     }
 }

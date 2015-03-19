@@ -1664,4 +1664,10 @@
     <string name="interruptions_ignore_while_media_title">Prevent audio ducking</string>
     <string name="interruptions_ignore_while_media_summary">Do not reduce media playback volume when a notification arrives</string>
 
+    <!-- Mutt -->
+    <string name="mutt_switch_label">Disable Background Suppression</string>
+    <string name="mutt_slide_head">Background Suppression Aggressiveness</string>
+    <string name="mutt_slide_left">Data\nFreshness</string>
+    <string name="mutt_slide_right">Battery\nSavings</string>
+
 </resources>

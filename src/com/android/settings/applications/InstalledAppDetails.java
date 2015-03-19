@@ -87,6 +87,11 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+// MUTT
+import android.os.BatteryStats;
+import com.android.internal.app.IBatteryStats;
+import android.os.Parcel;
+
 /**
  * Activity to display application information from Settings. This activity presents
  * extended information associated with a package like code, data, total size, permissions
@@ -145,10 +150,14 @@ public class InstalledAppDetails extends Fragment
     private Button mClearDataButton;
     private Button mMoveAppButton;
     private CompoundButton mNotificationSwitch;
-
+	
     private PackageMoveObserver mPackageMoveObserver;
 
     private final HashSet<String> mHomePackages = new HashSet<String>();
+
+    // MUTT
+    private CompoundButton mMuttSwitch;
+    private BatteryStats mBatteryStats;
 
     private boolean mDisableAfterUninstall;
 
@@ -431,6 +440,39 @@ public class InstalledAppDetails extends Fragment
             mNotificationSwitch.setOnCheckedChangeListener(this);
         }
     }
+    
+    // MUTT
+    private void initMuttButton(){
+		Log.v(TAG, "MUTT initMuttButton");
+    	if (mMuttSwitch == null) {
+			Log.v(TAG, "MUTT null mMuttSwitch");
+            return;
+        }
+    	
+    	if(mBatteryStats == null) {
+    		try {
+    			IBatteryStats mBatteryInfo = IBatteryStats.Stub.asInterface(
+    					ServiceManager.getService("batteryinfo"));
+
+    			byte[] data = mBatteryInfo.getStatistics();        
+    			Parcel parcel = Parcel.obtain();
+    			parcel.unmarshall(data, 0, data.length);           
+    			parcel.setDataPosition(0);
+    			mBatteryStats = com.android.internal.os.BatteryStatsImpl.CREATOR  
+    					.createFromParcel(parcel);
+    		} catch (RemoteException e){
+				mMuttSwitch.setEnabled(false);
+				Log.v(TAG, "MUTT RemoteException");
+    			return;
+    		}
+    	}
+
+        boolean isDisabled = ! mBatteryStats.getMuttForPackage(
+            mAppEntry.info.uid, mAppEntry.info.packageName);
+        mMuttSwitch.setChecked(isDisabled);
+        mMuttSwitch.setOnCheckedChangeListener(this);
+		Log.v(TAG, "MUTT setOnCheckedChangeListener");
+    }
 
     /** Called when the activity is first created. */
     @Override
@@ -512,6 +554,9 @@ public class InstalledAppDetails extends Fragment
         mEnableCompatibilityCB = (CheckBox) view.findViewById(R.id.enable_compatibility_cb);
         
         mNotificationSwitch = (CompoundButton) view.findViewById(R.id.notification_switch);
+
+		// MUTT
+        mMuttSwitch = (CompoundButton) view.findViewById(R.id.mutt);
 
         return view;
     }
@@ -1094,11 +1139,15 @@ public class InstalledAppDetails extends Fragment
             initDataButtons();
             initMoveButton();
             initNotificationButton();
+			// MUTT
+			initMuttButton();
         } else {
             mMoveAppButton.setText(R.string.moving);
             mMoveAppButton.setEnabled(false);
             mUninstallButton.setEnabled(false);
             mSpecialDisableButton.setEnabled(false);
+			// MUTT
+			mMuttSwitch.setEnabled(false);
         }
     }
 
@@ -1381,6 +1430,14 @@ public class InstalledAppDetails extends Fragment
         }
     }
 
+    // MUTT
+    private void setMutt(boolean isChecked) {
+		boolean enabled = !isChecked;	// When checked it disables
+		Log.v(TAG, "MUTT setMutt " + enabled + mAppEntry.info.packageName);
+		mBatteryStats.setMuttForPackage(mAppEntry.info.uid,
+				mAppEntry.info.packageName, enabled);
+    }
+
     private int getPremiumSmsPermission(String packageName) {
         try {
             if (mSmsManager != null) {
@@ -1480,6 +1537,8 @@ public class InstalledAppDetails extends Fragment
             } else {
                 setNotificationsEnabled(true);
             }
+        } else if ( buttonView == mMuttSwitch) {
+        	setMutt(isChecked);
         }
     }
 }
