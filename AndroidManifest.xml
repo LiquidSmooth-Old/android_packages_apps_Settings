@@ -2120,6 +2120,10 @@
                 android:resource="@id/sim_settings" />
         </activity>
 
+        <activity android:name="com.android.settings.liquid.hfm.HfmWhitelist"
+            android:label="@string/hfm_whitelist_title"
+            android:taskAffinity="com.android.settings" />
+
         <provider
             android:name=".search.SettingsSearchIndexablesProvider"
             android:authorities="com.android.settings"
