@@ -527,7 +527,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mHaveDebugSettings = false;
         updateSwitchPreference(mEnableAdb, Settings.Global.getInt(cr,
                 Settings.Global.ADB_ENABLED, 0) != 0);
-        updateSwitchPref(mAdbNotify, Settings.Global.getInt(cr,
+        updateSwitchPreference(mAdbNotify, Settings.Global.getInt(cr,
                 Settings.Global.ADB_NOTIFY, 1) != 0);
         if (mEnableTerminal != null) {
             updateSwitchPreference(mEnableTerminal,
