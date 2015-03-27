@@ -18,8 +18,8 @@ package com.android.settings.slim.qs;
 import android.content.Context;
 
 import android.text.TextUtils;
-import com.android.internal.util.cm.QSConstants;
-import com.android.internal.util.cm.QSUtils;
+import com.android.internal.util.slim.QSConstants;
+import com.android.internal.util.slim.QSUtils;
 import com.android.settings.R;
 
 import java.util.Arrays;

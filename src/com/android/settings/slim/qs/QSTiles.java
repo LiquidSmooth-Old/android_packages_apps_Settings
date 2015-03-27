@@ -34,7 +34,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.internal.util.cm.QSUtils;
+import com.android.internal.util.slim.QSUtils;
 import com.android.settings.R;
 import com.android.settings.Utils;
 
