@@ -27,8 +27,8 @@
         style="?android:attr/preferenceInformationStyle"
         android:title="@string/battery_level_title"
         android:summary="@string/device_info_not_available"
-<<<<<<< HEAD
-        android:persistent="false" />
+        android:persistent="false"
+        android:selectable="false" />
     <PreferenceScreen android:key="sim_status"
         android:title="@string/sim_status_title"
         android:persistent="false">
@@ -41,9 +41,7 @@
         <intent android:targetPackage="com.android.settings"
             android:targetClass="com.android.settings.deviceinfo.ImeiInformation" />
     </PreferenceScreen>
-=======
-        android:persistent="false"
-        android:selectable="false" />
+        
     <Preference android:key="operator_name"
         style="?android:attr/preferenceInformationStyle"
         android:title="@string/status_operator"
@@ -131,7 +129,6 @@
         android:summary="@string/device_info_not_available"
         android:persistent="false"
         android:selectable="false" />
->>>>>>> aceceff... Make most about phone options unclickable and add summary for legal info
     <Preference android:key="wifi_ip_address"
         style="?android:attr/preferenceInformationStyle"
         android:title="@string/wifi_advanced_ip_address_title"
