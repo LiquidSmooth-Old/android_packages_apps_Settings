@@ -55,7 +55,7 @@
         android:defaultValue="48"
         android:persistent="false" />
 
-      <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+      <com.android.settings.slim.SystemSettingSwitchPreference
             android:key="navigation_bar_left"
             android:title="@string/navigation_bar_left_title"
             android:summary="@string/navigation_bar_left_summary"
