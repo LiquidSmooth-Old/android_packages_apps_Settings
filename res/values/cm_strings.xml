@@ -994,4 +994,8 @@
     <string name="lockscreen_default_target">Default</string>
     <string name="lockscreen_message">Tap an icon on the left or right to reassign a lock screen shortcut.</string>
     <string name="lockscreen_choose_action_title">Choose action</string>
+
+    <string name="none_is_silent_title">None is Silent mode</string>
+    <string name="none_is_silent_summary">Silent mode always sounds alarms</string>
+
 </resources>
