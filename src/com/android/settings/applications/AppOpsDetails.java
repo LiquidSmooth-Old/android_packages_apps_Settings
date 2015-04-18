@@ -209,20 +209,13 @@ public class AppOpsDetails extends Fragment {
         super.onCreate(icicle);
 
         mState = new AppOpsState(getActivity());
-        mPm = getPackageManager();
+        mPm = getActivity().getPackageManager();
         mInflater = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mAppOps = (AppOpsManager)getActivity().getSystemService(Context.APP_OPS_SERVICE);
 
         retrieveAppEntry();
 
         setHasOptionsMenu(true);
-    }
-
-    private PackageManager getPackageManager() {
-        if (mPm == null) {
-            mPm = getActivity().getPackageManager();
-        }
-        return mPm;
     }
 
     @Override
@@ -276,10 +269,6 @@ public class AppOpsDetails extends Fragment {
         }
     }
 
-    private PackageInfo getPackageInfo() {
-        return mPackageInfo;
-    }
-
     /**
      * Finish current Activity and go up to the top level Settings.
      */
@@ -330,18 +319,16 @@ public class AppOpsDetails extends Fragment {
                     .create();
                 case DLG_ENABLE_PRIVACY_GUARD:
                     final int messageResId;
-                    if ((getOwner().getPackageInfo().applicationInfo.flags
+                    if ((getOwner().mPackageInfo.applicationInfo.flags
                         & ApplicationInfo.FLAG_SYSTEM) != 0) {
-                        messageResId = R.string.privacy_guard_enable_dlg_system_app_text;
+                        messageResId = R.string.privacy_guard_dlg_system_app_text;
                     } else {
-                        messageResId = R.string.privacy_guard_enable_dlg_text;
+                        messageResId = R.string.privacy_guard_dlg_text;
                     }
 
                     return new AlertDialog.Builder(getActivity())
                     .setTitle(R.string.privacy_guard_dlg_title)
-                    .setMessage(getResources().getString(messageResId,
-                            getOwner().getPackageManager().getApplicationLabel(
-                                    getOwner().getPackageInfo().applicationInfo)))
+                    .setMessage(messageResId)
                     .setPositiveButton(R.string.dlg_ok,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
