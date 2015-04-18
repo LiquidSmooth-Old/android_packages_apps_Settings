@@ -479,7 +479,7 @@ public class AppOpsState {
         final ArrayList<Integer> permOps = new ArrayList<Integer>();
         final int[] opToOrder = new int[AppOpsManager._NUM_OP];
         for (int i=0; i<tpl.ops.length; i++) {
-            if (i < tpl.showPerms.length && tpl.showPerms[i]) {
+            if (tpl.showPerms[i]) {
                 String perm = AppOpsManager.opToPermission(tpl.ops[i]);
                 if (perm != null && !perms.contains(perm)) {
                     perms.add(perm);
