@@ -69,7 +69,6 @@ public class PrivacyGuardManager extends Fragment
     private static final int DLG_RESET = DLG_BASE + 1;
     private static final int DLG_HELP = DLG_BASE + 2;
     private static final int DLG_APP_OPS_DETAIL = DLG_BASE + 3;
-    private static final int DLG_ENABLE_PRIVACY_GUARD = DLG_BASE + 4;
 
     private static final String LIST_STATE = "pgListState";
     private Parcelable mListState = null;
@@ -78,6 +77,7 @@ public class PrivacyGuardManager extends Fragment
     private ListView mAppsList;
     private PrivacyGuardAppListAdapter mAdapter;
     private List<AppInfo> mApps;
+    private AppInfo mCurrentApp;
 
     private PackageManager mPm;
     private Activity mActivity;
@@ -100,7 +100,7 @@ public class PrivacyGuardManager extends Fragment
             Bundle savedInstanceState) {
 
         mActivity = getActivity();
-        mPm = getPackageManager();
+        mPm = mActivity.getPackageManager();
         mAppOps = (AppOpsManager)getActivity().getSystemService(Context.APP_OPS_SERVICE);
 
         return inflater.inflate(R.layout.privacy_guard_manager, container, false);
@@ -211,14 +211,18 @@ public class PrivacyGuardManager extends Fragment
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         // on click change the privacy guard status for this item
         final AppInfo app = (AppInfo) parent.getItemAtPosition(position);
+
         boolean enabled = app.privacyGuardState > AppOpsManager.PRIVACY_GUARD_DISABLED_PLUS;
 
         if (!enabled && !app.hasPrivacyGuardOps) {
-            showDialogInner(DLG_APP_OPS_DETAIL, app.packageName);
-        } else if (enabled) {
-            setPrivacyGuard(app, false);
+            mCurrentApp = app;
+            showDialogInner(DLG_APP_OPS_DETAIL);
         } else {
-            showDialogInner(DLG_ENABLE_PRIVACY_GUARD, app.packageName);
+            mAppOps.setPrivacyGuardSettingForPackage(app.uid, app.packageName,
+                !enabled, false);
+            app.privacyGuardState = mAppOps.getPrivacyGuardSettingForPackage(
+                    app.uid, app.packageName);
+            mAdapter.notifyDataSetChanged();
         }
     }
 
@@ -226,44 +230,15 @@ public class PrivacyGuardManager extends Fragment
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
         // on long click open app details window
         final AppInfo app = (AppInfo) parent.getItemAtPosition(position);
-        startAppOpsDetails(app.packageName);
+        startAppOpsDetails(app);
         return true;
     }
 
-    private void startAppOpsDetails(String packageName) {
+    private void startAppOpsDetails(AppInfo app) {
         Intent intent = new Intent(
                 android.provider.Settings.ACTION_APP_OPS_DETAILS_SETTINGS,
-                Uri.parse("package:" + packageName));
+                Uri.parse("package:" + app.packageName));
         startActivity(intent);
-    }
-
-    private void setPrivacyGuard(AppInfo app, boolean enabled) {
-        if (app == null) return;
-        mAppOps.setPrivacyGuardSettingForPackage(app.uid, app.packageName,
-                enabled, false);
-        app.privacyGuardState = mAppOps.getPrivacyGuardSettingForPackage(
-                app.uid, app.packageName);
-        mAdapter.notifyDataSetChanged();
-    }
-
-    private AppInfo getCurrentApp(String packageName) {
-        if (mApps == null) {
-            return null;
-        }
-        for (AppInfo app : mApps) {
-            if (app.packageName != null
-                    && app.packageName.equals(packageName)) {
-                return app;
-            }
-        }
-        return null;
-    }
-
-    private PackageManager getPackageManager() {
-        if (mPm == null) {
-            mPm = getActivity().getPackageManager();
-        }
-        return mPm;
     }
 
     /**
@@ -344,24 +319,17 @@ public class PrivacyGuardManager extends Fragment
 
 
     private void showDialogInner(int id) {
-        DialogFragment newFragment = MyAlertDialogFragment.newInstance(id, null);
-        newFragment.setTargetFragment(this, 0);
-        newFragment.show(getFragmentManager(), "dialog " + id);
-    }
-
-    private void showDialogInner(int id, String packageName) {
-        DialogFragment newFragment = MyAlertDialogFragment.newInstance(id, packageName);
+        DialogFragment newFragment = MyAlertDialogFragment.newInstance(id);
         newFragment.setTargetFragment(this, 0);
         newFragment.show(getFragmentManager(), "dialog " + id);
     }
 
     public static class MyAlertDialogFragment extends DialogFragment {
 
-        public static MyAlertDialogFragment newInstance(int id, String packageName) {
+        public static MyAlertDialogFragment newInstance(int id) {
             MyAlertDialogFragment frag = new MyAlertDialogFragment();
             Bundle args = new Bundle();
             args.putInt("id", id);
-            args.putString("packageName", packageName);
             frag.setArguments(args);
             return frag;
         }
@@ -373,7 +341,6 @@ public class PrivacyGuardManager extends Fragment
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             int id = getArguments().getInt("id");
-            final String packageName = getArguments().getString("packageName");
             switch (id) {
                 case DLG_RESET:
                     return new AlertDialog.Builder(getActivity())
@@ -410,43 +377,7 @@ public class PrivacyGuardManager extends Fragment
                     .setPositiveButton(R.string.dlg_ok,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            getOwner().startAppOpsDetails(packageName);
-                        }
-                    })
-                    .setNegativeButton(R.string.dlg_cancel,
-                        new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    })
-                    .create();
-                case DLG_ENABLE_PRIVACY_GUARD:
-                    final int messageResId;
-                    PackageInfo pi = null;
-                    try {
-                        pi = getOwner().getPackageManager().getPackageInfo(packageName,
-                                PackageManager.GET_DISABLED_COMPONENTS |
-                                PackageManager.GET_UNINSTALLED_PACKAGES);
-                    } catch (PackageManager.NameNotFoundException e) {
-                        pi = null;
-                    }
-
-                    if (pi != null && (pi.applicationInfo.flags
-                        & ApplicationInfo.FLAG_SYSTEM) != 0) {
-                        messageResId = R.string.privacy_guard_enable_dlg_system_app_text;
-                    } else {
-                        messageResId = R.string.privacy_guard_enable_dlg_text;
-                    }
-
-                    return new AlertDialog.Builder(getActivity())
-                    .setTitle(R.string.privacy_guard_dlg_title)
-                    .setMessage(getResources().getString(messageResId,
-                            getOwner().getPackageManager().getApplicationLabel(pi.applicationInfo)))
-                    .setPositiveButton(R.string.dlg_ok,
-                        new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            getOwner().setPrivacyGuard(
-                                    getOwner().getCurrentApp(packageName), true);
+                            getOwner().startAppOpsDetails(getOwner().mCurrentApp);
                         }
                     })
                     .setNegativeButton(R.string.dlg_cancel,
