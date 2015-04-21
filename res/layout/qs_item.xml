@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 
-<com.android.settings.cyanogenmod.qs.ColoringCardView
+<com.android.settings.slim.qs.ColoringCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -42,4 +42,4 @@
 
     </LinearLayout>
 
-</com.android.settings.cyanogenmod.qs.ColoringCardView>
+</com.android.settings.slim.qs.ColoringCardView>
