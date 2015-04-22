@@ -51,12 +51,12 @@
         android:fragment="com.android.settings.liquid.NavigationSettings"
         android:icon="@drawable/ic_liquid_navigation_teal" />
 
-    <!-- Notifications 
+    <!-- Notifications -->
     <PreferenceScreen
         android:id="@+id/liquid_notification_settings"
         android:title="@string/notification_settings_title"
-        android:fragment="com.android.settings.liquid.LiquidnotificationSettings" 
-        android:icon="@drawable/ic_liquid_notifications_teal" /> -->
+        android:fragment="com.android.settings.liquid.LiquidnotificationSettings"
+        android:icon="@drawable/ic_liquid_notifications_teal" />
 
     <!-- Status bar -->
     <PreferenceScreen
