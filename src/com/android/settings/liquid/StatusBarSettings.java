@@ -53,6 +53,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String KEY_STATUS_BAR_CLOCK = "clock_style_pref";
     private static final String KEY_STATUS_BAR_TICKER = "status_bar_ticker_enabled";
+    private static final String KEY_STATUS_BAR_NETWORK_ARROWS= "status_bar_show_network_activity";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_BATTERY_STYLE_HIDDEN = "4";
@@ -69,6 +70,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private String mCustomGreetingText = "";
 
     private int mbatteryStyle;
+    private SwitchPreference mNetworkArrows;
     private int mbatteryShowPercent;
 
     @Override
@@ -105,6 +107,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mStatusBarBrightnessControl.setOnPreferenceChangeListener(this);
 
         mClockStyle = (PreferenceScreen) prefSet.findPreference(KEY_STATUS_BAR_CLOCK);
+
         updateClockStyleDescription();
 
         mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
@@ -123,6 +126,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mStatusBarBatteryShowPercent.setSummary(mStatusBarBatteryShowPercent.getEntry());
         mStatusBarBatteryShowPercent.setOnPreferenceChangeListener(this);
         enableStatusBarBatteryDependents(String.valueOf(mbatteryStyle));
+
+        mNetworkArrows = (SwitchPreference) findPreference(KEY_STATUS_BAR_NETWORK_ARROWS);
+        mNetworkArrows.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+            Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY, 0) == 1);
+        mNetworkArrows.setOnPreferenceChangeListener(this);
+        int networkArrows = Settings.System.getInt(getContentResolver(),
+                Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY, 0);
+        updateNetworkArrowsSummary(networkArrows);
 
         mStatusBarGreeting = (SwitchPreference) findPreference(KEY_STATUS_BAR_GREETING);
         mCustomGreetingText = Settings.System.getString(resolver, Settings.System.STATUS_BAR_GREETING);
@@ -158,6 +169,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.STATUS_BAR_TICKER_ENABLED,
                     (Boolean) newValue ? 1 : 0);
+            return true;
+        } else if (preference == mNetworkArrows) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY,
+                    ((Boolean) newValue) ? 1 : 0);
+            int networkArrows = Settings.System.getInt(getContentResolver(),
+                    Settings.System.STATUS_BAR_SHOW_NETWORK_ACTIVITY, 0);
+            updateNetworkArrowsSummary(networkArrows);
             return true;
         }
         return false;
@@ -224,6 +243,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         } else {
             mClockStyle.setSummary(getString(R.string.disabled));
          }
+    }
+
+    private void updateNetworkArrowsSummary(int value) {
+        String summary = value != 0
+                ? getResources().getString(R.string.enabled)
+                : getResources().getString(R.string.disabled);
+        mNetworkArrows.setSummary(summary);
     }
 
     private void enableStatusBarBatteryDependents(String value) {
