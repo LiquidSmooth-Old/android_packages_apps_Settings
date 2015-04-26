@@ -137,13 +137,15 @@
         <Preference android:key="slim_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/slim_version_title"
-                android:summary="@string/slim_version_default"/>
+                android:summary="@string/slim_version_default"
+                android:selectable="false" />
 
         <!-- Build date -->
         <Preference android:key="build_date"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/build_date"
-                android:summary="@string/build_date_default" />
+                android:summary="@string/build_date_default"
+                android:selectable="false" />
 
         <!-- Device FCC equipment id -->
         <Preference android:key="fcc_equipment_id"
