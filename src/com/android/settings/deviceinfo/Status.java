@@ -213,6 +213,19 @@ public class Status extends PreferenceActivity {
             removePreferenceFromScreen(KEY_SERIAL_NUMBER);
         }
 
+        if (isKeyDisablerSupported()) {
+            try {
+                IWindowManager wm = WindowManagerGlobal.getWindowManagerService();
+                needsNavigationBar = wm.needsNavigationBar();
+            } catch (RemoteException e) {
+            }
+        }
+
+        if (!mVoiceCapable) {
+            removePreferenceFromScreen(KEY_SIM_STATUS);
+            removePreferenceFromScreen(KEY_IMEI_INFO);
+        }
+
         //Remove SimStatus and Imei for Secondary user as it access Phone b/19165700
         if (UserHandle.myUserId() != UserHandle.USER_OWNER) {
             removePreferenceFromScreen(KEY_SIM_STATUS);
