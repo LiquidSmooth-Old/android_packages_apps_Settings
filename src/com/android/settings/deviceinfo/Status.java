@@ -99,6 +99,8 @@ public class Status extends PreferenceActivity {
     private Preference mWifiMacAddress;
     private Preference mWimaxMacAddress;
 
+    private boolean mVoiceCapable;
+
     private Handler mHandler;
 
     private static class MyHandler extends Handler {
@@ -163,6 +165,8 @@ public class Status extends PreferenceActivity {
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
+        mVoiceCapable = Utils.isVoiceCapable(mContext);
+
         mHandler = new MyHandler(this);
 
         mCM = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
@@ -211,6 +215,11 @@ public class Status extends PreferenceActivity {
             setSummaryText(KEY_SERIAL_NUMBER, serial);
         } else {
             removePreferenceFromScreen(KEY_SERIAL_NUMBER);
+        }
+
+        if (!mVoiceCapable) {
+            removePreferenceFromScreen(KEY_SIM_STATUS);
+            removePreferenceFromScreen(KEY_IMEI_INFO);
         }
 
         //Remove SimStatus and Imei for Secondary user as it access Phone b/19165700
