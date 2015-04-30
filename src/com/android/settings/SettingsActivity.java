@@ -310,7 +310,11 @@ public class SettingsActivity extends Activity
             QuickLaunchSettings.class.getName(),
             ApnSettings.class.getName(),
             MainSettings.class.getName(),
-            ExpandedDesktopPreferenceFragment.class.getName()
+            ExpandedDesktopPreferenceFragment.class.getName(),
+            com.android.settings.slim.ButtonSettings.class.getName(),
+            com.android.settings.slim.AospNavbarSettings.class.getName(),
+            com.android.settings.slim.NxSettings.class.getName(),
+            com.android.settings.slim.NavigationSettings.class.getName()
     };
 
 
