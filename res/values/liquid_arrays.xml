@@ -265,19 +265,6 @@
     <string-array name="gamma_descriptors" translatable="false">
     </string-array>
 
-    <!--- Navigation bar height -->
-    <string-array name="navigation_bar_height_entries" translatable="false">
-        <item>@string/navigation_bar_height_48</item>
-        <item>@string/navigation_bar_height_44</item>
-        <item>@string/navigation_bar_height_40</item>
-        <item>@string/navigation_bar_height_36</item>
-        <item>@string/navigation_bar_height_32</item>
-        <item>@string/navigation_bar_height_28</item>
-        <item>@string/navigation_bar_height_24</item>
-        <item>@string/navigation_bar_height_20</item>
-        <item>@string/navigation_bar_height_0</item>
-    </string-array>
-
     <string-array name="navigation_bar_height_values" translatable="false">
         <item>48</item>
         <item>44</item>
