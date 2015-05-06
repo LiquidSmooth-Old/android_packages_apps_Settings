@@ -120,7 +120,7 @@ public class MediaFormat extends Activity {
 
         return new ChooseLockSettingsHelper(this)
                 .launchConfirmationActivity(request, null,
-                        getText(explanationResId));;
+                        getText(explanationResId));
     }
 
     @Override

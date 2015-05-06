@@ -519,7 +519,19 @@
     <string name="heads_up_touch_outside_summary_enabled">Hide notification on touch outside and on home button press</string>
     <string name="heads_up_touch_outside_summary_disabled">Do not hide notification after touch outside or on home button press</string>
 
+    <!-- Add application dialog box title -->
+    <string name="profile_choose_app">Choose app</string>
+
     <!-- QuickSettings tiles -->
+    <string name="qs_screenshot_tile">Screenshot</string>
+    <string name="qs_sync_tile">Sync</string>
+    <string name="qs_battery_saver_tile">Battery saver</string>
+    <string name="qs_brightness_tile">Brightness</string>
+    <string name="qs_expanded_desktop_tile">Expanded desktop</string>
+    <string name="qs_notifications_tile">Notifications</string>
+    <string name="qs_screen_off_tile">Screen off</string>
+    <string name="qs_tile_reboot">Reboot</string>
+    <string name="qs_tile_usb_tether">USB tethering</string>
     <string name="qs_tile_wifi">Wi\u2011Fi</string>
     <string name="qs_tile_bluetooth">Bluetooth</string>
     <string name="qs_tile_display_inversion">Color inversion</string>
@@ -546,7 +558,7 @@
 
     <string name="usb_charging_title">Charging</string>
     <string name="usb_charging_summary">Lets you disable all data and file transfer connection with computer and put device in charging only mode.</string>
-    <string name="primary_sub_select_title">Default 4G/3G Subscription</string>
+    <string name="usb_not_connected">Usb not connected</string>
 
     <string name="usb_sdcard_summary">Lets you transfer media files in the SD card on computer</string>
     <string name="usb_sdcard_title">Mount SD card</string>
@@ -557,4 +569,7 @@
     <string name="usb_settings_enable_ums_title">Enable mass storage?</string>
     <!-- Message of dialog asking user to confirm before enabling UMS. [CHAR LIMIT=NONE] -->
     <string name="usb_settings_enable_ums_message">System components and apps rely on primary storage always being available. This feature breaks that functionality. It is strongly recommended to use MTP instead. Are you sure you want to enable mass storage?</string>
+
+    <string name="none_is_silent_title">None is Silent mode</string>
+    <string name="none_is_silent_summary">Silent mode always sounds alarms</string>
 </resources>
