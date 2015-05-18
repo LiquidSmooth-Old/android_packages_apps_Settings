@@ -339,8 +339,8 @@
 
     <!-- Status bar -->
     <string name="status_bar_title">Status bar</string>
-    <string name="status_bar_style_title">Style</string>
-    <string name="status_bar_options_title">Options</string>
+    <string name="status_bar_misc_title">Misc</string>
+    <string name="status_bar_general_title">General</string>
 
     <!-- Status bar | Clock -->
     <string name="status_bar_clock">Clock and date</string>
