@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/com/android/settings/liquid/NavigationSettings.java
 /*
  * Copyright (C) 2015 The LiquidSmooth Project
  *
@@ -49,7 +48,7 @@ public class NavigationSettings extends SettingsPreferenceFragment {
         PreferenceScreen hardwareKeys = (PreferenceScreen) findPreference(KEY_HARDWARE_KEYS);
         int deviceKeys = getResources().getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
-        if (deviceKeys == 0 && hardwareKeys != null) {
+        if ((deviceKeys ==  0) || (deviceKeys == 64) && hardwareKeys != null) {
             getPreferenceScreen().removePreference(hardwareKeys);
         }
     }

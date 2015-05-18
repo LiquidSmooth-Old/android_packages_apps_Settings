@@ -160,8 +160,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String SHOW_ALL_ANRS_KEY = "show_all_anrs";
 
-    private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
-
     private static final String PROCESS_STATS = "proc_stats";
 
     private static final String TAG_CONFIRM_ENFORCE = "confirm_enforce";
@@ -246,7 +244,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private ListPreference mAppProcessLimit;
 
     private SwitchPreference mShowAllANRs;
-    private SwitchPreference mKillAppLongpressBack;
 
     private ListPreference mRootAccess;
     private Object mSelectedRootValue;
@@ -391,8 +388,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 SHOW_ALL_ANRS_KEY);
         mAllPrefs.add(mShowAllANRs);
         mResetSwitchPrefs.add(mShowAllANRs);
-
-        mKillAppLongpressBack = findAndInitSwitchPref(KILL_APP_LONGPRESS_BACK);
 
         Preference hdcpChecking = findPreference(HDCP_CHECKING_KEY);
         if (hdcpChecking != null) {
@@ -556,7 +551,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             setPrefsEnabledState(mLastEnabledState);
         }
         mSwitchBar.show();
-        updateKillAppLongpressBackOptions();
     }
 
     @Override
@@ -731,17 +725,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             hdcpChecking.setSummary(summaries[index]);
             hdcpChecking.setOnPreferenceChangeListener(this);
         }
-    }
-
-    private void writeKillAppLongpressBackOptions() {
-        Settings.Secure.putInt(getActivity().getContentResolver(),
-                Settings.Secure.KILL_APP_LONGPRESS_BACK,
-                mKillAppLongpressBack.isChecked() ? 1 : 0);
-    }
-
-    private void updateKillAppLongpressBackOptions() {
-        mKillAppLongpressBack.setChecked(Settings.Secure.getInt(
-            getActivity().getContentResolver(), Settings.Secure.KILL_APP_LONGPRESS_BACK, 0) != 0);
     }
 
     private void updatePasswordSummary() {
@@ -1593,8 +1576,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             writeUSBAudioOptions();
         } else if (preference == mDevelopmentShortcut) {
             writeDevelopmentShortcutOptions();
-        } else if (preference == mKillAppLongpressBack) {
-            writeKillAppLongpressBackOptions();
         } else if (preference == mChamber) {
             if (Settings.Secure.getInt(getActivity().getContentResolver(),
                     Settings.Secure.CHAMBER_OF_SECRETS, 0) == 0) {
