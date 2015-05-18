@@ -550,15 +550,18 @@ public class ActionListViewSettings extends ListFragment implements
             case NAV_BAR:
                 return ActionHelper.getNavBarConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
-/* Disabled for now till all features are back. Enable it step per step!!!!!!
-            case NAV_RING:
-                return ActionHelper.getNavRingConfigWithDescription(
-                    mActivity, mActionValuesKey, mActionEntriesKey);
             case PIE:
                 return ActionHelper.getPieConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
             case PIE_SECOND:
                 return ActionHelper.getPieSecondLayerConfigWithDescription(
+                    mActivity, mActionValuesKey, mActionEntriesKey);
+/* Disabled for now till all features are back. Enable it step per step!!!!!!
+            case NAV_RING:
+                return ActionHelper.getNavRingConfigWithDescription(
+                    mActivity, mActionValuesKey, mActionEntriesKey);
+            case POWER_MENU_SHORTCUT:
+                return PolicyHelper.getPowerMenuConfigWithDescription(
                     mActivity, mActionValuesKey, mActionEntriesKey);
             case SHAKE_EVENTS_DISABLED:
                 return ActionHelper.getDisabledShakeApps(mActivity);
@@ -578,15 +581,18 @@ public class ActionListViewSettings extends ListFragment implements
             case NAV_BAR:
                 ActionHelper.setNavBarConfig(mActivity, actionConfigs, reset);
                 break;
-/* Disabled for now till all features are back. Enable it step per step!!!!!!
-            case NAV_RING:
-                ActionHelper.setNavRingConfig(mActivity, actionConfigs, reset);
-                break;
             case PIE:
                 ActionHelper.setPieConfig(mActivity, actionConfigs, reset);
                 break;
             case PIE_SECOND:
                 ActionHelper.setPieSecondLayerConfig(mActivity, actionConfigs, reset);
+                break;
+/* Disabled for now till all features are back. Enable it step per step!!!!!!
+            case NAV_RING:
+                ActionHelper.setNavRingConfig(mActivity, actionConfigs, reset);
+                break;
+            case POWER_MENU_SHORTCUT:
+                PolicyHelper.setPowerMenuConfig(mActivity, actionConfigs, reset);
                 break;
             case SHAKE_EVENTS_DISABLED:
                 ActionHelper.setDisabledShakeApps(mActivity, actionConfigs, reset);
