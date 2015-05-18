@@ -19,9 +19,14 @@
     android:title="@string/misc_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="disable_fc_notifications"
-            android:title="@string/disable_fc_notifications_title"
-            android:summary="@string/disable_fc_notifications_summary" />
+    <PreferenceScreen
+        android:key="hfm_settings"
+        android:title="@string/hfm_pref_screen_title"
+        android:fragment="com.android.settings.liquid.hfm.HfmSettings" />
+
+    <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+        android:key="disable_fc_notifications"
+        android:title="@string/disable_fc_notifications_title"
+        android:summary="@string/disable_fc_notifications_summary" />
 
 </PreferenceScreen>
