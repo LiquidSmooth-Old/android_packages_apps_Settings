@@ -42,8 +42,6 @@ import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import android.widget.EditText;
 
-import com.android.settings.liquid.util.Helpers
-
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
@@ -205,7 +203,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             boolean checked = ((SwitchPreference)preference).isChecked();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.ENABLE_TASK_MANAGER, checked ? 1:0);
-            Helpers.restartSystemUI();
             return true;
         }
         if (preference == mStatusBarGreeting) {
