@@ -29,4 +29,15 @@
         android:title="@string/disable_fc_notifications_title"
         android:summary="@string/disable_fc_notifications_summary" />
 
+    <com.android.settings.slim.SystemSettingSwitchPreference
+            android:key="enable_task_manager"
+            android:title="@string/enable_task_manager_title"
+            android:summary="@string/enable_task_manager_summary" />
+
+    <com.android.settings.slim.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/double_tap_to_sleep_title"
+            android:summary="@string/double_tap_to_sleep_summary"
+            android:defaultValue="true" />
+
 </PreferenceScreen>
