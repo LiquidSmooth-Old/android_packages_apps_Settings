@@ -1660,4 +1660,7 @@
     <string name="wifi_country_zm">Zambia</string>
     <string name="wifi_country_zw">Zimbabwe</string>
 
+    <!-- WiFi auto-configure priorities -->
+    <string name="wifi_auto_config_priorities">Automatic priority</string>
+
 </resources>
