@@ -23,11 +23,6 @@
             android:title="@string/status_bar_general_title" >
 
         <PreferenceScreen
-            android:key="quick_settings"
-            android:fragment="com.android.settings.slim.QsSettings"
-            android:title="@string/qs_title" />
-
-        <PreferenceScreen
             android:key="traffic"
             android:fragment="com.android.settings.liquid.Traffic"
             android:title="@string/traffic_category" />
@@ -77,17 +72,6 @@
                 android:summary="@string/status_bar_toggle_brightness_summary"
                 android:persistent="false"
                 android:defaultValue="false" />
-
-         <com.android.settings.slim.SystemSettingSwitchPreference
-            android:key="enable_task_manager"
-            android:title="@string/enable_task_manager_title"
-            android:summary="@string/enable_task_manager_summary" />
-
-        <com.android.settings.slim.SystemSettingSwitchPreference
-                android:key="double_tap_sleep_gesture"
-                android:title="@string/double_tap_to_sleep_title"
-                android:summary="@string/double_tap_to_sleep_summary"
-                android:defaultValue="true" />
 
         <SwitchPreference
                 android:key="status_bar_ticker_enabled"
