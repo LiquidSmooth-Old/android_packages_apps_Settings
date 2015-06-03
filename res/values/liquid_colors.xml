@@ -66,4 +66,17 @@ limitations under the License.
     <!-- Fab hint -->
     <color name="floating_action_button_touch_tint">#80ffffff</color>
 
+    <!-- Liquid Icon tints -->
+    <color name="Liquid_Main_Icon">@*android:color/material_deep_teal_500</color>
+    <color name="Liquid_Advanced_Icon">@*android:color/material_deep_teal_500</color>
+    <color name="Liquid_Equalizer_Icon">@*android:color/material_deep_teal_500</color>
+    <color name="Liquid_Interface_Icon">@*android:color/material_deep_teal_500</color>
+    <color name="Liquid_Lockscreen_Icon">@*android:color/material_deep_teal_500</color>
+    <color name="Liquid_Misc_Icon">@*android:color/material_deep_teal_500</color>
+    <color name="Liquid_Navigation_Icon">@*android:color/material_deep_teal_500</color>
+    <color name="Liquid_Notifications_Icon">@*android:color/material_deep_teal_500</color>
+    <color name="Liquid_Performance_Icon">@*android:color/material_deep_teal_500</color>
+    <color name="Liquid_Statusbar_Icon">@*android:color/material_deep_teal_500</color>
+    <color name="Liquid_SuperSU_Icon">@*android:color/material_deep_teal_500</color>
+
 </resources>

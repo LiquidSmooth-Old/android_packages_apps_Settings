@@ -84,13 +84,13 @@
                 android:id="@+id/main_settings"
                 android:title="@string/liquid_settings_title"
                 android:fragment="com.android.settings.liquid.MainSettings"
-                android:icon="@drawable/ic_liquid_theme_settings"
+                android:icon="@drawable/ic_liquid_main_settings_teal"
                 />
 
         <!-- Kernel Auditor App -->
         <dashboard-tile
                 android:id="@+id/kernel_auditor"
-                android:icon="@drawable/ic_liquid_performance"
+                android:icon="@drawable/ic_liquid_performance_teal"
                 android:title="@string/performance_settings">
                 <intent
                     android:action="android.intent.action.MAIN"
@@ -277,7 +277,7 @@
         <!-- SuperSU -->
         <dashboard-tile
             android:id="@+id/supersu_settings"
-            android:icon="@drawable/ic_settings_supersu"
+            android:icon="@drawable/ic_settings_supersu_teal"
             android:title="@string/supersu_title">
             <intent
                 android:action="android.intent.action.MAIN"
