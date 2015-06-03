@@ -38,8 +38,10 @@ limitations under the License.
     </color>
     <color name="text_color_translucent_white">#B3FFFFFF</color>
     <color name="text_color_white">@android:color/white</color>
+
     <!-- Dashboard background color -->
     <color name="dashboard_category_background_color">@android:color/white</color>
+
     <!-- Data usage chart color -->
     <color name="data_usage_stroke_color">#00000000</color>
     <color name="data_usage_fill_color">#ff009688</color>
@@ -47,10 +49,21 @@ limitations under the License.
     <color name="data_usage_label_color">#ff37474f</color>
     <color name="data_usage_secondary_label_color">#fff4511e</color>
     <!-- Lockscreen shortcuts -->
+
     <color name="lockscreen_shortcuts_text_color">#424242</color>
     <color name="lockscreen_shortcuts_tint_color">#333333</color>
+
     <!-- Owner info -->
     <color name="ownerinfo_divider_color">#ff404040</color>
+
     <!-- Installed app details -->
     <color name="security_settings_billing_desc_color">#ffffb060</color>
+
+    <!-- QS Tile colors -->
+    <color name="qs_tile_tint_color">#FF009587</color>
+    <color name="qs_tile_default_background_color">@android:color/transparent</color>
+
+    <!-- Fab hint -->
+    <color name="floating_action_button_touch_tint">#80ffffff</color>
+
 </resources>
