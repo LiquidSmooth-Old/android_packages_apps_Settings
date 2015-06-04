@@ -59,7 +59,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private static final String STATUS_BAR_BATTERY_STYLE_HIDDEN = "4";
     private static final String STATUS_BAR_BATTERY_STYLE_TEXT = "6";
     private static final String KEY_STATUS_BAR_GREETING = "status_bar_greeting";
-    private static final String ENABLE_TASK_MANAGER = "enable_task_manager";
 
     private SwitchPreference mStatusBarBrightnessControl;
     private PreferenceScreen mClockStyle;
@@ -67,7 +66,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private ListPreference mStatusBarBattery;
     private ListPreference mStatusBarBatteryShowPercent;
     private SwitchPreference mStatusBarGreeting;
-    private SwitchPreference mEnableTaskManager;
 
     private String mCustomGreetingText = "";
 
@@ -111,10 +109,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         mClockStyle = (PreferenceScreen) prefSet.findPreference(KEY_STATUS_BAR_CLOCK);
 
         updateClockStyleDescription();
-
-        mEnableTaskManager = (SwitchPreference) findPreference(ENABLE_TASK_MANAGER);
-        mEnableTaskManager.setChecked((Settings.System.getInt(resolver,
-                Settings.System.ENABLE_TASK_MANAGER, 0) == 1));
 
         mStatusBarBattery = (ListPreference) findPreference(STATUS_BAR_BATTERY_STYLE);
         mStatusBarBatteryShowPercent =
@@ -199,12 +193,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
             final Preference preference) {
         final ContentResolver resolver = getActivity().getContentResolver();
-        if  (preference == mEnableTaskManager) {
-            boolean checked = ((SwitchPreference)preference).isChecked();
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.ENABLE_TASK_MANAGER, checked ? 1:0);
-            return true;
-        }
         if (preference == mStatusBarGreeting) {
            boolean enabled = mStatusBarGreeting.isChecked();
            if (enabled) {
