@@ -75,6 +75,9 @@ import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ProcessStatsUi;
 import com.android.settings.blacklist.BlacklistSettings;
 import com.android.settings.bluetooth.BluetoothSettings;
+import com.android.settings.liquid.LiquidAboutMe;
+import com.android.settings.slim.DisplayRotation;
+import com.android.settings.slim.qs.QSTiles;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.DashboardTile;
@@ -94,7 +97,6 @@ import com.android.settings.inputmethod.KeyboardLayoutPickerFragment;
 import com.android.settings.inputmethod.SpellCheckersSettings;
 import com.android.settings.inputmethod.UserDictionaryList;
 import com.android.settings.location.LocationSettings;
-import com.android.settings.liquid.MainSettings;
 import com.android.settings.nfc.AndroidBeam;
 import com.android.settings.nfc.PaymentSettings;
 import com.android.settings.notification.AppNotificationSettings;
@@ -116,6 +118,10 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
+
+import com.android.settings.liquid.*;
+import com.liquid.drops.*;
+import com.liquid.drops.LiquidSettingsActivity;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -217,6 +223,7 @@ public class SettingsActivity extends Activity
 
     // Show only these settings for restricted users
     private int[] SETTINGS_FOR_RESTRICTED = {
+            R.id.liquid_drops,
             R.id.wireless_section,
             R.id.wifi_settings,
             R.id.bluetooth_settings,
@@ -244,11 +251,12 @@ public class SettingsActivity extends Activity
             R.id.print_settings,
             R.id.nfc_payment_settings,
             R.id.home_settings,
-            R.id.dashboard,
-            R.id.main_settings
+            R.id.dashboard
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
+            LiquidSettingsActivity.class.getName(),
+            LiquidAboutMe.class.getName(),
             WirelessSettings.class.getName(),
             WifiSettings.class.getName(),
             AdvancedWifiSettings.class.getName(),
@@ -310,9 +318,10 @@ public class SettingsActivity extends Activity
             OtherSoundSettings.class.getName(),
             QuickLaunchSettings.class.getName(),
             ApnSettings.class.getName(),
-            MainSettings.class.getName(),
             ExpandedDesktopPreferenceFragment.class.getName(),
-            BlacklistSettings.class.getName()
+            BlacklistSettings.class.getName(),
+            QSTiles.class.getName(),
+            DisplayRotation.class.getName()
     };
 
 

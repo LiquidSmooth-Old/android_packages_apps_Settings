@@ -1827,6 +1827,34 @@
                        android:resource="@id/security_settings" />
         </activity-alias>
 
+        <!-- "QS settings activity. -->
+        <activity android:name="Settings$QSTilesSettingsActivity"
+                android:label="@string/qs_order_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.slim.qs.QSTiles" />
+            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/security_settings" />
+        </activity>
+
+        <!-- Rotation settings activity. -->
+        <activity android:name="Settings$DisplayRotationSettingsActivity"
+                android:label="@string/display_rotation_title"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.android.settings.slim.DisplayRotation" />
+            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                android:resource="@id/display_settings" />
+        </activity>
+
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"
                 android:label="@string/crypt_keeper_encrypt_title">
@@ -2190,6 +2218,33 @@
 
         <!-- Heads Up -->
         <activity android:name="com.android.settings.liquid.HeadsUpSettings" />
+
+        <!-- Liquid Application Methods -->
+        <activity android:name="com.liquid.drops.LiquidSettingsActivity" />
+        <activity android:name=".liquid.LiquidAboutMe" />
+
+        <activity
+        android:name="com.liquid.drops.ShareToClipboard"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+        android:label="@string/title_clipboard_share" >
+            <intent-filter>
+             <action android:name="android.intent.action.SEND"/>
+
+             <category android:name="android.intent.category.ALTERNATIVE"/>
+             <category android:name="android.intent.category.DEFAULT"/>
+
+             <data android:mimeType="text/*" />
+            </intent-filter>
+        </activity>
+        <activity
+        android:name="com.liquid.drops.CreateShortcut"
+            android:theme="@style/Theme.CreateShortCut" >
+        <intent-filter>
+               <action android:name="android.intent.action.CREATE_SHORTCUT" />
+
+           <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+        </activity>
 
     </application>
 </manifest>
