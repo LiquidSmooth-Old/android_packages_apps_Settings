@@ -79,13 +79,15 @@
             android:id="@+id/personalization_section"
             android:title="@string/header_category_personalization" >
 
-        <!-- LiquidSmooth -->
+        <!-- Liquid Droplets -->
         <dashboard-tile
-                android:id="@+id/main_settings"
+                android:id="@+id/liquid_drops"
                 android:title="@string/liquid_settings_title"
-                android:fragment="com.android.settings.liquid.MainSettings"
                 android:icon="@drawable/ic_liquid_main_settings_teal"
-                />
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.settings"
+                    android:targetClass="com.liquid.drops.LiquidSettingsActivity" />
+        </dashboard-tile>
 
         <!-- Kernel Auditor App -->
         <dashboard-tile
