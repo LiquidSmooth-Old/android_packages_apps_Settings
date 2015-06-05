@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:carbon="http://schemas.android.com/apk/res/com.android.settings">
+
+        <com.android.settings.widget.DeveloperPreference
+            carbon:nameDev="STELIX Lollipop"
+            carbon:statusDev="@string/about_stelix_rom"
+            carbon:googleHandle="-eYrCThb3BBk/VNEErBqqNzI/AAAAAAAAPiY/p6YGGK-HyAE/"
+            carbon:googleProfile="107337691479996516667"
+            carbon:githubLink="http://github.com/STELIX-LP"
+            carbon:emailDev="ssspinni@gmail.com"
+            carbon:twitterLink="stefanomura1973" />
+
+        <com.android.settings.widget.DeveloperPreference
+            carbon:nameDev="Stefano &quot;STELIX PippoX3&quot; Mura"
+            carbon:deviceStat="OnePlus One, Nexus 5, Nexus 7, HTC One M7"
+            carbon:statusDev="@string/status_dev"
+            carbon:googleHandle="-LdaKMRXx9Yo/VMJO-A3KdGI/AAAAAAAAPhk/6YyjceIyMzU/"
+            carbon:googleProfile="107337691479996516667"
+            carbon:githubLink="http://github.com/STELIX"
+            carbon:emailDev="ssspinni@gmail.com"
+            carbon:twitterLink="stefanomura1973" />
+
+</PreferenceScreen>

@@ -27,6 +27,10 @@
             android:title="@string/share_liquid_title"
             android:summary="@string/share_liquid_summary" />
 
+        <PreferenceScreen android:key="liquid_about"
+            android:title="@string/liquid_about_title"
+            android:fragment="com.android.settings.liquid.LiquidAboutMe" >
+
         <!-- Liquid Anonymous Stats -->
        <PreferenceScreen android:key="rominfo_settings"
             android:title="@string/rominfo_settings_list_item_title"
