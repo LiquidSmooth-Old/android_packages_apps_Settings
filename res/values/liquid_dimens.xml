@@ -19,4 +19,19 @@
     <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
     <dimen name="ga_gesture_thumbnail_size">64dip</dimen>
     <dimen name="shortcut_picker_left_padding">70dip</dimen>
+
+    <!-- height of a normal list item in edit playlist mode -->
+    <dimen name="normal_height">64dip</dimen>
+
+    <!-- height of an expanded list item in edit playlist mode -->
+    <dimen name="expanded_height">128dip</dimen>
+
+    <dimen name="lockscreen_target_inset">30dp</dimen>
+    <dimen name="shortcut_picker_left_padding">70dip</dimen>
+
+    <!-- Minimal notification row height used to calculate max notification count -->
+    <dimen name="notification_row_min_height">70dp</dimen>
+
+    <dimen name="btn_width">180dp</dimen>
+    <dimen name="btn_height">45dp</dimen>
 </resources>

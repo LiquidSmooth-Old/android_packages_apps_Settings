@@ -2191,5 +2191,32 @@
         <!-- Heads Up -->
         <activity android:name="com.android.settings.liquid.HeadsUpSettings" />
 
+        <!-- Liquid Application Methods -->
+        <activity android:name="com.liquid.drops.LiquidSettingsActivity" />
+        <activity android:name=".liquid.LiquidAboutMe" />
+
+        <activity
+        android:name="com.liquid.drops.ShareToClipboard"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+        android:label="@string/title_clipboard_share" >
+            <intent-filter>
+             <action android:name="android.intent.action.SEND"/>
+
+             <category android:name="android.intent.category.ALTERNATIVE"/>
+             <category android:name="android.intent.category.DEFAULT"/>
+
+             <data android:mimeType="text/*" />
+            </intent-filter>
+        </activity>
+        <activity
+        android:name="com.liquid.drops.CreateShortcut"
+            android:theme="@style/Theme.CreateShortCut" >
+        <intent-filter>
+               <action android:name="android.intent.action.CREATE_SHORTCUT" />
+
+           <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
+        </activity>
+
     </application>
 </manifest>

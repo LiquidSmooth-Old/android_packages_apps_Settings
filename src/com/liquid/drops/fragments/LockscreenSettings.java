@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.liquid;
+package com.liquid.drops.fragments;
 
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
@@ -30,16 +30,18 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
-public class MiscSettings extends SettingsPreferenceFragment {
+public class LockscreenSettings extends SettingsPreferenceFragment {
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.liquid_misc_settings);
+        addPreferencesFromResource(R.xml.liquid_lockscreen_settings);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+
         return false;
     }
 
