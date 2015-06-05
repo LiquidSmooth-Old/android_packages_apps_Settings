@@ -89,4 +89,26 @@ limitations under the License.
     <color name="extrainfo_cat_text">#ffffffff</color>
     <color name="extrainfo_value_text">#ff263238</color>
 
+    <color name="black">#000</color>
+    <color name="red">#F00</color>
+
+    <!-- Liquid Drop -->
+    <color name="extension_list_item_color">#ff000000</color>
+    <color name="configure_light_background">#00000000</color>
+
+    <color name="color_text_holo_light">#000000</color>
+    <color name="color_text_holo_dark">#FFFFFF</color>
+    <color name="color_carbon">#0D0D0D</color>
+    <color name="color_kitkat">#AB0A0A</color>
+    <color name="color_lollipop">#3399FF</color>
+
+    <color name="card_pressed">#7E0099CC</color>
+    <color name="card_gray">#DEDEDE</color>
+    <color name="card_unpressed">#1F1F1F</color>
+
+    <color name="carbon_grey">#ff1d1d1d</color>
+    <color name="carbon_grey2">#ff181818</color>
+    <color name="carbon_div_inv">#70c2c2c2</color>
+    <color name="carbon_div">#c2c2c2</color>
+
 </resources>
