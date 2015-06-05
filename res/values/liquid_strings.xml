@@ -573,4 +573,49 @@
     <!-- Task Manager -->
     <string name="enable_task_manager_title">Task Manager</string>
     <string name="enable_task_manager_summary">Enable/Disable action for the task manager button in the expanded statusbar area</string>
+
+    <!-- Activity titles defined in AndroidManifest.xml -->
+    <string name="title_clipboard_share">Copy to Clipboard</string>
+
+    <!-- Share to clipboard -->
+    <string name="clipboard_notification">Copied to clipboard</string>
+
+    <!-- Header Summaries -->
+    <string name="header_summary" translatable="false">@null</string>
+
+    <!-- Menu Strings -->
+   <string name="menu_main_activity_change_locale">Locale</string>
+
+    <!--  Other device settings -->
+    <string name="more_device_controls_title">Device tunables</string>
+    <string name="more_device_settings_title">Other device options</string>
+
+    <!-- Carbon Customization Settings Dashboard -->
+    <string name="header_category_customization">Customization</string>
+    <string name="carbon_customization_settings_title">Carbon Customization</string>
+    <string name="interface_settings_title">Interface</string>
+    <string name="recents_settings_title">Recents</string>
+    <string name="liquid_drops_title">Liquid Droplet</string>
+    <string name="carbon_about_title">About STELIX CarbonROM</string>
+
+    <!-- STELIX Carbon Team -->
+    <string name="carbon_title">STELIX Carbon Team</string>
+    <string name="about_stelix_rom">AfterMarket Android ROM</string>
+
+    <!-- Layout dev_card strings -->
+    <string name="donate">Donate</string>
+    <string name="email">Email</string>
+    <string name="googleplus">Google+</string>
+    <string name="github">Github</string>
+    <string name="twitter">Twitter</string>
+
+    <string name="status_dev">Developer</string>
+    <string name="status_designers">Designer</string>
+    <string name="status_pr">Public Relations &amp; Social Media</string>
+    <string name="status_gerrit">Gerrit Maintainer</string>
+    <string name="status_core_dev">Core Developer</string>
+    <string name="status_dev_and_co_founder">Developer / Co-Founder</string>
+
+    <!-- Share to clipboard -->
+    <string name="clipboard_notification">Copied to clipboard</string>
 </resources>
