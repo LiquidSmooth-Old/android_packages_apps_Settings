@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.liquid;
+package com.liquid.drops.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
