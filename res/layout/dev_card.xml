@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 Carbon Development
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dip"
+    android:paddingTop="4dip"
+    android:paddingLeft="1dip"
+    android:paddingRight="1dp">
+
+    <RelativeLayout
+        android:id="@+id/image_here"
+        android:layout_width="wrap_content"
+        android:layout_height="270dip"
+        android:gravity="center_vertical"
+        android:background="@drawable/card_selector"
+        android:orientation="vertical"
+        android:duplicateParentState="true">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="3dip"
+            android:paddingRight="3dip" />
+
+        <LinearLayout
+            android:id="@+id/twitter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/photo"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="14dp"
+                android:textAppearance="@style/dev_name_text_style"
+                android:layout_below="@+id/photo"
+                android:layout_centerHorizontal="true" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/anchor"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/card_menu_button"
+            android:paddingLeft="10dp"
+            android:paddingRight="4dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_alignTop="@+id/twitter_name"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="14dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="@style/status_text_style"
+            android:layout_below="@+id/twitter_name"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/device_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="14dp"
+            android:paddingBottom="4dp"
+            android:textAppearance="@style/device_status_text_style"
+            android:layout_below="@+id/status"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:src="@drawable/card_shadow"
+        android:layout_below="@+id/image_here" />
+
+</FrameLayout>
