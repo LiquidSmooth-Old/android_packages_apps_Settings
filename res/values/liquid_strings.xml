@@ -55,7 +55,7 @@
 
     <!-- Animation Control -->
     <string name="animation_settings_category">Animations</string>
-    <string name="animation_settings_title">Animations</string> 
+    <string name="animation_settings_title">Animations</string>
     <string name="title_animation_controls">AOKP Animations</string>
     <string name="aokp_animation_summary">View or change system animations</string>
     <string name="activity_open_title">Activity Open Animation</string>
@@ -167,7 +167,7 @@
     <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
     <string name="toast_Translucent_animation">Translucent animation</string>
     <string name="toast_SlideLeftRight_animation">Slide left to right</string>
-    <string name="toast_SlideRightLeft_animation">Slide right to left</string>  
+    <string name="toast_SlideRightLeft_animation">Slide right to left</string>
 
     <!-- Gesture Anywhere -->
     <string name="gesture_anywhere_title">Gesture Anywhere</string>
@@ -573,4 +573,9 @@
     <!-- Task Manager -->
     <string name="enable_task_manager_title">Task Manager</string>
     <string name="enable_task_manager_summary">Enable/Disable action for the task manager button in the expanded statusbar area</string>
+
+    <!-- Linked / unlinked notification volume -->
+    <string name="link_volume_option_title">Link ring and notification volumes</string>
+    <string name="notification_volume_option_title">Notification volume</string>
+
 </resources>
