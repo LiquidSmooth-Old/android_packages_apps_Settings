@@ -260,11 +260,6 @@
         <item>2000</item>
     </string-array>
 
-    <!-- Gamma calibration descriptors, deliberately empty as string values populated via
-         per-device overlay. Required to build on non-hardware tunable devices -->
-    <string-array name="gamma_descriptors" translatable="false">
-    </string-array>
-
     <!-- NFC settings. -->
     <string-array name="nfc_polling_mode_entries">
        <item>@string/nfc_polling_mode_screen_off</item>
