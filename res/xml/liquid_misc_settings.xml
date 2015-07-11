@@ -25,4 +25,10 @@
         android:title="@string/hfm_pref_screen_title"
         android:fragment="com.android.settings.aicp.hfm.HfmSettings" />
 
+    <!-- Hide carrier on lock screen -->
+    <com.android.settings.slim.SystemSettingSwitchPreference
+        android:key="lock_screen_hide_carrier"
+        android:title="@string/lock_screen_hide_carrier_title"
+        android:summary="@string/lock_screen_hide_carrier_summary" />
+
 </PreferenceScreen>

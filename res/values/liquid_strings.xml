@@ -1168,4 +1168,8 @@
     <string name="hfm_whitelist_pref_empty">Whitelist is empty</string>
     <string name="hfm_whitelist_pref_menu_apply">Apply</string>
 
+    <!-- Hide lock screen carrier -->
+    <string name="lock_screen_hide_carrier_title">Hide carrier on lock screen</string>
+    <string name="lock_screen_hide_carrier_summary">SystemUI will be restarted on switch toggle.</string>
+
 </resources>
