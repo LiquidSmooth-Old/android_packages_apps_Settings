@@ -20,7 +20,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.os.Binder;
 import android.os.Build;
@@ -89,6 +91,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_DEVICE_MEMORY = "device_memory";
     private static final String KEY_LIQUID_SHARE = "share";
     private static final String KEY_LIQUIDSMOOTH_UPDATES = "liquidsmooth_updates";
+
+    static final int TAPS_TO_BE_A_DEVELOPER = 1;
 
     long[] mHits = new long[3];
     int mDevHitCountdown;
