@@ -65,11 +65,11 @@
         android:fragment="com.android.settings.liquid.StatusBarSettings"
         android:icon="@drawable/ic_liquid_statusbar_teal" />
 
-    <!-- Advanced options -->
+    <!-- Advanced options
     <PreferenceScreen
         android:id="@+id/advanced_options_settings"
         android:title="@string/advanced_category_title"
         android:fragment="com.android.settings.liquid.AdvancedSettings"
-        android:icon="@drawable/ic_liquid_advanced_teal" />
+        android:icon="@drawable/ic_liquid_advanced_teal" /> -->
 
 </PreferenceScreen>

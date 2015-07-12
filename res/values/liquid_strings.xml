@@ -30,6 +30,20 @@
     <string name="reset_message">Reset all entries to default?</string>
     <string name="additional_options_title">Additional options</string>
 
+    <!-- LiquidSmooth Settings -->
+    <string name="display_category_liquid_options_title">LiquidSmooth Options</string>
+    <string name="equalizer_settings_title">Equalizer</string>
+    <string name="misc_settings_title">Misc</string>
+    <string name="interface_settings_title">Interface</string>
+    <string name="lockscreen_settings_title">Lock screen</string>
+    <string name="navigation_settings_title">Navigation</string>
+    <string name="performance_settings">Performance</string>
+    <string name="statusbar_settings_title">Status bar</string>
+    <string name="notification_settings_title">Notifications</string>
+    <string name="liquid_settings_title">LiquidSmooth</string>
+    <string name="advanced_options_title">Advanced options</string>
+    <string name="advanced_category_title">Advanced</string>
+
     <!-- Privacy Guard -->
     <string name="app_security_title">App security</string>
     <string name="privacy_guard_switch_label">Enable Privacy Guard</string>
