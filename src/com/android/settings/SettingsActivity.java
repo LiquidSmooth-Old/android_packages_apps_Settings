@@ -1234,13 +1234,21 @@ public class SettingsActivity extends Activity
                     if (!(pm.hasPowerProfiles())) {
                         removeTile = true;
                     }
-                }
+                } else if (id == R.id.bitsyko_layers) {
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("com.lovejoy777.rroandlayersmanager", 0).versionCode > 0);
+                    } catch (PackageManager.NameNotFoundException e) {
 
+                    }
+                    if (!supported) {
+                        removeTile = true;
+                    }
+                }
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0
                         && !ArrayUtils.contains(SETTINGS_FOR_RESTRICTED, id)) {
                     removeTile = true;
                 }
-
                 if (removeTile && n < category.getTilesCount()) {
                     category.removeTile(n);
                 }

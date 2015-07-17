@@ -1258,4 +1258,6 @@
     <string name="trigger_bottom_title">Trigger height</string>
     <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
 
+    <!-- BitSyko Layers  -->
+    <string name="bitsyko_layers">Layers</string>
 </resources>
