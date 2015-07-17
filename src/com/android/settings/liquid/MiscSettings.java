@@ -19,6 +19,8 @@ package com.android.settings.liquid;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.preference.CheckBoxPreference;
@@ -60,11 +62,12 @@ public class MiscSettings extends SettingsPreferenceFragment {
 
         addPreferencesFromResource(R.xml.liquid_misc_settings);
 
+        ContentResolver resolver = getActivity().getContentResolver();
+        PreferenceScreen prefSet = getPreferenceScreen();
+
         //CarrierLabel on LockScreen
         mCarrierLabelOnLockScreen = (SwitchPreference) findPreference(CARRIERLABEL_ON_LOCKSCREEN);
         if (!Utils.isWifiOnly(getActivity())) {
-            mCarrierLabelOnLockScreen.setOnPreferenceChangeListener(this);
-
             boolean hideCarrierLabelOnLS = Settings.System.getInt(
                     getActivity().getContentResolver(),
                     Settings.System.LOCK_SCREEN_HIDE_CARRIER, 0) == 1;
