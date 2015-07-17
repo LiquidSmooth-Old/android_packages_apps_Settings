@@ -1130,7 +1130,7 @@
     <!-- Partition Info -->
     <string name="partition_info_title">Partition info</string>
     <string name="partition_info_system">/system</string>
-    <string name="partition_info_data">/data</string>
+    <string name="par<tition_info_data">/data</string>
     <string name="partition_info_cache">/cache</string>
     <string name="partition_info_sdcard">/sdcard (FAT)</string>
     <string name="partition_info_sdext">/sd-ext (EXT)</string>
@@ -1659,4 +1659,6 @@
     <!-- WiFi auto-configure priorities -->
     <string name="wifi_auto_config_priorities">Automatic priority</string>
 
+    <!-- BitSyko Layers  -->
+    <string name="bitsyko_layers">Layers</string>
 </resources>
