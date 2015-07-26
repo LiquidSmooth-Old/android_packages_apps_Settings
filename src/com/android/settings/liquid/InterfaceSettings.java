@@ -16,6 +16,7 @@
 
 package com.android.settings.liquid;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
@@ -37,9 +38,9 @@ public class InterfaceSettings extends SettingsPreferenceFragment {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.liquid_interface_settings);
-    }
+    	}
 
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object objValue) {	
         return false;
     }
 

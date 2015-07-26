@@ -83,21 +83,21 @@
                 android:icon="@drawable/ic_liquid_theme_settings_teal"
                 />
 
-        <!-- Interface -->
+        <!-- Interface >
         <dashboard-tile
                 android:id="@+id/interface_settings"
                 android:icon="@drawable/ic_settings_interface"
                 android:fragment="com.android.settings.slim.InterfaceSettings"
                 android:title="@string/interface_settings_title"
-                />
+                /-->
 
-        <!-- Navigation -->
+        <!-- Navigation >
         <dashboard-tile
                 android:id="@+id/navigation_settings"
                 android:icon="@drawable/ic_settings_navigation"
                 android:fragment="com.android.settings.slim.NavigationSettings"
                 android:title="@string/navigation_settings_title"
-                />
+                /-->
 
         <!-- Themes -->
         <!-- NOTE: Intent.parseIntent looks for "categories" tag and not "category" -->

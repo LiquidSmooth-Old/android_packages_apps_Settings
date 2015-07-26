@@ -53,19 +53,19 @@ import android.content.SharedPreferences;
 import android.hardware.CmHardwareManager;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.database.ContentObserver;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.ServiceManager;
 import android.os.Handler;
 import android.os.RemoteException;
-import android.os.ServiceManager;
 import android.os.SystemProperties;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.preference.Preference.OnPreferenceClickListener;
-import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
@@ -98,10 +98,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_LIFT_TO_WAKE = "lift_to_wake";
     private static final String KEY_AUTO_BRIGHTNESS = "auto_brightness";
     private static final String KEY_AUTO_ROTATE = "auto_rotate";
-    private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
-    private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
-    private static final String KEY_VOLUME_WAKE = "pref_volume_wake";
-    private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
 
     private static final String KEY_TAP_TO_WAKE = "double_tap_wake_gesture";
     private static final String CATEGORY_ADVANCED = "advanced_display_prefs";
@@ -115,8 +111,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private PreferenceScreen mDisplayRotationPreference;
     private WarnedListPreference mFontSizePref;
-    private SwitchPreference mWakeUpWhenPluggedOrUnplugged;
-    private PreferenceCategory mWakeUpOptions;
 
     private static final String KEY_DOZE_CATEGORY = "category_doze_options";
     private static final String KEY_DOZE = "doze";
@@ -127,7 +121,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private Preference mScreenSaverPreference;
     private SwitchPreference mLiftToWakePreference;
     private SwitchPreference mAutoBrightnessPreference;
-    private SwitchPreference mVolumeWake;
     private ListPreference mLcdDensityPreference;
 
     private SwitchPreference mTapToWake;
@@ -170,7 +163,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mScreenTimeoutPreference.setValue(String.valueOf(currentTimeout));
         mScreenTimeoutPreference.setOnPreferenceChangeListener(this);
         disableUnusableTimeouts(mScreenTimeoutPreference);
-        updateTimeoutPreferenceDescription(currentTimeout);
+        updateTimeoutPreferenceDescription(currentTimeout);	
 
         mLcdDensityPreference = (ListPreference) findPreference(KEY_LCD_DENSITY);
         if (mLcdDensityPreference != null) {
@@ -243,33 +236,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             removePreference(KEY_DISPLAY_ROTATION);
         }
 
-        mWakeUpOptions = (PreferenceCategory) prefSet.findPreference(KEY_WAKEUP_CATEGORY);
-        int counter = 0;
-        mVolumeWake = (SwitchPreference) findPreference(KEY_VOLUME_WAKE);
-        if (mVolumeWake != null) {
-            if (!getResources().getBoolean(R.bool.config_show_volumeRockerWake)) {
-                mWakeUpOptions.removePreference(mVolumeWake);
-                counter++;
-            } else {
-                mVolumeWake.setChecked(Settings.System.getInt(resolver,
-                        Settings.System.VOLUME_WAKE_SCREEN, 0) == 1);
-                mVolumeWake.setOnPreferenceChangeListener(this);
-            }
-        }
-
-        mWakeUpWhenPluggedOrUnplugged =
-            (SwitchPreference) findPreference(KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED);
-        // hide option if device is already set to never wake up
-        if(!getResources().getBoolean(
-                com.android.internal.R.bool.config_unplugTurnsOnScreen)) {
-                mWakeUpOptions.removePreference(mWakeUpWhenPluggedOrUnplugged);
-                counter++;
-        } else {
-            mWakeUpWhenPluggedOrUnplugged.setChecked(Settings.System.getInt(resolver,
-                        Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED, 1) == 1);
-            mWakeUpWhenPluggedOrUnplugged.setOnPreferenceChangeListener(this);
-        }
-
         mTapToWake = (SwitchPreference) findPreference(KEY_TAP_TO_WAKE);
 
         if (advancedPrefs != null && !mCmHardwareManager.isSupported(FEATURE_TAP_TO_WAKE)) {
@@ -277,17 +243,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mTapToWake = null;
         }
 
-        boolean proximityCheckOnWait = getResources().getBoolean(
-                com.android.internal.R.bool.config_proximityCheckOnWake);
-        if (!proximityCheckOnWait) {
-            counter++;
-            mWakeUpOptions.removePreference(findPreference(KEY_PROXIMITY_WAKE));
-            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
-        }
-
-        if (counter == 3) {
-            prefSet.removePreference(mWakeUpOptions);
-        }
     }
 
     private int getDefaultDensity() {
@@ -310,6 +265,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             e.printStackTrace();
         }
         return DisplayMetrics.DENSITY_DEVICE;
+ 
     }
 
     private static boolean allowAllRotations(Context context) {
@@ -627,12 +583,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             } catch (NumberFormatException e) {
                 Log.e(TAG, "could not persist display density setting", e);
             }
-        }
-        if (KEY_VOLUME_WAKE.equals(key)) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.VOLUME_WAKE_SCREEN,
-                    (Boolean) objValue ? 1 : 0);
-        }
+        }	
         if (KEY_FONT_SIZE.equals(key)) {
             writeFontSizePreference(objValue);
         }
@@ -648,11 +599,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (preference == mDozePreference) {
             boolean value = (Boolean) objValue;
             Settings.Secure.putInt(getContentResolver(), DOZE_ENABLED, value ? 1 : 0);
-        }
-        if (KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED.equals(key)) {
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED,
-                    (Boolean) objValue ? 1 : 0);
         }
 
         return true;
