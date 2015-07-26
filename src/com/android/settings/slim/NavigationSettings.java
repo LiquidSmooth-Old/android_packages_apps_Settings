@@ -38,7 +38,7 @@ public class NavigationSettings extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.slim_navigation_settings);
+        addPreferencesFromResource(R.xml.liquid_navigation_settings);
 
         // Hide Hardware Keys menu if device doesn't have any
         PreferenceScreen hardwareKeys = (PreferenceScreen) findPreference(KEY_HARDWARE_KEYS);

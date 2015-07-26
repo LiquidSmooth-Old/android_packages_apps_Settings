@@ -62,7 +62,7 @@
     <PreferenceScreen
         android:id="@+id/statusbar_settings"
         android:title="@string/statusbar_settings_title"
-        android:fragment="com.android.settings.liquid.StatusBarSettings"
+        android:fragment="com.android.settings.slim.StatusBar"
         android:icon="@drawable/ic_liquid_statusbar_teal" />
 
     <!-- Advanced options

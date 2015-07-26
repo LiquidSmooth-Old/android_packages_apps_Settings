@@ -19,6 +19,42 @@
     android:title="@string/misc_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- DeviceHandler device specific screen off gesture settings -->
+    <Preference
+        android:key="screen_off_gesture_settings"
+        android:title="@string/screen_off_gesture_settings_title">
+            <intent
+                android:action="com.slim.action.LAUNCH_SCREEN_OFF_GESTURE_SETTINGS"
+                android:targetPackage="com.slim.device"
+                android:targetClass="com.slim.device.settings.ScreenOffGestureSettings" />
+    </Preference>
+
+    <PreferenceCategory
+        android:key="category_wakeup_options"
+        android:title="@string/display_category_wakeup_options_title" >
+
+        <SwitchPreference
+            android:key="pref_volume_wake"
+            android:title="@string/pref_volume_wake_title"
+            android:summary="@string/pref_volume_wake_summary"
+            android:defaultValue="false"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="wakeup_when_plugged_unplugged"
+            android:title="@string/wakeup_when_plugged_unplugged_title"
+            android:summary="@string/wakeup_when_plugged_unplugged_summary"
+            android:defaultValue="true"
+            android:persistent="false" />
+
+        <com.android.settings.slim.SystemSettingSwitchPreference
+            android:key="proximity_on_wake"
+            android:title="@string/proximity_wake_title"
+            android:summary="@string/proximity_wake_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
     <!-- Ad blocker -->
     <PreferenceScreen
         android:key="hfm_settings"

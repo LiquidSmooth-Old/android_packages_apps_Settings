@@ -42,6 +42,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.provider.Settings.Secure.WAKE_GESTURE_ENABLED;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.util.AbstractAsyncSuCMDProcessor;
@@ -50,11 +52,20 @@ import com.android.settings.util.Helpers;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
-public class MiscSettings extends SettingsPreferenceFragment {
+public class MiscSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private static final String CARRIERLABEL_ON_LOCKSCREEN="lock_screen_hide_carrier";
+    private static final String KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED = "wakeup_when_plugged_unplugged";
+    private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
+    private static final String KEY_VOLUME_WAKE = "pref_volume_wake";
+    private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
+	private static final String KEY_SCREEN_OFF_GESTURE_SETTINGS = "screen_off_gesture_settings";
 
     private SwitchPreference mCarrierLabelOnLockScreen;
+    private SwitchPreference mWakeUpWhenPluggedOrUnplugged;
+    private PreferenceCategory mWakeUpOptions;
+    private SwitchPreference mVolumeWake;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,6 +86,44 @@ public class MiscSettings extends SettingsPreferenceFragment {
         } else {
             prefSet.removePreference(mCarrierLabelOnLockScreen);
         }
+		
+        mWakeUpOptions = (PreferenceCategory) prefSet.findPreference(KEY_WAKEUP_CATEGORY);
+        int counter = 0;
+        mVolumeWake = (SwitchPreference) findPreference(KEY_VOLUME_WAKE);
+        if (mVolumeWake != null) {
+            if (!getResources().getBoolean(R.bool.config_show_volumeRockerWake)) {
+                mWakeUpOptions.removePreference(mVolumeWake);
+                counter++;
+            } else {
+                mVolumeWake.setChecked(Settings.System.getInt(resolver,
+                        Settings.System.VOLUME_WAKE_SCREEN, 0) == 1);
+                mVolumeWake.setOnPreferenceChangeListener(this);
+            }
+        }
+
+        mWakeUpWhenPluggedOrUnplugged =
+            (SwitchPreference) findPreference(KEY_WAKEUP_WHEN_PLUGGED_UNPLUGGED);
+        // hide option if device is already set to never wake up
+        if(!getResources().getBoolean(
+                com.android.internal.R.bool.config_unplugTurnsOnScreen)) {
+                mWakeUpOptions.removePreference(mWakeUpWhenPluggedOrUnplugged);
+                counter++;
+        } else {
+            mWakeUpWhenPluggedOrUnplugged.setChecked(Settings.System.getInt(resolver,
+                        Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED, 1) == 1);
+            mWakeUpWhenPluggedOrUnplugged.setOnPreferenceChangeListener(this);
+        }
+
+        boolean proximityCheckOnWait = getResources().getBoolean(
+                com.android.internal.R.bool.config_proximityCheckOnWake);
+        if (!proximityCheckOnWait) {
+            counter++;
+            mWakeUpOptions.removePreference(findPreference(KEY_PROXIMITY_WAKE));
+            Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
+        }
+
+        Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(getActivity(),
+                getPreferenceScreen(), KEY_SCREEN_OFF_GESTURE_SETTINGS);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -84,6 +133,18 @@ public class MiscSettings extends SettingsPreferenceFragment {
                     Settings.System.LOCK_SCREEN_HIDE_CARRIER,
                     (Boolean) objValue ? 1 : 0);
             Helpers.restartSystemUI();
+            return true;
+        }
+        if (preference == mVolumeWake) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.VOLUME_WAKE_SCREEN,
+                    (Boolean) objValue ? 1 : 0);
+            return true;
+        }
+        if (preference == mWakeUpWhenPluggedOrUnplugged) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.WAKEUP_WHEN_PLUGGED_UNPLUGGED,
+                    (Boolean) objValue ? 1 : 0);
             return true;
         }
         return false;
