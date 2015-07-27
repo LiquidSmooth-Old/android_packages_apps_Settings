@@ -718,4 +718,15 @@
   <string name="pie_trigger_note_title">Nota</string>
   <string name="double_tap_to_sleep_title">Doppio-tocco per sospendere</string>
   <string name="double_tap_to_sleep_summary">Tocca due volte la barra di stato per spegnere lo schermo</string>
+  <!-- Notification ticker -->
+  <string name="status_bar_ticker_title">Ticker delle notifiche</string>
+  <string name="status_bar_ticker_summary">Animazione del testo di notifica nella barra di stato</string>
+    <!--Status bar date -->
+    <string name="status_bar_clock_category">Clock</string>
+    <string name="status_bar_date_title">Stile della data</string>
+    <string name="status_bar_date_none">Non mostrare</string>
+    <string name="status_bar_date_small">Dimensione del carattere piccola</string>
+    <string name="status_bar_date_normal">Dimensione del carattere normale</string>
+    <string name="status_bar_date_format_title">Formato della data</string>
+
 </resources>

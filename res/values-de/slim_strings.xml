@@ -836,4 +836,15 @@
   <string name="expanded_desktop_style">Aussehen des erweiterten Desktops</string>
   <string name="expanded_desktop_style_description">Standardaussehen des erweiterten Desktop wählen</string>
   <string name="expanded_desktop_title">Optionen des erweiterten Desktops</string>
+  <!-- Notification ticker -->
+  <string name="status_bar_ticker_title">Benachrichtigungsticker</string>
+  <string name="status_bar_ticker_summary">Animierten Benachrichtigungstext in der Statusleiste anzeigen</string>
+  <!--Status bar date -->
+  <string name="status_bar_clock_category">Clock</string>
+  <string name="status_bar_date_title">Datumsstil</string>
+  <string name="status_bar_date_none">Nicht anzeigen</string>
+  <string name="status_bar_date_small">Kleine Schriftgröße</string>
+  <string name="status_bar_date_normal">Normale Schriftgröße</string>
+  <string name="status_bar_date_format_title">Datumsformat</string>
+
 </resources>

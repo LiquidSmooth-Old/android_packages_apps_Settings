@@ -855,4 +855,15 @@
   <string name="remove_blacklist_number_title">Borrar número</string>
   <string name="remove_blacklist_entry">¿Quieres borrar el registro de la lista negra?</string>
   <string name="select_contact">Selecciona contacto</string>
+  <!-- Notification ticker -->
+  <string name="status_bar_ticker_title">Notificación Ticker</string>
+  <string name="status_bar_ticker_summary">Notificación con animación de texto en barra de estado</string>
+  <!--Status bar date -->
+  <string name="status_bar_clock_category">Clock</string>
+  <string name="status_bar_date_title">Estilo de fecha</string>
+  <string name="status_bar_date_none">No mostrar</string>
+  <string name="status_bar_date_small">Tamaño pequeño de la fuente</string>
+  <string name="status_bar_date_normal">Tamaño normal de fuente</string>
+  <string name="status_bar_date_format_title">Formato de fecha</string>
+
 </resources>
