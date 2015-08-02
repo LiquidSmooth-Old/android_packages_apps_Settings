@@ -25,8 +25,7 @@
     <color name="expanded_button_color_normal">#4CAF50</color>
     <color name="expanded_button_color_close">#F44336</color>
 
-    <!-- Gesture Anywhere -->
-    <color name="ga_gesture_color">@android:color/holo_blue_light</color>
+    <color name="qs_tile_default_background_color">@android:color/transparent</color>
 
     <!-- Hard coded background and text colors exposed for better theme support -->
     <color name="background_color_darker_gray">@android:color/darker_gray</color>
@@ -42,21 +41,30 @@
     </color>
     <color name="text_color_translucent_white">#B3FFFFFF</color>
     <color name="text_color_white">@android:color/white</color>
+
     <!-- Dashboard background color -->
     <color name="dashboard_category_background_color">@android:color/white</color>
+
+    <!-- Dashboard Category Title Background Color -->
+    <color name="dashboard_category_title_bg_color">@android:color/transparent</color>
+
     <!-- Data usage chart color -->
     <color name="data_usage_stroke_color">#00000000</color>
     <color name="data_usage_fill_color">#ff009688</color>
     <color name="data_usage_secondary_fill_color">#ff80cbc4</color>
     <color name="data_usage_label_color">#ff37474f</color>
     <color name="data_usage_secondary_label_color">#fff4511e</color>
+
     <!-- Lockscreen shortcuts -->
     <color name="lockscreen_shortcuts_text_color">#424242</color>
     <color name="lockscreen_shortcuts_tint_color">#333333</color>
+
     <!-- Owner info -->
     <color name="ownerinfo_divider_color">#ff404040</color>
+
     <!-- Installed app details -->
     <color name="security_settings_billing_desc_color">#ffffb060</color>
+
     <!-- Switch Bar Text Color -->
     <color name="switchbar_text_color">#ffffffff</color>
 
@@ -68,4 +76,8 @@
 
     <!-- Multi-sim Edit Name Text Color -->
     <color name="msim_edit_name_text_color">@android:color/black</color>
+
+    <!-- Gesture Anywhere -->
+    <color name="ga_gesture_color">@android:color/holo_blue_light</color>
+
 </resources>
