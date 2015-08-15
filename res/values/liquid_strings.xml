@@ -1392,9 +1392,6 @@
     <!-- SuperSU -->
     <string name="supersu_title">SuperSU</string>
 
-    <string name="none_is_silent_title">None is Silent mode</string>
-    <string name="none_is_silent_summary">Silent mode always sounds alarms</string>
-
     <!--- Sms security limit -->
     <string name="app_security_title">App security</string>
     <string name="sms_security_check_limit_title">SMS message limit</string>
