@@ -1612,4 +1612,8 @@
     <string name="wifi_country_zm">Zambia</string>
     <string name="wifi_country_zw">Zimbabwe</string>
 
+    <string name="contextual_title">Contextual headers</string>
+    <string name="status_bar_custom_header_title">Custom header image</string>
+    <string name="status_bar_custom_header_summary">Enable notification panel header image</string>
+
 </resources>
