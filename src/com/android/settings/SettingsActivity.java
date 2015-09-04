@@ -1227,15 +1227,6 @@ public class SettingsActivity extends Activity
                             UserManager.DISALLOW_DEBUGGING_FEATURES)) {
                         removeTile = true;
                     }
-                } else if (id == R.id.bitsyko_layers) {
-                    boolean supported = false;
-                    try {
-                        supported = (getPackageManager().getPackageInfo("com.lovejoy777.rroandlayersmanager", 0).versionCode > 0);
-                    } catch (PackageManager.NameNotFoundException e) {
-                    }
-                    if (!supported) {
-                        removeTile = true;
-                    }
                 } else if (id == R.id.supersu_settings) {
                     // Embedding into Settings is supported from SuperSU v1.85 and up
                     boolean supported = false;
@@ -1272,6 +1263,7 @@ public class SettingsActivity extends Activity
                         && !ArrayUtils.contains(SETTINGS_FOR_RESTRICTED, id)) {
                     removeTile = true;
                 }
+
                 if (removeTile && n < category.getTilesCount()) {
                     category.removeTile(n);
                 }

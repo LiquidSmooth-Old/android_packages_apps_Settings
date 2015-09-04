@@ -1264,9 +1264,6 @@
     <string name="trigger_bottom_title">Trigger height</string>
     <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
 
-    <!-- BitSyko Layers  -->
-    <string name="bitsyko_layers">Layers</string>
-
     <!-- Power menu -->
     <string name="power_menu_title">Power menu</string>
     <string name="power_menu_power_title">Power off</string>
