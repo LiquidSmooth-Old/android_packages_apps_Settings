@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2015 Bitsyko Development
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+  <!-- Dashboard Styles:
+   *** android:background - will change the background of said style.
+   *** android:textColorPrimary - will change the title text color.
+   *** android:colorAccent - will change the dashboard tile icon tint. 
+  -->
+   <style name="Dashboard">
+   <!--<item name="android:background">#HEX</item>-->
+   </style>
+   <style name="DashboardContainer">
+   <!--<item name="android:background">#HEX</item>-->
+   </style>
+   <style name="DashboardCategory">
+   <!--<item name="android:background">#HEX</item>-->
+   <!--<item name="android:textColorPrimary">#HEX</item>-->
+   </style>
+   <style name="DashboardTile">
+   <!--<item name="android:background">#HEX</item>-->
+   <!--<item name="android:textColorPrimary">#HEX</item>-->
+   <!--<item name="android:colorAccent">#HEX</item>-->
+   </style>
+</resources>
