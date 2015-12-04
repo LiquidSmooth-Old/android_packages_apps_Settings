@@ -96,6 +96,12 @@
                 android:title="@string/build_number"
                 android:summary="@string/device_info_default"/>
 
+        <!-- Build date -->
+        <Preference android:key="build_date"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/build_date"
+                android:summary="@string/build_date_default" />
+
         <!-- Liquid firmware version -->
         <Preference android:key="liquid_version"
                 style="?android:preferenceInformationStyle"

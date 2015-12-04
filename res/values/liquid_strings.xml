@@ -18,6 +18,8 @@
 <!-- About phone screen, Liquid version -->
     <string name="liquid_version_title">Liquid version</string>
     <string name="liquid_version_default">Unknown</string>
+    <string name="build_date">Build date</string>
+    <string name="build_date_default">Unknown</string>
 
     <!-- SuperSU -->
     <string name="supersu_title">SuperSU</string>
