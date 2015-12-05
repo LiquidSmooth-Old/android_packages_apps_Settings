@@ -77,5 +77,11 @@
     <!--- Advanced Settings -->
     <string name="advanced_settings">Advanced settings</string>
     <string name="advanced_settings_summary">Enable more settings options</string>
+    
+    <!-- Sound & Notification Settings -->
+    <!-- Linked / unlinked notification volume -->
+    <string name="link_volume_option_title">Link ring and notification volume</string>
+    <string name="notification_volume_option_title">Notification volume</string>
+    <string name="ring_notification_volume_option_title">Ring and notification volume</string>
 
 </resources>
