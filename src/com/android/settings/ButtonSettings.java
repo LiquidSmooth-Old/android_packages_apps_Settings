@@ -54,6 +54,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String KEY_MENU_PRESS = "hardware_keys_menu_press";
     private static final String KEY_MENU_LONG_PRESS = "hardware_keys_menu_long_press";
     private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+    private static final String KEY_VOLUME_WAKE_DEVICE = "volume_key_wake_device";
     private static final String DISABLE_NAV_KEYS = "disable_nav_keys";
     private static final String KEY_POWER_END_CALL = "power_end_call";
     private static final String KEY_HOME_ANSWER_CALL = "home_answer_call";
@@ -98,6 +99,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mDisableNavigationKeys;
     private SwitchPreference mPowerEndCall;
     private SwitchPreference mHomeAnswerCall;
+    private SwitchPreference mVolumeKeyWakeControl;
 
     private PreferenceCategory mNavigationPreferencesCat;
 
@@ -231,6 +233,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                     Settings.System.VOLUME_KEY_CURSOR_CONTROL, 0);
             mVolumeKeyCursorControl = initActionList(KEY_VOLUME_KEY_CURSOR_CONTROL,
                     cursorControlAction);
+            int wakeControlAction = Settings.System.getInt(resolver,
+                    Settings.System.VOLUME_WAKE_SCREEN, 0);
+            mVolumeKeyWakeControl = initSwitch(KEY_VOLUME_WAKE_DEVICE, (wakeControlAction == 1));
         } else {
             prefScreen.removePreference(volumeCategory);
         }
@@ -259,6 +264,22 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 (incallHomeBehavior == Settings.Secure.RING_HOME_BUTTON_BEHAVIOR_ANSWER);
             mHomeAnswerCall.setChecked(homeButtonAnswersCall);
         }
+    }
+
+    private SwitchPreference initSwitch(String key, boolean checked) {
+        SwitchPreference switchPreference = (SwitchPreference) getPreferenceManager()
+                .findPreference(key);
+        if (switchPreference != null) {
+            switchPreference.setChecked(checked);
+            switchPreference.setOnPreferenceChangeListener(this);
+        }
+        return switchPreference;
+    }
+
+    private void handleSwitchChange(SwitchPreference pref, Object newValue, String setting) {
+        Boolean value = (Boolean) newValue;
+        int intValue = (value) ? 1 : 0;
+        Settings.System.putInt(getContentResolver(), setting, intValue);
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -303,6 +324,10 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else if (preference == mVolumeKeyCursorControl) {
             handleActionListChange(mVolumeKeyCursorControl, newValue,
                     Settings.System.VOLUME_KEY_CURSOR_CONTROL);
+            return true;
+        } else if (preference == mVolumeKeyWakeControl) {
+            handleSwitchChange(mVolumeKeyWakeControl, newValue,
+                    Settings.System.VOLUME_WAKE_SCREEN);
             return true;
         }
         return false;
