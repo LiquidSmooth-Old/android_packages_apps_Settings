@@ -24,12 +24,12 @@ import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.Handler;
-import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+import android.preference.SwitchPreference;
 import android.provider.Settings;
 
 import android.util.Log;
@@ -95,9 +95,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private ListPreference mMenuPressAction;
     private ListPreference mMenuLongPressAction;
     private ListPreference mVolumeKeyCursorControl;
-    private CheckBoxPreference mDisableNavigationKeys;
-    private CheckBoxPreference mPowerEndCall;
-    private CheckBoxPreference mHomeAnswerCall;
+    private SwitchPreference mDisableNavigationKeys;
+    private SwitchPreference mPowerEndCall;
+    private SwitchPreference mHomeAnswerCall;
 
     private PreferenceCategory mNavigationPreferencesCat;
 
@@ -132,15 +132,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_VOLUME);
 
         // Power button ends calls.
-        mPowerEndCall = (CheckBoxPreference) findPreference(KEY_POWER_END_CALL);
+        mPowerEndCall = (SwitchPreference) findPreference(KEY_POWER_END_CALL);
 
         // Home button answers calls.
-        mHomeAnswerCall = (CheckBoxPreference) findPreference(KEY_HOME_ANSWER_CALL);
+        mHomeAnswerCall = (SwitchPreference) findPreference(KEY_HOME_ANSWER_CALL);
 
         mHandler = new Handler();
 
         // Force Navigation bar related options
-        mDisableNavigationKeys = (CheckBoxPreference) findPreference(DISABLE_NAV_KEYS);
+        mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
         mNavigationPreferencesCat = (PreferenceCategory) findPreference(CATEGORY_NAVBAR);
 
         // Only visible on devices that does not have a navigation bar already,
